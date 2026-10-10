@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const M = require('./matcher');
 
-const VERSION = '8.0.1';
+const VERSION = '8.0.2';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -672,7 +672,7 @@ function buildManifest(base, cfg) {
     return {
         id: cfg ? personalAddonId(cfg.username) : 'com.webshare.anime',
         version: VERSION,
-        name: cfg ? `Webshare+Anime (${cfg.username})` : 'Webshare+Anime',
+        name: 'Webshare+Anime',
         description: 'Filmy, seriály a anime z Webshare.cz – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.',
         logo: `${base}/logo.png`,
         background: `${base}/webshare-backdrop.jpg`,

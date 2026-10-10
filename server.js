@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const M = require('./matcher');
 
-const VERSION = '8.0.3';
+const VERSION = '8.0.4';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -336,8 +336,10 @@ function uniqNames(list, max) {
     const seen = new Set(), out = [];
     for (const n of list) {
         if (!n || !n.text) continue;
-        const k = M.nameTokens(n.text).join(' ');
-        if (!k || k.length < 3 || seen.has(k)) continue;
+        const nt = M.nameTokens(n.text);
+        const k = nt.join(' ');
+        // aspoň jedno slovo o 3+ znacích ("R+V", "OP" se nepoužijí)
+        if (!k || !nt.some(t => t.length >= 3) || seen.has(k)) continue;
         seen.add(k);
         out.push(n);
         if (out.length >= max) break;
@@ -376,22 +378,26 @@ async function buildPlan(type, id, cfg) {
     const latin = s => s && M.isLatin(s) ? s : null;
 
     // Názvy "franšízy" (CZ/SK/EN z TMDB) – párují se s IMDb sezónou/epizodou
+    // short = zkrácený název před dvojtečkou; full = celý název, ze kterého vznikl
+    const full = text => text ? { text } : null;
+    const short = text => { const s = M.shortTitle(text); return s ? { text: s, short: true, full: text } : null; };
+    const sub = text => { const s = M.subTitle(text); return s ? { text: s, short: true, full: text } : null; };
     const fr = [];
     if (info) {
-        fr.push(info.cz, info.sk, info.en, latin(info.original));
-        fr.push(M.shortTitle(info.cz), M.shortTitle(info.en));
-        (info.alt || []).slice(0, 3).forEach(a => fr.push(a));
+        fr.push(full(info.cz), full(info.sk), full(info.en), full(latin(info.original)));
+        fr.push(short(info.cz), sub(info.cz), short(info.en), sub(info.en));
+        (info.alt || []).slice(0, 3).forEach(a => fr.push(full(a)));
     }
     // Názvy z indexeru (romaji / EN pro konkrétní sezónu) – párují se s epizodou v rámci sezóny
     const an = [];
     if (rs) {
-        an.push(rs.title, rs.title_en, M.shortTitle(rs.title), M.shortTitle(rs.title_en));
-        (rs.titles || []).filter(t => M.isLatin(t) && t.length <= 60).slice(0, 6).forEach(t => an.push(t));
+        an.push(full(rs.title), full(rs.title_en), short(rs.title), short(rs.title_en));
+        (rs.titles || []).filter(t => M.isLatin(t) && t.length <= 60).slice(0, 6).forEach(t => an.push(full(t)));
     }
 
     const names = uniqNames([
-        ...fr.filter(Boolean).map(text => ({ text, kind: 'franchise' })),
-        ...an.filter(Boolean).map(text => ({ text, kind: 'anime' }))
+        ...fr.filter(Boolean).map(n => ({ ...n, kind: 'franchise' })),
+        ...an.filter(Boolean).map(n => ({ ...n, kind: 'anime' }))
     ], 9);
     if (!names.length) return null;
 
@@ -408,15 +414,24 @@ async function buildPlan(type, id, cfg) {
 
 const pad = n => String(n).padStart(2, '0');
 
+// "Druhá světová válka" → "2 svetova valka" (soubory často píšou číslicí)
+const ORD_Q = { prvni: '1', druha: '2', druhy: '2', druhe: '2', treti: '3', ctvrta: '4', ctvrty: '4' };
+function digitVariant(q) {
+    const v = q.split(' ').map(w => ORD_Q[w.toLowerCase()] || w).join(' ');
+    return v !== q ? v : null;
+}
+
 function buildQueries(plan) {
     const fr = plan.names.filter(n => n.kind === 'franchise').map(n => M.queryText(n.text));
     const an = plan.names.filter(n => n.kind === 'anime').map(n => M.queryText(n.text));
+    const variants = fr.map(digitVariant).filter(Boolean);
     const w1 = [], w2 = [];
     if (plan.type === 'movie') {
         const all = [...fr, ...an];
         all.slice(0, 3).forEach(q => w1.push(q));
         if (plan.year) all.slice(0, 2).forEach(q => w1.push(`${q} ${plan.year}`));
         all.slice(3).forEach(q => w2.push(q));
+        variants.forEach(q => w2.push(q));
     } else if (plan.season && plan.episode) {
         const se = `S${pad(plan.season)}E${pad(plan.episode)}`;
         fr.slice(0, 3).forEach(q => w1.push(`${q} ${se}`));
@@ -424,25 +439,30 @@ function buildQueries(plan) {
         fr.slice(0, 3).forEach(q => w2.push(`${q} ${plan.season}x${pad(plan.episode)}`));
         if (plan.season === 1) fr.slice(0, 2).forEach(q => w2.push(`${q} ${pad(plan.episode)}`));
         fr.slice(3).forEach(q => w2.push(`${q} ${se}`));
+        variants.forEach(q => w2.push(`${q} ${se}`));
         if (plan.isAnime && plan.alEpisode) {
             an.slice(0, 2).forEach(q => w2.push(`${q} E${pad(plan.alEpisode)}`));
             an.slice(2).forEach(q => w2.push(`${q} ${pad(plan.alEpisode)}`));
         }
+        // samotný název (100 výsledků) – soubory jako "Cena Říše 05 - Barbarossa" nebo "(13) Tisíc slunců"
+        [fr[0], ...variants.slice(0, 1), ...plan.names.filter(n => n.short && n.kind === 'franchise' && M.subTitle(n.full) === n.text).map(n => M.queryText(n.text)).slice(0, 1)]
+            .filter(Boolean).forEach(q => w2.push({ q, limit: 100 }));
     } else {
         [...fr, ...an].slice(0, 3).forEach(q => w1.push(q));
     }
     const dedupe = (arr, skip = new Set()) => {
         const out = [];
-        for (const q of arr) {
-            const k = q.toLowerCase();
-            if (!q.trim() || skip.has(k)) continue;
+        for (const item of arr) {
+            const it = typeof item === 'string' ? { q: item, limit: 50 } : item;
+            const k = it.q.toLowerCase().trim();
+            if (!k || skip.has(k)) continue;
             skip.add(k);
-            out.push(q);
+            out.push(it);
         }
         return out;
     };
     const seen = new Set();
-    return [dedupe(w1, seen).slice(0, 8), dedupe(w2, seen).slice(0, 8)];
+    return [dedupe(w1, seen).slice(0, 8), dedupe(w2, seen).slice(0, 10)];
 }
 
 // Hledání s omezenou souběžností (max 4 dotazy naráz)
@@ -451,9 +471,9 @@ async function runQueries(cfg, queries) {
     let i = 0;
     const worker = async () => {
         while (i < queries.length) {
-            const q = queries[i++];
+            const { q, limit } = queries[i++];
             try {
-                const r = await withToken(cfg, t => wsSearch(t, q));
+                const r = await withToken(cfg, t => wsSearch(t, q, limit));
                 for (const f of r.files) if (!out.has(f.ident)) out.set(f.ident, f);
                 dbg(`  🔎 "${q}" → ${r.files.length}`);
             } catch (e) {
@@ -466,26 +486,42 @@ async function runQueries(cfg, queries) {
 }
 
 // Vybere soubory, které sedí na název (a rok / epizodu)
+// Sedí název souboru na daný název? Zkrácený název nesmí být následován jiným podtitulem.
+function nameOk(fileName, n) {
+    if (!M.titleMatches(fileName, n.text)) return false;
+    return !n.short || !M.shortNameIsNoise(fileName, n.text, n.full);
+}
+
 function filterFiles(files, plan) {
     const out = [];
     for (const f of files) {
         if (plan.type === 'movie') {
             if (M.looksLikeEpisode(f.name)) continue;
-            if (!plan.names.some(n => M.titleMatches(f.name, n.text))) continue;
+            const byFull = plan.names.some(n => !n.short && nameOk(f.name, n));
+            const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n));
+            if (!byFull && !byShort) continue;
             const years = M.fileYears(f.name);
-            if (plan.year && years.length && !years.some(y => Math.abs(y - plan.year) <= 1)) continue;
+            const yearOk = plan.year && years.some(y => Math.abs(y - plan.year) <= 1);
+            if (plan.year && years.length && !yearOk) continue;
+            // jen zkrácený název ("Pán prstenů 1") → rok v souboru musí sedět
+            if (byShort && !yearOk) continue;
             out.push({ f, exact: years.length > 0 });
             continue;
         }
         if (!plan.season || !plan.episode) {
-            if (plan.names.some(n => M.titleMatches(f.name, n.text))) out.push({ f, exact: false });
+            if (plan.names.some(n => nameOk(f.name, n))) out.push({ f, exact: false });
             continue;
         }
         let ok = false, exact = false;
         for (const n of plan.names) {
-            if (!M.titleMatches(f.name, n.text)) continue;
-            const pe = M.parseEpisode(f.name, M.nameTokens(n.text));
+            if (!nameOk(f.name, n)) continue;
+            // slova za názvem: značka pokračování ("Capu2", "II", "S2") a číslo dílu
+            const hit = M.afterName(f.name, n.text);
+            const seq = hit ? M.sequelSeason(hit.rest) : null;
+            const rest = hit ? (seq ? hit.rest.slice(1) : hit.rest) : undefined;
+            const pe = M.parseEpisode(f.name, M.nameTokens(n.text), rest);
             if (pe.episode === null) continue;
+            if (pe.season === null && seq) pe.season = seq;
             if (n.kind === 'franchise') {
                 if (pe.episode === plan.episode &&
                     (pe.season === plan.season || (pe.season === null && plan.season === 1))) {
@@ -781,7 +817,8 @@ app.get('/:cfg/stream/:type/:id.json', withCfg(async (req, res, cfg) => {
     } catch (e) {
         log(`❌ stream ${req.params.id} [${cfg.username}]: ${e.message}`);
     }
-    res.setHeader('Cache-Control', streams.length ? 'max-age=600, stale-while-revalidate=600' : 'no-store');
+    // krátká cache v klientovi – výsledky drží server sám 30 min, opravy se tak projeví do minuty
+    res.setHeader('Cache-Control', streams.length ? 'max-age=60' : 'no-store');
     res.json({ streams });
 }));
 
@@ -825,7 +862,7 @@ app.get('/:cfg/play/:ident/:name?', withCfg(async (req, res, cfg) => {
         }
         link = r.link;
         linkCache.set(key, link, 15 * 60 * 1000);
-        if (req.method === 'GET') log(`▶️ play ${ident} [${cfg.username}]`);
+        log(`▶️ play ${ident} [${cfg.username}]`);
     }
     res.setHeader('Cache-Control', 'no-store');
     res.redirect(302, link);

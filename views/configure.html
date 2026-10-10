@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Webshare+Anime – nastavení addonu</title>
+<link rel="icon" href="/logo.png">
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg2: #111a2e;
+    --card: #141f36;
+    --line: #24324f;
+    --text: #e8edf7;
+    --muted: #8c9ab5;
+    --accent: #2fd0c2;
+    --accent-ink: #062521;
+    --warn: #f5b546;
+    --err: #ff6b6b;
+    --ok: #4fd18b;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    background: radial-gradient(1200px 600px at 80% -10%, #1b2a4a 0%, transparent 60%), var(--bg);
+    color: var(--text);
+    font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 32px 16px 48px;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  header img { width: 52px; height: 52px; border-radius: 12px; background: var(--bg2); object-fit: contain; }
+  h1 { font-size: 22px; margin: 0; letter-spacing: .2px; }
+  header p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card + .card { margin-top: 16px; }
+  h2 { font-size: 15px; margin: 0 0 14px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .8px; }
+  label { display: block; font-size: 14px; margin: 14px 0 6px; color: #c9d3e6; }
+  label:first-of-type { margin-top: 0; }
+  .hint { font-weight: 400; color: var(--muted); }
+  input[type=text], input[type=password] {
+    width: 100%; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg2); color: var(--text); font-size: 15px; outline: none;
+  }
+  input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(47,208,194,.15); }
+  .pw { position: relative; }
+  .pw button { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--muted); cursor: pointer; padding: 6px 8px; font-size: 13px; }
+  .check { display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; cursor: pointer; }
+  .check input { margin-top: 3px; accent-color: var(--accent); width: 16px; height: 16px; }
+  .check small { display: block; color: var(--muted); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 16px; border-radius: 10px; border: 1px solid transparent; cursor: pointer;
+    font-size: 15px; font-weight: 600; text-decoration: none; transition: filter .15s, transform .05s;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); width: 100%; margin-top: 20px; }
+  .btn-primary:hover { filter: brightness(1.07); }
+  .btn-primary[disabled] { opacity: .6; cursor: wait; }
+  .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--accent); }
+  .msg { margin-top: 14px; padding: 10px 12px; border-radius: 10px; font-size: 14px; display: none; }
+  .msg.err { display: block; background: rgba(255,107,107,.1); border: 1px solid rgba(255,107,107,.35); color: #ffb3b3; }
+  .msg.warn { display: block; background: rgba(245,181,70,.1); border: 1px solid rgba(245,181,70,.35); color: #ffd99a; }
+  .msg.ok { display: block; background: rgba(79,209,139,.1); border: 1px solid rgba(79,209,139,.35); color: #a9f0c8; }
+  #result { display: none; }
+  .url {
+    width: 100%; padding: 11px 12px; border-radius: 10px; border: 1px dashed var(--line); background: var(--bg2);
+    color: #bfe9e4; font: 12.5px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all;
+    max-height: 96px; overflow: auto;
+  }
+  .row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .row .btn { flex: 1 1 180px; }
+  ol { margin: 6px 0 0; padding-left: 20px; color: #c9d3e6; }
+  ol li { margin: 4px 0; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .foot { margin-top: 20px; text-align: center; color: var(--muted); font-size: 12px; }
+  @media (max-width: 420px) { .card { padding: 18px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="/logo.png" alt="">
+    <div>
+      <h1>Webshare+Anime</h1>
+      <p>Filmy, seriály a anime z Webshare.cz pro Stremio a Nuvio</p>
+    </div>
+  </header>
+
+  <form class="card" id="form" autocomplete="on">
+    <h2>Přihlášení k Webshare</h2>
+    <label for="username">Uživatelské jméno</label>
+    <input type="text" id="username" autocomplete="username" required>
+
+    <label for="password">Heslo</label>
+    <div class="pw">
+      <input type="password" id="password" autocomplete="current-password" required>
+      <button type="button" id="togglePw" aria-label="Zobrazit heslo">zobrazit</button>
+    </div>
+
+    <label for="tmdb">TMDB API klíč <span class="hint" id="tmdbHint">(nepovinné)</span></label>
+    <input type="text" id="tmdb" placeholder="vlastní klíč z themoviedb.org" autocomplete="off" spellcheck="false">
+
+    <label class="check">
+      <input type="checkbox" id="search" checked>
+      <span>Katalog „Webshare Hledat“<small>Přímé hledání na Webshare z vyhledávání ve Stremiu / Nuviu</small></span>
+    </label>
+
+    <button class="btn btn-primary" type="submit" id="submit">Ověřit a vytvořit odkaz</button>
+    <div class="msg" id="msg"></div>
+  </form>
+
+  <section class="card" id="result" aria-live="polite">
+    <h2>Tvůj odkaz na addon</h2>
+    <div class="url" id="url"></div>
+    <div class="row">
+      <button class="btn btn-primary" type="button" id="copy" style="margin-top:0">Zkopírovat odkaz</button>
+      <a class="btn btn-ghost" id="web" target="_blank" rel="noopener">Otevřít ve Stremio Web</a>
+    </div>
+    <div class="msg" id="vip"></div>
+    <ol>
+      <li><b>Nuvio / NuvioTV:</b> Addony → Přidat addon → vlož odkaz.</li>
+      <li><b>Stremio:</b> Addony → do vyhledávacího pole nahoře vlož odkaz → Nainstalovat.</li>
+    </ol>
+    <p class="muted">Odkaz obsahuje tvé heslo k Webshare – nesdílej ho. Při změně hesla si vytvoř nový.</p>
+  </section>
+
+  <p class="foot">verze __VERSION__</p>
+</div>
+
+<script>
+(function () {
+  var PREFILL = /*__PREFILL__*/null;
+  var SERVER_TMDB = /*__SERVER_TMDB__*/false;
+  var $ = function (id) { return document.getElementById(id); };
+  var STORE = 'webshare_config';
+
+  if (SERVER_TMDB) $('tmdbHint').textContent = '(nepovinné – server má vlastní)';
+
+  function load() {
+    var cfg = PREFILL;
+    if (!cfg) { try { cfg = JSON.parse(localStorage.getItem(STORE) || 'null'); } catch (e) { cfg = null; } }
+    if (!cfg) return;
+    if (cfg.username) $('username').value = cfg.username;
+    if (cfg.password) $('password').value = cfg.password;
+    if (cfg.tmdb_api_key) $('tmdb').value = cfg.tmdb_api_key;
+    if (cfg.enable_direct_search === false) $('search').checked = false;
+  }
+
+  function b64url(str) {
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+
+  function show(el, cls, text) { el.className = 'msg ' + cls; el.textContent = text; }
+  function hide(el) { el.className = 'msg'; el.textContent = ''; }
+
+  $('togglePw').addEventListener('click', function () {
+    var p = $('password'), shown = p.type === 'text';
+    p.type = shown ? 'password' : 'text';
+    this.textContent = shown ? 'zobrazit' : 'skrýt';
+  });
+
+  $('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var cfg = {
+      username: $('username').value.trim(),
+      password: $('password').value,
+      tmdb_api_key: $('tmdb').value.trim(),
+      enable_direct_search: $('search').checked
+    };
+    if (!cfg.username || !cfg.password) { show($('msg'), 'err', 'Vyplň jméno i heslo.'); return; }
+    var btn = $('submit');
+    btn.disabled = true; btn.textContent = 'Ověřuji přihlášení…';
+    hide($('msg'));
+
+    fetch('/api/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username: cfg.username, password: cfg.password })
+    }).then(function (r) { return r.json(); }).then(function (data) {
+      if (!data.ok) { show($('msg'), 'err', data.error || 'Přihlášení se nepovedlo.'); return; }
+      try { localStorage.setItem(STORE, JSON.stringify(cfg)); } catch (err) {}
+      var url = location.origin + '/' + b64url(JSON.stringify(cfg)) + '/manifest.json';
+      $('url').textContent = url;
+      $('web').href = 'https://web.stremio.com/#/addons?addon=' + encodeURIComponent(url);
+      if (data.vip === false) show($('vip'), 'warn', 'Účet nemá aktivní VIP – Webshare bez VIP přehrávání přes addon neumožní.');
+      else if (data.vip && data.vipDays) show($('vip'), 'ok', 'Přihlášení v pořádku · VIP ještě ' + data.vipDays + ' dní.');
+      else show($('vip'), 'ok', 'Přihlášení v pořádku.');
+      $('result').style.display = 'block';
+      $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }).catch(function () {
+      show($('msg'), 'err', 'Server neodpovídá, zkus to prosím znovu.');
+    }).then(function () {
+      btn.disabled = false; btn.textContent = 'Ověřit a vytvořit odkaz';
+    });
+  });
+
+  $('copy').addEventListener('click', function () {
+    var url = $('url').textContent, btn = this;
+    var done = function () { btn.textContent = 'Zkopírováno ✓'; setTimeout(function () { btn.textContent = 'Zkopírovat odkaz'; }, 1800); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(done, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = url; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) { window.prompt('Zkopíruj odkaz:', url); }
+      document.body.removeChild(ta);
+    }
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>

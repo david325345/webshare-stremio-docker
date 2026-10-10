@@ -15,9 +15,12 @@ function normalize(str) {
         .trim();
 }
 
+// Řadové číslovky a římská čísla → číslice, aby "Druhá světová válka" = "2.světová válka"
+const ORDINALS = { prvni: '1', druha: '2', druhy: '2', druhe: '2', treti: '3', ctvrta: '4', ctvrty: '4', ii: '2', iii: '3' };
+
 function tokens(str) {
     const n = normalize(str);
-    return n ? n.split(' ') : [];
+    return n ? n.split(' ').map(t => ORDINALS[t] || t) : [];
 }
 
 // Významná slova názvu (bez stopwords); když by nezbylo nic, vrátí všechna
@@ -100,7 +103,7 @@ function stripTech(n) {
 // Rozpozná sezónu a epizodu z názvu souboru.
 // excludeTokens = slova hledaného názvu (aby "Mob Psycho 100" nebylo epizoda 100)
 // Vrací { season, episode, explicit } – explicit = měl SxxEyy / NxNN
-function parseEpisode(fileName, excludeTokens) {
+function parseEpisode(fileName, excludeTokens, restTokens) {
     let n = normalize(fileName);
     let season = null, episode = null, explicit = false;
 
@@ -126,6 +129,17 @@ function parseEpisode(fileName, excludeTokens) {
         n.match(/\b(\d{1,4})\s(?:dil|cast)\b/) || n.match(/\b(?:dil|cast)\s(\d{1,4})\b/);
     if (m && !/^(19|20)\d{2}$/.test(m[1])) return { season, episode: +m[1], explicit: false };
 
+    // Holé číslo hned za názvem (název je z hledání vyřazený, takže "Mob Psycho 100" ani "2.světová" nepřekáží)
+    if (Array.isArray(restTokens)) {
+        const restNums = stripTech(restTokens.join(' ')).split(' ').filter(t => /^\d{1,4}$/.test(t));
+        if (season !== null) {
+            const i = restNums.findIndex(t => +t === season);
+            if (i !== -1 && restNums.length > 1) restNums.splice(i, 1);
+        }
+        if (restNums.length) return { season, episode: +restNums[0], explicit: false };
+        m = restTokens.join(' ').match(/\b(\d{1,4})v\d\b/);
+        return { season, episode: m ? +m[1] : null, explicit: false };
+    }
     // Holé číslo: nejdřív " - 05" v původním názvu, pak samostatné číslo
     const raw = String(fileName).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
     const dash = raw.match(/\s[-–]\s(\d{1,4})(?:v\d)?(?=[\s\[\(._]|$)/);
@@ -191,7 +205,70 @@ function detectQuality(fileName) {
     return { resolution, score, codec, audio, hdr, source, cam };
 }
 
+// Slova, která za názvem v souboru nevadí (jazyk, kvalita, zdroj, verze …)
+const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english multi dual dab dabing dabbing dub dubbed ' +
+    'tit titulky sub subs forced hd fhd uhd sd bluray bdrip brrip bd remux webrip web dl webdl hdtv dvdrip dvd rip ' +
+    'xvid divx hevc avc aac ac3 dts ddp truehd atmos hdr dv extended edition directors cut uncut unrated remastered ' +
+    'complete kompletni serie series season sezona rada episode ep epizoda dil cast part mp4 mkv avi vostfr ' +
+    'tv ova movie film proper repack internal limited').split(' '));
+
+// Najde v souboru slova názvu (v pořadí, mezery mezi nimi tolerované – "Rosario to Vampire" ~ "Rosario + Vampire");
+// vrací pozici prvního slova a slova, která následují za posledním
+function afterName(fileName, name) {
+    const ft = tokens(fileName).filter(t => !STOPWORDS.has(t));
+    const nt = nameTokens(name);
+    if (!nt.length) return null;
+    for (let i = 0; i < ft.length; i++) {
+        if (ft[i] !== nt[0]) continue;
+        let pos = i, ok = true;
+        for (let j = 1; j < nt.length; j++) {
+            const k = ft.indexOf(nt[j], pos + 1);
+            if (k === -1 || k - pos > 3) { ok = false; break; }
+            pos = k;
+        }
+        if (ok) return { start: i, rest: ft.slice(pos + 1) };
+    }
+    return null;
+}
+
+// Podtitul za dvojtečkou ("Druhá světová válka: Cena říše" → "Cena říše") – soubory se tak často jmenují
+function subTitle(str) {
+    const parts = String(str || '').split(/\s*:\s+/);
+    if (parts.length < 2) return null;
+    const sub = parts.slice(1).join(' ').trim();
+    const nt = nameTokens(sub);
+    if (nt.length < 2 || !nt.some(t => t.length >= 4)) return null;
+    if (/^(season|part|serie|series|rada|cast|the movie|movie|film)\b/i.test(normalize(sub))) return null;
+    return sub;
+}
+
+const ROMAN = { ii: 2, iii: 3, iv: 4, v: 5, vi: 6 };
+// Značka pokračování hned za názvem ("Capu2", "II", "2nd season", "S2", "Název 2 - 05") → číslo sezóny
+function sequelSeason(rest) {
+    const a = rest && rest[0], b = rest && rest[1];
+    if (!a) return null;
+    if (ROMAN[a]) return ROMAN[a];
+    let m = a.match(/^s(\d)$/) || a.match(/^(\d)(?:st|nd|rd|th)$/) || a.match(/^[a-z]{2,}([2-9])$/);
+    if (m) return +m[1];
+    if (/^[2-9]$/.test(a) && b && /^\d{1,4}$/.test(b)) return +a;
+    return null;
+}
+
+// Zkrácený název ("Druhá světová válka" z "Druhá světová válka: Cena říše") je šum,
+// když v souboru nezačíná (do 2. slova) nebo za ním stojí jiný podtitul ("… v barvách", "… Na frontě")
+function shortNameIsNoise(fileName, shortName, fullName) {
+    const hit = afterName(fileName, shortName);
+    if (!hit || hit.start > 1) return true;
+    const full = new Set(nameTokens(fullName));
+    const next = hit.rest.find(t => !(t.length < 2 && /^[a-z]$/.test(t)));
+    if (!next) return false;
+    if (!/^[a-z]+$/.test(next)) return false;          // číslo, S02E05, 1080p, 2nd …
+    if (full.has(next) || TECH_WORDS.has(next) || ROMAN[next]) return false;
+    return true;
+}
+
 module.exports = {
+    afterName, sequelSeason, shortNameIsNoise, subTitle,
     normalize, tokens, nameTokens, queryText, isLatin, shortTitle,
     titleMatches, fileYears, parseEpisode, looksLikeEpisode,
     detectLang, langScore, detectQuality

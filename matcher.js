@@ -267,8 +267,14 @@ function shortNameIsNoise(fileName, shortName, fullName) {
     return true;
 }
 
+// Soubory, které nejdou přehrát: archivy, titulky, obrázky, hudba, dokumenty…
+const NON_VIDEO = /\.(zip|rar|7z|tar|gz|tgz|bz2|xz|iso|img|r\d{2}|\d{3}|srt|ass|ssa|sub|idx|vtt|sup|smi|nfo|txt|doc|docx|pdf|jpg|jpeg|png|gif|webp|bmp|exe|apk|msi|torrent|mp3|flac|m4a|aac|ogg|opus|wav|wma)$/i;
+function isNonVideo(fileName) {
+    return NON_VIDEO.test(String(fileName || '').trim());
+}
+
 module.exports = {
-    afterName, sequelSeason, shortNameIsNoise, subTitle,
+    isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,
     normalize, tokens, nameTokens, queryText, isLatin, shortTitle,
     titleMatches, fileYears, parseEpisode, looksLikeEpisode,
     detectLang, langScore, detectQuality

@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const M = require('./matcher');
 
-const VERSION = '8.0.4';
+const VERSION = '8.0.5';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -184,7 +184,7 @@ function parseFiles(ch) {
             pos: parseInt(c('positive_votes') || '0', 10) || 0,
             neg: parseInt(c('negative_votes') || '0', 10) || 0
         };
-    }).filter(f => f.ident && f.name);
+    }).filter(f => f.ident && f.name && !M.isNonVideo(f.name)); // jen přehratelná videa
 }
 
 async function wsSearch(token, query, limit = 50) {

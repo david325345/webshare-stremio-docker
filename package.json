@@ -1,6 +1,6 @@
 {
   "name": "webshare-stremio-addon",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "description": "Webshare+Anime – Stremio / Nuvio addon pro Webshare.cz",
   "main": "server.js",
   "scripts": {

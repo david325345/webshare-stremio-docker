@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const M = require('./matcher');
 
-const VERSION = '8.0.0';
+const VERSION = '8.0.1';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -580,14 +580,13 @@ function toStream(item, base, cfgB64) {
     const lines = [f.name, [lbl, `💾 ${formatSize(f.size)}`, tech].filter(Boolean).join('  ·  ') + star];
     return {
         name: `Webshare\n${q.cam ? 'CAM' : (q.resolution || 'SD')}`,
+        // jen "title" – stremio-core bere title jako alias description; obě pole naráz = odpověď zahozena
         title: lines.join('\n'),
-        description: lines.join('\n'),
         url: playUrl(base, cfgB64, f),
         behaviorHints: {
             bingeGroup: `webshare-${q.resolution || 'sd'}-${lang.cz ? 'cz' : lang.sk ? 'sk' : 'x'}${lang.dub ? '-dub' : ''}`,
             filename: f.name,
-            videoSize: f.size || undefined,
-            notWebReady: !/\.mp4$/i.test(f.name)
+            videoSize: f.size || undefined
         }
     };
 }
@@ -608,7 +607,8 @@ async function handleStream(type, id, cfg, base, cfgB64) {
     log(`🎬 ${type} ${id} [${cfg.username}] ${p ? (p.isAnime ? `anime AL${p.anilistId}` : p.source) : 'bez názvů'}` +
         `${p ? ` | názvy: ${p.names.map(n => n.text).join(' / ')}` : ''}` +
         ` | dotazů ${res.queries || 0}, souborů ${res.total || 0}, streamů ${streams.length}` +
-        `${res.cached ? ' (cache)' : ` | ${res.ms} ms`}`);
+        `${res.cached ? ' (cache)' : ` | ${res.ms} ms`}` +
+        `${res.items.length ? ` | 1.: ${res.items[0].f.name}` : ''}`);
     return streams;
 }
 
@@ -676,7 +676,12 @@ function buildManifest(base, cfg) {
         description: 'Filmy, seriály a anime z Webshare.cz – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.',
         logo: `${base}/logo.png`,
         background: `${base}/webshare-backdrop.jpg`,
-        resources: withCatalog ? ['stream', 'catalog', 'meta'] : ['stream', 'meta'],
+        // meta jen pro soubory z katalogu (webshare-…); metadata filmů a seriálů dodává Cinemeta
+        resources: [
+            { name: 'stream', types: ['movie', 'series'], idPrefixes: ['tt', 'kitsu', 'webshare'] },
+            { name: 'meta', types: ['movie', 'series'], idPrefixes: ['webshare'] },
+            ...(withCatalog ? ['catalog'] : [])
+        ],
         types: ['movie', 'series'],
         idPrefixes: ['tt', 'kitsu', 'webshare'],
         catalogs: withCatalog ? [SEARCH_CATALOG] : [],
@@ -803,7 +808,8 @@ app.get(['/:cfg/catalog/:type/:id/:extra.json', '/:cfg/catalog/:type/:id.json'],
 
 app.get('/:cfg/meta/:type/:id.json', withCfg(async (req, res, cfg) => {
     const meta = await handleMeta(req.params.type, req.params.id, cfg, baseUrl(req));
-    res.json({ meta: meta || {} });
+    if (!meta) return res.status(404).json({ err: 'not found' });
+    res.json({ meta });
 }));
 
 // Odkaz na soubor se vytváří až při přehrání (rychlejší seznam streamů, odkaz nevyprší)

@@ -9,7 +9,7 @@ const path = require('path');
 const zlib = require('zlib');
 const M = require('./matcher');
 
-const VERSION = '8.1.0';
+const VERSION = '8.2.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -43,8 +43,47 @@ class TTLCache {
 const H = 3600 * 1000;
 const tokenCache = new TTLCache(500);     // přihlašovací tokeny Webshare (6 h)
 const linkCache = new TTLCache(2000);     // odkazy na soubory (15 min)
-const tmdbCache = new TTLCache(5000);     // TMDB názvy (24 h)
-const resolveCache = new TTLCache(5000);  // resolve-ids z indexeru (24 h / 6 h negativní)
+// Trvalá cache na disku (přežije deploy): TMDB názvy a resolve-ids z indexeru.
+// Prošlé záznamy se drží ještě STALE_DAYS a použijí se, když TMDB / indexer nejsou dostupné.
+const CACHE_DIR = process.env.CACHE_DIR || path.join(__dirname, 'data', 'cache');
+const STALE_MS = 60 * 24 * H;
+class PersistentCache {
+    constructor(name, max = 50000) {
+        this.file = path.join(CACHE_DIR, `${name}.json`);
+        this.max = max; this.map = new Map(); this.dirty = false; this.ok = true;
+        try {
+            const raw = JSON.parse(fs.readFileSync(this.file, 'utf8'));
+            const now = Date.now();
+            for (const [k, e] of Object.entries(raw)) if (e && e.e + STALE_MS > now) this.map.set(k, e);
+        } catch (e) { /* první start nebo poškozený soubor – začínáme prázdní */ }
+    }
+    get(key) { const e = this.map.get(key); return e && e.e > Date.now() ? e.v : undefined; }   // jen platné
+    getStale(key) { const e = this.map.get(key); return e ? e.v : undefined; }                   // i prošlé
+    set(key, val, ttlMs) {
+        if (this.map.size >= this.max) this.map.delete(this.map.keys().next().value);
+        this.map.delete(key);
+        this.map.set(key, { v: val, e: Date.now() + ttlMs });
+        this.dirty = true;
+    }
+    save() {
+        if (!this.dirty || !this.ok) return;
+        try {
+            fs.mkdirSync(CACHE_DIR, { recursive: true });
+            const tmp = `${this.file}.tmp`;
+            fs.writeFileSync(tmp, JSON.stringify(Object.fromEntries(this.map)));
+            fs.renameSync(tmp, this.file);
+            this.dirty = false;
+        } catch (e) {
+            this.ok = false;
+            console.log(`⚠️ cache ${this.file} nejde uložit (${e.message}) – poběží jen v paměti`);
+        }
+    }
+}
+const tmdbCache = new PersistentCache('tmdb');        // TMDB názvy (30 dní)
+const resolveCache = new PersistentCache('resolve');  // resolve-ids (anime 30 dní, „není anime“ 2 dny)
+const saveCaches = () => { tmdbCache.save(); resolveCache.save(); };
+setInterval(saveCaches, 2 * 60 * 1000).unref();
+for (const sig of ['SIGTERM', 'SIGINT']) process.on(sig, () => { saveCaches(); process.exit(0); });
 const resultCache = new TTLCache(3000);   // nalezené soubory pro dané ID (30 min, sdílené)
 const inflight = new Map();               // souběžné stejné požadavky čekají na jeden výsledek
 
@@ -242,18 +281,21 @@ async function resolveIds(params) {
                 });
                 const b = resp.body;
                 if (resp.statusCode === 200 && b && b.anilist_id) {
-                    resolveCache.set(key, b, 24 * H);
+                    resolveCache.set(key, b, 30 * 24 * H);
                     return b;
                 }
-                // indexer odpověděl, ale nejde o anime → negativní cache
-                resolveCache.set(key, null, 6 * H);
+                if (resp.statusCode >= 500) throw new Error(`HTTP ${resp.statusCode}`);
+                // indexer odpověděl, ale nejde o anime → negativní cache (krátká – mapování se může doplnit)
+                resolveCache.set(key, null, 2 * 24 * H);
                 return null;
             } catch (e) {
                 if (!indexerDownUntil.get(base)) log(`⚠️ indexer ${base} nedostupný (${e.message}) – 5 min použiju zálohu`);
                 indexerDownUntil.set(base, Date.now() + 5 * 60 * 1000);
             }
         }
-        return null; // indexer nedostupný – necachovat
+        // indexer nedostupný – použij i prošlý záznam, jinak nic (necachovat)
+        const stale = resolveCache.getStale(key);
+        return stale !== undefined ? stale : null;
     });
 }
 
@@ -316,19 +358,26 @@ async function titleInfo(imdbId, type, userTmdbKey) {
     if (hit !== undefined) return hit;
     return once(key, async () => {
         const keys = [...new Set([String(userTmdbKey || '').trim(), TMDB_API_KEY].filter(Boolean))];
+        let failed = false;
         for (const k of keys) {
             try {
                 const info = await tmdbInfoWithKey(imdbId, type, k);
-                if (info) { tmdbCache.set(key, info, 24 * H); return info; }
+                if (info) { tmdbCache.set(key, info, 30 * 24 * H); return info; }
+                failed = false;
                 break; // TMDB odpovědělo, jen titul nezná
             } catch (e) {
                 dbg(`TMDB ${imdbId}: ${e.message}`);
+                failed = true;
                 if (!e.auth) break;
             }
         }
+        // TMDB nedostupné → radši prošlý záznam (s CZ názvy) než Cinemeta
+        const stale = tmdbCache.getStale(key);
+        if (failed && stale) return stale;
         const cm = await cinemetaInfo(imdbId, type);
-        if (cm) tmdbCache.set(key, cm, 12 * H);
-        return cm;
+        // když TMDB jen selhalo, Cinemetu držet krátce (ať se CZ názvy brzy doplní)
+        if (cm) tmdbCache.set(key, cm, failed ? H : 7 * 24 * H);
+        return cm || stale || null;
     });
 }
 
@@ -983,6 +1032,7 @@ if (require.main === module) {
     app.listen(PORT, () => {
         log(`🚀 Webshare ${VERSION} běží na portu ${PORT}`);
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
+        log(`   cache: ${CACHE_DIR} (TMDB ${tmdbCache.map.size}, indexer ${resolveCache.map.size} záznamů)`);
         log(`   archiv hledání: ${archiveOk ? `${ARCHIVE_DIR} (${ARCHIVE_DAYS} dní)` : 'vypnutý'} | stažení: ${ADMIN_KEY ? '/admin/hledani.jsonl.gz?key=…' : 'vypnuté (chybí ADMIN_KEY)'}`);
     });
 }

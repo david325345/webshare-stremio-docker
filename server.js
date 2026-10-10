@@ -9,7 +9,7 @@ const path = require('path');
 const zlib = require('zlib');
 const M = require('./matcher');
 
-const VERSION = '8.2.0';
+const VERSION = '8.3.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -81,7 +81,7 @@ class PersistentCache {
 }
 const tmdbCache = new PersistentCache('tmdb');        // TMDB názvy (30 dní)
 const resolveCache = new PersistentCache('resolve');  // resolve-ids (anime 30 dní, „není anime“ 2 dny)
-const saveCaches = () => { tmdbCache.save(); resolveCache.save(); };
+const saveCaches = () => { tmdbCache.save(); resolveCache.save(); fileCache.save(); };
 setInterval(saveCaches, 2 * 60 * 1000).unref();
 for (const sig of ['SIGTERM', 'SIGINT']) process.on(sig, () => { saveCaches(); process.exit(0); });
 const resultCache = new TTLCache(3000);   // nalezené soubory pro dané ID (30 min, sdílené)
@@ -213,7 +213,14 @@ async function withToken(cfg, fn) {
     return r;
 }
 
+const lockedIdents = new Set();
 function parseFiles(ch) {
+    // soubory pod heslem nejdou přehrát → pryč hned z výsledků hledání
+    lockedIdents.clear();
+    ch.filter(el => el.name === 'file').forEach(el => {
+        const pw = (el.children || []).find(k => k.name === 'password');
+        if (pw && pw.value === '1') lockedIdents.add((el.children.find(k => k.name === 'ident') || {}).value);
+    });
     return ch.filter(el => el.name === 'file').map(el => {
         const c = name => { const x = (el.children || []).find(k => k.name === name); return x ? x.value : undefined; };
         return {
@@ -224,7 +231,7 @@ function parseFiles(ch) {
             pos: parseInt(c('positive_votes') || '0', 10) || 0,
             neg: parseInt(c('negative_votes') || '0', 10) || 0
         };
-    }).filter(f => f.ident && f.name);
+    }).filter(f => f.ident && f.name && !lockedIdents.has(f.ident));
 }
 
 async function wsSearch(token, query, limit = 50) {
@@ -239,9 +246,27 @@ async function wsFileLink(token, ident) {
     return { authFailed: r.status === 'FATAL', link: null, message: r.get('message') || r.get('code') };
 }
 
+// file_info vrací (nezdokumentovaně) i délku, rozlišení a audio stopy s jazykem; titulky ne
+const IMAGE_FORMATS = new Set(['MJPEG', 'PNG', 'JPEG', 'JPG', 'GIF', 'BMP', 'WEBP']);
+function parseStreams(ch, tag) {
+    const block = ch.find(e => e.name === tag);
+    return ((block && block.children) || []).filter(e => e.name === 'stream').map(st => {
+        const v = n => { const x = (st.children || []).find(k => k.name === n); return x && x.value != null ? String(x.value) : ''; };
+        return { format: v('format').toUpperCase(), width: +v('width') || 0, height: +v('height') || 0,
+                 channels: +v('channels') || 0, lang: v('language').toUpperCase() };
+    });
+}
+
 async function wsFileInfo(token, ident) {
     const r = await wsPost('file_info', { ident, wst: token });
-    if (r.status !== 'OK') return { authFailed: r.status === 'FATAL', info: null };
+    if (r.status !== 'OK') {
+        const code = r.get('code') || '';
+        // FILE_INFO_FATAL_1 = soubor neexistuje → nedostupný (ne chyba přihlášení)
+        if (/FILE_INFO_FATAL/.test(code)) return { info: null, missing: true };
+        return { authFailed: r.status === 'FATAL', info: null };
+    }
+    const video = parseStreams(r.ch, 'video').filter(v => !IMAGE_FORMATS.has(v.format))[0] || null;
+    const audio = parseStreams(r.ch, 'audio').map(a => ({ f: a.format, ch: a.channels, lang: a.lang }));
     return {
         info: {
             ident,
@@ -250,7 +275,13 @@ async function wsFileInfo(token, ident) {
             img: r.get('img') || null,
             description: r.get('description') || '',
             pos: parseInt(r.get('positive_votes') || '0', 10) || 0,
-            neg: parseInt(r.get('negative_votes') || '0', 10) || 0
+            neg: parseInt(r.get('negative_votes') || '0', 10) || 0,
+            ok: r.get('available') !== '0' && r.get('removed') !== '1' && r.get('password') !== '1',
+            len: parseInt(r.get('length') || '0', 10) || 0,
+            w: video ? video.width : (parseInt(r.get('width') || '0', 10) || 0),
+            h: video ? video.height : (parseInt(r.get('height') || '0', 10) || 0),
+            vf: video ? video.format : String(r.get('format') || '').toUpperCase(),
+            au: audio
         }
     };
 }
@@ -603,18 +634,77 @@ function filterFiles(files, plan) {
     return out;
 }
 
+// Jazyk a kvalita: skutečné stopy z file_info mají přednost před názvem souboru
+const CZ_CODES = new Set(['CZE', 'CES', 'CZ', 'CS']);
+const SK_CODES = new Set(['SLO', 'SLK', 'SK']);
+function describe(f, info) {
+    const lang = M.detectLang(f.name);
+    const q = M.detectQuality(f.name);
+    const langs = info && info.au ? [...new Set(info.au.map(a => a.lang).filter(l => l && l !== 'UND'))] : [];
+    let ls;
+    if (langs.length) {
+        const aCz = langs.some(l => CZ_CODES.has(l)), aSk = langs.some(l => SK_CODES.has(l));
+        // dabing podle stop; "CZ" v názvu bez české stopy = titulky
+        ls = aCz ? 50 : aSk ? 35 : lang.cz ? 30 : lang.sk ? 20 : lang.multi ? 5 : 0;
+    } else {
+        ls = M.langScore(lang);
+    }
+    if (info && info.w) {
+        const w = info.w, h = info.h;
+        const res = (w >= 3200 || h >= 2000) ? ['4K', 4] : (w >= 1800 || h >= 1000) ? ['1080p', 3]
+                  : (w >= 1200 || h >= 700) ? ['720p', 2] : ['SD', 1];
+        if (!q.cam) { q.resolution = res[0]; q.score = res[1]; }
+    }
+    if (info && info.vf) {
+        const vf = info.vf;
+        q.codec = /HEVC|H265|X265/.test(vf) ? 'HEVC' : /H264|AVC|X264/.test(vf) ? 'H.264' : /AV1/.test(vf) ? 'AV1' : q.codec;
+    }
+    if (info && info.au && info.au.length) {
+        const a = info.au[0];
+        const fmt = /TRUEHD/.test(a.f) ? 'TrueHD' : /DTS/.test(a.f) ? 'DTS' : /EAC3|E-AC-3/.test(a.f) ? 'DD+'
+                  : /AC3|AC-3/.test(a.f) ? 'AC3' : /AAC/.test(a.f) ? 'AAC' : /OPUS/.test(a.f) ? 'Opus' : /MP3|MPEG/.test(a.f) ? 'MP3' : null;
+        if (fmt) q.audio = fmt + (a.ch >= 6 ? ` ${a.ch === 8 ? '7.1' : '5.1'}` : a.ch === 2 ? ' 2.0' : '');
+    }
+    return { lang, q, ls, audioLangs: langs };
+}
+
 function rankFiles(items) {
-    return items.map(it => {
-        const lang = M.detectLang(it.f.name);
-        const q = M.detectQuality(it.f.name);
-        return { ...it, lang, q, ls: M.langScore(lang) };
-    }).sort((a, b) =>
+    return items.map(it => ({ ...it, ...describe(it.f, it.info) })).sort((a, b) =>
         ((a.q.cam ? 1 : 0) - (b.q.cam ? 1 : 0)) ||
         (b.ls - a.ls) ||
         (b.q.score - a.q.score) ||
         ((b.exact ? 1 : 0) - (a.exact ? 1 : 0)) ||
         (b.f.size - a.f.size)
     );
+}
+
+// Doplní file_info pro dané soubory (max 6 souběžně, časový limit 2,5 s – zbytek doběhne na pozadí do cache)
+const fileCache = new PersistentCache('files', 200000);
+setInterval(() => fileCache.save(), 2 * 60 * 1000).unref();
+async function fetchFileInfo(cfg, ident) {
+    const r = await withToken(cfg, t => wsFileInfo(t, ident));
+    if (r.info) {
+        const i = r.info;
+        const rec = { ok: i.ok, len: i.len, w: i.w, h: i.h, vf: i.vf, au: i.au };
+        fileCache.set(ident, rec, (i.ok ? 7 : 30) * 24 * H);
+        return rec;
+    }
+    if (r.missing) { const rec = { ok: false }; fileCache.set(ident, rec, 30 * 24 * H); return rec; }
+    return null;
+}
+async function enrichFiles(cfg, items, deadlineMs = 2500) {
+    const todo = items.map(it => it.f.ident).filter(id => fileCache.get(id) === undefined);
+    if (!todo.length) return true;
+    let i = 0;
+    const worker = async () => {
+        while (i < todo.length) {
+            const id = todo[i++];
+            try { await once(`fi:${id}`, () => fetchFileInfo(cfg, id)); } catch (e) { dbg(`file_info ${id}: ${e.message}`); }
+        }
+    };
+    const all = Promise.all(Array.from({ length: Math.min(6, todo.length) }, worker));
+    const timedOut = await Promise.race([all.then(() => false), new Promise(r => setTimeout(() => r(true), deadlineMs).unref())]);
+    return !timedOut;
 }
 
 // Najde a seřadí soubory pro dané ID (výsledek je sdílený pro všechny uživatele, 30 min)
@@ -639,9 +729,16 @@ async function findFiles(type, id, cfg) {
             items = filterFiles([...files.values()], plan);
             queries += w2.length;
         }
-        const ranked = rankFiles(items);
+        let ranked = rankFiles(items);
+        // file_info pro nejlepší soubory: dostupnost + audio stopy (trvalá cache podle identu)
+        const max = plan.type === 'movie' ? 30 : 25;
+        const complete = await enrichFiles(cfg, ranked.slice(0, max + 10));
+        ranked = rankFiles(ranked
+            .map(it => ({ ...it, info: fileCache.get(it.f.ident) || it.info }))
+            .filter(it => !it.info || it.info.ok !== false));
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
-        if (ranked.length) resultCache.set(key, res, 30 * 60 * 1000);
+        // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní
+        if (ranked.length) resultCache.set(key, res, (complete ? 30 : 3) * 60 * 1000);
         archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms);
         return res;
     });
@@ -679,6 +776,13 @@ function archiveSearch(plan, queries, files, ranked, ms) {
         files: [...files.values()].map(f => {
             const j = judgeFile(f, plan);
             const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
+            const fi = fileCache.get(f.ident);
+            if (fi) {   // skutečné stopy z file_info (jen u souborů, pro které se zjišťovaly)
+                rec.av = fi.ok;
+                if (fi.au && fi.au.length) rec.au = fi.au.map(x => x.lang || '?');
+                if (fi.len) rec.len = fi.len;
+                if (fi.w) rec.res = `${fi.w}x${fi.h}`;
+            }
             if (j.e !== undefined && j.e !== null) rec.se = [j.s ?? null, j.e];
             if (sent.has(f.ident)) rec.sent = sent.get(f.ident);
             return rec;
@@ -725,12 +829,43 @@ function playUrl(base, cfgB64, f) {
     return `${base}/${cfgB64}/play/${encodeURIComponent(f.ident)}/${encodeURIComponent(safe)}`;
 }
 
+const FLAGS = { CZE: '🇨🇿 CZ', CES: '🇨🇿 CZ', CZ: '🇨🇿 CZ', CS: '🇨🇿 CZ', SLO: '🇸🇰 SK', SLK: '🇸🇰 SK', SK: '🇸🇰 SK',
+    ENG: '🇬🇧 EN', EN: '🇬🇧 EN', GER: '🇩🇪 DE', DEU: '🇩🇪 DE', FRE: '🇫🇷 FR', FRA: '🇫🇷 FR', ITA: '🇮🇹 IT',
+    SPA: '🇪🇸 ES', POL: '🇵🇱 PL', HUN: '🇭🇺 HU', RUS: '🇷🇺 RU', UKR: '🇺🇦 UA', JPN: '🇯🇵 JP', JAP: '🇯🇵 JP',
+    KOR: '🇰🇷 KO', CHI: '🇨🇳 ZH', ZHO: '🇨🇳 ZH', POR: '🇵🇹 PT' };
+// Zvuk ze skutečných stop ("🔊 🇨🇿 CZ · 🇬🇧 EN"), titulky jen z názvu ("💬 CZ")
+function audioSubsLabel(item) {
+    const { lang, audioLangs } = item;
+    const parts = [];
+    if (audioLangs && audioLangs.length) {
+        parts.push('🔊 ' + [...new Set(audioLangs.map(l => FLAGS[l] || l))].slice(0, 4).join(' · '));
+        if (lang.sub) {
+            const subs = [lang.cz && !audioLangs.some(l => CZ_CODES.has(l)) ? 'CZ' : null,
+                          lang.sk && !audioLangs.some(l => SK_CODES.has(l)) ? 'SK' : null].filter(Boolean);
+            parts.push('💬 ' + (subs.length ? subs.join(' · ') : 'titulky'));
+        } else if (lang.cz && !audioLangs.some(l => CZ_CODES.has(l))) {
+            parts.push('💬 CZ');   // "CZ" v názvu, ale česká stopa chybí → nejspíš titulky
+        } else if (lang.sk && !audioLangs.some(l => SK_CODES.has(l))) {
+            parts.push('💬 SK');
+        }
+        return parts.join('  ');
+    }
+    return langLabel(lang);
+}
+
+function formatLength(sec) {
+    if (!sec) return null;
+    const h = Math.floor(sec / 3600), m = Math.round((sec % 3600) / 60);
+    return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min`;
+}
+
 function toStream(item, base, cfgB64) {
-    const { f, lang, q } = item;
-    const lbl = langLabel(lang);
+    const { f, lang, q, info } = item;
+    const lbl = audioSubsLabel(item);
     const tech = [q.source, q.codec, q.audio, q.hdr ? 'HDR' : null].filter(Boolean).join(' · ');
     const star = f.pos >= 3 && f.pos > f.neg * 3 ? ' ⭐' : '';
-    const lines = [f.name, [lbl, `💾 ${formatSize(f.size)}`, tech].filter(Boolean).join('  ·  ') + star];
+    const meta = [`💾 ${formatSize(f.size)}`, info && info.len ? `⏱ ${formatLength(info.len)}` : null, tech].filter(Boolean).join('  ·  ');
+    const lines = [f.name, lbl, meta + star].filter(Boolean);
     return {
         name: `Webshare\n${q.cam ? 'CAM' : (q.resolution || 'SD')}`,
         // jen "title" – stremio-core bere title jako alias description; obě pole naráz = odpověď zahozena
@@ -750,7 +885,8 @@ async function handleStream(type, id, cfg, base, cfgB64) {
         const ident = id.slice(9);
         const r = await withToken(cfg, t => wsFileInfo(t, ident));
         if (!r.info) return [];
-        const item = rankFiles([{ f: r.info, exact: true }])[0];
+        if (r.info.ok === false) return [];
+        const item = rankFiles([{ f: r.info, exact: true, info: r.info }])[0];
         return [toStream(item, base, cfgB64)];
     }
     const res = await findFiles(type, id, cfg);

@@ -1,4 +1,4 @@
-// Webshare+Anime — Stremio / Nuvio addon pro Webshare.cz
+// Webshare — Stremio / Nuvio addon pro Webshare.cz
 // Každý uživatel má vlastní odkaz s configem (base64url JSON) v cestě URL.
 
 const express = require('express');
@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const M = require('./matcher');
 
-const VERSION = '8.0.2';
+const VERSION = '8.0.3';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -672,7 +672,7 @@ function buildManifest(base, cfg) {
     return {
         id: cfg ? personalAddonId(cfg.username) : 'com.webshare.anime',
         version: VERSION,
-        name: 'Webshare+Anime',
+        name: 'Webshare',
         description: 'Filmy, seriály a anime z Webshare.cz – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.',
         logo: `${base}/logo.png`,
         background: `${base}/webshare-backdrop.jpg`,
@@ -835,7 +835,7 @@ app.use((req, res) => res.status(404).json({ error: 'Nenalezeno' }));
 
 if (require.main === module) {
     app.listen(PORT, () => {
-        log(`🚀 Webshare+Anime ${VERSION} běží na portu ${PORT}`);
+        log(`🚀 Webshare ${VERSION} běží na portu ${PORT}`);
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
     });
 }

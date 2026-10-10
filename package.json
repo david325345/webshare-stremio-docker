@@ -1,19 +1,16 @@
 {
   "name": "webshare-stremio-addon",
-  "version": "1.0.0",
-  "description": "Webshare Stremio Addon",
+  "version": "8.0.0",
+  "description": "Webshare+Anime – Stremio / Nuvio addon pro Webshare.cz",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
-    "stremio-addon-sdk": "^1.6.10",
-    "needle": "^3.3.1",
-    "crypto": "^1.0.1",
-    "sha1": "^1.1.1",
-    "xml2js": "^0.6.2",
-    "@aws-sdk/client-s3": "^3.500.0",
-    "express": "^4.18.2",
-    "path": "^0.12.7"
+    "express": "^4.21.2",
+    "needle": "^3.3.1"
   }
 }

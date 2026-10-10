@@ -106,6 +106,43 @@ const r2Client = new S3Client({
 const R2_BUCKET = process.env.R2_BUCKET_NAME || 'titulky-cache';
 const R2_PREFIX = 'webshare-addon/';
 
+// === Bezpečné logování - hesla a API klíče se nesmí dostat do logu ===
+// Zamaskuje config v args (password, tmdb_api_key) pro výpis do logu
+function redactArgs(args) {
+    if (!args || typeof args !== 'object') return args;
+    const copy = { ...args };
+    if (copy.config && typeof copy.config === 'object') {
+        copy.config = { ...copy.config };
+        if (copy.config.password) copy.config.password = '***';
+        if (copy.config.tmdb_api_key) copy.config.tmdb_api_key = '***';
+    }
+    return copy;
+}
+
+// Z base64 configu vytáhne jen username (pro log), jinak vrátí null
+function usernameFromConfigB64(b64) {
+    try {
+        const cfg = JSON.parse(Buffer.from(decodeURIComponent(b64), 'base64').toString('utf8'));
+        return cfg && cfg.username ? String(cfg.username) : null;
+    } catch (e) {
+        return null;
+    }
+}
+
+// Nahradí config v URL (/eyJ.../... i ?config=eyJ...) za <config:username>
+function maskConfigInUrl(url) {
+    return String(url).replace(/(^\/|[?&]config=)(eyJ[A-Za-z0-9_+=%-]+)/g, (match, prefix, b64) => {
+        const user = usernameFromConfigB64(b64);
+        return `${prefix}<config:${user || '?'}>`;
+    });
+}
+
+// Unikátní a stabilní ID addonu pro každého uživatele (odvozené z username, ne z hesla)
+function personalAddonId(username) {
+    const hash = crypto.createHash('sha1').update(String(username || '').toLowerCase()).digest('hex').slice(0, 10);
+    return `${manifest.id}.${hash}`;
+}
+
 // Super admin - nemůže být odebrán
 const SUPER_ADMIN = 'Procha';
 
@@ -1052,7 +1089,7 @@ async function getTMDBNames(imdbId, type, apiKey) {
 // Stream handler funkce - použita jak builderem tak personal routes
 async function handleStreamRequest(args) {
     console.log('=== STREAM REQUEST ===');
-    console.log('Full args:', JSON.stringify(args, null, 2));
+    console.log('Full args:', JSON.stringify(redactArgs(args), null, 2));
     console.log('Type:', args.type);
     console.log('ID:', args.id);
     console.log('Config:', args.config ? 'present' : 'missing');
@@ -2527,7 +2564,7 @@ async function handleStreamRequest(args) {
         console.error('=== STREAM HANDLER ERROR ===');
         console.error('Error:', error.message);
         console.error('Stack:', error.stack);
-        console.error('Args:', JSON.stringify(args));
+        console.error('Args:', JSON.stringify(redactArgs(args)));
         
         // Vracíme prázdné pole i při erroru
         return { streams: [] };
@@ -2724,7 +2761,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
     // Log pouze API requesty, ne statické soubory
     if (!req.url.endsWith('.svg') && !req.url.endsWith('.png') && !req.url.endsWith('.jpg')) {
-        console.log(`📥 ${req.method} ${req.url}`);
+        console.log(`📥 ${req.method} ${maskConfigInUrl(req.url)}`);
     }
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -2993,8 +3030,14 @@ app.get('/', (req, res) => {
                 console.error('Failed to save config:', e);
             }
             
-            // Base64 encode config pro personal URL
-            const configB64 = btoa(JSON.stringify(config));
+            // Base64url encode config pro personal URL
+            // - UTF-8 přes TextEncoder (heslo s diakritikou by v btoa spadlo)
+            // - base64url: bez '/', '+' a '=' (lomítko v cestě rozbije route na serveru)
+            const configBytes = new TextEncoder().encode(JSON.stringify(config));
+            let configBin = '';
+            configBytes.forEach(b => { configBin += String.fromCharCode(b); });
+            let configB64 = btoa(configBin).split('+').join('-').split('/').join('_');
+            while (configB64.endsWith('=')) configB64 = configB64.slice(0, -1);
             
             // Vytvoříme PERSONAL Stremio install URL s credentials v path
             const installUrl = \`stremio://\${window.location.host}/\${configB64}/manifest.json\`;
@@ -3041,7 +3084,7 @@ app.get('/:userConfig/manifest.json', (req, res) => {
         // Vytvoříme personal manifest BEZ config fields a BEZ katalogu
         const personalManifest = {
             ...manifest,
-            id: `${manifest.id}.${configB64.substring(0, 8)}`,
+            id: personalAddonId(config.username),
             name: 'Webshare+Anime',
             config: undefined,
             behaviorHints: {

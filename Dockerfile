@@ -8,7 +8,10 @@ RUN npm install --omit=dev && npm cache clean --force
 
 COPY . .
 
-USER node
+# Archiv hledání (anonymní) – v Coolify připoj na /app/data trvalý svazek
+RUN mkdir -p /app/data/hledani
+VOLUME ["/app/data"]
+
 EXPOSE ${PORT:-7000}
 
 CMD ["node", "server.js"]

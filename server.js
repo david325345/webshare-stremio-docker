@@ -6,9 +6,10 @@ const needle = require('needle');
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 const M = require('./matcher');
 
-const VERSION = '8.0.5';
+const VERSION = '8.1.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -184,7 +185,7 @@ function parseFiles(ch) {
             pos: parseInt(c('positive_votes') || '0', 10) || 0,
             neg: parseInt(c('negative_votes') || '0', 10) || 0
         };
-    }).filter(f => f.ident && f.name && !M.isNonVideo(f.name)); // jen přehratelná videa
+    }).filter(f => f.ident && f.name);
 }
 
 async function wsSearch(token, query, limit = 50) {
@@ -492,52 +493,63 @@ function nameOk(fileName, n) {
     return !n.short || !M.shortNameIsNoise(fileName, n.text, n.full);
 }
 
+// Posoudí jeden soubor: { ok, exact, reason, s, e } – důvod se ukládá do archivu hledání
+function judgeFile(f, plan) {
+    if (M.isNonVideo(f.name)) return { ok: false, reason: 'nepřehratelný soubor' };
+    const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text));
+    if (plan.type === 'movie') {
+        if (M.looksLikeEpisode(f.name)) return { ok: false, reason: 'vypadá jako díl seriálu' };
+        const byFull = plan.names.some(n => !n.short && nameOk(f.name, n));
+        const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n));
+        if (!byFull && !byShort) return { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
+        const years = M.fileYears(f.name);
+        const yearOk = plan.year && years.some(y => Math.abs(y - plan.year) <= 1);
+        if (plan.year && years.length && !yearOk) return { ok: false, reason: `rok nesedí (${years.join(',')})` };
+        // jen zkrácený název ("Pán prstenů 1") → rok v souboru musí sedět
+        if (byShort && !yearOk) return { ok: false, reason: 'zkrácený název bez roku' };
+        return { ok: true, exact: years.length > 0, reason: byShort ? 'zkrácený název + rok' : 'název' };
+    }
+    if (!plan.season || !plan.episode) {
+        return plan.names.some(n => nameOk(f.name, n))
+            ? { ok: true, exact: false, reason: 'název' }
+            : { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
+    }
+    let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
+    for (const n of plan.names) {
+        if (!nameOk(f.name, n)) continue;
+        // slova za názvem: značka pokračování ("Capu2", "II", "S2") a číslo dílu
+        const hit = M.afterName(f.name, n.text);
+        const seq = hit ? M.sequelSeason(hit.rest) : null;
+        const rest = hit ? (seq ? hit.rest.slice(1) : hit.rest) : undefined;
+        const pe = M.parseEpisode(f.name, M.nameTokens(n.text), rest);
+        if (pe.episode === null) { reason = 'bez čísla dílu'; continue; }
+        if (pe.season === null && seq) pe.season = seq;
+        seen = pe;
+        if (n.kind === 'franchise') {
+            if (pe.episode === plan.episode &&
+                (pe.season === plan.season || (pe.season === null && plan.season === 1))) {
+                return { ok: true, exact: pe.explicit, reason: `název (${n.kind})`, s: pe.season, e: pe.episode };
+            }
+            // anime s absolutním číslováním pod názvem franšízy (One Piece - 1094 pro S22E10)
+            if (plan.isAnime && pe.season === null && plan.alEpisode &&
+                plan.alEpisode !== plan.episode && pe.episode === plan.alEpisode) {
+                return { ok: true, exact: false, reason: 'absolutní číslo dílu', s: null, e: pe.episode };
+            }
+        } else if (plan.alEpisode && pe.episode === plan.alEpisode &&
+                   (pe.season === null || pe.season === plan.alSeason || pe.season === 1)) {
+            return { ok: true, exact: pe.explicit, reason: `název (${n.kind})`, s: pe.season, e: pe.episode };
+        }
+        reason = (pe.season !== null && pe.season !== plan.season && pe.episode === plan.episode)
+            ? `jiná sezóna (S${pe.season})` : `jiný díl (${pe.season !== null ? 'S' + pe.season : ''}E${pe.episode})`;
+    }
+    return { ok: false, reason, s: seen ? seen.season : undefined, e: seen ? seen.episode : undefined };
+}
+
 function filterFiles(files, plan) {
     const out = [];
     for (const f of files) {
-        if (plan.type === 'movie') {
-            if (M.looksLikeEpisode(f.name)) continue;
-            const byFull = plan.names.some(n => !n.short && nameOk(f.name, n));
-            const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n));
-            if (!byFull && !byShort) continue;
-            const years = M.fileYears(f.name);
-            const yearOk = plan.year && years.some(y => Math.abs(y - plan.year) <= 1);
-            if (plan.year && years.length && !yearOk) continue;
-            // jen zkrácený název ("Pán prstenů 1") → rok v souboru musí sedět
-            if (byShort && !yearOk) continue;
-            out.push({ f, exact: years.length > 0 });
-            continue;
-        }
-        if (!plan.season || !plan.episode) {
-            if (plan.names.some(n => nameOk(f.name, n))) out.push({ f, exact: false });
-            continue;
-        }
-        let ok = false, exact = false;
-        for (const n of plan.names) {
-            if (!nameOk(f.name, n)) continue;
-            // slova za názvem: značka pokračování ("Capu2", "II", "S2") a číslo dílu
-            const hit = M.afterName(f.name, n.text);
-            const seq = hit ? M.sequelSeason(hit.rest) : null;
-            const rest = hit ? (seq ? hit.rest.slice(1) : hit.rest) : undefined;
-            const pe = M.parseEpisode(f.name, M.nameTokens(n.text), rest);
-            if (pe.episode === null) continue;
-            if (pe.season === null && seq) pe.season = seq;
-            if (n.kind === 'franchise') {
-                if (pe.episode === plan.episode &&
-                    (pe.season === plan.season || (pe.season === null && plan.season === 1))) {
-                    ok = true; exact = pe.explicit; break;
-                }
-                // anime s absolutním číslováním pod názvem franšízy (One Piece - 1094 pro S22E10)
-                if (plan.isAnime && pe.season === null && plan.alEpisode &&
-                    plan.alEpisode !== plan.episode && pe.episode === plan.alEpisode) {
-                    ok = true; break;
-                }
-            } else if (plan.alEpisode && pe.episode === plan.alEpisode &&
-                       (pe.season === null || pe.season === plan.alSeason || pe.season === 1)) {
-                ok = true; exact = pe.explicit; break;
-            }
-        }
-        if (ok) out.push({ f, exact });
+        const j = judgeFile(f, plan);
+        if (j.ok) out.push({ f, exact: !!j.exact });
     }
     return out;
 }
@@ -564,7 +576,10 @@ async function findFiles(type, id, cfg) {
     return once(key, async () => {
         const t0 = Date.now();
         const plan = await buildPlan(type, id, cfg);
-        if (!plan) return { plan: null, items: [], queries: 0, ms: Date.now() - t0 };
+        if (!plan) {
+            archiveWrite({ t: new Date().toISOString(), kind: 'stream', type, id, names: [], note: 'bez názvů' });
+            return { plan: null, items: [], queries: 0, ms: Date.now() - t0 };
+        }
         const [w1, w2] = buildQueries(plan);
         const files = await runQueries(cfg, w1);
         let items = filterFiles([...files.values()], plan);
@@ -578,9 +593,62 @@ async function findFiles(type, id, cfg) {
         const ranked = rankFiles(items);
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
         if (ranked.length) resultCache.set(key, res, 30 * 60 * 1000);
+        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms);
         return res;
     });
 }
+
+// ───────────────────────── Archiv hledání (anonymní) ─────────────────────────
+// Každé hledání = 1 řádek JSON v ARCHIVE_DIR/RRRR-MM-DD.jsonl – bez uživatelských údajů.
+// Slouží k ladění parseru: co Webshare vrátil, co prošlo/neprošlo a proč, co šlo do Stremia.
+const ARCHIVE_DIR = process.env.ARCHIVE_DIR || path.join(__dirname, 'data', 'hledani');
+const ARCHIVE_DAYS = parseInt(process.env.ARCHIVE_DAYS || '30', 10) || 30;
+const ARCHIVE_ON = !/^(0|false|no)$/i.test(process.env.ARCHIVE || '');
+let archiveOk = ARCHIVE_ON;
+if (archiveOk) {
+    try { fs.mkdirSync(ARCHIVE_DIR, { recursive: true }); fs.accessSync(ARCHIVE_DIR, fs.constants.W_OK); }
+    catch (e) { archiveOk = false; log(`⚠️ archiv hledání vypnutý – ${ARCHIVE_DIR} není zapisovatelný (${e.message})`); }
+}
+
+function archiveWrite(rec) {
+    if (!archiveOk) return;
+    const file = path.join(ARCHIVE_DIR, `${rec.t.slice(0, 10)}.jsonl`);
+    fs.appendFile(file, JSON.stringify(rec) + '\n', err => {
+        if (err && archiveOk) { archiveOk = false; log(`⚠️ archiv hledání vypnutý – zápis selhal (${err.message})`); }
+    });
+}
+
+function archiveSearch(plan, queries, files, ranked, ms) {
+    if (!archiveOk) return;
+    const sent = new Map(ranked.slice(0, plan.type === 'movie' ? 30 : 25).map((it, i) => [it.f.ident, i + 1]));
+    archiveWrite({
+        t: new Date().toISOString(), kind: 'stream', type: plan.type, id: plan.id,
+        anime: plan.anilistId || null, source: plan.source, year: plan.year,
+        season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
+        names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short })),
+        queries: queries.map(q => q.q), ms,
+        files: [...files.values()].map(f => {
+            const j = judgeFile(f, plan);
+            const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
+            if (j.e !== undefined && j.e !== null) rec.se = [j.s ?? null, j.e];
+            if (sent.has(f.ident)) rec.sent = sent.get(f.ident);
+            return rec;
+        })
+    });
+}
+
+// Smaže soubory archivu starší než ARCHIVE_DAYS (při startu a pak jednou denně)
+function archiveCleanup() {
+    if (!archiveOk) return;
+    const limit = new Date(Date.now() - ARCHIVE_DAYS * 24 * H).toISOString().slice(0, 10);
+    fs.readdir(ARCHIVE_DIR, (err, names) => {
+        if (err) return;
+        names.filter(n => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(n) && n.slice(0, 10) < limit)
+            .forEach(n => fs.unlink(path.join(ARCHIVE_DIR, n), () => {}));
+    });
+}
+archiveCleanup();
+setInterval(archiveCleanup, 24 * H).unref();
 
 // ───────────────────────── Streamy ─────────────────────────
 function formatSize(bytes) {
@@ -654,8 +722,11 @@ async function handleCatalog(type, extra, cfg, base) {
     const query = (extra.search || '').trim();
     if (!query) return [];
     const r = await withToken(cfg, t => wsSearch(t, query, 100));
+    r.files = r.files.filter(f => !M.isNonVideo(f.name));
     const backdrop = `${base}/webshare-backdrop.jpg`;
     log(`🔍 hledat "${query}" [${cfg.username}] → ${r.files.length}`);
+    archiveWrite({ t: new Date().toISOString(), kind: 'catalog', q: query, count: r.files.length,
+        files: r.files.slice(0, 100).map(f => ({ n: f.name, s: f.size })) });
     return r.files.slice(0, 100).map(f => {
         const q = M.detectQuality(f.name);
         const lbl = langLabel(M.detectLang(f.name));
@@ -783,6 +854,44 @@ app.post('/api/verify', async (req, res) => {
     }
 });
 
+// Stažení archivu hledání: /admin/hledani.jsonl.gz?key=ADMIN_KEY[&dni=7]  (bez ADMIN_KEY vypnuto)
+const ADMIN_KEY = (process.env.ADMIN_KEY || '').trim();
+function adminOk(req) {
+    const k = String(req.query.key || '');
+    return ADMIN_KEY && k.length === ADMIN_KEY.length &&
+        crypto.timingSafeEqual(Buffer.from(k), Buffer.from(ADMIN_KEY));
+}
+function archiveFiles(days) {
+    try {
+        const names = fs.readdirSync(ARCHIVE_DIR).filter(n => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(n)).sort();
+        return days ? names.slice(-days) : names;
+    } catch (e) { return []; }
+}
+app.get('/admin/hledani', (req, res) => {
+    if (!adminOk(req)) return res.status(404).json({ error: 'Nenalezeno' });
+    const files = archiveFiles().map(n => {
+        const st = fs.statSync(path.join(ARCHIVE_DIR, n));
+        return { den: n.slice(0, 10), velikost: st.size };
+    });
+    res.json({ zapnuto: archiveOk, adresar: ARCHIVE_DIR, uchovavani_dni: ARCHIVE_DAYS, soubory: files });
+});
+app.get('/admin/hledani.jsonl.gz', (req, res) => {
+    if (!adminOk(req)) return res.status(404).json({ error: 'Nenalezeno' });
+    const days = parseInt(req.query.dni, 10) || 0;
+    const names = archiveFiles(days);
+    res.setHeader('Content-Type', 'application/gzip');
+    res.setHeader('Content-Disposition', `attachment; filename="hledani-${new Date().toISOString().slice(0, 10)}.jsonl.gz"`);
+    const gz = zlib.createGzip();
+    gz.pipe(res);
+    (function next(i) {
+        if (i >= names.length) return gz.end();
+        const rs = fs.createReadStream(path.join(ARCHIVE_DIR, names[i]));
+        rs.on('error', () => next(i + 1));
+        rs.on('end', () => next(i + 1));
+        rs.pipe(gz, { end: false });
+    })(0);
+});
+
 // Osobní routy – config je první segment cesty
 function withCfg(handler) {
     return async (req, res) => {
@@ -874,6 +983,7 @@ if (require.main === module) {
     app.listen(PORT, () => {
         log(`🚀 Webshare ${VERSION} běží na portu ${PORT}`);
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
+        log(`   archiv hledání: ${archiveOk ? `${ARCHIVE_DIR} (${ARCHIVE_DAYS} dní)` : 'vypnutý'} | stažení: ${ADMIN_KEY ? '/admin/hledani.jsonl.gz?key=…' : 'vypnuté (chybí ADMIN_KEY)'}`);
     });
 }
 

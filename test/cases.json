@@ -6652,7 +6652,7 @@
    },
    {
     "n": "Filmy Fisun-Temny-rytir-povstal---Novinky-2013CZ-dabing.avi",
-    "ok": true
+    "ok": false
    },
    {
     "n": "Batman-Temny-rytir-povstal-CZ-Dabing-2012.avi",
@@ -15326,7 +15326,7 @@
    },
    {
     "n": "Christmas in South Park 02 Merry Christmas Charlie Manson! Veselé Vánoce, Charlie Mansone CZ.mp4",
-    "ok": true
+    "ok": false
    },
    {
     "n": "Mestecko south park S04e14 720p   CZ.mkv",
@@ -25866,6 +25866,65 @@
    {
     "n": "2-Socky-01x24-A-je-to-na-Marte-Stewartove-2-CZ.avi",
     "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt1877514:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Válka ve Vietnamu",
+     "kind": "franchise"
+    },
+    {
+     "text": "The Vietnam War",
+     "kind": "franchise"
+    }
+   ],
+   "allow": [
+    "valka",
+    "ve",
+    "vietnamu",
+    "vietnam",
+    "war"
+   ],
+   "season": 1,
+   "episode": 1,
+   "year": 2017,
+   "alEpisode": null,
+   "alSeason": null
+  },
+  "files": [
+   {
+    "n": "Válka ve Vietnamu 01 Déja vu (1858-1961).mkv",
+    "ok": true
+   },
+   {
+    "n": "Inside the Vietnam War 1 cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Turning.Point.The.Vietnam.War.S01E01.1080p.NF.WEB-DL.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Vietnam.War.S01E01.1080p.WEB.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vietnam.The.War.That.Changed.America.S01E01.1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vietnam- The War That Changed America 01.avi",
+    "ok": false
+   },
+   {
+    "n": "Válka ve Vietnamu - The Vietnam War S01E01.mkv",
+    "ok": true
    }
   ]
  }

@@ -340,7 +340,7 @@ async function hsGet(pathq) {
     const opts = { host: u.hostname, port, path: u.pathname + u.search, headers: HS_HEADERS, timeout: 8000 };
     if (HELLSPY_PROXY && HELLSPY_PROXY !== 'direct') {
         const socket = await hsTunnel(u.hostname, port);
-        opts.agent = false;
+        // bez agenta: Node pak použije createConnection (s agent:false by ho ignoroval a šel napřímo)
         opts.createConnection = () => tls.connect({ socket, servername: u.hostname });
     }
     try {

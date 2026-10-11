@@ -86,27 +86,32 @@
     <img src="/logo.png" alt="">
     <div>
       <h1>Webshare</h1>
-      <p>Filmy, seriály a anime z Webshare.cz pro Stremio a Nuvio</p>
+      <p id="tagline">Filmy, seriály a anime z Webshare.cz pro Stremio a Nuvio</p>
     </div>
   </header>
 
   <form class="card" id="form" autocomplete="on">
     <h2>Přihlášení k Webshare</h2>
-    <label for="username">Uživatelské jméno</label>
-    <input type="text" id="username" autocomplete="username" required>
+    <label for="username">Uživatelské jméno <span class="hint" id="wsHint"></span></label>
+    <input type="text" id="username" autocomplete="username">
 
     <label for="password">Heslo</label>
     <div class="pw">
-      <input type="password" id="password" autocomplete="current-password" required>
+      <input type="password" id="password" autocomplete="current-password">
       <button type="button" id="togglePw" aria-label="Zobrazit heslo">zobrazit</button>
     </div>
 
     <label for="tmdb">TMDB API klíč <span class="hint" id="tmdbHint">(nepovinné)</span></label>
     <input type="text" id="tmdb" placeholder="vlastní klíč z themoviedb.org" autocomplete="off" spellcheck="false">
 
+    <label class="check" id="hsRow" style="display:none">
+      <input type="checkbox" id="hellspy" checked>
+      <span>Hellspy<small>Další zdroj zdarma, bez účtu – převody MP4 (720p/1080p) a titulky. Bez účtu Webshare se použije jen Hellspy.</small></span>
+    </label>
+
     <label class="check">
       <input type="checkbox" id="search" checked>
-      <span>Katalog „Webshare Hledat“<small>Přímé hledání na Webshare z vyhledávání ve Stremiu / Nuviu</small></span>
+      <span>Katalog „Webshare Hledat“<small>Přímé hledání na Webshare z vyhledávání ve Stremiu / Nuviu (jen s účtem Webshare)</small></span>
     </label>
 
     <button class="btn btn-primary" type="submit" id="submit">Ověřit a vytvořit odkaz</button>
@@ -125,7 +130,7 @@
       <li><b>Nuvio / NuvioTV:</b> Addony → Přidat addon → vlož odkaz.</li>
       <li><b>Stremio:</b> Addony → do vyhledávacího pole nahoře vlož odkaz → Nainstalovat.</li>
     </ol>
-    <p class="muted">Odkaz obsahuje tvé heslo k Webshare – nesdílej ho. Při změně hesla si vytvoř nový.</p>
+    <p class="muted" id="pwNote">Odkaz obsahuje tvé heslo k Webshare – nesdílej ho. Při změně hesla si vytvoř nový.</p>
   </section>
 
   <p class="foot">verze __VERSION__</p>
@@ -135,10 +140,16 @@
 (function () {
   var PREFILL = /*__PREFILL__*/null;
   var SERVER_TMDB = /*__SERVER_TMDB__*/false;
+  var HELLSPY = /*__HELLSPY__*/false;
   var $ = function (id) { return document.getElementById(id); };
   var STORE = 'webshare_config';
 
   if (SERVER_TMDB) $('tmdbHint').textContent = '(nepovinné – server má vlastní)';
+  if (HELLSPY) {
+    $('hsRow').style.display = '';
+    $('tagline').textContent = 'Filmy, seriály a anime z Webshare.cz a Hellspy pro Stremio a Nuvio';
+    $('wsHint').textContent = '(bez účtu jen Hellspy)';
+  }
 
   function load() {
     var cfg = PREFILL;
@@ -148,6 +159,18 @@
     if (cfg.password) $('password').value = cfg.password;
     if (cfg.tmdb_api_key) $('tmdb').value = cfg.tmdb_api_key;
     if (cfg.enable_direct_search === false) $('search').checked = false;
+    if (cfg.hellspy === false) $('hellspy').checked = false;
+  }
+
+  function showResult(cfg, okMsg, cls) {
+    try { localStorage.setItem(STORE, JSON.stringify(cfg)); } catch (err) {}
+    var url = location.origin + '/' + b64url(JSON.stringify(cfg)) + '/manifest.json';
+    $('url').textContent = url;
+    $('web').href = 'https://web.stremio.com/#/addons?addon=' + encodeURIComponent(url);
+    show($('vip'), cls || 'ok', okMsg);
+    $('pwNote').style.display = cfg.username ? '' : 'none';
+    $('result').style.display = 'block';
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function b64url(str) {
@@ -173,6 +196,15 @@
       tmdb_api_key: $('tmdb').value.trim(),
       enable_direct_search: $('search').checked
     };
+    var hs = HELLSPY && $('hellspy').checked;
+    if (HELLSPY) cfg.hellspy = hs;
+    hide($('msg'));
+    if (!cfg.username && !cfg.password) {
+      // bez účtu Webshare → jen Hellspy (bez ověření)
+      if (!hs) { show($('msg'), 'err', HELLSPY ? 'Vyplň účet Webshare, nebo zapni Hellspy.' : 'Vyplň jméno i heslo.'); return; }
+      showResult({ hellspy: true, tmdb_api_key: cfg.tmdb_api_key }, 'Jen Hellspy (bez účtu Webshare).');
+      return;
+    }
     if (!cfg.username || !cfg.password) { show($('msg'), 'err', 'Vyplň jméno i heslo.'); return; }
     var btn = $('submit');
     btn.disabled = true; btn.textContent = 'Ověřuji přihlášení…';
@@ -184,15 +216,9 @@
       body: JSON.stringify({ username: cfg.username, password: cfg.password })
     }).then(function (r) { return r.json(); }).then(function (data) {
       if (!data.ok) { show($('msg'), 'err', data.error || 'Přihlášení se nepovedlo.'); return; }
-      try { localStorage.setItem(STORE, JSON.stringify(cfg)); } catch (err) {}
-      var url = location.origin + '/' + b64url(JSON.stringify(cfg)) + '/manifest.json';
-      $('url').textContent = url;
-      $('web').href = 'https://web.stremio.com/#/addons?addon=' + encodeURIComponent(url);
-      if (data.vip === false) show($('vip'), 'warn', 'Účet nemá aktivní VIP – Webshare bez VIP přehrávání přes addon neumožní.');
-      else if (data.vip && data.vipDays) show($('vip'), 'ok', 'Přihlášení v pořádku · VIP ještě ' + data.vipDays + ' dní.');
-      else show($('vip'), 'ok', 'Přihlášení v pořádku.');
-      $('result').style.display = 'block';
-      $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (data.vip === false) showResult(cfg, 'Účet nemá aktivní VIP – Webshare bez VIP přehrávání přes addon neumožní.' + (hs ? ' Hellspy bude fungovat.' : ''), 'warn');
+      else if (data.vip && data.vipDays) showResult(cfg, 'Přihlášení v pořádku · VIP ještě ' + data.vipDays + ' dní.');
+      else showResult(cfg, 'Přihlášení v pořádku.');
     }).catch(function () {
       show($('msg'), 'err', 'Server neodpovídá, zkus to prosím znovu.');
     }).then(function () {

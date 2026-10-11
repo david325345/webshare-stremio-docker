@@ -9,7 +9,7 @@ const path = require('path');
 const zlib = require('zlib');
 const M = require('./matcher');
 
-const VERSION = '8.4.0';
+const VERSION = '8.4.1';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -475,9 +475,13 @@ async function buildPlan(type, id, cfg) {
     const an = [];
     if (rs) {
         an.push(full(rs.title), full(rs.title_en), short(rs.title), short(rs.title_en));
-        // alternativní názvy z indexeru: jednoslovné zkratky kratší než 5 znaků ("PES", "OP") se nepoužijí
+        // alternativní názvy z indexeru: jen varianty romaji/EN názvu (sdílí s ním slovo, "Ladies Vs Butlers!")
+        // nebo jednoslovné romaji zkratky od 5 znaků ("Oregairu"); cizí lokalizace ("Doamne vs. Majordom")
+        // a krátké zkratky ("PES", "OP") se nepoužijí – české názvy jsou z TMDB
+        const core = new Set([...M.nameTokens(rs.title || ''), ...M.nameTokens(rs.title_en || '')]
+            .filter(t => t.length >= 3 && !/^\d+$/.test(t) && t !== 'vs' && t !== 'versus'));
         (rs.titles || []).filter(t => M.isLatin(t) && t.length <= 60)
-            .filter(t => M.nameTokens(t).length >= 2 || M.nameTokens(t).join('').length >= 5)
+            .filter(t => { const nt = M.nameTokens(t); return nt.some(x => core.has(x)) || (nt.length === 1 && nt[0].length >= 5); })
             .slice(0, 6).forEach(t => an.push(full(t)));
     }
 
@@ -578,7 +582,7 @@ async function runQueries(cfg, queries) {
 // Vybere soubory, které sedí na název (a rok / epizodu)
 // Sedí název souboru na daný název? Zkrácený název nesmí být následován jiným podtitulem.
 function nameOk(fileName, n, plan) {
-    if (!M.titleMatches(fileName, n.text)) return false;
+    if (!M.titleMatches(fileName, n.text, plan && plan.names.map(x => x.text))) return false;
     if (n.short && M.shortNameIsNoise(fileName, n.text, n.full)) return false;
     // jiný podtitul za názvem: u filmů vždy, u seriálů u jednoslovných názvů ("House" ≠ "House of the Dragon")
     if (plan && (plan.type === 'movie' || M.nameTokens(n.text).length === 1) &&
@@ -599,7 +603,8 @@ function animeSeasonOk(pe, n, plan) {
 // Posoudí jeden soubor: { ok, exact, reason, s, e } – důvod se ukládá do archivu hledání
 function judgeFile(f, plan) {
     if (M.isNonVideo(f.name)) return { ok: false, reason: 'nepřehratelný soubor' };
-    const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text));
+    const texts = plan.names.map(n => n.text);
+    const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text, texts));
     if (plan.type === 'movie') {
         if (M.looksLikeEpisode(f.name)) return { ok: false, reason: 'vypadá jako díl seriálu' };
         const byFull = plan.names.some(n => !n.short && nameOk(f.name, n, plan));

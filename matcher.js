@@ -63,7 +63,10 @@ function shortTitle(str) {
 // Pokud název obsahuje všechna významná slova hledaného názvu
 // - jednoslovný název musí být na začátku souboru (do 3. slova) nebo hned před rokem,
 //   aby "Batman" nesedělo na "Lego Batman" apod.
-function titleMatches(fileName, name) {
+// - víceslovný název musí být na začátku; před ním smí stát jen číslo/značka dílu/rok
+//   nebo jiný náš název (CZ "Válka ve Vietnamu - The Vietnam War"), jinak by
+//   "Inside the Vietnam War" / "Turning Point The Vietnam War" sedělo na "The Vietnam War"
+function titleMatches(fileName, name, others) {
     const ft = fileTokens(fileName);
     const nt = nameTokens(name);
     if (!nt.length || !ft.length) return false;
@@ -74,12 +77,42 @@ function titleMatches(fileName, name) {
         const idx = sig.indexOf(nt[0]);
         if (idx === 0) return true;
         const next = sig[idx + 1];
+        if (idx > 0 && PREFIX_BAD.has(sig[idx - 1])) return false;   // "Lego Batman 2022"
         return !!next && /^(19|20)\d{2}$/.test(next);
     }
     // víceslovný název: slova musí jít za sebou ve stejném pořadí (mezery do 3 slov),
     // jinak by "… World 2" sedělo na "… World … Opus 2.0"
-    return afterName(fileName, name) !== null;
+    const hit = afterName(fileName, name);
+    if (!hit) return false;
+    if (hit.start === 0) return true;
+    const prefix = ft.filter(t => !STOPWORDS.has(t)).slice(0, hit.start);
+    const words = prefix.filter(t => !PREFIX_OK.test(t) && !ROMAN_ANY.test(t));
+    if (!words.length) return true;
+    // jedno slovo před názvem ("Batman 5 Temný rytíř", "HNS_Rokudenashi…") – kromě dokumentárních
+    if (words.length === 1 && !PREFIX_BAD.has(words[0])) return true;
+    // název oddělený pomlčkou ("Filmy od LM --- Temný rytíř povstal")
+    const raw = stripLeadingGroups(fileName);
+    const re = /\s+[-–—]+\s+|-{2,}|_-_|\s+\|\s+/g;
+    let m;
+    while ((m = re.exec(raw))) {
+        const h = afterName(raw.slice(m.index + m[0].length), name);
+        if (h && h.start === 0) return true;
+    }
+    // před názvem jiný náš název (CZ "Válka ve Vietnamu The Vietnam War")
+    const pre = prefix.join(' ');
+    return (others || []).some(o => {
+        if (!o || o === name) return false;
+        const h = afterName(pre, o);
+        return !!h && h.start === 0;
+    });
 }
+// slova, která smí stát před názvem: číslo, značka dílu, rok, římská číslice
+const PREFIX_OK = /^(\d{1,4}|s\d{1,2}(e\d{1,4})?|e\d{1,4}|ep\d{0,4}|\d{1,2}x\d{2,4})$/;
+const ROMAN_ANY = /^(i{1,3}|iv|v|vi{1,3}|ix|x)$/;
+// slova před názvem, která značí jiný (dokumentární/odvozený) titul: "Inside the Vietnam War", "Lego Batman"
+const PREFIX_BAD = new Set(('inside behind making becoming beyond lego untold secret secrets return revisiting remembering ' +
+    'uncovering unmasking reliving decoding history story truth road after before ultimate complete official unofficial ' +
+    'tribute parody honest pitch').split(' '));
 
 // Roky v názvu souboru (1920–2035)
 function fileYears(fileName) {
@@ -224,17 +257,41 @@ const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english mul
     'tv ova movie film proper repack internal limited').split(' '));
 
 // Najde v souboru slova názvu (v pořadí, mezery mezi nimi tolerované – "Rosario to Vampire" ~ "Rosario + Vampire");
-// vrací pozici prvního slova a slova, která následují za posledním
+// vrací pozici prvního slova a slova, která následují za posledním.
+// Člen/spojka (the, of…) v mezeře mezi slovy, který v názvu na tom místě není, shodu ruší:
+// "Vietnam The War That Changed America" ≠ "The Vietnam War"
 function afterName(fileName, name) {
-    const ft = fileTokens(fileName).filter(t => !STOPWORDS.has(t));
+    const all = fileTokens(fileName);
+    const pos2all = [];
+    all.forEach((t, i) => { if (!STOPWORDS.has(t)) pos2all.push(i); });
+    const ft = pos2all.map(i => all[i]);
     const nt = nameTokens(name);
     if (!nt.length) return null;
+    // členy názvu mezi jeho významnými slovy: gaps[j] = členy mezi nt[j-1] a nt[j]
+    const nAll = tokens(name);
+    const gaps = [];
+    if (nt.length < nAll.length && nAll.some(t => !STOPWORDS.has(t))) {
+        let j = -1, cur = [];
+        for (const t of nAll) {
+            if (STOPWORDS.has(t)) { cur.push(t); continue; }
+            if (j >= 0) gaps[j + 1] = cur;
+            j++; cur = [];
+        }
+    }
+    const checkStops = nAll.some(t => !STOPWORDS.has(t));
+    const nStops = new Set(nAll.filter(t => STOPWORDS.has(t)));
     for (let i = 0; i < ft.length; i++) {
         if (ft[i] !== nt[0]) continue;
         let pos = i, ok = true;
         for (let j = 1; j < nt.length; j++) {
             const k = ft.indexOf(nt[j], pos + 1);
             if (k === -1 || k - pos > 3) { ok = false; break; }
+            if (checkStops) {
+                // člen, který v názvu je, ale jinde ("Vietnam The War" × "The Vietnam War"); chybějící/navíc "a" nevadí
+                const allowed = gaps[j] || [];
+                const extra = all.slice(pos2all[pos] + 1, pos2all[k]).filter(t => STOPWORDS.has(t));
+                if (extra.some(t => !allowed.includes(t) && nStops.has(t))) { ok = false; break; }
+            }
             pos = k;
         }
         if (ok) return { start: i, rest: ft.slice(pos + 1) };

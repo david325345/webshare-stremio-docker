@@ -109,6 +109,11 @@
       <span>Hellspy<small>Další zdroj zdarma, bez účtu – převody MP4 (720p/1080p) a titulky. Bez účtu Webshare se použije jen Hellspy.</small></span>
     </label>
 
+    <label class="check" id="hsSearchRow" style="display:none">
+      <input type="checkbox" id="hsSearch" checked>
+      <span>Katalog „Hellspy Hledat“<small>Přímé hledání na Hellspy z vyhledávání ve Stremiu / Nuviu (samostatný řádek)</small></span>
+    </label>
+
     <label class="check">
       <input type="checkbox" id="search" checked>
       <span>Katalog „Webshare Hledat“<small>Přímé hledání na Webshare z vyhledávání ve Stremiu / Nuviu (jen s účtem Webshare)</small></span>
@@ -147,6 +152,7 @@
   if (SERVER_TMDB) $('tmdbHint').textContent = '(nepovinné – server má vlastní)';
   if (HELLSPY) {
     $('hsRow').style.display = '';
+    $('hsSearchRow').style.display = '';
     $('tagline').textContent = 'Filmy, seriály a anime z Webshare.cz a Hellspy pro Stremio a Nuvio';
     $('wsHint').textContent = '(bez účtu jen Hellspy)';
   }
@@ -160,6 +166,7 @@
     if (cfg.tmdb_api_key) $('tmdb').value = cfg.tmdb_api_key;
     if (cfg.enable_direct_search === false) $('search').checked = false;
     if (cfg.hellspy === false) $('hellspy').checked = false;
+    if (cfg.hellspy_search === false) $('hsSearch').checked = false;
   }
 
   function showResult(cfg, okMsg, cls) {
@@ -197,12 +204,12 @@
       enable_direct_search: $('search').checked
     };
     var hs = HELLSPY && $('hellspy').checked;
-    if (HELLSPY) cfg.hellspy = hs;
+    if (HELLSPY) { cfg.hellspy = hs; cfg.hellspy_search = $('hsSearch').checked; }
     hide($('msg'));
     if (!cfg.username && !cfg.password) {
       // bez účtu Webshare → jen Hellspy (bez ověření)
       if (!hs) { show($('msg'), 'err', HELLSPY ? 'Vyplň účet Webshare, nebo zapni Hellspy.' : 'Vyplň jméno i heslo.'); return; }
-      showResult({ hellspy: true, tmdb_api_key: cfg.tmdb_api_key }, 'Jen Hellspy (bez účtu Webshare).');
+      showResult({ hellspy: true, hellspy_search: $('hsSearch').checked, tmdb_api_key: cfg.tmdb_api_key }, 'Jen Hellspy (bez účtu Webshare).');
       return;
     }
     if (!cfg.username || !cfg.password) { show($('msg'), 'err', 'Vyplň jméno i heslo.'); return; }

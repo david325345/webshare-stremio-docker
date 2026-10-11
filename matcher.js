@@ -23,6 +23,15 @@ function tokens(str) {
     return n ? n.split(' ').map(t => ORDINALS[t] || t) : [];
 }
 
+// Skupiny v hranatých závorkách na začátku ("[SubsPlease] ", "[DB]") – pro porovnání názvu se odstraní,
+// jinak by jednoslovný název nebyl první ("[DB]Working!!_-_01")
+function stripLeadingGroups(fileName) {
+    return String(fileName || '').replace(/^\s*(?:\[[^\]]*\]\s*[-_.]*\s*)+/, '');
+}
+function fileTokens(fileName) {
+    return tokens(stripLeadingGroups(fileName));
+}
+
 // Významná slova názvu (bez stopwords); když by nezbylo nic, vrátí všechna
 function nameTokens(name) {
     const all = tokens(name);
@@ -55,7 +64,7 @@ function shortTitle(str) {
 // - jednoslovný název musí být na začátku souboru (do 3. slova) nebo hned před rokem,
 //   aby "Batman" nesedělo na "Lego Batman" apod.
 function titleMatches(fileName, name) {
-    const ft = tokens(fileName);
+    const ft = fileTokens(fileName);
     const nt = nameTokens(name);
     if (!nt.length || !ft.length) return false;
     const set = new Set(ft);
@@ -67,7 +76,9 @@ function titleMatches(fileName, name) {
         const next = sig[idx + 1];
         return !!next && /^(19|20)\d{2}$/.test(next);
     }
-    return true;
+    // víceslovný název: slova musí jít za sebou ve stejném pořadí (mezery do 3 slov),
+    // jinak by "… World 2" sedělo na "… World … Opus 2.0"
+    return afterName(fileName, name) !== null;
 }
 
 // Roky v názvu souboru (1920–2035)
@@ -196,7 +207,7 @@ function detectQuality(fileName) {
     else if (/\s1080[pi]\s/.test(n) || /\sfhd\s/.test(n)) { resolution = '1080p'; score = 3; }
     else if (/\s720p\s/.test(n) || /\shd\s/.test(n)) { resolution = '720p'; score = 2; }
     else if (/\s(576p|480p|360p|sd|dvdrip|xvid)\s/.test(n)) { resolution = 'SD'; score = 1; }
-    const cam = /\s(cam|camrip|hdcam|ts|telesync|tc|hdts)\s/.test(n);
+    const cam = /\s(cam|camrip|hdcam|ts|telesync|tc|hdts|hdtc|telecine|tsrip)\s/.test(n);
     if (cam) score = -1;
     const codec = /\s(hevc|x265|h265)\s/.test(n) ? 'HEVC' : /\s(x264|h264|avc)\s/.test(n) ? 'H.264' : /\sav1\s/.test(n) ? 'AV1' : null;
     const audio = /\s(truehd|atmos)\s/.test(n) ? 'TrueHD' : /\sdts\s/.test(n) ? 'DTS' : /\s(eac3|ddp)\s/.test(n) ? 'DD+' : /\s(ac3|dd)\s/.test(n) ? 'AC3' : /\saac\s/.test(n) ? 'AAC' : null;
@@ -215,7 +226,7 @@ const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english mul
 // Najde v souboru slova názvu (v pořadí, mezery mezi nimi tolerované – "Rosario to Vampire" ~ "Rosario + Vampire");
 // vrací pozici prvního slova a slova, která následují za posledním
 function afterName(fileName, name) {
-    const ft = tokens(fileName).filter(t => !STOPWORDS.has(t));
+    const ft = fileTokens(fileName).filter(t => !STOPWORDS.has(t));
     const nt = nameTokens(name);
     if (!nt.length) return null;
     for (let i = 0; i < ft.length; i++) {
@@ -273,7 +284,38 @@ function isNonVideo(fileName) {
     return NON_VIDEO.test(String(fileName || '').trim());
 }
 
+// Slova, kterými v názvu souboru začíná popis, ne název (žánry, poznámky uploaderů)
+const DESC_WORDS = new Set(('akcni akcia akcny krimi drama thriller scifi sci fi fantasy horor horror komedie komedia ' +
+    'rodinny animovany animak dobrodruzny valecny western dokument dokumentarni romanticky mysteriozni zivotopisny ' +
+    'hudebni historicky psychologicky erotic novinky novinka novinkа kino kinorip kinoverze csfd imdb hodnoceni by from ' +
+    'upload uploaded rip tvrip hdrip dvdscr screener dvbt dvb koukatelne verze verzia rezie usa uk cr sr').split(' '));
+
+// Jiný podtitul za názvem = jiné dílo ("Batman se vrací", "Temný rytíř povstal", "House of the Dragon").
+// Za názvem smí být jen: slova z našich názvů (allow), čísla, technické údaje, žánry/popisy, římská čísla.
+// Otevírací závorka = konec názvu (dál bývají herci, žánry, rok: "(Christian Bale, …)", "-(akcni)-", "(S03E05)").
+// Kontrola končí u roku, technického údaje, popisu nebo značky dílu (S01E01, E05, 1x05).
+// mode 'series': číslo (díl) kontrolu ukončí a slova do 2 znaků se přeskakují ("House MD", "Gantz - 09 - Kill It")
+function subtitleNoise(fileName, name, allow, mode) {
+    const cleaned = stripLeadingGroups(fileName).replace(/[([{]/g, ' qqstopqq ');
+    const hit = afterName(cleaned, name);
+    if (!hit) return false;
+    const series = mode === 'series';
+    for (const t of hit.rest.slice(0, 6)) {
+        if (t === 'qqstopqq' || /^(19|20)\d{2}$/.test(t)) return false;              // závorka / rok
+        if (TECH_WORDS.has(t) || DESC_WORDS.has(t) || /^\d{3,4}[pi]$/.test(t) || /^[xh]26[45]$/.test(t)) return false;
+        if (/^(cz|cze|sk|en|eng)+(dab|dabing|tit|titulky|sub|subs|audio)?$/.test(t)) return false;  // "CZdab", "CZEN", "CZSKEN"
+        if (/^s\d{1,2}(e\d{1,4})?$/.test(t) || /^e\d{1,4}$/.test(t) || /^\d{1,2}x\d{2,4}$/.test(t) || /^ep\d*$/.test(t)) return false;
+        if (/^\d+$/.test(t)) { if (series) return false; continue; }                  // film: "Pán prstenů 1 …"
+        if (t.length < 2 || (series && t.length <= 2)) continue;
+        if (ROMAN[t] || (allow && allow.has(t))) continue;
+        if (!/^[a-z]+$/.test(t)) return false;                                         // 1080p, 05v2 …
+        return true;                                                                   // cizí slovo → jiné dílo
+    }
+    return false;
+}
+
 module.exports = {
+    stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,
     normalize, tokens, nameTokens, queryText, isLatin, shortTitle,
     titleMatches, fileYears, parseEpisode, looksLikeEpisode,

@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.5.0';
+const VERSION = '8.6.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -373,7 +373,8 @@ async function hsSearch(query, limit = 50) {
     const j = await hsGet(`/search?query=${encodeURIComponent(query)}&offset=0&limit=${Math.min(limit, 64)}`);
     return ((j && j.items) || []).filter(it => it && it.id && it.fileHash && it.title).map(it => ({
         hs: true, ident: `hs:${it.id}`, id: it.id, hash: String(it.fileHash),
-        name: String(it.title), size: +it.size || 0, len: +it.duration || 0
+        name: String(it.title), size: +it.size || 0, len: +it.duration || 0,
+        img: Array.isArray(it.thumbs) && typeof it.thumbs[0] === 'string' ? it.thumbs[0].replace(/([^:])\/\/+/g, '$1/') : null
     }));
 }
 
@@ -387,6 +388,8 @@ async function hsDetail(id, hash) {
         const j = await hsGet(`/video/${encodeURIComponent(id)}/${encodeURIComponent(hash)}`);
         const conv = j && j.conversions && typeof j.conversions === 'object' ? j.conversions : {};
         const d = j ? {
+            title: String(j.title || j.filename || ''), size: +j.size || 0, duration: +j.duration || 0,
+            thumb: Array.isArray(j.thumbs) && typeof j.thumbs[0] === 'string' ? j.thumbs[0].replace(/([^:])\/\/+/g, '$1/') : null,
             filename: j.filename || j.title || '',
             conv: Object.fromEntries(Object.entries(conv).filter(([, v]) => typeof v === 'string' && /^https?:/.test(v))),
             subs: (Array.isArray(j.subtitles) ? j.subtitles : []).filter(x => x && x.url)
@@ -809,7 +812,14 @@ function describe(f, info, conv) {
             q.score = CONV_SCORE[h] ?? (h >= 1000 ? 3 : h >= 700 ? 2 : 1);
         }
         q.codec = null; q.audio = null; q.hdr = false;
-        return { lang, q, ls: M.langScore(lang), audioLangs: [], subLangs: subs };
+        // stejný soubor na Webshare (shodná velikost) → ověřené zvukové stopy
+        const langs = info && info.au ? [...new Set(info.au.map(a => a.lang).filter(l => l && l !== 'UND'))] : [];
+        let ls = M.langScore(lang);
+        if (langs.length) {
+            const aCz = langs.some(l => CZ_CODES.has(l)), aSk = langs.some(l => SK_CODES.has(l));
+            ls = aCz ? 50 : aSk ? 35 : lang.cz ? 30 : lang.sk ? 20 : lang.multi ? 5 : 0;
+        }
+        return { lang, q, ls, audioLangs: langs, subLangs: subs };
     }
     const langs = info && info.au ? [...new Set(info.au.map(a => a.lang).filter(l => l && l !== 'UND'))] : [];
     let ls;
@@ -925,6 +935,27 @@ function expandHellspy(items) {
     return out;
 }
 
+// Stejný soubor nahraný na Hellspy víckrát (shodná velikost na bajt) → jen jednou (první = nejlépe seřazený)
+function dedupeHellspy(items) {
+    const seen = new Set();
+    return items.filter(it => {
+        if (!it.f.hs || !it.f.size) return true;
+        if (seen.has(it.f.size)) return false;
+        seen.add(it.f.size);
+        return true;
+    });
+}
+// Zvukové stopy ze stejného souboru na Webshare (shodná velikost na bajt)
+function wsAudioBySize(items) {
+    const m = new Map();
+    for (const it of items) {
+        if (it.f.hs || !it.f.size) continue;
+        const fi = fileCache.get(it.f.ident);
+        if (fi && fi.au && fi.au.length && !m.has(it.f.size)) m.set(it.f.size, fi.au);
+    }
+    return m;
+}
+
 // Najde a seřadí soubory pro dané ID (výsledek je sdílený pro všechny uživatele se stejnými zdroji, 30 min)
 async function findFiles(type, id, cfg) {
     const src = `${hasWs(cfg) ? 'w' : ''}${hsOn(cfg) ? 'h' : ''}`;
@@ -950,7 +981,7 @@ async function findFiles(type, id, cfg) {
             queries += w2.length;
         }
         // Hellspy: délka už z hledání
-        let ranked = rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it));
+        let ranked = dedupeHellspy(rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it)));
         // file_info (Webshare) a detail (Hellspy) pro nejlepší soubory – souběžně, s časovým limitem
         const max = plan.type === 'movie' ? 30 : 25;
         const top = ranked.slice(0, max + 10);
@@ -960,10 +991,11 @@ async function findFiles(type, id, cfg) {
         ]);
         const complete = completeWs && completeHs;
         const durationBad = new Map();
+        const wsAu = wsAudioBySize(ranked);
         ranked = rankFiles(expandHellspy(ranked
             .map(it => {
                 const fi = fileCache.get(it.f.ident);
-                if (it.f.hs) return { ...it, info: { ...(fi || {}), len: it.f.len } };
+                if (it.f.hs) return { ...it, info: { ...(fi || {}), len: it.f.len, au: wsAu.get(it.f.size) || undefined } };
                 return { ...it, info: fi || it.info };
             })
             .filter(it => !it.info || it.info.ok !== false)
@@ -1105,7 +1137,9 @@ const safeName = n => String(n || '').replace(/[\/\\?#%]+/g, ' ').trim() || 'vid
 function hsToStream(item, base, cfgB64) {
     const { f, lang, q, info, conv } = item;
     const subs = (info && info.subs) || [];
-    const langs = langLabel(M.detectLang(f.name));
+    const langs = item.audioLangs && item.audioLangs.length
+        ? '🔊 ' + [...new Set(item.audioLangs.map(l => FLAGS[l] || l))].slice(0, 4).join(' · ')
+        : langLabel(M.detectLang(f.name));
     const subLbl = subs.length ? `💬 ${subs.map(l => ({ cze: 'CZ', ces: 'CZ', slo: 'SK', slk: 'SK', eng: 'EN' }[l] || l.toUpperCase())).join(' · ')}` : null;
     const meta = [info && info.len ? `⏱ ${formatLength(info.len)}` : null, conv && conv !== '0' ? 'MP4 převod' : null,
                   f.size ? `originál ${formatSize(f.size)}` : null].filter(Boolean).join('  ·  ');
@@ -1159,6 +1193,13 @@ async function handleStream(type, id, cfg, base, cfgB64) {
         const item = rankFiles([{ f: r.info, exact: true, info: r.info }])[0];
         return [toStream(item, base, cfgB64)];
     }
+    // Soubor z katalogu "Hellspy Hledat"
+    if (id.startsWith('hellspy-')) {
+        if (!hsOn(cfg)) return [];
+        const hf = await hsFileFromId(id);
+        if (!hf) return [];
+        return rankFiles(expandHellspy([{ f: hf.f, exact: true, info: hf.info }])).map(it => toStream(it, base, cfgB64));
+    }
     const res = await findFiles(type, id, cfg);
     const max = type === 'movie' ? 30 : 25;
     const streams = res.items.slice(0, max).map(it => toStream(it, base, cfgB64));
@@ -1199,7 +1240,75 @@ async function handleCatalog(type, extra, cfg, base) {
     });
 }
 
+// hellspy-<id>-<hash> → detail přes proxy
+async function hsFileFromId(id) {
+    const m = String(id).match(/^hellspy-(\d+)-([A-Za-z0-9]+)$/);
+    if (!m) return null;
+    const d = await hsDetail(m[1], m[2]);
+    if (!d) return null;
+    const meta = hsMeta(d);
+    fileCache.set(`hs:${m[1]}`, meta, (meta.ok ? 3 : 7) * 24 * H);
+    if (!meta.ok) return null;
+    const f = { hs: true, ident: `hs:${m[1]}`, id: m[1], hash: m[2], name: d.title, size: d.size, len: d.duration, img: d.thumb };
+    return { f, d, info: { ...meta, len: d.duration } };
+}
+
+async function handleCatalogHs(type, extra, cfg, base) {
+    if (!hsOn(cfg) || cfg.hellspy_search === false) return [];
+    const query = (extra.search || '').trim();
+    if (!query) return [];
+    let files = (await hsSearch(query, 64)).filter(f => !M.isNonVideo(f.name));
+    const seen = new Set();
+    files = files.filter(f => { if (!f.size) return true; if (seen.has(f.size)) return false; seen.add(f.size); return true; });
+    const backdrop = `${base}/webshare-backdrop.jpg`;
+    log(`🔍 hellspy hledat "${query}" [${who(cfg)}] → ${files.length}`);
+    archiveWrite({ t: new Date().toISOString(), kind: 'catalog', src: 'hs', q: query, count: files.length,
+        files: files.map(f => ({ n: f.name, s: f.size, len: f.len })) });
+    return files.map(f => {
+        const q = M.detectQuality(f.name);
+        const lbl = langLabel(M.detectLang(f.name));
+        return {
+            id: `hellspy-${f.id}-${f.hash}`,
+            type,
+            name: f.name,
+            poster: f.img || backdrop,
+            posterShape: 'landscape',
+            background: f.img || backdrop,
+            description: [lbl, q.resolution, f.len ? formatLength(f.len) : null, formatSize(f.size)].filter(Boolean).join(' · '),
+            releaseInfo: [f.len ? formatLength(f.len) : null, formatSize(f.size)].filter(Boolean).join(' · ')
+        };
+    });
+}
+
+async function handleMetaHs(type, id, cfg, base) {
+    if (!hsOn(cfg)) return null;
+    const hf = await hsFileFromId(id);
+    if (!hf) return null;
+    const { f, d, info } = hf;
+    const q = M.detectQuality(f.name);
+    const lbl = langLabel(M.detectLang(f.name));
+    const subNames = { cze: 'CZ', ces: 'CZ', slo: 'SK', slk: 'SK', eng: 'EN' };
+    const backdrop = `${base}/webshare-backdrop.jpg`;
+    const desc = [
+        `📄 ${d.filename || f.name}`, '',
+        lbl ? `🗣️ ${lbl}` : null,
+        info.conv.length ? `📺 převody MP4: ${info.conv.map(c => c === '0' ? 'originál' : `${c}p`).join(', ')}` : null,
+        q.resolution ? `🎞️ originál: ${q.resolution}` : null,
+        info.subs.length ? `💬 titulky: ${[...new Set(info.subs.map(l => subNames[l] || l.toUpperCase()))].join(', ')}` : null,
+        f.len ? `⏱ ${formatLength(f.len)}` : null,
+        `💾 ${formatSize(f.size)}`
+    ].filter(x => x !== null).join('\n');
+    return {
+        id, type, name: f.name,
+        poster: f.img || backdrop,
+        posterShape: 'landscape',
+        background: f.img || backdrop,
+        description: desc
+    };
+}
+
 async function handleMeta(type, id, cfg, base) {
+    if (id.startsWith('hellspy-')) return handleMetaHs(type, id, cfg, base);
     if (!id.startsWith('webshare-') || !hasWs(cfg)) return null;
     const ident = id.slice(9);
     const r = await withToken(cfg, t => wsFileInfo(t, ident));
@@ -1229,9 +1338,13 @@ async function handleMeta(type, id, cfg, base) {
 
 // ───────────────────────── Manifest ─────────────────────────
 const SEARCH_CATALOG = { type: 'movie', id: 'webshare_search', name: 'Webshare Hledat', extra: [{ name: 'search', isRequired: true }] };
+const SEARCH_CATALOG_HS = { type: 'movie', id: 'hellspy_search', name: 'Hellspy Hledat', extra: [{ name: 'search', isRequired: true }] };
 
 function buildManifest(base, cfg) {
     const withCatalog = hasWs(cfg) && cfg.enable_direct_search !== false;
+    const withHsCatalog = hsOn(cfg) && cfg.hellspy_search !== false;
+    const catalogs = [...(withCatalog ? [SEARCH_CATALOG] : []), ...(withHsCatalog ? [SEARCH_CATALOG_HS] : [])];
+    const prefixes = ['tt', 'kitsu', 'webshare', ...(HELLSPY_ON ? ['hellspy'] : [])];
     return {
         id: cfg ? personalAddonId(who(cfg)) : 'com.webshare.anime',
         version: VERSION,
@@ -1243,13 +1356,13 @@ function buildManifest(base, cfg) {
         background: `${base}/webshare-backdrop.jpg`,
         // meta jen pro soubory z katalogu (webshare-…); metadata filmů a seriálů dodává Cinemeta
         resources: [
-            { name: 'stream', types: ['movie', 'series'], idPrefixes: ['tt', 'kitsu', 'webshare'] },
-            { name: 'meta', types: ['movie', 'series'], idPrefixes: ['webshare'] },
-            ...(withCatalog ? ['catalog'] : [])
+            { name: 'stream', types: ['movie', 'series'], idPrefixes: prefixes },
+            { name: 'meta', types: ['movie', 'series'], idPrefixes: ['webshare', ...(HELLSPY_ON ? ['hellspy'] : [])] },
+            ...(catalogs.length ? ['catalog'] : [])
         ],
         types: ['movie', 'series'],
-        idPrefixes: ['tt', 'kitsu', 'webshare'],
-        catalogs: withCatalog ? [SEARCH_CATALOG] : [],
+        idPrefixes: prefixes,
+        catalogs,
         behaviorHints: { configurable: true, configurationRequired: !cfg, adult: false, p2p: false }
     };
 }
@@ -1370,7 +1483,7 @@ app.get('/:cfg/configure', (req, res) => {
     sendPage(cfg ? {
         username: cfg.username || '', password: cfg.password || '',
         tmdb_api_key: cfg.tmdb_api_key || '', enable_direct_search: cfg.enable_direct_search !== false,
-        hellspy: cfg.hellspy !== false
+        hellspy: cfg.hellspy !== false, hellspy_search: cfg.hellspy_search !== false
     } : null)(req, res);
 });
 
@@ -1402,11 +1515,12 @@ function parseExtra(str) {
 
 app.get(['/:cfg/catalog/:type/:id/:extra.json', '/:cfg/catalog/:type/:id.json'], withCfg(async (req, res, cfg) => {
     let metas = [];
-    if (req.params.id === 'webshare_search') {
+    if (req.params.id === 'webshare_search' || req.params.id === 'hellspy_search') {
         try {
-            metas = await handleCatalog(req.params.type, parseExtra(req.params.extra), cfg, baseUrl(req));
+            const fn = req.params.id === 'hellspy_search' ? handleCatalogHs : handleCatalog;
+            metas = await fn(req.params.type, parseExtra(req.params.extra), cfg, baseUrl(req));
         } catch (e) {
-            log(`❌ katalog [${who(cfg)}]: ${e.message}`);
+            log(`❌ katalog ${req.params.id} [${who(cfg)}]: ${e.message}`);
         }
     }
     res.json({ metas });

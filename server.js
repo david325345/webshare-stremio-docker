@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.0';
+const VERSION = '8.6.1';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -935,15 +935,33 @@ function expandHellspy(items) {
     return out;
 }
 
-// Stejný soubor nahraný na Hellspy víckrát (shodná velikost na bajt) → jen jednou (první = nejlépe seřazený)
-function dedupeHellspy(items) {
+// Stejný soubor nahraný víckrát (shodná velikost na bajt, v rámci jednoho zdroje) → jen jednou;
+// první = nejlépe seřazený. Webshare × Hellspy se neslučuje (originál × převod MP4).
+const sizeKey = f => (f.size ? `${f.hs ? 'h' : 'w'}:${f.size}` : null);
+function dedupeBySize(items, onlyHs, dropped) {
     const seen = new Set();
     return items.filter(it => {
-        if (!it.f.hs || !it.f.size) return true;
-        if (seen.has(it.f.size)) return false;
-        seen.add(it.f.size);
+        if (onlyHs && !it.f.hs) return true;
+        const k = sizeKey(it.f);
+        if (!k) return true;
+        if (seen.has(k)) { if (dropped) dropped.add(it.f.ident); return false; }
+        seen.add(k);
         return true;
     });
+}
+// Soubory k ověření (file_info / detail): nejlepších N různých velikostí, od každé max. 2 kopie (záloha, kdyby první byla smazaná)
+function enrichTargets(ranked, n) {
+    const per = new Map(), out = [];
+    let uniq = 0;
+    for (const it of ranked) {
+        const k = sizeKey(it.f) || it.f.ident;
+        const c = per.get(k) || 0;
+        if (c >= 2) continue;
+        if (c === 0) { if (uniq >= n) continue; uniq++; }
+        per.set(k, c + 1);
+        out.push(it);
+    }
+    return out;
 }
 // Zvukové stopy ze stejného souboru na Webshare (shodná velikost na bajt)
 function wsAudioBySize(items) {
@@ -981,10 +999,11 @@ async function findFiles(type, id, cfg) {
             queries += w2.length;
         }
         // Hellspy: délka už z hledání
-        let ranked = dedupeHellspy(rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it)));
+        const dupes = new Set();
+        let ranked = dedupeBySize(rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it)), true, dupes);
         // file_info (Webshare) a detail (Hellspy) pro nejlepší soubory – souběžně, s časovým limitem
         const max = plan.type === 'movie' ? 30 : 25;
-        const top = ranked.slice(0, max + 10);
+        const top = enrichTargets(ranked, max + 10);
         const [completeWs, completeHs] = await Promise.all([
             enrichFiles(cfg, top),
             hsOn(cfg) ? enrichHellspy(top.filter(it => it.f.hs).slice(0, 15)) : true
@@ -992,7 +1011,7 @@ async function findFiles(type, id, cfg) {
         const complete = completeWs && completeHs;
         const durationBad = new Map();
         const wsAu = wsAudioBySize(ranked);
-        ranked = rankFiles(expandHellspy(ranked
+        ranked = rankFiles(expandHellspy(dedupeBySize(rankFiles(ranked
             .map(it => {
                 const fi = fileCache.get(it.f.ident);
                 if (it.f.hs) return { ...it, info: { ...(fi || {}), len: it.f.len, au: wsAu.get(it.f.size) || undefined } };
@@ -1003,11 +1022,11 @@ async function findFiles(type, id, cfg) {
                 const why = durationMismatch(plan, it);
                 if (why) durationBad.set(it.f.ident, why);
                 return !why;
-            })));
+            })), false, dupes)));
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
         // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní
         if (ranked.length) resultCache.set(key, res, (complete ? 30 : 3) * 60 * 1000);
-        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src);
+        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src, dupes);
         return res;
     });
 }
@@ -1032,7 +1051,7 @@ function archiveWrite(rec) {
     });
 }
 
-function archiveSearch(plan, queries, files, ranked, ms, durationBad, src) {
+function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes) {
     if (!archiveOk) return;
     const sent = new Map();
     ranked.slice(0, plan.type === 'movie' ? 30 : 25).forEach((it, i) => { if (!sent.has(it.f.ident)) sent.set(it.f.ident, i + 1); });
@@ -1046,6 +1065,7 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src) {
             const j = judgeFile(f, plan);
             const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
             if (f.hs) rec.src = 'hs';
+            if (dupes && dupes.has(f.ident)) rec.dup = 1;   // stejná velikost jako jiný (odeslaný) soubor
             if (j.ok && durationBad && durationBad.has(f.ident)) { rec.ok = false; rec.r = durationBad.get(f.ident); }
             const fi = fileCache.get(f.ident);
             if (f.hs) {   // Hellspy: délka z hledání, převody a titulky z detailu

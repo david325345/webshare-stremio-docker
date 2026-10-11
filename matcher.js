@@ -20,7 +20,20 @@ const ORDINALS = { prvni: '1', druha: '2', druhy: '2', druhe: '2', treti: '3', c
 
 function tokens(str) {
     const n = normalize(str);
-    return n ? n.split(' ').map(t => ORDINALS[t] || t) : [];
+    return n ? fiveO(n.split(' ').map(t => ORDINALS[t] || t)) : [];
+}
+// "Hawaii 5-0" = "5-O" = "5 O" = "Five-0" = "Five-O" → "5 0"
+function fiveO(t) {
+    for (let i = 0; i + 1 < t.length; i++) {
+        if ((t[i] === '5' || t[i] === 'five') && (t[i + 1] === 'o' || t[i + 1] === '0')) { t[i] = '5'; t[i + 1] = '0'; }
+    }
+    return t;
+}
+// Tokeny se zachovanou velikostí písmen, zarovnané s tokens() (pro zkratky jako "NCIS LA")
+function rawTokens(str) {
+    const n = String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/&/g, ' and ').replace(/['’`´]/g, '').replace(/[^A-Za-z0-9]+/g, ' ').trim();
+    return n ? n.split(' ') : [];
 }
 
 // Skupiny v hranatých závorkách na začátku ("[SubsPlease] ", "[DB]") – pro porovnání názvu se odstraní,
@@ -112,7 +125,7 @@ const ROMAN_ANY = /^(i{1,3}|iv|v|vi{1,3}|ix|x)$/;
 // slova před názvem, která značí jiný (dokumentární/odvozený) titul: "Inside the Vietnam War", "Lego Batman"
 const PREFIX_BAD = new Set(('inside behind making becoming beyond lego untold secret secrets return revisiting remembering ' +
     'uncovering unmasking reliving decoding history story truth road after before ultimate complete official unofficial ' +
-    'tribute parody honest pitch').split(' '));
+    'tribute parody honest pitch skutecna skutecny skutecne real true').split(' '));
 
 // Roky v názvu souboru (1920–2035)
 function fileYears(fileName) {
@@ -250,11 +263,11 @@ function detectQuality(fileName) {
 }
 
 // Slova, která za názvem v souboru nevadí (jazyk, kvalita, zdroj, verze …)
-const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english multi dual dab dabing dabbing dub dubbed ' +
+const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english jap jpn japanese cc multi dual dab dabing dabbing dub dubbed ' +
     'tit titulky sub subs forced hd fhd uhd sd bluray bdrip brrip bd remux webrip web dl webdl hdtv dvdrip dvd rip ' +
     'xvid divx hevc avc aac ac3 dts ddp truehd atmos hdr dv extended edition directors cut uncut unrated remastered ' +
     'complete kompletni serie series season sezona rada episode ep epizoda dil cast part mp4 mkv avi vostfr ' +
-    'tv ova movie film proper repack internal limited').split(' '));
+    'tv ova movie film proper repack internal limited anime capitulo episodio folge odcinek bolum aflevering').split(' '));
 
 // Najde v souboru slova názvu (v pořadí, mezery mezi nimi tolerované – "Rosario to Vampire" ~ "Rosario + Vampire");
 // vrací pozici prvního slova a slova, která následují za posledním.
@@ -294,7 +307,7 @@ function afterName(fileName, name) {
             }
             pos = k;
         }
-        if (ok) return { start: i, rest: ft.slice(pos + 1) };
+        if (ok) return { start: i, rest: ft.slice(pos + 1), endAll: pos2all[pos] };
     }
     return null;
 }
@@ -371,7 +384,24 @@ function subtitleNoise(fileName, name, allow, mode) {
     return false;
 }
 
+// Zkratka spin-offu hned za názvem = jiný titul ("NCIS LA", "CSI NY", "Law & Order SVU");
+// jen známé zkratky – obecná pravidla by brala i "House MD" apod.
+const SPINOFF_ABBR = new Set(['la', 'ny', 'nola', 'svu', 'ci', 'dc', 'miami', 'cyber', 'vegas']);
+function spinoffAbbrev(fileName, name, allow) {
+    const clean = stripLeadingGroups(fileName);
+    const hit = afterName(clean, name);
+    if (!hit) return false;
+    const raw = rawTokens(clean);
+    const t = raw[hit.endAll + 1];
+    if (!t) return false;
+    const l = t.toLowerCase();
+    if (!SPINOFF_ABBR.has(l) || (allow && allow.has(l))) return false;
+    // dvoupísmenné jen velkými písmeny ("NCIS LA", ne "la" jako člen)
+    return l.length > 2 ? true : /^[A-Z]+$/.test(t);
+}
+
 module.exports = {
+    spinoffAbbrev, rawTokens,
     stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,
     normalize, tokens, nameTokens, queryText, isLatin, shortTitle,

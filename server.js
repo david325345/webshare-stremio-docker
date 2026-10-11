@@ -7,9 +7,12 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
+const http = require('http');
+const https = require('https');
+const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.4.1';
+const VERSION = '8.5.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -18,6 +21,11 @@ const INDEXER_FALLBACK_URL = (process.env.INDEXER_FALLBACK_URL || 'https://index
 // Serverový TMDB klíč — použije se, když uživatel žádný nezadal
 const TMDB_API_KEY = (process.env.TMDB_API_KEY || '').trim();
 const DEBUG = /^(1|true|yes)$/i.test(process.env.DEBUG || '');
+// Hellspy: API pouští jen české/slovenské IP → dotazy přes proxy s CZ IP (HTTP CONNECT).
+// Prázdné = Hellspy vypnutý, "direct" = bez proxy (server v CZ/SK)
+const HELLSPY_PROXY = (process.env.HELLSPY_PROXY || '').trim();
+const HELLSPY_ON = !!HELLSPY_PROXY;
+const HELLSPY_API = (process.env.HELLSPY_API || 'https://api.hellspy.to/gw').replace(/\/+$/, '');
 
 const HTTP = { open_timeout: 4000, response_timeout: 8000, read_timeout: 12000 };
 
@@ -95,22 +103,31 @@ function once(key, fn) {
 }
 
 // ───────────────────────── Config v URL ─────────────────────────
+// Platný config: účet Webshare, nebo jen Hellspy ({ hellspy: true } bez účtu)
 function decodeConfig(b64) {
     try {
         const cfg = JSON.parse(Buffer.from(decodeURIComponent(b64), 'base64').toString('utf8'));
-        if (!cfg || typeof cfg.username !== 'string' || typeof cfg.password !== 'string') return null;
-        if (!cfg.username || !cfg.password) return null;
+        if (!cfg || typeof cfg !== 'object') return null;
+        const ws = typeof cfg.username === 'string' && typeof cfg.password === 'string' && cfg.username && cfg.password;
+        if (!ws) {
+            if (cfg.hellspy !== true) return null;
+            delete cfg.username; delete cfg.password;
+        }
         return cfg;
     } catch (e) {
         return null;
     }
 }
+const hasWs = cfg => !!(cfg && cfg.username && cfg.password);
+// Hellspy je u starších instalací (bez volby) zapnutý, pokud ho server podporuje
+const hsOn = cfg => HELLSPY_ON && !!cfg && cfg.hellspy !== false;
+const who = cfg => (cfg && cfg.username) || 'hellspy';
 
 // /eyJ.../stream/... → /[config:jméno]/stream/...   (Coolify maže <…>, proto hranaté závorky)
 function maskConfigInUrl(url) {
     return String(url).replace(/(^\/|[?&]config=)(eyJ[A-Za-z0-9_+=%-]+)/g, (m, prefix, b64) => {
         const cfg = decodeConfig(b64);
-        return `${prefix}[config:${cfg ? cfg.username : '?'}]`;
+        return `${prefix}[config:${cfg ? who(cfg) : '?'}]`;
     });
 }
 
@@ -290,6 +307,101 @@ async function wsUserData(token) {
     const r = await wsPost('user_data', { wst: token });
     if (r.status !== 'OK') return null;
     return { vip: r.get('vip') === '1', vipDays: parseInt(r.get('vip_days') || '0', 10) || 0 };
+}
+
+// ───────────────────────── Hellspy API ─────────────────────────
+// hledání: id, title, fileHash, size, duration; detail: filename, conversions {720,1080…} (MP4), subtitles (VTT)
+const HS_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/json', 'Origin': 'https://hellspy.to', 'Referer': 'https://hellspy.to/'
+};
+let hsDownUntil = 0;
+
+// Tunel přes HTTP proxy (CONNECT) – tinyproxy pustí jen api.hellspy.to:443
+function hsTunnel(host, port) {
+    const p = new URL(HELLSPY_PROXY);
+    return new Promise((resolve, reject) => {
+        const req = http.request({ host: p.hostname, port: p.port || 80, method: 'CONNECT', path: `${host}:${port}`,
+            headers: { Host: `${host}:${port}` }, timeout: 4000 });
+        req.on('connect', (r, socket) => {
+            if (r.statusCode !== 200) { socket.destroy(); return reject(new Error(`proxy CONNECT ${r.statusCode}`)); }
+            resolve(socket);
+        });
+        req.on('timeout', () => req.destroy(new Error('proxy neodpovídá')));
+        req.on('error', reject);
+        req.end();
+    });
+}
+
+async function hsGet(pathq) {
+    if (Date.now() < hsDownUntil) throw new Error('Hellspy dočasně vypnutý (předchozí chyba)');
+    const u = new URL(HELLSPY_API + pathq);
+    const port = +u.port || 443;
+    const opts = { host: u.hostname, port, path: u.pathname + u.search, headers: HS_HEADERS, timeout: 8000 };
+    if (HELLSPY_PROXY && HELLSPY_PROXY !== 'direct') {
+        const socket = await hsTunnel(u.hostname, port);
+        opts.agent = false;
+        opts.createConnection = () => tls.connect({ socket, servername: u.hostname });
+    }
+    try {
+        return await new Promise((resolve, reject) => {
+            const req = https.get(opts, resp => {
+                let data = '';
+                resp.setEncoding('utf8');
+                resp.on('data', c => { data += c; if (data.length > 4e6) req.destroy(new Error('Hellspy: příliš velká odpověď')); });
+                resp.on('end', () => {
+                    if (resp.statusCode === 404) return resolve(null);
+                    if (resp.statusCode !== 200) return reject(Object.assign(new Error(`Hellspy HTTP ${resp.statusCode}`), { status: resp.statusCode }));
+                    try { resolve(JSON.parse(data)); } catch (e) { reject(new Error('Hellspy: neplatná odpověď')); }
+                });
+                resp.on('error', reject);
+            });
+            req.on('timeout', () => req.destroy(new Error('Hellspy neodpovídá')));
+            req.on('error', reject);
+        });
+    } catch (e) {
+        // blokace / výpadek proxy → Hellspy na 5 min vynechat, Webshare jede dál
+        if (!e.status || e.status === 429 || e.status === 403 || e.status >= 500) {
+            if (Date.now() >= hsDownUntil) log(`⚠️ Hellspy vynechán na 5 min: ${e.message}`);
+            hsDownUntil = Date.now() + 5 * 60 * 1000;
+        }
+        throw e;
+    }
+}
+
+async function hsSearch(query, limit = 50) {
+    const j = await hsGet(`/search?query=${encodeURIComponent(query)}&offset=0&limit=${Math.min(limit, 64)}`);
+    return ((j && j.items) || []).filter(it => it && it.id && it.fileHash && it.title).map(it => ({
+        hs: true, ident: `hs:${it.id}`, id: it.id, hash: String(it.fileHash),
+        name: String(it.title), size: +it.size || 0, len: +it.duration || 0
+    }));
+}
+
+// Detail s odkazy (platí ~24 h) – v paměti 6 h; metadata (převody, jazyky titulků) trvale ve fileCache
+const hsDetailCache = new TTLCache(3000);
+async function hsDetail(id, hash) {
+    const key = `${id}:${hash}`;
+    const hit = hsDetailCache.get(key);
+    if (hit !== undefined) return hit;
+    return once(`hsd:${key}`, async () => {
+        const j = await hsGet(`/video/${encodeURIComponent(id)}/${encodeURIComponent(hash)}`);
+        const conv = j && j.conversions && typeof j.conversions === 'object' ? j.conversions : {};
+        const d = j ? {
+            filename: j.filename || j.title || '',
+            conv: Object.fromEntries(Object.entries(conv).filter(([, v]) => typeof v === 'string' && /^https?:/.test(v))),
+            subs: (Array.isArray(j.subtitles) ? j.subtitles : []).filter(x => x && x.url)
+                .map(x => ({ lang: String(x.language || x.title || '').toLowerCase().replace(/\d+$/, ''), url: x.url }))
+        } : null;
+        hsDetailCache.set(key, d, (d ? 6 : 1) * H);
+        return d;
+    });
+}
+// výška převodu: "0" = originál (výška neznámá)
+const convHeight = k => (k === '0' ? 9999 : parseInt(k, 10) || 0);
+function hsMeta(d) {
+    if (!d) return { ok: false };
+    const conv = Object.keys(d.conv).sort((a, b) => convHeight(b) - convHeight(a));
+    return { ok: conv.length > 0, conv, subs: [...new Set(d.subs.map(s => s.lang).filter(Boolean))], fn: d.filename };
 }
 
 // ───────────────────────── Indexer: resolve-ids ─────────────────────────
@@ -513,11 +625,16 @@ function digitVariant(q) {
     const v = q.split(' ').map(w => ORD_Q[w.toLowerCase()] || w).join(' ');
     return v !== q ? v : null;
 }
+// "Hawaii 5-0" / "Havaj 5.0" → "Hawaii 5-O" (soubory často píšou písmeno O)
+function fiveOVariant(q) {
+    const v = q.replace(/\b(5|five)[-. ]?0\b/i, '5-O');
+    return v !== q ? v : null;
+}
 
 function buildQueries(plan) {
     const fr = plan.names.filter(n => n.kind === 'franchise').map(n => M.queryText(n.text));
     const an = plan.names.filter(n => n.kind === 'anime').map(n => M.queryText(n.text));
-    const variants = fr.map(digitVariant).filter(Boolean);
+    const variants = [...fr.map(digitVariant), ...fr.map(fiveOVariant)].filter(Boolean);
     const w1 = [], w2 = [];
     if (plan.type === 'movie') {
         const all = [...fr, ...an];
@@ -559,23 +676,29 @@ function buildQueries(plan) {
     return [dedupe(w1, seen).slice(0, 8), dedupe(w2, seen).slice(0, 10)];
 }
 
-// Hledání s omezenou souběžností (max 4 dotazy naráz)
+// Hledání s omezenou souběžností – Webshare max 4 dotazy naráz, Hellspy max 3 (souběžně vedle sebe)
 async function runQueries(cfg, queries) {
     const out = new Map();
-    let i = 0;
-    const worker = async () => {
-        while (i < queries.length) {
-            const { q, limit } = queries[i++];
-            try {
-                const r = await withToken(cfg, t => wsSearch(t, q, limit));
-                for (const f of r.files) if (!out.has(f.ident)) out.set(f.ident, f);
-                dbg(`  🔎 "${q}" → ${r.files.length}`);
-            } catch (e) {
-                log(`  ⚠️ hledání "${q}" selhalo: ${e.message}`);
+    const pool = async (n, search, label) => {
+        let i = 0;
+        const worker = async () => {
+            while (i < queries.length) {
+                const { q, limit } = queries[i++];
+                try {
+                    const files = await search(q, limit);
+                    for (const f of files) if (!out.has(f.ident)) out.set(f.ident, f);
+                    dbg(`  🔎 ${label} "${q}" → ${files.length}`);
+                } catch (e) {
+                    if (label === 'WS' || Date.now() >= hsDownUntil) log(`  ⚠️ ${label} hledání "${q}" selhalo: ${e.message}`);
+                }
             }
-        }
+        };
+        await Promise.all(Array.from({ length: Math.min(n, queries.length) }, worker));
     };
-    await Promise.all(Array.from({ length: Math.min(4, queries.length) }, worker));
+    await Promise.all([
+        hasWs(cfg) ? pool(4, async (q, limit) => (await withToken(cfg, t => wsSearch(t, q, limit))).files, 'WS') : null,
+        hsOn(cfg) ? pool(3, (q, limit) => hsSearch(q, limit), 'HS') : null
+    ]);
     return out;
 }
 
@@ -584,9 +707,11 @@ async function runQueries(cfg, queries) {
 function nameOk(fileName, n, plan) {
     if (!M.titleMatches(fileName, n.text, plan && plan.names.map(x => x.text))) return false;
     if (n.short && M.shortNameIsNoise(fileName, n.text, n.full)) return false;
-    // jiný podtitul za názvem: u filmů vždy, u seriálů u jednoslovných názvů ("House" ≠ "House of the Dragon")
-    if (plan && (plan.type === 'movie' || M.nameTokens(n.text).length === 1) &&
-        M.subtitleNoise(fileName, n.text, plan.allow, plan.type === 'movie' ? 'movie' : 'series')) return false;
+    // jiný podtitul za názvem ("House" ≠ "House of the Dragon", "Námořní vyšetřovací služba - Los Angeles");
+    // u seriálů kontrola končí na značce dílu, takže název dílu za ní nevadí
+    if (plan && M.subtitleNoise(fileName, n.text, plan.allow, plan.type === 'movie' ? 'movie' : 'series')) return false;
+    // zkratka spin-offu za názvem ("NCIS LA")
+    if (plan && M.spinoffAbbrev(fileName, n.text, plan.allow)) return false;
     return true;
 }
 
@@ -631,6 +756,11 @@ function judgeFile(f, plan) {
         const rest = hit ? (seq ? hit.rest.slice(1) : hit.rest) : undefined;
         const pe = M.parseEpisode(f.name, M.nameTokens(n.text), rest);
         if (pe.episode === null) { reason = 'bez čísla dílu'; continue; }
+        // rok hned za názvem mimo dobu vysílání ("Hawaii Five-0 2010" × seriál z roku 1968)
+        const y0 = hit && hit.rest[0] && /^(19|20)\d{2}$/.test(hit.rest[0]) ? +hit.rest[0] : null;
+        if (y0 && plan.year && (y0 < plan.year - 1 || y0 > plan.year + (plan.season || 1) + 2)) {
+            reason = `rok nesedí (${y0})`; continue;
+        }
         if (pe.season === null && seq) pe.season = seq;
         seen = pe;
         if (n.kind === 'franchise') {
@@ -664,9 +794,23 @@ function filterFiles(files, plan) {
 // Jazyk a kvalita: skutečné stopy z file_info mají přednost před názvem souboru
 const CZ_CODES = new Set(['CZE', 'CES', 'CZ', 'CS']);
 const SK_CODES = new Set(['SLO', 'SLK', 'SK']);
-function describe(f, info) {
+const CONV_SCORE = { 2160: 4, 1440: 3.5, 1080: 3, 720: 2, 576: 1.5, 480: 1, 360: 0.5 };
+function describe(f, info, conv) {
     const lang = M.detectLang(f.name);
     const q = M.detectQuality(f.name);
+    if (f.hs) {
+        // Hellspy: převod MP4 v dané výšce; zvuk jen podle názvu, titulky z detailu
+        const subs = (info && info.subs) || [];
+        if (subs.includes('cze') && !lang.cz) { lang.cz = true; if (!lang.dub) lang.sub = true; }
+        else if (subs.includes('slo') && !lang.cz && !lang.sk) { lang.sk = true; if (!lang.dub) lang.sub = true; }
+        if (conv && conv !== '0' && !q.cam) {
+            const h = parseInt(conv, 10);
+            q.resolution = h >= 2000 ? '4K' : `${h}p`;
+            q.score = CONV_SCORE[h] ?? (h >= 1000 ? 3 : h >= 700 ? 2 : 1);
+        }
+        q.codec = null; q.audio = null; q.hdr = false;
+        return { lang, q, ls: M.langScore(lang), audioLangs: [], subLangs: subs };
+    }
     const langs = info && info.au ? [...new Set(info.au.map(a => a.lang).filter(l => l && l !== 'UND'))] : [];
     let ls;
     if (langs.length) {
@@ -696,10 +840,11 @@ function describe(f, info) {
 }
 
 function rankFiles(items) {
-    return items.map(it => ({ ...it, ...describe(it.f, it.info) })).sort((a, b) =>
+    return items.map(it => ({ ...it, ...describe(it.f, it.info, it.conv) })).sort((a, b) =>
         ((a.q.cam ? 1 : 0) - (b.q.cam ? 1 : 0)) ||
         (b.ls - a.ls) ||
         (b.q.score - a.q.score) ||
+        ((a.f.hs ? 1 : 0) - (b.f.hs ? 1 : 0)) ||   // při stejné kvalitě Webshare (originál, ověřený zvuk)
         ((b.exact ? 1 : 0) - (a.exact ? 1 : 0)) ||
         (b.f.size - a.f.size)
     );
@@ -732,7 +877,8 @@ async function fetchFileInfo(cfg, ident) {
     return null;
 }
 async function enrichFiles(cfg, items, deadlineMs = 1500) {
-    const todo = items.map(it => it.f.ident).filter(id => fileCache.get(id) === undefined);
+    if (!hasWs(cfg)) return true;
+    const todo = items.filter(it => !it.f.hs).map(it => it.f.ident).filter(id => fileCache.get(id) === undefined);
     if (!todo.length) return true;
     let i = 0;
     const worker = async () => {
@@ -746,9 +892,44 @@ async function enrichFiles(cfg, items, deadlineMs = 1500) {
     return !timedOut;
 }
 
-// Najde a seřadí soubory pro dané ID (výsledek je sdílený pro všechny uživatele, 30 min)
+// Hellspy detail (převody + titulky) pro nejlepší kandidáty; metadata trvale ve fileCache
+async function fetchHsMeta(f) {
+    const d = await hsDetail(f.id, f.hash);
+    const rec = hsMeta(d);
+    fileCache.set(f.ident, rec, (rec.ok ? 3 : 7) * 24 * H);
+    return rec;
+}
+async function enrichHellspy(items, deadlineMs = 1500) {
+    const todo = items.filter(it => it.f.hs && fileCache.get(it.f.ident) === undefined).map(it => it.f);
+    if (!todo.length) return true;
+    let i = 0;
+    const worker = async () => {
+        while (i < todo.length) {
+            const f = todo[i++];
+            try { await fetchHsMeta(f); } catch (e) { dbg(`hellspy detail ${f.id}: ${e.message}`); }
+        }
+    };
+    const all = Promise.all(Array.from({ length: Math.min(4, todo.length) }, worker));
+    const timedOut = await Promise.race([all.then(() => false), new Promise(r => setTimeout(() => r(true), deadlineMs).unref())]);
+    return !timedOut;
+}
+// Hellspy soubor → jeden stream na každý dostupný převod (bez detailu jeden „nejlepší“)
+function expandHellspy(items) {
+    const out = [];
+    for (const it of items) {
+        if (!it.f.hs) { out.push(it); continue; }
+        const conv = it.info && it.info.conv;
+        if (conv && conv.length) conv.forEach(c => out.push({ ...it, conv: c }));
+        else out.push({ ...it, conv: null });
+    }
+    return out;
+}
+
+// Najde a seřadí soubory pro dané ID (výsledek je sdílený pro všechny uživatele se stejnými zdroji, 30 min)
 async function findFiles(type, id, cfg) {
-    const key = `res:${type}:${id}`;
+    const src = `${hasWs(cfg) ? 'w' : ''}${hsOn(cfg) ? 'h' : ''}`;
+    if (!src) return { plan: null, items: [], queries: 0, ms: 0 };
+    const key = `res:${type}:${id}:${src}`;
     const hit = resultCache.get(key);
     if (hit) return { ...hit, cached: true };
     return once(key, async () => {
@@ -768,23 +949,33 @@ async function findFiles(type, id, cfg) {
             items = filterFiles([...files.values()], plan);
             queries += w2.length;
         }
-        let ranked = rankFiles(items);
-        // file_info pro nejlepší soubory: dostupnost + audio stopy (trvalá cache podle identu)
+        // Hellspy: délka už z hledání
+        let ranked = rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it));
+        // file_info (Webshare) a detail (Hellspy) pro nejlepší soubory – souběžně, s časovým limitem
         const max = plan.type === 'movie' ? 30 : 25;
-        const complete = await enrichFiles(cfg, ranked.slice(0, max + 10));
+        const top = ranked.slice(0, max + 10);
+        const [completeWs, completeHs] = await Promise.all([
+            enrichFiles(cfg, top),
+            hsOn(cfg) ? enrichHellspy(top.filter(it => it.f.hs).slice(0, 15)) : true
+        ]);
+        const complete = completeWs && completeHs;
         const durationBad = new Map();
-        ranked = rankFiles(ranked
-            .map(it => ({ ...it, info: fileCache.get(it.f.ident) || it.info }))
+        ranked = rankFiles(expandHellspy(ranked
+            .map(it => {
+                const fi = fileCache.get(it.f.ident);
+                if (it.f.hs) return { ...it, info: { ...(fi || {}), len: it.f.len } };
+                return { ...it, info: fi || it.info };
+            })
             .filter(it => !it.info || it.info.ok !== false)
             .filter(it => {
                 const why = durationMismatch(plan, it);
                 if (why) durationBad.set(it.f.ident, why);
                 return !why;
-            }));
+            })));
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
         // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní
         if (ranked.length) resultCache.set(key, res, (complete ? 30 : 3) * 60 * 1000);
-        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad);
+        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src);
         return res;
     });
 }
@@ -809,11 +1000,12 @@ function archiveWrite(rec) {
     });
 }
 
-function archiveSearch(plan, queries, files, ranked, ms, durationBad) {
+function archiveSearch(plan, queries, files, ranked, ms, durationBad, src) {
     if (!archiveOk) return;
-    const sent = new Map(ranked.slice(0, plan.type === 'movie' ? 30 : 25).map((it, i) => [it.f.ident, i + 1]));
+    const sent = new Map();
+    ranked.slice(0, plan.type === 'movie' ? 30 : 25).forEach((it, i) => { if (!sent.has(it.f.ident)) sent.set(it.f.ident, i + 1); });
     archiveWrite({
-        t: new Date().toISOString(), kind: 'stream', type: plan.type, id: plan.id,
+        t: new Date().toISOString(), kind: 'stream', src, type: plan.type, id: plan.id,
         anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime,
         season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
         names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short })),
@@ -821,9 +1013,13 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad) {
         files: [...files.values()].map(f => {
             const j = judgeFile(f, plan);
             const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
+            if (f.hs) rec.src = 'hs';
             if (j.ok && durationBad && durationBad.has(f.ident)) { rec.ok = false; rec.r = durationBad.get(f.ident); }
             const fi = fileCache.get(f.ident);
-            if (fi) {   // skutečné stopy z file_info (jen u souborů, pro které se zjišťovaly)
+            if (f.hs) {   // Hellspy: délka z hledání, převody a titulky z detailu
+                if (f.len) rec.len = f.len;
+                if (fi) { rec.av = fi.ok; if (fi.conv) rec.conv = fi.conv; if (fi.subs && fi.subs.length) rec.subs = fi.subs; }
+            } else if (fi) {   // skutečné stopy z file_info (jen u souborů, pro které se zjišťovaly)
                 rec.av = fi.ok;
                 if (fi.au && fi.au.length) rec.au = fi.au.map(x => x.lang || '?');
                 if (fi.len) rec.len = fi.len;
@@ -905,7 +1101,34 @@ function formatLength(sec) {
     return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min`;
 }
 
+const safeName = n => String(n || '').replace(/[\/\\?#%]+/g, ' ').trim() || 'video';
+function hsToStream(item, base, cfgB64) {
+    const { f, lang, q, info, conv } = item;
+    const subs = (info && info.subs) || [];
+    const langs = langLabel(M.detectLang(f.name));
+    const subLbl = subs.length ? `💬 ${subs.map(l => ({ cze: 'CZ', ces: 'CZ', slo: 'SK', slk: 'SK', eng: 'EN' }[l] || l.toUpperCase())).join(' · ')}` : null;
+    const meta = [info && info.len ? `⏱ ${formatLength(info.len)}` : null, conv && conv !== '0' ? 'MP4 převod' : null,
+                  f.size ? `originál ${formatSize(f.size)}` : null].filter(Boolean).join('  ·  ');
+    const res = q.cam ? 'CAM' : (conv ? (q.resolution || 'SD') : 'auto');
+    const fname = (info && info.fn) || `${safeName(f.name)}.mp4`;
+    const stream = {
+        name: `Hellspy\n${res}`,
+        title: [f.name, [langs, subLbl].filter(Boolean).join('  '), meta].filter(Boolean).join('\n'),
+        url: `${base}/${cfgB64}/hs/play/${encodeURIComponent(f.id)}/${encodeURIComponent(f.hash)}/${conv || 'best'}/${encodeURIComponent(safeName(f.name))}.mp4`,
+        behaviorHints: { bingeGroup: `hellspy-${res}`, filename: fname }
+    };
+    // titulky přes server (odkazy Hellspy po ~24 h vyprší)
+    if (subs.length) {
+        stream.subtitles = subs.map((l, i) => ({
+            id: `hs-${f.id}-${i}`, lang: l || 'und',
+            url: `${base}/${cfgB64}/hs/sub/${encodeURIComponent(f.id)}/${encodeURIComponent(f.hash)}/${i}.vtt`
+        }));
+    }
+    return stream;
+}
+
 function toStream(item, base, cfgB64) {
+    if (item.f.hs) return hsToStream(item, base, cfgB64);
     const { f, lang, q, info } = item;
     const lbl = audioSubsLabel(item);
     const tech = [q.source, q.codec, q.audio, q.hdr ? 'HDR' : null].filter(Boolean).join(' · ');
@@ -928,6 +1151,7 @@ function toStream(item, base, cfgB64) {
 async function handleStream(type, id, cfg, base, cfgB64) {
     // Soubor z katalogu "Webshare Hledat"
     if (id.startsWith('webshare-')) {
+        if (!hasWs(cfg)) return [];
         const ident = id.slice(9);
         const r = await withToken(cfg, t => wsFileInfo(t, ident));
         if (!r.info) return [];
@@ -939,9 +1163,10 @@ async function handleStream(type, id, cfg, base, cfgB64) {
     const max = type === 'movie' ? 30 : 25;
     const streams = res.items.slice(0, max).map(it => toStream(it, base, cfgB64));
     const p = res.plan;
-    log(`🎬 ${type} ${id} [${cfg.username}] ${p ? (p.isAnime ? `anime AL${p.anilistId}` : p.source) : 'bez názvů'}` +
+    const nHs = res.items.slice(0, max).filter(it => it.f.hs).length;
+    log(`🎬 ${type} ${id} [${who(cfg)}] ${p ? (p.isAnime ? `anime AL${p.anilistId}` : p.source) : 'bez názvů'}` +
         `${p ? ` | názvy: ${p.names.map(n => n.text).join(' / ')}` : ''}` +
-        ` | dotazů ${res.queries || 0}, souborů ${res.total || 0}, streamů ${streams.length}` +
+        ` | dotazů ${res.queries || 0}, souborů ${res.total || 0}, streamů ${streams.length}${nHs ? ` (Hellspy ${nHs})` : ''}` +
         `${res.cached ? ' (cache)' : ` | ${res.ms} ms`}` +
         `${res.items.length ? ` | 1.: ${res.items[0].f.name}` : ''}`);
     return streams;
@@ -949,13 +1174,13 @@ async function handleStream(type, id, cfg, base, cfgB64) {
 
 // ───────────────────────── Katalog „Webshare Hledat“ a meta ─────────────────────────
 async function handleCatalog(type, extra, cfg, base) {
-    if (cfg.enable_direct_search === false) return [];
+    if (cfg.enable_direct_search === false || !hasWs(cfg)) return [];
     const query = (extra.search || '').trim();
     if (!query) return [];
     const r = await withToken(cfg, t => wsSearch(t, query, 100));
     r.files = r.files.filter(f => !M.isNonVideo(f.name));
     const backdrop = `${base}/webshare-backdrop.jpg`;
-    log(`🔍 hledat "${query}" [${cfg.username}] → ${r.files.length}`);
+    log(`🔍 hledat "${query}" [${who(cfg)}] → ${r.files.length}`);
     archiveWrite({ t: new Date().toISOString(), kind: 'catalog', q: query, count: r.files.length,
         files: r.files.slice(0, 100).map(f => ({ n: f.name, s: f.size })) });
     return r.files.slice(0, 100).map(f => {
@@ -975,7 +1200,7 @@ async function handleCatalog(type, extra, cfg, base) {
 }
 
 async function handleMeta(type, id, cfg, base) {
-    if (!id.startsWith('webshare-')) return null;
+    if (!id.startsWith('webshare-') || !hasWs(cfg)) return null;
     const ident = id.slice(9);
     const r = await withToken(cfg, t => wsFileInfo(t, ident));
     if (!r.info) return null;
@@ -1006,12 +1231,14 @@ async function handleMeta(type, id, cfg, base) {
 const SEARCH_CATALOG = { type: 'movie', id: 'webshare_search', name: 'Webshare Hledat', extra: [{ name: 'search', isRequired: true }] };
 
 function buildManifest(base, cfg) {
-    const withCatalog = cfg && cfg.enable_direct_search !== false;
+    const withCatalog = hasWs(cfg) && cfg.enable_direct_search !== false;
     return {
-        id: cfg ? personalAddonId(cfg.username) : 'com.webshare.anime',
+        id: cfg ? personalAddonId(who(cfg)) : 'com.webshare.anime',
         version: VERSION,
         name: 'Webshare',
-        description: 'Filmy, seriály a anime z Webshare.cz – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.',
+        description: cfg && !hasWs(cfg)
+            ? 'Filmy, seriály a anime z Hellspy – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.'
+            : `Filmy, seriály a anime z Webshare.cz${hsOn(cfg) ? ' a Hellspy' : ''} – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.`,
         logo: `${base}/logo.png`,
         background: `${base}/webshare-backdrop.jpg`,
         // meta jen pro soubory z katalogu (webshare-…); metadata filmů a seriálů dodává Cinemeta
@@ -1035,7 +1262,8 @@ function renderPage(prefill) {
     return html
         .replace('/*__PREFILL__*/null', json)
         .replace(/__VERSION__/g, VERSION)
-        .replace('/*__SERVER_TMDB__*/false', TMDB_API_KEY ? 'true' : 'false');
+        .replace('/*__SERVER_TMDB__*/false', TMDB_API_KEY ? 'true' : 'false')
+        .replace('/*__HELLSPY__*/false', HELLSPY_ON ? 'true' : 'false');
 }
 
 // ───────────────────────── Express ─────────────────────────
@@ -1065,7 +1293,7 @@ app.get('/configure', sendPage(null));
 
 app.get('/manifest.json', (req, res) => res.json(buildManifest(baseUrl(req), null)));
 
-app.get('/health', (req, res) => res.json({ ok: true, version: VERSION }));
+app.get('/health', (req, res) => res.json({ ok: true, version: VERSION, hellspy: HELLSPY_ON ? (Date.now() < hsDownUntil ? 'dočasně vypnutý' : 'zapnutý') : 'vypnutý' }));
 
 // Ověření přihlášení z konfigurační stránky (jednoduchý limit 10 pokusů / min / IP)
 const verifyHits = new TTLCache(5000);
@@ -1140,13 +1368,14 @@ function withCfg(handler) {
 app.get('/:cfg/configure', (req, res) => {
     const cfg = decodeConfig(req.params.cfg);
     sendPage(cfg ? {
-        username: cfg.username, password: cfg.password,
-        tmdb_api_key: cfg.tmdb_api_key || '', enable_direct_search: cfg.enable_direct_search !== false
+        username: cfg.username || '', password: cfg.password || '',
+        tmdb_api_key: cfg.tmdb_api_key || '', enable_direct_search: cfg.enable_direct_search !== false,
+        hellspy: cfg.hellspy !== false
     } : null)(req, res);
 });
 
 app.get('/:cfg/manifest.json', withCfg(async (req, res, cfg) => {
-    log(`📦 manifest [${cfg.username}]`);
+    log(`📦 manifest [${who(cfg)}]`);
     res.json(buildManifest(baseUrl(req), cfg));
 }));
 
@@ -1155,7 +1384,7 @@ app.get('/:cfg/stream/:type/:id.json', withCfg(async (req, res, cfg) => {
     try {
         streams = await handleStream(req.params.type, req.params.id, cfg, baseUrl(req), req.params.cfg);
     } catch (e) {
-        log(`❌ stream ${req.params.id} [${cfg.username}]: ${e.message}`);
+        log(`❌ stream ${req.params.id} [${who(cfg)}]: ${e.message}`);
     }
     // krátká cache v klientovi – výsledky drží server sám 30 min, opravy se tak projeví do minuty
     res.setHeader('Cache-Control', streams.length ? 'max-age=60' : 'no-store');
@@ -1177,7 +1406,7 @@ app.get(['/:cfg/catalog/:type/:id/:extra.json', '/:cfg/catalog/:type/:id.json'],
         try {
             metas = await handleCatalog(req.params.type, parseExtra(req.params.extra), cfg, baseUrl(req));
         } catch (e) {
-            log(`❌ katalog [${cfg.username}]: ${e.message}`);
+            log(`❌ katalog [${who(cfg)}]: ${e.message}`);
         }
     }
     res.json({ metas });
@@ -1191,21 +1420,46 @@ app.get('/:cfg/meta/:type/:id.json', withCfg(async (req, res, cfg) => {
 
 // Odkaz na soubor se vytváří až při přehrání (rychlejší seznam streamů, odkaz nevyprší)
 app.get('/:cfg/play/:ident/:name?', withCfg(async (req, res, cfg) => {
+    if (!hasWs(cfg)) return res.status(404).type('text/plain').send('Addon je nastavený bez účtu Webshare.');
     const ident = req.params.ident;
     const key = `${userKey(cfg)}:${ident}`;
     let link = linkCache.get(key);
     if (!link) {
         const r = await withToken(cfg, t => wsFileLink(t, ident));
         if (!r.link) {
-            log(`⛔ play ${ident} [${cfg.username}] – odkaz nedostupný (${r.message || 'neznámá chyba'})`);
+            log(`⛔ play ${ident} [${who(cfg)}] – odkaz nedostupný (${r.message || 'neznámá chyba'})`);
             return res.status(404).type('text/plain').send('Soubor není dostupný (smazaný, nebo účet bez VIP).');
         }
         link = r.link;
         linkCache.set(key, link, 15 * 60 * 1000);
-        log(`▶️ play ${ident} [${cfg.username}]`);
+        log(`▶️ play ${ident} [${who(cfg)}]`);
     }
     res.setHeader('Cache-Control', 'no-store');
     res.redirect(302, link);
+}));
+
+// Hellspy: detail přes proxy (v paměti max 6 h, odkazy platí ~24 h) → přesměrování na převod
+app.get('/:cfg/hs/play/:id/:hash/:q/:name?', withCfg(async (req, res, cfg) => {
+    if (!HELLSPY_ON) return res.status(404).type('text/plain').send('Hellspy není na serveru zapnutý.');
+    const { id, hash, q } = req.params;
+    let d = null;
+    try { d = await hsDetail(id, hash); } catch (e) { log(`⛔ hellspy play ${id} [${who(cfg)}] – ${e.message}`); }
+    const keys = d ? Object.keys(d.conv).sort((a, b) => convHeight(b) - convHeight(a)) : [];
+    const link = d && (d.conv[q] || (keys.length ? d.conv[keys[0]] : null));
+    if (!link) return res.status(404).type('text/plain').send('Soubor na Hellspy není dostupný.');
+    log(`▶️ hellspy play ${id} ${q} [${who(cfg)}]`);
+    res.setHeader('Cache-Control', 'no-store');
+    res.redirect(302, link);
+}));
+app.get('/:cfg/hs/sub/:id/:hash/:idx.vtt', withCfg(async (req, res, cfg) => {
+    if (!HELLSPY_ON) return res.status(404).end();
+    const { id, hash } = req.params;
+    let d = null;
+    try { d = await hsDetail(id, hash); } catch (e) { dbg(`hellspy sub ${id}: ${e.message}`); }
+    const sub = d && d.subs[parseInt(req.params.idx, 10)];
+    if (!sub) return res.status(404).end();
+    res.setHeader('Cache-Control', 'no-store');
+    res.redirect(302, sub.url);
 }));
 
 app.use((req, res) => res.status(404).json({ error: 'Nenalezeno' }));
@@ -1215,8 +1469,9 @@ if (require.main === module) {
         log(`🚀 Webshare ${VERSION} běží na portu ${PORT}`);
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
         log(`   cache: ${CACHE_DIR} (TMDB ${tmdbCache.map.size}, indexer ${resolveCache.map.size} záznamů)`);
+        log(`   Hellspy: ${HELLSPY_ON ? (HELLSPY_PROXY === 'direct' ? 'zapnutý (bez proxy)' : `zapnutý přes proxy ${HELLSPY_PROXY.replace(/\/\/[^@/]*@/, '//***@')}`) : 'vypnutý (chybí HELLSPY_PROXY)'}`);
         log(`   archiv hledání: ${archiveOk ? `${ARCHIVE_DIR} (${ARCHIVE_DAYS} dní)` : 'vypnutý'} | stažení: ${ADMIN_KEY ? '/admin/hledani.jsonl.gz?key=…' : 'vypnuté (chybí ADMIN_KEY)'}`);
     });
 }
 
-module.exports = { app, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };
+module.exports = { app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };

@@ -9,7 +9,7 @@ const path = require('path');
 const zlib = require('zlib');
 const M = require('./matcher');
 
-const VERSION = '8.3.0';
+const VERSION = '8.4.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -366,6 +366,7 @@ async function tmdbInfoWithKey(imdbId, type, key) {
         originalLanguage: origLang,
         alt: altList.filter(a => a.iso_3166_1 === 'CZ' || a.iso_3166_1 === 'SK').map(a => a.title).filter(Boolean),
         year: parseInt(String(d.release_date || d.first_air_date || '').slice(0, 4), 10) || null,
+        runtime: d.runtime || null,           // délka filmu v minutách (u seriálů null)
         source: 'tmdb'
     };
 }
@@ -386,7 +387,8 @@ async function cinemetaInfo(imdbId, type) {
 async function titleInfo(imdbId, type, userTmdbKey) {
     const key = `tm:${imdbId}:${type}`;
     const hit = tmdbCache.get(key);
-    if (hit !== undefined) return hit;
+    // starší záznamy (před v8.4) nemají délku filmu → u filmů z TMDB načíst znovu
+    if (hit !== undefined && !(type === 'movie' && hit && hit.source === 'tmdb' && hit.runtime === undefined)) return hit;
     return once(key, async () => {
         const keys = [...new Set([String(userTmdbKey || '').trim(), TMDB_API_KEY].filter(Boolean))];
         let failed = false;
@@ -473,7 +475,10 @@ async function buildPlan(type, id, cfg) {
     const an = [];
     if (rs) {
         an.push(full(rs.title), full(rs.title_en), short(rs.title), short(rs.title_en));
-        (rs.titles || []).filter(t => M.isLatin(t) && t.length <= 60).slice(0, 6).forEach(t => an.push(full(t)));
+        // alternativní názvy z indexeru: jednoslovné zkratky kratší než 5 znaků ("PES", "OP") se nepoužijí
+        (rs.titles || []).filter(t => M.isLatin(t) && t.length <= 60)
+            .filter(t => M.nameTokens(t).length >= 2 || M.nameTokens(t).join('').length >= 5)
+            .slice(0, 6).forEach(t => an.push(full(t)));
     }
 
     const names = uniqNames([
@@ -482,8 +487,11 @@ async function buildPlan(type, id, cfg) {
     ], 9);
     if (!names.length) return null;
 
+    // slova, která smí stát za názvem (z kteréhokoli našeho názvu) – pro kontrolu jiného podtitulu
+    const allow = new Set(names.flatMap(n => M.nameTokens(n.full || n.text)));
     return {
-        type, id, isAnime, names,
+        type, id, isAnime, names, allow,
+        runtime: (info && info.runtime) || null,
         year: (info && info.year) || null,
         season, episode,
         alEpisode: rs ? (rs.episode || episode) : null,
@@ -522,6 +530,7 @@ function buildQueries(plan) {
         fr.slice(3).forEach(q => w2.push(`${q} ${se}`));
         variants.forEach(q => w2.push(`${q} ${se}`));
         if (plan.isAnime && plan.alEpisode) {
+            if (plan.alEpisode < 10) an.slice(0, 1).forEach(q => w2.push(`${q} ${plan.alEpisode}`));   // "… 1" bez nuly
             an.slice(0, 2).forEach(q => w2.push(`${q} E${pad(plan.alEpisode)}`));
             an.slice(2).forEach(q => w2.push(`${q} ${pad(plan.alEpisode)}`));
         }
@@ -568,9 +577,23 @@ async function runQueries(cfg, queries) {
 
 // Vybere soubory, které sedí na název (a rok / epizodu)
 // Sedí název souboru na daný název? Zkrácený název nesmí být následován jiným podtitulem.
-function nameOk(fileName, n) {
+function nameOk(fileName, n, plan) {
     if (!M.titleMatches(fileName, n.text)) return false;
-    return !n.short || !M.shortNameIsNoise(fileName, n.text, n.full);
+    if (n.short && M.shortNameIsNoise(fileName, n.text, n.full)) return false;
+    // jiný podtitul za názvem: u filmů vždy, u seriálů u jednoslovných názvů ("House" ≠ "House of the Dragon")
+    if (plan && (plan.type === 'movie' || M.nameTokens(n.text).length === 1) &&
+        M.subtitleNoise(fileName, n.text, plan.allow, plan.type === 'movie' ? 'movie' : 'series')) return false;
+    return true;
+}
+
+// Sezóna u anime názvu: bez sezóny OK; S01 jen když název sám určuje sezónu ("Mushoku Tensei II");
+// jinak musí sedět s IMDb sezónou (Farming Life S01E01 ≠ S2E1)
+function animeSeasonOk(pe, n, plan) {
+    if (pe.season === null) return true;
+    if (pe.season === plan.season || pe.season === plan.alSeason) return true;
+    const own = M.nameTokens(n.text);
+    const seasonInName = own.some(t => /^[2-9]$/.test(t) || t === 'season' || t === 'part' || /^\d(st|nd|rd|th)$/.test(t));
+    return pe.season === 1 && seasonInName;
 }
 
 // Posoudí jeden soubor: { ok, exact, reason, s, e } – důvod se ukládá do archivu hledání
@@ -579,8 +602,8 @@ function judgeFile(f, plan) {
     const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text));
     if (plan.type === 'movie') {
         if (M.looksLikeEpisode(f.name)) return { ok: false, reason: 'vypadá jako díl seriálu' };
-        const byFull = plan.names.some(n => !n.short && nameOk(f.name, n));
-        const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n));
+        const byFull = plan.names.some(n => !n.short && nameOk(f.name, n, plan));
+        const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n, plan));
         if (!byFull && !byShort) return { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
         const years = M.fileYears(f.name);
         const yearOk = plan.year && years.some(y => Math.abs(y - plan.year) <= 1);
@@ -590,13 +613,13 @@ function judgeFile(f, plan) {
         return { ok: true, exact: years.length > 0, reason: byShort ? 'zkrácený název + rok' : 'název' };
     }
     if (!plan.season || !plan.episode) {
-        return plan.names.some(n => nameOk(f.name, n))
+        return plan.names.some(n => nameOk(f.name, n, plan))
             ? { ok: true, exact: false, reason: 'název' }
             : { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
     }
     let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
     for (const n of plan.names) {
-        if (!nameOk(f.name, n)) continue;
+        if (!nameOk(f.name, n, plan)) continue;
         // slova za názvem: značka pokračování ("Capu2", "II", "S2") a číslo dílu
         const hit = M.afterName(f.name, n.text);
         const seq = hit ? M.sequelSeason(hit.rest) : null;
@@ -615,8 +638,7 @@ function judgeFile(f, plan) {
                 plan.alEpisode !== plan.episode && pe.episode === plan.alEpisode) {
                 return { ok: true, exact: false, reason: 'absolutní číslo dílu', s: null, e: pe.episode };
             }
-        } else if (plan.alEpisode && pe.episode === plan.alEpisode &&
-                   (pe.season === null || pe.season === plan.alSeason || pe.season === 1)) {
+        } else if (plan.alEpisode && pe.episode === plan.alEpisode && animeSeasonOk(pe, n, plan)) {
             return { ok: true, exact: pe.explicit, reason: `název (${n.kind})`, s: pe.season, e: pe.episode };
         }
         reason = (pe.season !== null && pe.season !== plan.season && pe.episode === plan.episode)
@@ -678,6 +700,18 @@ function rankFiles(items) {
     );
 }
 
+// Délka filmu ze stop vs. TMDB: mimo toleranci = jiný film, trailer, ukázka
+// (prodloužené verze mají větší rezervu nahoru)
+function durationMismatch(plan, it) {
+    if (plan.type !== 'movie' || !plan.runtime || !it.info || !it.info.len) return null;
+    const min = it.info.len / 60, rt = plan.runtime;
+    const extended = /extended|director|uncut|unrated|prodlou|rozsir|special.?edition/i.test(M.normalize(it.f.name));
+    // dolní hranice 80 %: verze bez titulků / PAL zrychlení bývají kratší; jiný film nebo trailer je mimo
+    const lo = rt * 0.80, hi = rt * (extended ? 1.45 : 1.15);
+    if (min >= lo && min <= hi) return null;
+    return `délka nesedí (${Math.round(min)} min, film ${rt} min)`;
+}
+
 // Doplní file_info pro dané soubory (max 6 souběžně, časový limit 2,5 s – zbytek doběhne na pozadí do cache)
 const fileCache = new PersistentCache('files', 200000);
 setInterval(() => fileCache.save(), 2 * 60 * 1000).unref();
@@ -692,7 +726,7 @@ async function fetchFileInfo(cfg, ident) {
     if (r.missing) { const rec = { ok: false }; fileCache.set(ident, rec, 30 * 24 * H); return rec; }
     return null;
 }
-async function enrichFiles(cfg, items, deadlineMs = 2500) {
+async function enrichFiles(cfg, items, deadlineMs = 1500) {
     const todo = items.map(it => it.f.ident).filter(id => fileCache.get(id) === undefined);
     if (!todo.length) return true;
     let i = 0;
@@ -733,13 +767,19 @@ async function findFiles(type, id, cfg) {
         // file_info pro nejlepší soubory: dostupnost + audio stopy (trvalá cache podle identu)
         const max = plan.type === 'movie' ? 30 : 25;
         const complete = await enrichFiles(cfg, ranked.slice(0, max + 10));
+        const durationBad = new Map();
         ranked = rankFiles(ranked
             .map(it => ({ ...it, info: fileCache.get(it.f.ident) || it.info }))
-            .filter(it => !it.info || it.info.ok !== false));
+            .filter(it => !it.info || it.info.ok !== false)
+            .filter(it => {
+                const why = durationMismatch(plan, it);
+                if (why) durationBad.set(it.f.ident, why);
+                return !why;
+            }));
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
         // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní
         if (ranked.length) resultCache.set(key, res, (complete ? 30 : 3) * 60 * 1000);
-        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms);
+        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad);
         return res;
     });
 }
@@ -764,18 +804,19 @@ function archiveWrite(rec) {
     });
 }
 
-function archiveSearch(plan, queries, files, ranked, ms) {
+function archiveSearch(plan, queries, files, ranked, ms, durationBad) {
     if (!archiveOk) return;
     const sent = new Map(ranked.slice(0, plan.type === 'movie' ? 30 : 25).map((it, i) => [it.f.ident, i + 1]));
     archiveWrite({
         t: new Date().toISOString(), kind: 'stream', type: plan.type, id: plan.id,
-        anime: plan.anilistId || null, source: plan.source, year: plan.year,
+        anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime,
         season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
         names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short })),
         queries: queries.map(q => q.q), ms,
         files: [...files.values()].map(f => {
             const j = judgeFile(f, plan);
             const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
+            if (j.ok && durationBad && durationBad.has(f.ident)) { rec.ok = false; rec.r = durationBad.get(f.ident); }
             const fi = fileCache.get(f.ident);
             if (fi) {   // skutečné stopy z file_info (jen u souborů, pro které se zjišťovaly)
                 rec.av = fi.ok;
@@ -1173,4 +1214,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { app, buildPlan, buildQueries, filterFiles, rankFiles, decodeConfig, maskConfigInUrl, md5crypt };
+module.exports = { app, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };

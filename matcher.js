@@ -56,7 +56,7 @@ function nameTokens(name) {
 function queryText(str) {
     return String(str || '')
         .normalize('NFD').replace(/[̀-ͯ]/g, '')
-        .replace(/[:!?*\/\\"„“]/g, ' ')
+        .replace(/[:!?*\/\\"„“’‘´`]/g, ' ')   // typografický apostrof ("Sex O’Clock") → mezera
         .replace(/\s+/g, ' ')
         .trim();
 }

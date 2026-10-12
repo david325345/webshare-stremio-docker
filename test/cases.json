@@ -10105,7 +10105,7 @@
    },
    {
     "n": "Plny.dum-Full.House.1987.S04E11.720p.WEB-DL.MP3.AAC.x264-CZ.EN.mkv",
-    "ok": true
+    "ok": false
    },
    {
     "n": "Little House On the Prairie_S04E11_Meet Me at the Fair.mp4",
@@ -25925,6 +25925,4077 @@
    {
     "n": "Válka ve Vietnamu - The Vietnam War S01E01.mkv",
     "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt0364845:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Námořní vyšetřovací služba",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "NCIS: Námorný vyšetrovací úrad",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "NCIS",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Navy NCIS",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "namorni",
+    "vysetrovaci",
+    "sluzba",
+    "ncis",
+    "namorny",
+    "urad",
+    "navy"
+   ],
+   "year": 2003,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null
+  },
+  "files": [
+   {
+    "n": "Námořní vyšetřovací služba - Los Angeles S01E01-24 2009 CZ dabing 720p HD - Skrytá identita.mp4",
+    "len": 2464,
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba - Hawai S01E01-22 2021 CZ dabing 720p HD - Pilot.mp4",
+    "len": 2446,
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba S16E17-24 2018 CZ dabing 1080p FHD - Tichá služba.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba - Los Angeles S06E13-24 2014 CZ dabing 720p HD - Při výkonu služby.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba 13x24 - Sesterské město 1.část.avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E20 Návrat [2018-04-29 CZ 2018-08-16].avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E22 Odplata [2018-05-13 CZ 2018-08-30].avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E23 Čáry v písku [2018-05-20 CZ 2018-09-06].avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E24 Bez východiska [2018-05-20 CZ 2018-09-13].avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E05_Námořní-vyšetřovací-služba-12x05-San-Dominick-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S13E12_Námořní vyšetřovací služba-13x12-Sesterské město 1. WEBRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E19_Námořní-vyšetřovací-služba-11x19-New-Orleans-2.část-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E14_Námořní-vyšetřovací-služba-11x14-Lidé-a-zrůdy-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E03_Námořní-vyšetřovací-služba-11x03-Najdi-letadlo-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E06_Námořní-vyšetřovací-služba-12x06-Mládeži-nepřístupno-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E18_Námořní-vyšetřovací-služba-11x18-New-Orleans-1.část-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S13E21_Námořní.vyšetřovací.služba.13x21.Vrátit.odesílateli.DVB-T.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E04_Námořní-vyšetřovací-služba-11x04-Neznámá-byla-žena-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E09_Námořní-vyšetřovací-služba-10x09-Ďábelská-trojka-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E23_Námořní-vyšetřovací-služba-10x23-Dvojité-zaslepení-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E16_Námořní-vyšetřovací-služba-10x16-Objížďka-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E17_Námořní-vyšetřovací-služba-11x17-Smrt-a-rokenrol-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E10_Námořní-vyšetřovací-služba-10x10-Radši-se-měj-na-pozoru-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E13_Námořní-vyšetřovací-služba-11x13-Zpátky-na-začátek-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E13_Námořní-vyšetřovací-služba-10x13-Autonehoda-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E08_Námořní-vyšetřovací-služba-12x08-Semper-Fortis-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E15_Námořní-vyšetřovací-služba-11x15-Neprůstřelný-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E11_Námořní-vyšetřovací-služba-10x11-Shabbat-Shalom--WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E12_Námořní-vyšetřovací-služba-11x12-Smrtící-řetězec-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E17_Námořní-vyšetřovací-služba-10x17-Hlavní-podezřelý-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E02_Námořní-vyšetřovací-služba-12x02-Zabijte-posla-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "05x19_Námořní vyšetřovací služba - New Orleans S02E19 - NCIS New Orleans - WEBrip CZdabing.avi",
+    "ok": false
+   },
+   {
+    "n": "3Námořní vyšetřovací služba NCIS 19×03 Cesta nikam-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "4Námořní vyšetřovací služba NCIS 19×04 Velká široká krajina-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "5Námořní vyšetřovací služba NCIS 19×05 Podivný případ-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "6Námořní vyšetřovací služba NCIS 19×06 Falešný start-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "7Námořní vyšetřovací služba NCIS 19×07 V přístavu-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "9Námořní vyšetřovací služba NCIS 19×09 Kolektivní paměť-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "13Námořní vyšetřovací služba NCIS 19×13 Pomocníci-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "14Námořní vyšetřovací služba NCIS 19×14 První krůčky-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba 12x06 - Parental Guidance Suggested_sk_dubing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×01 Krev ve vodě-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×02 Na odchodu-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×03 Cesta nikam-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×04 Velká široká krajina-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×05 Podivný případ-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×06 Falešný start-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×08 Mírotvůrce-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×09 Kolektivní paměť-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×10 Slib věrnosti-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Season 1 Episode 11 - watch online free - HDwatched.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS S01E01 Yankee White 720p DSNP WEB-DL AAC2 0 H 264-playWEB.mkv",
+    "len": 2652,
+    "ok": true
+   },
+   {
+    "n": "NCIS 01x01 DVDrip.CZ-Air Force One (Yankee White).avi",
+    "len": 2482,
+    "ok": true
+   },
+   {
+    "n": "NCIS 01x01  DVDrip.CZ-Air Force One (Yankee White).avi",
+    "ok": true
+   },
+   {
+    "n": "NCIS 01x01  DVDrip.CZ-Air Force One (Yankee White) sk,cz.avi",
+    "len": 2482,
+    "ok": true
+   },
+   {
+    "n": "NCIS 01x01  DVDrip.CZ-Air Force One (Yankee White) HEVComet.mkv",
+    "len": 2482,
+    "ok": true
+   },
+   {
+    "n": "ncis.hawaii.s01e01.720p.web.h264-plzproper.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.LA.S01E01-CZ.mp4",
+    "len": 2464,
+    "ok": false
+   },
+   {
+    "n": "NCIS (2003) S01E01-Air Force One 1080p.SK dab_GreAndr.mkv",
+    "len": 2544,
+    "ok": true
+   },
+   {
+    "n": "NCIS Sydney S01E01 Gone Fission REPACK 720p AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Sydney.S01E01.MULTi.1080p.WEB.H265-TyHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Počiatok (2024) S01E01 - 1080p.SK dab [GreAn].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Zacatky.S01E01.1080p.AMZN.WEB-DL.H.264-CZ-dab).mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Los Angeles S01E01-24 2009 CZ dabing 352p SD - Skrytá identita.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Hawai S01E01-22 2021 CZ dabing 720p HD - Pilot.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Los Angeles S01E01-24 2009 CZ dabing 720p HD - Skrytá identita.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS - New Orleans S01E01-23 2014 CZ dabing 1080p FHD - Muzikant,.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Začátky S01E01-18 2024 CZ dabing 1080p FHD - Sandman, 1. část.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Tony a Ziva S01E01-10 2025 CZ dabing 1080p FHD - Žádná země není bezpečná.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Zacatky S01E01 1080p FHD CZ.,,,,,.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.720p.HDTV.x264-SYNCOPY[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.720p.HDTV.x264-SYNCOPY.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.720p.HDTV.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.1080p.WEB.h264-ETHEL.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.1080p.WEB.h264-ETHEL[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 Pilot 720p AMZN WEB-DL DDP5 1 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 Pilot 2160p AMZN WEB-DL DDP5 1 H 265-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 Pilot 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 Pilot 2160p AMZN WEB-DL DDP5 1 H 265-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 720p WEB H264-JFF[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 Pilot 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.New.York.S01E01.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 1080p x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 720p WEB H 264-JFF.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS New York S01E01 Pilot with Audio Description 1080p AMZN WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Los Angeles - 1x01. Totožnost (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS New Orleans - 1x01. Muzikant (WEBRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS LA 01x01 Skryta identita.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ncis počiatok - 01x01 - 1. epizóda.mp4",
+    "ok": false
+   },
+   {
+    "n": "Pluribus.S01E01.We.Is.Us.1080p.WEBRip.AV1.DDP.5.1-dAV1nci.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E06.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x12-Krv 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x13-Pochybenie 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x14-Nenápadné vylepšenia 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x15-Odrovnaná 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS-námor. vyšet. úrad 18x16-Pravidlo 91 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Námořní vyšetřovací služba 20×13 Zlé oko-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S01E01.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E08.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E10.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E11.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E12.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E01.New.Kid.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Surface.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E01.S01E01.Tezky.pripad.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Cult-S01E01-WEBRip-[You're-Next].mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Following.S01E01.HDTV.CZ.titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Bates.Motel.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E14.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E15.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Awake.S01E01.WebRip.XviD.EngSub-Bruzsy.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E16.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E18.The.Tell.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E19.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E20.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E21.Rekindled.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E24.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E24.HDTV.XviD-VASKITTU.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suits.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Wilfred.US.S01E01.iNTERNAL.BDRip.XviD-INQUISITION.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Dallas.2012.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E01.HDTV.XviD-PTpOWeR.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Inbetweeners.US.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Middle.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt0364845:2:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Námořní vyšetřovací služba",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "NCIS: Námorný vyšetrovací úrad",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "NCIS",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Navy NCIS",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "namorni",
+    "vysetrovaci",
+    "sluzba",
+    "ncis",
+    "namorny",
+    "urad",
+    "navy"
+   ],
+   "year": 2003,
+   "season": 2,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null
+  },
+  "files": [
+   {
+    "n": "Námořní vyšetřovací služba S02E01-23 2004 CZ dabing 1080p FHD - Nevidím zlo.mkv",
+    "len": 2493,
+    "ok": true
+   },
+   {
+    "n": "Námořní vyšetřovací služba - Los Angeles S02E01-24 2010 CZ dabing 720p HD - Dvojí hra.mkv",
+    "len": 2626,
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba - Hawai S02E01-22 2022 CZ dabing 720p HD - Dilema vězňů.mp4",
+    "len": 2400,
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba S16E17-24 2018 CZ dabing 1080p FHD - Tichá služba.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba - Los Angeles S06E13-24 2014 CZ dabing 720p HD - Při výkonu služby.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba 13x24 - Sesterské město 1.část.avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E20 Návrat [2018-04-29 CZ 2018-08-16].avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E22 Odplata [2018-05-13 CZ 2018-08-30].avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E23 Čáry v písku [2018-05-20 CZ 2018-09-06].avi",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba L.A. S09E24 Bez východiska [2018-05-20 CZ 2018-09-13].avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E05_Námořní-vyšetřovací-služba-12x05-San-Dominick-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S13E12_Námořní vyšetřovací služba-13x12-Sesterské město 1. WEBRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E19_Námořní-vyšetřovací-služba-11x19-New-Orleans-2.část-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E14_Námořní-vyšetřovací-služba-11x14-Lidé-a-zrůdy-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E03_Námořní-vyšetřovací-služba-11x03-Najdi-letadlo-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E06_Námořní-vyšetřovací-služba-12x06-Mládeži-nepřístupno-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E18_Námořní-vyšetřovací-služba-11x18-New-Orleans-1.část-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S13E21_Námořní.vyšetřovací.služba.13x21.Vrátit.odesílateli.DVB-T.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E04_Námořní-vyšetřovací-služba-11x04-Neznámá-byla-žena-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E09_Námořní-vyšetřovací-služba-10x09-Ďábelská-trojka-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E23_Námořní-vyšetřovací-služba-10x23-Dvojité-zaslepení-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E16_Námořní-vyšetřovací-služba-10x16-Objížďka-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E17_Námořní-vyšetřovací-služba-11x17-Smrt-a-rokenrol-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E10_Námořní-vyšetřovací-služba-10x10-Radši-se-měj-na-pozoru-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E13_Námořní-vyšetřovací-služba-11x13-Zpátky-na-začátek-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E13_Námořní-vyšetřovací-služba-10x13-Autonehoda-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E08_Námořní-vyšetřovací-služba-12x08-Semper-Fortis-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E15_Námořní-vyšetřovací-služba-11x15-Neprůstřelný-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E11_Námořní-vyšetřovací-služba-10x11-Shabbat-Shalom--WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S11E12_Námořní-vyšetřovací-služba-11x12-Smrtící-řetězec-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E17_Námořní-vyšetřovací-služba-10x17-Hlavní-podezřelý-WEB-DLRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S12E02_Námořní-vyšetřovací-služba-12x02-Zabijte-posla-DVDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "05x19_Námořní vyšetřovací služba - New Orleans S02E19 - NCIS New Orleans - WEBrip CZdabing.avi",
+    "ok": false
+   },
+   {
+    "n": "3Námořní vyšetřovací služba NCIS 19×03 Cesta nikam-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "4Námořní vyšetřovací služba NCIS 19×04 Velká široká krajina-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "5Námořní vyšetřovací služba NCIS 19×05 Podivný případ-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "6Námořní vyšetřovací služba NCIS 19×06 Falešný start-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "7Námořní vyšetřovací služba NCIS 19×07 V přístavu-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "9Námořní vyšetřovací služba NCIS 19×09 Kolektivní paměť-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "13Námořní vyšetřovací služba NCIS 19×13 Pomocníci-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "14Námořní vyšetřovací služba NCIS 19×14 První krůčky-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba 12x06 - Parental Guidance Suggested_sk_dubing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×01 Krev ve vodě-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×02 Na odchodu-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×03 Cesta nikam-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×04 Velká široká krajina-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×05 Podivný případ-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×06 Falešný start-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×08 Mírotvůrce-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Námořní vyšetřovací služba NCIS 19×09 Kolektivní paměť-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x12-Krv 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x13-Pochybenie 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x14-Nenápadné vylepšenia 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS: Námor. vyšet. úrad 18x15-Odrovnaná 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS-námor. vyšet. úrad 18x16-Pravidlo 91 1080p.SK dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Námořní vyšetřovací služba 20×13 Zlé oko-cz sk,cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E06.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E08.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E10.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E11.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E12.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Suits.S02E01.HDTV.XviD.KWS.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E10.S02E01.Crimerienska.spojka.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Anger.Management.S02E01.HDTV.XviD-3LT0N.avi",
+    "ok": false
+   },
+   {
+    "n": "Jericho.s02e01.DVDRip.XviD.CZ.MnB.avi",
+    "ok": false
+   },
+   {
+    "n": "Spartacus.S02E01.HDTV.XviD-SYS.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E14.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E15.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E16.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E18.The.Tell.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E19.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E20.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Borgias.S02E01.PROPER.720p.HDTV.x264-ORENJI.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E21.Rekindled.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E24.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S09E24.HDTV.XviD-VASKITTU.avi",
+    "ok": false
+   },
+   {
+    "n": "Suits.S02E01.HDTV.x264-AVS.mp4",
+    "ok": false
+   },
+   {
+    "n": "Falling.Skies.S02E01.HDTV.x264-ASAP.mp4",
+    "ok": false
+   },
+   {
+    "n": "Wilfred.US.S02E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Falling.Skies.S02E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Suits.S02E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Teen.Wolf.S02E01.HDTV.XviD-3LT0N.avi",
+    "ok": false
+   },
+   {
+    "n": "Wilfred.US.S02E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Alphas.S02E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alphas.S02E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S02E01.HDTV.x264-EVOLVE.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S02E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Flashpoint.S02E01.DVDRip.XviD-NODLABS.avi",
+    "ok": false
+   },
+   {
+    "n": "New.Girl.S02E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S02E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S02E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E03.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Suburgatory.S02E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Happy.Endings.S02E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Los.Angeles.S04E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S10E04.Lost.At.Sea.720p.WEB-DL.DD5.1.H.264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S02E01.dsr.cz.avi",
+    "ok": true
+   },
+   {
+    "n": "NCIS S02e01 FHD 1080p CZ.mkv",
+    "len": 2493,
+    "ok": true
+   },
+   {
+    "n": "NCIS S02E01-23 2004 CZ dabing 1080p FHD - Nevidím zlo.mkv",
+    "len": 2493,
+    "ok": true
+   },
+   {
+    "n": "NCIS.S02E01.See.No.Evil.720p.HEVC.x265-MeGusta.mkv",
+    "len": 2649,
+    "ok": true
+   },
+   {
+    "n": "NCIS.S02E01.See.No.Evil.1080p.HEVC.x265-MeGusta.mkv",
+    "len": 2649,
+    "ok": true
+   },
+   {
+    "n": "NCIS S02E01 See No Evil 1080p DSNP WEB-DL AAC2 0 H 264-playWEB.mkv",
+    "len": 2649,
+    "ok": true
+   },
+   {
+    "n": "NCIS 02x01 DVDrip.CZ-Nevidím zlo (See No Evil).avi",
+    "len": 2549,
+    "ok": true
+   },
+   {
+    "n": "NCIS-02x01-Nevidim-zlo-dvdrip-xvid-cz.avi",
+    "len": 2549,
+    "ok": true
+   },
+   {
+    "n": "NCIS 02x01 DVDrip.CZ-Nevidím zlo (See No Evil) sk,cz.avi",
+    "len": 2549,
+    "ok": true
+   },
+   {
+    "n": "NCIS.New.Orleans.S02E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS LA S02E01 Obchod s lidmi CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Origins.S02E01.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS (2004) S02E01-Nevidím zlo 1080p.SK dab [GreAndr].mkv",
+    "len": 2546,
+    "ok": true
+   },
+   {
+    "n": "NCIS.Sydney.S02E01.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Sydney.S02E01.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Origins S02E01 720p 10bit WEBRip 2CH x265 HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Origins S02E01 The Funky Bunch 2160p PMTP WEB-DL DDP5 1 DV HDR10Plus H 265-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Origins S02E01 The Funky Bunch 1080p WEBRip 10bit DDP5 1 HEVC-d3g.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Sydney.S02E01.MULTi.1080p.WEB.H265-TyHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Počiatok (2025) S02E01 - 1080p.SK dab [GreAn].mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Sydney.S02E01.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.Origins.S02E01.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Los Angeles S02E01-24 2010 CZ dabing 352p SD - Převaděči.avi",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Hawai S02E01-22 2022 CZ dabing 720p HD - Dilema vězňů.mp4",
+    "ok": false
+   },
+   {
+    "n": "NCIS - Los Angeles S02E01-24 2010 CZ dabing 720p HD - Dvojí hra.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS - New Orleans S02E01-24 2015 CZ dabing 1080p FHD - Tak vždy tyranům.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Origins - S02E01 - The Funky Bunch.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ncis počiatok - 02x01 - 1. epizóda.mkv",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt0944947:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Hra o trůny",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Hra o tróny",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Game of Thrones",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "hra",
+    "o",
+    "truny",
+    "trony",
+    "game",
+    "thrones"
+   ],
+   "year": 2011,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null
+  },
+  "files": [
+   {
+    "n": "Hra.o.trůny.S01E01.Zima.se.blíží.HDTV.x264-PiP.mp4",
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny s01e01 cz 1080.mkv",
+    "len": 3697,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny S01E01 (cz dabing, hd).mkv",
+    "len": 3697,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny_S01E01_Zima se blíží.mkv",
+    "len": 3697,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny S01E01 Zima se blíží (Winter Is Coming).mkv",
+    "len": 3701,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny S01E01 4K HMAX HDR10 Atmos CZ-ENG.mkv",
+    "len": 3696,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny - S01E01 - Zima se blíží.mkv",
+    "len": 3696,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny - S01E01 - Zima se blíží cz.mkv",
+    "len": 3318,
+    "ok": true
+   },
+   {
+    "n": "Hra o truny 01x01 Zima se blizi(xvid).avi",
+    "len": 3481,
+    "ok": true
+   },
+   {
+    "n": "Hra o truny - 01x01 - Zima se blizi.mp4",
+    "ok": true
+   },
+   {
+    "n": "Hra o truny 01x01 CZ.avi",
+    "len": 3546,
+    "ok": true
+   },
+   {
+    "n": "Hra o truny - 01x01 - Zima se blizi by_UgarE.mp4",
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny - 01x01 - Zima se blíží.mp4",
+    "len": 3698,
+    "ok": true
+   },
+   {
+    "n": "Skutečná hra o trůny S1e1 - Vyhlášení války - 1328-1364-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Game-of-Thrones-Hra-o-truny-01x01-Zima-se-blizi-dvdrip-xvid-cz.avi",
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny_ Setkání u Conana O'Briena_S01E01_Díl 1.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny S01E01 - Zima se blíží (CZ dab.).mkv",
+    "len": 3698,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S01E01  Zima se blíží (Winter Is Coming) 18. 4. 2011 CZ.avi",
+    "len": 3481,
+    "ok": true
+   },
+   {
+    "n": "Hra o truny - Game.of.Thrones.S01E01.CZ.SK.EN .mkv",
+    "len": 3697,
+    "ok": true
+   },
+   {
+    "n": "Game of Thrones S01e01 Hra o trůny FHD 1080p CZ.mkv",
+    "len": 3698,
+    "ok": true
+   },
+   {
+    "n": "Game of Thrones S01e01 Hra o trůny FHD 1080p CZ Zima se blíží.mkv",
+    "len": 3698,
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny S08E06 - Železný trůn (CZ dab.).mkv",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny (Náboženské války) - 1 Hra dam - 1542-1557-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny S1e3 - Hra na spojence - 1461-1483-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - pár minu navíc - 3 - dokument o s08e03.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - 03x07 O medvědovi a krásné panně.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - 08x07 - Poslední hlídka (Dokument o natáčení).mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o truny - 03x07 - O medvedovi a krasne pane by_UgarE.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - S03E07 O medvědovi a krásné panně.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - 03x07 - O medvědovi a krásné paně.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game-of-Thrones-Hra-o-truny-03x07-O-medvedovi-a-krasne-panne-hdtvrip-xvid-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny_ Setkání u Conana O'Briena_S01E02_Díl 2.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - 04x00 - intro.avi",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny ( Náboženské války) - 6 Tři Jindřichové  ‒ 1584-1594-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny (Náboženské války) - 3 Tři královny a jeden král - 1561-1569-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny (Náboženské války) - 4 Krvavá svatba - 1567-1574-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny (Náboženské války) - 5 Bratři na kordy - 1575-1584-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Skutečná hra o trůny S1e2 -  Šílený král a služka - 1392-1453-Dokument.mp4",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S01E01.BDRip.AC3x264-FGT (CzAudio).mkv",
+    "ok": true
+   },
+   {
+    "n": "Game.of.Thrones.S01E01.BDRip.x264-FGT.mkv",
+    "ok": true
+   },
+   {
+    "n": "Game.of.Thrones.S01E01..1080p..CZ..Zima se blíží.mkv",
+    "len": 3698,
+    "ok": true
+   },
+   {
+    "n": "Game of Thrones S01E01 Winter Is Coming 1080p BluRay x264-OFT.mkv",
+    "len": 3700,
+    "ok": true
+   },
+   {
+    "n": "Game of Thrones S01E01 Winter Is Coming 1080p 10bit BluRay 6CH x265 HEVC-PSA.mkv",
+    "len": 3698,
+    "ok": true
+   },
+   {
+    "n": "Game-of-Thrones-01x01-Zima-se-blizi-dvdrip-xvid-cz.avi",
+    "ok": true
+   },
+   {
+    "n": "Game.of.Thrones.The.Iron.Anniversary.S01E01.Part.1.1080p.HMAX.WEB-DL.DD2.0.H.264 CZ tit.mkv",
+    "len": 3289,
+    "ok": false
+   },
+   {
+    "n": "Game of Gyms (Game of Thrones In Gym).avi",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S02E04 Garden of Bones (1080p x265 10bit Joy).mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S02E05  The Ghost Of Harrenhal (1080p x265 10bit Joy).mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S02E08 The Prince of Winterfell (1080p x265 10bit Joy).mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S03E09.The.Rains.of.Castamere.1080p.10bit.BluRay.6CH.x265.HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S04E03.Breaker.of.Chains.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S04E06.The.Laws.of.Gods.and.Men.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S05E09 The Dance of Dragons (1080p x265 10bit Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S06E04.Book.of.the.Stranger.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S06E09.Battle.of.the.Bastards.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S03E03.Walk.of.Punishment.1080p.10bit.BluRay.6CH.x265.HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S05E04 Sons of the Harpy (1080p x265 10bit Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S04E05.First.of.His.Name.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S06E04 Book of the Stranger 1080p BluRay 10bit HEVC 6CH MkvCage ws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S02E04 Garden of Bones 2160p BluRay x265 10bit SDR DTS HD MA TrueHD 7 1 Atmos SWTYBLZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S06E10 The Winds of Winter 2160p BluRay REMUX HEVC DTS HD MA TrueHD 7 1 Atmos FGT.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S07E04 The Spoils of War 2160p BluRay REMUX HEVC DTS HD MA TrueHD 7 1 Atmos FGT.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S08E02 A Knight of the Seven Kingdoms 2160p BluRay REMUX HEVC DTS HD MA TrueHD 7 1 Atmos FGT.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S02E04  Zahrada kostí (Garden of Bones) 4. 3. 2013 CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S02E08  Princ ze Zimohradu (The Prince of Winterfell) 21. 5. 2012 CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S03E03  Ulička trestu (Walk of Punishment) 15. 4. 2013 CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S03E09  Deště Kastameru (The Rains of Castamere) 3. 6. 2013 CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S04E03  Rozbíječka okovů (Breaker of Chains) 21. 4. 2014 CZ dab.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S04E05  První svého jména (First of His Name) 5. 5. 2014 CZ dab.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S04E06  Zákony bohů a lidí (The Laws of Gods and Men) 12. 5. 2014 CZ dab.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S05E02  Dům černé a bílé (The House of Black and White) CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S05E04  Synové harpyje (The Sons of the Harpy) CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S05E09  Tanec draků (The Dance of Dragons) CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S06E04  Kniha cizince (Book of the Stranger) 16. 5. 2016.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S06E06  Krev mé krve (Blood of My Blood) 30. 5. 2016.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S06E09  Bitva bastardů (Battle of the Bastards) 20. 6. 2016.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S06E10 Vichry zimy (The Winds of Winter) 27. 6. 2016.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game Of Thrones： A Knight Of The Seven Kingdoms Official Trailer (2026) GOT, HBO Series.webm",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S04E03 Breaker of Chains 1080p UHD BluRay DD 7 1 DoVi x265-SA89.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S04E05 First of His Name 1080p UHD BluRay DD 7 1 DoVi x265-SA89.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S03E09 The Rains of Castamere 1080p UHD BluRay DD 7 1 DoVi x265-SA89.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S05E09 The Dance of Dragons 1080p UHD BluRay DD 7 1 DoVi x265-SA89.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S05E04 Sons of the Harpy 1080p UHD BluRay DD 7 1 DoVi x265-SA89.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trony 08E01 CZSub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trony 08x01 CZSub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o tróny - 02x04 (Záhrada kostí) CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o tróny - 02x05 () CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra O Trony 02x03 Co Je Mrtve Nemoze Nikdy Zomriet Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o tůny S01E01 1080p CZ Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Americký drak - Jake Long S02E26 Hra o život (Game On).avi",
+    "ok": false
+   },
+   {
+    "n": "24 Hodin - Hra o dítě - TRAPPED akční thriller krimi cz dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Ve službách FBI - 02x15. Hra o energii (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Saw 1 - Hra o preziti (2004).avi",
+    "ok": false
+   },
+   {
+    "n": "Alias-S02E11-Hra-o-Echelon-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda - 02x12 Hra o zivot - TVRip CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Policie Hamburk s01e02-Hra o zivot-czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Nerve Hra o zivot 2016 cz.tit.avi",
+    "ok": false
+   },
+   {
+    "n": "Nerve-Hra-o-zivot-2016-CZ-titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Nerve---Hra-o-zivot-2016-CZ-titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o život HD [CZ titulky, 2016] Nerve (lehi).avi",
+    "ok": false
+   },
+   {
+    "n": "Nerve.Hra.o.zivot.2016.BR.1080p.x264.AC3-Cz.dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Nerve Hra o zivot 2016 BRRip.XviD cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Nerve---Hra-o-zivot.cz-dabing.-csfd-67--mysteriozni-scifi-thriller-2016.avi",
+    "ok": false
+   },
+   {
+    "n": "Nerve Hra o zivot (2016)(1080p)(CZ).mkv",
+    "ok": false
+   },
+   {
+    "n": "Tri.kluci.a.nemluvne.04x13.Hra.o.byt.DVB-T.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-12--Hra-o-zivot.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o vsechno Sleepless 2017 BRRip.XviD cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra.o.všechno.2017.BDRip.XviD.AC3.5.1.CZ.Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra.o.všechno.2017.BDRip.x264.AC3.5.1.CZ.Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra.o.všechno.2017.BRRip.720p.x264.AC3.5.1.CZ.Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra.o.všechno.2017.720p.BRRip.x264.AC3.5.1.CZ.Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o všechno-(Akční-Thriller)CZ dab.2017(csfd 55-).avi",
+    "ok": false
+   },
+   {
+    "n": "Hra-o-vsechno..-Sleepless-cz-dabing.akcni-thriller-2017 SABRI.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra-o-vsechno-Sleepless-2017-BRRip.XviD-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Shaun.Ryder.o.UFO.S01E01.Nahravka.HDTV.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Válka skladů  - Hra o peníze.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hra-o-všechno-Sleepless-2017-CZ-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o vsechno (2017,cz,dabing)ddd.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra.o.vsechno.2017.1080p.BluRay.x264.AC3.5.1.CZ.Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra-o-vsechno..-Sleepless-cz-dabing.akcni-thriller-2017 SARIS.avi",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt0062568:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Hawaii Five-O",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "hawaii",
+    "5",
+    "0"
+   ],
+   "year": 1969,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null
+  },
+  "files": [
+   {
+    "n": "The Ventures - Hawaii Five-O (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E05 Halloweenský masakr-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E09 Ukradený strom-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E13  Krysa lapená v hnízdě-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E14 Boj s časem-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E19 Drsňáci z hor-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E20 Ve spárech sépie-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E21 Jako ryba v oceánu-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E22 Aloha-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii.Five-0.S10E03.E.uhi.ana.ka.wa.i.hala.i.na.mea.i.hala.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E05 Halloweenský masakr cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E20 Ve spárech sépie cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E22 Aloha cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E19 Drsňáci z hor cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E16 Dobrovolné přiznání-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "the.five.uk.s01e01.hdtv.x264-tla.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kutyil s.r.o. - s01e01 - Kutyil s.r.o..mkv",
+    "ok": false
+   },
+   {
+    "n": "Tom Hardy (T-a-b-o-o).S01E01.720p.10bit.WEB-DL.2CH.x265.Cz_serialy.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Vogues - Five O' Clock World (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Aphrodite's Child - It's Five O' Clock (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Scooby-Doo.Záhady.s.r.o.S01E01.Střez.se.bestie.z.hlubin.720p.WEBRip.x264.DD2.0-PiP.mkv",
+    "ok": false
+   },
+   {
+    "n": "Aphrodite's Child - It's Five O' Clock (ver3) (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Better.Call.Saul.S01E06.Five-O.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-NOGRP.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Scooby Doo - Záhady s.r.o. S01E01 Střez se bestie z hlubin.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsWhen] Fog Hill of Five Elements - S01E01 (WEB 1080p AVC AAC) [B23131D6].mkv",
+    "ok": false
+   },
+   {
+    "n": "Lost Sketch - Five O'Clock.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Godfathers.The.Five.Families.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Better Call Saul S01E06 Five-O 1080p WEB-DL DD5 1 x265 HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Better.Call.Saul.S01E06.Five-O_ENG.dub.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hawaii Five-0 2010 S01E01 Pilot 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii Five-0 2010 S05E05 Ho'oilina Legacy 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "the.maya.the.war.of.five.kingdoms.s01e01.1080p.web.h264-cbfm.mkv",
+    "ok": false
+   },
+   {
+    "n": "the.maya.the.war.of.five.kingdoms.s01e01.1080p.web.h264-cbfm[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S01E01.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Eureka.510.Sen.o.libankach.dvdrip.xvid.cz.bm.avi",
+    "ok": false
+   },
+   {
+    "n": "O_cem_sni_divky_z_Vychodu.avi",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E01.New.Kid.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-03-04.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-09-10.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda-o-1900-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "fo.o.tloose.2011.brrip.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm 01x02 - O trech medvedech cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Surface.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "Superman-L&C-02x12-Je to v o",
+    "ok": false
+   },
+   {
+    "n": "Dobrodružství s.r.o. - 1x01. Nevěsta slunce (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Kutyil s.r.o. 1x01 [7 statečných Arbolet.net].mp4",
+    "ok": false
+   },
+   {
+    "n": "Nebe s.r.o. 1x01 2 týdny.mp4",
+    "ok": false
+   },
+   {
+    "n": "Chuck-1x01-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E38.S03E08.Nerikejte.o.ni.nic.spatneho.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Emma-1x01-WS-PDTV-(Xvid).avi",
+    "ok": false
+   },
+   {
+    "n": "07x12 - Vtipy o prdech kolac a Celeste.avi",
+    "ok": false
+   },
+   {
+    "n": "Incredible Hulk - 1x01 - Return of the Beast (part 1) [vpc].avi",
+    "ok": false
+   },
+   {
+    "n": "Lost-in-Austen-1x01.avi",
+    "ok": false
+   },
+   {
+    "n": "Jericho.1x01.Pilot.avi",
+    "ok": false
+   },
+   {
+    "n": "The Lone Gunmen 1x01 - Pilot.avi",
+    "ok": false
+   },
+   {
+    "n": "Cuckoo.1x01.The.Homecoming.720p.HDTV.x264-FoV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cuckoo.1x01.The.Homecoming.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Iran-storocie-bojov-o-ropu-dvb-t-2009-sk.avi",
+    "ok": false
+   },
+   {
+    "n": "O-bohoch-a-ludoch-2010-SK-Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "O zvířátkách pana Krbce (anim.) (90min.).avi",
+    "ok": false
+   },
+   {
+    "n": "Bitva o planetu Terra (anim. sci-fi USA-2007) (75min.).avi",
+    "ok": false
+   },
+   {
+    "n": "02 Serif te pripravil o jazyk.avi",
+    "ok": false
+   },
+   {
+    "n": "08. P3 H2O.avi",
+    "ok": false
+   },
+   {
+    "n": "06._Nezapomenutelne__ryte__o.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda o sovích strážcích (anim. 2011)-96min..avi",
+    "ok": false
+   },
+   {
+    "n": "Hry o život.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda.o.sovich.strazcich.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-07-08 - Dokumentarne Filmy.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-09-10 - Dokumentarne Filmy.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda o sových střážcích.avi",
+    "ok": false
+   },
+   {
+    "n": "bitva-o-hill-60-valecne-drama-2010-cz-sten-ok.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda-o-sovich-strazcich-The-Legend-of-the-Guardians-2010-DVDRip-CZ-Titulky-novinky-animovany-avi.avi",
+    "ok": false
+   },
+   {
+    "n": "Wallace a Gromit - O chloupek.avi",
+    "ok": false
+   },
+   {
+    "n": "One Direction - Take Me Home Tour - Live at the O₂ 2013 - Full Concert (SoundFrost_WRp8nLap6-c_1369063245).mp4",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl chlapa - 6x06 - Bylo to o nacistech.avi",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl chlapa - 6x16 - Bude mrtvá i o poločase.avi",
+    "ok": false
+   },
+   {
+    "n": "Fast and Furious 5 Fast Five (2011) DVDRip XviD.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda o sovích strážcích (2010) CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "GRINCH  rodinna komedie o vanocich cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Sonny-ve-velkém-světě-S02E06-Legenda-o-melouňákovi-(Legend-of-Candy-Face).AVI",
+    "ok": false
+   },
+   {
+    "n": "187 - Bitva o kapitána .avi",
+    "ok": false
+   },
+   {
+    "n": "Bitva-o-Černobyl-czdub.avi",
+    "ok": false
+   },
+   {
+    "n": "MASH-077---O-parohacich-a-lidech.avi",
+    "ok": false
+   },
+   {
+    "n": "Legenda o lietajúcom Cypriánovi (2010 sk .avi",
+    "ok": false
+   },
+   {
+    "n": "Wallace,Gromit-O chloupek-30min..avi",
+    "ok": false
+   },
+   {
+    "n": "RUY.BLAS.1947.cb.DVDrip.cz.o0o.avi",
+    "ok": false
+   },
+   {
+    "n": "Scooby.Doo.Legenda.o.Fantosaurovi.2011.DVDRip.XviD.AC3.CZ-XtrM.avi",
+    "ok": false
+   },
+   {
+    "n": "Scooby Doo-Legenda o Fantosaurovi (animovaný-2011)-75min..avi",
+    "ok": false
+   },
+   {
+    "n": "O myšce a medvědovi : Ernest et Célestine (2012).avi",
+    "ok": false
+   },
+   {
+    "n": "National_Geographic_Kolekce_-_02._NG_Bitva_o_Midway_DOKUMENT_DVDRip_HQ.avi",
+    "ok": false
+   },
+   {
+    "n": "FIVE MINUTES OF HEAVEN [2009] DVD Rip Xvid (MultiSubs) [StB].avi",
+    "ok": false
+   },
+   {
+    "n": "Rychlo-a-zbesilo-5-_Fast-Five_-_2011_-CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Ted.a.spol.S02E03.Bitva.o.zarovku.DVB-TRip.XviD.cz-iNG.avi",
+    "ok": false
+   },
+   {
+    "n": "Maxipes Fík-O lovu (anim.)-7min..avi",
+    "ok": false
+   },
+   {
+    "n": "Maxipes Fík-O prázdninách (anim.)-7min..avi",
+    "ok": false
+   },
+   {
+    "n": "Maxipes Fík-O velké zimě (anim.)-6min..avi",
+    "ok": false
+   },
+   {
+    "n": "O myšce a medvědovi - Ernest et Célestine (2012.CZdub).avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E13 - My Five Stages.avi",
+    "ok": false
+   },
+   {
+    "n": "LSD---CZ-dub---O-podstatě-LSD_dokumentární-film-drogy-upload-2012-novinka-novinky.avi",
+    "ok": false
+   },
+   {
+    "n": "O perlové panně_1977_pohádka_DVDRip-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S01E10.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S01E11.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S01E12.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E01.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E02.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E03.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E04.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E05.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E06.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E07.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E08.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E09.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E10.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E11.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E12.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E13.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E14.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S02E15.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S03E01.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S03E02.avi",
+    "ok": false
+   },
+   {
+    "n": "Kono_Subarashii_Sekai_ni_Shukufuku_o_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[Anime Time] Isekai Meikyuu de Harem o - 01 [Uncensored] [1080p][HEVC 10bit x265][AAC][Eng Sub].mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai Meikyuu de Harem o - 01 CZ [Uncensored].mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai Meikyuu de Harem o - 01 CZtitulky.mkv",
+    "ok": false
+   },
+   {
+    "n": "[I.S.S.] Rider Time - Kamen Rider Decade VS Kamen Rider Zi-O 01 FHD.mp4",
+    "ok": false
+   },
+   {
+    "n": "[I.S.S.] Kamen Rider Zi-O 01.5.mp4",
+    "ok": false
+   },
+   {
+    "n": "[I.S.S.] Rider Time - Kamen Rider Decade VS Kamen Rider Zi-O 01 SD.mp4",
+    "ok": false
+   },
+   {
+    "n": "[I.S.S.] Kamen Rider Zi-O 01 HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "[I.S.S.] Kamen Rider Zi-O 01 SD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm-s1-01.avi",
+    "ok": false
+   },
+   {
+    "n": "Hatfieldovi a McCoyovi-01.d",
+    "ok": false
+   },
+   {
+    "n": "farcry2 2013-01-23 00-11-24-92.AVI",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt1600194:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Havaj 5-0",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Hawaii 5.0",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Hawaii Five-0",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "havaj",
+    "5",
+    "0",
+    "hawaii"
+   ],
+   "year": 2010,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null
+  },
+  "files": [
+   {
+    "n": "Hawaii Five-0 2010 S01E01 Pilot 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "len": 2732,
+    "ok": true
+   },
+   {
+    "n": "Hawaii.Five-0.S10E03.E.uhi.ana.ka.wa.i.hala.i.na.mea.i.hala.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii Five-0 2010 S05E05 Ho'oilina Legacy 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "01x06 - Five-0.avi",
+    "ok": false
+   },
+   {
+    "n": "Steins Gate 0 s01e01.mkv",
+    "ok": false
+   },
+   {
+    "n": "the.five.uk.s01e01.hdtv.x264-tla.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii.5-0.08x25.HDTV.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The Ventures - Hawaii Five-O (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x01-Pilot-web-dl-cz.mkv",
+    "len": 2680,
+    "ok": true
+   },
+   {
+    "n": "Hawaii-5-0-01x04-Vezen-na-uteku-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x05-Velvyslancovy-dcery-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x06-Vrazda-ve-vlnach-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x07-Ztrata-pameti-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x09-Vrazedne-spiknuti-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x10-Zavod-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x13-Zacatek-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x14-Hlava-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x15-Tsunami-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x16-Svedkyne-v-ohrozeni-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x17-Pirati-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x18-Sbohem-bracho-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-01x19-Hrdinove-a-zlosyni-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-04x02-Ryba-na-suchu-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-04x04-Dokud-nas-smrt-nerozdeli-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-04x22-Rodina-na-prvnim-miste-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-05x09-Riskantni-cin-web-dl-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-05x25-Dokud-nas-smrt-nerozdeli-web-dl-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-07x17-Lov-na-zrudy-hdtv-rip-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-08x12-Zatah-hdtv-rip-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Hawaii-5-0-08x16-Rekni-kde-ty-prachy-jsou-hdtv-rip-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "[SubsWhen] Fog Hill of Five Elements - S01E01 (WEB 1080p AVC AAC) [B23131D6].mkv",
+    "ok": false
+   },
+   {
+    "n": "Unwrapped 2 0 S01E01 720p HDTV x264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Godfathers.The.Five.Families.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy - E61 (Hawaii Nine-0).mp4",
+    "ok": false
+   },
+   {
+    "n": "[nekotan] Tokyo Magnitude 8.0 S01E01 (BD 1080p x264 10-bit Opus).mkv",
+    "ok": false
+   },
+   {
+    "n": "the.maya.the.war.of.five.kingdoms.s01e01.1080p.web.h264-cbfm.mkv",
+    "ok": false
+   },
+   {
+    "n": "the.maya.the.war.of.five.kingdoms.s01e01.1080p.web.h264-cbfm[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S01E01.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E01.New.Kid.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Surface.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E01.S01E01.Tezky.pripad.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Cult-S01E01-WEBRip-[You're-Next].mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Following.S01E01.HDTV.CZ.titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Bates.Motel.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Padesát.odstínů.černé.2016.BDRip.480p.CZ.5.0.avi",
+    "ok": false
+   },
+   {
+    "n": "Dierks Bentley - 5-1-5-0.mp3",
+    "ok": false
+   },
+   {
+    "n": "Obchodnici s autami HEVC 13x05 - Ford Mustang 5,0 Convertible.mkv",
+    "ok": false
+   },
+   {
+    "n": "Thæ Þ3®5uæð3®5 1791 - S01E01 - 1080p PL .mkv",
+    "ok": false
+   },
+   {
+    "n": "Superman III (1983) 5.0 CZ EN 1080p (Artard).mkv",
+    "ok": false
+   },
+   {
+    "n": "Garfield (2004) 5.0 CZ EN 1080p (Artard).mkv",
+    "ok": false
+   },
+   {
+    "n": "Personal_Tailor(2013)(chi-hardchiengsubs)(5.0)(tt2992152)(1920x1080-x264-AAC-24.000-01.58.10).mkv",
+    "ok": false
+   },
+   {
+    "n": "Danger 5 (2011) - S01E01 - I Danced for Hitler! (1080p BluRay x265 Kappa).mkv",
+    "ok": false
+   },
+   {
+    "n": "Lia Velasco - 5.0.5. P.m. (Another Fridaynight) (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Obchodnici s autami 13x05 - Ford Mustang 5,0 Convertible.avi",
+    "ok": false
+   },
+   {
+    "n": "Phaeton 5.0 V10 muffler delete.avi",
+    "ok": false
+   },
+   {
+    "n": "6) 4...c5 5.0-0 Nc6 6.cxd4 exd5 7.d4 Old Tarrasch move (3 variations, 14.7 avg. trainable depth).mp4",
+    "ok": false
+   },
+   {
+    "n": "Jethro Tull - Aqualung 50 Anniversary Mix 5.0.mkv",
+    "ok": false
+   },
+   {
+    "n": "Španělsko - Portugalsko 5-0 1.kolo.mp4",
+    "ok": false
+   },
+   {
+    "n": "When Marnie Was There (2014) (1080p BluRay x265 10-bit Eng 5.0 AAC + Jap 5.0 AAC) [WeSLeY].mkv",
+    "ok": false
+   },
+   {
+    "n": "Tarzan (1999) (1080p BluRay x265 10-bit AAC 5.0) [WeSLeY].mkv",
+    "ok": false
+   },
+   {
+    "n": "Ace Ventura When Nature Calls 1995 m1080p BluRay DD 5 0 x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ace Ventura When Nature Calls 1995 720p BluRay DD 5 0 x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "Muppet Treasure Island 1996 1080p BluRay OPUS 5 0 AV1-WhiskeyJack.mkv",
+    "ok": false
+   },
+   {
+    "n": "Muppet Treasure Island-1996-1080p BluRay OPUS 5 0 AV1-WhiskeyJack.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Pebble and the Penguin 1995 m720p BluRay DD 5 0 x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Pebble and the Penguin 1995 720p BluRay DD 5 0 x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E05 Halloweenský masakr-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E09 Ukradený strom-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E13  Krysa lapená v hnízdě-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E14 Boj s časem-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E19 Drsňáci z hor-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E20 Ve spárech sépie-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E21 Jako ryba v oceánu-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E22 Aloha-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E05 Halloweenský masakr cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E20 Ve spárech sépie cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E22 Aloha cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5 O S10E19 Drsňáci z hor cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hawaii 5-O S10E16 Dobrovolné přiznání-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Chuck-1x01-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Emma-1x01-WS-PDTV-(Xvid).avi",
+    "ok": false
+   },
+   {
+    "n": "Incredible Hulk - 1x01 - Return of the Beast (part 1) [vpc].avi",
+    "ok": false
+   },
+   {
+    "n": "Lost-in-Austen-1x01.avi",
+    "ok": false
+   },
+   {
+    "n": "Jericho.1x01.Pilot.avi",
+    "ok": false
+   },
+   {
+    "n": "The Lone Gunmen 1x01 - Pilot.avi",
+    "ok": false
+   },
+   {
+    "n": "Cuckoo.1x01.The.Homecoming.720p.HDTV.x264-FoV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cuckoo.1x01.The.Homecoming.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Flashpoint.S05E07.Forget.Oblivion.720p.WEB-DL.AAC2.0.H.264-EbP.mkv",
+    "ok": false
+   },
+   {
+    "n": "Joey 1x01 Joey.avi",
+    "ok": false
+   },
+   {
+    "n": "Terminator - TSCC 1x01 Pilot.MnB.avi",
+    "ok": false
+   },
+   {
+    "n": "Utopia.1x01.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "1x01 The Hills - New City, New Drama.avi",
+    "ok": false
+   },
+   {
+    "n": "Kostka 0 cz by Hunys.avi",
+    "ok": false
+   },
+   {
+    "n": "Farscape [1x01] - Premiere.avi",
+    "ok": false
+   },
+   {
+    "n": "sedme-nebe-1x01.avi",
+    "ok": false
+   },
+   {
+    "n": "my-vsichni-skolou-povinni-1x01-prvni-zvoneni.avi",
+    "ok": false
+   },
+   {
+    "n": "Fast and Furious 5 Fast Five (2011) DVDRip XviD.avi",
+    "ok": false
+   },
+   {
+    "n": "Fawlty Towers-1x01-A Touch of Class.avi",
+    "ok": false
+   },
+   {
+    "n": "FIVE MINUTES OF HEAVEN [2009] DVD Rip Xvid (MultiSubs) [StB].avi",
+    "ok": false
+   },
+   {
+    "n": "Rychlo-a-zbesilo-5-_Fast-Five_-_2011_-CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "The Pebble and the Penguin 1995 m1080p BluRay DD 5 0 x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Pebble and the Penguin 1995 1080p BluRay DTS-HD MA 5 0 x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "MD-2012-CZ-5.1.avi",
+    "ok": false
+   },
+   {
+    "n": "Stesti-na-dosah-DVDRip-CZ--(DD-5,1)-Petr3007.avi",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Steins Gate 0 - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Steins Gate 0 - 01 [1080p].mkv",
+    "ok": false
+   },
+   {
+    "n": "Vylomeniny----5.díl-(01.04.2013)®™.avi",
+    "ok": false
+   },
+   {
+    "n": "Steins;Gate 0 - 01 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "To je vrazda napsala 0-01 Vrazda Sherlocka Holmese 1080p HDTV_x265.mp4",
+    "ok": false
+   },
+   {
+    "n": "Babylon 5.  1 01 Midnight on the Firing Line ang cz (1).mkv",
+    "ok": false
+   },
+   {
+    "n": "Babylon 5.  1 01 Midnight on the Firing Line ang cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Babylon 5.  1 01 Midnight On The Firing Line Ang Cz-1.mkv",
+    "ok": false
+   },
+   {
+    "n": "Babylon 5 [Film] - 01 - The Gathering.mkv",
+    "ok": false
+   },
+   {
+    "n": "[初]南の島のミスワリン「サンゴ大白化から復活なるか！？1年5か月の軌跡！」2026.01.31 WEBDL-Cosmo.mkv",
+    "ok": false
+   },
+   {
+    "n": "[ANi] 從 0 位居民開始的邊境領主大人 - 01 [1080P][Baha][WEB-DL][AAC AVC][CHT].mp4",
+    "ok": false
+   },
+   {
+    "n": "AFro samurai BRip 720p -Episode 5.  Justice.mp4",
+    "ok": false
+   },
+   {
+    "n": "H.P.5-Order.Of.The.Phoenix[2007]ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Final Destination 5_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "[ASCT]-Chuunibyou-demo-Koi-ga-Shitai!-Lite-5.mkv",
+    "ok": false
+   },
+   {
+    "n": "SAW 5.avi",
+    "ok": false
+   },
+   {
+    "n": "Návrat Sherlocka Holmese - 1.5. Ohyzdný žebrák.avi",
+    "ok": false
+   },
+   {
+    "n": "mwt-5.days.of.war.avi",
+    "ok": false
+   },
+   {
+    "n": "Číslo-5-žije-,2.-CZ-dub-1988..avi",
+    "ok": false
+   },
+   {
+    "n": "Číslo-5-žije-1-(1986).avi",
+    "ok": false
+   },
+   {
+    "n": "Hyde Park On Hudson (2012) LIMITED BluRay 1080p 5.1CH x264 Ganool.mkv",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-12.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-13.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-14.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-15.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-16.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-17.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-18.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-19.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-20.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-21.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_5-22.avi",
+    "ok": false
+   },
+   {
+    "n": "A.Scanner.Darkly.BluRay.1080p.x264.5.1.Judas.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (5) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman.TAS.02x05.neogenická.noční.můra.5.mutanti.vrací.úder.multi.cz.en.BiOSsCZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Underworld.BluRay.1080p.x264.5.1.Judas.mp4",
+    "ok": false
+   },
+   {
+    "n": "[CNT]_Shippuuden_Movie_5_HQ_[5283E82E].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hodně štěstí Charlie S02E18 Havaj, 1. část (Sun Show, Part 1).AVI",
+    "ok": false
+   },
+   {
+    "n": "Hodně štěstí Charlie S02E19 Havaj, 2. část(Sun Show, Part 2).AVI",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl chlapa III. (5).avi",
+    "ok": false
+   },
+   {
+    "n": "Míša Kulička (5)-V opravdovém cirkuse-25min..avi",
+    "ok": false
+   },
+   {
+    "n": "Na kus řeči se zvířaty (5) (SUPER dokument BBC-2009)-27min..avi",
+    "ok": false
+   },
+   {
+    "n": "Blby-a-blbejsi-DVDRip-CZ-(DD-5,1)-Petr3007.avi",
+    "ok": false
+   },
+   {
+    "n": "At-vejde-ten-pravy-DVDRip-CZ-(DD-5,1)-Petr3007.avi",
+    "ok": false
+   },
+   {
+    "n": "Alien vs. Ninja [2010]DVDRip[Xvid]AC3 5.1[Jap-Eng]BlueLady.avi",
+    "ok": false
+   },
+   {
+    "n": "Nezvratný osud 5 cz by Hunys.avi",
+    "ok": false
+   },
+   {
+    "n": "Resident Evil 5 -odveta cz by Hunys.avi",
+    "ok": false
+   },
+   {
+    "n": "Rychle a zběsile 5.avi",
+    "ok": false
+   },
+   {
+    "n": "Důvod zabíjet - DVDRipp 5.1 Krimi Drama CZ Dabing Top kvalita.avi",
+    "ok": false
+   },
+   {
+    "n": "Za zdi - DVDRipp 5.1 CZ Dabing Top kvalita.avi",
+    "ok": false
+   },
+   {
+    "n": "Včelí medvídci (5)-Strašidlový-8min..avi",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl chlapa IV. (5).avi",
+    "ok": false
+   },
+   {
+    "n": "Nezvratny-osud-5.avi",
+    "ok": false
+   },
+   {
+    "n": "5 Drakula.3.Az.orokseg-Hun.XviD-2005.avi",
+    "ok": false
+   },
+   {
+    "n": "Princess-Lover!-5-Anime.flv",
+    "ok": false
+   },
+   {
+    "n": "5. Specialni Carodejnicky Dil XVIII.avi",
+    "ok": false
+   },
+   {
+    "n": "patek-13-dil-5-cz-warnet-webgarden-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Lasky-mezi-kapkami-deste-DVDRip-CZ-(DD-5,1)-Petr3007.avi",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt8610916:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "MOST!",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "most"
+   ],
+   "year": 2019,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 47
+  },
+  "files": [
+   {
+    "n": "Jeffrey Epstein - Chi ha ucciso il mostro S01E01 Predatore miliardario.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Most Powerful Battlebot Ever!   FULL EPISODE (Season 4 Episode 1)   BATTLEBOTS.mp4",
+    "ok": false
+   },
+   {
+    "n": "Most Extreme Humans S01E01 Biggest Hands 1080p DISC WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most Extreme Humans S01E01 Biggest Hands 1080p DISC WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Most Extreme Humans S01E01 Biggest Hands 1080p DISC WEB-DL AAC2 0 H264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Most Extreme Humans S01E01 Biggest Hands 1080p DISC WEB-DL AAC2 0 H264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most.Wanted.Teen.Hacker.S01E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Most.Extreme.Humans.S01E01.1080p.WEB.h264-CBFM.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most.Extreme.Humans.S01E01.1080p.WEB.h264-CBFM[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "01x01 Mrtvá na mostě-Pilot.avi",
+    "ok": false
+   },
+   {
+    "n": "01x01 - Mrtvá na mostě.mkv",
+    "ok": false
+   },
+   {
+    "n": "Temny_Wales.S01E01 - Ďáblův most.avi",
+    "ok": false
+   },
+   {
+    "n": "FBI Most Wanted s01e01 CZtit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Worlds.Most.Wanted.S01E01.Ismael.El.Mayo.Zambada.Garcia.The.Head.of.the.Sinaloa.Cartel.1080p.NF.WEB-DL.DDP5.1.x264-TEPES.mkv",
+    "ok": false
+   },
+   {
+    "n": "Worlds.Most.Wanted.S01E01.WEBRip.x264-ION10.mp4",
+    "ok": false
+   },
+   {
+    "n": "Worlds.Most.Amazing.Tractors.S01E01.Tractor.World.Big.Bigger.Biggest.1080p.HDTV.H264-DARKFLiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hitlers.Most.Wanted.S01E01.1080p.WEB.h264-POPPYCOCK.mkv",
+    "ok": false
+   },
+   {
+    "n": "When.I.Was.the.Most.Beautiful.S01E01.200819.360p-NEXT.mp4",
+    "ok": false
+   },
+   {
+    "n": "Murder.Most.Puzzling.2025.S01E01.720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.Most.Puzzling.2025.S01E01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Murder Most Puzzling S01E01 720p HDTV H264-JFF[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Bus Driver Britains Cocaine King S01E01 Most Unusual Drug Trafficker 720p AMZN WEB-DL DDP2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Special.Forces.Most.Daring.Missions.S01E01.Operation.Nimrod.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "BBC Worlds Most Dangerous Roads S01E01 Alaska.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.Most.Puzzling.S01E01.REPACK.1080p.MY5.WEB-DL.AAC2.0.H.264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.Most.Puzzling.S01E01.REPACK.1080p.MY5.WEB-DL.AAC2.0.H.264-RAWR.mp4",
+    "ok": false
+   },
+   {
+    "n": "Joe 90 (1968) - S01E01 - The Most Special Agent (1080p BluRay x265 Celdra).mkv",
+    "ok": false
+   },
+   {
+    "n": "fbis.most.wanted.s01e01.cantina.cartel.1080p.hdtv.h264-cbfm.mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.1080p.WEB.h264-GRACE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.1080p.WEB.h264-GRACE[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "Girl.on.the.Run.The.Hunt.For.Americas.Most.Wanted.Woman.S01E01.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder Most Puzzling S01E01 Episode 1 1080p AMZN WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Joe Pickett (2021) s01e01 Il mostro alla Porta [Mkv - 1080p H264 - MultiLang E-Ac3 5.1 - MultiSubs].mkv",
+    "ok": false
+   },
+   {
+    "n": "Owning Manhattan S01E01 Worlds Most Expensive Penthouse 1080p NF WEB-DL DDP5 1 H 264-XEBEC.mkv",
+    "ok": false
+   },
+   {
+    "n": "FBI.Most.Wanted.S01E01.1080p.WEB-DL.H264.Cz..mkv",
+    "ok": false
+   },
+   {
+    "n": "Pokemon To Be a Pokemon Master S01E01 The Road Most Traveled 1080p AMZN WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Pokemon To Be a Pokemon Master S01E01 The Road Most Traveled International Version 1080p NF WEB-DL AAC2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Poopoo] The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible - S01E01 (BD 1080p HEVC Opus)[8BA3FED5].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Most.Heretical.Last.Boss.Queen.From.Villainess.to.Savior.S01E01.1080p.WEB.H264-URANiME.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible (2024) - S01E01 - Starting 12 Years Late [Bluray-1080p][Opus 2.0][AV1]-BlackRabbit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Britains.Most.Dangerous.Prisoners.S01E01.Gary.Vinter.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Rich.Girl.Caretaker.Im.Secretly.the.Caregiver.of.the.Most.Popular.Girl.in.This.Rich.Kid.School.S01E01.1080p.CR.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rich.Girl.Caretaker.Im.Secretly.the.Caregiver.of.the.Most.Popular.Girl.in.This.Rich.Kid.School.S01E01.1080p.CR.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most (Bron) S01E01_2011_dab.CZ_1080p",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most 01x01",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most Bron S01E01 2011 dab CZ 1080p",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "MOST! S01E01_Most-E01-CZ-dab",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. (Sub)",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01 HD (2011) Švédsko - Dánsko - Německo",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most S01E01 2019 Český Seriál",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most-(Bron)-S01E01-2011-dab-CZ-1080p [OK]",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most-(Bron)-S01E01-2011-dab-CZ-1080p",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most S01E01 - 1. epizoda 1080p CZ Dabing.mkv",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. BeDev2026",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. Top2026",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01-(2019)-Český-Seriál [OK]",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01-(2019)-Český-Seriál",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01 CZ dabing BRON",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most S01E01 - 1. epizoda CZ Dabing",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01 1080p CZ",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "MOST! S01E01-08 2019 CZ dab - Epizoda 1",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01 HD 2011 Švédsko Dánsko Německo",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most! CZ - S1E1 Epizoda 1 CS",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most 2011 - S01E01 Full HD 1080p CZ.mp4",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most-S01E01-HD-(2011)-Švédsko-Dánsko-Německo [OK]",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most-S01E01-HD-(2011)-Švédsko-Dánsko-Německo",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most S01E01 CZ DABING TvRip 1080p",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "MOST! - S01E01 - 1. epizoda",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most - 01x01",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most (Bron-Broen) S01E01 CZ DABING",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most 2011 - S01E01 Full HD 1080p CZ",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. TopCZ",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p.",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01 CZ BRON",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most S01E01 Komedie Drama Česko 2018 ČSFD 88",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most-S01E01-CZ-BRON",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most-S01E01-CZ-BRON [OK]",
+    "len": 3450,
+    "ok": false
+   },
+   {
+    "n": "Most S01E01-Komedie-Drama-Česko-2018-ČSFD-88 [OK]",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01-Komedie-Drama-Česko-2018-ČSFD-88",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p BeDobi",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p TOP.nov.V2",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. BeKubino",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. CZ-SK-(CZ)",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. - (T.o.P)",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p V.2.",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p To.p.",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. TopKvalitka",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. Love",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most! S01E01 (2019) CZ Dabing 1080p. S",
+    "len": 2828,
+    "ok": true
+   },
+   {
+    "n": "Most S01E01 2011 CZ",
+    "len": 3452,
+    "ok": false
+   },
+   {
+    "n": "Most do zeme Terabithia (Most do krajiny Terabithia 2007) 480p AC3Cz -fantasy.avi",
+    "ok": false
+   },
+   {
+    "n": "Most přes řeku Kwai cz.avi",
+    "ok": false
+   },
+   {
+    "n": "MOST-PRES-REKU-KWAI---CZ-dvdrip.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-osudu---CZ-dvdrip.avi",
+    "ok": false
+   },
+   {
+    "n": "Most (2003).avi",
+    "ok": false
+   },
+   {
+    "n": "Mostly Ghostly Have You Met My Ghoulfriend 2014 480p WEBRIP XVID AC3 ACAB sample.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-přes-řeku-Kwai-1080p-CZ-ENG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most do Krajiny Terabithia (2007).avi",
+    "ok": false
+   },
+   {
+    "n": "Most přes Řeku Kwai The Bridge on the River Kwai 1080p x264 AC3 Cz dab 1957.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most 2008 CZ Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Most přes řeku Kwai - válečný 1957 Cz Dab.- .avi",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu-2015-Bridge-of-Spies-CZ-tit.-by-Slanec.avi",
+    "ok": false
+   },
+   {
+    "n": "Most spionu Bridge of Spies 2015 BRRip.x264 cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů-(thriller-drama)-Cz dab.2015(csfd 79-)..avi",
+    "ok": false
+   },
+   {
+    "n": "Most špionov.2015.480p.BDRip.XviD.AC3.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Spionu.Bridge.of.Spies.2015.MultiDab.CZ.EN.1080p.BluRay.x265.HEVC.DTS.Hyena.Forced.Titulky.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu_Bridge-of-Spies_2015_titulky.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most přes reku Kwai (1957 válečný) CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Most u Remagenu  (valečný 1969) CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů od zilvar13.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most špionu CZ by jaro 2015.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů_dvdrip_mkv_cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů-Bridge of Spies 2015 CZ Dabing 71A.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-špiónů-CZ-Dabing-2015-NOVINKA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu_Bridge-of-Spies-2015-CZ-dabing_MickR1.avi",
+    "ok": false
+   },
+   {
+    "n": "Most spionu.avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Spionu.CZ.DAB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů CZ - Živ, T, D - 79- 2015 1080p BluRay AC3 Tom Hanks by Stifler.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu-CZ-2015.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu-Bridge-of-Spies-2015-CZ-Dabing-J.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů-thriller.USA.2015.CZdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Most cez rieku Kwai  vojnovy cz ☼   1957.avi",
+    "ok": false
+   },
+   {
+    "n": "Most u Remagenu cz ☼ 1969.mp4",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu-CZ-Dabing-2015- SERFAR33.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most-špiónů-2015-Cz-Avi-Doporučují-KINGcool-Novinky.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu2015CZ.dab.avi..avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů (2015) CZ-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu_Bridge-of-Spies-2015-CZ-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Most-spionu-2015-Cz-dab. by AliG.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů - 2015 Cz Dab.- .avi",
+    "ok": false
+   },
+   {
+    "n": "Most-u-Remagenu---valecny-Cz-Dab.--.avi",
+    "ok": false
+   },
+   {
+    "n": "Most.spionu.BRRip.CZ.Dab.2015.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špionů 2015 xvid ac3 cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů (2015).avi",
+    "ok": false
+   },
+   {
+    "n": "Most-špiónů--Bridge-of-Spies-(2015)(CZ-DABING).avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů (2015) CZ dab by Majky776.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónů [Bridge of Spies] (2015) HD 720p CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Most špiónov.avi",
+    "ok": false
+   },
+   {
+    "n": "Most spionu 2015 BRrip CZ dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most.04x06.WEBrip.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Most do pekla_Bridge to hell 1986 válečný.avi",
+    "ok": false
+   },
+   {
+    "n": "Most.pres.reku.Kwai-The.Bridge.on.the.River.Kwai(1957).1080p.CZ.Vykonavatel.mkv",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x04 - Skirrid Inn - Monmouthshire - Extra.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x04 - Skirrid Inn - Monmouthshire.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x07 - Llancaiach Fawr Manor - Extra.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x07 - Llancaiach Fawr Manor.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x08 - Pengersick Castle - Extra.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x09 - The Clockhouse.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x10 - Caesars Nightclub - London - Extra.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 2x10 - Caesars Nightclub - London.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 03x03 - Edinburgh Vaults EXTRA.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 03x03 - Edinburgh Vaults.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 3x01 - RAF East Kirkby EXTRA.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 3x09 - The Muckleburgh Collection.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted - 3x10 - Galleries Of Justice.avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted Aberglasney House eXtra etfh.avi",
+    "ok": false
+   },
+   {
+    "n": "most haunted Galleries of Justice eXtra etfh.avi",
+    "ok": false
+   },
+   {
+    "n": "most haunted Muckleburgh Collection eXtra etfh.avi",
+    "ok": false
+   },
+   {
+    "n": "most haunted Schooner Hotel eXtra  etfh.avi",
+    "ok": false
+   },
+   {
+    "n": "most haunted Tamworth Castle eXtra etfh.avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E01.Owlpen.Manor.EXTRA.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E02.Craig-y-Nos.Castle.EXTRA.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E01.Owlpen.Manor.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E02.Craig-y-Nos.Castle.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E03.Jamaica.Inn.EXTRA.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E03.Jamaica.Inn.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E04.Croxteth.Hall.EXTRA.DivX.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E04.Croxteth.Hall.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E05.Hellfire.Caves.EXTRA.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E05.Hellfire.Caves.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E06.The.Manor.House.EXTRA.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E06.The.Manor.House.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E07.Mary.Kings.Close.EXTRA.DivX.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E07.Mary.Kings.Close.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E08.The.Wellington.Hotel.EXTRA.DivX.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E08.The.Wellington.Hotel.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E09.Chatham.Dockyard.EXTRA.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E09.Chatham.Dockyard.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E10.The.Guild.Hall.EXTRA.DivX.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E10.The.Guild.Hall.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E11.Greengate.Brewery.EXTRA.DivX.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E11.Greengate.Brewery.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E12.The.Manor.House.Restaurant.EXTRA.DivX.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most.Haunted.S04.E12.The.Manor.House.Restaurant.XviD.[Kut-Kreator].avi",
+    "ok": false
+   },
+   {
+    "n": "Most Haunted  ( s05e03 )  Kasteel Doorwerth - Extra.avi",
+    "ok": false
+   },
+   {
+    "n": "WorldSBK_2021_04_SSP300_VC_Most_01_Superpole_CZ_HD_1080.mkv",
+    "ok": false
+   },
+   {
+    "n": "WorldSBK_2021_05_SSP_VC_Most_01_Superpole_CZ_HD_1080.mkv",
+    "ok": false
+   },
+   {
+    "n": "WorldSBK_2021_06_VC_Most_01_1trenink_CZ_HD_1080.mkv",
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm-s1-01.avi",
+    "ok": false
+   },
+   {
+    "n": "Hatfieldovi a McCoyovi-01.d",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "farcry2 2013-01-23 00-11-24-92.AVI",
+    "ok": false
+   },
+   {
+    "n": "01. Zloduch Mollache.rm",
+    "ok": false
+   },
+   {
+    "n": "01.Prorok ktery zmenil Svet (A Propeth changes the World).avi",
+    "ok": false
+   },
+   {
+    "n": "mala velka britanie 01.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda_1-01- Potmě.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_3-01.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Hodlate se s tim smirit.avi",
+    "ok": false
+   },
+   {
+    "n": "Zaklinac 01 - Detstvi.avi",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Shingeki_no_Kyojin_-_01_[0B164A9D].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Cinska kapitalisticka revoluce (China's Capitalist Revolution part.1).avi",
+    "ok": false
+   },
+   {
+    "n": "Cestománie 01 - Indonesie-sumatra.neni kam spechat.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Experiment Kolonie I.avi",
+    "ok": false
+   },
+   {
+    "n": "01. Po líbánkách.avi",
+    "ok": false
+   },
+   {
+    "n": "6_01-Valkyry_z_Vallhaly_1.cast.avi",
+    "ok": false
+   },
+   {
+    "n": "01 - V hadim hnizde .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Pod palbou .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Navrat ztraceneho syna .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Avalon, cast I. .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Z masa a kosti .avi",
+    "ok": false
+   },
+   {
+    "n": "Angel - 3. série - 01. díl - BUŠENÍ SRDCE.avi",
+    "ok": false
+   },
+   {
+    "n": "Autogrotesky 01 Hasičák Burák (Rescue Squad Mater).AVI",
+    "ok": false
+   },
+   {
+    "n": "Zla krev_1986_01_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Trestny-prapor_Shtrafbat_2004_cz_dil_01.avi",
+    "ok": false
+   },
+   {
+    "n": "30 Rock [3.01] Do-Over.avi",
+    "ok": false
+   },
+   {
+    "n": "Bakaláři-07 Lék, Maratón, Most.m4v",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Great_Teacher_Onizuka_-_Lesson_01_(6F68CC7E).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yellow-Flash]_Gungrave_-_01_[720p][F64F0332].mkv",
+    "ok": false
+   },
+   {
+    "n": "[joseole99][Frostii] K-On! - 01 (1280x720 h264 AC3 AAC) [72C908C7].mkv",
+    "ok": false
+   },
+   {
+    "n": "cowboy_bebop_remastered_01[h264.ac3][niizk].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Okna do sveta (Windows on the World).avi",
+    "ok": false
+   },
+   {
+    "n": "Synové a dcery Jakuba skláře-01.Vandrovník.avi",
+    "ok": false
+   },
+   {
+    "n": "zena-za-pultem-01-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "Cirkus Humberto_01_1988_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "P90X+ 01 - Interval X Plus.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hannibal-01---04-CZ-dabing---axn.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 03x01 - Hrichy otcu 01. doktor Divny.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x09 - Tajne valky 01. prichod.mp4",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x12 - Spider valky 01. klony vazne  nemam v lasce.mp4",
+    "ok": false
    }
   ]
  }

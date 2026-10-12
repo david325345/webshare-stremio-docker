@@ -612,11 +612,12 @@ async function buildPlan(type, id, cfg) {
     }
 
     const isAnime = !!rs;
-    // délka cílového dílu (minuty) – jen u seriálů z TMDB; chyba/neznámá = bez kontroly
-    let epRuntime = null;
+    // délka cílového dílu (minuty) – jen u seriálů z TMDB; běží souběžně s hledáním (čeká se na ni až
+    // při filtrování podle délky), chyba/neznámá = bez kontroly
+    let epRuntimeP = null;
     if (type === 'series' && season && episode && info && info.media === 'tv' && info.tmdbId) {
-        try { const m = await seasonRuntimes(info.tmdbId, season, cfg.tmdb_api_key); epRuntime = (m && m[episode]) || null; }
-        catch (e) { epRuntime = null; }
+        epRuntimeP = seasonRuntimes(info.tmdbId, season, cfg.tmdb_api_key)
+            .then(m => (m && m[episode]) || null).catch(() => null);
     }
     const latin = s => s && M.isLatin(s) ? s : null;
 
@@ -656,7 +657,7 @@ async function buildPlan(type, id, cfg) {
     return {
         type, id, isAnime, names, allow,
         runtime: (info && info.runtime) || null,
-        epRuntime,
+        epRuntime: null, epRuntimeP,
         year: (info && info.year) || null,
         season, episode,
         alEpisode: rs ? (rs.episode || episode) : null,
@@ -1116,6 +1117,11 @@ async function findFiles(type, id, cfg) {
             hsOn(cfg) ? enrichHellspy(top.filter(it => it.f.hs).slice(0, 15)) : true
         ]);
         const complete = completeWs && completeHs;
+        // délka dílu z TMDB – mezitím už doběhla; když ne, max. 300 ms, jinak bez kontroly délky
+        if (plan.epRuntimeP) {
+            plan.epRuntime = await Promise.race([plan.epRuntimeP, new Promise(r => setTimeout(() => r(null), 300).unref())]);
+            plan.epRuntimeP = null;
+        }
         const durationBad = new Map();
         const wsAu = wsAudioBySize(ranked);
         ranked = rankFiles(expandHellspy(capHellspy(dedupeBySize(rankFiles(ranked

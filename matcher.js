@@ -128,11 +128,14 @@ const PREFIX_BAD = new Set(('inside behind making becoming beyond lego untold se
     'tribute parody honest pitch skutecna skutecny skutecne real true').split(' '));
 
 // Roky v názvu souboru (1920–2035)
-function fileYears(fileName) {
+function fileYears(fileName, { noRanges = false } = {}) {
     const out = [];
-    const re = /(?:^|[^0-9])((?:19|20)\d{2})(?![0-9]|p\b)/gi;
+    // ne rozlišení (1920x1080) ani CRC v hranatých závorkách ([1989E8F0])
+    const re = /(?:^|[^0-9x])((?:19|20)\d{2})(?![0-9]|p\b|x\d)/gi;
     let m;
-    const s = String(fileName);
+    let s = String(fileName).replace(/\[[0-9A-F]{8}\]/gi, ' ');
+    // rozsah let ("1858 - 1961", "2004-2005") = období děje / vysílání, ne rok vydání
+    if (noRanges) s = s.replace(/(?<![0-9])[12]\d{3}\s*[-–]\s*[12]\d{3}(?![0-9])/g, ' ');
     while ((m = re.exec(s))) {
         const y = parseInt(m[1], 10);
         if (y >= 1920 && y <= 2035) out.push(y);

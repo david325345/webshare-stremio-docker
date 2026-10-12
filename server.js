@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.3';
+const VERSION = '8.6.4';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -494,6 +494,7 @@ async function tmdbInfoWithKey(imdbId, type, key) {
         alt: altList.filter(a => a.iso_3166_1 === 'CZ' || a.iso_3166_1 === 'SK').map(a => a.title).filter(Boolean),
         year: parseInt(String(d.release_date || d.first_air_date || '').slice(0, 4), 10) || null,
         runtime: d.runtime || null,           // délka filmu v minutách (u seriálů null)
+        tmdbId: item.id, media,               // pro délku dílů (/tv/{id}/season/{n})
         source: 'tmdb'
     };
 }
@@ -515,7 +516,9 @@ async function titleInfo(imdbId, type, userTmdbKey) {
     const key = `tm:${imdbId}:${type}`;
     const hit = tmdbCache.get(key);
     // starší záznamy (před v8.4) nemají délku filmu → u filmů z TMDB načíst znovu
-    if (hit !== undefined && !(type === 'movie' && hit && hit.source === 'tmdb' && hit.runtime === undefined)) return hit;
+    // starší záznamy bez TMDB ID (před v8.6.4) → u seriálů načíst znovu (kvůli délce dílů)
+    const old = hit && hit.source === 'tmdb' && ((type === 'movie' && hit.runtime === undefined) || (type === 'series' && hit.tmdbId === undefined));
+    if (hit !== undefined && !old) return hit;
     return once(key, async () => {
         const keys = [...new Set([String(userTmdbKey || '').trim(), TMDB_API_KEY].filter(Boolean))];
         let failed = false;
@@ -538,6 +541,30 @@ async function titleInfo(imdbId, type, userTmdbKey) {
         // když TMDB jen selhalo, Cinemetu držet krátce (ať se CZ názvy brzy doplní)
         if (cm) tmdbCache.set(key, cm, failed ? H : 7 * 24 * H);
         return cm || stale || null;
+    });
+}
+
+// Délka dílů sezóny z TMDB (1 volání na sezónu, cache 30 dní; neúspěch 1 den) → { [díl]: minut }
+async function seasonRuntimes(tvId, season, userTmdbKey) {
+    const key = `ep:${tvId}:${season}`;
+    const hit = tmdbCache.get(key);
+    if (hit !== undefined) return hit;
+    return once(key, async () => {
+        const keys = [...new Set([String(userTmdbKey || '').trim(), TMDB_API_KEY].filter(Boolean))];
+        for (const k of keys) {
+            try {
+                const d = await tmdbGet(`/tv/${tvId}/season/${season}?language=cs-CZ`, k);
+                const map = {};
+                for (const e of (d && d.episodes) || []) if (e.episode_number && e.runtime) map[e.episode_number] = e.runtime;
+                tmdbCache.set(key, map, 30 * 24 * H);
+                return map;
+            } catch (e) {
+                dbg(`TMDB sezóna ${tvId}/${season}: ${e.message}`);
+                if (!e.auth) break;
+            }
+        }
+        tmdbCache.set(key, null, 24 * H);
+        return null;
     });
 }
 
@@ -585,6 +612,12 @@ async function buildPlan(type, id, cfg) {
     }
 
     const isAnime = !!rs;
+    // délka cílového dílu (minuty) – jen u seriálů z TMDB; chyba/neznámá = bez kontroly
+    let epRuntime = null;
+    if (type === 'series' && season && episode && info && info.media === 'tv' && info.tmdbId) {
+        try { const m = await seasonRuntimes(info.tmdbId, season, cfg.tmdb_api_key); epRuntime = (m && m[episode]) || null; }
+        catch (e) { epRuntime = null; }
+    }
     const latin = s => s && M.isLatin(s) ? s : null;
 
     // Názvy "franšízy" (CZ/SK/EN z TMDB) – párují se s IMDb sezónou/epizodou
@@ -623,6 +656,7 @@ async function buildPlan(type, id, cfg) {
     return {
         type, id, isAnime, names, allow,
         runtime: (info && info.runtime) || null,
+        epRuntime,
         year: (info && info.year) || null,
         season, episode,
         alEpisode: rs ? (rs.episode || episode) : null,
@@ -659,6 +693,9 @@ function buildQueries(plan) {
         variants.forEach(q => w2.push(q));
     } else if (plan.season && plan.episode) {
         const se = `S${pad(plan.season)}E${pad(plan.episode)}`;
+        // krátký jednoslovný název (Most, Dark, You) → dotaz i s rokem, jinak Webshare vrací "Most Wanted" apod.
+        const shortName = fr.length && plan.year && M.nameTokens(fr[0]).length === 1 && M.nameTokens(fr[0])[0].length < 6;
+        if (shortName) w1.push(`${fr[0]} ${plan.year} ${se}`);
         fr.slice(0, 3).forEach(q => w1.push(`${q} ${se}`));
         if (plan.isAnime && plan.alEpisode) an.slice(0, 2).forEach(q => w1.push(`${q} ${pad(plan.alEpisode)}`));
         fr.slice(0, 3).forEach(q => w2.push(`${q} ${plan.season}x${pad(plan.episode)}`));
@@ -670,6 +707,7 @@ function buildQueries(plan) {
             an.slice(0, 2).forEach(q => w2.push(`${q} E${pad(plan.alEpisode)}`));
             an.slice(2).forEach(q => w2.push(`${q} ${pad(plan.alEpisode)}`));
         }
+        if (shortName) w2.push({ q: `${fr[0]} ${plan.year}`, limit: 100 });
         // samotný název (100 výsledků) – soubory jako "Cena Říše 05 - Barbarossa" nebo "(13) Tisíc slunců"
         [fr[0], ...variants.slice(0, 1), ...plan.names.filter(n => n.short && n.kind === 'franchise' && M.subTitle(n.full) === n.text).map(n => M.queryText(n.text)).slice(0, 1)]
             .filter(Boolean).forEach(q => w2.push({ q, limit: 100 }));
@@ -775,6 +813,12 @@ function judgeFile(f, plan) {
         return plan.names.some(n => nameOk(f.name, n, plan))
             ? { ok: true, exact: false, reason: 'název' }
             : { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
+    }
+    // rok v názvu: když jsou všechny roky dřív, než seriál začal → jiný (starší) titul stejného jména
+    // (rozsahy "1858 - 1961" se nepočítají; "1973 … Barbarossa 1941" projde díky 1973)
+    if (plan.year && anyTitle) {
+        const ys = M.fileYears(f.name, { noRanges: true });
+        if (ys.length && ys.every(y => y < plan.year - 1)) return { ok: false, reason: `rok nesedí (${ys.join(',')})` };
     }
     let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
     for (const n of plan.names) {
@@ -889,6 +933,14 @@ function rankFiles(items) {
 // Délka filmu ze stop vs. TMDB: mimo toleranci = jiný film, trailer, ukázka
 // (prodloužené verze mají větší rezervu nahoru)
 function durationMismatch(plan, it) {
+    // seriál: délka dílu z TMDB – 60–120 % (zkrácené TV verze projdou, jiný seriál stejného jména
+    // s delšími díly ne), nebo 180–220 % (dvojdíl "S06E01E02" obsahuje i hledaný díl)
+    if (plan.type === 'series') {
+        if (!plan.epRuntime || !it.info || !it.info.len) return null;
+        const min = it.info.len / 60, rt = plan.epRuntime;
+        if ((min >= rt * 0.6 && min <= rt * 1.2) || (min >= rt * 1.8 && min <= rt * 2.2)) return null;
+        return `délka nesedí (${Math.round(min)} min, díl ${rt} min)`;
+    }
     if (plan.type !== 'movie' || !plan.runtime || !it.info || !it.info.len) return null;
     const min = it.info.len / 60, rt = plan.runtime;
     const extended = /extended|director|uncut|unrated|prodlou|rozsir|special.?edition/i.test(M.normalize(it.f.name));
@@ -1112,7 +1164,7 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes
     ranked.slice(0, plan.type === 'movie' ? 30 : 25).forEach((it, i) => { if (!sent.has(it.f.ident)) sent.set(it.f.ident, i + 1); });
     archiveWrite({
         t: new Date().toISOString(), kind: 'stream', src, type: plan.type, id: plan.id,
-        anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime,
+        anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime, epRuntime: plan.epRuntime || undefined,
         season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
         names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short })),
         queries: queries.map(q => q.q), ms,

@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.1';
+const VERSION = '8.6.2';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -128,7 +128,7 @@ function maskConfigInUrl(url) {
     return String(url).replace(/(^\/|[?&]config=)(eyJ[A-Za-z0-9_+=%-]+)/g, (m, prefix, b64) => {
         const cfg = decodeConfig(b64);
         return `${prefix}[config:${cfg ? who(cfg) : '?'}]`;
-    });
+    }).replace(/([?&]key=)[^&]+/g, '$1***');   // ADMIN_KEY nesmí do logu
 }
 
 function userKey(cfg) {
@@ -338,12 +338,12 @@ async function hsGet(pathq) {
     const u = new URL(HELLSPY_API + pathq);
     const port = +u.port || 443;
     const opts = { host: u.hostname, port, path: u.pathname + u.search, headers: HS_HEADERS, timeout: 8000 };
-    if (HELLSPY_PROXY && HELLSPY_PROXY !== 'direct') {
-        const socket = await hsTunnel(u.hostname, port);
-        // bez agenta: Node pak použije createConnection (s agent:false by ho ignoroval a šel napřímo)
-        opts.createConnection = () => tls.connect({ socket, servername: u.hostname });
-    }
     try {
+        if (HELLSPY_PROXY && HELLSPY_PROXY !== 'direct') {
+            const socket = await hsTunnel(u.hostname, port);
+            // bez agenta: Node pak použije createConnection (s agent:false by ho ignoroval a šel napřímo)
+            opts.createConnection = () => tls.connect({ socket, servername: u.hostname });
+        }
         return await new Promise((resolve, reject) => {
             const req = https.get(opts, resp => {
                 let data = '';
@@ -679,30 +679,44 @@ function buildQueries(plan) {
     return [dedupe(w1, seen).slice(0, 8), dedupe(w2, seen).slice(0, 10)];
 }
 
-// Hledání s omezenou souběžností – Webshare max 4 dotazy naráz, Hellspy max 3 (souběžně vedle sebe)
-async function runQueries(cfg, queries) {
+// Hledání s omezenou souběžností – Webshare max 4 dotazy naráz, Hellspy max 3 (souběžně vedle sebe).
+// Časový strop: po budgetMs se vrátí, co je hotové (pomalé dotazy doběhnou na pozadí a zahodí se).
+// Vrací { files, degraded } – degraded = některý zdroj selhal nebo nestihl strop (kratší cache).
+async function runQueries(cfg, queries, { ws = true, hs = true, budgetMs = 4000 } = {}) {
     const out = new Map();
+    const deadline = Date.now() + budgetMs;
+    let degraded = false, done = false;
+    const finished = { WS: false, HS: false }, okCount = { WS: 0, HS: 0 };
     const pool = async (n, search, label) => {
         let i = 0;
         const worker = async () => {
-            while (i < queries.length) {
+            while (i < queries.length && Date.now() < deadline && !done) {
                 const { q, limit } = queries[i++];
                 try {
                     const files = await search(q, limit);
+                    if (done) return;
+                    okCount[label]++;
                     for (const f of files) if (!out.has(f.ident)) out.set(f.ident, f);
                     dbg(`  🔎 ${label} "${q}" → ${files.length}`);
                 } catch (e) {
+                    degraded = true;
                     if (label === 'WS' || Date.now() >= hsDownUntil) log(`  ⚠️ ${label} hledání "${q}" selhalo: ${e.message}`);
                 }
             }
+            if (i < queries.length) degraded = true;
         };
         await Promise.all(Array.from({ length: Math.min(n, queries.length) }, worker));
+        finished[label] = true;
     };
-    await Promise.all([
-        hasWs(cfg) ? pool(4, async (q, limit) => (await withToken(cfg, t => wsSearch(t, q, limit))).files, 'WS') : null,
-        hsOn(cfg) ? pool(3, (q, limit) => hsSearch(q, limit), 'HS') : null
+    const all = Promise.all([
+        ws && hasWs(cfg) ? pool(4, async (q, limit) => (await withToken(cfg, t => wsSearch(t, q, limit))).files, 'WS') : null,
+        hs && hsOn(cfg) ? pool(3, (q, limit) => hsSearch(q, limit), 'HS') : null
     ]);
-    return out;
+    const timedOut = await Promise.race([all.then(() => false), new Promise(r => setTimeout(() => r(true), budgetMs).unref())]);
+    if (timedOut) { done = true; degraded = true; log(`  ⏱ hledání přerušeno po ${budgetMs} ms – vracím, co je hotové`); }
+    // zdroj, který nestihl strop nebo mu neprošel ani jeden dotaz = "nefunguje" → druhá vlna se mu neposílá
+    const dead = { ws: !finished.WS || !okCount.WS, hs: !finished.HS || !okCount.HS };
+    return { files: new Map(out), degraded, dead };
 }
 
 // Vybere soubory, které sedí na název (a rok / epizodu)
@@ -963,6 +977,29 @@ function enrichTargets(ranked, n) {
     }
     return out;
 }
+// Hellspy: tentýž film nahraný znovu pod jiným názvem/velikostí ("… T.O.P", "… BeDev2026") →
+// stejná délka na sekundu + stejný jazykový profil z názvu = jedna kopie (první = nejlépe seřazená)
+function langProfile(name) {
+    const l = M.detectLang(name);
+    return `${l.cz ? 'cz' : ''}${l.sk ? 'sk' : ''}${l.dub ? 'D' : l.sub ? 'T' : ''}`;
+}
+function dedupeHellspyCopies(items, dropped) {
+    const seen = new Set();
+    return items.filter(it => {
+        if (!it.f.hs || !it.f.len) return true;
+        const k = `${it.f.len}|${langProfile(it.f.name)}`;
+        if (seen.has(k)) { if (dropped) dropped.add(it.f.ident); return false; }
+        seen.add(k);
+        return true;
+    });
+}
+// Strop Hellspy souborů (každý = 1–2 streamy), ať zbyde místo pro originály z Webshare
+const HS_MAX_FILES = 6;
+function capHellspy(items, max) {
+    let n = 0;
+    return items.filter(it => !it.f.hs || ++n <= max);
+}
+
 // Zvukové stopy ze stejného souboru na Webshare (shodná velikost na bajt)
 function wsAudioBySize(items) {
     const m = new Map();
@@ -989,18 +1026,24 @@ async function findFiles(type, id, cfg) {
             return { plan: null, items: [], queries: 0, ms: Date.now() - t0 };
         }
         const [w1, w2] = buildQueries(plan);
-        const files = await runQueries(cfg, w1);
+        const r1 = await runQueries(cfg, w1, { budgetMs: 4000 });
+        const files = r1.files;
+        let degraded = r1.degraded;
         let items = filterFiles([...files.values()], plan);
         let queries = w1.length;
-        if (items.length < 5 && w2.length) {
-            const more = await runQueries(cfg, w2);
-            for (const [k, v] of more) if (!files.has(k)) files.set(k, v);
+        // druhá vlna zvlášť pro každý zdroj – Hellspy nesmí zastavit dohledání na Webshare (a naopak)
+        const wsFew = hasWs(cfg) && !r1.dead.ws && items.filter(it => !it.f.hs).length < 5;
+        const hsFew = hsOn(cfg) && !r1.dead.hs && items.filter(it => it.f.hs).length < 5;
+        if ((wsFew || hsFew) && w2.length) {
+            const r2 = await runQueries(cfg, w2, { ws: wsFew, hs: hsFew, budgetMs: 3000 });
+            for (const [k, v] of r2.files) if (!files.has(k)) files.set(k, v);
+            degraded = degraded || r2.degraded;
             items = filterFiles([...files.values()], plan);
             queries += w2.length;
         }
         // Hellspy: délka už z hledání
         const dupes = new Set();
-        let ranked = dedupeBySize(rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it)), true, dupes);
+        let ranked = dedupeHellspyCopies(dedupeBySize(rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it)), true, dupes), dupes);
         // file_info (Webshare) a detail (Hellspy) pro nejlepší soubory – souběžně, s časovým limitem
         const max = plan.type === 'movie' ? 30 : 25;
         const top = enrichTargets(ranked, max + 10);
@@ -1011,7 +1054,7 @@ async function findFiles(type, id, cfg) {
         const complete = completeWs && completeHs;
         const durationBad = new Map();
         const wsAu = wsAudioBySize(ranked);
-        ranked = rankFiles(expandHellspy(dedupeBySize(rankFiles(ranked
+        ranked = rankFiles(expandHellspy(capHellspy(dedupeBySize(rankFiles(ranked
             .map(it => {
                 const fi = fileCache.get(it.f.ident);
                 if (it.f.hs) return { ...it, info: { ...(fi || {}), len: it.f.len, au: wsAu.get(it.f.size) || undefined } };
@@ -1022,10 +1065,10 @@ async function findFiles(type, id, cfg) {
                 const why = durationMismatch(plan, it);
                 if (why) durationBad.set(it.f.ident, why);
                 return !why;
-            })), false, dupes)));
+            })), false, dupes), HS_MAX_FILES)));
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
-        // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní
-        if (ranked.length) resultCache.set(key, res, (complete ? 30 : 3) * 60 * 1000);
+        // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní; výpadek zdroje → 1 min
+        if (ranked.length) resultCache.set(key, res, (degraded ? 1 : complete ? 30 : 3) * 60 * 1000);
         archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src, dupes);
         return res;
     });

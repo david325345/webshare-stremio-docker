@@ -544,19 +544,26 @@ async function titleInfo(imdbId, type, userTmdbKey) {
     });
 }
 
-// Délka dílů sezóny z TMDB (1 volání na sezónu, cache 30 dní; neúspěch 1 den) → { [díl]: minut }
-async function seasonRuntimes(tvId, season, userTmdbKey) {
+// Délka dílů sezóny z TMDB → { [díl]: minut }. Uzavřená sezóna (všechny díly mají délku) se drží 1 rok,
+// probíhající 1 den; chybí-li hledaný díl (nový), sezóna se načte znovu – nejvýš jednou denně.
+async function seasonRuntimes(tvId, season, userTmdbKey, episode) {
     const key = `ep:${tvId}:${season}`;
     const hit = tmdbCache.get(key);
-    if (hit !== undefined) return hit;
+    if (hit !== undefined) {
+        if (hit === null) return null;                                   // neúspěch (1 den)
+        const map = hit.map || hit;                                      // starší formát = jen mapa
+        if (!episode || map[episode] || (hit.t && Date.now() - hit.t < 24 * H)) return map;
+    }
     return once(key, async () => {
         const keys = [...new Set([String(userTmdbKey || '').trim(), TMDB_API_KEY].filter(Boolean))];
         for (const k of keys) {
             try {
                 const d = await tmdbGet(`/tv/${tvId}/season/${season}?language=cs-CZ`, k);
+                const eps = (d && d.episodes) || [];
                 const map = {};
-                for (const e of (d && d.episodes) || []) if (e.episode_number && e.runtime) map[e.episode_number] = e.runtime;
-                tmdbCache.set(key, map, 30 * 24 * H);
+                for (const e of eps) if (e.episode_number && e.runtime) map[e.episode_number] = e.runtime;
+                const complete = eps.length > 0 && Object.keys(map).length === eps.length;
+                tmdbCache.set(key, { map, t: Date.now() }, (complete ? 365 : 1) * 24 * H);
                 return map;
             } catch (e) {
                 dbg(`TMDB sezóna ${tvId}/${season}: ${e.message}`);
@@ -616,7 +623,7 @@ async function buildPlan(type, id, cfg) {
     // při filtrování podle délky), chyba/neznámá = bez kontroly
     let epRuntimeP = null;
     if (type === 'series' && season && episode && info && info.media === 'tv' && info.tmdbId) {
-        epRuntimeP = seasonRuntimes(info.tmdbId, season, cfg.tmdb_api_key)
+        epRuntimeP = seasonRuntimes(info.tmdbId, season, cfg.tmdb_api_key, episode)
             .then(m => (m && m[episode]) || null).catch(() => null);
     }
     const latin = s => s && M.isLatin(s) ? s : null;

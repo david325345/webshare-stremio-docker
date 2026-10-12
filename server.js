@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.2';
+const VERSION = '8.6.3';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -315,14 +315,14 @@ const HS_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'application/json', 'Origin': 'https://hellspy.to', 'Referer': 'https://hellspy.to/'
 };
-let hsDownUntil = 0;
+let hsDownUntil = 0, hsFailStreak = 0;   // vypnutí až po 3 chybách za sebou
 
 // Tunel přes HTTP proxy (CONNECT) – tinyproxy pustí jen api.hellspy.to:443
 function hsTunnel(host, port) {
     const p = new URL(HELLSPY_PROXY);
     return new Promise((resolve, reject) => {
         const req = http.request({ host: p.hostname, port: p.port || 80, method: 'CONNECT', path: `${host}:${port}`,
-            headers: { Host: `${host}:${port}` }, timeout: 4000 });
+            headers: { Host: `${host}:${port}` }, timeout: 6000 });
         req.on('connect', (r, socket) => {
             if (r.statusCode !== 200) { socket.destroy(); return reject(new Error(`proxy CONNECT ${r.statusCode}`)); }
             resolve(socket);
@@ -337,14 +337,16 @@ async function hsGet(pathq) {
     if (Date.now() < hsDownUntil) throw new Error('Hellspy dočasně vypnutý (předchozí chyba)');
     const u = new URL(HELLSPY_API + pathq);
     const port = +u.port || 443;
-    const opts = { host: u.hostname, port, path: u.pathname + u.search, headers: HS_HEADERS, timeout: 8000 };
+    // Connection: close + zavření tunelu po odpovědi – jinak spojení visí na proxy (keep-alive) a zaplní její limit
+    const opts = { host: u.hostname, port, path: u.pathname + u.search, headers: { ...HS_HEADERS, Connection: 'close' }, timeout: 8000 };
+    let tunnel = null, tlsSock = null;
     try {
         if (HELLSPY_PROXY && HELLSPY_PROXY !== 'direct') {
-            const socket = await hsTunnel(u.hostname, port);
+            tunnel = await hsTunnel(u.hostname, port);
             // bez agenta: Node pak použije createConnection (s agent:false by ho ignoroval a šel napřímo)
-            opts.createConnection = () => tls.connect({ socket, servername: u.hostname });
+            opts.createConnection = () => (tlsSock = tls.connect({ socket: tunnel, servername: u.hostname }));
         }
-        return await new Promise((resolve, reject) => {
+        const result = await new Promise((resolve, reject) => {
             const req = https.get(opts, resp => {
                 let data = '';
                 resp.setEncoding('utf8');
@@ -359,13 +361,23 @@ async function hsGet(pathq) {
             req.on('timeout', () => req.destroy(new Error('Hellspy neodpovídá')));
             req.on('error', reject);
         });
+        hsFailStreak = 0;
+        return result;
     } catch (e) {
-        // blokace / výpadek proxy → Hellspy na 5 min vynechat, Webshare jede dál
+        // blokace / výpadek proxy → Hellspy krátce vynechat, Webshare jede dál
+        // jedna výjimečná chyba (síť, pomalá proxy) nic nevypne; až 3 za sebou → 1 min pauza
         if (!e.status || e.status === 429 || e.status === 403 || e.status >= 500) {
-            if (Date.now() >= hsDownUntil) log(`⚠️ Hellspy vynechán na 5 min: ${e.message}`);
-            hsDownUntil = Date.now() + 5 * 60 * 1000;
+            hsFailStreak++;
+            if (hsFailStreak >= 3) {
+                if (Date.now() >= hsDownUntil) log(`⚠️ Hellspy vynechán na 1 min (3 chyby za sebou): ${e.message}`);
+                hsDownUntil = Date.now() + 60 * 1000;
+                hsFailStreak = 0;
+            }
         }
         throw e;
+    } finally {
+        if (tlsSock) tlsSock.destroy();
+        if (tunnel) tunnel.destroy();
     }
 }
 

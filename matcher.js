@@ -403,7 +403,53 @@ function spinoffAbbrev(fileName, name, allow) {
     return l.length > 2 ? true : /^[A-Z]+$/.test(t);
 }
 
+// Zkomolený název proti mazání ("The Simps.ons S35E03", "Simpsnovi S35E03", "M.o.b.land S01E02",
+// "1Země gangů_S01E01"): u seriálu se přesnou značkou hledaného dílu porovná text před značkou
+// bez mezer/teček s názvem. Shoda = rozdělené slovo; u názvů od 9 znaků i jedno písmeno navíc/chybí/jiné
+// (stejné začátek a číslice). Vrací { name, text } – opravený název souboru pro běžné posouzení – nebo null.
+function levOne(a, b) {
+    if (a === b) return true;
+    if (Math.abs(a.length - b.length) > 1) return false;
+    let i = 0;
+    while (i < a.length && i < b.length && a[i] === b[i]) i++;
+    if (a.length === b.length) return a.slice(i + 1) === b.slice(i + 1);
+    return a.length > b.length ? a.slice(i + 1) === b.slice(i) : a.slice(i) === b.slice(i + 1);
+}
+function repairName(fileName, names, season, episode) {
+    const ft = normalize(stripLeadingGroups(fileName)).split(' ').filter(Boolean);
+    let mk = -1, mkLen = 1;
+    for (let i = 0; i < ft.length && mk < 0; i++) {
+        let m = ft[i].match(/^s(\d{1,2})e(\d{1,3})$/) || ft[i].match(/^(\d{1,2})x(\d{2,3})$/);
+        let len = 1;
+        if (!m && /^s\d{1,2}$/.test(ft[i]) && /^e\d{1,3}$/.test(ft[i + 1] || '')) {
+            m = [null, ft[i].slice(1), ft[i + 1].slice(1)]; len = 2;
+        }
+        if (m && +m[1] === season && +m[2] === episode) { mk = i; mkLen = len; }
+    }
+    if (mk < 1 || mk > 8) return null;
+    const head = ft.slice(0, mk);
+    const years = [];
+    while (head.length > 1 && /^(19|20)\d{2}$/.test(head[head.length - 1])) years.unshift(head.pop());
+    // číslo dílu přilepené před názvem ("1Země gangů")
+    const g = head[0].match(/^0*(\d{1,3})([a-z].*)$/);
+    if (g && +g[1] === episode) head[0] = g[2];
+    const compact = head.join('');
+    const digits = s => s.replace(/[^0-9]/g, '');
+    for (const name of names) {
+        const nc = tokens(name).join('');
+        if (nc.length < 4) continue;
+        const same = compact === nc;
+        const near = !same && nc.length >= 9 && compact.slice(0, 3) === nc.slice(0, 3) &&
+            digits(compact) === digits(nc) && levOne(compact, nc);
+        if (!same && !near) continue;
+        const text = [name, ...years, ...ft.slice(mk)].join(' ');
+        return { name, text, how: same ? 'spojený' : 'překlep' };
+    }
+    return null;
+}
+
 module.exports = {
+    repairName,
     spinoffAbbrev, rawTokens,
     stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,

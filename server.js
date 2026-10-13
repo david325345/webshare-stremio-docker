@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.4';
+const VERSION = '8.6.5';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -859,6 +859,16 @@ function judgeFile(f, plan) {
         }
         reason = (pe.season !== null && pe.season !== plan.season && pe.episode === plan.episode)
             ? `jiná sezóna (S${pe.season})` : `jiný díl (${pe.season !== null ? 'S' + pe.season : ''}E${pe.episode})`;
+    }
+    // zkomolený název ("The Simps.ons S35E03", "Simpsnovi S35E03") → posoudí se opravený název
+    // (rok, podtitul, číslo dílu dál platí); jen když žádný název nesedí ani částečně
+    if (reason === 'název nesedí' && !f._fixed) {
+        const fx = M.repairName(f.name, plan.names.map(n => n.text), plan.season, plan.episode);
+        if (fx) {
+            const j = judgeFile({ ...f, name: fx.text, _fixed: true }, plan);
+            if (j.ok) return { ...j, exact: false, reason: `zkomolený název (${fx.how})` };
+            return { ...j, reason: `${j.reason} [zkomolený]` };
+        }
     }
     return { ok: false, reason, s: seen ? seen.season : undefined, e: seen ? seen.episode : undefined };
 }

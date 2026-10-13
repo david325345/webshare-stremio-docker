@@ -504,7 +504,7 @@
    },
    {
     "n": "1Země gangů_S01E01_Sedět nebo konat.mp4",
-    "ok": false
+    "ok": true
    },
    {
     "n": "Země gangů S01E01 FHD WEB-DL 5.1 CZ dab.mkv",
@@ -23668,12 +23668,13 @@
    "episode": 1,
    "alEpisode": null,
    "alSeason": null,
-   "runtime": null
+   "runtime": null,
+   "epRuntime": null
   },
   "files": [
    {
-    "n": "Pohřešovaná_S01E01_Operátor.mkv",
-    "ok": true
+    "n": "Pohřešovaný S01E01 CZ 2012 by Stifler.avi",
+    "ok": false
    },
    {
     "n": "Pohřešovaná_S01E01_Operátor.mkv",
@@ -23684,11 +23685,111 @@
     "ok": false
    },
    {
-    "n": "Lovci.Pokladu.S02E12.Pohresovana.avi",
+    "n": "Missing-(Pohřešovaný)-S01E02-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E03-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E04-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E05-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E06-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E07-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E08-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E09-cztitl.avi",
+    "ok": false
+   },
+   {
+    "n": "Missing-(Pohřešovaný)-S01E10-cz.avi",
     "ok": false
    },
    {
     "n": "Lovci.Pokladu.S02E12.Pohresovana.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E03 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E04 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E05 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E06 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E07 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E08 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E09 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohresovany_2012_S01E10_CZ_DAB.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E02 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný S01E10 CZ 2012 by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný - 01 (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný - 02 (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný - 03 (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný - 04 (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Pohřešovaný - 05 (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Telo-jako-dukaz---2x03.-Pohresovany-TVRip-Cz-SS23.avi",
+    "ok": false
+   },
+   {
+    "n": "Pohresovany-02-Vymena (akcni 2012) CZ pep.avi",
     "ok": false
    },
    {
@@ -23697,6 +23798,10 @@
    },
    {
     "n": "Mrtvý bod - 1x03. Pohřešovaná (WEBRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Epitaf - 2x05. Pohřešovaný (WEBRip-Cz SS23 bt).avi",
     "ok": false
    },
    {
@@ -23720,15 +23825,15 @@
     "ok": false
    },
    {
-    "n": "Lovci.Pokladu.S02E12.Pohresovana.avi",
-    "ok": false
-   },
-   {
     "n": "Mrtvý bod-01x03-Pohřešovaná BDRip.XViD.CZ.avi",
     "ok": false
    },
    {
     "n": "Mrtvý.bod.01x03.Pohřešovaná.DVB-T.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "2x03.Pohřešovaný (Missing).avi",
     "ok": false
    },
    {
@@ -23748,7 +23853,211 @@
     "ok": false
    },
    {
+    "n": "11. Pohřešovaný.mkv",
+    "ok": false
+   },
+   {
     "n": "2 x 4 Pohřešovaná_x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Don.Matteo.S8E20.Stratená.dcéra.2011.1080p.WEB-DL.SK.mp4",
+    "ok": false
+   },
+   {
+    "n": "Detektívi zo severu S06E01 Stratená dcéra (sk,ger,AD,sk s AD)(sk tit).mkv",
+    "ok": false
+   },
+   {
+    "n": "Detektívi.zo.severu.S06E01Stratená.dcéra.2019.1080p.WEB-DL.SK.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dan Brown Stratený symbol S01E01 S01E02 skdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Dan Brown Stratený symbol S01E01 sk.mkv",
+    "ok": false
+   },
+   {
+    "n": "Do ohně Ztracená dcera S01E01 2024 CZ dabing HD 1080p.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dan Brown Stratený symbol S01E01 SK WEBDL 1080p HEVC.mp4",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S01E01.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E01.New.Kid.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Surface.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E01.S01E01.Tezky.pripad.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Cult-S01E01-WEBRip-[You're-Next].mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Following.S01E01.HDTV.CZ.titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Bates.Motel.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Awake.S01E01.WebRip.XviD.EngSub-Bruzsy.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suits.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Wilfred.US.S01E01.iNTERNAL.BDRip.XviD-INQUISITION.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Dallas.2012.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E01.HDTV.XviD-PTpOWeR.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Inbetweeners.US.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Middle.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Raising.Hope.S01E01.Unaired.Network.Pilot.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Made.in.Jersey.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Chicago.Fire.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Animal.Practice.S01E01.1080p.WEB-DL.DD5.1.H.264-ECI.mkv",
+    "ok": false
+   },
+   {
+    "n": "Beauty.and.the.Beast.2012.S01E01.PROPER.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suburgatory.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Happy.Endings.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Tron.Uprising.S01E01.Becks.Beginning.1080p.WEB-DL.DD5.1.H264-iT00NZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tron.Uprising.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.S01E01.Pilot.1080p.WEB-DL.DD5.1.H.264.-.HoodBag.mkv",
+    "ok": false
+   },
+   {
+    "n": "Deception.S01E01.HDTV.XviD-AFG.avi",
     "ok": false
    },
    {
@@ -23847,8 +24156,8 @@
     "ok": true
    },
    {
-    "n": "Last.Seen.S01E01.The.Dispatcher.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir.mkv",
-    "len": 3180,
+    "n": "Last.Seen.S01E01.MULTi.1080p.WEB.H264-GL0P.mkv",
+    "len": 3308,
     "ok": true
    },
    {
@@ -23951,27 +24260,11 @@
     "ok": false
    },
    {
-    "n": "Status Nazivu Last Seen Alive 2022-CZ.mkv",
-    "ok": false
-   },
-   {
     "n": "Status Nazivu Last Seen Alive 2022.mkv",
     "ok": false
    },
    {
     "n": "Status Nazivu Last Seen Alive 2022 HD CZ Dabing.mkv",
-    "ok": false
-   },
-   {
-    "n": "Status Nazivu Last Seen Alive 2022 HD CZ Dabing.mkv",
-    "ok": false
-   },
-   {
-    "n": "Status Nazivu Last Seen Alive 2022 HD CZ Dabing.mkv",
-    "ok": false
-   },
-   {
-    "n": "Status Nazivu Last Seen Alive 2022-CZ.mkv",
     "ok": false
    },
    {
@@ -23983,28 +24276,79 @@
     "ok": false
    },
    {
-    "n": "Last.Seen.In.Idaho.2018.1080p.WEBRip.x264-[YTS.AM]-eng-en.cs.mkv",
-    "ok": false
+    "n": "Last Seen S01E01 (2026) CZtitulky",
+    "len": 3179,
+    "ok": true
    },
    {
-    "n": "Don.Matteo.S8E20.Stratená.dcéra.2011.1080p.WEB-DL.SK.mp4",
-    "ok": false
+    "n": "Last.Seen.S01E01.The.Dispatcher.2160p.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265 CZ tit.mkv",
+    "len": 3179,
+    "ok": true
    },
    {
-    "n": "Detektívi zo severu S06E01 Stratená dcéra (sk,ger,AD,sk s AD)(sk tit).mkv",
-    "ok": false
+    "n": "Last.Seen.S01E01.The.Dispatcher.1080p CZ tit.mkv",
+    "len": 3179,
+    "ok": true
    },
    {
-    "n": "Detektívi.zo.severu.S06E01Stratená.dcéra.2019.1080p.WEB-DL.SK.mp4",
-    "ok": false
+    "n": "Last Seen 2026 S01E01 CZ.titulky",
+    "len": 3179,
+    "ok": true
    },
    {
-    "n": "Do ohně Ztracená dcera S01E01 2024 CZ dabing HD 1080p.mp4",
-    "ok": false
+    "n": "Last Seen S01E01 CZ Titulky.mkv",
+    "len": 3179,
+    "ok": true
    },
    {
-    "n": "Last.Resort.S01E01.HDTV.XviD-AFG.avi",
-    "ok": false
+    "n": "Last Seen s01e01 CZ- The Dispatcher.",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Last Seen S01e01 CZ- The Dispatcher.",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná  S01E01 CZ Titulky 5.1 HEVC 1080p (2026)",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná S01E01 (2026) CZtitulky",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná S01e01 CZ- The Dispatcher (2026).",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná S01E01 1080p CZtit",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná S01E01 CZ Titulky.mkv",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná_S01E01_Operátor",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná S01E01 CZ Dabing 1080p FULL HD",
+    "len": 3179,
+    "ok": true
+   },
+   {
+    "n": "Pohřešovaná S01E01 - Operátor CZ Dabing",
+    "len": 3179,
+    "ok": true
    }
   ]
  },
@@ -27543,7 +27887,7 @@
    },
    {
     "n": "Hra o tůny S01E01 1080p CZ Dabing.mkv",
-    "ok": false
+    "ok": true
    },
    {
     "n": "Americký drak - Jake Long S02E26 Hra o život (Game On).avi",
@@ -29996,6 +30340,2788 @@
    {
     "n": "Spiderman TAS 1994 05x12 - Spider valky 01. klony vazne  nemam v lasce.mp4",
     "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt0096697:35:3",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Simpsonovi",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Simpsonovci",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "The Simpsons",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "simpsonovi",
+    "simpsonovci",
+    "simpsons"
+   ],
+   "year": 1989,
+   "season": 35,
+   "episode": 3,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 22
+  },
+  "files": [
+   {
+    "n": "Simpsonovi 1080p CZ s34e00 - Simpsonovi a plusročí.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 DVDRip XviD CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-ve-filmu-(CZ CZ-tit.)-[enalan].avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi Ve Filmu CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (anim 2007 Cz).avi",
+    "ok": false
+   },
+   {
+    "n": "Dabing seriálu Simpsonovi   Martin Dejdar (Bart Simpson[1].mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ DVDrip.avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi z jiného úhle pohledu.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi Ve Filmu CZ (2007).mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007) CZ-EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007, CZ dab.).avi",
+    "ok": false
+   },
+   {
+    "n": "SIMPSONOVI - To nejlepší  #11.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi - vymyšlený virus_Vendeta.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi Ve Filmu.avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi Ve Filmu (2007) 1080p CZ dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-ve-filmu-HD-720p-Cz-(SUPERMARKON).mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-ve-filmu-CZ-2007-(Brrip-720p)-(Simpsons-Movie,The).avi",
+    "ok": false
+   },
+   {
+    "n": "[MI28CH] Simpsonovi Ve Filmu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi.avi",
+    "ok": false
+   },
+   {
+    "n": "SIMPSONOVI VE FILMU.avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (1080p BluRay x265 HEVC 10bit CZ DM).mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-ve-filmu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu.avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi Ve Filmu (2007) FHD 1080p CZ [1376].mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu [The Simpsons Movie 2007] (cz 1080p).mkv",
+    "ok": false
+   },
+   {
+    "n": "Nestor_KSB(KOB)_002_O_čem_je_kreslený_film_Simpsonovi.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007) 1080p CZ ....1279.....mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "34x00 Simpsonovi a plusročí-The Simpsons in Plusaversary.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu-The Simpsons movie(2007)CZ-ENG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi (To jsme my) ve filmu (2010),Locháč.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi 1080p CZ s24e00 - Maggie zasahuje.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi 1080p CZ s32e00 - Maggie a Rande s osudem.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi 1080p CZ s33e00 - Maggie a Síla se probouzí ze spánku.MKV",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi 1080p CZ s33e23 - S Lokim nejsou žerty.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi 1080p CZ s34e23 - Maggie v předaleké galaxii.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi CZ 1080p S35E11 Frinkensteins Monster.mkv",
+    "ok": false
+   },
+   {
+    "n": "simpsonovi.specialni.carodejnicky.dil.avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovci.a.plusrocie.Simpsonovi.a.plusroci.The.Simpsons.in.Plusaversary.WEB-DL.CZ.EN.wrweedw.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007) 1080p CZ-EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "798. Zábavní park Simpsonovi. Universal city Los Angeles.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovci - Starec a Lisa.mpg",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovci vo filme (r.2007 - 1920x800).avi",
+    "ok": false
+   },
+   {
+    "n": "survivor.s35e03.x265.mp4",
+    "ok": false
+   },
+   {
+    "n": "survivor s35e03 x265.mp4",
+    "ok": false
+   },
+   {
+    "n": "Smpsnvi.S35E03.Dum.za.vsechny.prachy.1080p.CZ.dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simps.ons S35E03 1080p CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Simpsnovi S35E03.mkv",
+    "ok": true
+   },
+   {
+    "n": "S35E03.zip",
+    "ok": false
+   },
+   {
+    "n": "Saturday Night Live - S35E03 - Drew Barrymore Regina Spektor.avi",
+    "ok": false
+   },
+   {
+    "n": "Pointless S35E03 HDTV x264-NGP.mp4",
+    "ok": false
+   },
+   {
+    "n": "Pointless S35E03 HDTV x264-NGP[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Pointless S35E03 720p WEB H264-JFF[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Pointless S35E03 720p WEB H264-JFF.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simps.novi S35E03  FHD 1080p CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "S35E03 - January 23, 1998.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dancing with the Stars S35E03 Viral Hits Night 1080p AMZN WEB-DL DDP5 1 H 264-LAZY.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing with the Stars S35E03 Viral Hits Night 720p DSNP WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing.With.The.Stars.US.S35E03.720p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing.With.The.Stars.US.S35E03.720p.WEB.h264-EDITH.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing.With.The.Stars.US.S35E03.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing.With.The.Stars.US.S35E03.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing.With.The.Stars.US.S35E03.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "Dancing With The Stars S35E03 720p WEB H264-JFF.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing with the Stars S35E03 Viral Hits Night 720p AMZN WEB-DL DDP5 1 H 264-LAZY.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dancing With The Stars S35E03 Viral Hits Night 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "DIY.SOS.S35E03.Ahmed.and.Rifats.Fresh.Start.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "DIY.SOS.S35E03.Ahmed.and.Rifats.Fresh.Start.1080p.HDTV.H264-DARKFLiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "DIY.SOS.S35E03.Ahmed.and.Rifats.Fresh.Start.1080p.WEBRip.x264-CBFM[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "DIY.SOS.S35E03.Ahmed.and.Rifats.Fresh.Start.1080p.WEBRip.x264-CBFM.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dateline NBC S35E03 2026 10 09 Heartless 1080p PCOK WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "33x23 S Lokim nejsou žerty-The Simpsons - The good, the Bart, and the Loki.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Itchy And Scratchy Show Opening Theme - The Simpsons (192kbit_AAC).m4a",
+    "ok": false
+   },
+   {
+    "n": "20 The War of the Simpsons.avi",
+    "ok": false
+   },
+   {
+    "n": "White Stripes - The Hardest Button to Button (The Simpsons version).mp4",
+    "ok": false
+   },
+   {
+    "n": "021_the_simpsons_predicted_the_future.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.Movie.2007.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "253-The Simpsons Special.mkv",
+    "ok": false
+   },
+   {
+    "n": "America's Most Wanted & The Simpsons.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons Movie (2007) CZ EN 1080p (Artard).m.mkv",
+    "ok": false
+   },
+   {
+    "n": "zhr-the.simpsons.movie.avi",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E01.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E02.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E02.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E03.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E03.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E04.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fortnite.x.The.Simpsons.S01E04.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons Movie 2007 1080p BluRay x264-OFT.mkv",
+    "ok": false
+   },
+   {
+    "n": "What The Simpsons Would Look Like in Real Life (AI Generated).mp4",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons - 1950´s Super Panavision 70.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons - 1950's Super Panavision 70.mp4",
+    "ok": false
+   },
+   {
+    "n": "THE SIMPSONS by Adam Sandler   Trailer Comedy movie.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons Live Action Opening.mp4",
+    "ok": false
+   },
+   {
+    "n": "Lisa The Simpson.m4v",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons S00E77 Extreme Makeover Homer Edition 1080p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S00E77.Extreme.Makeover.Homer.Edition.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S00E77.Extreme.Makeover.Homer.Edition.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons S00E77 Extreme Makeover Homer Edition 720p DSNP WEB-DL DD 5 1 H 264-playWEB[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E16.Extreme.Makeover.Homer.Edition.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons S37E16 Extreme Makeover Homer Edition 720p DSNP WEB-DL DD 5 1 H 264-playWEB[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S00E77.Extreme.Makeover.Homer.Edition.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E16.Extreme.Makeover.Homer.Edition.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons S00E77 Extreme Makeover Homer Edition 720p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S00E77.Extreme.Makeover.Homer.Edition.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E16.Extreme.Makeover.Homer.Edition.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons S37E16 Extreme Makeover Homer Edition 1080p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Simpsons S37E16 Extreme Makeover Homer Edition 720p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E16.Extreme.Makeover.Homer.Edition.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E16.Extreme.Makeover.Homer.Edition.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E16.Extreme.Makeover.Homer.Edition.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E00.Extreme.Makeover.Homer.Edition.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E00.Extreme.Makeover.Homer.Edition.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Simpsons.S37E00.Extreme.Makeover.Homer.Edition.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E03 CZ DABING",
+    "len": 1300,
+    "ok": true
+   },
+   {
+    "n": "Kdo přežije - Heroes vs. Healers vs. Hustlers 35x03 (CZ Titulky).mkv",
+    "ok": false
+   },
+   {
+    "n": "35x03 Dům za všechny prachy-McMansion&wife.mkv",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi NÁS VAROVALI, Že Rok 2026 Změní VŠECHNO.mp4",
+    "ok": false
+   },
+   {
+    "n": "SIMPSONOVI PŘEDPOVĚDĚLI FINÁLE MISTROVSTVÍ SVĚTA VE FOTBALE!.mp4",
+    "ok": false
+   },
+   {
+    "n": "5 věcí, které Simpsonovi „věděli o roce 2026.mp4",
+    "ok": false
+   },
+   {
+    "n": "Neuvěříte, Co Simpsonovi Právě Předpověděli Pro Rok 2026.mp4",
+    "ok": false
+   },
+   {
+    "n": "TOP 5 KDY BYLI SIMPSONOVI V ČESKU!.mp4",
+    "ok": false
+   },
+   {
+    "n": "TOP 5 KDY SIMPSONOVI PŘEDPOVĚDĚLI KATASTROFU.mp4",
+    "ok": false
+   },
+   {
+    "n": "TOP 10 VĚCÍ, KTERÉ PŘEDPOVĚDĚLI SIMPSONOVI!.mp4",
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu",
+    "len": 5204,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_S21E03_Epizoda_3",
+    "len": 1299,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_S25E04_Epizoda_4",
+    "len": 1281,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E05 CZ DABING",
+    "len": 1312,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S26E02 CZ DABING",
+    "len": 1302,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S23E17 CZ DABING-UP-",
+    "len": 1276,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E14 CZ DABING",
+    "len": 1322,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S22E16 CZ DABING",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E09 CZ DABING",
+    "len": 1304,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S23E17 CZ DABING",
+    "len": 1276,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S23E18 CZ DABING qertrag",
+    "len": 1301,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S22E16 CZ DABING qertrag",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S23E22 CZ DABING-UP-",
+    "len": 1312,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S22E05 CZ DABING",
+    "len": 1322,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_S23E17_CZ_DABING",
+    "len": 1276,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_S22E02_Epizoda_2",
+    "len": 1302,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E17 CZ DABING",
+    "len": 1302,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E18 CZ DABING",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_S21E09_[CZ_Dabing]",
+    "len": 1304,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S22E16 CZ DABING OGGY",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "simpsonovy_ve_filmu",
+    "len": 5204,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_S21E09_CZ_DABING",
+    "len": 6454,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E09 CZ DABING OGGY",
+    "len": 6454,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E09 CZ DABING T.O.P-M-",
+    "len": 6454,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E09 CZ DABING-UP-",
+    "len": 6454,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S26E04 CZ DABING",
+    "len": 1301,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_ve_filmu",
+    "len": 5204,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu-UP-",
+    "len": 5204,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi 2 světová válka",
+    "len": 1037,
+    "ok": false
+   },
+   {
+    "n": "#Simpsonovi ve filmu",
+    "len": 5204,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_ve_filmu_2007_[CZ_Dabing]",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E18 CZ DABING",
+    "len": 1299,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu CZ DABING",
+    "len": 5204,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-S21E17-CZ-DABING",
+    "len": 1302,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-S23E17-CZ-DABING",
+    "len": 1276,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E04 CZ DABING",
+    "len": 1299,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi_ve_filmu_(2007)_[CZ_Dabing]",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007) [CZ Dabing]-UP-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E11 CZ DABING",
+    "len": 1299,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi-ve-filmu-2007-CZ-dab",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab A+B",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 [CZ Dabing]-UP-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab T.O.P-M-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ DABING_TOPKVALITA",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab ROY",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007) [CZ Dabing] T.O.P-M-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab GO",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 [CZ Dabing] T.O.P-M-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab-UP-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab TopCZ",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu (2007) [CZ Dabing] OGGY",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 [CZ Dabing] OGGY",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab ByArm  T.O.P-M-",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab OGGY",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E14 CZ DABING",
+    "len": 1299,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E08 CZ DABING",
+    "len": 1475,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E15 CZ DABING",
+    "len": 1299,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi ve filmu 2007 CZ dab BeDev2026",
+    "len": 5207,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E09 CZ DABING T.O.P",
+    "len": 6454,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S21E09 CZ DABING T.O.P Movie",
+    "len": 6454,
+    "ok": false
+   },
+   {
+    "n": "Simpsonovi S35E02 CZ DABING",
+    "len": 1299,
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt31510819:1:2",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Země gangů",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Krajina gangov",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "MobLand",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "zeme",
+    "gangu",
+    "krajina",
+    "gangov",
+    "mobland"
+   ],
+   "year": 2025,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Země gangů_S01E02_Puzzle.mkv",
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 FHD WEB-DL 5.1 CZ dab.mkv",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 2160p CZ EN Dabing tit.mkv",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů_S01E02_Puzzle.mp4",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "2Země gangů S01E02 CZ dab°.mp4",
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02-10 2025 CZ dab 1080p - Puzzle.mkv",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 Puzzle CZ  2025.mkv",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 MobLand FHD 1080p CZ EN.mkv",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "Země gangů - S01E02 - Puzzle cz.mkv",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02-10 2025 CZ dabing 2160p UHD - Puzzle.mkv",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Zeme.gangu.S01E02.2160p.HDR10+.DV.WEBRip.6CH.CZ.x265.HEVC-BB.mkv",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02.Puzzle.mkv",
+    "len": 3109,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E01 FHD WEB-DL 5.1 CZ dab.mkv",
+    "len": 3561,
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E01_Sedět nebo konat.mkv",
+    "len": 3561,
+    "ok": false
+   },
+   {
+    "n": "Zeme gangu s01e01 cz dabing.mp4",
+    "len": 3561,
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E03_Plán B.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E03 CZ dab°.mp4",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E03 FHD SKY WEB-DL 5.1 CZ dab..mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E04 FHD SKY WEB-DL CZ dab..mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E04_Past na krysy.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E04 CZ dab°.mp4",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E01 2160p CZ EN Dabing tit.mkv",
+    "len": 3560,
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E03 2160p CZ EN Dabing tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E04 2160p CZ EN Dabing tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E05 FHD Sky WEB-DL 5.1 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E05_Pohřeb pro kamaráda.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E06 FHD Sky WEB-DL 5.1 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E05 2160p CZ EN Dab tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E06 2160p CZ EN Dab tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E06_Antverpské blues.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E07 FHD Sky WEB-DL 5.1 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E07 2160p CZ EN Dab tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E07_Křižovatky.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E01_Sedět nebo konat.mp4",
+    "len": 3561,
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E04_Past na krysy.mp4",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E05_Pohřeb pro kamaráda.mp4",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E06_Antverpské blues.mp4",
+    "ok": false
+   },
+   {
+    "n": "Země gangů_S01E07_Křižovatky.mp4",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E02.1080p.x265-ELiTE.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand.S01E02.720p.x264-FENiX.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand S01E02 Jigsaw Puzzle with Audio Description 1080p AMZN WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand S01E02 720p 10bit DS4K APTV WEBRip x265 HEVC [Org JHS Hindi AAC 2.0 ~128Kbps + English AAC 2.0] ESub - Immortal.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand S01E02 Jigsaw Puzzle 1080p Blu-ray 10Bit TrueHD5 1 H265-d3g.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand S01E02 Jigsaw Puzzle 1080p Blu-ray 10Bit TrueHD5 1 H265-d3g[EZTVx.to].mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand.S01E02.Jigsaw.Puzzle.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "MobLand.S01E02.Jigsaw.Puzzle.1080p.AMZN.WEB-DL.DDP5.1.H.264-G66.mkv",
+    "len": 3142,
+    "ok": true
+   },
+   {
+    "n": "MobLand.S01E02.Jigsaw.Puzzle.1080p.AMZN.WEB-DL.DDP5.1.H.265-G66.mkv",
+    "len": 3142,
+    "ok": true
+   },
+   {
+    "n": "MobLand 2025 S01E02 Jigsaw Puzzle 1080p WEB-DL HEVC x265 5.1 BONE.mkv",
+    "len": 3167,
+    "ok": true
+   },
+   {
+    "n": "Mobland 2025 S01E02 1080p BluRay HEVC x265 5.1 BONE.mkv",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "mobland.s01e01.stick.or.480p.web.dl.x264.mkv",
+    "len": 3559,
+    "ok": false
+   },
+   {
+    "n": "MobLand S01E01 Stick or Twist 720p AMZN WEB-DL DDP5 1 H 264-RAWR.mkv",
+    "len": 3559,
+    "ok": false
+   },
+   {
+    "n": "MobLand S01E01 Stick or Twist 2160p AMZN WEB-DL DDP5 1 H 265-FLUX.mkv",
+    "len": 3559,
+    "ok": false
+   },
+   {
+    "n": "MobLand - S01E01 - Stick or Twist cz-tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand S01E10 The Beast in Me 720p AMZN WEB-DL DDP5 1 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand - S01E10 - The Beast in Me cz-tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E10.The Beast in Me.1080p.HEVC.x265 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E01 MobLand FHD 1080p CZ EN.mkv",
+    "len": 3561,
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E03 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E04 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E05 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E06 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E07 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E08 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E09 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Země gangů S01E10 MobLand FHD 1080p CZ EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E01.1080p.x265-ELiTE.mkv",
+    "len": 3559,
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E04.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E03.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E05.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E07.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E06.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E08.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E09.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E10.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E01.720p.x264-FENiX.mkv",
+    "len": 3559,
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E04.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E03.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E06.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E07.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E08.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E09.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E10.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand S01E09 Beggars Banquet 2160p AMZN WEB-DL DDP5 1 H 265-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand.S01E09.1080p.WEB.h264-DiRT.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand S01E06 1080p x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MobLand 2025 S01E04 Rat Trap 1080p WEB-DL HEVC x265 5.1 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zákon gangu S01E02 (Sons Of Anarchy).avi",
+    "ok": false
+   },
+   {
+    "n": "Krajinou vina S01E02 - Aurelius.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zona-gangu s01e02 cz dabing.mp4",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E02.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Major.Crimes.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Tokijske gangy (Inside Tokyo's Gangland) 2011.avi",
+    "ok": false
+   },
+   {
+    "n": "Nashville.2012.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E02.Monitored.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Velkovlak-(2).Velkovlak-S01E02.Lovok.DVB-T.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "VP.E02.S01E02.Zasnubni.tanec.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E02.avi",
+    "ok": false
+   },
+   {
+    "n": "Mistresses.S01E02.pl-T0Bi.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Following.S01E02.HDTV.CZ.titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "men_in_trees_cz_s01e02.avi",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E02.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E02.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E02.1.1.3.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E02.REPACK.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suits.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E02.REPACK.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alphas.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Inbetweeners.US.S01E02.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E02.HDTV.x264-ASAP.mp4",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E02.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Krajina gangov s01e02",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "MobLand (S01E02) CZ dabing",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Mobland S01E02 CZ DABING",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "M.o.b.land+S01E02+CZ+Titulky+2025+1080p [Čupakabra]",
+    "len": 3106,
+    "ok": true
+   },
+   {
+    "n": "MobLand S01E02 CzTit",
+    "len": 3106,
+    "ok": true
+   },
+   {
+    "n": "MobLand - S1E2 EN",
+    "len": 3106,
+    "ok": true
+   },
+   {
+    "n": "MobLand - S1E2 Jigsaw Puzzle EN",
+    "len": 3106,
+    "ok": true
+   },
+   {
+    "n": "Země gangů MobLand S01E02 2025 CZ dabing 1080p",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "#Země gangů S01E02_CZ_DABING",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02  T.O.P Movie",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 A+B",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země_gangů_S01E02_10_2025_CZ_dab_1080p_Puzzle Dop.",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02  T.O.P-M-",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země_gangů_S01E02_10_2025_CZ_dab_1080p_Puzzle OGGY",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 ROY",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 GO",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dab 1080p Puzzle-UP-",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dab 1080p Puzzle T.O.P-M-",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dabing 1080p Puzzle T.O.P-M-",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dabing 1080p Puzzle-UP-",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země_gangů_S01E02_10_2025_CZ_dab_1080p_Puzzle O.G.",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dab 1080p Puzzle",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 EN+CZ DABING 2160p",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 Puzzle CZ DABING 1080p.",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02-10 2025 CZ dab 1080p - Puzzle",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dabing 1080p Puzzle T.O.P Movie",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 (BOU)",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01e02 CZ dab by arafat- Jigsaw Puzzle.DD",
+    "len": 3112,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dabing 1080p Puzzle T.O.P",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dab 1080p Puzzle T.O.P Movie",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země_gangů_S01E02_10_2025_CZ_dab_1080p_Puzzle",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02   (Top Movie)",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 10 2025 CZ dab 1080p Puzzle T.O.P",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 (BoBo)",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02-10 2025 CZ dabing 2160p UHD - Puzzle",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "Země.Gangů.CZdab.S01E02.By.mina.",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země.Gangů.CZdab.S01E02.TOP.Kvalita",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů_S01E02_Puzzle",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01e02 CZ dab(CZ-GB) by arafat- Jigsaw Puzzle_q2 MobLand",
+    "len": 3112,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 Puzzle    .mkv",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země_Gangů_CZdab_S01E02 TOP_Kvalita",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 1080p CZ",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země.Gangů.CZdab.S01E02.TOP.Kvalita XD ",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země.Gangů.CZdab.S01E02.KVALITNÍ",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 PlnáKvalita}",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země Gangů CZdab S01E02 ¤OstrýObraz¤",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země.Gangů.CZdab.S01E02 JOKI",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země+gangů+S01E02+Puzzle+CZ+DABING+1080p.",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 1080p CZ/EN",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 Puzzle",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 CZ Dabing HEVC 1080p",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02-Puzzle-HD-720p-CZ",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 4K CZ",
+    "len": 3107,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02.CZ.WebRip.1080p.10b.HEVC.C4U_Puzzle",
+    "len": 3108,
+    "ok": true
+   },
+   {
+    "n": "Země gangů S01E02 CZdab",
+    "len": 3108,
+    "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt30051064:1:2",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "American Hostage",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "american",
+    "hostage"
+   ],
+   "year": 2026,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "American.Hostag.S01e02.Vff.Ad.Web.Ac3.5.1.H264.mp4",
+    "ok": true
+   },
+   {
+    "n": "American.Hostag.S01e02.Vostfr.Ad.Web.Ac3.5.1.H264.mp4",
+    "ok": true
+   },
+   {
+    "n": "American.Hostag.S01e01.Vostfr.Ad.Web.Ac3.5.1.H264.mp4",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 720p AMZN WEB-DL DDP5 1 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.1080p.WEB.h264-ETHEL.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 1080p AMZN WEB-DL DDP5 1 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 1080p AMZN WEB-DL DDP5 1 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 720p AMZN WEB-DL DDP5 1 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 720p x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 1080p x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 720p WEB H264-JFF.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.WIBC.Mystery.Science.Theater.720p.H.264.mp4",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater with Audio Description 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 2160p AMZN WEB-DL DDP5 1 H 265-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E05 WIBC Mystery Science Theater 2160p AMZN WEB-DL DDP5 1 H 265-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Hostage.S01E05.WIBC.Mystery.Science.Theater.1080p.AMZN.WEB-DL.ENG.ITA.DDP5.1.H264-TBK.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Americans.2013.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Americans.2013.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Secret.Life.of.the.American.Teenager.S01E02.HDTV.XviD-0TV.avi",
+    "ok": false
+   },
+   {
+    "n": "American.Odyssey.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "American.Odyssey.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Wet.Hot.American.Summer.S01E02.WEBRip.x264-TASTETV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Declassified-Untold.Stories.of.American.Spies.S01E02.The.Hunt.for.Saddam.720p.HDTV.x264-DHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.American.West.S01E02.1080p.WEB-DL.x264-CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Vandal S01E02.mp4",
+    "ok": false
+   },
+   {
+    "n": "American.Gods.S01E02.720p.BluRay.X264-REWARD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dávní Američané 2021 S01E02 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Masakr ve Waco_Waco.American.Apocalypse.S01E02.CZ.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-WDYM.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlý americký sen S01E02 -  American Nightmare S01E02 CZ DABING 2024.mp4",
+    "ok": false
+   },
+   {
+    "n": "American.Gods.S01E02.720p.AMZN.WEB-DL.AAC.x265.HEVC~jDM (CzTitulky).mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Primeval.S01E02.1080p.NF.WEB-DL.DD 5.1.Atmos.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Primeval  - S01E02  - Episode 2 cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Primeval.S01E02.1080p.CZsub.WEB.H264.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Primeval S01E02 1080p CZAudio NF WEB DL H 264.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Primeval S01E02 720p CZsub NF WEB-DL DDP5 1 Atmos H 264.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Primeval  - S01E02 - Epizoda 2 4K cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "American Primeval S01E02 720p CZsub NF WEB-DL DDP5 1 Atmos H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "American.Woman.S01E02.Changes.720p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Griffs.Great.American.South.S01E02.Atlanta.and.Dahlonega.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "American Hostage S01E02 CZ titulky",
+    "len": 2996,
+    "ok": true
+   },
+   {
+    "n": "American Hostage S01E02 1080p CZtit",
+    "len": 2978,
+    "ok": true
+   },
+   {
+    "n": "American Hostage S01E02 EN.mkv",
+    "len": 2996,
+    "ok": true
+   },
+   {
+    "n": "American Hostage S01E02",
+    "len": 2980,
+    "ok": true
+   },
+   {
+    "n": "American Hostage S01E02 CZtitulky",
+    "len": 2996,
+    "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt31131310:2:1",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "Mission: Yozakura Family",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Mission",
+     "kind": "franchise",
+     "short": true,
+     "full": "Mission: Yozakura Family"
+    },
+    {
+     "text": "Yozakura Family",
+     "kind": "franchise",
+     "short": true,
+     "full": "Mission: Yozakura Family"
+    },
+    {
+     "text": "Yozakura-san Chi no Daisakusen 2nd Season",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mission of Yozakura Family 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mission: Yozakura Family (2026)",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mission: Yozakura Family - Saison 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mission: Yozakura Family - Season 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mission: Yozakura Family - Staffel 2",
+     "kind": "anime",
+     "short": false
+    }
+   ],
+   "allow": [
+    "mission",
+    "yozakura",
+    "family",
+    "san",
+    "chi",
+    "no",
+    "daisakusen",
+    "2nd",
+    "season",
+    "2",
+    "2026",
+    "saison",
+    "staffel"
+   ],
+   "year": 2024,
+   "season": 2,
+   "episode": 1,
+   "alEpisode": 1,
+   "alSeason": 2,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Mission.Yozakura.Family.S02E01.720p.DSNP.WEB-DL.JPN.AAC2.0.H.264.ESub-ToonsHub.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.AI.Comes.To.The.Yozakura.Family-Mini.Kyoichiro.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.1080p.DSNP.WEB-DL.JPN.AAC2.0.H.264.ESub-ToonsHub.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission Yozakura Family S02E01 AI Comes To The Yozakura Family - Mini Kyoichiro 1080p DSNP WEB-DL AAC2 0 H 264-Kitsune.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.1080p.WEB.h264-QUiNTESSENCE.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.1080p.WEB.h264-QUiNTESSENCE[EZTVx.to].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission Yozakura Family S02E01 SUBFRENCH 720p DSNP WEB-DL AAC2.0 H.264-Tsundere-Raws.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.REPACK.1080p.DSNP.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission Yozakura Family S02E01 SUBFRENCH 1080p DSNP WEB-DL AAC2.0 H.264-Tsundere-Raws.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.AI.Comes.To.The.Yozakura.Family-Mini.Kyoichiro.REPACK.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.AI.Comes.To.The.Yozakura.Family-Mini.Kyoichiro.REPACK2.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.Dub.Al.Comes.To.The.Yozakura.Family-Mini.Kyoichiro.DUB.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "len": 1466,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E01.AI.Comes.to.the.Yozakura.Family-Mini.Kyoichiro.1080p.DSNP.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "Mission.Yozakura.Family.2024.S02E01.1080p.DSNP.WEB-DL.DUAL.AAC2.0.H.264-AnoZu.mkv",
+    "len": 1469,
+    "ok": true
+   },
+   {
+    "n": "Mission Yozakura Family S02E01 1080p DSNP WEB-DL AAC2 0 H 264 DUAL-BiOMA.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "The Backyardigans S02E01 Mission to Mars.mp4",
+    "ok": false
+   },
+   {
+    "n": "Greyzone - S01E02 (First Mission - Første Mission - Första Uppdraget).mkv",
+    "ok": false
+   },
+   {
+    "n": "LUTINEN 4 ✠  COBRA MISSION 1  1986  (ITAL Dab.)  (Cobra Mission  88 min.  Oliver Tobias, Christopher Connelly).avi",
+    "ok": false
+   },
+   {
+    "n": "LUTINEN 4 ✠  COBRA MISSION 2  1989  (ENG Dab. - PL-RD - VHS)  (Cobra Mission 2  90 min.  Brett Baxter Clark, Jeff Moldovan).avi",
+    "ok": false
+   },
+   {
+    "n": "Nové trable staré Christine II (9) - Mission Impossible.Nove trable stare Christine S02E09 - Mission Impossible.Lovok.DVB-T.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Snoopy in Space S01E11 Mission 11 The Next Mission 1080p ATVP WEB-DL DD5 1 H 264-MZABI.mkv",
+    "ok": false
+   },
+   {
+    "n": "Snoopy in Space S01E11 Mission 11 The Next Mission 2160p ATVP WEB-DL DD5 1 DV HDR H 265-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E08.Ais.Errand-Mutsumis.Major.Diet.Mission.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E08.Ais.Errand-Mutsumis.Major.Diet.Mission.1080p.DSNP.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S02E08 Ais Errand - Mutsumis Major Diet Mission 1080p DSNP WEB-DL AAC2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E08.Dub.Ais.Errand-Mutsumis.Major.Diet.Mission.DUB.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E08.Ais.Errand-Mutsumis.Major.Diet.Mission.1080p.DSNP.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Snoopy in Space - Mission 11  (The Next Mission).mp4",
+    "ok": false
+   },
+   {
+    "n": "Snoopy in Space - Mission 14 (A New Mission).mp4",
+    "ok": false
+   },
+   {
+    "n": "Mission Park [2013] DVDRip XViD-juggs[ETRG].avi",
+    "ok": false
+   },
+   {
+    "n": "Pokemon Black & White Adventures in Unova - 1607 - Mission; Defeat Your Rival! {C_P}.avi",
+    "ok": false
+   },
+   {
+    "n": "MISSION LONDON.avi",
+    "ok": false
+   },
+   {
+    "n": "Mise na Mars - MISSION TO MARS sci-fi cz dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Agenti-dementi-2-Mortadelo-and-Filemon--Mission---Save-the-Planet---(CZ-Dabing,-BEZ-tit,-Komedie-Rodinný,-Španělsko,-2008.avi",
+    "ok": false
+   },
+   {
+    "n": "04x05 Mercy Mission.avi",
+    "ok": false
+   },
+   {
+    "n": "Apollo secret Mission Part 1-3 Original Video.avi",
+    "ok": false
+   },
+   {
+    "n": "Apollo secret Mission Part 2-3 Original Video.avi",
+    "ok": false
+   },
+   {
+    "n": "Apollo secret Mission Part 3-3 Original Video.avi",
+    "ok": false
+   },
+   {
+    "n": "Dug-s-Special-Mission-2009-BRrip-MultiDub-CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor Who 03x02x01 MISSION TO THE UNKNOWN Animated.mp4",
+    "ok": false
+   },
+   {
+    "n": "3x09.Do krabice, nikdy více (Mission Inboxible).avi.mp4",
+    "ok": false
+   },
+   {
+    "n": "Police Academy - Mission to Moscow 1994 (1080p Bluray x265 HEVC 10bit AAC 2.0 Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Extraordinary.Mission.2017.1080p.BluRay.AC3.x264-MAJO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Extraordinary Mission 2017.CZ titl vloženy.Action, Crime .avi",
+    "ok": false
+   },
+   {
+    "n": "Z.Nation.S04E04.A.New.Mission.Keep.Moving.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Aladdin - 02x16 - Mission Imp Possible - TVrip - CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Train.Mission.2018.1080p.BluRay.AC3.x264-MAJO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fushigi no Umi no Nadia - 01x08 - Mission to Rescue Nadia.mkv",
+    "ok": false
+   },
+   {
+    "n": "Attrition Final Mission 2018 WEB-DL. cz.tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E07.At.the.Old.Yozakura.Residence.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E07.At.the.Old.Yozakura.Residence.1080p.DSNP.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S02E07 At the Old Yozakura Residence 1080p DSNP WEB-DL AAC2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E07.Dub.At.the.Old.Yozakura.Residence.DUB.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E07.At.the.Old.Yozakura.Residence.1080p.DSNP.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E12.Lets.Be.a.Family.Again.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E12.Lets.Be.a.Family.Again.1080p.DSNP.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S02E12 Lets Be a Family Again 1080p DSNP WEB-DL AAC2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E12.Dub.Lets.Be.A.Family.Again.DUB.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E12.Lets.Be.a.Family.Again.1080p.DSNP.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E13.Family.Restaurant.Meeting.With.Dad.1080p.DSNP.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission.Yozakura.Family.S02E13.Family.Restaurant.Meeting.With.Dad.1080p.DSNP.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E01 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E02 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "len": 1436,
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E03 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E04 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E05 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E06 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E07 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E08 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E09 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E11 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E12 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E10 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E13 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E14 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E17 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E16 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E15 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E18 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E19 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E20 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E21 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E22 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mission Yozakura Family S01E24 VOSTFR 1080p WEB H.264 AAC -Tsundere-Raws (DSNP).mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san Chi no Daisakusen 2nd Season - 01 CZ + SK.mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 [720p DSNP WEB-DL AVC AAC][C07AF9C0].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 [1080p DSNP WEB-DL AVC AAC][39F7C5E5].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 [480p DSNP WEB-DL AVC AAC][D39F7B1D].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 [1080p DSNP WEBRip HEVC AAC][4086D8EB].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Absolute] Yozakura-San Chi No Daisakusen 2Nd Season - 01[WEBRIP][1080P][H.264][AAC] [5696A50D].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 (REPACK) [480p DSNP WEB-DL AVC AAC][MultiSub][6CACB33B].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 (REPACK) [720p DSNP WEB-DL AVC AAC][MultiSub][517992E4].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 (REPACK) [1080p DSNP WEB-DL AVC AAC][MultiSub][DB5DA196].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 01 (REPACK) [1080p DSNP WEBRip HEVC AAC][MultiSub][C47D7A86].mkv",
+    "len": 1461,
+    "ok": true
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 [720p DSNP WEB-DL AVC AAC][D2EFD2C1].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 [1080p DSNP WEB-DL AVC AAC][B728D1A8].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 [480p DSNP WEB-DL AVC AAC][848294E2].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 [1080p DSNP WEBRip HEVC AAC][7630C0DE].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 [720p DSNP WEB-DL AVC AAC][B0C811C3].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 [1080p DSNP WEB-DL AVC AAC][AFD10345].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 [480p DSNP WEB-DL AVC AAC][9F139816].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 [1080p DSNP WEBRip HEVC AAC][551294DF].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 [480p DSNP WEB-DL AVC AAC][17A24D35].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 [720p DSNP WEB-DL AVC AAC][2466CCC9].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 [1080p DSNP WEB-DL AVC AAC][11EC0B74].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 [1080p DSNP WEBRip HEVC AAC][535679FC].mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san_Chi_no_Daisakusen_2_Season_[01].mkv",
+    "len": 1461,
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san_Chi_no_Daisakusen_2_Season_[01]_[HEVC].mkv",
+    "len": 1461,
+    "ok": false
+   },
+   {
+    "n": "[Dynamis One] Yozakura-san Chi no Daisakusen 2nd Season - 31 (ABEMA 1920x1080 AVC AAC MKV) [1D4306E8].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 (REPACK) [480p DSNP WEB-DL AVC AAC][MultiSub][EB8787A0].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 (REPACK) [480p DSNP WEB-DL AVC AAC][MultiSub][4B2D20C1].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 (REPACK) [720p DSNP WEB-DL AVC AAC][MultiSub][CE27447A].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 (REPACK) [1080p DSNP WEB-DL AVC AAC][MultiSub][B1DA0044].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 (REPACK) [720p DSNP WEB-DL AVC AAC][MultiSub][6E3E3B41].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 (REPACK) [1080p DSNP WEB-DL AVC AAC][MultiSub][977DC131].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 (REPACK) [1080p DSNP WEB-DL AVC AAC][MultiSub][2C525036].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 (REPACK) [480p DSNP WEB-DL AVC AAC][MultiSub][BC7B530F].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 (REPACK) [720p DSNP WEB-DL AVC AAC][MultiSub][FCEAA031].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 04 (REPACK) [1080p DSNP WEBRip HEVC AAC][MultiSub][79BBC2DC].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 05 [480p DSNP WEB-DL AVC AAC][MultiSub][BCD60319].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 05 [720p DSNP WEB-DL AVC AAC][MultiSub][050C0C7E].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 03 (REPACK) [1080p DSNP WEBRip HEVC AAC][MultiSub][C5BBEE99].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 05 [1080p DSNP WEB-DL AVC AAC][MultiSub][87FF494D].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 02 (REPACK) [1080p DSNP WEBRip HEVC AAC][MultiSub][A2B1AF54].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 05 [1080p DSNP WEBRip HEVC AAC][MultiSub][3B0FE329].mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san Chi no Daisakusen 2nd Season - 02 CZ + SK.mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san Chi no Daisakusen 2nd Season - 03 CZ + SK.mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san Chi no Daisakusen 2nd Season - 04 CZ + SK.mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san Chi no Daisakusen 2nd Season - 05 CZ + SK.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Dynamis One] Yozakura-san Chi no Daisakusen 2nd Season - 32 (ABEMA 1920x1080 AVC AAC MKV) [2B874657].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 06 [480p DSNP WEB-DL AVC AAC][MultiSub][7AD7ECED].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Yozakura-san Chi no Daisakusen 2nd Season - 06 [1080p DSNP WEB-DL AVC AAC][MultiSub][59E50470].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Zone.Survival.Mission.S02E01.1st.ZONE.1080p.DSNP.WEB-DL.DDP5.1.H.264-APEX",
+    "len": 3716,
+    "ok": false
+   },
+   {
+    "n": "[Anime Time] One Piece - 0200 - Luffy and Sanji's Daring Rescue Mission!",
+    "len": 1440,
+    "ok": false
+   },
+   {
+    "n": "Bear Grylls Mission Survive ENG - S02E01",
+    "len": 2799,
+    "ok": false
+   },
+   {
+    "n": "Missions S02E01 CZtitulky",
+    "len": 1394,
+    "ok": false
+   },
+   {
+    "n": "Dawn Of The Croods 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Taking.of.Pelham.1.2.3.ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Královská dvojčata S02E02 Legendární králové, 2. část (Kings of Legend, Part 2).avi",
+    "ok": false
+   },
+   {
+    "n": "Jistě,-pane-premiére-[2×01].mp4",
+    "ok": false
+   },
+   {
+    "n": "Yu Yu Hakusho - 034 - A Desperate Battle, With a 0.05- Chance of Winning! [ver. 2][BluRay][960p][Dual Audio].mkv",
+    "ok": false
+   },
+   {
+    "n": "X Files S03E12- War of the Coprophages (05-01-1996).avi",
+    "ok": false
+   },
+   {
+    "n": "KRIMINÁLKA-STARÉ-MĚSTO-2-01.díl-Xvid-720x404.avi",
+    "ok": false
+   },
+   {
+    "n": "Batman-Beyond-2-01-Splicers.avi.part",
+    "ok": false
+   },
+   {
+    "n": "Batman Beyond s03e11 - Curse of Kobra (Part 2).avi",
+    "ok": false
+   },
+   {
+    "n": "Samurai Champloo - 21 - Elegy of Entrapment (Verse 2).mkv",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01--Rozsirujici-se-spirala.avi",
+    "ok": false
+   },
+   {
+    "n": "Best Fails of the Week 2 January 2014.mp4",
+    "ok": false
+   },
+   {
+    "n": "legion-of-super-heroes-2x02-the-man-from-the-edge-of-tomorrow-part-2.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda - 2-01 Nakonec nadešla její hodina - 2.část (TVRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "El-Hazard - The Magnificent World 2 - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Buddenbrookovi - Buddenbrooks_-_The_Decline_of_a_Family (2008) - část 1(2).mp4",
+    "ok": false
+   },
+   {
+    "n": "Buddenbrookovi - Buddenbrooks_-_The_Decline_of_a_Family (2008) - část 2(2).mp4",
+    "ok": false
+   },
+   {
+    "n": "Orguss 2 - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Prolhané_krásky_(CZ)_2×01.avi",
+    "ok": false
+   },
+   {
+    "n": "Dallas-2-01.dí-Shledání-1.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "2 01 - Clawed Butler.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tales of the Past 2.wmv",
+    "ok": false
+   },
+   {
+    "n": "[sage] Sekaiichi Hatsukoi 2 - 01 (2011) [720p][10bit][ENsubs].mkv",
+    "ok": false
+   },
+   {
+    "n": "Atelier Escha & Logy - Alchemists of the Dusk Sky 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[NG] Kakumeiki Valvrave 2 - 01 (13).mkv",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Record_of_Lodoss_War_TV_-_01_(241E3646).mkv",
+    "ok": false
+   },
+   {
+    "n": "cerna-zmije-2-01-zvony-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "4x09 - Year of Hell - Part 2.avi",
+    "ok": false
+   },
+   {
+    "n": "Code of a Killer (2015) 01 x 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Code of a Killer (2015) 01 x 02.mkv",
+    "ok": false
+   },
+   {
+    "n": "HNS_GTA_2_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Zazracna planeta 2 01 - Tajemství bouřlivé minulosti.mp4",
+    "ok": false
+   },
+   {
+    "n": "02x01 - Wolffův-revír-2_01-Vlčice.mp4",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Seraph of the End S2 - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "Doktorka-Quinnová---05x26-Okamžik-pravdy---část-2.-(Moment-of-Truth-Part-2).avi",
+    "ok": false
+   },
+   {
+    "n": "House of the Dead 2 (2005) CZ-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "The-Lord-of-the-Rings-2-The-Two-Towers-Extended-2002-BRrip-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The-Lord-of-the-Rings-2-The-Two-Towers-Original-v1-2002-DVDrip-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The-Lord-of-the-Rings-2-The-Two-Towers-Original-v2-2002-DVDrip-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The-Lord-of-the-Rings-2-The-Two-Towers-Original-v3-2002-DVDrip-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Bubuki_Buranki_2_01_(13).mp4",
+    "ok": false
+   },
+   {
+    "n": "nejvetsi-tankove-bitvy-2-01-korea-pres-MultiLoad.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "HNS_Tales_of_Zestiria_the_Cross_01_(13).mp4",
+    "ok": false
+   },
+   {
+    "n": "[Tanime ne Mund] Super Lovers 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[Tanime ne mund] Kono Subarashii Sekai ni Shukufuku o! 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The King of Fighters Another Day - 01 All Out.mkv",
+    "ok": false
+   },
+   {
+    "n": "Chain_Chronicle_Movie_2_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[CBM]_Michiko_&_Hatchin_-_06_-_The_Saudade_of_Fools,_Parte_2_[720p]_[2727ED5A].mkv",
+    "ok": false
+   },
+   {
+    "n": "[gg]_MS_IGLOO_2_-_01_[720p]_[65AD5176].mkv",
+    "ok": false
+   },
+   {
+    "n": "Yozakura-san Chi no Daisakusen 2nd Season - 01 CZ + SK",
+    "len": 1460,
+    "ok": true
    }
   ]
  }

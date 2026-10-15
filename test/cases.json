@@ -15681,7 +15681,7 @@
    },
    {
     "n": "[HanF] Watashi ga Motenai no wa Dou Kangaete mo Omaera ga Warui! - 01 HD(1280x720 H264 AAC).mp4",
-    "ok": false
+    "ok": true
    },
    {
     "n": "[HanF] Watashi ga Motenai no wa Dou Kangaete mo Omaera ga Warui! - 02 HD(1280x720 H264 AAC).mp4",
@@ -33122,6 +33122,1221 @@
     "n": "Yozakura-san Chi no Daisakusen 2nd Season - 01 CZ + SK",
     "len": 1460,
     "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt41298100:1:2",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Reborn as a Space Mercenary",
+     "kind": "franchise",
+     "short": true,
+     "full": "Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!"
+    },
+    {
+     "text": "I Woke Up Piloting the Strongest Starship!",
+     "kind": "franchise",
+     "short": true,
+     "full": "Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!"
+    },
+    {
+     "text": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node, Ikkodate Mezashite Youhei toshite Jiyuu ni Ikitai",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Ikkodate Mezashite Youhei Toshite Jiyuu ni Ikitai",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mezametara Saikyou Soubi to Uchuusen-mochi datta no de",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Mezameza",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Saikyosoubi",
+     "kind": "anime",
+     "short": false
+    }
+   ],
+   "allow": [
+    "reborn",
+    "as",
+    "space",
+    "mercenary",
+    "i",
+    "woke",
+    "up",
+    "piloting",
+    "strongest",
+    "starship",
+    "mezametara",
+    "saikyou",
+    "soubi",
+    "to",
+    "uchuusenmochi",
+    "datta",
+    "node",
+    "ikkodate",
+    "mezashite",
+    "youhei",
+    "toshite",
+    "jiyuu",
+    "ni",
+    "ikitai",
+    "uchuusen",
+    "mochi",
+    "no",
+    "de",
+    "mezameza",
+    "saikyosoubi"
+   ],
+   "year": 2026,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": 2,
+   "alSeason": 1,
+   "runtime": null,
+   "epRuntime": 24
+  },
+  "files": [
+   {
+    "n": "[Onalrie] Mezametara Saikyou Soubi to Uchuusenmochi Datta node - S01E01 [1080p WEBRip AV1].mkv",
+    "ok": false
+   },
+   {
+    "n": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node - 01 CZ - Poprvé ve vesmírné kolonii (720p).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node - 01 CZ - Poprvé ve vesmírné kolonii.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Onalrie] Mezametara Saikyou Soubi to Uchuusenmochi Datta node - S01E02 [1080p WEBRip AV1].mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node - 02 CZ - Dívka jménem Mimi.mkv",
+    "len": 1422,
+    "ok": true
+   },
+   {
+    "n": "[YE] Mezametara Saikyou Soubi to Uchuusen-mochi datta node, Ikkodate Mezashite Youhei to shite Jiyuu ni Ikitai - 01 (BS11 1280x720 x265 10bit AAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[YE] Mezametara Saikyou Soubi to Uchuusen-mochi datta node, Ikkodate Mezashite Youhei to shite Jiyuu ni Ikitai - 02 (BS11 1280x720 x265 10bit AAC).mkv",
+    "ok": true
+   },
+   {
+    "n": "Mezametara.Saikyou.Soubi.to.Uchuusen-mochi.datta.node.S01E01.1080p.AMZN.WEB-DL.JPN.DDP2.0.H.264-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "[AsukaRaws] Mezametara Saikyou Soubi to Uchuusen-mochi - 01 (WEB-DL 1280x720 x264 AAC).mp4",
+    "ok": false
+   },
+   {
+    "n": "[Nix-Raws] Mezametara Saikyou Soubi to Uchuusen-mochi datta node S01E01 [CR WEB-DL 1080p AVC AAC][SC_TC].mkv",
+    "ok": false
+   },
+   {
+    "n": "[AsukaRaws] Mezametara Saikyou Soubi to Uchuusen-mochi - 02 (WEB-DL 1280x720 x264 AAC).mp4",
+    "ok": false
+   },
+   {
+    "n": "[Nix-Raws] Mezametara Saikyou Soubi to Uchuusen-mochi datta node S01E02 [CR WEB-DL 1080p AVC AAC][SC_TC].mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "[AnimeFox] Oretachi ni Tsubasa 02.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kimi_ni_Todoke_02.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hiiro-no-Kakera-Dai-Ni-Shou-02-CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Yozakura Quartet - Tsuki ni Naku 02 ova.mkv",
+    "ok": false
+   },
+   {
+    "n": "HNS_Subete_ga_F_ni_Naru_02.mp4",
+    "ok": false
+   },
+   {
+    "n": "[OoyamanekoSubs]Kujira no Kora wa Sajou ni Utau - 02.mp4",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Yagate Kimi ni Naru - 02 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Yagate Kimi ni Naru - 02 [720p].mp4",
+    "ok": false
+   },
+   {
+    "n": "[IceEyes] Ore ga Ojou-sama Gakkou ni [Shomin Sample] Toshite Gets-sareta Ken - 02 Chceme být jako lejdy Reiko.mp4",
+    "ok": false
+   },
+   {
+    "n": "A.Guide.To.Second.Date.Sex.2019.1080p.WEBRip.x264-[YTS.LT].mp4",
+    "ok": false
+   },
+   {
+    "n": "[WinD]_Higurashi_no_Naku_Koro_ni_Rei_-_02_[BD-720p][CC378E9B].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Whine-Subs]_Higurashi_no_Naku_Koro_ni_Kira_-_02_[BD][720p-AAC][B5EC718D].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita - 02 (720p) Eng subs.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Kage no Jitsuryokusha ni Naritakute! - 02 (1080p) [DF6CA137].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Kage no Jitsuryokusha ni Naritakute! - 02 (720p) [B6C07951].mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Benriya Saitou-san, Isekai ni Iku - 02 (720p) [EC9BFCE5].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Isekai wa Smartphone to Tomo ni S2 - 02 (720p) [903BE992].mkv",
+    "ok": false
+   },
+   {
+    "n": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu - 02 [1080p][PT-BR.mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Isekai wa Smartphone to Tomo ni S2 - 02 (720p) [903BE992].mp4",
+    "ok": false
+   },
+   {
+    "n": "Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni Shimashita 02.1080p.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu - 02 (480p) [49FCD4F2].mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu - 02 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Dekisokonai to Yobareta Motoeiyuu wa Jikka kara Tsuihou sareta node Sukikatte ni Ikiru Koto ni Shita - 02 (1080p) [FA0A7A65].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu - 01 (1080p) [14E521A7].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Chihiro] Slime Taoshite 300-nen Shiranai Uchi ni Level Max ni Nattemashita 02 [720p Hi10P AAC][031FA533].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Kami wa Game ni Ueteiru - 02 (720p) [B0564950].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu - 02 (1080p) [DF639DB0].mkv",
+    "ok": false
+   },
+   {
+    "n": "Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu - 02 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Mahou Shoujo ni Akogarete - 02 (720p) [B7788CC8].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Kami wa Game ni Ueteiru - 02 (480p) [D36AD052].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Kami wa Game ni Ueteiru - 02 (1080p) [1D1E9D3D].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu - 03 (1080p) [78FB7B6E].mkv",
+    "ok": false
+   },
+   {
+    "n": "Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu - 03 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu - 04 (1080p) [65E4B565].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary I Woke Up Piloting the Strongest Starship S01E02 MULTi AD 720p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E02.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.2026.S01E02.1080p.CR.WEB-DL.DUAL.DDP2.0.H.264-AnoZu.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn as a Space Mercenary I Woke Up Piloting the Strongest Starship S01E02 MULTi AD 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E02.Mimi.the.Girl.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264-VARYG.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E02.Mimi.the.Girl.1080p.CR.WEB-DL.MULTi.AAC2.0.H.264-VARYG.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E02.1080p.CR.WEB-DL.MULTi.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "reborn.as.a.space.mercenary.i.woke.up.piloting.the.strongest.starship.s01e02.1080p.web.h264-TRB.mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "reborn.as.a.space.mercenary.i.woke.up.piloting.the.strongest.starship.s01e02.1080p.web.h264-senpai[EZTVx.to].mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "[Yameii] Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! - S01E02 [English Dub] [CR WEB-DL 720p H264 AAC] [90D7C752].mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "[Yameii] Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! - S01E02 [English Dub] [CR WEB-DL 1080p H264 AAC] [5E6E7FB5].mkv",
+    "len": 1421,
+    "ok": true
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.First.Space.Colony.Visit.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.First.Space.Colony.Visit.1080p.CR.WEB-DL.MULTi.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yameii] Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! - S01E01 [English Dub] [CR WEB-DL 1080p H264 AAC] [A7F203B6].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yameii] Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! - S01E01 [English Dub] [CR WEB-DL 720p H264 AAC] [F5A09235].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v12 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v01 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v02 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v03 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v04 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v05 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v06 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v07 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v08 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v09 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v10 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v11 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v13 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v15 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - I Woke Up Piloting the Strongest Starship! v14 [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary I Woke Up Piloting the Strongest Starship S01E01 MULTi AD 720p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary I Woke Up Piloting the Strongest Starship S01E01 MULTi AD 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.2026.S01E01.1080p.CR.WEB-DL.DUAL.DDP2.0.H.264-AnoZu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "reborn.as.a.space.mercenary.i.woke.up.piloting.the.strongest.starship.s01e01.1080p.web.h264-senpai[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Space.Mercenary.I.Woke.Up.Piloting.the.Strongest.Starship.S01E01.1080p.CR.WEB-DL.MULTi.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - 01 (WEBRip 1920x1080 x264 AAC Rus + Jap).mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Space Mercenary - 02 (WEBRip 1920x1080 x264 AAC Rus + Jap).mkv",
+    "len": 1422,
+    "ok": true
+   },
+   {
+    "n": "So.Whats.Wrong.with.Getting.Reborn.as.a.Goblin.2026.S01E02.1080p.CR.WEB-DL.AAC2.0.H.264-AnoZu.mkv",
+    "ok": false
+   },
+   {
+    "n": "my.life.as.a.rolling.stone.s01e02.480p.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "my.life.as.a.rolling.stone.s01e02.480p.webrip.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "my.life.as.a.rolling.stone.s01e02.documentary.mkv",
+    "ok": false
+   },
+   {
+    "n": "my.life.as.a.rolling.stone.s01e02.keith.richards.480p.hdtv.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Vending Machine, I Now Wander the Dungeon S02E07 VOSTFR 720p WEB x264 AAC -Tsundere-Raws (CR).mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Vending.Machine.I.Now.Wander.the.Dungeon.S02E07.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "I Woke Up Early the Day I Died 1998) LEKTOR PL IVO.avi",
+    "ok": false
+   },
+   {
+    "n": "ANGLIČANINA Príbeh 6 - I GET UP IN THE MORNING _ ANGLIČANINA ( 1080 X 1920 ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Selfie S01E13 I Woke Up Like This 1080p WEBRip AAC2 0 x264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Selfie.S01E13.I.Woke.Up.Like.This.1080p.WEBRip.AAC2.0.x264-BTN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Am I Actually the Strongest! (2023) - S01E02 - Char Hates Me [Bluray-1080p][Opus 2.0][AV1]-BlackRabbit.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Woke Up A Vampire S01E02 Power Play 1080p NF WEB-DL DDP5 1 Atmos H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Woke Up A Vampire S01E07 Uncovered 1080p NF WEB-DL DDP5 1 Atmos H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Woke Up a Vampire S01E06 2023 2160p NF WEB-DL DDP5 1 Atmos DV HDR H 265-HHWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Woke Up a Vampire S01E02 2023 2160p NF WEB-DL DDP5 1 Atmos DV HDR H 265-HHWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Vending.Machine.I.Now.Wander.the.Dungeon.S02E07.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Vending.Machine.I.Now.Wander.the.Dungeon.S02E07.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Reborn.as.a.Vending.Machine.I.Now.Wander.the.Dungeon.S02E07.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "Reborn as a Vending Machine, I Now Wander the Dungeon S02E07 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (CR).mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Benriya Saitou-san, Isekai ni Iku - 02 (480p) [95B58690].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Inu ni Nattara Suki na Hito ni Hirowareta - 02 (480p) [4AA419AF].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Kage no Jitsuryokusha ni Naritakute! - 02 (480p) [073CBC46].mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Slime Taoshite 300-nen Shiranai Uchi ni Level Max ni Nattemashita - 02 720pp [FCA122AC][SubsPlease][RapidBot].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Shinmai Ossan Boukensha, Saikyou Party ni Shinu hodo Kitaerarete Muteki ni Naru. - 02 (1080p) [7C9B732C].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Ore wa Subete wo Parry suru Gyaku Kanchigai no Sekai Saikyou wa Boukensha ni Naritai - 02 (1080p) [C3EB5665].mkv",
+    "ok": false
+   },
+   {
+    "n": "Ore wa Subete wo Parry suru Gyaku Kanchigai no Sekai Saikyou wa Boukensha ni Naritai 02 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Vden - VTuber Nandaga Haishin Kiri Wasuretara Densetsu ni Natteta - 02 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu - 02 CZtitulky.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki - 02 (720p) [190E3F3B].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki - 02 (1080p) [8AE818E2].mkv",
+    "ok": false
+   },
+   {
+    "n": "Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki 02 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Rekishi ni Nokoru Akujo ni Naruzo - 02 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki - 02 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki - 02 (480p) [9397C07F].mkv",
+    "ok": false
+   },
+   {
+    "n": "Tsuma Shougakusei ni Naru - 02 SK - Práve Teraz.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu  - 02 (1080p) [D2E4856B].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Tsuma, Shougakusei ni Naru - 02 (1080p) [FA9E8A23].mkv",
+    "ok": false
+   },
+   {
+    "n": "Chi - Chikyuu no Undou ni Tsuite - 02 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node - 02 CZ - Dívka jménem Mimi",
+    "len": 1421,
+    "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt35836487:1:4",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Hildur",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "hildur"
+   ],
+   "year": 2026,
+   "season": 1,
+   "episode": 4,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 44
+  },
+  "files": [
+   {
+    "n": "hildur.s01e04.multi.1080p.web.x264-amb3r.mkv",
+    "len": 2659,
+    "ok": true
+   },
+   {
+    "n": "Hildur.S01E01.FiNNiSH.1080p.WEB.H264-TOOSA.mkv",
+    "len": 2671,
+    "ok": false
+   },
+   {
+    "n": "Hildur.S01E02.FiNNiSH.1080p.WEB.H264-TOOSA.mkv",
+    "len": 2698,
+    "ok": false
+   },
+   {
+    "n": "Hildur.S01E03.FiNNiSH.1080p.WEB.H264-TOOSA.mkv",
+    "len": 2605,
+    "ok": false
+   },
+   {
+    "n": "Satu Rämö - Hildur 04 - The Secrets from the Deep.m4b",
+    "ok": false
+   },
+   {
+    "n": "hildur.s01e06.final.multi.1080p.web.x264-amb3r.mkv",
+    "ok": false
+   },
+   {
+    "n": "hildur.s01e05.multi.1080p.web.x264-amb3r.mkv",
+    "ok": false
+   },
+   {
+    "n": "hildur.s01e02.multi.1080p.web.x264-amb3r.mkv",
+    "len": 2707,
+    "ok": false
+   },
+   {
+    "n": "hildur.s01e01.multi.1080p.web.x264-amb3r.mkv",
+    "len": 2679,
+    "ok": false
+   },
+   {
+    "n": "hildur.s01e03.multi.1080p.web.x264-amb3r.mkv",
+    "len": 2614,
+    "ok": false
+   },
+   {
+    "n": "Nashville.2012.S01E04.HDTV.XviD-AFG.www.blogy.com.ar.avi",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E04.Buffer.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Legit.S01E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The Following S01E04.mp4",
+    "ok": false
+   },
+   {
+    "n": "VP.E04.S01E04.Rodinna.zalezitost.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "men_in_trees_cz_s01e04.avi",
+    "ok": false
+   },
+   {
+    "n": "brickleberry.s01e04.hdtv.x264-2hd.mp4",
+    "ok": false
+   },
+   {
+    "n": "Revolution.S01E04.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E04.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Awake.S01E04.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E04.Kite.Strings.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E04.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suits.S01E04.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E04.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Saving.Hope.S01E04.HDTV.XviD-PTpOWeR.avi",
+    "ok": false
+   },
+   {
+    "n": "Anger.Management.S01E04.PROPER.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E04.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S01E04.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Middle.S01E04.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E04.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suburgatory.S01E04.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E04.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E04.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E04.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E04.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Cuckoo.S01E04.720p.HDTV.x264-TLA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cuckoo.S01E04.HDTV.x264-TLA.mp4",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Tron.Uprising.S01E04.Blackout.1080p.WEB-DL.DD5.1.H264-iT00NZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gossip.Girl.S01E04.720p.WEB-DL.DD5.1.AVC-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tron.Uprising.S01E04.Blackout.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tron.Uprising.S01E04.Blackout.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Chicago.Fire.S01E04.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Anger.Management.S01E04.BDRip.XviD-DEMAND.avi",
+    "ok": false
+   },
+   {
+    "n": "Transporter.The.Series.S01E04.BDRip.XViD-PSiG.avi",
+    "ok": false
+   },
+   {
+    "n": "Dallas.2012.S01E04.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Carrie.Diaries.S01E04.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Chuck-1x04-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Emma-1x04-WS-PDTV-(Xvid).avi",
+    "ok": false
+   },
+   {
+    "n": "Lost-in-Austen-1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Jericho.1x04.Walls.of.Jericho.avi",
+    "ok": false
+   },
+   {
+    "n": "The Lone Gunmen 1x04 - Like Water for Octane.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x04.The.Good.Of.This.City.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Terminator - TSCC 1x04 Heavy Metal CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "1x04 Drop Dead Diva - Čínská zeď.avi",
+    "ok": false
+   },
+   {
+    "n": "Utopia.1x04.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Farscape [1x04] - Throne for a Loss.avi",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl chlapa 1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Luther.1x04.HDTV.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Skladiste 13 1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Renegade.CZ.DAB. 1x04.La.Mala.Sombra.(The.Evil.Shadow).dvd-rip.xvid.multidub.sportboom.avi",
+    "ok": false
+   },
+   {
+    "n": "Lokal TV 1x04 - Hip-hop je mŕtvy 2.mp4",
+    "ok": false
+   },
+   {
+    "n": "kutil.tim.1x04.kralovstvi.divociny.dvb.xvid-bb.avi",
+    "ok": false
+   },
+   {
+    "n": "Muj pritel Monk - 1x04 - Pan Monk a obr Dale.avi",
+    "ok": false
+   },
+   {
+    "n": "1x04 Toreador Scooby.avi",
+    "ok": false
+   },
+   {
+    "n": "X-Files 1x04 - Conduit.avi",
+    "ok": false
+   },
+   {
+    "n": "Friends - 1x04 - George Stephanopoulos.avi",
+    "ok": false
+   },
+   {
+    "n": "Buffy.1x04.Teacher's_Pet.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hranice nemožného 1x04 - Příchod.avi",
+    "ok": false
+   },
+   {
+    "n": "Glee - 1x04 - Preggers.avi",
+    "ok": false
+   },
+   {
+    "n": "The-Originals-1x04-CZ-titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Xena.1x04.Cradle.of.Hope.dvd-rip.divx.multidub.sportboom.avi",
+    "ok": false
+   },
+   {
+    "n": "Dva_a_pul_chlapa_1x04_CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "České století 1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Police_Squad_-_1x04_-_Revenge_And_Remorse_(The_Guilty_Alibi).avi",
+    "ok": false
+   },
+   {
+    "n": "Věřte, nevěřte - 1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "skladiště 13-1x04. Magnetismus (Magnetism).avi",
+    "ok": false
+   },
+   {
+    "n": "LAS VEGAS kasino 1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Lexx sci-fi BBC 1x04-2.avi",
+    "ok": false
+   },
+   {
+    "n": "Panství Downton 1x04 DVB-TRip CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Mrtví jako já 1x04 akce a reakce.avi",
+    "ok": false
+   },
+   {
+    "n": "Mighty Ducks - 1x04 - Zap Attack.avi",
+    "ok": false
+   },
+   {
+    "n": "Proziravost-1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl Chlapa 1x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Komisař-Rex-1x04---Smrt-starých-dam.avi",
+    "ok": false
+   },
+   {
+    "n": "Tráva_1x04_Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "jiste-pane-ministre-1x04-konecne-rozhodnuti-dvb-xvid-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "04.Medvedi (Bears).avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-03-04.avi",
+    "ok": false
+   },
+   {
+    "n": "04. NAVĚKY NEJLEPŠÍ PŘÁTELÉ.avi",
+    "ok": false
+   },
+   {
+    "n": "Two.and.a.Half.Men.S10E18.The.9.04.from.Pemberton.1080p.WEB-DL.DD5.1.H.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "hl 2013-04-05 16-42-48-221.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_3-04.avi",
+    "ok": false
+   },
+   {
+    "n": "cetnicke-humoresky-04-beata.avi",
+    "ok": false
+   },
+   {
+    "n": "04 Otec Hood.avi",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Shingeki_no_Kyojin_-_04_[36EF8BD0].mkv",
+    "ok": false
+   },
+   {
+    "n": "04. Hitlerova invaze na Východ (Hitler strikes East).mkv",
+    "ok": false
+   },
+   {
+    "n": "Cestománie 04 - Faerske ostrovy - tvari v tvar severu.avi",
+    "ok": false
+   },
+   {
+    "n": "04. Ďábelská hudba.avi",
+    "ok": false
+   },
+   {
+    "n": "6_04-Tri_blondynky.avi",
+    "ok": false
+   },
+   {
+    "n": "04 - Spravce .avi",
+    "ok": false
+   },
+   {
+    "n": "04 - Na rozcesti .avi",
+    "ok": false
+   },
+   {
+    "n": "04 - Trvale pouto .avi",
+    "ok": false
+   },
+   {
+    "n": "04 - Baalovy klony .avi",
+    "ok": false
+   },
+   {
+    "n": "Angel - 3. série - 04. díl - VÝMĚNA TĚL.avi",
+    "ok": false
+   },
+   {
+    "n": "Vlak dětství a naděje-04-Válka si nevybírá-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "04. Speciální Čarodějnický Díl XX..avi",
+    "ok": false
+   },
+   {
+    "n": "fresh prince_Serie1_04.Nestyd se za svůj původ.avi",
+    "ok": false
+   },
+   {
+    "n": "Autogrotesky 04 (Tokyo Mater).AVI",
+    "ok": false
+   },
+   {
+    "n": "Zla krev_1986_04_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "30 Rock [3.04] Gavin Volure.avi",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Great_Teacher_Onizuka_-_Lesson_04_(3055FAAA).mkv",
+    "ok": false
+   },
+   {
+    "n": "V srdci divoké přírody-04.Narodni park Everglades.avi",
+    "ok": false
+   },
+   {
+    "n": "Synové a dcery Jakuba skláře-04.V novém domě.avi",
+    "ok": false
+   },
+   {
+    "n": "zeman-04-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "zena-za-pultem-04-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "04 Nocni mura v Elm Street 5-Dite snu.avi",
+    "ok": false
+   },
+   {
+    "n": "Cirkus Humberto_04_1988_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Hannibal-01---04-CZ-dabing---axn.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "04 Goro Bily Pes.avi",
+    "ok": false
+   },
+   {
+    "n": "Trestny-prapor_Shtrafbat_2004_cz_dil_04.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 03x04 - Hrichy otcu 04. Zeleny Goblin prichazi.avi",
+    "ok": false
+   },
+   {
+    "n": "[joseole99][Frostii] K-On! - 04 (1280x720 h264 AC3 AAC) [0420CDB4].mkv",
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita 04 CZ-titulky (by vahrner).avi",
+    "ok": false
+   },
+   {
+    "n": "04.Jizni Amerika (South Amerika).avi",
+    "ok": false
+   },
+   {
+    "n": "04 Griffinova ekvivalence.mkv",
+    "ok": false
+   },
+   {
+    "n": "04 Řešení po pirátsku.mkv",
+    "ok": false
+   },
+   {
+    "n": "Byli jednou dva písaři-04.Kozel.avi",
+    "ok": false
+   },
+   {
+    "n": "Soul Eater 04.avi",
+    "ok": false
+   },
+   {
+    "n": "Bleach 04 CZ-titulky (by vahrner).avi",
+    "ok": false
+   },
+   {
+    "n": "04_Slovácko sa nesúdí-První série_1975_hody_CZ_TVRip-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "(04)-Superkočky-(2010) cz dab. by Enrike.mp4",
+    "ok": false
+   },
+   {
+    "n": "Frasier IV.-SK- 04.avi",
+    "ok": false
+   },
+   {
+    "n": "Frasier VII. - 04.avi",
+    "ok": false
+   },
+   {
+    "n": "vandel_04.mp4",
+    "ok": false
+   },
+   {
+    "n": "Islandská čítanka - 06. díl - 6. Hildur Knútsdóttir",
+    "len": 472,
+    "ok": false
    }
   ]
  }

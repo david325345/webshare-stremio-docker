@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.5';
+const VERSION = '8.6.6';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -863,7 +863,8 @@ function judgeFile(f, plan) {
     // zkomolený název ("The Simps.ons S35E03", "Simpsnovi S35E03") → posoudí se opravený název
     // (rok, podtitul, číslo dílu dál platí); jen když žádný název nesedí ani částečně
     if (reason === 'název nesedí' && !f._fixed) {
-        const fx = M.repairName(f.name, plan.names.map(n => n.text), plan.season, plan.episode);
+        const fx = M.repairName(f.name, plan.names.map(n => n.text), plan.season, plan.episode,
+            { anime: plan.isAnime, alEpisode: plan.alEpisode });
         if (fx) {
             const j = judgeFile({ ...f, name: fx.text, _fixed: true }, plan);
             if (j.ok) return { ...j, exact: false, reason: `zkomolený název (${fx.how})` };

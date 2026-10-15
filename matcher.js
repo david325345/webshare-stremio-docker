@@ -352,7 +352,7 @@ function shortNameIsNoise(fileName, shortName, fullName) {
 }
 
 // Soubory, které nejdou přehrát: archivy, titulky, obrázky, hudba, dokumenty…
-const NON_VIDEO = /\.(zip|rar|7z|tar|gz|tgz|bz2|xz|iso|img|r\d{2}|\d{3}|srt|ass|ssa|sub|idx|vtt|sup|smi|nfo|txt|doc|docx|pdf|jpg|jpeg|png|gif|webp|bmp|exe|apk|msi|torrent|mp3|flac|m4a|aac|ogg|opus|wav|wma)$/i;
+const NON_VIDEO = /\.(zip|rar|7z|tar|gz|tgz|bz2|xz|iso|img|r\d{2}|\d{3}|srt|ass|ssa|sub|idx|vtt|sup|smi|nfo|txt|doc|docx|pdf|jpg|jpeg|png|gif|webp|bmp|exe|apk|msi|torrent|mp3|flac|m4a|m4b|mka|aax|aac|ogg|opus|wav|wma)$/i;
 function isNonVideo(fileName) {
     return NON_VIDEO.test(String(fileName || '').trim());
 }
@@ -415,8 +415,9 @@ function levOne(a, b) {
     if (a.length === b.length) return a.slice(i + 1) === b.slice(i + 1);
     return a.length > b.length ? a.slice(i + 1) === b.slice(i) : a.slice(i) === b.slice(i + 1);
 }
-function repairName(fileName, names, season, episode) {
-    const ft = normalize(stripLeadingGroups(fileName)).split(' ').filter(Boolean);
+function repairName(fileName, names, season, episode, { anime = false, alEpisode = null } = {}) {
+    const raw = stripLeadingGroups(fileName);
+    const ft = normalize(raw).split(' ').filter(Boolean);
     let mk = -1, mkLen = 1;
     for (let i = 0; i < ft.length && mk < 0; i++) {
         let m = ft[i].match(/^s(\d{1,2})e(\d{1,3})$/) || ft[i].match(/^(\d{1,2})x(\d{2,3})$/);
@@ -426,6 +427,7 @@ function repairName(fileName, names, season, episode) {
         }
         if (m && +m[1] === season && +m[2] === episode) { mk = i; mkLen = len; }
     }
+    if (mk < 0 && anime) return repairAbsolute(raw, names, [episode, alEpisode]);
     if (mk < 1 || mk > 8) return null;
     const head = ft.slice(0, mk);
     const years = [];
@@ -444,6 +446,24 @@ function repairName(fileName, names, season, episode) {
         if (!same && !near) continue;
         const text = [name, ...years, ...ft.slice(mk)].join(' ');
         return { name, text, how: same ? 'spojený' : 'překlep' };
+    }
+    return null;
+}
+
+// Anime s absolutním číslem ("[YE] … Uchuusen-mochi datta node, Ikkodate … - 02 (BS11 …)"): text před " - 02"
+// bez mezer/pomlček musí přesně odpovídat některému názvu (aspoň 15 písmen); zkrácené názvy neprojdou
+function repairAbsolute(raw, names, eps) {
+    const re = /\s[-–]\s*0*(\d{1,4})(?:v\d)?(?=[\s\[\(._]|$)/g;
+    let m;
+    while ((m = re.exec(raw))) {
+        const ep = +m[1];
+        if (!eps.includes(ep)) continue;
+        const compact = tokens(raw.slice(0, m.index)).join('');
+        for (const name of names) {
+            const nc = tokens(name).join('');
+            if (nc.length < 15 || compact !== nc) continue;
+            return { name, text: `${name} - ${m[1]}${raw.slice(m.index + m[0].length)}`, how: 'spojený' };
+        }
     }
     return null;
 }

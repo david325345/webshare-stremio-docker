@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.6';
+const VERSION = '8.6.7';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -575,6 +575,54 @@ async function seasonRuntimes(tvId, season, userTmdbKey, episode) {
     });
 }
 
+// Jiné seriály se stejným názvem (reboot / revival / původní seriál) → roky jejich začátku.
+// Jen známější tituly (aspoň 10 hodnocení), aby nějaký zapadlý stejnojmenný pořad nezpůsobil vyřazení.
+// Výsledek 30 dní v cache, chyba 1 den.
+async function sameNameShows(info, userTmdbKey) {
+    if (!info || info.media !== 'tv' || !info.tmdbId || !info.year) return null;
+    const key = `sn:${info.tmdbId}`;
+    const hit = tmdbCache.get(key);
+    if (hit !== undefined) return hit;
+    const ours = new Set([info.en, info.original, info.cz].filter(Boolean).map(t => M.tokens(t).join(' ')).filter(Boolean));
+    const query = info.en || (M.isLatin(info.original) ? info.original : null);
+    if (!query || !ours.size) return null;
+    return once(key, async () => {
+        const keys = [...new Set([String(userTmdbKey || '').trim(), TMDB_API_KEY].filter(Boolean))];
+        for (const k of keys) {
+            try {
+                const d = await tmdbGet(`/search/tv?query=${encodeURIComponent(query)}&language=en-US`, k);
+                const years = [];
+                for (const r of (d && d.results) || []) {
+                    if (r.id === info.tmdbId || (r.vote_count || 0) < 10) continue;
+                    const y = parseInt(String(r.first_air_date || '').slice(0, 4), 10);
+                    if (!y || Math.abs(y - info.year) <= 1) continue;
+                    const same = [r.name, r.original_name].filter(Boolean).some(t => ours.has(M.tokens(t).join(' ')));
+                    if (same && !years.includes(y)) years.push(y);
+                }
+                years.sort((a, b) => a - b);
+                tmdbCache.set(key, years, 30 * 24 * H);
+                return years;
+            } catch (e) {
+                dbg(`TMDB stejný název ${info.tmdbId}: ${e.message}`);
+                if (!e.auth) break;
+            }
+        }
+        tmdbCache.set(key, null, 24 * H);
+        return null;
+    });
+}
+
+// Anime název se sezónou ("… II", "… Season 2", "… 2nd Season", "… S2") → základní název + číslo sezóny
+function seasonBase(text) {
+    const m = String(text || '').match(/^(.*?)[\s:\-–]+(?:(II|III|IV|V|VI)|(\d{1,2})(?:st|nd|rd|th)\s+season|season\s*(\d{1,2})|s(\d{1,2}))\s*$/i);
+    if (!m) return null;
+    const roman = { II: 2, III: 3, IV: 4, V: 5, VI: 6 };
+    const n = m[2] ? roman[m[2].toUpperCase()] : +(m[3] || m[4] || m[5]);
+    const base = m[1].trim();
+    if (!(n >= 2) || M.nameTokens(base).join('').length < 5) return null;
+    return { base, season: n };
+}
+
 // ───────────────────────── Plán hledání ─────────────────────────
 function uniqNames(list, max) {
     const seen = new Set(), out = [];
@@ -626,6 +674,9 @@ async function buildPlan(type, id, cfg) {
         epRuntimeP = seasonRuntimes(info.tmdbId, season, cfg.tmdb_api_key, episode)
             .then(m => (m && m[episode]) || null).catch(() => null);
     }
+    // jiné stejnojmenné seriály (reboot) – běží souběžně s hledáním, čeká se před posouzením souborů
+    const sameNameP = type === 'series' && info && info.media === 'tv'
+        ? sameNameShows(info, cfg.tmdb_api_key).catch(() => null) : null;
     const latin = s => s && M.isLatin(s) ? s : null;
 
     // Názvy "franšízy" (CZ/SK/EN z TMDB) – párují se s IMDb sezónou/epizodou
@@ -658,6 +709,22 @@ async function buildPlan(type, id, cfg) {
         ...an.filter(Boolean).map(n => ({ ...n, kind: 'anime' }))
     ], 9);
     if (!names.length) return null;
+    // anime: základní název bez značky sezóny ("Sasaki to Pii-chan S2 - 01" pro "Sasaki to Pii-chan Season 2");
+    // platí jen se značkou téže sezóny v souboru (díly 1. řady "… - 02" neprojdou)
+    if (rs && type === 'series') {
+        const have = new Set(names.map(n => M.nameTokens(n.text).join(' ')));
+        let added = 0;
+        for (const n of names.filter(x => x.kind === 'anime' && !x.short)) {
+            if (added >= 2) break;
+            const sb = seasonBase(n.text);
+            if (!sb || sb.season !== (rs.season || season)) continue;
+            const k = M.nameTokens(sb.base).join(' ');
+            if (have.has(k)) continue;
+            have.add(k);
+            names.push({ text: sb.base, kind: 'anime', seasonOnly: sb.season });
+            added++;
+        }
+    }
 
     // slova, která smí stát za názvem (z kteréhokoli našeho názvu) – pro kontrolu jiného podtitulu
     const allow = new Set(names.flatMap(n => M.nameTokens(n.full || n.text)));
@@ -665,6 +732,7 @@ async function buildPlan(type, id, cfg) {
         type, id, isAnime, names, allow,
         runtime: (info && info.runtime) || null,
         epRuntime: null, epRuntimeP,
+        sameName: null, sameNameP,
         year: (info && info.year) || null,
         season, episode,
         alEpisode: rs ? (rs.episode || episode) : null,
@@ -690,7 +758,7 @@ function fiveOVariant(q) {
 
 function buildQueries(plan) {
     const fr = plan.names.filter(n => n.kind === 'franchise').map(n => M.queryText(n.text));
-    const an = plan.names.filter(n => n.kind === 'anime').map(n => M.queryText(n.text));
+    const an = plan.names.filter(n => n.kind === 'anime' && !n.seasonOnly).map(n => M.queryText(n.text));
     const variants = [...fr.map(digitVariant), ...fr.map(fiveOVariant)].filter(Boolean);
     const w1 = [], w2 = [];
     if (plan.type === 'movie') {
@@ -827,6 +895,18 @@ function judgeFile(f, plan) {
     if (plan.year && anyTitle) {
         const ys = M.fileYears(f.name, { noRanges: true });
         if (ys.length && ys.every(y => y < plan.year - 1)) return { ok: false, reason: `rok nesedí (${ys.join(',')})` };
+        // stejnojmenný seriál (reboot/revival ↔ původní): starší existuje → soubor musí mít náš rok;
+        // novější existuje → rok novějšího bez našeho roku = novější seriál
+        const other = plan.sameName || [];
+        const older = other.filter(y => y < plan.year - 1);
+        const newer = other.filter(y => y > plan.year + 1);
+        if (older.length && !ys.some(y => y >= plan.year - 1)) {
+            return { ok: false, reason: `bez roku (starší seriál ${older[older.length - 1]})` };
+        }
+        if (newer.length) {
+            const ours = ys.some(y => y >= plan.year - 1 && y < newer[0] - 1);
+            if (!ours && ys.some(y => y >= newer[0] - 1)) return { ok: false, reason: `rok nesedí (novější seriál ${newer[0]})` };
+        }
     }
     let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
     for (const n of plan.names) {
@@ -843,6 +923,11 @@ function judgeFile(f, plan) {
             reason = `rok nesedí (${y0})`; continue;
         }
         if (pe.season === null && seq) pe.season = seq;
+        // základní název anime platí jen se značkou téže sezóny
+        if (n.seasonOnly && pe.season !== n.seasonOnly) {
+            if (!seen) reason = pe.season === null ? 'bez značky sezóny' : `jiná sezóna (S${pe.season})`;
+            continue;
+        }
         seen = pe;
         if (n.kind === 'franchise') {
             if (pe.episode === plan.episode &&
@@ -1110,6 +1195,10 @@ async function findFiles(type, id, cfg) {
         }
         const [w1, w2] = buildQueries(plan);
         const r1 = await runQueries(cfg, w1, { budgetMs: 4000 });
+        if (plan.sameNameP) {
+            plan.sameName = await Promise.race([plan.sameNameP, new Promise(r => setTimeout(() => r(null), 1500).unref())]);
+            plan.sameNameP = null;
+        }
         const files = r1.files;
         let degraded = r1.degraded;
         let items = filterFiles([...files.values()], plan);
@@ -1189,8 +1278,9 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes
     archiveWrite({
         t: new Date().toISOString(), kind: 'stream', src, type: plan.type, id: plan.id,
         anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime, epRuntime: plan.epRuntime || undefined,
+        sameName: plan.sameName && plan.sameName.length ? plan.sameName : undefined,
         season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
-        names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short })),
+        names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short, ...(n.seasonOnly ? { seasonOnly: n.seasonOnly } : {}) })),
         queries: queries.map(q => q.q), ms,
         files: [...files.values()].map(f => {
             const j = judgeFile(f, plan);
@@ -1739,4 +1829,5 @@ if (require.main === module) {
     });
 }
 
-module.exports = { app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };
+module.exports = {
+    seasonBase, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };

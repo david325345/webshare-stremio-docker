@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.7';
+const VERSION = '8.6.8';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -1276,7 +1276,7 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes
     const sent = new Map();
     ranked.slice(0, plan.type === 'movie' ? 30 : 25).forEach((it, i) => { if (!sent.has(it.f.ident)) sent.set(it.f.ident, i + 1); });
     archiveWrite({
-        t: new Date().toISOString(), kind: 'stream', src, type: plan.type, id: plan.id,
+        t: new Date().toISOString(), kind: 'stream', v: VERSION, src, type: plan.type, id: plan.id,
         anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime, epRuntime: plan.epRuntime || undefined,
         sameName: plan.sameName && plan.sameName.length ? plan.sameName : undefined,
         season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
@@ -1705,6 +1705,115 @@ app.get('/admin/hledani.jsonl.gz', (req, res) => {
     })(0);
 });
 
+// ───────────────────────── Nahrávání archivu na GitHub ─────────────────────────
+// Jednou za GH_ARCHIVE_HOURS (výchozí 48 h) v GH_ARCHIVE_HOUR (výchozí 3:00 Europe/Prague) nahraje záznamy
+// od posledního nahrání jako GH_ARCHIVE_PATH/RRRR-MM-DD.jsonl.gz do GH_ARCHIVE_REPO (GitHub Contents API).
+// Bez GH_ARCHIVE_TOKEN vypnuto. Stav (čas posledního záznamu) v ARCHIVE_DIR/.github-upload.json.
+const GH_REPO = (process.env.GH_ARCHIVE_REPO || '').trim();
+const GH_TOKEN = (process.env.GH_ARCHIVE_TOKEN || '').trim();
+const GH_PATH = (process.env.GH_ARCHIVE_PATH || 'hledani').trim().replace(/^\/+|\/+$/g, '');
+const GH_HOURS = parseFloat(process.env.GH_ARCHIVE_HOURS || '48') || 48;
+const GH_HOUR = parseInt(process.env.GH_ARCHIVE_HOUR || '3', 10);
+const GH_ON = !!(GH_REPO && GH_TOKEN && /^[\w.-]+\/[\w.-]+$/.test(GH_REPO));
+const GH_STATE = path.join(ARCHIVE_DIR, '.github-upload.json');
+let ghBusy = false, ghLastFail = 0;
+
+function ghState() {
+    try { return JSON.parse(fs.readFileSync(GH_STATE, 'utf8')); } catch (e) { return {}; }
+}
+function pragueHour(d = new Date()) {
+    return parseInt(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Prague', hour: '2-digit', hour12: false }).format(d), 10) % 24;
+}
+function pragueDate(d = new Date()) {
+    return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Prague' }).format(d);   // RRRR-MM-DD
+}
+// Záznamy novější než `since` (ISO) ze souborů archivu
+function archiveSince(since) {
+    const fromDay = since ? since.slice(0, 10) : '';
+    const out = [];
+    let lastT = since || '';
+    for (const n of archiveFiles()) {
+        if (n.slice(0, 10) < fromDay) continue;
+        let text;
+        try { text = fs.readFileSync(path.join(ARCHIVE_DIR, n), 'utf8'); } catch (e) { continue; }
+        for (const line of text.split('\n')) {
+            if (!line) continue;
+            const m = line.match(/^\{"t":"([^"]+)"/);
+            const t = m ? m[1] : '';
+            if (since && t && t <= since) continue;
+            out.push(line);
+            if (t > lastT) lastT = t;
+        }
+    }
+    return { lines: out, lastT };
+}
+async function ghPut(name, buf, message) {
+    const url = `https://api.github.com/repos/${GH_REPO}/contents/${GH_PATH ? GH_PATH + '/' : ''}${name}`;
+    const resp = await needle('put', url, { message, content: buf.toString('base64') }, {
+        json: true, open_timeout: 15000, response_timeout: 60000, read_timeout: 60000,
+        headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: 'application/vnd.github+json', 'User-Agent': 'webshare-stremio-addon', 'X-GitHub-Api-Version': '2022-11-28' }
+    });
+    return resp.statusCode;
+}
+async function ghUpload(reason) {
+    if (!GH_ON) return { ok: false, error: 'vypnuto (chybí GH_ARCHIVE_REPO / GH_ARCHIVE_TOKEN)' };
+    if (ghBusy) return { ok: false, error: 'nahrávání už běží' };
+    ghBusy = true;
+    try {
+        const st = ghState();
+        const { lines, lastT } = archiveSince(st.lastT);
+        if (!lines.length) {
+            fs.writeFileSync(GH_STATE, JSON.stringify({ ...st, last: new Date().toISOString() }));
+            log(`☁️ GitHub archiv: nic nového k nahrání (${reason})`);
+            return { ok: true, zaznamu: 0 };
+        }
+        const buf = zlib.gzipSync(Buffer.from(lines.join('\n') + '\n'), { level: 9 });
+        const day = pragueDate();
+        const msg = `Historie hledání ${day} (${lines.length} záznamů, v${VERSION})`;
+        let name = `${day}.jsonl.gz`;
+        let code = await ghPut(name, buf, msg);
+        if (code === 422) {   // soubor toho dne už existuje (ruční nahrání) → s časem
+            const hm = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Prague', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()).replace(':', '');
+            name = `${day}-${hm}.jsonl.gz`;
+            code = await ghPut(name, buf, msg);
+        }
+        if (code !== 201 && code !== 200) {
+            ghLastFail = Date.now();
+            const why = code === 401 ? 'neplatný token' : code === 403 ? 'token nemá právo zápisu' : code === 404 ? 'repo nenalezeno' : `HTTP ${code}`;
+            log(`⚠️ GitHub archiv: nahrání selhalo – ${why}; další pokus za hodinu`);
+            return { ok: false, error: why };
+        }
+        fs.writeFileSync(GH_STATE, JSON.stringify({ last: new Date().toISOString(), lastT, file: name, count: lines.length }));
+        log(`☁️ GitHub archiv: nahráno ${GH_PATH}/${name} (${lines.length} záznamů, ${Math.round(buf.length / 1024)} kB, ${reason})`);
+        return { ok: true, soubor: `${GH_PATH}/${name}`, zaznamu: lines.length, kB: Math.round(buf.length / 1024) };
+    } catch (e) {
+        ghLastFail = Date.now();
+        log(`⚠️ GitHub archiv: nahrání selhalo – ${e.message}; další pokus za hodinu`);
+        return { ok: false, error: e.message };
+    } finally {
+        ghBusy = false;
+    }
+}
+// kontrola každých 10 min: uplynulo GH_HOURS (s rezervou 1 h) a je GH_HOUR, nebo už o 24 h déle (výpadek přes noc)
+function ghTick() {
+    if (!GH_ON || !archiveOk || ghBusy || Date.now() - ghLastFail < H) return;
+    const st = ghState();
+    const since = st.last ? Date.now() - Date.parse(st.last) : Infinity;
+    if ((since >= (GH_HOURS - 1) * H && pragueHour() === GH_HOUR) || since >= (GH_HOURS + 24) * H) ghUpload('plán');
+}
+if (GH_ON) {
+    // první spuštění: počítat od teď (nahraje se v nejbližší plánovaný čas po GH_HOURS), ne hned po startu
+    if (!fs.existsSync(GH_STATE) && archiveOk) {
+        try { fs.writeFileSync(GH_STATE, JSON.stringify({ last: new Date(Date.now() - (GH_HOURS - 24) * H).toISOString() })); } catch (e) {}
+    }
+    setInterval(ghTick, 10 * 60 * 1000).unref();
+}
+// ruční nahrání: /admin/github-upload?key=ADMIN_KEY
+app.get('/admin/github-upload', async (req, res) => {
+    if (!adminOk(req)) return res.status(404).json({ error: 'Nenalezeno' });
+    res.json(await ghUpload('ručně'));
+});
+
 // Osobní routy – config je první segment cesty
 function withCfg(handler) {
     return async (req, res) => {
@@ -1826,6 +1935,7 @@ if (require.main === module) {
         log(`   cache: ${CACHE_DIR} (TMDB ${tmdbCache.map.size}, indexer ${resolveCache.map.size} záznamů)`);
         log(`   Hellspy: ${HELLSPY_ON ? (HELLSPY_PROXY === 'direct' ? 'zapnutý (bez proxy)' : `zapnutý přes proxy ${HELLSPY_PROXY.replace(/\/\/[^@/]*@/, '//***@')}`) : 'vypnutý (chybí HELLSPY_PROXY)'}`);
         log(`   archiv hledání: ${archiveOk ? `${ARCHIVE_DIR} (${ARCHIVE_DAYS} dní)` : 'vypnutý'} | stažení: ${ADMIN_KEY ? '/admin/hledani.jsonl.gz?key=…' : 'vypnuté (chybí ADMIN_KEY)'}`);
+        log(`   GitHub archiv: ${GH_ON ? `${GH_REPO}/${GH_PATH} každých ${GH_HOURS} h v ${GH_HOUR}:00` : 'vypnutý (chybí GH_ARCHIVE_REPO / GH_ARCHIVE_TOKEN)'}`);
     });
 }
 

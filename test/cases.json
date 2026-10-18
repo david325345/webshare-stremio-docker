@@ -34339,5 +34339,1713 @@
     "ok": false
    }
   ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt40197357:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Scrubs",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "scrubs"
+   ],
+   "year": 2026,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 23,
+   "sameName": [
+    2001
+   ]
+  },
+  "files": [
+   {
+    "n": "Scrubs.S01E01.DVDRip.XviD-FoV.idown.me.avi",
+    "len": 1404,
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E01.Muj.prvni.den.DVDRip.XviD.cz-iNG.avi",
+    "len": 1347,
+    "ok": false
+   },
+   {
+    "n": "Scrubs - 01x01 - DVDrip - CZ.avi",
+    "len": 1347,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (2026) Season 2 Episode 1- My First Time in a While - PrimeWire.mp4",
+    "ok": false
+   },
+   {
+    "n": "Adults (2025) Season 2 Episode 1- The Scrub - PrimeWire.mp4",
+    "ok": false
+   },
+   {
+    "n": "Scrubs 2026 S01E01 My Return 720p DSNP WEB-DL DD 5 1 H 264-playWEB[EZTVx.to].mkv",
+    "len": 1348,
+    "ok": true
+   },
+   {
+    "n": "2x14.Scrub a Chug (Scrub-A-Chug).avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S06E13 - My Scrubs - 2160p HDR Ai Upscale -Mesc.mkv",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E02.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E03.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E04.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E06.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E07.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E08.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E09.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E10.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E11.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E12.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E13.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E19.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E21.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E22.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E23.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S01E24.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S03E14.DVDRip.XviD-SAiNTS.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S03E15.DVDRip.XviD-SAiNTS.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S03E16.DVDRip.XviD-SAiNTS.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S03E17.DVDRip.XviD-SAiNTS.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs .s04e25 .pdtv- lol [BT] My changing ways.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.412.pdtv-lol.[BT] My best moment.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.413.pdtv-lol.[BT] My ocrdiar infarction.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.414.pdtv-lol.[BT] My lucky charm.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.415.pdtv-lol.[BT] My hypocritical oath.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.416.pdtv-lol.[BT] My quarantine.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.418.pdtv-lol.[BT] My roommates.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.419.pdtv-lol.[BT] My best made plans.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.420.pdtv-lol.[BT] My boss's free haircut.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.421.pdtv-lol.[BT] My lips are sealed.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.422.pdtv-lol.[BT] My big move.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.423.pdtv-lol.[BT] My Faith in Humanity.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.424.pdtv-lol.[BT] My drive-by.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e01.pdtv-lol My old friend's new friend.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e02.pdtv-lol My office.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e03.pdtv-lol My new game.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e04.pdtv-lol My first kill.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e06.pdtv-lol My cake.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e07.pdtv-lol My common enemy.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e08.pdtv-lol My last chance.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e09.pdtv-lol My malpractical decision.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e10.pdtv-lol My female trouble.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E01",
+    "len": 1347,
+    "ok": true
+   },
+   {
+    "n": "Scrubs.S01E01.DVDRip.XviD-FoV",
+    "len": 1403,
+    "ok": false
+   },
+   {
+    "n": "Doktůrci_Scrubs_S01E01-03_CZ_420p_Chmeli",
+    "len": 3902,
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e11.pdtv-lol My unicorn.avi",
+    "ok": false
+   },
+   {
+    "n": "scrubs.s04e17.pdtv- lol[BT] My life in four cameras.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E01 - My Intern's Eyes.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E02 - My Rite of Passage.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E05 - My New God.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E06 - My Missed Perception.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E07 - My Way Home.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E08 - My Big Bird.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E09 - My Half-Acre.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E11 - My Buddy's Booty.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E12 - My Cabbage.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E13 - My Five Stages.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E14 - My Own Personal Hell.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E17 - My Chopped Liver.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E18 - My New Suit.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S05E21.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S05E22.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S05E23.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S05E24.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs S06E01 My Mirorr Image.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs S06E02 My Best Friend's Baby's Baby and My Baby's Baby.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs S06E03 My Coffee.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs S06E04 My House.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs S06E05 My Friend With Money.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs S06E06 My Musical.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E07.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E08.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E09.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E10.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E11.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E12.PDTV.XviD-NoTV.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E13.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E14.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E15.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E16.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E17.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E18.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E19.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E20.PDTV.XviD-XOR.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E21-E22.PDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs 7x01 My Own.Worst Enemy.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x02.My.Hard.Labor.DVDRip.XviD -Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x03.My.Inconvenient.Truth.DVDRip - Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x04.My.Identity.Crisis.DVDRip.XviD-ORPHEUS.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x05.My.Growing.Pains.DVDRip.XviD-ORPHEUS.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x06.My.#1.Doctor.DVDRip.XviD - Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x07.My.Bad.Too.DVDRip.XviD - Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x08.My.Manhood.DVDRip.XviD - Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x09.My.Dumb.Luck.DVDRip.XviD - Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.7x10.My.Waste.Of.Time.DVDRip.XviD - Matt.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S08E01.HDTV.XviD-XOR.[VTV].avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S08E02.HDTV.XviD-0TV.[VTV].avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S08E04.HDTV.XviD-XOR.[VTV].avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S08E05.HDTV.XviD-2HD.[VTV].avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S08E06.HDTV.XviD-2HD.[VTV].avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S08E07.HDTV.XviD-LOL.[VTV].avi",
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm-s1-01.avi",
+    "ok": false
+   },
+   {
+    "n": "Hatfieldovi a McCoyovi-01.d",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "farcry2 2013-01-23 00-11-24-92.AVI",
+    "ok": false
+   },
+   {
+    "n": "01. Zloduch Mollache.rm",
+    "ok": false
+   },
+   {
+    "n": "01.Prorok ktery zmenil Svet (A Propeth changes the World).avi",
+    "ok": false
+   },
+   {
+    "n": "mala velka britanie 01.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda_1-01- Potmě.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_3-01.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Hodlate se s tim smirit.avi",
+    "ok": false
+   },
+   {
+    "n": "Zaklinac 01 - Detstvi.avi",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Shingeki_no_Kyojin_-_01_[0B164A9D].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Cinska kapitalisticka revoluce (China's Capitalist Revolution part.1).avi",
+    "ok": false
+   },
+   {
+    "n": "Cestománie 01 - Indonesie-sumatra.neni kam spechat.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Experiment Kolonie I.avi",
+    "ok": false
+   },
+   {
+    "n": "01. Po líbánkách.avi",
+    "ok": false
+   },
+   {
+    "n": "6_01-Valkyry_z_Vallhaly_1.cast.avi",
+    "ok": false
+   },
+   {
+    "n": "01 - V hadim hnizde .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Pod palbou .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Navrat ztraceneho syna .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Avalon, cast I. .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Z masa a kosti .avi",
+    "ok": false
+   },
+   {
+    "n": "Angel - 3. série - 01. díl - BUŠENÍ SRDCE.avi",
+    "ok": false
+   },
+   {
+    "n": "Autogrotesky 01 Hasičák Burák (Rescue Squad Mater).AVI",
+    "ok": false
+   },
+   {
+    "n": "Zla krev_1986_01_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Trestny-prapor_Shtrafbat_2004_cz_dil_01.avi",
+    "ok": false
+   },
+   {
+    "n": "30 Rock [3.01] Do-Over.avi",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Great_Teacher_Onizuka_-_Lesson_01_(6F68CC7E).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yellow-Flash]_Gungrave_-_01_[720p][F64F0332].mkv",
+    "ok": false
+   },
+   {
+    "n": "[joseole99][Frostii] K-On! - 01 (1280x720 h264 AC3 AAC) [72C908C7].mkv",
+    "ok": false
+   },
+   {
+    "n": "cowboy_bebop_remastered_01[h264.ac3][niizk].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Okna do sveta (Windows on the World).avi",
+    "ok": false
+   },
+   {
+    "n": "Synové a dcery Jakuba skláře-01.Vandrovník.avi",
+    "ok": false
+   },
+   {
+    "n": "zena-za-pultem-01-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "Cirkus Humberto_01_1988_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "P90X+ 01 - Interval X Plus.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hannibal-01---04-CZ-dabing---axn.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 03x01 - Hrichy otcu 01. doktor Divny.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x09 - Tajne valky 01. prichod.mp4",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x12 - Spider valky 01. klony vazne  nemam v lasce.mp4",
+    "ok": false
+   },
+   {
+    "n": "Policajti z centra (01) - Než řekneš švec.mp4",
+    "ok": false
+   },
+   {
+    "n": "KSC-20250731-VP-SEV01-0001-SpaceX_Crew_11_Live_Launch_Coverage_SCRUB_720p-M14833~large.mp4",
+    "len": 22149,
+    "ok": false
+   },
+   {
+    "n": "Yu-Gi-Oh! Duel Monsters - 135 - The Blazing Road of a Scrub - Jonouchi vs Kaiba [F-R][47737f8b]",
+    "len": 1427,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (doktůrci) S01E03 banda ",
+    "len": 3008,
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S02E02.Moje.nocni.sluzba.DVDRip.XviD.cz-iNG.avi",
+    "len": 1213,
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S02E03.Muj.zvlastni.pripad.DVDRip.XviD.cz-iNG.avi",
+    "len": 1217,
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S02E05.Muj.novy.plast.DVDRip.XviD.cz-iNG.avi",
+    "len": 1216,
+    "ok": false
+   },
+   {
+    "n": "Scrubs.S06E10.Muj.mesic.terapie.DVDRip.XviD iNG",
+    "len": 1246,
+    "ok": false
+   },
+   {
+    "n": "Scrubs 2026 s02e04.",
+    "len": 1287,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E16 - Můj brilantní nápad SD CZ Dabing",
+    "len": 1272,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E08 - Moje problémy s pštrosy SD CZ Dabing",
+    "len": 1222,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E09 - Moje rady do života SD CZ Dabing",
+    "len": 1251,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S07E05 - Moje rostoucí bolesti SD CZ Dabing",
+    "len": 1225,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S04E17 - Můj život před kamerou SD CZ Dabing",
+    "len": 1264,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E05 - Můj nový bůh SD CZ Dabing",
+    "len": 1252,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E19 - Jeho příběh III SD CZ Dabing",
+    "len": 1257,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E20 - Můj oběd SD CZ Dabing.mkv",
+    "len": 1329,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S01E19 - Můj taťka SD CZ Dabing",
+    "len": 1278,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E07 - Moje cesta domů SD CZ Dabing",
+    "len": 1312,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S05E21 - Můj padlý idol SD CZ Dabing",
+    "len": 1239,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S04E03 - Moje nová hra SD CZ Dabing",
+    "len": 1230,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S04E24 - Moje projížďka SD CZ Dabing.mkv",
+    "len": 1245,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S01E22 - Moje příhoda SD CZ Dabing",
+    "len": 1283,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S01E18 - Moje blues SD CZ Dabing",
+    "len": 1278,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S06E05 - Moje bohatá kamarádka SD CZ Dabing",
+    "len": 1248,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S03E16 - Můj motýl SD CZ Dabing",
+    "len": 1198,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S02E19 - Mé království SD CZ Dabing",
+    "len": 1214,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S02E01 - Moje slabá chvilka SD CZ Dabing",
+    "len": 1216,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S01E16 - Můj těžkej nářez SD CZ Dabing",
+    "len": 1278,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S02E22 - Moje vysněné zaměstnání SD CZ Dabing",
+    "len": 1241,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S03E06 - Moje dobrá rada SD CZ Dabing.mkv",
+    "len": 1162,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S02E21 - Moje milovnice dramat SD CZ Dabing",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S02E03 - Můj zvláštní případ SD CZ Dabing",
+    "len": 1217,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S06E08 - Moje cesta nikam SD CZ Dabing",
+    "len": 1242,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S03E05 - Můj bratříčku, kde jsi? SD CZ Dabing",
+    "len": 1173,
+    "ok": false
+   },
+   {
+    "n": "Scrubs: Doktůrci S06E02 - Dítě mého nejlepšího přítele a moje dítě SD CZ Dabing",
+    "len": 1248,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E06",
+    "len": 1293,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E09",
+    "len": 1330,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E04",
+    "len": 1224,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E05",
+    "len": 1269,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E03",
+    "len": 1288,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E02",
+    "len": 1246,
+    "ok": false
+   },
+   {
+    "n": "Scrubs s11e04.",
+    "len": 1287,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E08",
+    "len": 1293,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) 2026 (CZ TITULKY) S01E07",
+    "len": 1285,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E15",
+    "len": 1262,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E13",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E05",
+    "len": 1261,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E03",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E04",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E01",
+    "len": 1323,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E09",
+    "len": 1293,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E11",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E14",
+    "len": 1321,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E06",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E16",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E18",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E07",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E10",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E17",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E08",
+    "len": 1291,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E19",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E12",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (Doktůrci) (CZ TITULKY) S08E02",
+    "len": 1293,
+    "ok": false
+   },
+   {
+    "n": "Scrubs (doktůrci) S08E14   ByDejvy",
+    "len": 1321,
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "type": "series",
+   "id": "tt27524116:2:1",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "Sasaki and Peeps",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Sasaki to Pii-chan Season 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "SasaPii 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Sasaki and Peeps 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Sasaki and Peeps Saison 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Sasaki and Peeps Season 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Sasaki and Peeps Staffel 2",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Sasaki to Pii-chan",
+     "kind": "anime",
+     "seasonOnly": 2
+    }
+   ],
+   "allow": [
+    "sasaki",
+    "peeps",
+    "to",
+    "pii",
+    "chan",
+    "season",
+    "2",
+    "sasapii",
+    "saison",
+    "staffel"
+   ],
+   "year": 2024,
+   "season": 2,
+   "episode": 1,
+   "alEpisode": 1,
+   "alSeason": 2,
+   "runtime": null,
+   "epRuntime": 48
+  },
+  "files": [
+   {
+    "n": "Sasaki.and.Peeps.S02E01.Mother.and.Child.1080p.BILI.WEB-DL.JPN.AAC2.0.H.265.MSubs-ToonsHub.mkv",
+    "len": 2840,
+    "ok": true
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E01.Mother.and.Child.1080p.CR.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E01.Mother.and.Child.1080p.CR.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "Sasaki and Peeps S02E01 SUBFRENCH 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "Sasaki and Peeps S02E01 SUBFRENCH 720p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "sasaki.and.peeps.s02e01.1080p.web.h264-senpai[EZTVx.to].mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "[Delta] Sasaki and Peeps S02E01 [1080p CR-WEB-MINI AAC-192 HEVC VMAF-95.9].mkv",
+    "len": 2865,
+    "ok": true
+   },
+   {
+    "n": "Sasaki.and.Peeps.2024.S02E01.1080p.CR.WEB-DL.AAC2.0.H.264-AnoZu.mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "Sasaki and Peeps S01E06 Interview and Wine and Dine REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E01 Real Life and Fantasy REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E12 Real Life Fantasy and the Fourth World REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E02 A First Job and a Partner REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E04 The Prince and the Sage REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E10 Value and Dignity REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E07 Martial and Political Force REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E08 Suspicions and Sightseeing REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E09 Executions and Negotiations REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E11 Imagination and Counters REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E05 A Magical Man and a Third World REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E03 The War and the Young Lady REPACK 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.Death.Games.and.Demons.1080p.CR.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.Death.Games.and.Demons.1080p.CR.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "[Skymoon-Raws] Sasaki and Peeps Season 2 - 01 [ViuTV][WEB-DL][CHT][SRT][1080p][AVC AAC].mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "[Doomdos] - Sasaki and Peeps Season2 - 第01话 - [1080p BILIBILI COM WEB-DL].mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.1080p.BILI.WEB-DL.JPN.AAC2.0.H.265.MSubs-ToonsHub.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S02E02 SUBFRENCH 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.2024.S02E02.1080p.CR.WEB-DL.AAC2.0.H.264-AnoZu.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S02E02 SUBFRENCH 720p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "sasaki.and.peeps.s02e02.1080p.web.h264-sugoi[EZTVx.to].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.1080p.AV1.10bit-MeGusta.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.720p.HEVC.x265-MeGusta.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.1080p.HEVC.x265-MeGusta.mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.480p.x264-mSD[EZTVx.to].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki.and.Peeps.S02E02.XviD-AFG[EZTVx.to].avi",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "[Skymoon-Raws] Sasaki and Peeps Season 2 - 02 [ViuTV][WEB-DL][CHT][SRT][1080p][AVC AAC].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Young.and.Hungry.S02E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Young-and-Hungry-S02E01---cz-titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Frankie.and.Neffe.S02E01.HDTV.x264-CRiMSON.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mike.and.Molly.S02E01.Goin.Fishin.720p.WEB-DL.DD5.1.H.264-BS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Love.Death.and.Robots.S02E01.Automated.Customer.Service.1080p.NF.WEB-DL.DD 5.1.Atmos.HDR.HEVC-L0L -cz.tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Blood.and.Water.S02E01.1080p.WEB.CZE.DDP.5.1.x264 - CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Locke.and.Key.S02E01.WEBRip.x265-ION265.mp4",
+    "ok": false
+   },
+   {
+    "n": "Locke.and.Key.S02E01.The.Premiere.1080p.NF.WEB-DL.DDP5.1.Atmos.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Locke.and.Key.S02E01.The.Premiere.1080p.NF.WEB-DL.DDP5.1.Atmos.x264-AGLET.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ginny and Georgia S02E01 CZ 1080p NF WEB DL DDP5 1 Atmos H 264 FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Shadow.and.Bone.S02E01.No.Shelter.But.Me.1080p.WEBRip.10bit.DDP5.1.x265 - cz.tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Superman.and.Lois.S02E01.What.Lies.Beneath.CZ-EN -1080p.HMAX.WEB-DL.DD5.1.x265 HORACIO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Shadow.and.Bone.S02E01.720p.NF.WEBRip.x264-GalaxyTV - kopie.mkv",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Jistě,-pane-premiére-[2×01].mp4",
+    "ok": false
+   },
+   {
+    "n": "KRIMINÁLKA-STARÉ-MĚSTO-2-01.díl-Xvid-720x404.avi",
+    "ok": false
+   },
+   {
+    "n": "Batman-Beyond-2-01-Splicers.avi.part",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01--Rozsirujici-se-spirala.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda - 2-01 Nakonec nadešla její hodina - 2.část (TVRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "El-Hazard - The Magnificent World 2 - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Orguss 2 - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Prolhané_krásky_(CZ)_2×01.avi",
+    "ok": false
+   },
+   {
+    "n": "Dallas-2-01.dí-Shledání-1.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "2 01 - Clawed Butler.mkv",
+    "ok": false
+   },
+   {
+    "n": "[sage] Sekaiichi Hatsukoi 2 - 01 (2011) [720p][10bit][ENsubs].mkv",
+    "ok": false
+   },
+   {
+    "n": "[NG] Kakumeiki Valvrave 2 - 01 (13).mkv",
+    "ok": false
+   },
+   {
+    "n": "cerna-zmije-2-01-zvony-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "HNS_GTA_2_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Zazracna planeta 2 01 - Tajemství bouřlivé minulosti.mp4",
+    "ok": false
+   },
+   {
+    "n": "02x01 - Wolffův-revír-2_01-Vlčice.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bubuki_Buranki_2_01_(13).mp4",
+    "ok": false
+   },
+   {
+    "n": "nejvetsi-tankove-bitvy-2-01-korea-pres-MultiLoad.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "[Tanime ne Mund] Super Lovers 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[Tanime ne mund] Kono Subarashii Sekai ni Shukufuku o! 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Chain_Chronicle_Movie_2_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[gg]_MS_IGLOO_2_-_01_[720p]_[65AD5176].mkv",
+    "ok": false
+   },
+   {
+    "n": "Chicago Med 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dawn Of The Croods 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "JSTD [2-01] 014 - Brylove cocky, Zula, Smazene bramburky, Pocitacove mikroprocesory.avi",
+    "ok": false
+   },
+   {
+    "n": "Shooter 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Má-pekelná-kočka-2-(01)-Larry-&-Ruby.mp4",
+    "ok": false
+   },
+   {
+    "n": "[MySubs] Saiki Kusuo no Psi Nan 2 01 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Mushishi Zoku Shou 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[OoyamanekoSubs]Shingeki no Kyojin Season 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gate_ Jieitai Kanochi nite, Kaku Tatakaeri 2 01 (CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "C.S.I. CYBER 2-01 Wi Fi (2015) Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Divoke kone 2-01 (2015) Sk.avi",
+    "ok": false
+   },
+   {
+    "n": "Knihovníci 2-01 A utopena kniha (2015) 480p Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "[OoyamanekoSubs]Ansatsu Kyoushitsu 2 - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tanime-ne-mund-Kono-Subarashii-Sekai-ni-Shukufuku-o-2---01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Černá-Zmije-2-01-Zvony-cz super komedie.avi",
+    "ok": false
+   },
+   {
+    "n": "Assassination Classroom 2-01.mkv",
+    "ok": false
+   },
+   {
+    "n": "(Hi10)_Sengoku_Basara_2_-_01_(BD_720p)_(WN-Anime).mkv",
+    "ok": false
+   },
+   {
+    "n": "[OoyamanekoSubs]Tokyo Ghoul Re Season 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tarzan.2.01 Giftalarm.mkv",
+    "ok": false
+   },
+   {
+    "n": "Modra-planeta-2-01-Jeden-ocean-(2018)--cz-dabing.mp4",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Saiki Kusuo no Psi Nan 2 - 01 [720p][Multiple Subtitle].mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeRG] Nanatsu no Taizai Season 2 -  -  01 [x265 720p 10bit] [JRR].mkv",
+    "ok": false
+   },
+   {
+    "n": "OtakusubsSK_Infinite_Stratos_2_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Černá Zmije 2 - 01 Zvony.avi",
+    "ok": false
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 01 (B-Global 1920x1080 HEVC AAC MKV) [11C2EBA7].mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 01 (Baha 1920x1080 AVC AAC MP4) [CBED1BF1].mp4",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 01 (CR 1920x1080 AVC AAC MKV) [5C645E47].mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 01 (ABEMA 1920x1080 AVC AAC MKV) [5FBE7045].mkv",
+    "len": 2841,
+    "ok": true
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 01 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 01 [720p CR WEB-DL AVC AAC][MultiSub][52A4C9E0].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 01 [480p CR WEB-DL AVC AAC][MultiSub][71144F22].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 01 [1080p CR WEB-DL AVC AAC][MultiSub][B959C904].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 01 [1080p CR WEBRip HEVC AAC][MultiSub][9FF8867B].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 02 (B-Global 1920x1080 HEVC AAC MKV) [67898214].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 02 (CR 1920x1080 AVC AAC MKV) [4907329D].mkv",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "[Dynamis One] Sasaki to Pii-chan Season 2 - 02 (Baha 1920x1080 AVC AAC MP4) [9528F543].mp4",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 02 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 03 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 04 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 05 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 06 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 07 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 08 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 09 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 10 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan - Season 1 - 12 (1080p) cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 02 [720p CR WEB-DL AVC AAC][MultiSub][0E3ACF20].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 02 [480p CR WEB-DL AVC AAC][MultiSub][0C98A7BA].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 02 [1080p CR WEB-DL AVC AAC][MultiSub][521737EE].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Sasaki to P-chan Season 2 - 02 [1080p CR WEBRip HEVC AAC][MultiSub][1BF711DB].mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 1 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 2 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 3 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 4 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 5 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 6 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 7 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 8 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 9 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 10 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 11 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 11 (1080p) [8482435B].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 11 (720p) [4B9A0F34].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 12 (1080p) [D9005FF3].mkv",
+    "ok": false
+   },
+   {
+    "n": "Sasaki to Pii-chan 12 en tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan S2 - 01 (480p) [AE18A969].mkv",
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan S2 - 01 (720p) [5EF67237].mkv",
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan S2 - 01 (1080p) [3D2F718F].mkv",
+    "ok": true
+   },
+   {
+    "n": "[AsukaRaws] Sasaki to Pii-chan S2 - 01 (WEB-DL 1280x720 x264 AAC).mp4",
+    "ok": true
+   },
+   {
+    "n": "[ASW] Sasaki to Pii-chan S2 - 01 [1080p HEVC][C00D1DD5].mkv",
+    "ok": true
+   },
+   {
+    "n": "[DKB] Sasaki to Pii-chan - S02E01 [1080p][HEVC x265 10bit][Multi-Subs][4DA4AF05].mkv",
+    "ok": true
+   },
+   {
+    "n": "[Ironclad] Sasaki to Pii-chan - S02E01 [WEB.1080p.AV1].mkv",
+    "ok": true
+   },
+   {
+    "n": "Sasaki to Pii-chan S2 - 01.mkv",
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 12 (1080p) [D9005FF3]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 04 (1080p) [C93E2876]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 11 (1080p) [8482435B]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 05 (1080p) [CA904643]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 06 (1080p) [53365FA9]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 09 (1080p) [B1BA4AEF]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 02 (1080p) [D7F8029E]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 01 (1080p) [4BD5E55E]",
+    "len": 2900,
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Sasaki to Pii-chan - 10 (1080p) [EDF7F38D]",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Sasaki and Peeps S01E03 The War and the Young Lady",
+    "len": 1421,
+    "ok": false
+   }
+  ]
  }
 ]

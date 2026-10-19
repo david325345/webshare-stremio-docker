@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.6.8';
+const VERSION = '8.6.9';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -492,6 +492,7 @@ async function tmdbInfoWithKey(imdbId, type, key) {
         original,
         originalLanguage: origLang,
         alt: altList.filter(a => a.iso_3166_1 === 'CZ' || a.iso_3166_1 === 'SK').map(a => a.title).filter(Boolean),
+        altEn: altList.filter(a => a.iso_3166_1 === 'US' || a.iso_3166_1 === 'GB').map(a => a.title).filter(Boolean).slice(0, 10),
         year: parseInt(String(d.release_date || d.first_air_date || '').slice(0, 4), 10) || null,
         runtime: d.runtime || null,           // délka filmu v minutách (u seriálů null)
         tmdbId: item.id, media,               // pro délku dílů (/tv/{id}/season/{n})
@@ -575,12 +576,14 @@ async function seasonRuntimes(tvId, season, userTmdbKey, episode) {
     });
 }
 
-// Jiné seriály se stejným názvem (reboot / revival / původní seriál) → roky jejich začátku.
+// Jiné seriály se stejným názvem (reboot / revival / původní seriál / jiná země) →
+// [{ y: rok začátku, v: počet hodnocení, c: země }] + náš seriál jako { ours: true, v, c }.
 // Jen známější tituly (aspoň 10 hodnocení), aby nějaký zapadlý stejnojmenný pořad nezpůsobil vyřazení.
 // Výsledek 30 dní v cache, chyba 1 den.
+const countryCode = c => { c = String(c || '').toLowerCase(); return c === 'gb' ? 'uk' : c; };
 async function sameNameShows(info, userTmdbKey) {
     if (!info || info.media !== 'tv' || !info.tmdbId || !info.year) return null;
-    const key = `sn:${info.tmdbId}`;
+    const key = `sn2:${info.tmdbId}`;
     const hit = tmdbCache.get(key);
     if (hit !== undefined) return hit;
     const ours = new Set([info.en, info.original, info.cz].filter(Boolean).map(t => M.tokens(t).join(' ')).filter(Boolean));
@@ -591,17 +594,21 @@ async function sameNameShows(info, userTmdbKey) {
         for (const k of keys) {
             try {
                 const d = await tmdbGet(`/search/tv?query=${encodeURIComponent(query)}&language=en-US`, k);
-                const years = [];
+                const out = [];
+                let me = null;
                 for (const r of (d && d.results) || []) {
-                    if (r.id === info.tmdbId || (r.vote_count || 0) < 10) continue;
+                    const c = countryCode((r.origin_country || [])[0]);
+                    if (r.id === info.tmdbId) { me = { ours: true, v: r.vote_count || 0, c }; continue; }
+                    if ((r.vote_count || 0) < 10) continue;
                     const y = parseInt(String(r.first_air_date || '').slice(0, 4), 10);
                     if (!y || Math.abs(y - info.year) <= 1) continue;
                     const same = [r.name, r.original_name].filter(Boolean).some(t => ours.has(M.tokens(t).join(' ')));
-                    if (same && !years.includes(y)) years.push(y);
+                    if (same && !out.some(o => o.y === y)) out.push({ y, v: r.vote_count || 0, c });
                 }
-                years.sort((a, b) => a - b);
-                tmdbCache.set(key, years, 30 * 24 * H);
-                return years;
+                out.sort((a, b) => a.y - b.y);
+                const res = out.length ? [...out, me || { ours: true, v: null, c: '' }] : [];
+                tmdbCache.set(key, res, 30 * 24 * H);
+                return res;
             } catch (e) {
                 dbg(`TMDB stejný název ${info.tmdbId}: ${e.message}`);
                 if (!e.auth) break;
@@ -683,12 +690,21 @@ async function buildPlan(type, id, cfg) {
     // short = zkrácený název před dvojtečkou; full = celý název, ze kterého vznikl
     const full = text => text ? { text } : null;
     const short = text => { const s = M.shortTitle(text); return s ? { text: s, short: true, full: text } : null; };
-    const sub = text => { const s = M.subTitle(text); return s ? { text: s, short: true, full: text } : null; };
+    // podtitul ("Okresní přebor – Poslední zápas Pepika Hnátka" → "Poslední zápas Pepika Hnátka"):
+    // od 3 významných slov je dost jednoznačný i bez roku
+    const sub = text => { const s = M.subTitle(text); return s ? { text: s, short: M.nameTokens(s).length < 3, full: text } : null; };
     const fr = [];
     if (info) {
-        fr.push(full(info.cz), full(info.sk), full(info.en), full(latin(info.original)));
+        // delší anglický název, který začíná naším EN/originálním ("Evil Genius: The True Story of …")
+        const baseEn = [info.en, latin(info.original)].filter(Boolean).map(t => M.nameTokens(t).join(' '));
+        const longEn = [...(info.altEn || []), latin(info.original)].filter(Boolean).find(a => {
+            const k = M.nameTokens(a).join(' ');
+            return baseEn.some(b => b && k !== b && k.startsWith(b + ' '));
+        });
+        fr.push(full(info.cz), full(info.sk), full(info.en), full(latin(info.original)), full(longEn));
         fr.push(short(info.cz), sub(info.cz), short(info.en), sub(info.en));
         (info.alt || []).slice(0, 3).forEach(a => fr.push(full(a)));
+
     }
     // Názvy z indexeru (romaji / EN pro konkrétní sezónu) – párují se s epizodou v rámci sezóny
     const an = [];
@@ -868,13 +884,23 @@ function animeSeasonOk(pe, n, plan) {
     return pe.season === 1 && seasonInName;
 }
 
+// Stejnojmenné seriály z plánu (i starší formát archivu = jen roky)
+function sameNameOf(plan) {
+    const list = (plan.sameName || []).map(o => typeof o === 'number' ? { y: o, v: null, c: '' } : o);
+    return { others: list.filter(o => !o.ours), me: list.find(o => o.ours) || null };
+}
+const COUNTRY_MARK = new Set(['us', 'usa', 'uk', 'au', 'aus', 'nz', 'ca', 'ie']);
+const markCountry = t => t === 'usa' ? 'us' : t === 'aus' ? 'au' : t;
+
 // Posoudí jeden soubor: { ok, exact, reason, s, e } – důvod se ukládá do archivu hledání
 function judgeFile(f, plan) {
     if (M.isNonVideo(f.name)) return { ok: false, reason: 'nepřehratelný soubor' };
     const texts = plan.names.map(n => n.text);
     const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text, texts));
     if (plan.type === 'movie') {
-        if (M.looksLikeEpisode(f.name)) return { ok: false, reason: 'vypadá jako díl seriálu' };
+        if (M.looksLikeEpisode(f.name) && !plan.names.some(n => /\b\d{1,2}x\d{1,3}\b/.test(M.normalize(n.text)))) {
+            return { ok: false, reason: 'vypadá jako díl seriálu' };
+        }
         const byFull = plan.names.some(n => !n.short && nameOk(f.name, n, plan));
         const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n, plan));
         if (!byFull && !byShort) return { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
@@ -893,19 +919,35 @@ function judgeFile(f, plan) {
     // rok v názvu: když jsou všechny roky dřív, než seriál začal → jiný (starší) titul stejného jména
     // (rozsahy "1858 - 1961" se nepočítají; "1973 … Barbarossa 1941" projde díky 1973)
     if (plan.year && anyTitle) {
+        // rok v názvu dílu ("S10E1 Archer 1999: …") se nepočítá
         const ys = M.fileYears(f.name, { noRanges: true });
+        const titleYs = M.episodeTitleYears(f.name, new Set(plan.names.flatMap(n => M.nameTokens(n.text))));
+        for (const y of titleYs) { const i = ys.indexOf(y); if (i !== -1) ys.splice(i, 1); }
         if (ys.length && ys.every(y => y < plan.year - 1)) return { ok: false, reason: `rok nesedí (${ys.join(',')})` };
-        // stejnojmenný seriál (reboot/revival ↔ původní): starší existuje → soubor musí mít náš rok;
-        // novější existuje → rok novějšího bez našeho roku = novější seriál
-        const other = plan.sameName || [];
-        const older = other.filter(y => y < plan.year - 1);
-        const newer = other.filter(y => y > plan.year + 1);
-        if (older.length && !ys.some(y => y >= plan.year - 1)) {
-            return { ok: false, reason: `bez roku (starší seriál ${older[older.length - 1]})` };
-        }
-        if (newer.length) {
-            const ours = ys.some(y => y >= plan.year - 1 && y < newer[0] - 1);
-            if (!ours && ys.some(y => y >= newer[0] - 1)) return { ok: false, reason: `rok nesedí (novější seriál ${newer[0]})` };
+        // stejnojmenný seriál (reboot/revival ↔ původní, jiná země) – ne u anime (remaky bývají bez roku)
+        const sn = plan.isAnime ? { others: [] } : sameNameOf(plan);
+        if (sn.others.length) {
+            // značka země za názvem ("The Office US S01E01") rozhodne před rokem
+            const hit = plan.names.map(n => M.afterName(f.name, n.text)).find(Boolean);
+            const mark = hit && hit.rest.slice(0, 3).map(markCountry).find(t => COUNTRY_MARK.has(t));
+            const myC = sn.me && sn.me.c;
+            if (mark && myC && mark === myC) { /* náš seriál – pravidla roku stejnojmenných se přeskočí */ }
+            else if (mark && myC && sn.others.some(o => o.c === mark)) {
+                return { ok: false, reason: `jiný seriál (${mark.toUpperCase()})` };
+            } else {
+                // starší existuje a je známější než náš → soubor bez našeho roku patří jemu (Scrubs 2026 × 2001);
+                // když je náš známější (The Office US × UK), soubor bez roku je náš
+                const myV = sn.me && sn.me.v;
+                const older = sn.others.filter(o => o.y < plan.year - 1 && (myV === null || myV === undefined || o.v === null || o.v === undefined || o.v > myV));
+                const newer = sn.others.filter(o => o.y > plan.year + 1).map(o => o.y);
+                if (older.length && !ys.some(y => y >= plan.year - 1)) {
+                    return { ok: false, reason: `bez roku (starší seriál ${older[older.length - 1].y})` };
+                }
+                if (newer.length) {
+                    const ours = ys.some(y => y >= plan.year - 1 && y < newer[0] - 1);
+                    if (!ours && ys.some(y => y >= newer[0] - 1)) return { ok: false, reason: `rok nesedí (novější seriál ${newer[0]})` };
+                }
+            }
         }
     }
     let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
@@ -916,6 +958,11 @@ function judgeFile(f, plan) {
         const seq = hit ? M.sequelSeason(hit.rest) : null;
         const rest = hit ? (seq ? hit.rest.slice(1) : hit.rest) : undefined;
         const pe = M.parseEpisode(f.name, M.nameTokens(n.text), rest);
+        // číslo dílu na začátku souboru, když za názvem žádné není ("01. Now and Then, Here and There …")
+        if (pe.episode === null && pe.season === null && hit && hit.start > 0 && (plan.season === 1 || plan.isAnime)) {
+            const lead = M.stripLeadingGroups(f.name).match(/^\s*0*(\d{1,3})\s*[.)\-_]/);
+            if (lead && +lead[1] > 0) { pe.episode = +lead[1]; pe.explicit = false; }
+        }
         if (pe.episode === null) { reason = 'bez čísla dílu'; continue; }
         // rok hned za názvem mimo dobu vysílání ("Hawaii Five-0 2010" × seriál z roku 1968)
         const y0 = hit && hit.rest[0] && /^(19|20)\d{2}$/.test(hit.rest[0]) ? +hit.rest[0] : null;

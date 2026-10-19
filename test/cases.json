@@ -36047,5 +36047,7311 @@
     "ok": false
    }
   ]
+ },
+ {
+  "plan": {
+   "sameName": [
+    {
+     "y": 2001,
+     "v": 1100,
+     "c": "uk"
+    },
+    {
+     "y": 2024,
+     "v": 40,
+     "c": "au"
+    },
+    {
+     "ours": true,
+     "v": 4000,
+     "c": "us"
+    }
+   ],
+   "type": "series",
+   "id": "tt0386676:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Kancl",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "The Office",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "kancl",
+    "office"
+   ],
+   "year": 2005,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 24
+  },
+  "files": [
+   {
+    "n": "Kancl S01E01 Pilot.mkv",
+    "len": 1387,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01-06 2005 CZ dabing 1080p FHD - Pilot.mkv",
+    "len": 1387,
+    "ok": true
+   },
+   {
+    "n": "Kancl II (6) - Souboj.Kancl S02E06 - Souboj.Lovok.DVB-T.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kancl II (18) - Vemte dceru do práce.Kancl S02E18 - Vemte dceru do prace.Lovok.DVB-T.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kancl 02x03 Olympijske hry.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl 02x22 Vecer v casinu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl 03x06 Slavnost indu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl 03x09 Vezen.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl 04x09 Michaelova reklama.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl-doma-out.of.office.2022.480p.webrip.cz(1).avi",
+    "ok": false
+   },
+   {
+    "n": "Carol a konec světa 02 Kancl.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E02 Den odlišností.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E03 Zdravotní péče.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E04 Aliance.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E05 Basketbal.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E06 Kočka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E22 Večer v kasinu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E02 Sexuální obtěžování.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E03 Olympijské hry.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E04 Požár.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E05 Halloween.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E06 Souboj.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E07 The Client.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E08 Hodnocení výkonnosti.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E09 Nezvaný host.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E10 Vánoční večírek.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E11 Michaelova lodní prezentace.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E12 Úraz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E13 Tajnosti.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E14 Koberec.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E16 Den Sv  Valentýna.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E18 Vezmi dceru do práce.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E17 Dwightův proslov.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E19 Michaelovy narozeniny.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E20 Drogové testy.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E21 Rešení konfliktu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E01 Oskaři.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E02 Konference.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E03 Podraz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E08 Sloučení.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E04 Rada pro pozůstalé.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E05 Zasvěcení.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E06 Slavnost Indů.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E07 Uzavření pobočky.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E01 Lovci gayů.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E11 Vánoce v Benihaně 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E10 Vánoce v Benihaně 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E09 Vězeň.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E12 Návrat z dovolené.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E13 Cesťák.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E02-06 2005 CZ dabing 1080p FHD - Den odlišností.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E03-06 2005 CZ dabing 1080p FHD - Zdravotní péče.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E04-06 2005 CZ dabing 1080p FHD - Aliance.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E05-06 2005 CZ dabing 1080p FHD - Basketbal.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E06-06 2005 CZ dabing 1080p FHD - Kočka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E01-22 2005 CZ dabing 1080p FHD - Oskaři.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E02-22 2005 CZ dabing 1080p FHD - Sexuální obtěžování.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E03-22 2005 CZ dabing 1080p FHD - Olympijské hry.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E05-22 2005 CZ dabing 1080p FHD - Halloween.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E06-22 2005 CZ dabing 1080p FHD - Souboj.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E07-22 2005 CZ dabing 1080p FHD - The Client.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E08-22 2005 CZ dabing 1080p FHD - Hodnocení výkonnosti.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E09-22 2005 CZ dabing 1080p FHD - Nezvaný host.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E10-22 2005 CZ dabing 1080p FHD - Vánoční večírek.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E11-22 2005 CZ dabing 1080p FHD - Michaelova lodní prezentace.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E12-22 2005 CZ dabing 1080p FHD - Úraz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E13-22 2005 CZ dabing 1080p FHD - Tajnosti.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E16-22 2005 CZ dabing 1080p FHD - Den Sv_ Valentýna.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E17-22 2005 CZ dabing 1080p FHD - Dwightův proslov.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E18-22 2005 CZ dabing 1080p FHD - Vezmi dceru do práce.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E19-22 2005 CZ dabing 1080p FHD - Michaelovy narozeniny.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E20-22 2005 CZ dabing 1080p FHD - Drogové testy.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E21-22 2005 CZ dabing 1080p FHD - Rešení konfliktu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E22-22 2005 CZ dabing 1080p FHD - Večer v kasinu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E14-22 2005 CZ dabing 1080p FHD - Koberec.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S02E04-22 2005 CZ dabing 1080p FHD - Požár.mkv",
+    "ok": false
+   },
+   {
+    "n": "doctor.who.2005.s01e01.720p.bluray.x264-shortbrehd.mkv",
+    "ok": false
+   },
+   {
+    "n": "Osvětim - Nacisté a konečné řešení 2005 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Pán.času-Doctor.Who.2005.S01E01-rose-ws-dvdrip-xvid-cz-pulp3.avi",
+    "ok": false
+   },
+   {
+    "n": "The Boondocks (2005) - S01E01 - The Garden Party (1080p HMAX WEB-DL x265 YOGI).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Virgin Queen 2005 S01E01-E02 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Casanova 2005 S01E01 Part 1 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rome.2005.S01E01.The Stolen Eagle.1080p.BluRay.REMUX.DTS-HD.MA.5.1 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Suite Life of Zack & Cody (2005) S01E01 - Hotel Hangout.480p.H265.AAC.2CH-MNKYDDL.mkv",
+    "ok": false
+   },
+   {
+    "n": "Like Father Like Son 2005 S01E01 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Blood+ (2005) - S01E01 - First Kiss [Bluray-720p][Opus 2.0][AV1]-BlackRabbit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Extras 2005 S01E01 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Strawberry 100- (2005) - S01E01 - The Illusionary Strawberry Underwear Misunderstanding or a Wrong Guess [Bluray-1080p][Opus 2.0][AV1]-BlackRabbit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fingersmith (2005) - S01E01 - Episode 1 (1080p AMZN WEB-DL x265 Celdra).mkv",
+    "ok": false
+   },
+   {
+    "n": "Ben 10 (2005) - S01E01 - And Then There Were 10 [HMAX][WEBDL-1080p][AC3 2.0][x265]-Widows.mkv",
+    "ok": false
+   },
+   {
+    "n": "Elizabeth I 2005 S01E01 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Bones.(2005).S01E01.1080p.10bit.WEB-DL.AC3.x265.HEVC-EDGE2020 (CzAudio).mkv",
+    "ok": false
+   },
+   {
+    "n": "Twenty Thousand Streets Under the Sky 2005 S01E01 The Midnight Bell Bobs Story 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S01E01.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "American Pie Presents - Band Camp [CZ][2005].avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E01.New.Kid.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S01E01.avi",
+    "len": 1784,
+    "ok": false
+   },
+   {
+    "n": "fan.level.midnight.devoted.to.the.office.s01e01.1080p.web.h264-documentary[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "fan.level.midnight.devoted.to.the.office.s01e01.1080p.web.h264-documentary.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Office.UK.COMPLETE.S01E01.DVD.PAL.x264.AC3-BRiLL.mkv",
+    "len": 1784,
+    "ok": false
+   },
+   {
+    "n": "The.Office.UK.S01E01.Downsize.1080p.HMAX.WEB-DL.DD2.0.H.264-pawel2006.mkv",
+    "len": 1785,
+    "ok": false
+   },
+   {
+    "n": "The Office US S01E01 Pilot Extended Cut 1080p PCOK WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "len": 2294,
+    "ok": false
+   },
+   {
+    "n": "The Office UK 2001 S01E01 Downsize 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Office.US.S01E01.Pilot.1080p.HEVC.x265-MeGusta.mkv",
+    "len": 1406,
+    "ok": true
+   },
+   {
+    "n": "The Office US S01E01 Pilot 1080p BluRay Remux DTS-HD MA2 0 H 264-NTb.mkv",
+    "len": 1406,
+    "ok": true
+   },
+   {
+    "n": "Murder At The Post Office S01E01 The Hunt For A Killer 720p NOW WEB-DL DDP5 1 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.1080p.WEB.h264-EDITH.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder.at.the.Post.Office.S01E01.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai Office Worker The Other World's Books Depend on the Bean Counter S01E01 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (CR).mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai.Office.Worker.The.Other.Worlds.Books.Depend.on.the.Bean.Counter.S01E01.I.Got.a.Job.1080p.CR.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai Office Worker The Other World's Books Depend on the Bean Counter S01E01 VOSTFR 720p WEB x264 AAC -Tsundere-Raws (CR).mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai.Office.Worker.The.Other.Worlds.Books.Depend.on.the.Bean.Counter.S01E01.1080p.CR.WEB-DL.JPN.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Murder At The Post Office 2025 S01E01 The Hunt For A Killer 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai.Office.Worker.The.Other.Worlds.Books.Depend.on.the.Bean.Counter.S01E01.I.Got.a.Job.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Isekai.Office.Worker.The.Other.Worlds.Books.Depend.on.the.Bean.Counter.S01E01.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yameii] Isekai Office Worker - The Other World's Books Depend on the Bean Counter - S01E01 [English Dub] [CR WEB-DL 1080p H264 AAC] [970B4EB1].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yameii] Isekai Office Worker - The Other World's Books Depend on the Bean Counter - S01E01 [English Dub] [CR WEB-DL 720p H264 AAC] [B7988ED9].mkv",
+    "ok": false
+   },
+   {
+    "n": "Mr Bates vs The Post Office 2024 S01E01 720p WEB-DL H264 BONE.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mr Bates vs The Post Office 2024 S01E01 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Office.US.S02E03.Office.Olympics.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office US S02E03 Office Olympics 1080p Extended Cut AMZN WEB-DL DDP5 1 H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office [1.04] The Alliance.avi",
+    "len": 1342,
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S03E18 - The Negotiation (1080p AMZN WEB-DL x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S03E23 - The Job (1080p AMZN WEB-DL x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S04E12 - The Deposition (1080p AMZN WEB-DL x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S04E14 - The Chair Model (1080p AMZN WEB-DL x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S05E21 - The Michael Scott Paper Company (1080p BluRay x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S06E25 - The Chump (1080p BluRay x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S07E05 - The Sting (1080p BluRay x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office (US) (2005) - S07E15 - The Search (1080p BluRay x265 LION).mkv",
+    "ok": false
+   },
+   {
+    "n": "The-Office-S05E11-The-Duel.avi",
+    "ok": false
+   },
+   {
+    "n": "The-Office-S05E21-The-Michael-Scott-Paper-Company.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.UK.S01E03.The.Quiz.1080p.HMAX.WEB-DL.DD2.0.H.264-pawel2006.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Mary.Tyler.Moore.Show.S04E13.I.Gave.at.the.Office.AC3.DVDRip.XviD.avi",
+    "ok": false
+   },
+   {
+    "n": "The Office US S03E18 The Negotiation Extended Cut 1080p PCOK WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office US S03E09 The Convict Extended Cut 1080p PCOK WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Office US S03E08 The Merger Extended Cut 1080p PCOK WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E01-06 2005 CZ dab - Pilot",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 Pilot CZ-dabing,Komedie,Drama,2005–13",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01-06 2005 CZ dabing 1080p FHD - Pilot",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Office - S1E1 Pilot CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Office S01E01 CZtit V OBRAZE",
+    "len": 1382,
+    "ok": true
+   },
+   {
+    "n": "The Office - s01e01",
+    "len": 1382,
+    "ok": true
+   },
+   {
+    "n": "The Office - S1E1 Pilot EN",
+    "len": 1381,
+    "ok": true
+   },
+   {
+    "n": "The.Office.UK.S01E01.Downsize.1080p.HMAX.WEB-DL.DD2.0.H.264-pawel2006",
+    "len": 1784,
+    "ok": false
+   },
+   {
+    "n": "The Office Movers - S1E1 EN",
+    "len": 1251,
+    "ok": false
+   },
+   {
+    "n": "The Office UK 1x1",
+    "len": 1783,
+    "ok": false
+   },
+   {
+    "n": "Kancl_S01E01_Pilot",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl 1x1 Pilot 1080p",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 1080p",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 Pilot",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl CZ - S01E01 - Redukce",
+    "len": 1829,
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E01 - Pilotní díl CZ Dabing",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 - 1. epizoda CZ Dabing",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 - Pilotní díl 1080p CZ Dabing",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 - 1. epizoda 1080p CZ Dabing",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01 CZ DABING",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl CZ - S1E1 Redukce CS",
+    "len": 1829,
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E01 1080p CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Kancl S01E01",
+    "len": 1830,
+    "ok": false
+   },
+   {
+    "n": "Kancl.CZ.01x01.Redukce.DVB-T.CZ",
+    "len": 1830,
+    "ok": false
+   },
+   {
+    "n": "Kancl S01E01 (Redukce)",
+    "len": 1830,
+    "ok": false
+   },
+   {
+    "n": "Kancl 2024 - S1E1 VRŽ EN",
+    "len": 1400,
+    "ok": false
+   },
+   {
+    "n": "Kancl - S1E1 Redukce CS",
+    "len": 1829,
+    "ok": false
+   },
+   {
+    "n": "Kancl - S1E1 CS",
+    "len": 1829,
+    "ok": false
+   },
+   {
+    "n": "Kancl - S1E1 EN",
+    "len": 1400,
+    "ok": true
+   },
+   {
+    "n": "Kancl 2001 - S1E1 Zeštíhlování CS",
+    "len": 1785,
+    "ok": false
+   },
+   {
+    "n": "Kancl - S01E01 - Kancl",
+    "len": 1320,
+    "ok": true
+   },
+   {
+    "n": "Kancl - S1E1 Kancl CS",
+    "len": 1320,
+    "ok": true
+   },
+   {
+    "n": "Kancl - S1E1 Redukce EN",
+    "len": 1783,
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm-s1-01.avi",
+    "ok": false
+   },
+   {
+    "n": "Hatfieldovi a McCoyovi-01.d",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "farcry2 2013-01-23 00-11-24-92.AVI",
+    "ok": false
+   },
+   {
+    "n": "01. Zloduch Mollache.rm",
+    "ok": false
+   },
+   {
+    "n": "01.Prorok ktery zmenil Svet (A Propeth changes the World).avi",
+    "ok": false
+   },
+   {
+    "n": "mala velka britanie 01.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda_1-01- Potmě.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_3-01.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Hodlate se s tim smirit.avi",
+    "ok": false
+   },
+   {
+    "n": "Zaklinac 01 - Detstvi.avi",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Shingeki_no_Kyojin_-_01_[0B164A9D].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Cinska kapitalisticka revoluce (China's Capitalist Revolution part.1).avi",
+    "ok": false
+   },
+   {
+    "n": "Cestománie 01 - Indonesie-sumatra.neni kam spechat.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Experiment Kolonie I.avi",
+    "ok": false
+   },
+   {
+    "n": "01. Po líbánkách.avi",
+    "ok": false
+   },
+   {
+    "n": "6_01-Valkyry_z_Vallhaly_1.cast.avi",
+    "ok": false
+   },
+   {
+    "n": "01 - V hadim hnizde .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Pod palbou .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Navrat ztraceneho syna .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Avalon, cast I. .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Z masa a kosti .avi",
+    "ok": false
+   },
+   {
+    "n": "Angel - 3. série - 01. díl - BUŠENÍ SRDCE.avi",
+    "ok": false
+   },
+   {
+    "n": "Autogrotesky 01 Hasičák Burák (Rescue Squad Mater).AVI",
+    "ok": false
+   },
+   {
+    "n": "Zla krev_1986_01_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Trestny-prapor_Shtrafbat_2004_cz_dil_01.avi",
+    "ok": false
+   },
+   {
+    "n": "30 Rock [3.01] Do-Over.avi",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Great_Teacher_Onizuka_-_Lesson_01_(6F68CC7E).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yellow-Flash]_Gungrave_-_01_[720p][F64F0332].mkv",
+    "ok": false
+   },
+   {
+    "n": "[joseole99][Frostii] K-On! - 01 (1280x720 h264 AC3 AAC) [72C908C7].mkv",
+    "ok": false
+   },
+   {
+    "n": "cowboy_bebop_remastered_01[h264.ac3][niizk].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Okna do sveta (Windows on the World).avi",
+    "ok": false
+   },
+   {
+    "n": "Synové a dcery Jakuba skláře-01.Vandrovník.avi",
+    "ok": false
+   },
+   {
+    "n": "zena-za-pultem-01-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "Cirkus Humberto_01_1988_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "P90X+ 01 - Interval X Plus.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hannibal-01---04-CZ-dabing---axn.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 03x01 - Hrichy otcu 01. doktor Divny.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x09 - Tajne valky 01. prichod.mp4",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x12 - Spider valky 01. klony vazne  nemam v lasce.mp4",
+    "ok": false
+   },
+   {
+    "n": "Policajti z centra (01) - Než řekneš švec.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita 01 CZ-titulky (by vahrner).avi",
+    "ok": false
+   },
+   {
+    "n": "Neon Genesis Evangelion 01 CZ-titulky (by vahrner).avi",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E14 Dwightovo vítězství.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E15 Ben Franklin.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E16 Svatba.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E17 Škola života.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E18 Veřejné tajnosti.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E20 Školení bezpečnosti práce.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E19 Vyjednávání.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E21 Reklamace.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E22 Ženská práva.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E24 Nová práce 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E23 Plážové hry.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S03E25 Nová práce 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E16 Pracovní kázeň .mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E02 Charitativní běh, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E03 Velká modernizace, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E04 Velká modernizace, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E05 Oslava nového začátku, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E06 Oslava nového začátku, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E07 Druhá práce, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E08 Druhá práce, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E09 Michaelova reklama.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E10 Válka o zaměstnance.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E11 Trosečník.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E12 Proces.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E13 Divoký večírek.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E14 Krásná neznámá.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E15 Noční tah.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E01 Charitativní běh, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E17 Pracovní veletrh.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E18 Sbohem, Toby, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S04E19 Sbohem, Toby, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E03 Povýšení.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E02 Schůzka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E11 Valná hromada.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E04 Niagarské vodopády, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E05 Niagarské vodopády, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E06 Mafie.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E07 Milenka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E08 Jezírko.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E09 Dvojité rande.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E10 Vražda.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E01 Drby.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E12 Scottovi caparti.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E13 Tajný Santa.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E14 Bankéř.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E15 Firma Sabre.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E16 Ředitel a prodejce.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E17 Porod, 1 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E18 Porod, 2 část.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E19 Den Sv. Patrika.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E20 Noví zákazníci.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kancl S06E21 Happy Hour.mkv",
+    "ok": false
+   },
+   {
+    "n": "Factotum.2005.DVDRip.XviD-DnB.avi",
+    "ok": false
+   },
+   {
+    "n": "House.of.Wax[2005]ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Tim.Burtons.Corpse.Bride[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Amityville.Horror[2005]ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Aeon.Flux.2005.BDRip.Xvid.Hun-D2.avi",
+    "ok": false
+   },
+   {
+    "n": "Mr.Es.Mrs.Smith.2005.DVDRip.Hun.Xvid-viner.avi",
+    "ok": false
+   },
+   {
+    "n": "Doom Extended Edition 2005_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Skeleton.Key[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x01.Asylum.Of.The.Daleks.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E01.Asylum.Of.The.Daleks.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x02.Dinosaurs.On.A.Spaceship.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x02.Dinosaurs.On.A.Spaceship.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E03.A.Town.Called.Mercy.HDTV.x264-TLA.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E03.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E05.The.Angels.Take.Manhattan.HDTV.x264-TLA.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E05.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E05.720p.WEB-DL.DD5.1.H.264-ECI.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x05.The.Angels.Take.Manhattan.PROPER.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Nanny.McPhee.[2005].ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Legend.Of.Zorro[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Zathura[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Cheaper.By.The.Dozen.2[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Harsh.Times.2005.720p.BluRay.x264.YIFY.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sin.City.2005_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Great.Raid[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Jarhead[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "xXx State Of The Union 2005_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x07.The.Rings.Of.Akhaten.720p.HDTV.x264-FoV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x06.The.Bells.of.Saint.John.720p.HDTV.x264.FoV.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Proposition[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "kiss-kiss-bang-bang-cz-dabing-krimi-komedie-usa-2005-cz.mp4",
+    "ok": false
+   },
+   {
+    "n": "Pride.and.Prejudice[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x08.Cold.War.720p.HDTV.x264.FoV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dirty.Love.2005.DVDRip.XviD.HUN-N&R.avi",
+    "ok": false
+   },
+   {
+    "n": "Serenity[2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Hostel[Unrated][2005]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.who.2005.7x09.Hide.720p.HDTV.x264-FoV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x09.Hide.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E08.Cold.War.HDTV.x264-TLA.mp4",
+    "ok": false
+   },
+   {
+    "n": "doctor_who_2005.7x01.asylum_of_the_daleks.720p_hdtv_x264-fov.mkv",
+    "ok": false
+   },
+   {
+    "n": "doctor-who-2005-S07E02-Dinosaurs-on-a-spaceship-720p_hdtv_x264-fov.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E03.720p.WEB-DL.AAC.H.264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E04.720p.WEB-DL.AAC.H.264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.S07E07.The.Rings.Of.Akhaten.1080p.WEB-DL.DD5.1.H.264-ECI.mkv",
+    "ok": false
+   },
+   {
+    "n": "doctor-who-2005-s07e05-720p-hdtv-x264-bia.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Transporter.2(2005).720p.BrRip.x264.Dual.audio.(Eng-Hin).Oyemaza.com.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kiss Kiss Bang Bang 2005 720p BRRip x264 AAC-AGiX.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hitch.2005.ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "doctor_who_2005.7x11.the_crimson_horror.720p_hdtv_x264-fov.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sametovi_Vrazi_Drama_Krimi_2005_Ceske_Filmy_.avi",
+    "ok": false
+   },
+   {
+    "n": "Kiss Kiss Bang Bang [2005] 720p BRRip x264 [Dual-Audio] [Eng-Hindi](oyemaza.com).mkv",
+    "ok": false
+   },
+   {
+    "n": "Elektra[2005]DvDrip[Eng]-aXXo.avi",
+    "ok": false
+   },
+   {
+    "n": "2005 Vnutorny nepriatel cz ☼   2005.avi",
+    "ok": false
+   },
+   {
+    "n": "2005 Zemne krvaveho slunce cz ☼   2005.avi",
+    "ok": false
+   },
+   {
+    "n": "2005 Cierny usvit cz ☼   2005.avi",
+    "ok": false
+   },
+   {
+    "n": "Cerberus.a.vegzet.kardja.2005.CUSTOM.HUN.DVDRiP.DivX-TiGeR.avi",
+    "ok": false
+   },
+   {
+    "n": "Země-mrtvých--2005-Land-of-the-Dead.cz_dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Pirates.(2005).HQ.DVDrip.DivX.EN.HanS.avi",
+    "ok": false
+   },
+   {
+    "n": "Hádej kdo (2005).avi",
+    "ok": false
+   },
+   {
+    "n": "Zkrocena-Hora-(2005)-drama,H.Ledger,J.Gyllenhaal,CZ-dab,DTVMir,126'.avi",
+    "ok": false
+   },
+   {
+    "n": "5 Drakula.3.Az.orokseg-Hun.XviD-2005.avi",
+    "ok": false
+   },
+   {
+    "n": "Skola.tance.a.sarmu.2005.DVDRip.XviD.CZ-UniQue.avi",
+    "ok": false
+   },
+   {
+    "n": "Zmizení-CZ-dabing---Mysteriózní--Thriller,-USA,-2005-(nejlepsi-filmy.mypage.cz).avi",
+    "ok": false
+   },
+   {
+    "n": "Chaos (2005).avi",
+    "ok": false
+   },
+   {
+    "n": "UFO, lzi a studena valka (UFO's and the Cold War) 2005.avi",
+    "ok": false
+   },
+   {
+    "n": "Chaos---Akční--Drama--Krimi--Thriller,2005,CZ...avi",
+    "ok": false
+   },
+   {
+    "n": "Sametoví vrazi cz(2005).avi",
+    "ok": false
+   },
+   {
+    "n": "Pod bodem mrazu (2005).avi",
+    "ok": false
+   },
+   {
+    "n": "40 Let Panic (2005) CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Pan   Rosnička -Cage-Komedie -USA. 2005,budul- 98 min-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Bermudský trojúhelník - Šokující nové záhady (2005).avi",
+    "ok": false
+   },
+   {
+    "n": "Krest ohnem (2005) valecny akcni CZ Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Nebohá paní Pomsta : Sympathy for Lady Vengeance (2005).avi",
+    "ok": false
+   },
+   {
+    "n": "Roboti (2005) Animovaný  Komedie  Sci-Fi  Fantasy CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Fantastická čtyřka (2005.CZdub).avi",
+    "ok": false
+   },
+   {
+    "n": "2005 Maximalni limit.avi",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x04.The.Power.Of.Three.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x06.The.Bells.Of.Saint.John.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x07.The.Rings.Of.Akhaten.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x10.Journey.To.The.Centre.Of.The.Tardis.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x11.The.Crimson.Horror.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Doctor.Who.2005.7x12.Nightmare.In.Silver.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kurýr-2---CZ-Dabing-AVI-(AKční,-Krimi---Francie,-USA-2005)",
+    "ok": false
+   },
+   {
+    "n": "Nesvatbovi---CZ-Dabing-AVI-(Komedie,-Romantický---USA-2005)",
+    "ok": false
+   },
+   {
+    "n": "Temné-Vody---CZ-Dabing-AVI-(Drama,-Horor---USA-2005)",
+    "ok": false
+   },
+   {
+    "n": "2005 Utrzeny ze retezu - cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Černý úsvit (2005.DVDripCZ).avi",
+    "ok": false
+   },
+   {
+    "n": "Vnitřní nepřítel (2005.DVDripCZ).avi",
+    "ok": false
+   },
+   {
+    "n": "Země krvavého slunce (2005.DVDripCZ).avi",
+    "ok": false
+   },
+   {
+    "n": "Slechtvalk - Upon the Fields of Battle (2005) DVD - Legendado PT-BR.mp4",
+    "ok": false
+   },
+   {
+    "n": "the.Office.US.S09E12.HDTV..mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Office.US.S09E14.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "(Hi10)_Valvrave_the_Liberator_-_01_(720p)_(gg).mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] The Knight in the Area - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Valvrave_the_Liberator_-_01_[191CFABD].mkv",
+    "ok": false
+   },
+   {
+    "n": "The-Crow---01---02---The-Soul-Can't-Rest---Souled-Out.avi",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Strike the Blood - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[NG]_Himitsu_the_revelation_01.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S01E02.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S01E04.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S01E05.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S02E01.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S02E02.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S02E03.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S02E04.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S02E05.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Office.S02E06.avi",
+    "ok": false
+   },
+   {
+    "n": "Requiem From the Darkness 01 - Azuki Bean Washer[69A04C52].mkv",
+    "ok": false
+   },
+   {
+    "n": "David The Gnome 01 David the Gnome [17252AB1].mkv",
+    "ok": false
+   },
+   {
+    "n": "El-Hazard - The Wanderers - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Rildas]Kiseijuu-Sei-no-Kakuritsu-Parasyte-the-maxim-01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Devil Survivor 2 The Animation - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "High School of the Dead 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Rildas]Parasyte - the maxim - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Parasyte - the maxim - 01 [480p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Anime-Ancestors]_Baki_The_Grappler_01_Moving_Towards_Destiny_[x264-AAC][ae8dbc33].mkv",
+    "ok": false
+   },
+   {
+    "n": "Garo The Animation - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gakuen Mokushiroku  High School of the Dead - 01 [TMD] [FBDB941E].mkv",
+    "ok": false
+   },
+   {
+    "n": "Kiseijū - Sei no kakuritsu [Parasyte -the maxim-] - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Seraph of the End - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[fong] The Cockpit 01 - Slipstream [1080p].mkv",
+    "ok": false
+   },
+   {
+    "n": "HNS_Tales_of_Zestiria_the_Cross_01_(13).mp4",
+    "ok": false
+   },
+   {
+    "n": "[hns.moe] Akiba's Trip The Animation - 01 [720p].mp4",
+    "ok": false
+   },
+   {
+    "n": "Granblue_Fantasy_The Animation_01_02.mp4",
+    "ok": false
+   },
+   {
+    "n": "Banner_of_the_Stars_-_01_[A-Et]_(52FACA85).mkv",
+    "ok": false
+   },
+   {
+    "n": "[CBM]_Intrigue_in_the_Bakumatsu_-_01_-_The_Star_of_Calamity_is_Let_Loose_[4E9D95A1].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SallySubs] Aria The Animation - 01 [BD 720p AAC] [87D98A49].mkv",
+    "ok": false
+   },
+   {
+    "n": "Arakawa Under the Bridge - 01 [720p; cz hardsub].mp4",
+    "ok": false
+   },
+   {
+    "n": "Nobunaga the Fool - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "marvels.the.defenders.01.02.720.webrip-strife.mkv",
+    "ok": false
+   },
+   {
+    "n": "marvels.the.defenders.01.01.720.webrip-strife.mkv",
+    "ok": false
+   },
+   {
+    "n": "marvels.the.defenders.01.04.720.webrip-strife.mkv",
+    "ok": false
+   },
+   {
+    "n": "marvels.the.defenders.01.06.720p.webrip.x264-strife.mkv",
+    "ok": false
+   },
+   {
+    "n": "marvels.the.defenders.01.07.720p.webrip.x264-strife.mkv",
+    "ok": false
+   },
+   {
+    "n": "marvels.the.defenders.01.08.720p.webrip.x264-strife.mkv",
+    "ok": false
+   },
+   {
+    "n": "The-Witness-for-the-Prosecution-01.mkv",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "series",
+   "id": "tt1486217:10:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Archer",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "archer"
+   ],
+   "year": 2009,
+   "season": 10,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 20
+  },
+  "files": [
+   {
+    "n": "Archer.(2009).S10E01.Bort.the.Garj.1080p.HULU.WEB-DL.10bit.x265.HEVC.DDP.2.0-PHOCiS.mkv",
+    "len": 1184,
+    "ok": true
+   },
+   {
+    "n": "Archer_S08E06_Archer_Dreamland_Waxing_Gibbous_h265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer_S08E07_Archer_Dreamland_Gramercy_Halberd!_h265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer_S08E08_Archer_Dreamland_Auflösung_h265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer Conan 2015 01 20 Sterling Archer (1080p x265 Joy).m4v",
+    "ok": false
+   },
+   {
+    "n": "Archer S06E03 The Archer Sanction (1080p x265 Joy).mp4",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E02.Archer.Vice.A.Kiss.While.Dying.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E03.Archer.Vice.A.Debt.of.Honor.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E04.Archer.Vice.House.Call.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E05.Archer.Vice.Southbound.and.Down.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E06.Archer.Vice.Baby.Shower.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E07.Archer.Vice.Smugglers'.Blues.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E08.Archer.Vice.The.Rules.of.Extraction.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E09.Archer.Vice.On.The.Carpet.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E10.Archer.Vice.Palace.Intrigue.Part.I.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E11.Archer.Vice.Palace.Intrigue.Part.II.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E12.Archer.Vice.Filibuster.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E13.Archer.Vice.ArrivalDeparture.BluRay.1080p.AVC.DTS-HD.MA.5.1.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S06E03.The.Archer.Sanction.1080p.DTS-HD.MA.5.1.AVC.REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer S06E03 The Archer Sanction 1080p DTS-HD MA 5 1 AVC REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer S05E03 Archer Vice A Debt of Honor BluRay 1080p AVC DTS-HD MA 5 1 REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer S05E05 Archer Vice Southbound and Down BluRay 1080p AVC DTS-HD MA 5 1 REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "aaf-pingu.s04e08.pingu.the.archer.dvdrip.xvid.avi",
+    "ok": false
+   },
+   {
+    "n": "086 Pingu the Archer.avi",
+    "ok": false
+   },
+   {
+    "n": "Deutschland.83.S01E08.Able.Archer.GERMAN.ENSUBBED.1080p.WEB-DL.DD5.1.H.264-RARBG.mkv",
+    "ok": false
+   },
+   {
+    "n": "LUTINEN 4 ✠  SPRÁVNÍ CHLAPI NOSÍ ČERNOU  1978  (Good Guys Wear Black  96 min.  Chuck Norris, Anne Archer).avi",
+    "ok": false
+   },
+   {
+    "n": "deutschland.83.s01e08.able.archer.german.ensubbed.1080p.hevc.x265.rmteam.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zelený lučištník _ Der grüne Bogenschütze _ The Green Archer (1961), DE - CZ tit.avi",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E01.Mole.Hunt.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E02.Training.Day.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E04.Killing.Utne.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E05.Honeypot.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E06.Skorpio.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E07.Skytanic.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E08.The.Rock.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E09.Job.Offer.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E10.Dial.M.for.Mother.1080p.Blu-ray.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E01.Swiss.Miss.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E02.A.Going.Concern.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E03.Blood.Test.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E04.Pipeline.Fever.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E05.The.Double.Deuce.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E06.Tragical.History.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E07.Movie.Star.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E08.Stage.Two.1080p.BluRay.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E09.Placebo.Effect.1080p.BluRay.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E10.El.Secuestro.1080p.BluRay.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E11.Jeu.Monegasque.1080p.BluRay.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E12.White.Nights.1080p.BluRay.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E13.Double.Trouble.1080p.BluRay.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer S10E01 720p CZ",
+    "len": 1191,
+    "ok": true
+   },
+   {
+    "n": "Archer S10E01_CZ_720p",
+    "len": 1191,
+    "ok": true
+   },
+   {
+    "n": "Archer - S10E1 Archer 1999: Bort the Garj CS",
+    "len": 1191,
+    "ok": true
+   },
+   {
+    "n": "Archer - S10E1 Archer 1999: Bort the Garj EN",
+    "len": 1194,
+    "ok": true
+   },
+   {
+    "n": "Archer - S10E1 CS",
+    "len": 1191,
+    "ok": true
+   },
+   {
+    "n": "Archer.S00E04.Heart.of.Archness.Part.I.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S00E05.Heart.of.Archness.Part.II.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S00E06.Heart.of.Archness.Part.III.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E01.The.Man.From.Jupiter.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "len": 1236,
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E02.El.Contador.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E03.The.Limited.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E04.Drift.Problem.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E05.Lo.Scandalo.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E06.Bloody.Ferlin.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E07.Crossing.Over.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E08.Skin.Game.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E09.Space.Race.(1).1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E01.Fugue.and.Ritts.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E02.The.Wind.Cries.Mary.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E03.Legs.1080p.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E04.Midnight.Ron.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E05.Viscous.Coupling.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E06.Once.Bitten.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E07.Live.and.Let.Dine.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E10.Un.Chien.Tangerine.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E11.The.Papal.Chase.1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E12.Sea.Tunt.(1).1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E13.Sea.Tunt.(2).1080p.Blu-ray.DD5.1.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E01.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E02.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E03.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E04.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E05.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E07.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E08.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E09.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E10.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E11.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E12.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E13.1080p.BluRay.AC3.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E01 FHD 1080p CZ.mkv",
+    "len": 1293,
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E02 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E03 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E04 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E05 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E07 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E08 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E09 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S01E10 FHD 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E01 720p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E02 720p  CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E03 720p  CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E04 720p  CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E05 720p  CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E06 720p  CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E07 720p  CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E08 HD 720p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E09 HD 720p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E10 HD 720p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E11 HD 720pCZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E12 HD 720p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer  S02E13 HD 720p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Archer S02E01 - Swiss Miss 1080p CZ Dabing.mkv",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E01.Swiss.Miss.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E05.Honeypot.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1273,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E04.Midnight.Ron.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1259,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E04 - Pipeline Fever 1080p CZ Dabing.mkv",
+    "len": 1277,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E01.Mole.Hunt.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E10 - El Secuestro 1080p CZ Dabing.mkv",
+    "len": 1211,
+    "ok": false
+   },
+   {
+    "n": "Archer S03E09 1080p CZtit",
+    "len": 1221,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E10.Un.Chien.Tangerine.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1235,
+    "ok": false
+   },
+   {
+    "n": "Archer S03E03 - The Limited 1080p CZ Dabing.mkv",
+    "len": 1250,
+    "ok": false
+   },
+   {
+    "n": "Archer S05E01 - White Elephant CZ Titulky",
+    "len": 1189,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E01 - Swiss Miss 1080p CZ Dabing",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E05 byDejv",
+    "len": 1236,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E11.Jeu.Monegasque.1080p.BluRay.DD5.1.x264-CtrlHD",
+    "len": 1265,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E08 byDejv",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E02.Training.Day.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E07.Skytanic.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1272,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E11.The.Papal.Chase.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1154,
+    "ok": false
+   },
+   {
+    "n": "Archer S03E05 - Lo Scandalo 1080p CZ Dabing",
+    "len": 1290,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E10.El.Secuestro.1080p.BluRay.DD5.1.x264-CtrlHD",
+    "len": 1211,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E12.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1206,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E13.Sea.Tunt.(2).1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1277,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E13 byDejv",
+    "len": 1290,
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E07.Crossing.Over.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1293,
+    "ok": false
+   },
+   {
+    "n": "Archer S08E06 - Waxing Gibbous 720p CZ Dabing.mp4",
+    "len": 1211,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E07.Live.and.Let.Dine.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1209,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E11.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1222,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E03 byDejv",
+    "len": 1222,
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E01.The.Man.From.Jupiter.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1235,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E05.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1260,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E13.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1274,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E01 byDejv",
+    "len": 1301,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E06.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1255,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E01 1080p CZ",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E01.Swiss.Miss.1080p.Blu-ray.DD5.1",
+    "len": 1263,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E04.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1275,
+    "ok": false
+   },
+   {
+    "n": "Archer S01E10 - Dial M for Mother 1080p CZ Dabing.mkv",
+    "len": 1276,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E04 byDejv",
+    "len": 1303,
+    "ok": false
+   },
+   {
+    "n": "Archer S03E06 - Bloody Ferlin 720p CZ Dabing.mp4",
+    "len": 1141,
+    "ok": false
+   },
+   {
+    "n": "Archer S05E07 - Smugglers' Blues 720p CZ Dabing.mp4",
+    "len": 1204,
+    "ok": false
+   },
+   {
+    "n": "Archer S01E05 - Honeypot 720p CZ Dabing.mp4",
+    "len": 1273,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E02.The.Wind.Cries.Mary.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1295,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E08.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1238,
+    "ok": false
+   },
+   {
+    "n": "Archer S03E04 - Drift Problem 1080p CZ Dabing.mkv",
+    "len": 1250,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E04.Killing.Utne.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1278,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E03.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1273,
+    "ok": false
+   },
+   {
+    "n": "Archer.S00E04.Heart.of.Archness.Part.I.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E06.Once.Bitten.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1275,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E07 - Movie Star 1080p CZ Dabing.mkv",
+    "len": 1214,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E13 - Double Trouble 1080p CZ Dabing",
+    "len": 1294,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E12.White.Nights.1080p.BluRay.DD5.1.x264-CtrlHD",
+    "len": 1222,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E06.Tragical.History.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1247,
+    "ok": false
+   },
+   {
+    "n": "Archer S02E09 - Placebo Effect 1080p CZ Dabing.mkv",
+    "len": 1275,
+    "ok": false
+   },
+   {
+    "n": "Archer.S02E08.Stage.Two.1080p.BluRay.DD5.1.x264-CtrlHD",
+    "len": 1292,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E12.Sea.Tunt.(1).1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1271,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E10.Dial.M.for.Mother.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1276,
+    "ok": false
+   },
+   {
+    "n": "Archer.S05E01.1080p.BluRay.AC3.x264-CtrlHD",
+    "len": 1189,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E08.The.Rock.1080p.Blu-ray.DTS.x264-CtrlHD",
+    "len": 1261,
+    "ok": false
+   },
+   {
+    "n": "Archer.S03E04.Drift.Problem.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1250,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E02 byDejv",
+    "len": 1254,
+    "ok": false
+   },
+   {
+    "n": "Archer S06E09 byDejv",
+    "len": 1243,
+    "ok": false
+   },
+   {
+    "n": "Archer.S01E05.Honeypot.1080p.Blu-ray.DTS",
+    "len": 1273,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E04.Midnight.Ron.1080p.Blu-ray.DD5.1",
+    "len": 1259,
+    "ok": false
+   },
+   {
+    "n": "Archer.S04E03.Legs.1080p.1080p.Blu-ray.DD5.1.x264-CtrlHD",
+    "len": 1238,
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "series",
+   "id": "tt0165598:5:7",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Zlatá sedmdesátá",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Tie roky sedemdesiate",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "That '70s Show",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "zlata",
+    "sedmdesata",
+    "tie",
+    "roky",
+    "sedemdesiate",
+    "that",
+    "70s",
+    "show"
+   ],
+   "year": 1998,
+   "season": 5,
+   "episode": 7,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "zlata.sedmdesata.s05e07.smudlik.dvdrip.xvid.cz-hms.avi",
+    "len": 1307,
+    "ok": true
+   },
+   {
+    "n": "Zlata sedmdesata S05e07 FHD 1080p CZ.mkv",
+    "len": 1311,
+    "ok": true
+   },
+   {
+    "n": "Zlata sedmdesata -  S05E07 Šmudlík (Hot Dog).mkv",
+    "len": 1311,
+    "ok": true
+   },
+   {
+    "n": "Zlata sedmdesata S05E07.mkv",
+    "len": 1311,
+    "ok": true
+   },
+   {
+    "n": "Zlata Sedmdesata s05e07 - Smudlik.avi",
+    "len": 1307,
+    "ok": true
+   },
+   {
+    "n": "Zlatá Sedmdesátá S05E14 Zlato já tě opustím.avi",
+    "ok": false
+   },
+   {
+    "n": "Zlata Sedmdesata s05e02 - Zlato nemuzu to s tebou jen tak skoncit.avi",
+    "len": 1313,
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá That '70s Show s01e01 Pilot - 720p HD HB2300-128cz-128en, sub.cz-en-port (2pass encoding!).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá  That '70s Show s01e02 - Eric's Birthday - 720p HD HB2300-128cz-128en, sub.cz-en-port (2pass encoding!).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá  That '70s Show s01e04 Battle of the Sexists - 720p HD HB2300-128cz-128en, sub.cz-en-port (2pass encoding!).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x01 HD 1080p  HB1000-6ch384 (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x01 HD 1080p  HB2300-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x02 HD 1080p  HB1000-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x02 HD 1080p  HB2300-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x03 HD 1080p  HB1000-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x06 HD 1080p  HB1000-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x07 HD 1080p  HB1000-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá sedmdesátá - 1x05 HD 1080p  HB2300-6ch384cz (2pass encoding).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S02E07 Koláč",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S02E12 Ericovy úspory",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S02E13 Hurá na lov",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S02E19 Přiznání",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S02E21 Kelsova serenáda",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S02E26 Donnino tajemstvi",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S03E01 Jak to všechno začalo",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S03E04 Příliš staří na koledování, příliš mladí na smrt",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s03e24.zakulisi.dvdrip.xvid.cz K8",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s03e25.zasnubni.prsten.dvdrip.xvid.cz K8",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e02.eric.ma.depresi.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e03.pinciotti.vs.forman.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e07.dusno.na.plese.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e08.povidka.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e09.zapomenuty.syn.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e14.ericova.sestrenice.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e15.tornado.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e16.donna.chodi.s.kelsem.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e20.casy.minule.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e21.den.naschvalu.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e22.corvette.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e23.hydeovy.narozeniny.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e24.muzikal.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e25.plany.poplach.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e26.caseyho.ma.kazdy.rad.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s04e27.laska.ve.wisconsinu.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s07e01.cas.je.na.me.strane.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s07e02.seznamte.se.william.barnett.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s07e03.ericovo.nove.ja.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "zlata.sedmdesata.s07e04.nabidka.ktera.se.neodmita.dvdrip.xvid.cz-hms.avi",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S08E10 Jackie má práci.avi",
+    "ok": false
+   },
+   {
+    "n": "Zlatá Sedmdesátá S08E12 Ledová kralovna.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S05E07.DVDRip.XviD-FoV.avi",
+    "ok": true
+   },
+   {
+    "n": "That 70s Show S05E07 Hot Dog 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "len": 1317,
+    "ok": true
+   },
+   {
+    "n": "That.70s.Show.1x00.That.70s.Trivia.Show.2004.DVDRip.x264-AMY.mkv",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S08E22.That.70s.Finale.DVDRip.XviD-SiTV.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.1x01.That.70s.Pilot.1998.DVDRip.x264.Multidub.CZ-AMY.mkv",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.1x15.That.Wrestling.Show.1999.DVDRip.x264.Multidub.CZ-AMY.mkv",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S07E16.On.With.The.Show.DVDRip.XviD-SiNK.avi",
+    "ok": false
+   },
+   {
+    "n": "That '70s Show S03E17 Kitty's Birthday (That's Today).mp4",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.1x07.That.Disco.Episode.1998.DVDRip.x264.Multidub.CZ-AMY.mkv",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S08E14.DVDRip.XviD-Studio.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S08E15.DVDRip.XviD-SiTV.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S08E17.DVDRip.XviD-SiTV.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E01.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E02.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E03.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E04.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E05.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E06.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E09.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E10.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E11.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E18.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E21.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E22.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E23.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E24.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S01E25.DVDRip.XviD.RIVER.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E01.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E02.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E03.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E04.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E06.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E07.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E08.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E09.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E10.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E11.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E12.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E13.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E14.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E15.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E16.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E17.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E18.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S02E25.DVDRip.XviD-FFNDVD.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S03E01.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "That.70s.Show.S03E02.DVDRip.XviD-FoV.avi",
+    "ok": false
+   },
+   {
+    "n": "01x17 - Tie roky 70te.avi",
+    "ok": false
+   },
+   {
+    "n": "Ženy z rodu Gilmorovcov S05E07 SK.mkv",
+    "ok": false
+   },
+   {
+    "n": "Chuck.S05E07.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "9.rota cz by Hunys.avi",
+    "ok": false
+   },
+   {
+    "n": "Tess-z-rodu-D'Urbervillů-1x02-2008.mp4",
+    "ok": false
+   },
+   {
+    "n": "Eureka.S05E07.HDTV.x264-ASAP.mp4",
+    "ok": false
+   },
+   {
+    "n": "Leverage.S05E07.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "Flashpoint.S05E07.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "Flashpoint.S05E07.Forget.Oblivion.720p.WEB-DL.AAC2.0.H.264-EbP.mkv",
+    "ok": false
+   },
+   {
+    "n": "Two.and.a.Half.Men.S05E07.720p.WEB-DL.H264-CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Iran-storocie-bojov-o-ropu-dvb-t-2009-sk.avi",
+    "ok": false
+   },
+   {
+    "n": "Dexter.S05E07.2010.480p.DVB-T.XviD.CZ-SX.avi",
+    "ok": false
+   },
+   {
+    "n": "Farscape [1x22] - Family Ties.avi",
+    "ok": false
+   },
+   {
+    "n": "Zeke a Luther S02E20 Robo Luth (Robo Luth).avi",
+    "ok": false
+   },
+   {
+    "n": "Hannibal.Roma.remalma.2006.HUN.DVDRip.Xvid-ZOLTANHEV.avi",
+    "ok": false
+   },
+   {
+    "n": "30.Rock.S01E12.Black.Tie.avi",
+    "ok": false
+   },
+   {
+    "n": "Vesnice roku (komedie ČR-2011)-38min..avi",
+    "ok": false
+   },
+   {
+    "n": "Kouzelníci-z-Waverly-Place-S04E17-Kouzelník-roku-(Wizard-Of-The-Year).avi",
+    "ok": false
+   },
+   {
+    "n": "9-rota-válečný-film-CZ-avi.avi",
+    "ok": false
+   },
+   {
+    "n": "Skola ro(c)ku.avi",
+    "ok": false
+   },
+   {
+    "n": "Monk.S05E07.DVDrip.XviD.SK-Snf.avi",
+    "ok": false
+   },
+   {
+    "n": "Ted.a.spol.S01E02.Prukopnik.roku.DVDRip.XviD.cz-iNG.avi",
+    "ok": false
+   },
+   {
+    "n": "Scrubs - S05E07 - My Way Home.avi",
+    "ok": false
+   },
+   {
+    "n": "Dva a pul chlapa S05E07.avi",
+    "ok": false
+   },
+   {
+    "n": "Plasticka chirurgie s.r.o S05E07.avi",
+    "ok": false
+   },
+   {
+    "n": "JAG S05E07 - Drsňák CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Kouzelníci z Waverly Place S04E17 Kouzelník roku (Wizard Of The Year).avi",
+    "ok": false
+   },
+   {
+    "n": "Renegade.CZ.DAB. 3x19 Family Ties.avi",
+    "ok": false
+   },
+   {
+    "n": "Renegade.CZ.DAB.5x19.Lovec-odmen-roku.TVrip.xvid.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Burn.Notice.S05E07.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "kutil.tim.4x15.mladenec.roku.dvb.xvid-bb.avi",
+    "ok": false
+   },
+   {
+    "n": "Yu Yu Hakusho - 004 - Hot Flames! Ties of the Beloved [BluRay][960p][Dual Audio].mkv",
+    "ok": false
+   },
+   {
+    "n": "Yu Yu Hakusho - 007 - Kurama's Secret! The Ties Between Mother and Son [BluRay][960p][Dual Audio].mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI Kriminálka Las Vegas s05e07.avi",
+    "ok": false
+   },
+   {
+    "n": "07x23 Predcasny duchod (Tis time to smell the roses) amercom-hgr.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drop.Dead.Diva.S05E07.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Drop.Dead.Diva.S05E07.HDTV.x264-ASAP.mp4",
+    "ok": false
+   },
+   {
+    "n": "xena-1x20-ties-that-bind-dvd-rip-divx-multidub-sportboom.avi",
+    "ok": false
+   },
+   {
+    "n": "Buffy-5x13-Blood-Ties.avi",
+    "ok": false
+   },
+   {
+    "n": "Králové ro(c)ku (Trsátko-osudu)_with Jack Black_cz dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Buffy.5x13.Blood_Ties.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Králové Ro(c)ku.avi",
+    "ok": false
+   },
+   {
+    "n": "Rota hrdinu.avi",
+    "ok": false
+   },
+   {
+    "n": "Dexter.S05E07.480p.Bluray.mp4",
+    "ok": false
+   },
+   {
+    "n": "Starosta-Vesnice-roku!-Ondrej-Vetchy.mp4",
+    "ok": false
+   },
+   {
+    "n": "Sucker Punch (2011) DVDRip XviD-MAXSPEED www.torentz.3xforum.ro.avi",
+    "ok": false
+   },
+   {
+    "n": "Supernatural.S05E07.The.Curious.Case.of.Dean.Winchester.avi",
+    "ok": false
+   },
+   {
+    "n": "Breaking.Bad.S05E07.HD.rus.LostFilm.TV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Muz bez tiena.avi",
+    "ok": false
+   },
+   {
+    "n": "That '70s Show - s05e07",
+    "len": 1307,
+    "ok": true
+   },
+   {
+    "n": "That 70s Show 5x7",
+    "len": 1307,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá S05E07 - CZ DABING",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá S05E07 - Šmudlík CZ Dabing",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá S05E07 - Šmudlík 1080p CZ Dabing.mp4",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá S05E07 - Šmudlík 1080p CZ Dabing",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlata sedmdesata S05E07",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlata sedmdesata S05E7",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá S05E07 Šmudlík 1080p x265 CZ",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesáta S05E07, CZ dabing",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá - S5E7 Hot Dog CS",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá - S05E07 - Pejsek",
+    "len": 1307,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá - S5E7 Pejsek CS",
+    "len": 1307,
+    "ok": true
+   },
+   {
+    "n": "zlata.sedmdesata.s05e07.smudlik.dvdrip.xvid.cz-hms",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "zlata sedmdesata cz [5x07] - Smudlik_dvdrip.hboaudio (by_UgarE)",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá S05E07-25 2002 CZ dab - Pejsek",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "zlata sedmdesata cz [5x07] - Smudlik_dvdrip.hboaudio",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "Zlata sedmdesata -  S05E07 Šmudlík (Hot Dog)",
+    "len": 1310,
+    "ok": true
+   },
+   {
+    "n": "Zlatá Sedmdesatá S05E07",
+    "len": 1306,
+    "ok": true
+   },
+   {
+    "n": "Zlatá sedmdesátá 05x07_x264",
+    "len": 1305,
+    "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "series",
+   "id": "tt0412142:1:2",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Dr. House",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "House",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "dr",
+    "house"
+   ],
+   "year": 2004,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 43
+  },
+  "files": [
+   {
+    "n": "Dr. House S01E02 Otázka rodičovství",
+    "len": 2601,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 - Otázka rodičovství CZ DAB 1920x1080p (2004-2005)",
+    "len": 2594,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 - Otázka rodičovství 1080p CZ Dabing.mkv",
+    "len": 2594,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 CZ SK Dabing 1080p FULL HD",
+    "len": 2596,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 1080p (SK CZ EN)",
+    "len": 2596,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 - Otázka rodičovství 1080p CZ Dabing",
+    "len": 2601,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 Otázka rodičovství CZ DABING",
+    "len": 2601,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02-22 2004 CZ dabing 1080p FHD - Otázka rodičovství",
+    "len": 2594,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x2 Otázka rodičovství 1080p",
+    "len": 2601,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovství Top",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr  House 1x02 Otázka rodičovství +SaŠa+",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovství Boyd",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House-1x02-Otázka-rodičovství-apu-",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovství GT",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House 1x02 Otázka_rodičovství_Dobrá_Kvalita",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House 1x02 Otázka rodičovství Dobrá Kvalita",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovství Koi",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House_1x02_Otázka_rodičovství",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House.1x02.Otázka.rodičovství",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House.1x02.Otázka.rodičovství MUI",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovstvíBy DRAGOUN",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovství GG",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House 1x02 Otázka rodičovství  ~",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House 1x02 Otázka rodičovství Top-od-Draculy",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House 1x02 Otázka-rodičovství-Dobrá-Kvalita",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr. House - 1x02 - Otázka rodičovství Od-Romuluse",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr  House 1x02 Otázka rodičovství   ByDejvy",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr House S01e02.mp4",
+    "len": 2592,
+    "ok": true
+   },
+   {
+    "n": "Dr. House S01E02 - Otázka rodičovství CZ Dabing",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "Dr_ House_S01E02_Ep 2 Otcovstvo",
+    "len": 2601,
+    "ok": true
+   },
+   {
+    "n": "House.S01E02.Paternity.1080p.BluRay.x265 CZ",
+    "len": 2596,
+    "ok": true
+   },
+   {
+    "n": "House of Guinness S01E02 CZ Dabing Full HD",
+    "len": 3327,
+    "ok": false
+   },
+   {
+    "n": "House of Cards S01E02 CZ Dabing 1080p FULL HD",
+    "len": 2930,
+    "ok": false
+   },
+   {
+    "n": "House of David (2025) cz S01E02 - Hlubina volá hlubinu",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House of Guinness S01E02 1080p CZ",
+    "len": 3327,
+    "ok": false
+   },
+   {
+    "n": "House of Guinness S01E02 CZ Dabing",
+    "len": 3327,
+    "ok": false
+   },
+   {
+    "n": "House of Guinness S01E02 CZ DABING",
+    "len": 3327,
+    "ok": false
+   },
+   {
+    "n": "House of Cards - S01E02 02. kapitola",
+    "len": 2930,
+    "ok": false
+   },
+   {
+    "n": "House of Cards_S01E02_CZ.EN_1080p_Chmeli",
+    "len": 2930,
+    "ok": false
+   },
+   {
+    "n": "House of Cards S01E02 02. kapitola",
+    "len": 2930,
+    "ok": false
+   },
+   {
+    "n": "House of Guinness (S01E02) CZ dabing",
+    "len": 3327,
+    "ok": false
+   },
+   {
+    "n": "House of Cards S01E02 1080p CZ",
+    "len": 2930,
+    "ok": false
+   },
+   {
+    "n": "House of Cards CZ - S01E02 - Chapter 2 by_UgarE",
+    "len": 2931,
+    "ok": false
+   },
+   {
+    "n": "House of Cards CZ - S01E02 - Chapter 2 ",
+    "len": 2931,
+    "ok": false
+   },
+   {
+    "n": "House M.D. S01E02 CzDab",
+    "len": 2486,
+    "ok": true
+   },
+   {
+    "n": "House of David S01E02 cz sub 1080p",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House.of.David.S01E02 CZ TITULKY  1080p",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House of David S01E02 CZ Titulky 1080p",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House.of.David.S01E02 cz sub 1080p",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House of Guinness S01E02 CZtit V OBRAZE 1080p",
+    "len": 3327,
+    "ok": false
+   },
+   {
+    "n": "Spartacus- House of Ashur s01e02 CZ dab- Forsaken.DD.",
+    "len": 3487,
+    "ok": false
+   },
+   {
+    "n": "House of Secrets - The Burari Deaths S01E02 CZtitulky",
+    "len": 2562,
+    "ok": false
+   },
+   {
+    "n": "House of David S01E02 CzTit",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House.of.Cards S01E02 (1990-1995) CZsub",
+    "len": 3493,
+    "ok": false
+   },
+   {
+    "n": "Hoří jako papír, Burn the House Down S01E02 (2023) Seriál, Thriller, Japan Dabing, Titulky CZ, 1080p",
+    "len": 2463,
+    "ok": false
+   },
+   {
+    "n": "Spartacus.House.Of.Ashur.S01E02.2160p.STAN.WEB-DL.DD.5.1.Atmos.HDR.H.265-playWEB",
+    "len": 3447,
+    "ok": false
+   },
+   {
+    "n": "House of Cards S01E02 CzTit",
+    "len": 2975,
+    "ok": false
+   },
+   {
+    "n": "The Fall of the House of Usher S01E02.1080p.NF.WEB-DL.H264-MiH",
+    "len": 3664,
+    "ok": false
+   },
+   {
+    "n": "Dům na kopci / The Haunting of Hill House s01e02 CZ Dabing ",
+    "len": 3081,
+    "ok": false
+   },
+   {
+    "n": "house.of.david.s01e02.1080p.web",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "Little House on the Prairie S01E02 CZ Dabing.mkv",
+    "len": 3100,
+    "ok": false
+   },
+   {
+    "n": "House Of Cards - S01 E02 - cz tit fv_",
+    "len": 2866,
+    "ok": false
+   },
+   {
+    "n": "novinka_House Of Cards - S01 E02 - cz tit.",
+    "len": 2866,
+    "ok": false
+   },
+   {
+    "n": "House Of Cards - S01 E02 - cz tit.",
+    "len": 2866,
+    "ok": false
+   },
+   {
+    "n": "House Of Cards - S01E02 - cz tit.",
+    "len": 2866,
+    "ok": false
+   },
+   {
+    "n": "House of the Dragon S01E02 CzTit",
+    "len": 3231,
+    "ok": false
+   },
+   {
+    "n": "House MD S01E02 CZtit V OBRAZE",
+    "len": 2592,
+    "ok": true
+   },
+   {
+    "n": "House of Cards S01E02 CZtit V OBRAZE.BluRay.480p",
+    "len": 2929,
+    "ok": false
+   },
+   {
+    "n": "house.of.david.s01e02.1080p.web.h264",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "House of David S01E02 - Hlubina volá hlubinu",
+    "len": 3444,
+    "ok": false
+   },
+   {
+    "n": "The Haunting of Hill House CZ S01E02 {PlnáKvalita}",
+    "len": 3083,
+    "ok": false
+   },
+   {
+    "n": "The_Haunting_of_Hill_House_CZ_S01E02",
+    "len": 3083,
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "series",
+   "id": "tt9288030:1:2",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Jack Reacher",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Reacher",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "jack",
+    "reacher"
+   ],
+   "year": 2022,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Jack Reacher S04E01 Město bratrské lásky (2026) CZ.mkv",
+    "len": 2781,
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E04 Karamboly s karambity (2026) CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E02 1080p. CZ Audio H264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E01 1080p. CZ Audio H264.mkv",
+    "len": 2781,
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher_S04E02_Zápas v kleci.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher_S04E06_Plum a jeho smůla.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E06 Plum a jeho smůla (2026).mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S01E06  Papír (2022).mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher_S04E08_Řez.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E07 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E05 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher_S04E04_Karamboly s karambity.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S04E03 1080p. CZ Audio H264.mkv",
+    "ok": false
+   },
+   {
+    "n": "tom.clancys.jack.ryan.s01e02.web.h264-memento.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tom.Clancys.Jack.Ryan.S01E02.REAL.PROPER.1080p.WEB.H264-BATV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tom.Clancys.Jack.Ryan.S01E02.PROPER.720p.WEB.h264-BATV.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tom Clancy's Jack Ryan S01E02.mp4",
+    "ok": false
+   },
+   {
+    "n": "Jack Ryan - Tom Clancys Jack Ryan S01E02 (2018) 2160p CZ Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tom Clancy's Jack Ryan S01E02 1080p CZ Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tom Clancy's Jack Ryan S01E02 Francouzská spojka Cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack.Ryan.S01E02.2160p.UHD.BR.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Já, Jack Wright S01E02-06 2025 CZ dab 1080p - Epizoda 2.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Jack Wright S01E02 Fight Like Hell 2160p HMAX WEB-DL DD 5 1 H 265-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "my.brother.jack.2001.s01e02.1080p.hdtv.h264-cbfm[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "my.brother.jack.2001.s01e02.1080p.hdtv.h264-cbfm.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack Irish S01E02 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Jack Wright S01E02 Fight Like Hell 1080p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gentleman Jack (2019) - S01E02 - I Just Went There to Study Anatomy (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "ok": false
+   },
+   {
+    "n": "I.Jack.Wright.S01E02.1080p.HDTV.H264-ORGANiC[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "I.Jack.Wright.S01E02.1080p.HDTV.H264-ORGANiC.mkv",
+    "ok": false
+   },
+   {
+    "n": "I.Jack.Wright.S01E02.1080p.HDTV.H264-TRB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jack.Taylor.S01E02.400p.ViruseProject.avi",
+    "ok": false
+   },
+   {
+    "n": "Jack.Taylor.S01E02.The.Pikemen.720p.WEB-DL.HEVC.x265-BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E02.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Major.Crimes.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Gossip.Girl.S03E16.The.Empire.Strikes.Jack.DVDRip.XviD.MultiDub.CZ-ELEMENTO.avi",
+    "ok": false
+   },
+   {
+    "n": "Nashville.2012.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E02.Monitored.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Velkovlak-(2).Velkovlak-S01E02.Lovok.DVB-T.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "VP.E02.S01E02.Zasnubni.tanec.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E40.S03E10.Diamantovy.Jack.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E02.avi",
+    "ok": false
+   },
+   {
+    "n": "Mistresses.S01E02.pl-T0Bi.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Following.S01E02.HDTV.CZ.titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "men_in_trees_cz_s01e02.avi",
+    "ok": false
+   },
+   {
+    "n": "Jack.Ketchums.The.Girl.Next.Door.2007.ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Reacher S04E01 4K CZ dab.mkv",
+    "len": 2781,
+    "ok": false
+   },
+   {
+    "n": "Reacher.S04E07.Vote.For.Sampson.CZ.titulky.mkv",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E02.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E02.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E02.1.1.3.HDTV.XviD-FQM.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E02.REPACK.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suits.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E02.REPACK.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alphas.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Inbetweeners.US.S01E02.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Neighbors.2012.S01E02.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E02.HDTV.x264-ASAP.mp4",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01E02.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E02.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E02.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "666.Park.Avenue.S01E02.720p.WEB-DL.DD5.1.H.264-ECI.mkv",
+    "ok": false
+   },
+   {
+    "n": "Suburgatory.S01E02.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Chicago.Fire.S01E02.HDTV.XviD-TVSR.avi",
+    "ok": false
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing 5.1 x265 HEVC 1080p",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ 1080p",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher_S01E02",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet-UP-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet T.O.P-M-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02-08 2022 CZ dab 1080p - První střet",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher_S01E02_První střet",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing 2160p UHD",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet T.O.P",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet T.O.P Movie",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing. (Sub)",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - První střet (2022) akční krimi czdab Top2026",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing. Top2026",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - První střet (2022) akční krimi czdab BeDev2026",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing. BeDev2026",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing Be2026",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing. - T.o.P 2026",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - First Dance (by Nexsus) 2160p CZ 5.1 Dolby digital ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack_Reacher_S01E02_CZ_1080p",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing.",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - První střet (2022) akční krimi czdab",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab qertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - První střet (2022) akční krimi czdab TopCZ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing. TopCZ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ 1080p T.O.P-M-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab ROY",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab GO",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab wertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab fertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab OGGY",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab sertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ 1080p-UP-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab A+B",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab bertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab tertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing. TopCZ TopCZ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab jertrag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet byDejv.mkv",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet.mkv",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 UHD CZ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing TOP.nov.V2",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 CZ Dabing BeDobi",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab (BoBo)",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - První střet (2022) akční krimi czdab - (T.o.P)",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 První střet 2022 akční krimi czdab tag",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Jack Reacher S01E02 - První střet (2022) akční krimi czdab-TOP.nov.V2",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz-UP-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz T.O.P-M-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 [CZ dabing]",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz T.O.P",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz T.O.P Movie",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": " Reacher CZ S01E02 (TOP-Kvalita) ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher.CZ.S01E02",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher CZ S01E02",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher CZ S01E02 {PlnáKvalita}",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher CZ S01E02 - Full_Stav",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher-CZ-S01E02-[X]Vše-OK",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher_CZ_S01E02",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher-CZ-S01E02-[X]",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": " Reacher CZ S01E02 (Nej.Kvalita) ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher_CZ_S01E02 Top-Verze",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher CZ S01E02 GG",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher-CZ-S01E02 (HDR10)",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz dabing",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": " Reacher CZ S01E02 {PlnáKvalita}",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher CZ S01E02 )",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "+ Reacher CZ S01E02 ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "+ Reacher CZ S01E02 + ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": " Reacher CZ S01E02 XD ",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": " Reacher CZ S01E02 ¤OstrýObraz¤",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher CZ S01E02 GG Boyd",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher-CZ-S01E02",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher-CZ-S01E02 [OK]",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher.S01E02.First.Dance.2160p.AMZN.WEB-DL.DDP5.1.HDR.HEVC-MZABI",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher.S01E02.První střet.mkv",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Reacher.S01E02.First.Dance.1080p.AMZN.WEB-DL.CZ_EN.DDP5.1.H.264-NTb",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "REACHER (TV)_S01E02_First Dance",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 První střet",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 CZ DABING 1080p",
+    "len": 3276,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02. First Dance CZ dab",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz dab_1",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 2022 cz dab",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher.S01E02.(cz.sub).1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "2 Reacher CZ S01E02  T.O.P-M-",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "2 Reacher CZ S01E02  T.O.P Movie",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 (1080p.AMZN.WEB-DL.DDP5.1.H.264)-(cz sub)",
+    "len": 3174,
+    "ok": true
+   },
+   {
+    "n": "Reacher S01E02 CZtitulky",
+    "len": 3174,
+    "ok": true
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "series",
+   "id": "tt0318898:1:1",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "Now and Then, Here and There",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Ima, Soko ni Iru Boku",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Acum si atunci",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Ima",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Imaboku",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "NaTHaT",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "Soko ni Iru Boku",
+     "kind": "anime",
+     "short": false
+    }
+   ],
+   "allow": [
+    "now",
+    "then",
+    "here",
+    "there",
+    "ima",
+    "soko",
+    "ni",
+    "iru",
+    "boku",
+    "acum",
+    "si",
+    "atunci",
+    "imaboku",
+    "nathat"
+   ],
+   "year": 1999,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": 1,
+   "alSeason": 1,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "10. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "05. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "02. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "01. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": true
+   },
+   {
+    "n": "03. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "04. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "08. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "12. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "13. Now and Then, Here and There (Ima, Soko ni Iru Boku) [480p Hi10p AAC AC3 DVD][kuchikirukia]v2.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Blade Company] Asobi ni Iku yo! - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Maji de Watashi ni Koi Shinasai!! - 01 - Seriously Bring it on!! - [F8](031fa4ae).mkv",
+    "ok": false
+   },
+   {
+    "n": "Akane_iro_ni_Somaru_Saka_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Slipknot - Joey Drum Solo (Live Stockholm 2002-01-22).avi",
+    "ok": false
+   },
+   {
+    "n": "Ima, ai ni yukimasu Be With You.mkv",
+    "ok": false
+   },
+   {
+    "n": "[HNS] Monster Musume no Iru Nichijou - 01 BD 720p.mp4",
+    "ok": false
+   },
+   {
+    "n": "[Blue Apple] Osake wa Fuufu ni Natte Kara - 01 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "[OoyamanekoSubs]Kujira no Kora wa Sajou ni Utau OVA - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kono_Subarashii_Sekai_ni_Shukufuku_o_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dungeon ni Deai o Motomeru no wa Machigatte Iru Darouka - 01 (BD 1280x720 x264 AACx2).mp4",
+    "ok": false
+   },
+   {
+    "n": "Tanky v pekle bojů 01 Zrození monstra.mkv",
+    "ok": false
+   },
+   {
+    "n": "[AKT] Maji de Watashi ni Koi Shinasai!  01.mkv",
+    "ok": false
+   },
+   {
+    "n": "HNS Nande Koko ni Sensei ga - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Nande Koko ni Sensei ga - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Dungeon ni Deai o Motomeru no wa Machigatte Iru Darouka  - 01 [720p] CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Monster Musume no Iru Nichijou - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "(Hi10)_Shokugeki_no_Souma_Ni_no_Sara_-_01_(BD_720p)_(FFF).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Derp]_Higurashi_no_Naku_Koro_ni_Kira_OVA_-_01_[BD-1080p-FLAC][4F647F76].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Kamisama ni Natta Hi - 01 CZ [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "Akane-iro-ni-Somaru-Saka-01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[hns.moe] Kono Subarashii Sekai ni Shukufuku wo! - 01 [720p] c.mp4",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Kami-tachi ni Hirowareta Otoko - 01 [540p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Cheat Kusushi no Slow Life - Isekai ni Tsukurou Drugstore - 01 (720p) [7A196046].mkv",
+    "ok": false
+   },
+   {
+    "n": "[ReinForce] Maji de Watashi ni Koi Shinasai!! - 01 (BDRip 1920x1080 x264 FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "Shinka no Mi Shiranai Uchi ni Kachigumi Jinsei 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Shinka no Mi Shiranai Uchi ni Kachigumi Jinsei 01 cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Shinka no Mi - Shiranai Uchi ni Kachigumi Jinsei - 01 (720p) [89D6F025].mkv",
+    "ok": false
+   },
+   {
+    "n": "(pojdte-pane,budeme-si-hrat)-01-potkali-se-u-Kolina-(animovany)--65'_CZ-(romin).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojdte-pane-budeme-si-hrat-01---Potkali-se-u-Kolina.avi",
+    "ok": false
+   },
+   {
+    "n": "Sbal si mě! (01) - 16.10.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Objevování.vesmíru-Síla.pokroku.01.Nosné.rakety.2019.720p.WEBRip.CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×02 Jak jeli k vodě (1965).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×03 K princeznám se nečuchá (1965).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×04 Jak jedli vtipnou kaši (1966).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×05 Držte si klobouk (1966).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×06 Jak šli spát (1967).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×08 Psí kusy (1971).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×07 Co to bouchlo (1970).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×10 A neříkej mi Vašíku (1972).avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane, budeme si hrát 01×11 Nazdar kedlubny (1973).avi",
+    "ok": false
+   },
+   {
+    "n": "[GM-Team][国漫][墓王之王之麒麟决][Mu Wang Zhi Wang：Xuan Guan Si][2018][01][AVC][GB][1080P].mp4",
+    "ok": false
+   },
+   {
+    "n": "Džine, něco si přej  01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Damages.2x09.Zbouchnul.si.svuj.doprovod.na.maturitak.dvdrip.xvid.cz.bedameda.avi",
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm-s1-01.avi",
+    "ok": false
+   },
+   {
+    "n": "Kuzlo vedy - Sila mysle.avi",
+    "ok": false
+   },
+   {
+    "n": "Hatfieldovi a McCoyovi-01.d",
+    "ok": false
+   },
+   {
+    "n": "Dexter-03x12-Chcete si vz",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "farcry2 2013-01-23 00-11-24-92.AVI",
+    "ok": false
+   },
+   {
+    "n": "01. Zloduch Mollache.rm",
+    "ok": false
+   },
+   {
+    "n": "10x20 - Vezmi si muj zivot.avi",
+    "ok": false
+   },
+   {
+    "n": "01.Prorok ktery zmenil Svet (A Propeth changes the World).avi",
+    "ok": false
+   },
+   {
+    "n": "mala velka britanie 01.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda_1-01- Potmě.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_3-01.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Hodlate se s tim smirit.avi",
+    "ok": false
+   },
+   {
+    "n": "Zaklinac 01 - Detstvi.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (1) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (2) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (3) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (5) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (6) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (7 ) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (8 ) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (9) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (10 ) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_02_[5DD34F8F].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_03_[6AE89047].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_04_[9166EA34].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_05_[138C4718].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_06_[A2A5DFA1].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_07_[B30B2D6F].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_08_[AB801BF5].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_09_[45FC3B9E].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_10_[90CD36C4].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_11_[F94D2C91].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_12_[EDDB19D0].mkv",
+    "ok": false
+   },
+   {
+    "n": "(G_P)_Now_and_Then_Here_and_There_(R2J)_13_[6D3DE267].mkv",
+    "ok": false
+   },
+   {
+    "n": "And.then.there.were.none.s01e01.720p-CZ.TITULKY.V.OBRAZE.mp4",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E01.720p.HDTV.x264-RIVER.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E01.1080p.BluRay.EN.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E01.Episode.1.720p.HDTV.2CH.HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Az.tam.nezbyl.zadny-And.Then.There.Were.None.S01E01.1080p.8bit.BluRay.AC3.x264.AVC-CzAudio EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Az.tam.nezbyl.zadny-And.Then.There.Were.None.S01E01.1080p.8bit.BluRay.AC3.x264.AVC-CzAudio.mkv",
+    "ok": false
+   },
+   {
+    "n": "Here.And.There.2006.720p.BluRay.x264-DOCUMENT.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Beatles - Now And Then (Official Music Video) (2160p_24fps_VP9 LQ-160kbit_Opus).webm",
+    "ok": false
+   },
+   {
+    "n": "The Beatles - Now And Then (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E01.1080p.HDTV.x264.AAC5.1-2.0-FaiLED.mkv",
+    "ok": false
+   },
+   {
+    "n": "John Lennon - Beatles - Now and Then • John Lennon 43rd Memorial.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sister Boniface Msteries S04E08 And Then here Were Nun 720p WEB-DL HEVC x265 5-BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS S23E05 Now And Then 1080p AMZN WEB-DL DDP5 1 H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS.S23E05.Now.And.Then.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Rookie S02E12 Now and Then 720p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Rookie S02E12 Now and Then 1080p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E01.1080p.BluRay.REMUX[Ben The Men].mkv",
+    "ok": false
+   },
+   {
+    "n": "1896 Now and then Berlin, friedrichstraße.avi",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds (2005) Season 19 Episode 1- Now and Then - PrimeWire.mp4",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p PMTP WEB-DL DDP5 1 Atmos DV HDR H 265-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal.Minds.S19E01.Now.and.Then.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p AMZN WEB-DL DDP5 1 Atmos H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal.Minds.S19E01.Now.and.Then.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p AMZN WEB-DL DDP5 1 Atmos H 265-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 720p AMZN WEB-DL DDP5 1 Atmos H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p DSNP WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Alexandr Veliký Zrození boha E01 Chlapec králem (2024) CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Křeček v noční košili E01 Ukradený vynález (1987) 81 CZ 720p.mp4",
+    "ok": false
+   },
+   {
+    "n": "TOPIC, Fireboy DML, Nico Santos - Body (Official Lyric Video).mp4",
+    "ok": false
+   },
+   {
+    "n": "A Love So Beautiful 2021 KOREAN E01 CZtit V OBRAZE.mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E11 2025 1080p Baha WEB-DL x264 AAC-ADWeb[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E12 2025 1080p Baha WEB-DL x264 AAC-ADWeb[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E02 2025 1080p Baha WEB-DL x264 AAC-ADWeb[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E04 2025 1080p Baha WEB-DL x264 AAC-ADWeb[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E10 2025 1080p Baha WEB-DL H 264 AAC-ADWeb[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E08 2025 1080p Baha WEB-DL x264 AAC-ADWeb[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300nen Shiranai Uchi ni Level MAX ni Nattemashita Sono ni S02E03 2025 1080p Baha WEB-DL x264 AAC-ADWeb[EZTVx.to].mp4",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 02.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 04.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 03.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 06.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 05.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 07.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 08.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 09.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 10.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 11.mkv",
+    "ok": false
+   },
+   {
+    "n": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita Sono Ni 12.mkv",
+    "ok": false
+   },
+   {
+    "n": "Výukové centrum Rolex v Lausanne, Sejdžima & Nišizawová.m4v",
+    "ok": false
+   },
+   {
+    "n": "Hooligans - Zákon tribuny E01 TVrip CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "44Bo1C.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E01.S01E01.Tezky.pripad.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E38.S03E08.Nerikejte.o.ni.nic.spatneho.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Kirk, Spock & Bones - Star Trek-'s Great Trio.mkv",
+    "ok": false
+   },
+   {
+    "n": "So.I.Married.an.Axe.Murderer.1993.x264.AC3-WAF.mkv",
+    "ok": false
+   },
+   {
+    "n": "Scooby-Pozor sova (21min.).avi",
+    "ok": false
+   },
+   {
+    "n": "Robocop.E01.Budoucnost.a.zakon.DVDRip.Xvid.cz-iNG_1.avi",
+    "ok": false
+   },
+   {
+    "n": "Hannibal.S01.E01.TVrip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Hodně štěstí Charlie S02E22 Kapela Boba Duncana (The Bob Duncan Experience).avi",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 720p DSNP WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 720p AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 720p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p DSNP WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p PMTP WEB-DL DDP5 1 DV HDR H 265-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p AMZN WEB-DL DDP5 1 H 265-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p PMTP WEB-DL DDP5 1 DV H 265-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p AMZN WEB-DL DDP5 1 Atmos H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then with Audio Description 1080p AMZN WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Journey of Guitar Solo (THE INSTRUMENTALS - Episode 1).mp4",
+    "ok": false
+   },
+   {
+    "n": "001,002.Děti bohů-1,2.část.mp4",
+    "ok": false
+   },
+   {
+    "n": "BONUS 1(dvojbodka) Outlook odvolanie už poslaného emailu.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mir ist so nach Dir - Copy (1).mp4",
+    "ok": false
+   },
+   {
+    "n": "4K Hviezdne vojny - Solo  2018   2160p  5.1 CZE  7.1 ENG  mkv",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 02.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 03.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 04.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 05.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 06.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 07.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 08.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 09.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 10.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 11.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 12.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 13.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 14.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 15.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 16.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 17.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 18.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 19.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 20.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 21.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 22.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 23.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 24.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 25.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 26.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 27.mp4",
+    "ok": false
+   },
+   {
+    "n": "Super Body 1 tréning 28.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tanky v pekle bojů 1.avi",
+    "ok": false
+   },
+   {
+    "n": "01x01 Děti bohů 1,2.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství řeky Bohů 1-.mkv",
+    "ok": false
+   },
+   {
+    "n": "Borat 1 - Nakoukání do amerycké kultůry na obědnávku  2006 EN-CZ tit. (7GB).mkv",
+    "ok": false
+   },
+   {
+    "n": "04. Ztracená planeta Bohů - 1. část.avi",
+    "ok": false
+   },
+   {
+    "n": "15. Válka bohů - 1. část.avi",
+    "ok": false
+   },
+   {
+    "n": "Divoke Rakusko - sila vody E01 (2018)(SK)[TvRip].mkv",
+    "ok": false
+   },
+   {
+    "n": "Укрытие - Silo S03 E01 (Кто ты) WEB-DL 1080p (2026).mkv",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (11) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Bert a Ernie (12) - 24min. - Sezame pojď si hrát CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Jen si tak trochu pisknout☼   1980.avi",
+    "ok": false
+   },
+   {
+    "n": "Pojďte pane,budeme si hrát - Potkali se u Kolína (animovaný loutkový ČR dvdrip)-75min..avi",
+    "ok": false
+   },
+   {
+    "n": "2006 Sila uderu cz ☼   2006.avi",
+    "ok": false
+   },
+   {
+    "n": "Vlak dětství a naděje-04-Válka si nevybírá-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Kdyz-si-Chuck-bral-Larryho--esky-Adam-Sandler--super-komedie.avi",
+    "ok": false
+   },
+   {
+    "n": "sita.avi",
+    "ok": false
+   },
+   {
+    "n": "Last.Resort.S01.E01.TVrip.Xvid.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Na parket S02E23 Uvědom si to (Reality Check It Up).avi",
+    "ok": false
+   },
+   {
+    "n": "Kouzelníci-z-Waverly-S01E08-Zkroť-si-draka.AVI",
+    "ok": false
+   },
+   {
+    "n": "Dva a půl chlapa - 6x22 - Záchůdek sira Lancelota.avi",
+    "ok": false
+   },
+   {
+    "n": "columbo-38-posvitit-si-na-vrazdu-1976.avi",
+    "ok": false
+   },
+   {
+    "n": "Příběhy Alfreda Hitchcocka E01 - Malý omyl v malém městě.avi",
+    "ok": false
+   },
+   {
+    "n": "ludske.telo.dokonaly.stroj.sila_by-menschik.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Cape.S01.E01.DVDrip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Dej si pohov kamosi 2.avi",
+    "ok": false
+   },
+   {
+    "n": "Dej si pohov kamosi.avi",
+    "ok": false
+   },
+   {
+    "n": "Ten svetr si nesvlikej.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 03x02 - Hiíchy otcu 02. neco si prej.avi",
+    "ok": false
+   },
+   {
+    "n": "Ted.a.spol.S01E10.Musime.si.duverovat.DVDRip.XviD.cz-iNG.avi",
+    "ok": false
+   },
+   {
+    "n": "Sladký život Zacka a Codyho S02E12 Nepůjčuj si a nehláskuj (Neither A Borrower Nor A Spelling Bee).AVI",
+    "ok": false
+   },
+   {
+    "n": "V-množství-je-síla-aneb-Nekonečné-zvířecí-armády-1-cz-(lukuz)-filmy-(dokument-BBC).avi",
+    "ok": false
+   },
+   {
+    "n": "dej si pohov kámoši- by pablos32.avi",
+    "ok": false
+   },
+   {
+    "n": "Naruto 11 - The Land Where a Hero Once Lived - Země v které kdysi žil hrdina TOP.nov.V2",
+    "len": 1160,
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Dakaretai Otoko 1-i ni Odosarete Imasu. - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Dakaretai Otoko 1-i ni Odosarete Imasu. - 01 [480p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[OoyamanekoSubs]Dakaretai Otoko 1-i ni Odosarete Imasu. - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Boku no Tonari ni Ankoku Hakaishin ga Imasu - 01 [480p].mkv",
+    "ok": false
+   },
+   {
+    "n": "(Lena BL) Dakaretai Otoko 1-i ni Odosarete Imasu 01 - Ve světě showbysnysu je to, sněz nebo budeš snězen.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kono Kaisha ni Suki na Hito ga Imasu - 01 SK - Don`t Let Anyone Find Out.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Hakonideal] Kono Kaisha ni Suki na Hito ga Imasu - 01 [95AF3AB5][WEB 1080p HEVC EAC3].mkv",
+    "ok": false
+   },
+   {
+    "n": "[DBD-Raws][Crayon Shin-chan Chou Curry! Shakunetsu no Kasukabe Dancers][Images][01][1080P][BDRip][HEVC-10bit][FLAC].mkv",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Shingeki_no_Kyojin_-_01_[0B164A9D].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Cinska kapitalisticka revoluce (China's Capitalist Revolution part.1).avi",
+    "ok": false
+   },
+   {
+    "n": "Cestománie 01 - Indonesie-sumatra.neni kam spechat.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Experiment Kolonie I.avi",
+    "ok": false
+   },
+   {
+    "n": "01. Po líbánkách.avi",
+    "ok": false
+   },
+   {
+    "n": "6_01-Valkyry_z_Vallhaly_1.cast.avi",
+    "ok": false
+   },
+   {
+    "n": "01 - V hadim hnizde .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Pod palbou .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Navrat ztraceneho syna .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Avalon, cast I. .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Z masa a kosti .avi",
+    "ok": false
+   },
+   {
+    "n": "Angel - 3. série - 01. díl - BUŠENÍ SRDCE.avi",
+    "ok": false
+   },
+   {
+    "n": "Autogrotesky 01 Hasičák Burák (Rescue Squad Mater).AVI",
+    "ok": false
+   },
+   {
+    "n": "Zla krev_1986_01_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Trestny-prapor_Shtrafbat_2004_cz_dil_01.avi",
+    "ok": false
+   },
+   {
+    "n": "30 Rock [3.01] Do-Over.avi",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Great_Teacher_Onizuka_-_Lesson_01_(6F68CC7E).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yellow-Flash]_Gungrave_-_01_[720p][F64F0332].mkv",
+    "ok": false
+   },
+   {
+    "n": "[joseole99][Frostii] K-On! - 01 (1280x720 h264 AC3 AAC) [72C908C7].mkv",
+    "ok": false
+   },
+   {
+    "n": "cowboy_bebop_remastered_01[h264.ac3][niizk].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Okna do sveta (Windows on the World).avi",
+    "ok": false
+   },
+   {
+    "n": "Synové a dcery Jakuba skláře-01.Vandrovník.avi",
+    "ok": false
+   },
+   {
+    "n": "zena-za-pultem-01-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "Cirkus Humberto_01_1988_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "P90X+ 01 - Interval X Plus.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hannibal-01---04-CZ-dabing---axn.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 03x01 - Hrichy otcu 01. doktor Divny.avi",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x09 - Tajne valky 01. prichod.mp4",
+    "ok": false
+   },
+   {
+    "n": "Spiderman TAS 1994 05x12 - Spider valky 01. klony vazne  nemam v lasce.mp4",
+    "ok": false
+   },
+   {
+    "n": "Policajti z centra (01) - Než řekneš švec.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita 01 CZ-titulky (by vahrner).avi",
+    "ok": false
+   },
+   {
+    "n": "Neon Genesis Evangelion 01 CZ-titulky (by vahrner).avi",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Noumin Kanren no Skill bakka Agetetara Nazeka Tsuyoku Natta - 01 (1080p) [FFC3A8F1].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Class no Daikirai na Joshi to Kekkon suru Koto ni Natta - 01 (720p) [FB1BF64E].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Class no Daikirai na Joshi to Kekkon suru Koto ni Natta - 01 (1080p) [25D078CA].mkv",
+    "ok": false
+   },
+   {
+    "n": "Class no Daikirai na Joshi to Kekkon suru Koto ni Natta - 01 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Class no Daikirai na Joshi to Kekkon suru Koto ni Natta - 01 (480p) [8E50AE74].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Hikaru ga Shinda Natsu - 01 [720p NF WEB-DL AVC EAC3][MultiSub][36914104].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Class no Daikirai na Joshi to Kekkon Suru Koto ni Natta - 01 (BD 1280x720 x264 10bit AAC).mp4",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 (1080p) [B0ABF29A].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 (480p) [04481A8B].mkv",
+    "ok": false
+   },
+   {
+    "n": "[SubsPlease] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 (720p) [62BDF761].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [720p CR WEB-DL AVC AAC][MultiSub][E438B0B8].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [480p CR WEB-DL AVC AAC][MultiSub][F9481053].mkv",
+    "ok": false
+   },
+   {
+    "n": "[ASW] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [1080p HEVC][379F1232].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [1080p CR WEB-DL AVC AAC][MultiSub][24EAA334].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [1080p CR WEBRip HEVC AAC][MultiSub][87DD3299].mkv",
+    "ok": false
+   },
+   {
+    "n": "[LoliHouse] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [WebRip 1080p HEVC-10bit AAC SRTx2].mkv",
+    "ok": false
+   },
+   {
+    "n": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 CZ - Holka jménem Umi Asanagi.mkv",
+    "ok": false
+   },
+   {
+    "n": "Class de 2 Banme ni Kawaii Onnanoko to Tomodachi ni Natta  - 01 [WEB-DL CR 1080p AVC AAC].mkv",
+    "ok": false
+   },
+   {
+    "n": "Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta_[01]_[HEVC].mkv",
+    "ok": false
+   },
+   {
+    "n": "Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta_[01].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Sristi] Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta - 01 [1080p CR WEB-DL AVC AAC].mkv",
+    "ok": false
+   },
+   {
+    "n": "[ReinForce] Class de 2 Banme ni Kawaii Onnanoko to Tomodachi ni Natta 01 (BDRip 1920x1080 x264 FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "P!nk Ft. Nate Ruess - Just Give Me A Reason (1080p) x264 [VX] [P2PDL].mp4",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p PMTP WEB-DL DDP5 1 Atmos DV HDR10Plus H 265-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p REPACK DSNP WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 720p REPACK DSNP WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 720p REPACK AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p REPACK AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p REPACK PMTP WEB-DL DDP5 1 DV HDR H 265-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 2160p REPACK PMTP WEB-DL DDP5 1 DV H 265-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Koniec niewinności - Now and Then 1995 [1080p.BluRay.H265-FT] [Lektor PL] [Alusia].mkv",
+    "ok": false
+   },
+   {
+    "n": "ER S11E16 Here and There 1080p NF WEB-DL AAC2 0 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Nashville 2012 S05E14 Now and Then Theres A Fool Such as I 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Criminal Minds S19E01 Now and Then 1080p WEBRip 10Bit DDP5 1 H265-d3g.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS - S23E05 - Now and Then.mkv",
+    "ok": false
+   },
+   {
+    "n": "H2O - Stačí přidat vodu S02E21 A pak byly čtyři (And Then There Were Four).AVI",
+    "ok": false
+   },
+   {
+    "n": "03x07 Plesati a krasni (Then bald and the beautiful)-amercom-hgr.mp4",
+    "ok": false
+   },
+   {
+    "n": "IronMan And Hulk - Heroes.United.2013.BRRip.XviD.Ac3.Feel-Free.avi",
+    "ok": false
+   },
+   {
+    "n": "Chosen.S02E02.Heroes.And.Villains.WEBRip.XviD-eXceSs.avi",
+    "ok": false
+   },
+   {
+    "n": "[AHSH] Fairy Tail 195 - People and People, Dragons and Dragons, People and Dragons (2014) [ENsubs] [HDTV-720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "Nešika ( Awkward) 3X12 A Tehdy Co Se Mělo Stát (And Then What Happened) cz ttulky :-)",
+    "ok": false
+   },
+   {
+    "n": "02x29 - Charlie and the hit and run.avi",
+    "ok": false
+   },
+   {
+    "n": "Weeds.S08E03.See.Blue.and.Smell.Cheese.and.Die.720p.BluRay.X264.CZ-GHDC.mkv",
+    "ok": false
+   },
+   {
+    "n": "Prison Break Season 1 - S01E11 - And Then There Was 7.avi",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E02.HDTV.x264-River.mp4",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E02.720p.HDTV.x264-FOV.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.then.there.were.none.s01e02.720p-CZ.TITULKY.V.OBRAZE.mp4",
+    "ok": false
+   },
+   {
+    "n": "And.then.there.were.none.s01e03.720p-CZ.TITULKY.V.OBRAZE.mp4",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E03.720p.HDTV.x264-TLA.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E02.1080p.BluRay.EN.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E03.1080p.BluRay.EN.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Now Pronouce You Chuck and Larry 2007 BluRay 1080p HEVC DD5.1-D3FiL3R[PRiME].mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E02.Episode.2.720p.HDTV.2CH.HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "And.Then.There.Were.None.S01E03.Episode.3.720p.HDTV.2CH.HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Def Leppard - And There Will Be A Next Time... [Live From Detroit] (2017).mkv",
+    "ok": false
+   },
+   {
+    "n": "and then came love (2007) .xvid.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Now and Forever.wma",
+    "ok": false
+   },
+   {
+    "n": "4x12.Hrdinové a zloduši (Heroes and Villains).avi",
+    "ok": false
+   },
+   {
+    "n": "04x13-now-you-see-her-now-you-dont.avi",
+    "ok": false
+   },
+   {
+    "n": "Scooby.Doo.And.Kiss.Rock.and.Roll.Mystery.2015.BDrip.MP3.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Man.Who.Killed.Hitler.And.Then.The.Bigfoot.2018.WEBRip.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Man Who Killed Hitler And Then The Bigfoot.2019.Sk titulky vložené do obrazu.mkv",
+    "ok": false
+   },
+   {
+    "n": "2x10.Teď ji vidíš (Now You See Her).avi",
+    "ok": false
+   },
+   {
+    "n": "The.Man.Who.Killed.Hitler.and.Then.The.Bigfoot.2018.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.5.1-FGT.mkv",
+    "ok": false
+   },
+   {
+    "n": "[CHQ] Tom and Jerry - 130 - Is There a Doctor in the Mouse [DVDrip][MP3][XVID][1964][AF2479E6].avi",
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 01 (1080p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 01 SK - You Need Money to Support Your Oshi!",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Bokura-ga-Ita-01-CZ-titulky-by-vahrner",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita 01 CZ-titulky (by vahrner)",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita - 01 CZtitulky",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 11 (1080p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 10 (1080p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 05 (1080p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 10 (720p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 11 (720p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "AKT_Shinryaku_Ika_Musume_01",
+    "len": 1435,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 05 (480p)",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 05 SK - Rain",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Iwa Kakeru! Sport Climbing Girls - 01",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Spartakus-Válka.zatracených.01.Nepřátelé.Říma",
+    "len": 2936,
+    "ok": false
+   },
+   {
+    "n": "Spartakus-Válka-zatracených-01-Nepřátelé-Říma",
+    "len": 2936,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 10 SK - Yellow Spring",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "2013 Spartakus - Válka zatracených 01 - Nepřátelé Říma",
+    "len": 3046,
+    "ok": false
+   },
+   {
+    "n": "Spartakus-Válka zatracených 01 Nepřátelé Říma GG",
+    "len": 2936,
+    "ok": false
+   },
+   {
+    "n": "Sponge_Bob_season_01_episod_11a MuscleBob_BuffPants",
+    "len": 664,
+    "ok": false
+   },
+   {
+    "n": "Yuusha Party ni Kawaii Ko ga Ita node Kokuhaku shitemita - 01",
+    "len": 1432,
+    "ok": false
+   },
+   {
+    "n": "Yuusha Party ni Kawaii Ko ga Ita node, Kokuhaku shitemita. - 01 (720p)",
+    "len": 1432,
+    "ok": false
+   },
+   {
+    "n": "Spartakus-Válka_zatracených_01_Nepřátelé_Říma Top-Verze",
+    "len": 2936,
+    "ok": false
+   },
+   {
+    "n": "Kája a mat+ema+tika - 01. díl - Čísla",
+    "len": 849,
+    "ok": false
+   },
+   {
+    "n": "01 - Zaprášené Historie Ema Bohúňa - Prípad zo železného (sk, 1971)",
+    "len": 2532,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 06 SK - Tamon's B-Side",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 02 SK - Do You Like Me",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Spartakus-Válka zatracených 01 Nepřátelé Říma Top-od-Draculy",
+    "len": 2936,
+    "ok": false
+   },
+   {
+    "n": "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu - 01 cz",
+    "len": 1430,
+    "ok": false
+   },
+   {
+    "n": "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu - 01 [720p]",
+    "len": 1430,
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu - 01 [1080p]",
+    "len": 1430,
+    "ok": false
+   },
+   {
+    "n": "Oktagon - MMA vyzva (31.10. 2016)",
+    "len": 3549,
+    "ok": false
+   },
+   {
+    "n": "Oktagon - MMA vyzva (21.11. 2016)",
+    "len": 2866,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 04 SK - You're a Sniper of Love",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 13 SK - I've Made Up My Mind",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Yuusha Party ni Kawaii Ko ga Ita node, Kokuhaku shitemita. - 01 CZ - Zkusil jsem se vyznat",
+    "len": 1432,
+    "ok": false
+   },
+   {
+    "n": "Ni.Tuyo.Ni.Mia.2020.1080p.WEBRip.x264.AAC5.1-[YTS.MX]",
+    "len": 5725,
+    "ok": false
+   },
+   {
+    "n": "Ni.Tuyo.Ni.Mia.2020.720p.WEBRip.x264.AAC-[YTS.MX]",
+    "len": 5724,
+    "ok": false
+   },
+   {
+    "n": "Io.sono.Mia.2019.1080p.cz.sub.WEB-DL.DDP5.1.x264",
+    "len": 6195,
+    "ok": false
+   },
+   {
+    "n": "vbh.41.iwa.1945",
+    "len": 2700,
+    "ok": false
+   },
+   {
+    "n": "Botsuraku Yotei no Kizoku dakedo, Hima Datta kara Mahou wo Kiwametemita - 01",
+    "len": 1430,
+    "ok": false
+   },
+   {
+    "n": "Botsuraku Yotei no Kizoku dakedo, Hima Datta kara Mahou wo Kiwametemita - 01 (480p)",
+    "len": 1430,
+    "ok": false
+   },
+   {
+    "n": "Tamon-kun Ima Docchi - 11 SK - Is It Really Okay for Me to Be Here",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "L'ira-di-Dio-(1968)-Italian-DVDRip.x264-cz tit-",
+    "len": 5543,
+    "ok": false
+   },
+   {
+    "n": "Bokura-ga-Ita-04-CZ-titulky-by-vahrner",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita - 21 CZtitulky",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita - 02 CZtitulky",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita - 10 CZtitulky",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita 11 CZ-titulky (by vahrner)",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Bokura ga Ita - 04 CZtitulky",
+    "len": 1535,
+    "ok": false
+   },
+   {
+    "n": "Detektiv Conan - S1E222 And There Were No Mermaids (The Murder) JA",
+    "len": 1486,
+    "ok": false
+   },
+   {
+    "n": "Detektiv Conan - S1E223 And There Were No Mermaids (The Deduction) JA",
+    "len": 1483,
+    "ok": false
+   },
+   {
+    "n": "Detektiv Conan - S1E224 And There Were No Mermaids (The Resolution) JA",
+    "len": 1483,
+    "ok": false
+   },
+   {
+    "n": "[Samir755] Hokuto no Ken 074 - A Wolf Running in the Horizon! There Lies the End of Love and Hatred!",
+    "len": 1450,
+    "ok": false
+   },
+   {
+    "n": "[Samir755] Hokuto no Ken 124 - What Awaits on the Continent of Darkness There Lies the Legendary Land of Asura",
+    "len": 1450,
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "movie",
+   "id": "tt2210879",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Okresní přebor – Poslední zápas Pepika Hnátka",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Okresný prebor - Posledný zápas Pepika Hnátka",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Okresní přebor",
+     "kind": "franchise",
+     "short": true,
+     "full": "Okresní přebor – Poslední zápas Pepika Hnátka"
+    },
+    {
+     "text": "Poslední zápas Pepika Hnátka",
+     "kind": "franchise",
+     "short": false,
+     "full": "Okresní přebor – Poslední zápas Pepika Hnátka"
+    }
+   ],
+   "allow": [
+    "okresni",
+    "prebor",
+    "posledni",
+    "zapas",
+    "pepika",
+    "hnatka",
+    "okresny",
+    "posledny"
+   ],
+   "year": 2012,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 102,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Posledni-zapas-Pepika-Hnatka-CZ-bd.avi",
+    "ok": true
+   },
+   {
+    "n": "STV2-Štúrov-posledný-zápas.2015-10-29.15-00.mkv",
+    "ok": false
+   },
+   {
+    "n": "12. Zápas s démony.avi",
+    "ok": false
+   },
+   {
+    "n": "Kouzelníci-z-Waverly-Place-S04E13-Zápas-masek-(Magic-Unmasked).AVI",
+    "ok": false
+   },
+   {
+    "n": "columbo-12-rozhodujici-zapas-1972.avi",
+    "ok": false
+   },
+   {
+    "n": "Kouzelnici-z-Waverly_02x20.Rodinny-zapas-NT.avi",
+    "ok": false
+   },
+   {
+    "n": "X-Men 3 Posledny vzdor (2006.CZdub).avi",
+    "ok": false
+   },
+   {
+    "n": "Kouzelníci z Waverly Place S02E18 Rodinný zápas (Family Game Night).AVI",
+    "ok": false
+   },
+   {
+    "n": "Kouzelníci z Waverly Place S04E13 Zápas masek (Magic Unmasked).AVI",
+    "ok": false
+   },
+   {
+    "n": "Dívka ze Západu_1965_Western_Komedie_Muzikál_CZdabink_DVDRip-Lt.mp4",
+    "ok": false
+   },
+   {
+    "n": "02x03 Rozhodujici zapas (1972).mkv",
+    "ok": false
+   },
+   {
+    "n": "Posledny Temlar.avi",
+    "ok": false
+   },
+   {
+    "n": "25.Zápas Titánu.avi",
+    "ok": false
+   },
+   {
+    "n": "Pribehy_tatranskych_stitov-4-Posledny_z_poslednych.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ajax Amsterdam-SK Slavia Praha ,1 zápas předkola Ligy Mistru 15.8. 2007.avi",
+    "ok": false
+   },
+   {
+    "n": "Posledny-samuraj-DVDrip-cz.dabing.2003.avi.9082695246439160525.part",
+    "ok": false
+   },
+   {
+    "n": "Best of Web 5 - HD - Zapatou.mp4",
+    "ok": false
+   },
+   {
+    "n": "Posledny den nezavislosti Independence daysaster 2013 DVDRip.XviD sk.avi",
+    "ok": false
+   },
+   {
+    "n": "033.Zápas.avi",
+    "ok": false
+   },
+   {
+    "n": "Posledný jednorožec (1982) Sk.avi",
+    "ok": false
+   },
+   {
+    "n": "Looney Tunes - 075.  Zápas o Tweetyho (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikacne-futbalove-zapasy-na-EURO-2016.UKR-SVK-1-polcas.2014-09-08.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikacne-futbalove-zapasy-na-EURO-2016.UKR-SVK-2-polcas.2014-09-08.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zápas o druhou šanci (Home Run 2013) Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Záhadná žena - 08. Tajemství Divokého západu (TVRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikacne-futbalove-zapasy-na-EURO-2016.UKR-SVK-0-Uvodne-studio.2014-09-08.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikacne-futbalove-zapasy-na-EURO-2016.UKR-SVK-1-Prestavkove-studio.2014-09-08.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikacne-futbalove-zapasy-na-EURO-2016.UKR-SVK-2-Zaverecne-studio.2014-09-08.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.SVK-ESP-0-Uvodne-studio.2014-10-09.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.SVK-ESP-1-polcas.2014-10-09.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.SVK-ESP-2-polcas.2014-10-09.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.SVK-ESP-2-Zaverecne-studio.2014-10-09.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.BLR-SVK-0-Uvodne-studio.2014-10-12.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.BLR-SVK-1-polcas.2014-10-12.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.BLR-SVK-1-Prestavkove-studio.2014-10-12.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.BLR-SVK-2-Zaverecne-studio.2014-10-12.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.MKD-SVK-0-Uvodne-studio.2014-11-15.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.MKD-SVK-1-polcas.2014-11-15.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.MKD-SVK-1-Prestavkove-studio.2014-11-15.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.MKD-SVK-2-polcas.2014-11-15.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "STV-HD-Kvalifikačné-futbalové-zápasy-na-EURO-2016.MKD-SVK-2-Zaverecne-studio.2014-11-15.20-20.mkv",
+    "ok": false
+   },
+   {
+    "n": "Columbo 02x03-Rozhodujici-zapas-1972 DVDRIP CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Bleach 205 - Fotbalový zápas s hollow.avi",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_14x10-Zápas o šampióna klubu.MPG",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_14x39-Zápasy známych tváří v městečku Nimbasa.mpg",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_15x13.Zápas s Králem Dolů.MPG",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_15x17.Zápas s Protivou.MPG",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_15x18.Cilan Ve víru zápasu.MPG",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_15x19.Neuvěřitelný létající zápas.MPG",
+    "ok": false
+   },
+   {
+    "n": "Pokemon_15x25.Zápas se zloději listů.MPG",
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Nacisticky.Titanic.2012.TVHistoryChannelRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "This.Means.War.2012.UNRATED.BRRip.XviD.CZ-LEADERs.avi",
+    "ok": false
+   },
+   {
+    "n": "Safe.2012.R5.LiNE.XviD-YanKeeS.avi",
+    "ok": false
+   },
+   {
+    "n": "John Carter 2012  BRRip XviD CZsub_AMiZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Wanderlust-2012.BRRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Agent.Cleanskin.2012.PLSUBBED.DVDRip.XviD-BiDA.avi",
+    "ok": false
+   },
+   {
+    "n": "Tohle°°je°°válka°°(2012)°°CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Lorax 2012 BR Rip CZ Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Project.X.2012.480p.BRRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "American-Pie---Reunion.CZ.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Thousand.Words.2012.480p.BRRip.XviD.AC3.CZ-LEADERs.avi",
+    "ok": false
+   },
+   {
+    "n": "Battleship.2012.PLSUBBED.DVDRip.XviD-AdBlock-15.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Underworld.Awakening.2012.PL.BRRip.XviD-AdBlock-17.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Battleship.2012.PLSUBBED.BRRip.XviD-CAMBiO_fisker1-18-08-12.avi",
+    "ok": false
+   },
+   {
+    "n": "Cars.2.2011.PLDUB.DVDRip.XviD-AdBlock-18.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Limitless.2011.DVDRip.XviD.LektorPL-AdBlock-20.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Bitevni-lod-CZ-2012-akcni-scifi-thriller.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Raid.Redemption.2011.PLSUBBED.BRRIP.XViD-AdBlock-21.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Talisman.2012.BRRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Tohle-je-valka!---akcni-romanticka-komedie-2012--720p_CZ-003.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tohle-je-valka!---akcni-romanticka-komedie-2012--720p_CZ-002.mkv",
+    "ok": false
+   },
+   {
+    "n": "Temne.stiny.2012.BRRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Coma.2012.Part.Two.HDTV.XviD-AFG-4NH.avi",
+    "ok": false
+   },
+   {
+    "n": "LOL.2012.BRRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Transit.2012.BDRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Magic.of.Belle.Isle.2012.BRRip.XViD.UNiQUE.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "video-2012-10-15-10-16-46.mp4",
+    "ok": false
+   },
+   {
+    "n": "Vlkodlak.Bestie.mezi.nami.2012.DVDRip.XviD.AC3.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Lorax.2012.BRRip.XviD.CZ-TATRACKER.avi",
+    "ok": false
+   },
+   {
+    "n": "Tak-fajn-(2012).avi",
+    "ok": false
+   },
+   {
+    "n": "Cold.Light.of.Day.The.2012.BRRip.XviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Deadfall.2012.DVDRip.XViD-PLAYNOW.avi",
+    "ok": false
+   },
+   {
+    "n": "96-hodin-Odplata--Taken-2-2012.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dzien-The.Day.2012.PLSUBBED.BDRip.XviD-BiDA-4NH.avi",
+    "ok": false
+   },
+   {
+    "n": "lol-2012-cz-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Act.Of.Valor.2012.720p.Bluray.x264.YIFY.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Lorax.2012.720p.BluRay.x264.YIFY.mp4",
+    "ok": false
+   },
+   {
+    "n": "s-ledovym-klidem-cz-dabing-2012-novinka.avi",
+    "ok": false
+   },
+   {
+    "n": "Fire-With-Fire-2012-+-CZ-Titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Stmivani-rozbresk-2.cast-horor-scifi-novinky-2012-titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Resident -Evil - Odplata Novinka 2012 Akční Horor Sci-Fi Thriller CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Madagaskar-3-utěk-do-Evropy-(2012)-CZ-BRRip-XviD.avi",
+    "ok": false
+   },
+   {
+    "n": "John-Carter-Mezi-dvěma-světy.CZ.2012.avi",
+    "ok": false
+   }
+  ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "type": "movie",
+   "id": "tt0111161",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Vykoupení z věznice Shawshank",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Vykúpenie z väznice Shawshank",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "The Shawshank Redemption",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "vykoupeni",
+    "z",
+    "veznice",
+    "shawshank",
+    "vykupenie",
+    "vaznice",
+    "redemption"
+   ],
+   "year": 1994,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 143,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Vykoupení z věznice Shawshank - Shawshank Redemption, The (1994) CZ- PÍTA.avi",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - Shawshank Redemption, The (1994) CZ-dabing.avi",
+    "len": 8176,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank   The Shawshank Redemption 1994 CZ 2160p BRRip CZ Dabing.mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank [The Shawshank Redemption] (1994) CZ dabing.mp4",
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank - The Shawshank Redemption (1994)(CZ) - CSFD 95- - SkTonline.mp4",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - Shawshank Redemption CZ.avi",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - The Shawshank Redemption (1994)(CZ,EN)[2160p][HDR-DV].mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni-z-veznice-Shawshank-1994-DVDRip480p6-Chanels-cz.avi",
+    "len": 8176,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) 1080p HQ CZ dabing.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni.z.veznice.Shawshank.1994.DVDRip.XviD-CZ.avi",
+    "len": 8176,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank _ (1994) HD cz.mkv",
+    "len": 8199,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení Z Věznice Shawshank.avi",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) By LukynNar.avi",
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank 1994 1080p CZ dabing.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank  1994  1080p   5.1 CZE  mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 1080p CZ dab.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z veznice Shawshank (1994 Drama-Krimi-Thriller-1080p.-Bdrip.) Cz dabing.mkv",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z veznice Shawshank (1994 Drama-Krimi-Thriller-1080p.-Bdrip.) Cz dabing.mp4",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z veznice Shawshank (1994 Drama-Krimi-Thriller-1080p.-Bdrip.) Cz dabing.avi",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice-Shawshank (1994 Drama-Krimi ) en+Cz dabing - en+Cz-titulky.mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank.mkv",
+    "len": 8187,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z Věznice Shawshank.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - 1994 1080p CZ dabing.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank 1994.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (Tim Robbins,Morgan Freeman,Bob Gunton,William Sadler-1994 Krimi-Dráma-Thriller-1080p.) Cz dabing.avi",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (Tim Robbins,Morgan Freeman,Bob Gunton,William Sadler-1994 Krimi-Dráma-Thriller-1080p.) Cz dabing.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni_z_veznice_Shawshank_(1994)_cz_720p.mp4",
+    "len": 8187,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (USA 1994, 1080p) JackRIPper.mp4",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) CZ-dabing.avi",
+    "len": 8176,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.1994.BDRemux.1080p.CZ.EN.mAx.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank Cz dab .mkv",
+    "len": 8187,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994).mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994, CZ dab.).mkv",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni Z Veznice Shawshank FHD 1080p CZ [092].mkv",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) UHDRDV cz en.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení_z_věznice_Shawshank_(1994)_h265.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank.avi",
+    "len": 8176,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ (4KHDR).mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (FullHD 1080p) CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) 1080p CZ ....92.....mkv",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank,1994,Drama,CZdab-M.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykúpenie-z-väznice-Shawshank-Cz.avi",
+    "len": 8176,
+    "ok": true
+   },
+   {
+    "n": "1994 - Vykoupení z věznice Shawshank  ().avi",
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank,1994,CZdab-M.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ dab.mp4",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994)(CZ).mp4",
+    "len": 8245,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank,1994,Drama,CZdab-M.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank 1994 cz dabing.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank(1994) CZ EN (4KHDR TOP KVALITA).mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) 1080p Bluray CZ DABING-Buliwyf.mkv",
+    "len": 8203,
+    "ok": true
+   },
+   {
+    "n": "The.Shawshank.Redemption.1994.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "The.Shawshank.Redemption.1994.MULTi.1080p.BluRay.x264.AC3-DENDA.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption (1994, CZ tit, 4k 10bit HDR) JackRIPper.mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "The.Shawshank.Redemption.1994.1080p.Bluray.DTS.x264-CZ-PerfectionHD+(1).mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption 1994 1080 CZ EN (rychlodabing Šeptal).mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption 1994 ENG sub.no 1c ToMyX from RM BluRay.mp4",
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption (1994) (1080p DS4K BluRay x265 10-bit HDR AAC 5.1) [WeSLeY].mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption - 1950's Super Panavision 70.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Shawshank Redemption 1994 REPACK 1080p BluRay x265-YAWNTiC.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption (1994).mkv",
+    "ok": true
+   },
+   {
+    "n": "The.Shawshank.Redemption.1994.bluray.sdr.1080p.av1.5.1.opus.subs-Dust.mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "The.Shawshank.Redemption.1994.bluray.hdr.2160p.av1.5.1.opus.subs-Dust.mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "The Shawshank Redemption (1994) 4K Remastered 1080p 10bit Bluray x265 HEVC [Org DDP 2.0 Hindi + DDP 5.1 English] MSubs ~ TombDoc.mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "The.Shawshank.Redemption.1994.1080p.BluRay.HEVC.OPUS.5.1-Agamaz.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "Vykúpenie z väznice Shawshank (The Shawshank Redemption) (1994) - [2160p UHD BluRay REMUX HEVC DV HDR10] (CZ DTS-HD MA 5.1, EN DTS-HD MA 5.1).mkv",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "1994 \tThe Shawshank Redemption 4K cz-eng.mkv",
+    "ok": true
+   },
+   {
+    "n": "Deadbeat - S03E09 - The Shawshanked Redemption.avi",
+    "ok": false
+   },
+   {
+    "n": "1994.The.Shawshank.Redemption.mkv",
+    "len": 8554,
+    "ok": true
+   },
+   {
+    "n": "The.Raid.Redemption.2011.PLSUBBED.BRRIP.XViD-AdBlock-21.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Raid.Redemption.2011.HDRip.XviD_CZsub_AMiZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Raid.Redemption.2011.BDRip.XViD.MP3.CZ-GRiNGO.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Raid.Redemption.2011.720p.BDRip.XViD.AC3.CZ-GRiNGO.avi",
+    "ok": false
+   },
+   {
+    "n": "the.raid.redemption.2011.720p.bluray.DTS.x264-publichd.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Raid.Redemption.2011.Unrated.Bluray.1080p.DTS-HD.x264-Grym.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Blacklist Redemption - 01x01 - Leland Bray CZ tit LOLLE.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E02.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E02.720p.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Blacklist Redemption - 01x02 - Kevin Jensen CZ tit LOLLE.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E01.720p.HDTV.x264-AVS_CZ_titulky_TRX.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E02.720p.HDTV.x264-KILLERS_CZ_titulky_TRX.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E03.720p.HDTV.x264-KILLERS_CZ_titulky_TRX.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Blacklist Redemption - 01x03 - Independence USA CZ tit LOLLE.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E04.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E04.720p.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E03.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E03.720p.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E04.720p.HDTV.x264-KILLERS_CZ_titulky_TRX.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E05.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E05.720p.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E05.720p.HDTV.x264-KILLERS_CZ_titulky_TRX.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E06.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Blacklist.Redemption.S01E06.720p.HDTV.x264-KILLERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vykúpenie z väznice Shawshank (1994)",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykúpenie z väznice Shawshank (1994) CZ dabing",
+    "len": 8175,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - The Shawshank Redemption více (1994) [2].mp4",
+    "len": 8636,
+    "ok": false
+   },
+   {
+    "n": "The Shawshank Redemption - 1950's Super Panavision 70",
+    "len": 77,
+    "ok": false
+   },
+   {
+    "n": "Podvodníci z New Jersey (1994 USA) [komedie]   B O´Halloran  J Anderson   DVDRip CZdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1080p BRRip CZ Dabing",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank  CZ Dab",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení-z-věznice-Shawshank-(1994)-1080p (CZE)",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ DAB 3840x1600p",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ DAB 3840x1600p  T.O.P-M-",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ DAB 3840x1600p T.O.P Movie",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank  (1994) CZ DABING",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ Dabing 5.1 x265 HEVC 4K UHD HDR Dolby Vision",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ Dabing - NEJLEPŠÍ KVALITA",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p(OKEJ)",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení-z-věznice-Shawshank-1994-CZ-DAB-3840x1600p [OK]",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p  JOKI",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p_Master_",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) UHDRDV cz en",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ (1994) UHD",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p KVALITNÍ",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p_vše.v.pořádku_",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení_z_věznice_Shawshank_1994_CZ_DAB_3840x1600p Top-Verze",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p .By.mina",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení-z-věznice-Shawshank-1994-CZ-DAB-3840x1600p-[X]",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank.(1994).CZ.DAB.3840x1600p ByDv",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení-z-věznice-Shawshank-1994-CZ-DAB-3840x1600p",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení-z-věznice-Shawshank-1994-CZ-DAB-3840x1600p-[X]Vše-OK",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 4K CZ",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1080p CZ",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ dab 1080p",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ Dabing",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ dabing 1080p FHD",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) CZ-EN",
+    "len": 8531,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank  1994.mkv",
+    "len": 8177,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994) CZ Dabing",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni.z.veznice.Shawshank.1994.REMASTERED.1080p.10bit.BluRay.6CH.CZ.x265.HEVC-BB",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank-HD- drama,krimi,cz dabing,TOP film.mkv",
+    "len": 8186,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank [CZ dabing, 1994] Morgan Freeman",
+    "len": 8170,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z Věznice Shawshank HD- Drama,krimi, ,TOP [720p] [CZ Dabing].mp4",
+    "len": 8216,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - 1994 CS",
+    "len": 8186,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994, CZ dab.)",
+    "len": 8202,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ dab",
+    "len": 8552,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (Tim Robbins,Morgan Freeman-1994 Drama Krimi Bdrip 1080p.) Cz dabing",
+    "len": 8186,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank - 1994 1080p CZ dabing (MM)",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z Věznice Shawshank 1994 CZ DAB 3840x1600p #Top Verze.mp4",
+    "len": 8592,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank Full HD CZ Dabing 1994",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupeni z veznice Shawshank Full HD CZ Dabing 1994.mp4",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank,1994,Drama,CZdab-M",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení.z.věznice.Shawshank,1994,CZdab-M",
+    "len": 8553,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank (1994).avi",
+    "len": 8182,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ Dabing 1994.avi",
+    "len": 8170,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ Dabing 1994  Drama Thriller",
+    "len": 8170,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank CZ Dabing 1994 Drama Thriller",
+    "len": 8170,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994 CZ",
+    "len": 8170,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank 1994.avi",
+    "len": 8175,
+    "ok": true
+   },
+   {
+    "n": "Vykoupení z věznice Shawshank _ (1994) cz",
+    "len": 8176,
+    "ok": true
+   }
+  ]
  }
 ]

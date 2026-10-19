@@ -91,6 +91,8 @@ function titleMatches(fileName, name, others) {
         if (idx === 0) return true;
         const next = sig[idx + 1];
         if (idx > 0 && PREFIX_BAD.has(sig[idx - 1])) return false;   // "Lego Batman 2022"
+        // před názvem jen číslo / značka dílu a soubor má značku dílu ("2 Reacher CZ S01E02")
+        if (idx > 0 && sig.slice(0, idx).every(t => PREFIX_OK.test(t)) && looksLikeEpisode(fileName)) return true;
         return !!next && /^(19|20)\d{2}$/.test(next);
     }
     // víceslovný název: slova musí jít za sebou ve stejném pořadí (mezery do 3 slov),
@@ -120,7 +122,7 @@ function titleMatches(fileName, name, others) {
     });
 }
 // slova, která smí stát před názvem: číslo, značka dílu, rok, římská číslice
-const PREFIX_OK = /^(\d{1,4}|s\d{1,2}(e\d{1,4})?|e\d{1,4}|ep\d{0,4}|\d{1,2}x\d{2,4})$/;
+const PREFIX_OK = /^(\d{1,4}|s\d{1,2}(e\d{1,4})?|e\d{1,4}|ep\d{0,4}|\d{1,2}x\d{1,4})$/;
 const ROMAN_ANY = /^(i{1,3}|iv|v|vi{1,3}|ix|x)$/;
 // slova před názvem, která značí jiný (dokumentární/odvozený) titul: "Inside the Vietnam War", "Lego Batman"
 const PREFIX_BAD = new Set(('inside behind making becoming beyond lego untold secret secrets return revisiting remembering ' +
@@ -173,8 +175,11 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
     // S01E05 slepené s dalším textem (např. "s01e05v2")
     m = n.match(/s(\d{1,2})e(\d{1,4})(?![0-9])/);
     if (m) return { season: +m[1], episode: +m[2], explicit: true };
-    // 1x05
-    m = n.match(/\b(\d{1,2})x(\d{2,4})\b/);
+    // [1.04] / (1.04) – sezóna.díl v závorce
+    m = String(fileName).match(/[\[(]\s*(\d{1,2})\.(\d{2,3})\s*[\])]/);
+    if (m) return { season: +m[1], episode: +m[2], explicit: true };
+    // 1x05, 5x7 (Hellspy často bez nuly)
+    m = n.match(/\b(\d{1,2})x(\d{1,4})\b/);
     if (m) return { season: +m[1], episode: +m[2], explicit: true };
 
     // Sezóna: "season 2", "2nd season", "s2", "2 serie", "2 rada"
@@ -224,7 +229,7 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
 function looksLikeEpisode(fileName) {
     const n = normalize(fileName);
     return /\bs\s?\d{1,3}\s?e\s?\d{1,4}\b/.test(n) || /s\d{1,3}e\d{1,4}/.test(n) ||
-        /\b\d{1,2}x\d{2,3}\b/.test(n) || /\b(?:ep|episode|epizoda)\s?\d{1,4}\b/.test(n) ||
+        /\b\d{1,2}x\d{1,3}\b/.test(n) || /\b(?:ep|episode|epizoda)\s?\d{1,4}\b/.test(n) ||
         /\be\d{2,3}\b/.test(n) || /\b\d{1,3}\s(?:dil|cast)\b/.test(n) || /\b(?:dil|cast)\s\d{1,3}\b/.test(n);
 }
 
@@ -270,7 +275,8 @@ const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english jap
     'tit titulky sub subs forced hd fhd uhd sd bluray bdrip brrip bd remux webrip web dl webdl hdtv dvdrip dvd rip ' +
     'xvid divx hevc avc aac ac3 dts ddp truehd atmos hdr dv extended edition directors cut uncut unrated remastered ' +
     'complete kompletni serie series season sezona rada episode ep epizoda dil cast part mp4 mkv avi vostfr ' +
-    'tv ova movie film proper repack internal limited anime capitulo episodio folge odcinek bolum aflevering').split(' '));
+    'tv ova movie film proper repack internal limited anime capitulo episodio folge odcinek bolum aflevering ' +
+    'kvalita dobra pekna prodlouzena rozsirena mpg mpeg wmv ts mov flv m4v webm').split(' '));
 
 // Najde v souboru slova názvu (v pořadí, mezery mezi nimi tolerované – "Rosario to Vampire" ~ "Rosario + Vampire");
 // vrací pozici prvního slova a slova, která následují za posledním.
@@ -317,7 +323,7 @@ function afterName(fileName, name) {
 
 // Podtitul za dvojtečkou ("Druhá světová válka: Cena říše" → "Cena říše") – soubory se tak často jmenují
 function subTitle(str) {
-    const parts = String(str || '').split(/\s*:\s+/);
+    const parts = String(str || '').split(/\s*:\s+|\s+[-–—]\s+/);
     if (parts.length < 2) return null;
     const sub = parts.slice(1).join(' ').trim();
     const nt = nameTokens(sub);
@@ -373,11 +379,14 @@ function subtitleNoise(fileName, name, allow, mode) {
     const hit = afterName(cleaned, name);
     if (!hit) return false;
     const series = mode === 'series';
-    for (const t of hit.rest.slice(0, 6)) {
+    const rest6 = hit.rest.slice(0, 6);
+    for (let i = 0; i < rest6.length; i++) {
+        const t = rest6[i];
         if (t === 'qqstopqq' || /^(19|20)\d{2}$/.test(t)) return false;              // závorka / rok
+        if (t === 'full' && /^(hd|fhd|uhd|bd|hdrip|\d{3,4}p)$/.test(rest6[i + 1] || '')) return false;   // "Full HD" (ne "Full Gate!")
         if (TECH_WORDS.has(t) || DESC_WORDS.has(t) || /^\d{3,4}[pi]$/.test(t) || /^[xh]26[45]$/.test(t)) return false;
         if (/^(cz|cze|sk|en|eng)+(dab|dabing|tit|titulky|sub|subs|audio)?$/.test(t)) return false;  // "CZdab", "CZEN", "CZSKEN"
-        if (/^s\d{1,2}(e\d{1,4})?$/.test(t) || /^e\d{1,4}$/.test(t) || /^\d{1,2}x\d{2,4}$/.test(t) || /^ep\d*$/.test(t)) return false;
+        if (/^s\d{1,2}(e\d{1,4})?$/.test(t) || /^e\d{1,4}$/.test(t) || /^\d{1,2}x\d{1,4}$/.test(t) || /^ep\d*$/.test(t)) return false;
         if (/^\d+$/.test(t)) { if (series) return false; continue; }                  // film: "Pán prstenů 1 …"
         if (t.length < 2 || (series && t.length <= 2)) continue;
         if (ROMAN[t] || (allow && allow.has(t))) continue;
@@ -403,6 +412,19 @@ function spinoffAbbrev(fileName, name, allow) {
     return l.length > 2 ? true : /^[A-Z]+$/.test(t);
 }
 
+// Roky v názvu dílu: za značkou dílu (S10E1 / 10x01) a hned za slovem z našeho názvu
+// ("Archer - S10E1 Archer 1999: Bort the Garj" → 1999); "Most S01E02 HD 2011" se nepočítá (před rokem "hd")
+function episodeTitleYears(fileName, nameWords) {
+    const ft = normalize(stripLeadingGroups(fileName)).split(' ').filter(Boolean);
+    const mk = ft.findIndex(t => /^s\d{1,2}e\d{1,4}$/.test(t) || /^\d{1,2}x\d{1,4}$/.test(t));
+    if (mk < 0) return [];
+    const out = [];
+    for (let i = mk + 2; i < ft.length; i++) {
+        if (/^(19|20)\d{2}$/.test(ft[i]) && nameWords.has(ft[i - 1])) out.push(+ft[i]);
+    }
+    return out;
+}
+
 // Zkomolený název proti mazání ("The Simps.ons S35E03", "Simpsnovi S35E03", "M.o.b.land S01E02",
 // "1Země gangů_S01E01"): u seriálu se přesnou značkou hledaného dílu porovná text před značkou
 // bez mezer/teček s názvem. Shoda = rozdělené slovo; u názvů od 9 znaků i jedno písmeno navíc/chybí/jiné
@@ -420,7 +442,7 @@ function repairName(fileName, names, season, episode, { anime = false, alEpisode
     const ft = normalize(raw).split(' ').filter(Boolean);
     let mk = -1, mkLen = 1;
     for (let i = 0; i < ft.length && mk < 0; i++) {
-        let m = ft[i].match(/^s(\d{1,2})e(\d{1,3})$/) || ft[i].match(/^(\d{1,2})x(\d{2,3})$/);
+        let m = ft[i].match(/^s(\d{1,2})e(\d{1,3})$/) || ft[i].match(/^(\d{1,2})x(\d{1,3})$/);
         let len = 1;
         if (!m && /^s\d{1,2}$/.test(ft[i]) && /^e\d{1,3}$/.test(ft[i + 1] || '')) {
             m = [null, ft[i].slice(1), ft[i + 1].slice(1)]; len = 2;
@@ -469,7 +491,7 @@ function repairAbsolute(raw, names, eps) {
 }
 
 module.exports = {
-    repairName,
+    repairName, episodeTitleYears,
     spinoffAbbrev, rawTokens,
     stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,

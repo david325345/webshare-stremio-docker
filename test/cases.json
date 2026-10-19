@@ -43353,5 +43353,829 @@
     "ok": true
    }
   ]
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": {
+    "i": 4,
+    "n": 5
+   },
+   "type": "movie",
+   "id": "tt0462499",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Rambo: Do pekla a zpět",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Rambo: Do pekla a naspäť",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Rambo",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Do pekla a zpět",
+     "kind": "franchise",
+     "short": true,
+     "full": "Rambo: Do pekla a zpět"
+    },
+    {
+     "text": "Rambo: Do pekla a späť",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "rambo",
+    "do",
+    "pekla",
+    "zpet",
+    "naspat",
+    "spat"
+   ],
+   "year": 2008,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 92,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Rambo II (Rambo - First Blood Part II, 1985) - rychlodabing (Neznámý), VHS Rip.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo III (Rambo III, 1988) - rychlodabing (Niňja), VHS Rip.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo II První Krev čast II Rambo First Blood Part II 1985 CZ EN HEVC 2160pHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo I První Krev Rambo First Blood 1982 CZ EN HEVC 2160pHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 (Rambo III) 2xCZ (Rímský, Procházka)-ENG Dabing CZ-ENG Titulky (1988) 720p-Bluray.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo 2-Rambo First Blood Part II_1985_3D_cz.dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo - Rambo Do pekla a naspäť (United States, 2008).mkv",
+    "ok": true
+   },
+   {
+    "n": "Rambo - Ep.22 - Rambo and the White Rhino.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo 4 - Do pekla a zpet _ Rambo IV (2008).CZ.5.1AC3.x264.BDRip-GiGAHORSE.mkv",
+    "len": 5492,
+    "ok": true
+   },
+   {
+    "n": "Ram Adonai Live in Teplice 2009 (Full Concert).flv",
+    "ok": false
+   },
+   {
+    "n": "RAMBO-4-cz.avi",
+    "len": 4992,
+    "ok": true
+   },
+   {
+    "n": "Rambo 1 cz (Pavel Rímsky - 1982).avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 cz (Pavel Rímsky - 1985).avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 cz (Pavel Rímsky - 1988).avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo.III.1988.BluRay.720p.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo.IV.2008.BluRay.720p.CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Rambo-4-cz.avi",
+    "len": 39,
+    "ok": false
+   },
+   {
+    "n": "Rambo-1-CZ_1982.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo Do pekla a zpet.avi",
+    "ok": true
+   },
+   {
+    "n": "Rambo-2-CZ.avi",
+    "len": 5500,
+    "ok": false
+   },
+   {
+    "n": "Rambo-3-CZ-dabing.avi",
+    "len": 5822,
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 CZdab.mkv",
+    "len": 5588,
+    "ok": false
+   },
+   {
+    "n": "Rambo-1.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo-3--CZ.avi",
+    "len": 5821,
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 Prvni krev CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 4 Do pekla a zpět CZ.avi",
+    "len": 5232,
+    "ok": true
+   },
+   {
+    "n": "Rambo-3-CZ.avi",
+    "len": 5822,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 (akční,válečný 1985) czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 (1998 akční) czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo-do pekla a zpet (2008 akcni) cz dabing.avi",
+    "len": 5232,
+    "ok": true
+   },
+   {
+    "n": "Rambo-1- První krev -1982.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 4.avi",
+    "ok": true
+   },
+   {
+    "n": "Rams.2015.BluRay.1080p.5.1CH.x264.Ganool.cc.mkv",
+    "ok": false
+   },
+   {
+    "n": "RAMBO-1-PRVNI-KREV-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "RAMBO-2-CZ.avi",
+    "len": 5499,
+    "ok": false
+   },
+   {
+    "n": "RAMBO-3-CZ.avi",
+    "len": 5822,
+    "ok": false
+   },
+   {
+    "n": "Rambo.3.cz.dabing.[1988].avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo.2.cz.dabing.[1985].avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo.III.1988.720p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 cz ☼   1980.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 cz ☼   1985.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 První krev.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 2.avi",
+    "len": 5500,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 cz.avi",
+    "len": 5361,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 cz.avi",
+    "len": 5499,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 cz.avi",
+    "len": 5822,
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 CZ by winchi.avi",
+    "len": 5360,
+    "ok": false
+   },
+   {
+    "n": "Rambo_II (1985)(1).avi",
+    "ok": false
+   },
+   {
+    "n": "4.Rambo.Do.pekla.a.zpet.2008.480p.DVDRip.XviD.AC3.CZ.-calibrum2.avi",
+    "len": 5232,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět (2008).mkv",
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět 2008 cz dabing.avi",
+    "len": 4992,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět (2008) cz 1080p.mp4",
+    "ok": true
+   },
+   {
+    "n": "Rambo+Do+pekla+a+zpět+akční++2008.1080p.x264.CZ.79-.STEN.ok.mkv",
+    "ok": true
+   },
+   {
+    "n": "Rambo-Do pekla a zpět (Sylvester Stallone,Julie Benz,Paul Schulze,Matthew Marsden-2008 Akční-Thriller-Válečný-Bdrip.-1080p.) Cz dabing.avi",
+    "ok": true
+   },
+   {
+    "n": "Rambo-Do pekla a zpět (Sylvester Stallone,Julie Benz,Paul Schulze,Matthew Marsden-2008 Akční-Thriller-Válečný-Bdrip.-1080p.) Cz dabing.mkv",
+    "len": 5957,
+    "ok": true
+   },
+   {
+    "n": "Rambo-Do pekla a zpět (Sylvester Stallone,Julie Benz,Paul Schulze,Matthew Marsden-2008 Akční-Thriller-Válečný-Bdrip.-1080p.) Cz dabing.mp4",
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět (2008) 1080p CZ ....64.....mkv",
+    "len": 5493,
+    "ok": true
+   },
+   {
+    "n": "Cesta do pekla a zpátky 1996.avi",
+    "ok": false
+   },
+   {
+    "n": "Cesta do pekla a zpátky (1996).mkv",
+    "ok": false
+   },
+   {
+    "n": "Rambo 4 Do pekla a zpět CZ--MH.avi",
+    "len": 5232,
+    "ok": true
+   },
+   {
+    "n": "Rambo 4 Do pekla a zpět (2008).avi",
+    "ok": true
+   },
+   {
+    "n": "Superšéf 24 hodin do pekla a zpět S01E01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Superšéf 24 hodin do pekla a zpět S01E02.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cesta do pekla a zpátky 1996 česká pohadka.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo IV - Do pekla a naspäť    2007   1080p  5.1 CZ.ENG.mkv",
+    "len": 5493,
+    "ok": true
+   },
+   {
+    "n": "Superšéf 24 hodin do pekla a zpět (1).mkv",
+    "ok": false
+   },
+   {
+    "n": "Superšéf 24 hodin do pekla a zpět (2).mkv",
+    "ok": false
+   },
+   {
+    "n": "Superšéf 24 hodin do pekla a zpět (3).mp4",
+    "ok": false
+   },
+   {
+    "n": "Superšéf 24 hodin do pekla a zpět (4).mp4",
+    "ok": false
+   },
+   {
+    "n": "Rambo IV.  - Do pekla a zpět.mp4",
+    "ok": true
+   },
+   {
+    "n": "Cesta do pekla a zpátky.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo.4-Do.pekla.a.zpet_2008_.1080p.CZ.Vykonavatel.mkv",
+    "len": 5957,
+    "ok": true
+   },
+   {
+    "n": "Rambo IV 4 Do pekla a zpět  _2008 Cz dabing a Cz tit.mkv",
+    "len": 5493,
+    "ok": true
+   },
+   {
+    "n": "Rambo 4 Do pekla a zpet 2007.HD.mkv",
+    "len": 5493,
+    "ok": true
+   },
+   {
+    "n": "Rambo IV Do pekla a zpět.avi",
+    "ok": true
+   },
+   {
+    "n": "Cesta do pekla a zpátky.mp4",
+    "ok": false
+   },
+   {
+    "n": "Rambo 4 Do Pekla a Zpět - Sylvester Stallone, Julie Benz 2008 Cz Dab.-.mp4",
+    "ok": false
+   },
+   {
+    "n": "CM-MZ-04x25-Do-pekla-a-zpet-1.cast-dvd-rip-multidub-cz-en.avi",
+    "ok": false
+   },
+   {
+    "n": "CM-MZ-04x26-Do-pekla-a-zpet-2.cast-dvd-rip-multidub-cz-en.avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo 4.,Do pekla a zpět,(2008),CZdab.mkv",
+    "ok": true
+   },
+   {
+    "n": "Rambo 4 - Do pekla a zpět.mkv",
+    "len": 5957,
+    "ok": true
+   },
+   {
+    "n": "Rambo 4 - Do pekla a zpět (2008) 1080p, cz.mp4",
+    "len": 5933,
+    "ok": true
+   },
+   {
+    "n": "Cesta do pekla a späť.avi",
+    "ok": false
+   },
+   {
+    "n": "Pátek-13-Part-9---Jason-jde-do-pekla.avi",
+    "ok": false
+   },
+   {
+    "n": "Bylo-Nás-Pět-6-Cesta-Do-Indie-A-Zpět-(1994)---(Kelimek).avi",
+    "ok": false
+   },
+   {
+    "n": "Bylo nas pet 6 - Cesta do Indie a zpet.avi",
+    "ok": false
+   },
+   {
+    "n": "Bylo.nas.pet.E06.Cesta.do.Indie.a.zpet.1994.1080i.HDTV.x264.CZ(by.Marecek).mkv",
+    "ok": false
+   },
+   {
+    "n": "06. Cesta do Indie a zpět.mp4",
+    "ok": false
+   },
+   {
+    "n": "02x03 Do Valhally a zpět (Valhalla Can Wait).avi",
+    "ok": false
+   },
+   {
+    "n": "Rambo-Do pekla a naspäť(2008)CZDab",
+    "len": 4991,
+    "ok": true
+   },
+   {
+    "n": "Rambo-Do pekla a naspäť(2008)CZDab by fidlatko",
+    "len": 4991,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Rambo Do pekla a naspäť (United States, 2008)",
+    "len": 5492,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět Cz dabing Full HD BD ",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět (2008) CZ DABING",
+    "len": 5455,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět (2008) CZ Dabing 2160p - NEJLEPŠÍ KVALITA",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět 2008 CZ",
+    "len": 5957,
+    "ok": true
+   },
+   {
+    "n": "Rambo: Do pekla a zpět (2008) 4K CZ Dabing",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět 2008 CZ dabing 1080p FHD",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět (2008) CZ Dabing 2160p",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět 2008 CZ dabing 2160p UHD",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět 4K CZ",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět (2008) CZ Dabing 2160p - TOP KVALITA",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět Cz dabing Full HD BD",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět (2008) cz 1080p",
+    "len": 5491,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do Pekla a Zpět (2008) CZ Dabing",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět 2008 CZ dab",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět 2008 CZ dab 576p",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo: Do pekla a zpět (2008) CZ Dabing",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo_Do pekla a zpět _ Rambo IV (2007) CZ dab 1920x800p",
+    "len": 5492,
+    "ok": true
+   },
+   {
+    "n": "Rambo-Do pekla a zpět (Sylvester Stallone,Julie Benz,Paul Schulze,Matthew Marsden-2008 Akční-Thriller-Válečný-Bdrip 1080p.) Cz dabing",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět akční 2008.1080p.x264.CZ.79 STEN.ok",
+    "len": 5491,
+    "ok": true
+   },
+   {
+    "n": "Rambo: Do pekla a zpět - 2008 CS",
+    "len": 5491,
+    "ok": true
+   },
+   {
+    "n": "Rambo Do pekla a zpět 2008.avi",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět",
+    "len": 5232,
+    "ok": true
+   },
+   {
+    "n": "Rambo IV - Rambo Do pekla a zpět (2008)CZ J.W",
+    "len": 5492,
+    "ok": true
+   },
+   {
+    "n": "Rambo: Do pekla a zpět - Rambo 4",
+    "len": 5231,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět (Rambo, 2008)",
+    "len": 5492,
+    "ok": true
+   },
+   {
+    "n": "Rambo - Do pekla a zpět (Rambo, 2008) (by_UgarE)",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo Iii",
+    "len": 6099,
+    "ok": false
+   },
+   {
+    "n": "Rambo Ii - Full Bd (2)",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "Karamboly,1963,Luis.De.Funes,Komedie,CZdab-M",
+    "len": 5084,
+    "ok": false
+   },
+   {
+    "n": "Rambo 5.,Poslední.krev,(2022),CZdab",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo 5 Poslední.krev,(2022),CZdab",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 - CZ DABING",
+    "len": 5760,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 1985,CZdab",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "Rambo Poslední Krev CZ DABING (2022)",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 (1988)CZdab",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 1 1982 1080p 5 1 Cz dab digitálne remastrované matrag",
+    "len": 5596,
+    "ok": false
+   },
+   {
+    "n": "Rambo III (1988) FullHD 1080p CZ EN dabing (DTS audio) - TW1NKY",
+    "len": 6096,
+    "ok": false
+   },
+   {
+    "n": "- Rambo_1_1982_AB_1080p_5_1_Cz_dab_digitálne_remastrované",
+    "len": 5596,
+    "ok": false
+   },
+   {
+    "n": "#Rambo 2 1985,CZdab (SUPER)#",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "=Rambo-2-1985,CZdab=",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "Rambo-2-1985,CZdab",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "Rambo 4-Do pekla a zpět-2008-(1080p.h264.AC3.6ch)-CZtit.CZ.mkv",
+    "len": 5492,
+    "ok": true
+   },
+   {
+    "n": "Rambo 4-2008-(1080p.h264.AC3.6ch)-CZtit.CZ.mkv",
+    "len": 5956,
+    "ok": true
+   },
+   {
+    "n": "Rambo 3 1988 CZdab matrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab hertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab bertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab sertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "#Rambo 3 (1988)CZdab (SUPER)#",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "=Rambo-3-(1988)CZdab=",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo-3-(1988)CZdab",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab OGGY",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab qertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab jertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 4  2008cz.dab.",
+    "len": 5455,
+    "ok": true
+   },
+   {
+    "n": "Rambo 4 - Poslední krev (2022) akční válečný czdab",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3  1988cz.dab",
+    "len": 6105,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2,1985,Czdab,remastrované",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 1985 CZdab  T.O.P-M-",
+    "len": 5755,
+    "ok": false
+   },
+   {
+    "n": "Rambo 2 ~ (1985) HD cz",
+    "len": 5760,
+    "ok": false
+   },
+   {
+    "n": "Rambo_Poslední_Krev_CZ_DABING_2022_ OGGY",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo Poslední Krev 2022 CZ Dabing",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo_Poslední_Krev_CZ_DABING_2022_ O.G.",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo_5_Poslední_krev_2022_CZdab OGGY",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo_5_Poslední_krev_2022_CZdab O.G.",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo.mp4",
+    "len": 5588,
+    "ok": true
+   },
+   {
+    "n": "Rambo 5 Poslední krev (2022) CZ Dabing 1080p. TopCZ",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo_4_Poslední_krev_2022_akční_válečný_czdab OGGY",
+    "len": 6030,
+    "ok": false
+   },
+   {
+    "n": "Rambo-1 1982-Akční-DVD-CZ",
+    "len": 5360,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab tag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab fertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab wertrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "Rambo 3 1988 CZdab tetrag",
+    "len": 6097,
+    "ok": false
+   },
+   {
+    "n": "DoruÄŤovatel - super komedie 2008 CZ XVID AVI.avi",
+    "ok": false
+   }
+  ]
  }
 ]

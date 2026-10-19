@@ -8,7 +8,7 @@ for(const id of process.argv[3].split(',')){
   const names=r.names.map(n=>({...n}));
   for(const n of names) if(n.short){const nt=M.nameTokens(n.text);const full=names.find(x=>!x.short&&x.kind===n.kind&&nt.every(t=>M.nameTokens(x.text).includes(t)));n.full=full?full.text:n.text;}
   const allow=[...new Set(names.flatMap(n=>M.nameTokens(n.full||n.text)))];
-  const plan={sameName:r.sameName||null,type:r.type,id:r.id,isAnime:!!r.anime,names,allow,year:r.year,season:r.season,episode:r.episode,alEpisode:r.alEpisode,alSeason:r.alSeason,runtime:r.runtime||null,epRuntime:r.epRuntime||null};
+  const plan={sameName:r.sameName||null,coll:r.coll||null,type:r.type,id:r.id,isAnime:!!r.anime,names,allow,year:r.year,season:r.season,episode:r.episode,alEpisode:r.alEpisode,alSeason:r.alSeason,runtime:r.runtime||null,epRuntime:r.epRuntime||null};
   const seen=new Set();const files=r.files.filter(f=>!seen.has(f.n)&&seen.add(f.n)).map(f=>({n:f.n,...(f.len?{len:f.len}:{}),ok:false}));
   const i=cases.findIndex(c=>c.plan.id===id); if(i>=0) cases[i]={plan,files}; else cases.push({plan,files});
   console.log('přidáno',id,files.length);

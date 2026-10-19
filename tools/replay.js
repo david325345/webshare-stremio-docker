@@ -33,7 +33,7 @@ for (const r of byId.values()) {
   }
   const allow = new Set(names.flatMap(n => M.nameTokens(n.full || n.text)));
   const plan = { type: r.type, id: r.id, isAnime: !!r.anime, names, allow, year: r.year, season: r.season, episode: r.episode,
-                 alEpisode: r.alEpisode, alSeason: r.alSeason, runtime: r.runtime || RT[r.id.split(':')[0]] || null, epRuntime: r.epRuntime || null, sameName: r.sameName || SN[r.id.split(':')[0]] || null };
+                 alEpisode: r.alEpisode, alSeason: r.alSeason, runtime: r.runtime || RT[r.id.split(':')[0]] || null, epRuntime: r.epRuntime || null, sameName: r.sameName || SN[r.id.split(':')[0]] || null, coll: r.coll || null };
   const out = [];
   for (const f of r.files) {
     const o = OLD.judgeFile ? OLD.judgeFile({ name: f.n }, plan) : null;

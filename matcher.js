@@ -412,6 +412,35 @@ function spinoffAbbrev(fileName, name, allow) {
     return l.length > 2 ? true : /^[A-Z]+$/.test(t);
 }
 
+// Číslo dílu filmové série hned u názvu: "Rambo 2", "RAMBO-3", "Rambo III", "Rambo IV", "4.Rambo.Do.pekla" → číslo;
+// "Rambo 5.1 CZ" (zvuk), rok, rozlišení se neberou
+const PART_ROMAN = { iv: 4, vi: 6, vii: 7, viii: 8, ix: 9 };   // ii/iii převádí tokens() na 2/3; samotné v/x ne (předložka, „Malcolm X“)
+function partNumber(fileName, name) {
+    const hit = afterName(fileName, name);
+    if (!hit) return null;
+    const raw = stripLeadingGroups(fileName);
+    const num = (t, nxt) => {
+        if (!t) return null;
+        if (/^\d{1,2}$/.test(t) && +t >= 1 && +t <= 20) {
+            if (nxt && /^\d$/.test(nxt) && new RegExp(`(?:^|[^0-9])${t}[.,]${nxt}(?![0-9])`).test(raw)) return null;   // 5.1
+            return +t;
+        }
+        return PART_ROMAN[t] || null;
+    };
+    const after = num(hit.rest[0], hit.rest[1]);
+    if (after !== null) return after;
+    if (hit.start > 0) {
+        const all = fileTokens(fileName).filter(t => !STOPWORDS.has(t));
+        const before = all[hit.start - 1];
+        if (hit.start === 1 && /^\d{1,2}$/.test(before) && +before >= 1 && +before <= 20) return +before;   // "4.Rambo…"
+    }
+    return null;
+}
+// Obsahuje náš název číslo / římskou číslici (pak se pořadí v sérii nekontroluje – "Star Wars: Epizoda IV")
+function hasPartNumber(name) {
+    return tokens(name).some(t => (/^\d{1,2}$/.test(t)) || PART_ROMAN[t]);
+}
+
 // Roky v názvu dílu: za značkou dílu (S10E1 / 10x01) a hned za slovem z našeho názvu
 // ("Archer - S10E1 Archer 1999: Bort the Garj" → 1999); "Most S01E02 HD 2011" se nepočítá (před rokem "hd")
 function episodeTitleYears(fileName, nameWords) {
@@ -491,7 +520,7 @@ function repairAbsolute(raw, names, eps) {
 }
 
 module.exports = {
-    repairName, episodeTitleYears,
+    repairName, episodeTitleYears, partNumber, hasPartNumber,
     spinoffAbbrev, rawTokens,
     stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,

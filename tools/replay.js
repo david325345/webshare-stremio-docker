@@ -35,13 +35,21 @@ for (const r of byId.values()) {
   const plan = { type: r.type, id: r.id, isAnime: !!r.anime, names, allow, year: r.year, season: r.season, episode: r.episode,
                  alEpisode: r.alEpisode, alSeason: r.alSeason, runtime: r.runtime || RT[r.id.split(':')[0]] || null, epRuntime: r.epRuntime || null, sameName: r.sameName || SN[r.id.split(':')[0]] || null, coll: r.coll || null };
   const out = [];
-  for (const f of r.files) {
-    const o = OLD.judgeFile ? OLD.judgeFile({ name: f.n }, plan) : null;
-    let oldOk = o ? o.ok : f.ok;
-    if (oldOk && f.len && OLD.durationMismatch && OLD.durationMismatch(plan, { f: { name: f.n }, info: { len: f.len } })) oldOk = false;
-    let n = NEW.judgeFile({ name: f.n }, plan);
-    let reason = n.reason;
-    if (n.ok && f.len) { const why = NEW.durationMismatch(plan, { f: { name: f.n }, info: { len: f.len } }); if (why) { n = { ok: false }; reason = why; } }
+  const at = new Date(r.t || Date.now());
+  // posouzení názvu po souborech + délková pravidla nad celou sadou (starší verze jen po souborech)
+  const judgeAll = (S, pl) => {
+    const js = r.files.map(f => S.judgeFile ? S.judgeFile({ name: f.n }, pl) : { ok: f.ok, reason: f.r });
+    const p2 = { ...pl, olderSame: S.olderSameFromReasons ? S.olderSameFromReasons(js.map(j => j.reason), pl) : 0 };
+    const items = r.files.map((f, i) => ({ f: { name: f.n, ident: i }, info: f.len ? { len: f.len } : null })).filter((_, i) => js[i].ok);
+    const bad = S.durationFilter ? S.durationFilter(p2, items, at)
+      : new Map(items.filter(it => it.info && S.durationMismatch && S.durationMismatch(p2, it)).map(it => [it.f.ident, S.durationMismatch(p2, it)]));
+    return js.map((j, i) => j.ok && bad.has(i) ? { ok: false, reason: bad.get(i) } : j);
+  };
+  const oldJ = judgeAll(OLD, plan), newJ = judgeAll(NEW, plan);
+  for (const [i, f] of r.files.entries()) {
+    const oldOk = oldJ[i].ok;
+    const n = newJ[i];
+    const reason = n.reason;
     if (oldOk !== n.ok) { out.push(`${n.ok ? '  + PŘIDÁNO ' : '  − ODEBRÁNO'} ${(n.ok ? '' : reason).padEnd(34)} ${f.n.slice(0, 110)}`); n.ok ? newIn++ : fixedOut++; }
   }
   if (out.length) { changed++; console.log(`\n${r.id}  ${r.names[0].text}${r.season ? ` S${r.season}E${r.episode}` : ''}`); out.forEach(l => console.log(l)); }

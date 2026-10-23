@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.7.0';
+const VERSION = '8.8.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -661,6 +661,15 @@ function seasonBase(text) {
 }
 
 // ───────────────────────── Plán hledání ─────────────────────────
+// Dlouhý název light novel (nad 10 slov) → část do první tečky / čárky / "!" / "?", má-li aspoň 4 významná slova
+// ("Tsuihou sareta … Ouka suru. Ore wa Buki dake ja Naku, …" → "Tsuihou sareta … Ouka suru")
+function longCut(text) {
+    if (!text || M.tokens(text).length <= 10) return null;
+    const m = String(text).match(/^(.*?\S)\s*[.,!?]+(?:\s|$)/);
+    if (!m) return null;
+    return M.nameTokens(m[1]).length >= 4 ? m[1].trim() : null;
+}
+
 function uniqNames(list, max) {
     const seen = new Set(), out = [];
     for (const n of list) {
@@ -745,14 +754,21 @@ async function buildPlan(type, id, cfg) {
     // Názvy z indexeru (romaji / EN pro konkrétní sezónu) – párují se s epizodou v rámci sezóny
     const an = [];
     if (rs) {
-        an.push(full(rs.title), full(rs.title_en), short(rs.title), short(rs.title_en));
+        an.push(full(rs.title), full(rs.title_en), full(longCut(rs.title)), full(longCut(rs.title_en)), short(rs.title), short(rs.title_en));
         // alternativní názvy z indexeru: jen varianty romaji/EN názvu (sdílí s ním slovo, "Ladies Vs Butlers!")
         // nebo jednoslovné romaji zkratky od 5 znaků ("Oregairu"); cizí lokalizace ("Doamne vs. Majordom")
         // a krátké zkratky ("PES", "OP") se nepoužijí – české názvy jsou z TMDB
         const core = new Set([...M.nameTokens(rs.title || ''), ...M.nameTokens(rs.title_en || '')]
             .filter(t => t.length >= 3 && !/^\d+$/.test(t) && t !== 'vs' && t !== 'versus'));
+        // jednoslovný název, který je jen slovem z jiného našeho názvu ("Hello" z "Hello, I Am a Witch"), se nepoužije –
+        // pouštěl by cizí seriály ("Hello, Me!"); zkratky, které v názvech nejsou ("Oregairu"), zůstanou
+        const ownWords = new Set([...core, ...fr.filter(Boolean).flatMap(n => M.nameTokens(n.text))]);
         (rs.titles || []).filter(t => M.isLatin(t) && t.length <= 60)
-            .filter(t => { const nt = M.nameTokens(t); return nt.some(x => core.has(x)) || (nt.length === 1 && nt[0].length >= 5); })
+            .filter(t => {
+                const nt = M.nameTokens(t);
+                if (nt.length === 1) return nt[0].length >= 5 && !ownWords.has(nt[0]);
+                return nt.some(x => core.has(x));
+            })
             .slice(0, 6).forEach(t => an.push(full(t)));
     }
 
@@ -860,12 +876,13 @@ function buildQueries(plan) {
 
 // Hledání s omezenou souběžností – Webshare max 4 dotazy naráz, Hellspy max 3 (souběžně vedle sebe).
 // Časový strop: po budgetMs se vrátí, co je hotové (pomalé dotazy doběhnou na pozadí a zahodí se).
-// Vrací { files, degraded } – degraded = některý zdroj selhal nebo nestihl strop (kratší cache).
+// Vrací { files, degraded, dead, deg } – degraded = některý zdroj selhal nebo nestihl strop (kratší cache);
+// deg = { ws|hs: { err, ok, timeout, msg } } jen u zdroje, který selhal (do archivu hledání)
 async function runQueries(cfg, queries, { ws = true, hs = true, budgetMs = 4000 } = {}) {
     const out = new Map();
     const deadline = Date.now() + budgetMs;
     let degraded = false, done = false;
-    const finished = { WS: false, HS: false }, okCount = { WS: 0, HS: 0 };
+    const finished = { WS: false, HS: false }, okCount = { WS: 0, HS: 0 }, errCount = { WS: 0, HS: 0 }, lastErr = { WS: '', HS: '' };
     const pool = async (n, search, label) => {
         let i = 0;
         const worker = async () => {
@@ -879,6 +896,7 @@ async function runQueries(cfg, queries, { ws = true, hs = true, budgetMs = 4000 
                     dbg(`  🔎 ${label} "${q}" → ${files.length}`);
                 } catch (e) {
                     degraded = true;
+                    errCount[label]++; lastErr[label] = String(e.message || e).slice(0, 80);
                     if (label === 'WS' || Date.now() >= hsDownUntil) log(`  ⚠️ ${label} hledání "${q}" selhalo: ${e.message}`);
                 }
             }
@@ -895,7 +913,12 @@ async function runQueries(cfg, queries, { ws = true, hs = true, budgetMs = 4000 
     if (timedOut) { done = true; degraded = true; log(`  ⏱ hledání přerušeno po ${budgetMs} ms – vracím, co je hotové`); }
     // zdroj, který nestihl strop nebo mu neprošel ani jeden dotaz = "nefunguje" → druhá vlna se mu neposílá
     const dead = { ws: !finished.WS || !okCount.WS, hs: !finished.HS || !okCount.HS };
-    return { files: new Map(out), degraded, dead };
+    const deg = {};
+    for (const [label, on] of [['WS', ws && hasWs(cfg)], ['HS', hs && hsOn(cfg)]]) {
+        if (!on || (finished[label] && !errCount[label])) continue;
+        deg[label.toLowerCase()] = { err: errCount[label], ok: okCount[label], ...(finished[label] ? {} : { timeout: true }), ...(lastErr[label] ? { msg: lastErr[label] } : {}) };
+    }
+    return { files: new Map(out), degraded, dead, deg, wsFailed: !!(ws && hasWs(cfg) && errCount.WS && !okCount.WS) };
 }
 
 // Vybere soubory, které sedí na název (a rok / epizodu)
@@ -905,10 +928,20 @@ function nameOk(fileName, n, plan) {
     if (n.short && M.shortNameIsNoise(fileName, n.text, n.full)) return false;
     // jiný podtitul za názvem ("House" ≠ "House of the Dragon", "Námořní vyšetřovací služba - Los Angeles");
     // u seriálů kontrola končí na značce dílu, takže název dílu za ní nevadí
-    if (plan && M.subtitleNoise(fileName, n.text, plan.allow, plan.type === 'movie' ? 'movie' : 'series')) return false;
+    if (plan && M.subtitleNoise(fileName, n.text, plan.allow, plan.type === 'movie' ? 'movie' : 'series') &&
+        !originalTitleWord(fileName, n, plan)) return false;
     // zkratka spin-offu za názvem ("NCIS LA")
     if (plan && M.spinoffAbbrev(fileName, n.text, plan.allow)) return false;
     return true;
+}
+
+// Jedno slovo mezi dlouhým názvem (3+ slova) a značkou dílu u seriálu = originální název, když soubor nese přesně
+// náš rok ("Kdyby přání zabíjela - Girigo S01E01 (2026)"); bez roku ne ("NCIS - Hawai S01E01", "Higurashi … Kira - S1E1")
+function originalTitleWord(fileName, n, plan) {
+    if (plan.type === 'movie' || !plan.year || M.nameTokens(n.text).length < 3) return false;
+    const hit = M.afterName(M.stripLeadingGroups(fileName), n.text);
+    if (!hit || !/^[a-z]{3,}$/.test(hit.rest[0] || '') || !/^(s\d{1,2}e\d{1,4}|\d{1,2}x\d{1,4})$/.test(hit.rest[1] || '')) return false;
+    return M.fileYears(fileName).includes(plan.year);
 }
 
 // Sezóna u anime názvu: bez sezóny OK; S01 jen když název sám určuje sezónu ("Mushoku Tensei II");
@@ -1050,11 +1083,29 @@ function judgeFile(f, plan) {
 
 function filterFiles(files, plan) {
     const out = [];
+    const older = new Map();
     for (const f of files) {
         const j = judgeFile(f, plan);
         if (j.ok) out.push({ f, exact: !!j.exact });
+        else countOlderNamesake(older, j.reason, plan);
     }
+    plan.olderSame = olderSameOf(older);
     return out;
+}
+// Film: soubory stejného názvu vyřazené kvůli staršímu roku ("rok nesedí (2011)") → je nahraný i starší stejnojmenný
+// film; vrací počet souborů nejčastějšího takového roku
+function countOlderNamesake(map, reason, plan) {
+    if (plan.type !== 'movie' || !plan.year) return;
+    const m = /^rok nesedí \((\d{4})/.exec(reason || '');
+    if (m && +m[1] < plan.year - 1) map.set(+m[1], (map.get(+m[1]) || 0) + 1);
+}
+function olderSameOf(map) {
+    return map.size ? Math.max(...map.values()) : 0;
+}
+function olderSameFromReasons(reasons, plan) {
+    const m = new Map();
+    for (const r of reasons) countOlderNamesake(m, r, plan);
+    return olderSameOf(m);
 }
 
 // Jazyk a kvalita: skutečné stopy z file_info mají přednost před názvem souboru
@@ -1141,6 +1192,45 @@ function durationMismatch(plan, it) {
     const lo = rt * 0.80, hi = rt * (extended ? 1.45 : 1.15);
     if (min >= lo && min <= hi) return null;
     return `délka nesedí (${Math.round(min)} min, film ${rt} min)`;
+}
+
+// Délková pravidla nad celou sadou souborů (už se známou délkou) → Map ident → důvod vyřazení.
+// 1) jednotlivé soubory podle durationMismatch;
+// 2) seriál: chybná délka dílu z TMDB (Vymítač Boner S01E01: TMDB 12 min, všechny kopie 18 min) – když pravidlo
+//    vyřadilo všechny soubory se známou délkou, aspoň 3 mají shodnou délku (±3 %) a odchylka od TMDB je nejvýš 2×,
+//    pravidlo se pro tento díl vynechá;
+// 3) nový film (letos / loni) a nahraný starší stejnojmenný film (plan.olderSame ≥ 3): soubor bez roku projde jen
+//    s délkou ±3 % proti souborům s naším rokem (nebo proti TMDB); bez délky se neodešle (Mistrovský plán 2026 × 2011)
+const NAMESAKE_MIN = 3;
+const median = a => { const s = [...a].sort((x, y) => x - y); const i = s.length >> 1; return s.length % 2 ? s[i] : (s[i - 1] + s[i]) / 2; };
+function durationFilter(plan, items, now = new Date()) {
+    const bad = new Map();
+    const lenOf = it => (it.info && it.info.len) || null;
+    for (const it of items) {
+        const why = durationMismatch(plan, it);
+        if (why) bad.set(it.f.ident, why);
+    }
+    if (plan.type === 'series' && plan.epRuntime && bad.size) {
+        const withLen = items.filter(lenOf);
+        if (withLen.length && withLen.every(it => bad.has(it.f.ident))) {
+            const lens = withLen.map(it => lenOf(it) / 60);
+            const med = median(lens);
+            const close = lens.filter(l => Math.abs(l - med) <= med * 0.03).length;
+            if (close >= 3 && med <= plan.epRuntime * 2 && med >= plan.epRuntime / 2) bad.clear();
+        }
+    }
+    if (plan.type === 'movie' && plan.year && plan.year >= now.getUTCFullYear() - 1 && (plan.olderSame || 0) >= NAMESAKE_MIN) {
+        const ours = items.filter(it => !bad.has(it.f.ident) && lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
+        const ref = ours.length >= 2 ? median(ours) : plan.runtime ? plan.runtime * 60 : null;
+        for (const it of items) {
+            if (bad.has(it.f.ident) || M.fileYears(it.f.name).length) continue;
+            const len = lenOf(it);
+            if (!ref || !len || Math.abs(len - ref) > ref * 0.03) {
+                bad.set(it.f.ident, `bez roku (starší film stejného jména${len ? `, ${Math.round(len / 60)} min` : ''})`);
+            }
+        }
+    }
+    return bad;
 }
 
 // Doplní file_info pro dané soubory (max 6 souběžně, časový limit 2,5 s – zbytek doběhne na pozadí do cache)
@@ -1284,6 +1374,16 @@ async function findFiles(type, id, cfg) {
         }
         const [w1, w2] = buildQueries(plan);
         const r1 = await runQueries(cfg, w1, { budgetMs: 4000 });
+        const deg = { ...r1.deg };
+        // Webshare v první vlně jen chyby (žádný dotaz neprošel) → jednou zopakovat, ať krátký výpadek nedá 0 streamů
+        if (r1.wsFailed) {
+            log(`  🔁 Webshare: první vlna selhala – opakuji`);
+            await new Promise(r => setTimeout(r, 300).unref());
+            const rr = await runQueries(cfg, w1, { hs: false, budgetMs: 2500 });
+            for (const [k, v] of rr.files) if (!r1.files.has(k)) r1.files.set(k, v);
+            deg.wsRetry = rr.wsFailed ? 'selhalo' : 'ok';
+            if (!rr.dead.ws) r1.dead.ws = false;
+        }
         if (plan.sameNameP) {
             plan.sameName = await Promise.race([plan.sameNameP, new Promise(r => setTimeout(() => r(null), 1500).unref())]);
             plan.sameNameP = null;
@@ -1302,6 +1402,7 @@ async function findFiles(type, id, cfg) {
         if ((wsFew || hsFew) && w2.length) {
             const r2 = await runQueries(cfg, w2, { ws: wsFew, hs: hsFew, budgetMs: 3000 });
             for (const [k, v] of r2.files) if (!files.has(k)) files.set(k, v);
+            for (const [k, v] of Object.entries(r2.deg)) deg[`${k}2`] = v;
             degraded = degraded || r2.degraded;
             items = filterFiles([...files.values()], plan);
             queries += w2.length;
@@ -1322,24 +1423,21 @@ async function findFiles(type, id, cfg) {
             plan.epRuntime = await Promise.race([plan.epRuntimeP, new Promise(r => setTimeout(() => r(null), 300).unref())]);
             plan.epRuntimeP = null;
         }
-        const durationBad = new Map();
         const wsAu = wsAudioBySize(ranked);
-        ranked = rankFiles(expandHellspy(capHellspy(dedupeBySize(rankFiles(ranked
+        const playable = ranked
             .map(it => {
                 const fi = fileCache.get(it.f.ident);
                 if (it.f.hs) return { ...it, info: { ...(fi || {}), len: it.f.len, au: wsAu.get(it.f.size) || undefined } };
                 return { ...it, info: fi || it.info };
             })
-            .filter(it => !it.info || it.info.ok !== false)
-            .filter(it => {
-                const why = durationMismatch(plan, it);
-                if (why) durationBad.set(it.f.ident, why);
-                return !why;
-            })), false, dupes), HS_MAX_FILES)));
+            .filter(it => !it.info || it.info.ok !== false);
+        const durationBad = durationFilter(plan, playable);
+        ranked = rankFiles(expandHellspy(capHellspy(dedupeBySize(rankFiles(playable
+            .filter(it => !durationBad.has(it.f.ident))), false, dupes), HS_MAX_FILES)));
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
         // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní; výpadek zdroje → 1 min
         if (ranked.length) resultCache.set(key, res, (degraded ? 1 : complete ? 30 : 3) * 60 * 1000);
-        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src, dupes);
+        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src, dupes, deg);
         return res;
     });
 }
@@ -1364,7 +1462,7 @@ function archiveWrite(rec) {
     });
 }
 
-function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes) {
+function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes, deg) {
     if (!archiveOk) return;
     const sent = new Map();
     ranked.slice(0, plan.type === 'movie' ? 30 : 25).forEach((it, i) => { if (!sent.has(it.f.ident)) sent.set(it.f.ident, i + 1); });
@@ -1373,6 +1471,8 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes
         anime: plan.anilistId || null, source: plan.source, year: plan.year, runtime: plan.runtime, epRuntime: plan.epRuntime || undefined,
         sameName: plan.sameName && plan.sameName.length ? plan.sameName : undefined,
         coll: plan.coll || undefined,
+        olderSame: plan.olderSame || undefined,
+        deg: deg && Object.keys(deg).length ? deg : undefined,
         season: plan.season, episode: plan.episode, alEpisode: plan.alEpisode, alSeason: plan.alSeason,
         names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short, ...(n.seasonOnly ? { seasonOnly: n.seasonOnly } : {}) })),
         queries: queries.map(q => q.q), ms,
@@ -2034,4 +2134,4 @@ if (require.main === module) {
 }
 
 module.exports = {
-    seasonBase, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };
+    seasonBase, longCut, durationFilter, olderSameFromReasons, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };

@@ -11,11 +11,16 @@ const update = process.argv.includes('--update');
 let diffs = 0, total = 0;
 for (const c of cases) {
     const plan = { ...c.plan, allow: new Set(c.plan.allow) };
-    for (const f of c.files) {
+    // posouzení názvu po souborech, délková pravidla nad celou sadou (jako v addonu)
+    const judged = c.files.map((f, i) => ({ f, i, j: S.judgeFile({ name: f.n }, plan) }));
+    plan.olderSame = S.olderSameFromReasons ? S.olderSameFromReasons(judged.map(x => x.j.reason), plan) : 0;
+    const okItems = judged.filter(x => x.j.ok).map(x => ({ f: { name: x.f.n, ident: x.i }, info: x.f.len ? { len: x.f.len } : null }));
+    const bad = S.durationFilter ? S.durationFilter(plan, okItems, new Date(c.at || '2026-10-23T00:00:00Z'))   // pevné datum: pravidlo „nový film“ závisí na roce
+        : new Map(okItems.map(it => [it.f.ident, it.info && S.durationMismatch(plan, it)]).filter(x => x[1]));
+    for (const { f, i, j } of judged) {
         total++;
-        let j = S.judgeFile({ name: f.n }, plan);
         let ok = j.ok, reason = j.reason;
-        if (ok && f.len && S.durationMismatch) { const why = S.durationMismatch(plan, { f: { name: f.n }, info: { len: f.len } }); if (why) { ok = false; reason = why; } }
+        if (ok && bad.has(i)) { ok = false; reason = bad.get(i); }
         if (update) { f.ok = ok; continue; }
         if (ok !== f.ok) {
             diffs++;

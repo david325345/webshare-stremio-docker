@@ -15,8 +15,10 @@ function normalize(str) {
         .trim();
 }
 
-// Řadové číslovky a římská čísla → číslice, aby "Druhá světová válka" = "2.světová válka"
-const ORDINALS = { prvni: '1', druha: '2', druhy: '2', druhe: '2', treti: '3', ctvrta: '4', ctvrty: '4', ii: '2', iii: '3' };
+// Řadové číslovky a římská čísla → číslice, aby "Druhá světová válka" = "2.světová válka";
+// stejná slova v různém zápisu: "Ford vs Ferrari" = "Ford v Ferrari", "Doktor House" = "Dr. House"
+const ORDINALS = { prvni: '1', druha: '2', druhy: '2', druhe: '2', treti: '3', ctvrta: '4', ctvrty: '4', ii: '2', iii: '3',
+    vs: 'v', versus: 'v', doktor: 'dr', doctor: 'dr' };
 
 function tokens(str) {
     const n = normalize(str);
@@ -38,8 +40,17 @@ function rawTokens(str) {
 
 // Skupiny v hranatých závorkách na začátku ("[SubsPlease] ", "[DB]") – pro porovnání názvu se odstraní,
 // jinak by jednoslovný název nebyl první ("[DB]Working!!_-_01")
+// "[Nekomoe kissaten][Chii Fuyo][01][1080p]" → "Chii Fuyo [01][1080p]" (závorka před číslem dílu je název)
 function stripLeadingGroups(fileName) {
-    return String(fileName || '').replace(/^\s*(?:\[[^\]]*\]\s*[-_.]*\s*)+/, '');
+    let s = String(fileName || '');
+    const re = /^\s*\[([^\]]*)\]\s*[-_.]*\s*/;
+    let m;
+    while ((m = s.match(re))) {
+        const rest = s.slice(m[0].length);
+        if (/[a-z]{2}/i.test(m[1]) && /^\[\s*\d{1,4}(?:v\d)?(?:\s*end)?\s*\]/i.test(rest)) return `${m[1].trim()} ${rest}`;
+        s = rest;
+    }
+    return s;
 }
 function fileTokens(fileName) {
     return tokens(stripLeadingGroups(fileName));
@@ -101,7 +112,7 @@ function titleMatches(fileName, name, others) {
     if (!hit) return false;
     if (hit.start === 0) return true;
     const prefix = ft.filter(t => !STOPWORDS.has(t)).slice(0, hit.start);
-    const words = prefix.filter(t => !PREFIX_OK.test(t) && !ROMAN_ANY.test(t));
+    const words = prefix.filter(t => !PREFIX_OK.test(t) && !ROMAN_ANY.test(t) && !PREFIX_NOISE.has(t));
     if (!words.length) return true;
     // jedno slovo před názvem ("Batman 5 Temný rytíř", "HNS_Rokudenashi…") – kromě dokumentárních
     if (words.length === 1 && !PREFIX_BAD.has(words[0])) return true;
@@ -121,6 +132,8 @@ function titleMatches(fileName, name, others) {
         return !!h && h.start === 0;
     });
 }
+// slova před názvem, která se nepočítají (poznámky uploaderů, přípona kanálu): "Novinka_fv_…", "Horror MKV-…"
+const PREFIX_NOISE = new Set(['novinka', 'novinky', 'fv', 'mkv', 'avi', 'mp4']);
 // slova, která smí stát před názvem: číslo, značka dílu, rok, římská číslice
 const PREFIX_OK = /^(\d{1,4}|s\d{1,2}(e\d{1,4})?|e\d{1,4}|ep\d{0,4}|\d{1,2}x\d{1,4})$/;
 const ROMAN_ANY = /^(i{1,3}|iv|v|vi{1,3}|ix|x)$/;
@@ -181,6 +194,9 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
     // 1x05, 5x7 (Hellspy často bez nuly)
     m = n.match(/\b(\d{1,2})x(\d{1,4})\b/);
     if (m) return { season: +m[1], episode: +m[2], explicit: true };
+    // 01E06 – sezóna a díl bez "S" ("Na seznamu smrti 01E06")
+    m = n.match(/\b(\d{2})e(\d{2,3})\b/);
+    if (m && +m[1] > 0) return { season: +m[1], episode: +m[2], explicit: true };
 
     // Sezóna: "season 2", "2nd season", "s2", "2 serie", "2 rada"
     m = n.match(/\b(\d{1,2})(?:st|nd|rd|th)\s?season\b/) || n.match(/\bseason\s?(\d{1,2})\b/) ||
@@ -494,7 +510,11 @@ function repairName(fileName, names, season, episode, { anime = false, alEpisode
         const same = compact === nc;
         const near = !same && nc.length >= 9 && compact.slice(0, 3) === nc.slice(0, 3) &&
             digits(compact) === digits(nc) && levOne(compact, nc);
-        if (!same && !near) continue;
+        // jediná záměna c↔k nebo w↔v i u kratších názvů ("Cobra 11" = "Kobra 11")
+        const ck = t => t.replace(/c/g, 'k').replace(/w/g, 'v');
+        const swap = !same && !near && nc.length >= 5 && compact.length === nc.length &&
+            compact !== nc && ck(compact) === ck(nc) && levOne(compact, nc);
+        if (!same && !near && !swap) continue;
         const text = [name, ...years, ...ft.slice(mk)].join(' ');
         return { name, text, how: same ? 'spojený' : 'překlep' };
     }

@@ -10,7 +10,8 @@ for(const id of process.argv[3].split(',')){
   const allow=[...new Set(names.flatMap(n=>M.nameTokens(n.full||n.text)))];
   const plan={sameName:r.sameName||null,coll:r.coll||null,type:r.type,id:r.id,isAnime:!!r.anime,names,allow,year:r.year,season:r.season,episode:r.episode,alEpisode:r.alEpisode,alSeason:r.alSeason,runtime:r.runtime||null,epRuntime:r.epRuntime||null};
   const seen=new Set();const files=r.files.filter(f=>!seen.has(f.n)&&seen.add(f.n)).map(f=>({n:f.n,...(f.len?{len:f.len}:{}),ok:false}));
-  const i=cases.findIndex(c=>c.plan.id===id); if(i>=0) cases[i]={plan,files}; else cases.push({plan,files});
+  const c={plan,files,...(r.t?{at:r.t}:{})};   // at = datum hledání (pravidlo „nový film“ závisí na roce)
+  const i=cases.findIndex(c=>c.plan.id===id); if(i>=0) cases[i]=c; else cases.push(c);
   console.log('přidáno',id,files.length);
 }
 fs.writeFileSync(cf,JSON.stringify(cases,null,1));

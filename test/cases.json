@@ -53699,5 +53699,2256 @@
    }
   ],
   "at": "2026-10-19T18:21:24.623Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": {
+    "i": 1,
+    "n": 7
+   },
+   "type": "movie",
+   "id": "tt0087928",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Policejní akademie",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Policajná akadémia",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Police Academy",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Police Academy 1: What an Institution",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "policejni",
+    "akademie",
+    "policajna",
+    "akademia",
+    "police",
+    "academy",
+    "1",
+    "what",
+    "institution"
+   ],
+   "year": 1984,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 97,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Policejní akademie - Policejní akademie - 7. Moskevská mise (DVDRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie---Policejni-akademie---4.-Obcanska-patrola-DVDRip-Cz-SS23.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie---Policejni-akademie---1.-Nastup-DVDRip-Cz-SS23.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie---Policejni-akademie---2.-Jejich-prvni-nasazeni-DVDRip-Cz-SS23.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie---Policejni-akademie---3.-Znovu-ve-vycviku-DVDRip-Cz-SS23.avi",
+    "ok": false
+   },
+   {
+    "n": "policejni-akademie-1-cz.avi",
+    "len": 5544,
+    "ok": true
+   },
+   {
+    "n": "Policejni akademie 1 720p.mkv",
+    "ok": true
+   },
+   {
+    "n": "Policejni akademie 2 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 3 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 4 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 5 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 6 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 7 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 2 Prvni nasazeni.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 5 Nasazeni v Miami Beach.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 6 Mesto v oblezeni.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 7 Moskevska mise.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie.avi",
+    "ok": true
+   },
+   {
+    "n": "Policejni akademie 3 (1986) 720p HB2500 aac128cz, en, czNova (2pass encoding - Spark).mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 5 (1988) 720p HB2500 aac128cz,en (2pass encoding - Spark).mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 6 (1989) 720p HB2500 aac128cz,en (2pass encoding - Spark).mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 7 (1994) 720p HB2500 aac128cz,en (2pass encoding - Spark).mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-1.avi",
+    "len": 5544,
+    "ok": true
+   },
+   {
+    "n": "policejni-akademie-2.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-3-.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-4-.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-5.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-6.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-7-Moskevska-mise.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 2.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 3.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 4 - Obcanska patrola.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni.akademie.3.znovu.ve.vycviku.1986.dvdrip.xvid.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni Akademie 1  Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 2 Prvni nasazeni   Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 3 Znovu ve vycviku   Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 4 Obcanska patrola   Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 5 Nasazeni v Miami Beach  Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 6 Mesto v oblezeni  Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie 7 Moskevska mise   Radiosuba.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni-akademie-6-1989-720p CZ,EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Policejni.akademie.5.nasazeni.v.miami.beach.1988.dvdrip.xvid.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejni.akademie.7.moskevska.mise.1994.dvdrip.xvid.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "policejni-akademie-3-znovu-ve-vycviku.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 2 -První nasazení.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 -Znovu ve výcviku.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 5 -Nasazení v Miami Beach.avi",
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie (1984) 1080p cz dab.mkv",
+    "len": 5785,
+    "ok": true
+   },
+   {
+    "n": "Policejní.akademie.1984.1080p.BluRay.REMUX.AVC.DD.2.0.DTS-HD.MA.1.0.CZ.EN-Chollerick.mkv",
+    "ok": true
+   },
+   {
+    "n": "Policejni akademie (1984) mp4.mp4",
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984) 1080p CZ ...51.....mkv",
+    "len": 5548,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984, CZ dab.).mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984) 1080p, cz.mp4",
+    "len": 5754,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984) 1080p, en, 2x cz dab.mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984) 1080p, cz dab.mp4",
+    "len": 5754,
+    "ok": true
+   },
+   {
+    "n": "4.Policejní akademie (1984) 1080p cz dab.mkv",
+    "len": 5785,
+    "ok": true
+   },
+   {
+    "n": "Zdeněk Izer-Česká policejní akademie.webm",
+    "ok": false
+   },
+   {
+    "n": "Česká policejní akademie by Dyk.avi",
+    "ok": true
+   },
+   {
+    "n": "Police Academy - E05 (Police Academy Blues).mp4",
+    "ok": false
+   },
+   {
+    "n": "Police Academy - E16 (Camp Academy).mp4",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 1984 (1080p Bluray x265 HEVC 10bit AAC 1.0 Tigole).mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Police Academy 2 - Their First Assignment 1985 (1080p Bluray x265 HEVC 10bit AAC 1.0 Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 4 - Citizens on Patrol 1987 (1080p Bluray x265 HEVC 10bit AAC 1.0 Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 5 - Assignment Miami Beach 1988 (1080p Bluray x265 HEVC 10bit AAC 1.0 Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 6 - City Under Siege 1989 (1080p Bluray x265 HEVC 10bit AAC 1.0 Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy - Mission to Moscow 1994 (1080p Bluray x265 HEVC 10bit AAC 2.0 Tigole).mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.1984.1080p.Blu-Ray.Remux.AVC.cz.mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.3.1986.1080p.Blu-Ray.Remux.AVC.cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.4.1987.1080p.Blu-Ray.Remux.AVC.cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy (1984) - DVDRip - Rychlodabing (2.verze).mkv",
+    "ok": true
+   },
+   {
+    "n": "Police Academy (1984) - VHSRip - Rychlodabing (3.verze).mkv",
+    "ok": true
+   },
+   {
+    "n": "Police Academy (1984) - VHSRip - Rychlodabing (8.verze)_Plecháč.avi",
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.VHSRip.CZ.Rychlodabing.4.verze.x264-WeReWoLf.mkv",
+    "len": 5381,
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.VHSRip.CZ.Rychlodabing.5.verze.x264-WeReWoLf.mkv",
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.VHSRip.CZ.Rychlodabing.6.verze.x264-WeReWoLf.mkv",
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.VHSRip.CZ.Rychlodabing.7.verze.x264-WeReWoLf.mkv",
+    "len": 5556,
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.MULTI.HDR.2160p.WEB.DL.DDP-ChrisVPS.mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.5.1988.MULTI.HDR.2160p.WEB.DL.DDP-ChrisVPS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.6.1989.HDR.2160p.WEB.DL.DDP-ChrisVPS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.7.1994.MULTI.HDR.2160p.WEB.DL.DDP-ChrisVPS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy (1984) Eng.mkv",
+    "ok": true
+   },
+   {
+    "n": "Police Academy 2 Their First Assignment (1985) Eng.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 3 Back in Training (1986) Eng.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 5 Assignment Miami Beach (1988).mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 3 1986  FHD 1080p CZ [049].mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy 2 (1985) FHD 1080p CZ [051].mkv",
+    "len": 5230,
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.4.1987  FHD 1080p CZ [052].mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.5.1988.  FHD 1080p CZ [053].mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.6.1989 FHD 1080p CZ [054].mkv",
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.7.  FHD 1080p CZ [055].mkv",
+    "len": 4963,
+    "ok": false
+   },
+   {
+    "n": "Police academy I (1984) FHD.mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Police academy II (1985) FHD.mkv",
+    "len": 5231,
+    "ok": false
+   },
+   {
+    "n": "Police academy III (1986) FHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy IV (1987) FHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy V (1988) FHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy VI (1989) FHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy VII (1994) FHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy I (1984) UHD.mkv",
+    "len": 5786,
+    "ok": true
+   },
+   {
+    "n": "Police academy II (1985) UHD.mkv",
+    "len": 5231,
+    "ok": false
+   },
+   {
+    "n": "Police academy III (1986) UHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy IV (1987) UHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy V (1988) UHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy VI (1989) UHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police academy VII (1994) UHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 5 - Assignment Miami Beach (1988).mp4",
+    "ok": false
+   },
+   {
+    "n": "Police Academy 2 - Their first Assignment (1985).mp4",
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 1  1984.avi",
+    "ok": true
+   },
+   {
+    "n": "Policajna Akademia 2 Prvé Nasadenie.avi",
+    "ok": false
+   },
+   {
+    "n": "policajna-akademia-3.avi",
+    "ok": false
+   },
+   {
+    "n": "policajna-akademia-5.avi",
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 1.avi",
+    "ok": true
+   },
+   {
+    "n": "Policajná akadémia Petra Marcina a Andyho Hryca.mp4",
+    "ok": false
+   },
+   {
+    "n": "Česká policajná akadémia.avi",
+    "ok": true
+   },
+   {
+    "n": "Julie Lescaut - 03x05 - Past na policajta.avi",
+    "ok": false
+   },
+   {
+    "n": "2001 Lovec policajtov cz ☼   2001.avi",
+    "ok": false
+   },
+   {
+    "n": "Lovec policajtů (2001.DVDripCz).avi",
+    "ok": false
+   },
+   {
+    "n": "Herkules 5x17 - Akadémia.avi",
+    "ok": false
+   },
+   {
+    "n": "Zeme-policajtu-DVDRip-CZ-(DD-5,1).avi",
+    "ok": false
+   },
+   {
+    "n": "Seagal - LOVEC POLICAJTU.avi",
+    "ok": false
+   },
+   {
+    "n": "Clona_díl_1_Smrt_policajta.mp4",
+    "ok": false
+   },
+   {
+    "n": "Clona díl 1 - Smrt policajta CZ by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Upírská akademia cz tit.2014.avi",
+    "ok": false
+   },
+   {
+    "n": "Alain Delon - Nebuďte policajta (DVDRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Alain Delon - Slovo policajta (DVDRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Deti rodičom, Akadémia tanca-12.2014.mp4",
+    "ok": false
+   },
+   {
+    "n": "Nebuďte policajta! CZ dabing 1988.mkv",
+    "ok": false
+   },
+   {
+    "n": "Pretekarska akademia_dvdrip_xvid_sk.avi",
+    "ok": false
+   },
+   {
+    "n": "Pretekárska akadémia SK dabing 2014.avi",
+    "ok": false
+   },
+   {
+    "n": "Policajná mafia sk.avi",
+    "ok": false
+   },
+   {
+    "n": "Lovec policajtu.avi",
+    "ok": false
+   },
+   {
+    "n": "Slovo policajta - A.Delon_1985_MH_.avi",
+    "ok": false
+   },
+   {
+    "n": "Clona - 1.díl - Smrt policajta - krimi seriál cz 2014_MH_.avi",
+    "ok": false
+   },
+   {
+    "n": "Slovo policajta-1985-CZ.dab..mkv",
+    "ok": false
+   },
+   {
+    "n": "Lovec policajtu_akcni krimi_dvdrip_cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Alain Delon - Slovo policajta (1985-CZ.dab)..mkv",
+    "ok": false
+   },
+   {
+    "n": "Gang-policajtu-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Clona---1.dil---Smrt-policajta---krimi-serial-cz-2014_MH_.avi",
+    "ok": false
+   },
+   {
+    "n": "Gang-policajtu(Tupac)-cz dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Země-policajtů-Thriller-(1997)-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "06.Smrt.policajta.avi",
+    "ok": false
+   },
+   {
+    "n": "Lovec policajtu cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Země policajtu cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Pribeh policajta (1993) CZ dab.avi",
+    "ok": false
+   },
+   {
+    "n": "Clona 1.díl Smrt policajta 2014.avi",
+    "ok": false
+   },
+   {
+    "n": "Zvláštní efekty.S02E01.Requiem.za.policajta.DVB-TRip.XviD.cz-iNG.avi",
+    "ok": false
+   },
+   {
+    "n": "Lovec-policajtu-(Seagal)-(2001)--cz-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Lovec policajtů (2001).avi",
+    "ok": false
+   },
+   {
+    "n": "Nebuďte policajta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Lovec policajtů (2001.DVDripCz) by AliG.avi",
+    "ok": false
+   },
+   {
+    "n": "Povidka-o-policajtovi_TVRip_CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "ZVláštní efekty - 2x01. Requiem za policajta (TVRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Slovo policajta - Parole de flic (1985) Fr Akčni cz dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "06.díl - Smrt policajta_x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "A Nightmare on Elm Street (1984) ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Gremlins[1984]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "The.World.of.Don.Camillo.1984.PL.CUSTOM.DVDRip.XviD-RETRO.avi",
+    "ok": false
+   },
+   {
+    "n": "Pes_zabijak_1984_by.Dadunka.of.PowerUploaders.avi",
+    "ok": false
+   },
+   {
+    "n": "Kočičí zlato (1984).avi",
+    "ok": false
+   },
+   {
+    "n": "Kukačka-v-temném-lese-[1984].avi",
+    "ok": false
+   },
+   {
+    "n": "Bez.prava.na.porazku.1984.DVDRip.XVid.CZ-capo.avi",
+    "ok": false
+   },
+   {
+    "n": "policajt-v-beverly-hills-akcni-komedie-1984-cz-xvid.avi",
+    "ok": false
+   },
+   {
+    "n": "Zbytečná krutost 1984 CZ Drama,Thriller,Krimi_(www.KinoTip.cz).avi",
+    "ok": false
+   },
+   {
+    "n": "Horror-Pes zabijak_1984 cz.avi",
+    "ok": false
+   },
+   {
+    "n": "1984 Bounty.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "01_Slovácko sa nesúdí-Druhá série_1984_zabíjačka_CZ_TVRip-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "02_Slovácko sa nesúdí-druhá série_1984_medvěd_CZ_TVRip-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "03_Slovácko sa nesúdí-druhá série_1984_tři krejcary_CZ_TVRip-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "06_Slovácko sa nesúdí-druhá série_1984_poslední vůla_CZ_TVRip-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Breakin'.2.1984.BRRiP.HUN.x264-killer13.mkv",
+    "ok": false
+   },
+   {
+    "n": "1984 No počkaj! - 14 Elektrický zajac.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bounty 1984 CZ dabing Drama Historicky.avi",
+    "ok": false
+   },
+   {
+    "n": "BACHELOR-PARTY-(1984).avi",
+    "ok": false
+   },
+   {
+    "n": "VABANK 2.1984.PL.DVDRip.Xvid.avi",
+    "ok": false
+   },
+   {
+    "n": "25.Uramisten.1984.HunDub.DVDRip.XviD-Jollyjoker.avi",
+    "ok": false
+   },
+   {
+    "n": "Seksmisja 1984 PL 5.1.avi",
+    "ok": false
+   },
+   {
+    "n": "DUNA-CZ-dabing-(1984).avi",
+    "ok": false
+   },
+   {
+    "n": "Sanitka-I.řada-(1984)-6.díl-.avi",
+    "ok": false
+   },
+   {
+    "n": "Sanitka-I.řada-(1984)-1.díl-.avi",
+    "ok": false
+   },
+   {
+    "n": "Sanitka-I.řada-(1984)-3.díl-.avi",
+    "ok": false
+   },
+   {
+    "n": "Sanitka-I.řada-(1984)-10.díl-.avi",
+    "ok": false
+   },
+   {
+    "n": "Malý-televizní-kabaret---Už-zase-zlobíš,-tatínku-(ČSSR,-1984).mpg",
+    "ok": false
+   },
+   {
+    "n": "Rozpaky-kuchaře-Svatopluka-(01.)-(ČSSR,-1984).mpg",
+    "ok": false
+   },
+   {
+    "n": "Filmy-od-LM------Amadeus---1984-Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "TŘÍDA 1984.DVDrip.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Kridla-1984-DVDRip-XviD-czdub.avi",
+    "ok": false
+   },
+   {
+    "n": "Nausicaa of the Valley of the Wind (1984) cz audio.ac3",
+    "ok": false
+   },
+   {
+    "n": "Nausicaa of the Valley of the Wind (1984) audio cz.ac3",
+    "ok": false
+   },
+   {
+    "n": "Clint Eastwood Žár velkoměsta  1984.avi",
+    "ok": false
+   },
+   {
+    "n": "SEXMISE (Sexmisia) CZ dabing (1984) HIT dobrodružný komedie sci-fi.avi",
+    "ok": false
+   },
+   {
+    "n": "02x03 hlt za tri krejcary 1984.avi",
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 6 [CZ dabing, 1989]",
+    "len": 4821,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia VII - Moskovská misia (r.1994 - 1920x1080)",
+    "len": 4961,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia II - Jejich první nasazení (r.1985 - 1920x1080)",
+    "len": 5229,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 3 [CZ dabing, 1986]",
+    "len": 4817,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia III - Znovu ve výcviku (r.1986 - 1920x1080)",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 5 [CZ dabing, 1988]",
+    "len": 5165,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia V - Nasadenie Miami Beach (r.1988 - 1920x1080)",
+    "len": 5390,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia IV - Občianska patrola (r.1987 - 1920x1080)",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia VI - Mesto v obkľúčení (r.1989 - 1920x1080)",
+    "len": 5035,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 [SK dabing, 1985]",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 - Prvé Nasadenie, SK dabing (1985)",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 4 [CZ dabing, 1987]",
+    "len": 5024,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 - Prvé Nasadenie, SK dabing (1985)  (tuta)",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 - Prvé Nasadenie, SK dabing, 1985]",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 2-CZ Dabing.avi",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 - Prvé Nasadenie",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 - Prvé Nasadenie, SK dabing (1985) by KAMer",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajna Akademia 2 - Prvé Nasadenie, SK dabing (1985) (lehi)",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 2-CZ Dabing",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 7-CZ Dabing",
+    "len": 4755,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 7-CZ Dabing.avi",
+    "len": 4755,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 6-CZ Dabing.avi",
+    "len": 4827,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 3-CZ Dabing.avi",
+    "len": 4816,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 4-CZ Dabing",
+    "len": 5022,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 4-CZ Dabing.avi",
+    "len": 5022,
+    "ok": false
+   },
+   {
+    "n": "Policajna-akademia-7-cz-(1994)-(#)",
+    "len": 4745,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 5-CZ Dabing.avi",
+    "len": 5165,
+    "ok": false
+   },
+   {
+    "n": "Policajná akadémia 5-CZ Dabing",
+    "len": 5165,
+    "ok": false
+   },
+   {
+    "n": "Policajna-akademia-2-cz-(1985)-(#)",
+    "len": 5009,
+    "ok": false
+   },
+   {
+    "n": "Neskoro večer - Policajná akadémia Petra Marcina a Andyho Hryca",
+    "len": 441,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie (1984)",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 1 CZ",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 6: Město v obležení (1989) CZ Dabing",
+    "len": 5035,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 1984 1080p CZ Dabing",
+    "len": 5784,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing chemon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ  Mixam",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ   LX",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ   JAGGER",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ  MuMu",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku (1986)",
+    "len": 4814,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 Občanská patrola (1987)",
+    "len": 5015,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing temon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 4 - Občanská Patrola 1987 1080p CZ Dabing",
+    "len": 5237,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 6 Město v obležení (1989)",
+    "len": 4823,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing lemon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing yemon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ dab mnemon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing mnemon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 1 CZ demon",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing demon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 5 Nasazení Miami Beach (1988)",
+    "len": 5163,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ   LumiX",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 1 CZ on",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing on",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ  LumiX",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 1 CZ iemon",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing iemon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 CZ dabing bon",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 5 (1988) cz",
+    "len": 5390,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 3 - Znovu Ve Výcviku 1986 1080p CZ Dabing",
+    "len": 5025,
+    "ok": false
+   },
+   {
+    "n": "Policejni.Akademie.2.1985.BDRip.1080p.AAC.CZ",
+    "len": 5229,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 - Znovu ve výcviku(1986)",
+    "len": 5024,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 2 - Jejich První Nasazení 1985 1080p CZ Dabing",
+    "len": 5223,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 6 - Město v Obležení 1989 1080p CZ Dabing",
+    "len": 5036,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 7 - Moskevská Mise 1994 1080p CZ Dabing",
+    "len": 4958,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 7 CZ (1994)",
+    "len": 4961,
+    "ok": false
+   },
+   {
+    "n": "Policejní Akademie 5 - Nasazení Miami Beach 1988 1080p CZ Dabing",
+    "len": 5387,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing   LumiX",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing  Mixam",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing   LX",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing   (Ghul)",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing   JAGGER",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing  JAGGER",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing  MuMu",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku 1986 CZ Dabing  LumiX",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Police Academy 6 - City under siege (1989) - CZ FHD H265 - deadinside.mkv",
+    "len": 4823,
+    "ok": false
+   },
+   {
+    "n": "Police Academy - Mission to Moscow (1994) - CZ FHD H265 - deadinside.mkv",
+    "len": 4752,
+    "ok": false
+   },
+   {
+    "n": "Police Academy 3: Back in Training - ",
+    "len": 4816,
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie - Police academy III (1986) - Znovu ve vycviku (Remastered)(FullHD)(1080p)(2xCZ-EN) PHDTeam",
+    "len": 4818,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie - Police academy II (1985) - Jejich první nasazení (Remastered)(FullHD)(1080p)(2xCZ-EN) PHDTeam",
+    "len": 5230,
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie - Police academy VI (1989) - Mesto v oblezeni (Remastered)(FullHD)(1080p)(2xCZ-EN) PHDTeam",
+    "len": 5036,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 Znovu ve výcviku  Police Academy 3 Back in Training (1986)(CZ,EN)[HEVC][1080pLQ]",
+    "len": 5024,
+    "ok": false
+   },
+   {
+    "n": "Police Academy 6: City Under Siege - ",
+    "len": 4821,
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.5_Assignment.Miami.Beach.1988.576p.h264.NNMclub",
+    "len": 5390,
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.6_City.Under.Siege.1989.576p.h264.NNMclub",
+    "len": 5035,
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.3_Back.in.Training.1986.576p.h264.NNMclub",
+    "len": 5023,
+    "ok": false
+   },
+   {
+    "n": "Police.Academy.4_Citizens.on.Patrol.1987.576p.h264.NNMclub",
+    "len": 5236,
+    "ok": false
+   },
+   {
+    "n": "Police Academy 2: Their First Assignment - ",
+    "len": 5008,
+    "ok": false
+   },
+   {
+    "n": "Police Academy 7: Mission to Moscow - ",
+    "len": 4477,
+    "ok": false
+   },
+   {
+    "n": "Police Academy 4: Citizens on Patrol - ",
+    "len": 5022,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 6 - Město v obklíčení  (Police Academy 6 - City Under Siege, 1989) (by_UgarE)",
+    "len": 4827,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 - Znovu ve výcviku  (Police Academy 3 - Back in Training, 1986)",
+    "len": 4816,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 6 - Město v obklíčení  (Police Academy 6 - City Under Siege, 1989)",
+    "len": 4827,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 6 - Město v obklíčení  (Police Academy 6 - City Under Siege, 1989) by_UgarE",
+    "len": 4827,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 5 (Police Academy 5, 1988)",
+    "len": 5161,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 5 (Police Academy 5, 1988) (by_UgarE)",
+    "len": 5161,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 5 (Police Academy 5, 1988) by_UgarE",
+    "len": 5161,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 2 (Police Academy 2, 1985) by_UgarE",
+    "len": 5009,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 2 (Police Academy 2, 1985)",
+    "len": 5009,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 (Police Academy 4, 1987) by_UgarE",
+    "len": 5015,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 4 (Police Academy 4, 1987)",
+    "len": 5015,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 7 - Moskevská mise  (Police Academy - Mission to Moscow, 1994)",
+    "len": 4755,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 7 - Moskevská mise  (Police Academy - Mission to Moscow, 1994) (by_UgarE)",
+    "len": 4755,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 3 - Znovu ve výcviku  (Police Academy 3 - Back in Training, 1986) (by_UgarE)",
+    "len": 4814,
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie - Police academy IV (1987) - Obcanska patrola (Remastered)(FullHD)(1080p)(2xCZ-EN) PHDTeam",
+    "len": 5237,
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie - Police academy V (1988) - Nasazeni v miami beach (Remastered)(FullHD)(1080p)(2xCZ-EN) PHDTeam",
+    "len": 5391,
+    "ok": false
+   },
+   {
+    "n": "Policejni akademie - Police academy VII (1994) - Moskevska mise (Remastered)(FullHD)(1080p)(2xCZ-EN) PHDTeam",
+    "len": 4962,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie (Police Academy, 1984)",
+    "len": 5540,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie - Police Academy",
+    "len": 5535,
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.1984.576p.h264.NNMclub",
+    "len": 5785,
+    "ok": true
+   },
+   {
+    "n": "Police.Academy.2_Their.First.Assignment.1985.576p.h264.NNMclub",
+    "len": 5229,
+    "ok": false
+   },
+   {
+    "n": "Policejní akademie 1 (1984) UHDR cz en",
+    "len": 5785,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 1984",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní-akademie-(1984)",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní.akademie.(1984)_vše.v.pořádku_",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní.akademie.(1984)(OKEJ)",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984) CZ Dabing",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní.akademie.(1984)",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní.akademie.(1984) ByDv",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní.akademie.(1984) .By.mina",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní-akademie-(1984) (HDR10)",
+    "len": 5355,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie (1984) 1080p CZ Dabing",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie I. (1984) CZ-CZ",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 1984 CZ dabing 720p HD",
+    "len": 5536,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 1 (1984) komedie USA CZdab 1080p.mkv",
+    "len": 5784,
+    "ok": true
+   },
+   {
+    "n": "policejni akademie 1 (1984) cz dab",
+    "len": 5547,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie - 1984 CS",
+    "len": 5535,
+    "ok": true
+   },
+   {
+    "n": "Policejní_akademie_(1984)-CZ_dabing komedie",
+    "len": 5513,
+    "ok": true
+   },
+   {
+    "n": "Policejní akademie 1984.avi",
+    "len": 5543,
+    "ok": true
+   },
+   {
+    "n": "Policejni.akademie.1.1984.bdrip.720p.x264.CZ.EN",
+    "len": 5540,
+    "ok": true
+   },
+   {
+    "n": "Policejni akademie 1-1984,USA-komedie,krimi",
+    "len": 5245,
+    "ok": true
+   },
+   {
+    "n": "Policajní akademie 1 1984 CZ (2GB)",
+    "len": 5784,
+    "ok": false
+   },
+   {
+    "n": "Policajní akademie 3 - Znovu ve výcviku 1986 CZ (2GB)",
+    "len": 5023,
+    "ok": false
+   }
+  ],
+  "at": "2026-11-01T18:41:18.406Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": {
+    "i": 1,
+    "n": 2
+   },
+   "type": "movie",
+   "id": "tt0770828",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Muž z oceli",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Muž z ocele",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Man of Steel",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Man of Steel - 3D",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "muz",
+    "z",
+    "oceli",
+    "ocele",
+    "man",
+    "steel",
+    "3d"
+   ],
+   "year": 2013,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 143,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Muz_z_oceli_CZ_titulky_2013.avi",
+    "len": 7962,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli CZ titulky 2013.avi",
+    "len": 7923,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli  Man of Steel (2013)(CZ).avi",
+    "ok": true
+   },
+   {
+    "n": "Muz-z-oceli-Man-of-Steel-CZ-dabing-2013.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli.avi cz",
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli .2013 CZ Dabing BDRip akční fantassy USA.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli - AC3 - CZ DABING - sparrky.avi",
+    "ok": true
+   },
+   {
+    "n": "Muž-z-oceli-(Superman)-2013---CZ-dabing---SciFi,-Akční--USA,-Kanada,-Velká-Británie---MilSu.avi",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli cz avi OD Roman1992.avi",
+    "ok": false
+   },
+   {
+    "n": "Muž z oceli - (HD) - CZ DABING - Gigollo.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) Novinka CZ dabing výborná kvalita Man of steel.avi",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Muz-z-oceli-2013-Novinka-CZ-dabing-vyborna-kvalita-Man-of-steel.avi",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (Man of Steel) 2013 BRRip.CZ Dabing.novinka.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ 1080pHD.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Muž-z-oceli-2013-CZ.avi",
+    "ok": true
+   },
+   {
+    "n": "Muž-z-oceli_2013-Cz.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013).avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muz z ocele 2013 cz dabing (1).avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013 Akční-Dobrodružný-Fantasy-Sci-Fi) Cz dabing.mkv",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013 Akční-Dobrodružný-Fantasy-Sci-Fi) Cz dabing.mp4",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (Henry Cavill, Russell Crowe, Kevin Costner-2013 Akční-Dobrodružný-Fantasy-Sci-Fi-Bdrip.) Cz dabing.mkv",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 Cz.avi",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli.mp4",
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013.mp4",
+    "ok": true
+   },
+   {
+    "n": "MUŽ Z OCELI 2013 CZ dabing.avi",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) 2160p 4K UHD HDR CZ dabing.mkv",
+    "len": 8580,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli DDD.CZ.yeff.avi",
+    "ok": true
+   },
+   {
+    "n": "Muz.z.Ocele.[Man.of.Steel].2013.1080p.AVC.SK.AC3[2.0].EN.AC3[5.1].mkv",
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli [Man of Steel] (2013) CZ dabing.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (Man of Steel, 2013).avi",
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) Cz.avi",
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) Cz.mkv",
+    "len": 8226,
+    "ok": true
+   },
+   {
+    "n": "Muz z oceli - Man of Steel (2013) - FullHD 1080p (H264) - CZ dabing (AC3 audio) - TW1NKY.mkv",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muz z oceli.2013.EN.CZ.2160p.DV.HDR.HEVC.Atmos.mkv",
+    "len": 8580,
+    "ok": true
+   },
+   {
+    "n": "Muž z Oceli.Superman.avi",
+    "ok": false
+   },
+   {
+    "n": "Muž z oceli.2013.CZ.DV.2160p.mkv",
+    "len": 8580,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZEdab.avi",
+    "ok": true
+   },
+   {
+    "n": "Muz z oceli .2013 CZ Dabing Akční Fantasy USA.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (Superman) 2013 CZ-dabing SciFi.avi",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 720p 10bit BluRay OPUS 5.1 x265 CZ dabing.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 1080p 10bit BluRay DDP5.1 x265 CZ dabing.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 1080p 10bit BluRay OPUS 5.1 x265 CZ dabing.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Man-of-Steel-Muz-z-oceli-Cam-Xvid-cz-tit.avi.avi",
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.720p.BluRay.x264.YIFY.mp4",
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.1080p.BluRay.x264.YIFY.mp4",
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.BDRip.XviD.AC3.CZ-TTR.avi",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Man of Steel (2013) BluRay 1080p 5.1CH x264 Ganool .mkv",
+    "ok": true
+   },
+   {
+    "n": "Man of steel.mkv",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Man of Steel 2013 1080p Cz Eng.mkv",
+    "len": 6315,
+    "ok": false
+   },
+   {
+    "n": "Man of Steel (2013) Cz.mkv",
+    "len": 8232,
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.3D.SBS.1080p.CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.720p.BluRay.CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.REGRADED.1080p.BluRay.10Bit.HEVC.MULTi.x265-MAJO.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.REGRADED.1080p.BluRay.MULTi.x264-MAJO.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Man of Steel 2013 1080p MAX WEB-DL H265 SDR DDP Atmos 5 1 English HONE.mkv",
+    "len": 8578,
+    "ok": true
+   },
+   {
+    "n": "Man of Steel [H264][1080p][EN][OREO].mp4",
+    "ok": true
+   },
+   {
+    "n": "Man of Steel 2013 1080p NF WEB-DL DDP5 1 AV1-Saon.mkv",
+    "len": 8579,
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.720p.10bit.BluRay.6CH.x265.HEVC-PSA.mkv",
+    "ok": true
+   },
+   {
+    "n": "Man.of.Steel.2013.1080p.10bit.BluRay.8CH.x265.HEVC-PSA.mkv",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Stalin.Man.of.Steel.1of6.x264.AC3.MVGroup.org.mkv",
+    "ok": true
+   },
+   {
+    "n": "Stalin.Man.of.Steel.4of6.x264.AC3.MVGroup.org.mkv",
+    "ok": true
+   },
+   {
+    "n": "Stalin.Man.of.Steel.3of6.x264.AC3.MVGroup.org.mkv",
+    "ok": true
+   },
+   {
+    "n": "Stalin.Man.of.Steel.6of6.x264.AC3.MVGroup.org.mkv",
+    "ok": true
+   },
+   {
+    "n": "Stalin.Man.of.Steel.5of6.x264.AC3.MVGroup.org.mkv",
+    "ok": true
+   },
+   {
+    "n": "Lois and Clark The New Adventures of Superman S01E10 The Man of Steel Bars 1080p BluRay Remux FLAC2 0 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dawn of Justice Series - DoJ Pt1 - Man of Steel - The Outsider Edit v4.10 SLQ Stereo.mp4",
+    "ok": false
+   },
+   {
+    "n": "Supergirl.S04E03.Man.of.Steel.1080p.Amazon.WEB-DL.DD 5.1.H.264-QOQ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Supergirl S04E03 Man of Steel 720p WEBRip 2CH x265 HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Człowiek ze stali - Man of Steel 2013 [1080p.BluRay.H265-FT] [ENG-Lektor PL] [Alusia].mkv",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "My Bride is a Mermaid (2007) - S01E10 - Man of Steel [Bluray-720p][Opus 2.0][AV1]-BlackRabbit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Supergirl S04E03 Man of Steel 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Superman (1978) Meets Man Of Steel.mp4",
+    "ok": false
+   },
+   {
+    "n": "Tears.Of.Steel.4K.H.265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Men of Steel- Muž z Ocele(2013, CZ dabing).avi",
+    "ok": false
+   },
+   {
+    "n": "legion-of-superheroes-1x01-man-of-tomorrow.avi",
+    "ok": false
+   },
+   {
+    "n": "Muz taici Man of Tai Chi 2013 BRRip.XviD cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Muz taici -  Man.of.Tai.Chi. cz. dab.avi",
+    "ok": false
+   },
+   {
+    "n": "FILMY-BY-BOOS-MUZ-Z-OCELI-2 - najstahovanejsie nejstahovanejsi no 1 novinka NEW naj 2014 2015 - najnovsie super - 013-CZ-DABING-SUPR-FILM.avi",
+    "ok": false
+   },
+   {
+    "n": "2013 Muž z oceli CZ dab.avi",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Superman VI - Muž z ocele (r.2013 - 1920x800).avi",
+    "ok": true
+   },
+   {
+    "n": "Muz-z-ocele-2013-cz-dabing",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muz z ocele -Mu-ž z oc-eli - (NOVINKA 2013)-NOVINKY-CZ-CESKY-DABING-BR-RIP, SKVELY FILM, DOBRA KVALITA - AKCNY-AKCNI, DOBRODRUZNY, SCI-FI, FANTASY-Henry Cavill,Russell Crowe,Kevin Costner",
+    "len": 8582,
+    "ok": false
+   },
+   {
+    "n": "Muz z ocele -Mu-ž z oc-eli - (NOVINKA 2013)-NOVINKY-CZ-CESKY-DABING-BR-RIP, SKVELY FILM, DOBRA KVALI",
+    "len": 8582,
+    "ok": false
+   },
+   {
+    "n": "Muž z Ocele",
+    "len": 8585,
+    "ok": true
+   },
+   {
+    "n": "Muz z ocele(2013-kinorip) CZ titulky",
+    "len": 7923,
+    "ok": true
+   },
+   {
+    "n": "Superman  - Muž z ocele (2013) CZ Dabing",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Man-of-Steel-Muz-z-oceli-2013-480p-BRRip-Xvid-CZ-dab",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli Man of Steel (2013)CZ Dabing  (Film by Eduard Eddy)",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muz_z_oceli_Man_of_Steel_2013_CZ_",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muz z oceli-Man of Steel-2013-CZ",
+    "len": 8582,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (Man of Steel, 2013)",
+    "len": 8584,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli-Man of steel - 2013 en. n@y",
+    "len": 7922,
+    "ok": true
+   },
+   {
+    "n": "#Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k.mkv",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. TopKvalita",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k  MuMu",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k  (Ghul)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k.",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k  Mixam",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k  10.26",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. BeDev2026",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. Top2026",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "+Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. TopCZ",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "#Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "#Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k (SUPER)#",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "=Muž-z-oceli-2013-CZ-Dabing-Ultra-HD-2160p-4k=",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k-UP-",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž_z_oceli_2013_CZ_Dabing_Ultra_HD_2160p_4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž-z-oceli-2013-CZ-Dabing-Ultra-HD-2160p-4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k T.O.P-M-",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k TOP.nov.V2",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k BeDobi",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ Dabing Ultra HD 2160p 4k T.O.P",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 1080p CZ",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli",
+    "len": 8583,
+    "ok": true
+   },
+   {
+    "n": "- Muž_z_oceli_2013_CZ_Dabing_Ultra_HD_2160p_4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. Be.Behe",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k To.p.",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k V.2.",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) UHDRDV cz en",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. -(SmrtJ)-",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (S)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. ByMef",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k.mkv",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (SubS)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (M)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (Meff)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ DABING",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (bySubNaut)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k 4K,HD,CZ,SK",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. 2025",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (Naut)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. ByArm",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (RaFf)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. (15.8.)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. Vod",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. 4K,HD,CZ,SK,ENG,XD",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli 2013 CZ dabing 2160p UHD",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. Top.Kvalita.",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. Aktální TOP (16.8.)",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) 4K CZ Dabing",
+    "len": 8581,
+    "ok": true
+   },
+   {
+    "n": "Muž z oceli (2013) CZ Dabing Ultra HD 2160p 4k. CZ",
+    "len": 8581,
+    "ok": true
+   }
+  ],
+  "at": "2026-11-01T12:19:30.340Z"
  }
 ]

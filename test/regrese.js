@@ -2,6 +2,7 @@
 //   node test/regrese.js            → porovná s očekávanými výsledky (test/cases.json)
 //   node test/regrese.js --update   → uloží aktuální výsledky jako nové očekávané
 process.env.ARCHIVE = '0';
+require('./stub-deps');   // bez node_modules se express/needle nahradí (noční kontrola bez npm)
 process.env.CACHE_DIR = require('os').tmpdir() + '/webshare-test-cache';
 const fs = require('fs'), path = require('path');
 const S = require('../server.js');

@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.8.0';
+const VERSION = '8.8.1';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -918,7 +918,13 @@ async function runQueries(cfg, queries, { ws = true, hs = true, budgetMs = 4000 
         if (!on || (finished[label] && !errCount[label])) continue;
         deg[label.toLowerCase()] = { err: errCount[label], ok: okCount[label], ...(finished[label] ? {} : { timeout: true }), ...(lastErr[label] ? { msg: lastErr[label] } : {}) };
     }
-    return { files: new Map(out), degraded, dead, deg, wsFailed: !!(ws && hasWs(cfg) && errCount.WS && !okCount.WS) };
+    return {
+        files: new Map(out), degraded, dead, deg,
+        wsFailed: !!(ws && hasWs(cfg) && errCount.WS && !okCount.WS),
+        // vypršel čas a neprošel ani jeden dotaz (poskytovatel "visí" – typicky v celou hodinu)
+        wsTimedOut: !!(ws && hasWs(cfg) && !finished.WS && !okCount.WS),
+        hsTimedOut: !!(hs && hsOn(cfg) && !finished.HS && !okCount.HS && Date.now() >= hsDownUntil)
+    };
 }
 
 // Vybere soubory, které sedí na název (a rok / epizodu)
@@ -974,10 +980,15 @@ function judgeFile(f, plan) {
         const byFull = plan.names.some(n => !n.short && nameOk(f.name, n, plan));
         const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n, plan));
         if (!byFull && !byShort) return { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
-        // film ze série bez čísla v našem názvu ("Rambo" 2008 = 4. díl): číslo dílu u názvu musí sedět
-        if (plan.coll && plan.coll.i && !plan.names.some(n => M.hasPartNumber(n.text))) {
-            const nums = plan.names.filter(n => nameOk(f.name, n, plan)).map(n => M.partNumber(f.name, n.text)).filter(x => x !== null);
-            if (nums.length && !nums.includes(plan.coll.i)) return { ok: false, reason: `jiný díl série (${nums[0]})` };
+        // film ze série ("Rambo" 2008 = 4. díl, "Policejní akademie" = 1. díl): číslo dílu u názvu musí být naše pořadí
+        // nebo číslo z našich názvů ("Police Academy 1: …", "Star Wars: Epizoda IV" → 1 i 4);
+        // číslo PŘED názvem s přesně naším rokem nevadí ("4.Policejní akademie (1984)" – pořadové číslo v seznamu)
+        if (plan.coll && plan.coll.i) {
+            const allowed = new Set([plan.coll.i, ...plan.names.flatMap(n => M.nameNumbers(n.text))]);
+            const exactYear = plan.year && M.fileYears(f.name).includes(plan.year);
+            const nums = plan.names.filter(n => nameOk(f.name, n, plan)).map(n => M.partNumberInfo(f.name, n.text))
+                .filter(x => x && !(x.before && exactYear)).map(x => x.n);
+            if (nums.length && !nums.some(n => allowed.has(n))) return { ok: false, reason: `jiný díl série (${nums[0]})` };
         }
         const years = M.fileYears(f.name);
         const yearOk = plan.year && years.some(y => Math.abs(y - plan.year) <= 1);
@@ -1375,14 +1386,16 @@ async function findFiles(type, id, cfg) {
         const [w1, w2] = buildQueries(plan);
         const r1 = await runQueries(cfg, w1, { budgetMs: 4000 });
         const deg = { ...r1.deg };
-        // Webshare v první vlně jen chyby (žádný dotaz neprošel) → jednou zopakovat, ať krátký výpadek nedá 0 streamů
-        if (r1.wsFailed) {
-            log(`  🔁 Webshare: první vlna selhala – opakuji`);
-            await new Promise(r => setTimeout(r, 300).unref());
-            const rr = await runQueries(cfg, w1, { hs: false, budgetMs: 2500 });
+        // první vlna: Webshare jen chyby, nebo Webshare/Hellspy nestihl ani jeden dotaz → jednou zopakovat,
+        // ať krátký výpadek (často v celou hodinu) nedá 0 streamů
+        const wsAgain = r1.wsFailed || r1.wsTimedOut, hsAgain = r1.hsTimedOut;
+        if (wsAgain || hsAgain) {
+            log(`  🔁 ${[wsAgain && 'Webshare', hsAgain && 'Hellspy'].filter(Boolean).join(' + ')}: první vlna ${r1.wsFailed ? 'selhala' : 'nestihla'} – opakuji`);
+            await new Promise(r => setTimeout(r, r1.wsFailed && !r1.wsTimedOut ? 300 : 1000).unref());
+            const rr = await runQueries(cfg, w1, { ws: wsAgain, hs: hsAgain, budgetMs: 2500 });
             for (const [k, v] of rr.files) if (!r1.files.has(k)) r1.files.set(k, v);
-            deg.wsRetry = rr.wsFailed ? 'selhalo' : 'ok';
-            if (!rr.dead.ws) r1.dead.ws = false;
+            if (wsAgain) { deg.wsRetry = rr.wsFailed || rr.wsTimedOut ? 'selhalo' : 'ok'; if (!rr.dead.ws) r1.dead.ws = false; }
+            if (hsAgain) { deg.hsRetry = rr.hsTimedOut || rr.dead.hs ? 'selhalo' : 'ok'; if (!rr.dead.hs) r1.dead.hs = false; }
         }
         if (plan.sameNameP) {
             plan.sameName = await Promise.race([plan.sameNameP, new Promise(r => setTimeout(() => r(null), 1500).unref())]);

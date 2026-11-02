@@ -2,6 +2,7 @@
 //   node tools/replay.js <adresář staré verze> <adresář nové verze> archiv1.jsonl[.gz] …
 //   SN='{"tt40197357":[2001]}' – ruční seznam stejnojmenných seriálů pro starší záznamy bez pole sameName
 process.env.ARCHIVE = '0'; process.env.CACHE_DIR = require('os').tmpdir() + '/webshare-replay-cache';
+require('../test/stub-deps');   // bez node_modules se express/needle nahradí
 const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const OLD = require(path.resolve(process.argv[2], 'server.js')), NEW = require(path.resolve(process.argv[3], 'server.js'));
 const M = require(path.resolve(process.argv[3], 'matcher.js'));

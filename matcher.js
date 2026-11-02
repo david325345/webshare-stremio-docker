@@ -292,7 +292,8 @@ const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english jap
     'xvid divx hevc avc aac ac3 dts ddp truehd atmos hdr dv extended edition directors cut uncut unrated remastered ' +
     'complete kompletni serie series season sezona rada episode ep epizoda dil cast part mp4 mkv avi vostfr ' +
     'tv ova movie film proper repack internal limited anime capitulo episodio folge odcinek bolum aflevering ' +
-    'kvalita dobra pekna prodlouzena rozsirena mpg mpeg wmv ts mov flv m4v webm').split(' '));
+    'kvalita dobra pekna prodlouzena rozsirena mpg mpeg wmv ts mov flv m4v webm ' +
+    'ddd yeff cam hdcam sbs 3d').split(' '));
 
 // Najde v souboru slova názvu (v pořadí, mezery mezi nimi tolerované – "Rosario to Vampire" ~ "Rosario + Vampire");
 // vrací pozici prvního slova a slova, která následují za posledním.
@@ -381,7 +382,7 @@ function isNonVideo(fileName) {
 
 // Slova, kterými v názvu souboru začíná popis, ne název (žánry, poznámky uploaderů)
 const DESC_WORDS = new Set(('akcni akcia akcny krimi drama thriller scifi sci fi fantasy horor horror komedie komedia ' +
-    'rodinny animovany animak dobrodruzny valecny western dokument dokumentarni romanticky mysteriozni zivotopisny ' +
+    'rodinny animovany animak dobrodruzny valecny western dokument dokumentarni romanticky mysteriozni zivotopisny sportovni ' +
     'hudebni historicky psychologicky erotic novinky novinka novinkа kino kinorip kinoverze csfd imdb hodnoceni by from ' +
     'upload uploaded rip tvrip hdrip dvdscr screener dvbt dvb koukatelne verze verzia rezie usa uk cr sr').split(' '));
 
@@ -432,6 +433,11 @@ function spinoffAbbrev(fileName, name, allow) {
 // "Rambo 5.1 CZ" (zvuk), rok, rozlišení se neberou
 const PART_ROMAN = { iv: 4, vi: 6, vii: 7, viii: 8, ix: 9 };   // ii/iii převádí tokens() na 2/3; samotné v/x ne (předložka, „Malcolm X“)
 function partNumber(fileName, name) {
+    const r = partNumberInfo(fileName, name);
+    return r ? r.n : null;
+}
+// totéž + kde číslo stojí: { n, before } (before = číslo před názvem, "4.Rambo…")
+function partNumberInfo(fileName, name) {
     const hit = afterName(fileName, name);
     if (!hit) return null;
     const raw = stripLeadingGroups(fileName);
@@ -444,13 +450,17 @@ function partNumber(fileName, name) {
         return PART_ROMAN[t] || null;
     };
     const after = num(hit.rest[0], hit.rest[1]);
-    if (after !== null) return after;
+    if (after !== null) return { n: after, before: false };
     if (hit.start > 0) {
         const all = fileTokens(fileName).filter(t => !STOPWORDS.has(t));
         const before = all[hit.start - 1];
-        if (hit.start === 1 && /^\d{1,2}$/.test(before) && +before >= 1 && +before <= 20) return +before;   // "4.Rambo…"
+        if (hit.start === 1 && /^\d{1,2}$/.test(before) && +before >= 1 && +before <= 20) return { n: +before, before: true };   // "4.Rambo…"
     }
     return null;
+}
+// Čísla dílu v našem názvu ("Police Academy 1: What an Institution" → [1], "Star Wars: Epizoda IV" → [4])
+function nameNumbers(name) {
+    return tokens(name).map(t => (/^\d{1,2}$/.test(t) && +t >= 1 && +t <= 20) ? +t : (PART_ROMAN[t] || null)).filter(x => x !== null);
 }
 // Obsahuje náš název číslo / římskou číslici (pak se pořadí v sérii nekontroluje – "Star Wars: Epizoda IV")
 function hasPartNumber(name) {
@@ -540,7 +550,7 @@ function repairAbsolute(raw, names, eps) {
 }
 
 module.exports = {
-    repairName, episodeTitleYears, partNumber, hasPartNumber,
+    repairName, episodeTitleYears, partNumber, partNumberInfo, nameNumbers, hasPartNumber,
     spinoffAbbrev, rawTokens,
     stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,

@@ -12,12 +12,16 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.8.1';
+const VERSION = '8.9.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
 const INDEXER_URL = (process.env.INDEXER_URL || 'http://indexer:3003').replace(/\/+$/, '');
 const INDEXER_FALLBACK_URL = (process.env.INDEXER_FALLBACK_URL || 'https://indexer.ddnsfree.com').replace(/\/+$/, '');
+// csfd-ratings – názvy a rok pro tituly, které jsou jen na ČSFD (ID csfd:12345 / csfd:12345:S:E); CSFD=0 vypne
+const CSFD_ON = !/^(0|false|no|off)$/i.test(process.env.CSFD || '');
+const CSFD_URL = (process.env.CSFD_URL || 'http://csfd:7020').replace(/\/+$/, '');
+const CSFD_FALLBACK_URL = (process.env.CSFD_FALLBACK_URL || 'https://csfd-rating.duckdns.org').replace(/\/+$/, '');
 // Serverový TMDB klíč — použije se, když uživatel žádný nezadal
 const TMDB_API_KEY = (process.env.TMDB_API_KEY || '').trim();
 const DEBUG = /^(1|true|yes)$/i.test(process.env.DEBUG || '');
@@ -457,6 +461,54 @@ async function resolveIds(params) {
     });
 }
 
+// ───────────────────────── ČSFD (csfd-ratings) ─────────────────────────
+// Metadata titulu jen z ČSFD → stejný tvar jako z TMDB (cz/sk/en/alt/year/runtime), source 'csfd'.
+// GET {CSFD_URL}/meta/{movie|series}/csfd:ID.json → { meta: { name, releaseInfo, runtime, titlesOther: [{ country, title }] } }
+// Cache 7 dní (metadata se skoro nemění), neexistující titul 1 den, výpadek služby se necachuje (prošlý záznam má přednost).
+const csfdDownUntil = new Map();
+const EN_COUNTRY = /^(USA|Velká Británie|Spojené království|Kanada|Austrálie|Irsko|Nový Zéland|angl)/i;
+function csfdToInfo(m, type, csfdId) {
+    const others = (m.titlesOther || []).map(t => typeof t === 'string' ? { country: null, title: t } : t).filter(t => t && t.title);
+    const pick = re => { const t = others.find(o => o.country && re.test(o.country)); return t ? t.title.trim() : null; };
+    const sk = pick(/^Slovensk/i), en = pick(EN_COUNTRY);
+    const alt = others.map(o => o.title.trim()).filter(t => t && t !== sk && t !== en && t !== m.name && M.isLatin(t)).slice(0, 3);
+    const year = parseInt(String(m.releaseInfo || m.year || '').slice(0, 4), 10) || null;
+    const runtime = type === 'movie' ? (parseInt(String(m.runtime || ''), 10) || null) : null;
+    return {
+        cz: m.name || null, sk, en, original: null, originalLanguage: null, alt, altEn: [],
+        year, runtime, media: type === 'movie' ? 'movie' : 'tv', csfdId, source: 'csfd'
+    };
+}
+async function csfdInfo(type, csfdId) {
+    const key = `csfd:${type}:${csfdId}`;
+    const hit = tmdbCache.get(key);
+    if (hit !== undefined) return hit;
+    return once(key, async () => {
+        const bases = [...new Set([CSFD_URL, CSFD_FALLBACK_URL].filter(Boolean))]
+            .filter(b => !(csfdDownUntil.get(b) > Date.now()));
+        for (const base of bases) {
+            try {
+                const resp = await needle('get', `${base}/meta/${type}/csfd:${csfdId}.json`, {
+                    open_timeout: 2000, response_timeout: 4000, read_timeout: 6000, parse: true
+                });
+                const m = resp.body && resp.body.meta;
+                if (resp.statusCode === 200 && m && m.name) {
+                    const info = csfdToInfo(m, type, csfdId);
+                    tmdbCache.set(key, info, 7 * 24 * H);
+                    return info;
+                }
+                if (resp.statusCode === 404) { tmdbCache.set(key, null, 24 * H); return null; }
+                throw new Error(`HTTP ${resp.statusCode}`);
+            } catch (e) {
+                if (!csfdDownUntil.get(base)) log(`⚠️ csfd-ratings ${base} nedostupný (${e.message}) – 5 min použiju zálohu`);
+                csfdDownUntil.set(base, Date.now() + 5 * 60 * 1000);
+            }
+        }
+        const stale = tmdbCache.getStale(key);
+        return stale !== undefined ? stale : null;
+    });
+}
+
 // ───────────────────────── TMDB / Cinemeta ─────────────────────────
 async function tmdbGet(pathq, key) {
     const bearer = key.length > 40; // v4 token
@@ -702,6 +754,12 @@ async function buildPlan(type, id, cfg) {
         if (rs && rs.imdb_id) info = await titleInfo(rs.imdb_id, type, cfg.tmdb_api_key);
         season = (rs && rs.season) || 1;
         if (rs && rs.episode && !episode) episode = rs.episode;
+    } else if (parts[0] === 'csfd' && CSFD_ON) {
+        // titul jen na ČSFD: názvy a rok z csfd-ratings, díly podle číslování ČSFD (seriál bez sérií = S1)
+        const csfdId = parseInt(parts[1], 10);
+        if (!csfdId) return null;
+        if (type === 'series') { season = parseInt(parts[2], 10) || 1; episode = parseInt(parts[3], 10) || null; }
+        info = await csfdInfo(type, csfdId);
     } else {
         return null;
     }
@@ -1792,7 +1850,7 @@ function buildManifest(base, cfg) {
     const withCatalog = hasWs(cfg) && cfg.enable_direct_search !== false;
     const withHsCatalog = hsOn(cfg) && cfg.hellspy_search !== false;
     const catalogs = [...(withCatalog ? [SEARCH_CATALOG] : []), ...(withHsCatalog ? [SEARCH_CATALOG_HS] : [])];
-    const prefixes = ['tt', 'kitsu', 'webshare', ...(HELLSPY_ON ? ['hellspy'] : [])];
+    const prefixes = ['tt', 'kitsu', ...(CSFD_ON ? ['csfd:'] : []), 'webshare', ...(HELLSPY_ON ? ['hellspy'] : [])];
     return {
         id: cfg ? personalAddonId(who(cfg)) : 'com.webshare.anime',
         version: VERSION,
@@ -2139,6 +2197,7 @@ if (require.main === module) {
     app.listen(PORT, () => {
         log(`🚀 Webshare ${VERSION} běží na portu ${PORT}`);
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
+        log(`   ČSFD (csfd: ID): ${CSFD_ON ? `${CSFD_URL} (záloha ${CSFD_FALLBACK_URL})` : 'vypnuté'}`);
         log(`   cache: ${CACHE_DIR} (TMDB ${tmdbCache.map.size}, indexer ${resolveCache.map.size} záznamů)`);
         log(`   Hellspy: ${HELLSPY_ON ? (HELLSPY_PROXY === 'direct' ? 'zapnutý (bez proxy)' : `zapnutý přes proxy ${HELLSPY_PROXY.replace(/\/\/[^@/]*@/, '//***@')}`) : 'vypnutý (chybí HELLSPY_PROXY)'}`);
         log(`   archiv hledání: ${archiveOk ? `${ARCHIVE_DIR} (${ARCHIVE_DAYS} dní)` : 'vypnutý'} | stažení: ${ADMIN_KEY ? '/admin/hledani.jsonl.gz?key=…' : 'vypnuté (chybí ADMIN_KEY)'}`);
@@ -2147,4 +2206,5 @@ if (require.main === module) {
 }
 
 module.exports = {
+    csfdToInfo,
     seasonBase, longCut, durationFilter, olderSameFromReasons, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };

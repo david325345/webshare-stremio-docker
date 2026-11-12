@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.9.0';
+const VERSION = '8.10.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -97,6 +97,7 @@ const saveCaches = () => { tmdbCache.save(); resolveCache.save(); fileCache.save
 setInterval(saveCaches, 2 * 60 * 1000).unref();
 for (const sig of ['SIGTERM', 'SIGINT']) process.on(sig, () => { saveCaches(); process.exit(0); });
 const resultCache = new TTLCache(3000);   // nalezené soubory pro dané ID (30 min, sdílené)
+const lastFull = new TTLCache(1000);      // poslední úplný výsledek pro ID (24 h) – doplnění při výpadku zdroje
 const inflight = new Map();               // souběžné stejné požadavky čekají na jeden výsledek
 
 function once(key, fn) {
@@ -509,6 +510,55 @@ async function csfdInfo(type, csfdId) {
     });
 }
 
+// Český název z ČSFD, když ho TMDB nemá (Melania Rea): /ratings/{type}/tt….json vrací odkaz …/film/{csfdId}/,
+// pak /meta/{type}/csfd:ID.json. Funguje jen u titulu, který už má na ČSFD hodnocení. Cache 30 dní, nenalezeno 6 h.
+async function csfdIdForImdb(type, imdbId) {
+    const key = `csfdid:${type}:${imdbId}`;
+    const hit = tmdbCache.get(key);
+    if (hit !== undefined) return hit;
+    return once(key, async () => {
+        const bases = [...new Set([CSFD_URL, CSFD_FALLBACK_URL].filter(Boolean))]
+            .filter(b => !(csfdDownUntil.get(b) > Date.now()));
+        for (const base of bases) {
+            try {
+                const resp = await needle('get', `${base}/ratings/${type}/${imdbId}.json`, {
+                    open_timeout: 2000, response_timeout: 6000, read_timeout: 8000, parse: true
+                });
+                if (resp.statusCode !== 200) throw new Error(`HTTP ${resp.statusCode}`);
+                const r = ((resp.body && resp.body.ratings) || []).find(x => x && /csfd\.cz\/film\/\d+/.test(x.url || ''));
+                const id = r ? parseInt(r.url.match(/\/film\/(\d+)/)[1], 10) : null;
+                tmdbCache.set(key, id, id ? 30 * 24 * H : 6 * H);
+                return id;
+            } catch (e) {
+                // první dohledání titulu na ČSFD může trvat déle – pomalá odpověď službu nevypíná (příště už bývá v cache)
+                if (!/ECONNREFUSED|ENOTFOUND|EAI_AGAIN|EHOSTUNREACH/.test(String(e.code || e.message))) continue;
+                if (!csfdDownUntil.get(base)) log(`⚠️ csfd-ratings ${base} nedostupný (${e.message}) – 5 min použiju zálohu`);
+                csfdDownUntil.set(base, Date.now() + 5 * 60 * 1000);
+            }
+        }
+        return null;
+    });
+}
+// TMDB nemá český název (chybí, nebo je stejný jako originál)
+function needsCzName(info) {
+    if (!info || info.source === 'csfd' || info.originalLanguage === 'cs') return false;
+    if (!info.cz) return true;
+    const t = x => M.tokens(x || '').join(' ');
+    return t(info.cz) === t(info.original) || (!info.original && t(info.cz) === t(info.en));
+}
+// Doplní CZ (a chybějící SK) název z ČSFD; čeká nejvýš budgetMs, jinak dotaz doběhne do cache na příště
+async function withCsfdCzName(info, type, imdbId, budgetMs = 1200) {
+    if (!CSFD_ON || !imdbId || !needsCzName(info)) return info;
+    const p = csfdIdForImdb(type, imdbId).then(id => id ? csfdInfo(type, id) : null).catch(() => null);
+    const cs = await Promise.race([p, new Promise(r => setTimeout(() => r(null), budgetMs).unref())]);
+    if (!cs || !cs.cz) return info;
+    if (info.year && cs.year && Math.abs(info.year - cs.year) > 1) return info;   // jiný titul na ČSFD
+    const t = x => M.tokens(x || '').join(' ');
+    if ([info.cz, info.en, info.original].some(x => x && t(x) === t(cs.cz))) return info;
+    dbg(`  ČSFD název k ${imdbId}: ${cs.cz}`);
+    return { ...info, cz: cs.cz, sk: info.sk || cs.sk || null, czFrom: 'csfd' };
+}
+
 // ───────────────────────── TMDB / Cinemeta ─────────────────────────
 async function tmdbGet(pathq, key) {
     const bearer = key.length > 40; // v4 token
@@ -763,6 +813,8 @@ async function buildPlan(type, id, cfg) {
     } else {
         return null;
     }
+    // TMDB bez českého názvu → zkusit ČSFD (podle IMDb ID přes csfd-ratings)
+    if (info && info.source !== 'csfd') info = await withCsfdCzName(info, type, imdb || (rs && rs.imdb_id));
 
     // Anime záznam z indexeru je platný jen pokud sedí typ (film × seriál)
     if (rs && type === 'movie' && rs.type && !/movie/i.test(rs.type) && imdb) {
@@ -804,9 +856,17 @@ async function buildPlan(type, id, cfg) {
             const k = M.nameTokens(a).join(' ');
             return baseEn.some(b => b && k !== b && k.startsWith(b + ' '));
         });
-        fr.push(full(info.cz), full(info.sk), full(info.en), full(latin(info.original)), full(longEn));
-        fr.push(short(info.cz), sub(info.cz), short(info.en), sub(info.en));
-        (info.alt || []).slice(0, 3).forEach(a => fr.push(full(a)));
+        if (info.source === 'csfd') {
+            // ČSFD: jen plné názvy – tituly jen na ČSFD bývají spin-offy/speciály ("Frieren: ●● no mahó"),
+            // zkrácený název před dvojtečkou by pouštěl mateřský seriál; zástupné znaky (●●, ??) pryč
+            const clean = t => t ? t.replace(/[●○■□◆◇★☆♦♥?？]+/g, ' ').replace(/\s+([:,.])/g, '$1').replace(/\s+/g, ' ').trim() : t;
+            fr.push(full(clean(info.cz)), full(clean(info.sk)), full(clean(info.en)));
+            (info.alt || []).slice(0, 3).forEach(a => fr.push(full(clean(a))));
+        } else {
+            fr.push(full(info.cz), full(info.sk), full(info.en), full(latin(info.original)), full(longEn));
+            fr.push(short(info.cz), sub(info.cz), short(info.en), sub(info.en));
+            (info.alt || []).slice(0, 3).forEach(a => fr.push(full(a)));
+        }
 
     }
     // Názvy z indexeru (romaji / EN pro konkrétní sezónu) – párují se s epizodou v rámci sezóny
@@ -859,7 +919,7 @@ async function buildPlan(type, id, cfg) {
         runtime: (info && info.runtime) || null,
         epRuntime: null, epRuntimeP,
         sameName: null, sameNameP,
-        coll: null, collP,
+        coll: null, collP, hasColl: !!collP,
         year: (info && info.year) || null,
         season, episode,
         alEpisode: rs ? (rs.episode || episode) : null,
@@ -988,7 +1048,7 @@ async function runQueries(cfg, queries, { ws = true, hs = true, budgetMs = 4000 
 // Vybere soubory, které sedí na název (a rok / epizodu)
 // Sedí název souboru na daný název? Zkrácený název nesmí být následován jiným podtitulem.
 function nameOk(fileName, n, plan) {
-    if (!M.titleMatches(fileName, n.text, plan && plan.names.map(x => x.text))) return false;
+    if (!M.titleMatches(fileName, n.text, plan && plan.names.map(x => x.text), plan && plan.year)) return false;
     if (n.short && M.shortNameIsNoise(fileName, n.text, n.full)) return false;
     // jiný podtitul za názvem ("House" ≠ "House of the Dragon", "Námořní vyšetřovací služba - Los Angeles");
     // u seriálů kontrola končí na značce dílu, takže název dílu za ní nevadí
@@ -1013,9 +1073,18 @@ function originalTitleWord(fileName, n, plan) {
 function animeSeasonOk(pe, n, plan) {
     if (pe.season === null) return true;
     if (pe.season === plan.season || pe.season === plan.alSeason) return true;
-    const own = M.nameTokens(n.text);
-    const seasonInName = own.some(t => /^[2-9]$/.test(t) || t === 'season' || t === 'part' || /^\d(st|nd|rd|th)$/.test(t));
-    return pe.season === 1 && seasonInName;
+    return pe.season === 1 && seasonInName(n);
+}
+function seasonInName(n) {
+    return M.nameTokens(n.text).some(t => /^[2-9]$/.test(t) || t === 'season' || t === 'part' || /^\d(st|nd|rd|th)$/.test(t));
+}
+
+// Název s rozlišením části ("… 2nd Stage", "Part 2", "2nd Season") – holé číslo dílu pod ním je číslo v části.
+// "Part 7" u JoJo je díl mangy, ne část sezóny → part/cour jen 2–4.
+function hasPartMarker(n) {
+    const t = M.nameTokens(n.text);
+    return t.some((w, i) => /^[2-9](nd|rd|th)$/.test(w) ||
+        ((w === 'part' || w === 'cour') && /^([2-4]|ii|iii|iv)$/.test(t[i + 1] || '')));
 }
 
 // Stejnojmenné seriály z plánu (i starší formát archivu = jen roky)
@@ -1030,7 +1099,7 @@ const markCountry = t => t === 'usa' ? 'us' : t === 'aus' ? 'au' : t;
 function judgeFile(f, plan) {
     if (M.isNonVideo(f.name)) return { ok: false, reason: 'nepřehratelný soubor' };
     const texts = plan.names.map(n => n.text);
-    const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text, texts));
+    const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text, texts, plan.year));
     if (plan.type === 'movie') {
         if (M.looksLikeEpisode(f.name) && !plan.names.some(n => /\b\d{1,2}x\d{1,3}\b/.test(M.normalize(n.text)))) {
             return { ok: false, reason: 'vypadá jako díl seriálu' };
@@ -1095,6 +1164,8 @@ function judgeFile(f, plan) {
         }
     }
     let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
+    // rozdělená sezóna (JoJo S06E02 = Steel Ball Run 2nd Stage 01): číslo dílu v části je menší než TMDB díl
+    const split = plan.alEpisode && plan.alEpisode < plan.episode;
     for (const n of plan.names) {
         if (!nameOk(f.name, n, plan)) continue;
         // slova za názvem: značka pokračování ("Capu2", "II", "S2") a číslo dílu
@@ -1125,13 +1196,25 @@ function judgeFile(f, plan) {
                 (pe.season === plan.season || (pe.season === null && plan.season === 1))) {
                 return { ok: true, exact: pe.explicit, reason: `název (${n.kind})`, s: pe.season, e: pe.episode };
             }
-            // anime s absolutním číslováním pod názvem franšízy (One Piece - 1094 pro S22E10)
+            // anime s absolutním číslováním pod názvem franšízy (One Piece - 1094 pro S22E10);
+            // u rozdělené sezóny jen pod názvem s rozlišením části
             if (plan.isAnime && pe.season === null && plan.alEpisode &&
-                plan.alEpisode !== plan.episode && pe.episode === plan.alEpisode) {
+                plan.alEpisode !== plan.episode && pe.episode === plan.alEpisode && (!split || hasPartMarker(n))) {
                 return { ok: true, exact: false, reason: 'absolutní číslo dílu', s: null, e: pe.episode };
             }
-        } else if (plan.alEpisode && pe.episode === plan.alEpisode && animeSeasonOk(pe, n, plan)) {
-            return { ok: true, exact: pe.explicit, reason: `název (${n.kind})`, s: pe.season, e: pe.episode };
+        } else if (plan.alEpisode) {
+            let epOk;
+            if (split && pe.explicit && pe.season === plan.season && !(pe.season === 1 && seasonInName(n))) {
+                // značka S{TMDB sezóna}Exx se počítá podle TMDB ("Steel Ball Run - S06E02" = S06E02, ne 2nd Stage 02)
+                epOk = pe.episode === plan.episode;
+            } else if (split && pe.season === null) {
+                // holé číslo jen pod názvem části ("Steel Ball Run 2nd Stage - 01"); pod společným názvem
+                // bývá průběžné číslování ("Steel Ball Run [07]" = S06E07)
+                epOk = pe.episode === plan.alEpisode && hasPartMarker(n);
+            } else {
+                epOk = pe.episode === plan.alEpisode && animeSeasonOk(pe, n, plan);
+            }
+            if (epOk) return { ok: true, exact: pe.explicit, reason: `název (${n.kind})`, s: pe.season, e: pe.episode };
         }
         reason = (pe.season !== null && pe.season !== plan.season && pe.episode === plan.episode)
             ? `jiná sezóna (S${pe.season})` : `jiný díl (${pe.season !== null ? 'S' + pe.season : ''}E${pe.episode})`;
@@ -1153,10 +1236,15 @@ function judgeFile(f, plan) {
 function filterFiles(files, plan) {
     const out = [];
     const older = new Map();
+    // vyřazené kvůli roku – pro rescueOlderSeries (vrácení souborů bez roku podle délky)
+    out.rejected = [];
     for (const f of files) {
         const j = judgeFile(f, plan);
-        if (j.ok) out.push({ f, exact: !!j.exact });
-        else countOlderNamesake(older, j.reason, plan);
+        if (j.ok) out.push({ f, exact: !!j.exact, why: j.reason });
+        else {
+            countOlderNamesake(older, j.reason, plan);
+            if (/^(bez roku \(starší seriál|rok nesedí)/.test(j.reason)) out.rejected.push({ f, why: j.reason });
+        }
     }
     plan.olderSame = olderSameOf(older);
     return out;
@@ -1263,21 +1351,40 @@ function durationMismatch(plan, it) {
     return `délka nesedí (${Math.round(min)} min, film ${rt} min)`;
 }
 
-// Délková pravidla nad celou sadou souborů (už se známou délkou) → Map ident → důvod vyřazení.
+// Pravidla nad celou sadou přijatých souborů (délka už známá) → Map ident → důvod vyřazení.
 // 1) jednotlivé soubory podle durationMismatch;
 // 2) seriál: chybná délka dílu z TMDB (Vymítač Boner S01E01: TMDB 12 min, všechny kopie 18 min) – když pravidlo
 //    vyřadilo všechny soubory se známou délkou, aspoň 3 mají shodnou délku (±3 %) a odchylka od TMDB je nejvýš 2×,
 //    pravidlo se pro tento díl vynechá;
 // 3) nový film (letos / loni) a nahraný starší stejnojmenný film (plan.olderSame ≥ 3): soubor bez roku projde jen
-//    s délkou ±3 % proti souborům s naším rokem (nebo proti TMDB); bez délky se neodešle (Mistrovský plán 2026 × 2011)
+//    s délkou ±2 % proti souborům s naším rokem (nebo proti TMDB), bez délky se neodešle (Resident Evil 2026 × 2002);
+//    soubor s rokem ±1 projde s ±3 % nebo s poměrem PAL (Mistrovský plán 2026 × The Masterplan 2025);
+// 4) film: aspoň 3 různá čísla hned za názvem ("Death-Note-01", "-02", "-04") = díly seriálu;
+// 5) film bez kolekce TMDB a nahraný starší stejnojmenný film: soubor bez roku s číslem 1–9 hned za názvem je
+//    jiný díl série ("Resident Evil 1 CZ" u Resident Evil 2026);
+// 6) seriál: "zkomolený název (překlep)" jen s délkou ±15 % proti přesně přijatým souborům (jinak proti TMDB);
+// 7) seriál se stejnojmenným seriálem: soubor s rokem ±1 (ne naším) musí sedět ±3 % na soubor s naším rokem,
+//    když jsou aspoň 2 (The Hunt 2025 HHWEB × Lov 2026)
 const NAMESAKE_MIN = 3;
+const PAL = [25 / 23.976, 23.976 / 25];
 const median = a => { const s = [...a].sort((x, y) => x - y); const i = s.length >> 1; return s.length % 2 ? s[i] : (s[i - 1] + s[i]) / 2; };
+const near = (a, b, tol) => Math.abs(a - b) <= b * tol;
+// číslo (1–3 číslice) hned za některým naším názvem
+function numberAfterName(name, plan) {
+    for (const n of plan.names) {
+        const hit = M.afterName(name, n.text);
+        if (hit && /^\d{1,3}$/.test(hit.rest[0] || '')) return +hit.rest[0];
+    }
+    return null;
+}
 function durationFilter(plan, items, now = new Date()) {
     const bad = new Map();
     const lenOf = it => (it.info && it.info.len) || null;
+    const why = it => it.why !== undefined ? it.why : judgeFile(it.f, plan).reason;
+    const live = () => items.filter(it => !bad.has(it.f.ident));
     for (const it of items) {
-        const why = durationMismatch(plan, it);
-        if (why) bad.set(it.f.ident, why);
+        const r = durationMismatch(plan, it);
+        if (r) bad.set(it.f.ident, r);
     }
     if (plan.type === 'series' && plan.epRuntime && bad.size) {
         const withLen = items.filter(lenOf);
@@ -1288,19 +1395,80 @@ function durationFilter(plan, items, now = new Date()) {
             if (close >= 3 && med <= plan.epRuntime * 2 && med >= plan.epRuntime / 2) bad.clear();
         }
     }
-    if (plan.type === 'movie' && plan.year && plan.year >= now.getUTCFullYear() - 1 && (plan.olderSame || 0) >= NAMESAKE_MIN) {
-        const ours = items.filter(it => !bad.has(it.f.ident) && lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
-        const ref = ours.length >= 2 ? median(ours) : plan.runtime ? plan.runtime * 60 : null;
-        for (const it of items) {
-            if (bad.has(it.f.ident) || M.fileYears(it.f.name).length) continue;
-            const len = lenOf(it);
-            if (!ref || !len || Math.abs(len - ref) > ref * 0.03) {
-                bad.set(it.f.ident, `bez roku (starší film stejného jména${len ? `, ${Math.round(len / 60)} min` : ''})`);
+    if (plan.type === 'movie') {
+        if (plan.year && plan.year >= now.getUTCFullYear() - 1 && (plan.olderSame || 0) >= NAMESAKE_MIN) {
+            const ours = live().filter(it => lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
+            const ref = ours.length >= 2 ? median(ours) : plan.runtime ? plan.runtime * 60 : null;
+            for (const it of live()) {
+                const ys = M.fileYears(it.f.name), len = lenOf(it);
+                if (!ys.length) {
+                    // bez roku: jen ±2 %, bez výjimky PAL (Tower Heist × Mistrovský plán má náhodou poměr PAL)
+                    if (!ref || !len || !near(len, ref, 0.02)) {
+                        bad.set(it.f.ident, `bez roku (starší film stejného jména${len ? `, ${Math.round(len / 60)} min` : ''})`);
+                    }
+                } else if (!ys.includes(plan.year) && ref && len) {
+                    // rok ±1: ±3 % nebo PAL zrychlení / zpomalení (±1 %)
+                    if (!near(len, ref, 0.03) && !PAL.some(q => near(len / ref, q, 0.01))) {
+                        bad.set(it.f.ident, `rok ±1, jiná délka (starší film stejného jména, ${Math.round(len / 60)} min)`);
+                    }
+                }
+            }
+        }
+        const nums = new Map(live().map(it => [it.f.ident, numberAfterName(it.f.name, plan)]).filter(x => x[1] !== null));
+        if (new Set(nums.values()).size >= 3) for (const id of nums.keys()) bad.set(id, 'vypadá jako díl seriálu');
+        if ((plan.olderSame || 0) > 0 && !plan.coll && !plan.hasColl) {
+            const allowed = new Set(plan.names.flatMap(n => M.nameNumbers(n.text)));
+            for (const it of live()) {
+                if (M.fileYears(it.f.name).length) continue;
+                const x = plan.names.map(n => M.partNumberInfo(it.f.name, n.text)).find(v => v && !v.before);
+                if (x && x.n >= 1 && x.n <= 9 && !allowed.has(x.n)) bad.set(it.f.ident, `bez roku s číslem za názvem (${x.n})`);
+            }
+        }
+    }
+    if (plan.type === 'series') {
+        const typo = live().filter(it => lenOf(it) && why(it) === 'zkomolený název (překlep)');
+        if (typo.length) {
+            const exact = live().filter(it => lenOf(it) && !/^zkomolen/.test(why(it))).map(lenOf);
+            const ref = exact.length ? median(exact) : plan.epRuntime ? plan.epRuntime * 60 : null;
+            for (const it of typo) {
+                if (ref && !near(lenOf(it), ref, 0.15)) bad.set(it.f.ident, `zkomolený název, délka nesedí (${Math.round(lenOf(it) / 60)} min)`);
+            }
+        }
+        if (plan.year && !plan.isAnime && sameNameOf(plan).others.length) {
+            const ours = live().filter(it => lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
+            if (ours.length >= 2) {
+                for (const it of live()) {
+                    const ys = M.fileYears(it.f.name), len = lenOf(it);
+                    if (!len || ys.includes(plan.year) || !ys.some(y => Math.abs(y - plan.year) === 1)) continue;
+                    if (!ours.some(l => near(len, l, 0.03))) bad.set(it.f.ident, `rok ±1, jiná délka (jiný seriál stejného jména, ${Math.round(len / 60)} min)`);
+                }
             }
         }
     }
     return bad;
 }
+
+// Seriál se starším (známějším) stejnojmenným seriálem: soubor vyřazený jako "bez roku (starší seriál)" se vrátí,
+// když po vynechání tohoto pravidla projde a jeho délka sedí ±2 % na přijatý soubor s naším rokem, ale na žádný
+// soubor téhož dílu s rokem staršího seriálu (Lov 2026 CZ dabing 2975 s × The Hunt 2015 3464 s). Bez souboru
+// se starším rokem a délkou se nic nemění (Scrubs 2001 i 2026 mají díl 1347 s).
+// rejected = [{ f, info, why }] – vyřazené soubory se známou délkou; vrací vrácené položky
+function rescueOlderSeries(plan, items, rejected) {
+    if (plan.type !== 'series' || !plan.year || !plan.season || !plan.episode || plan.isAnime) return [];
+    const lenOf = it => (it.info && it.info.len) || null;
+    const older = new Set(sameNameOf(plan).others.filter(o => o.y < plan.year - 1).map(o => o.y));
+    if (!older.size) return [];
+    const ep = new RegExp(`\\bs0*${plan.season} ?e0*${plan.episode}\\b|\\b0*${plan.season}x0*${plan.episode}\\b`);
+    const refs = [...items, ...rejected].filter(it => lenOf(it) && M.fileYears(it.f.name).some(y => older.has(y)) && ep.test(M.normalize(it.f.name))).map(lenOf);
+    if (!refs.length) return [];
+    const ours = items.filter(it => lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
+    if (!ours.length) return [];
+    const plain = { ...plan, sameName: null };
+    return rejected.filter(it => /^bez roku \(starší seriál/.test(it.why || '') && lenOf(it) &&
+        ours.some(l => near(lenOf(it), l, 0.02)) && !refs.some(l => near(lenOf(it), l, 0.02)) && judgeFile(it.f, plain).ok)
+        .map(it => ({ ...it, exact: false, why: RESCUED }));
+}
+const RESCUED = 'bez roku, délka sedí na náš seriál';
 
 // Doplní file_info pro dané soubory (max 6 souběžně, časový limit 2,5 s – zbytek doběhne na pozadí do cache)
 const fileCache = new PersistentCache('files', 200000);
@@ -1502,13 +1670,38 @@ async function findFiles(type, id, cfg) {
                 return { ...it, info: fi || it.info };
             })
             .filter(it => !it.info || it.info.ok !== false);
+        // soubory bez roku vyřazené kvůli staršímu stejnojmennému seriálu – zpět, když délkou sedí na náš rok
+        const rejected = (items.rejected || []).map(it => {
+            const fi = it.f.hs ? null : fileCache.get(it.f.ident);
+            return { ...it, info: it.f.hs ? { len: it.f.len } : fi || null };
+        }).filter(it => it.info && it.info.len && it.info.ok !== false);
+        const rescued = rescueOlderSeries(plan, playable, rejected);
+        if (rescued.length) playable.push(...rescued);
         const durationBad = durationFilter(plan, playable);
         ranked = rankFiles(expandHellspy(capHellspy(dedupeBySize(rankFiles(playable
             .filter(it => !durationBad.has(it.f.ident))), false, dupes), HS_MAX_FILES)));
+        // výpadek zdroje (deg) a výrazně méně streamů než minule → doplnit z posledního úplného výsledku (24 h);
+        // odkaz se řeší až při přehrání podle identu, smazaný soubor selže až tam
+        const sendMax = plan.type === 'movie' ? 30 : 25;
+        if (!degraded && ranked.length) lastFull.set(key, ranked.slice(0, sendMax + 10), 24 * H);
+        else if (degraded) {
+            const prev = lastFull.get(key);
+            if (prev && Math.min(ranked.length, sendMax) < Math.min(prev.length, sendMax) / 3) {
+                const k = it => `${sizeKey(it.f) || it.f.ident}|${it.conv || ''}`;
+                const have = new Set(ranked.map(k));
+                const add = prev.filter(it => !have.has(k(it)));
+                if (add.length) {
+                    ranked = rankFiles([...ranked, ...add]);
+                    deg.fill = add.length;
+                    log(`  ♻️ výpadek zdroje – doplněno ${add.length} položek z posledního úplného výsledku`);
+                }
+            }
+        }
         const res = { plan, items: ranked, queries, total: files.size, ms: Date.now() - t0 };
         // neúplné obohacení (časový limit) → kratší cache, ať se stopy brzy doplní; výpadek zdroje → 1 min
         if (ranked.length) resultCache.set(key, res, (degraded ? 1 : complete ? 30 : 3) * 60 * 1000);
-        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src, dupes, deg);
+        archiveSearch(plan, [...w1, ...(queries > w1.length ? w2 : [])], files, ranked, res.ms, durationBad, src, dupes, deg,
+            new Set(rescued.map(it => it.f.ident)));
         return res;
     });
 }
@@ -1533,7 +1726,7 @@ function archiveWrite(rec) {
     });
 }
 
-function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes, deg) {
+function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes, deg, rescued) {
     if (!archiveOk) return;
     const sent = new Map();
     ranked.slice(0, plan.type === 'movie' ? 30 : 25).forEach((it, i) => { if (!sent.has(it.f.ident)) sent.set(it.f.ident, i + 1); });
@@ -1548,7 +1741,8 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes
         names: plan.names.map(n => ({ text: n.text, kind: n.kind, short: !!n.short, ...(n.seasonOnly ? { seasonOnly: n.seasonOnly } : {}) })),
         queries: queries.map(q => q.q), ms,
         files: [...files.values()].map(f => {
-            const j = judgeFile(f, plan);
+            let j = judgeFile(f, plan);
+            if (!j.ok && rescued && rescued.has(f.ident)) j = { ok: true, reason: RESCUED };
             const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
             if (f.hs) rec.src = 'hs';
             if (dupes && dupes.has(f.ident)) rec.dup = 1;   // stejná velikost jako jiný (odeslaný) soubor
@@ -2207,4 +2401,4 @@ if (require.main === module) {
 
 module.exports = {
     csfdToInfo,
-    seasonBase, longCut, durationFilter, olderSameFromReasons, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };
+    seasonBase, longCut, durationFilter, needsCzName, withCsfdCzName, olderSameFromReasons, rescueOlderSeries, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };

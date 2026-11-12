@@ -41,7 +41,11 @@ for (const r of byId.values()) {
   const judgeAll = (S, pl) => {
     const js = r.files.map(f => S.judgeFile ? S.judgeFile({ name: f.n }, pl) : { ok: f.ok, reason: f.r });
     const p2 = { ...pl, olderSame: S.olderSameFromReasons ? S.olderSameFromReasons(js.map(j => j.reason), pl) : 0 };
-    const items = r.files.map((f, i) => ({ f: { name: f.n, ident: i }, info: f.len ? { len: f.len } : null })).filter((_, i) => js[i].ok);
+    const all = r.files.map((f, i) => ({ f: { name: f.n, ident: i, hs: f.src === 'hs' }, info: f.len ? { len: f.len } : null, why: js[i].reason }));
+    const items = all.filter((_, i) => js[i].ok);
+    // vrácené soubory bez roku (starší stejnojmenný seriál) podle délky
+    const rescued = S.rescueOlderSeries ? S.rescueOlderSeries(p2, items, all.filter((it, i) => !js[i].ok && it.info)) : [];
+    for (const it of rescued) { js[it.f.ident] = { ok: true, reason: it.why }; items.push(it); }
     const bad = S.durationFilter ? S.durationFilter(p2, items, at)
       : new Map(items.filter(it => it.info && S.durationMismatch && S.durationMismatch(p2, it)).map(it => [it.f.ident, S.durationMismatch(p2, it)]));
     return js.map((j, i) => j.ok && bad.has(i) ? { ok: false, reason: bad.get(i) } : j);

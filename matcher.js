@@ -90,7 +90,7 @@ function shortTitle(str) {
 // - víceslovný název musí být na začátku; před ním smí stát jen číslo/značka dílu/rok
 //   nebo jiný náš název (CZ "Válka ve Vietnamu - The Vietnam War"), jinak by
 //   "Inside the Vietnam War" / "Turning Point The Vietnam War" sedělo na "The Vietnam War"
-function titleMatches(fileName, name, others) {
+function titleMatches(fileName, name, others, year) {
     const ft = fileTokens(fileName);
     const nt = nameTokens(name);
     if (!nt.length || !ft.length) return false;
@@ -104,6 +104,8 @@ function titleMatches(fileName, name, others) {
         if (idx > 0 && PREFIX_BAD.has(sig[idx - 1])) return false;   // "Lego Batman 2022"
         // před názvem jen číslo / značka dílu a soubor má značku dílu ("2 Reacher CZ S01E02")
         if (idx > 0 && sig.slice(0, idx).every(t => PREFIX_OK.test(t)) && looksLikeEpisode(fileName)) return true;
+        // před názvem přesně náš rok ("2007 Ratatouille", "1995 Se7en", "2020_Šarlatán") – jen rok, ne jiné číslo
+        if (idx === 1 && year && sig[0] === String(year)) return true;
         return !!next && /^(19|20)\d{2}$/.test(next);
     }
     // víceslovný název: slova musí jít za sebou ve stejném pořadí (mezery do 3 slov),
@@ -114,8 +116,9 @@ function titleMatches(fileName, name, others) {
     const prefix = ft.filter(t => !STOPWORDS.has(t)).slice(0, hit.start);
     const words = prefix.filter(t => !PREFIX_OK.test(t) && !ROMAN_ANY.test(t) && !PREFIX_NOISE.has(t));
     if (!words.length) return true;
-    // jedno slovo před názvem ("Batman 5 Temný rytíř", "HNS_Rokudenashi…") – kromě dokumentárních
-    if (words.length === 1 && !PREFIX_BAD.has(words[0])) return true;
+    // jedno slovo před názvem ("Batman 5 Temný rytíř", "HNS_Rokudenashi…") – kromě dokumentárních;
+    // název začínající předložkou je za cizím slovem skoro vždy konec jiného názvu ("Právník na doživotí", "Veganka na útěku")
+    if (words.length === 1 && !PREFIX_BAD.has(words[0]) && !PREPOSITIONS.has(nt[0])) return true;
     // název oddělený pomlčkou ("Filmy od LM --- Temný rytíř povstal")
     const raw = stripLeadingGroups(fileName);
     const re = /\s+[-–—]+\s+|-{2,}|_-_|\s+\|\s+/g;
@@ -132,6 +135,8 @@ function titleMatches(fileName, name, others) {
         return !!h && h.start === 0;
     });
 }
+// předložky na začátku názvu ("Na doživotí", "Na útěku", "Z pekla") – samotné "k" ne ("K-pop …")
+const PREPOSITIONS = new Set('na v ve z ze za do po o u ke s se od pro pod nad pred'.split(' '));
 // slova před názvem, která se nepočítají (poznámky uploaderů, přípona kanálu): "Novinka_fv_…", "Horror MKV-…"
 const PREFIX_NOISE = new Set(['novinka', 'novinky', 'fv', 'mkv', 'avi', 'mp4']);
 // slova, která smí stát před názvem: číslo, značka dílu, rok, římská číslice
@@ -178,8 +183,13 @@ function stripTech(n) {
 // Rozpozná sezónu a epizodu z názvu souboru.
 // excludeTokens = slova hledaného názvu (aby "Mob Psycho 100" nebylo epizoda 100)
 // Vrací { season, episode, explicit } – explicit = měl SxxEyy / NxNN
+const AIR_DATE = /\b(?:19|20)\d{2} (?:0[1-9]|1[0-2]) (?:0[1-9]|[12]\d|3[01])\b/g;   // po normalize: "2026 01 16"
 function parseEpisode(fileName, excludeTokens, restTokens) {
-    let n = normalize(fileName);
+    // datum vysílání ("Dateline.NBC.2026.01.16.…") není díl ani sezóna
+    // – takový soubor má díl jen se značkou SxxEyy / NxNN, jinak "bez čísla dílu"
+    const n0 = normalize(fileName);
+    let n = n0.replace(AIR_DATE, ' ');
+    const hasDate = n !== n0;
     let season = null, episode = null, explicit = false;
 
     // S01E05, S1 E5, S01.E05, S01-E05
@@ -197,6 +207,8 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
     // 01E06 – sezóna a díl bez "S" ("Na seznamu smrti 01E06")
     m = n.match(/\b(\d{2})e(\d{2,3})\b/);
     if (m && +m[1] > 0) return { season: +m[1], episode: +m[2], explicit: true };
+
+    if (hasDate) return { season: null, episode: null, explicit: false };
 
     // Sezóna: "season 2", "2nd season", "s2", "2 serie", "2 rada"
     m = n.match(/\b(\d{1,2})(?:st|nd|rd|th)\s?season\b/) || n.match(/\bseason\s?(\d{1,2})\b/) ||
@@ -396,6 +408,11 @@ function subtitleNoise(fileName, name, allow, mode) {
     const hit = afterName(cleaned, name);
     if (!hit) return false;
     const series = mode === 'series';
+    // "S01E02 Chainsaw Man - Arrival in Tokyo": značka dílu před víceslovným názvem → zbytek je název dílu
+    if (series && hit.start === 1 && nameTokens(name).length >= 2) {
+        const first = fileTokens(cleaned).filter(t => !STOPWORDS.has(t))[0];
+        if (/^s\d{1,2}e\d{1,4}$/.test(first || '')) return false;
+    }
     const rest6 = hit.rest.slice(0, 6);
     for (let i = 0; i < rest6.length; i++) {
         const t = rest6[i];
@@ -405,6 +422,7 @@ function subtitleNoise(fileName, name, allow, mode) {
         if (/^(cz|cze|sk|en|eng)+(dab|dabing|tit|titulky|sub|subs|audio)?$/.test(t)) return false;  // "CZdab", "CZEN", "CZSKEN"
         if (/^s\d{1,2}(e\d{1,4})?$/.test(t) || /^e\d{1,4}$/.test(t) || /^\d{1,2}x\d{1,4}$/.test(t) || /^ep\d*$/.test(t)) return false;
         if (/^\d+$/.test(t)) { if (series) return false; continue; }                  // film: "Pán prstenů 1 …"
+        if (t === 'aka') continue;                                                     // "Crá AKA Boglands S02E01"
         if (t.length < 2 || (series && t.length <= 2)) continue;
         if (ROMAN[t] || (allow && allow.has(t))) continue;
         if (!/^[a-z]+$/.test(t)) return false;                                         // 1080p, 05v2 …

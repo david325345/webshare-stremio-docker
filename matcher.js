@@ -184,6 +184,25 @@ function stripTech(n) {
 // excludeTokens = slova hledaného názvu (aby "Mob Psycho 100" nebylo epizoda 100)
 // Vrací { season, episode, explicit } – explicit = měl SxxEyy / NxNN
 const AIR_DATE = /\b(?:19|20)\d{2} (?:0[1-9]|1[0-2]) (?:0[1-9]|[12]\d|3[01])\b/g;   // po normalize: "2026 01 16"
+// Rozsah dílů ve značce: "S01E01E02", "S01E01-E02", "S01E01-02", "1x01-02", "1x01+02", "1x01-1x02" → { season, from, to }.
+// Na surovém názvu (normalize by smazal rozdíl mezi "-" a mezerou); konec rozsahu nejvýš o 4 díly dál
+// ("S01E01 - 2004", "S01E01-720p", "01x01 - 2nd Stage" ani "S01E01 - 5.1" rozsah nejsou).
+function episodeRange(fileName) {
+    const raw = String(fileName || '').toLowerCase();
+    const res = [
+        /s0*(\d{1,2})[ ._]?e0*(\d{1,4})[ ._]?[-+&]?[ ._]?e0*(\d{1,4})(?![\da-z]|\.\d)/,
+        /s0*(\d{1,2})[ ._]?e0*(\d{1,4})[ ._]?[-+&][ ._]?0*(\d{1,4})(?![\da-z]|\.\d)/,
+        /(?:^|[^\da-z])(\d{1,2})x0*(\d{1,4})[ ._]?[-+&][ ._]?(?:\d{1,2}x)?0*(\d{1,4})(?![\da-z]|\.\d)/
+    ];
+    for (const re of res) {
+        const m = raw.match(re);
+        if (!m) continue;
+        const season = +m[1], from = +m[2], to = +m[3];
+        if (to > from && to - from <= 4) return { season, from, to };
+    }
+    return null;
+}
+
 function parseEpisode(fileName, excludeTokens, restTokens) {
     // datum vysílání ("Dateline.NBC.2026.01.16.…") není díl ani sezóna
     // – takový soubor má díl jen se značkou SxxEyy / NxNN, jinak "bez čísla dílu"
@@ -573,6 +592,6 @@ module.exports = {
     stripLeadingGroups, subtitleNoise,
     isNonVideo, afterName, sequelSeason, shortNameIsNoise, subTitle,
     normalize, tokens, nameTokens, queryText, isLatin, shortTitle,
-    titleMatches, fileYears, parseEpisode, looksLikeEpisode,
+    titleMatches, fileYears, parseEpisode, episodeRange, looksLikeEpisode,
     detectLang, langScore, detectQuality
 };

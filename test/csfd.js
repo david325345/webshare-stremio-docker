@@ -40,10 +40,13 @@ const META = {
     // Frieren mini anime: zástupné znaky ●● a název "Seriál: podtitul" (zkrácené názvy se u ČSFD nepoužijí)
     '/meta/series/csfd:1437967.json': { meta: { name: 'Sósó no Frieren: ●● no mahó', releaseInfo: '2023',
         titlesOther: [{ country: 'USA', title: "Frieren: Beyond Journey's End Mini Anime" }] } },
-    '/ratings/series/tt45114341.json': { ratings: [{ source: 'ČSFD', value: 71, url: 'https://www.csfd.cz/film/1660000/' }] },
+    // csfd-ratings 1.7.0: ČSFD ID i bez hodnocení
+    '/csfd-id/series/tt45114341.json': { csfdId: 1660000, title: 'Melania Rea: Případ, který otřásl Itálií', year: 2026 },
     '/meta/series/csfd:1660000.json': { meta: { name: 'Melania Rea: Případ, který otřásl Itálií', releaseInfo: '2026',
         titlesOther: [{ country: 'Itálie', title: 'Melania Rea' }] } },
-    '/ratings/series/tt0000001.json': { ratings: [] }
+    '/csfd-id/series/tt0000001.json': { csfdId: null },
+    // starší služba bez /csfd-id (404) → ID z odkazu v /ratings
+    '/ratings/series/tt0000002.json': { ratings: [{ source: 'csfd', value: 71, url: 'https://www.csfd.cz/film/1660000/' }] }
 };
 async function online() {
     const http = require('http');
@@ -71,8 +74,10 @@ async function online() {
         assert.strictEqual(tm.cz, 'Melania Rea');   // záznam z cache se nemění
         // jiný rok na ČSFD → jiný titul, nic se nepřidá
         assert.strictEqual((await S.withCsfdCzName({ ...tm, year: 2010 }, 'series', 'tt45114341')).cz, 'Melania Rea');
-        // bez hodnocení na ČSFD → beze změny
+        // na ČSFD nenalezeno → beze změny
         assert.strictEqual(await S.withCsfdCzName({ ...tm }, 'series', 'tt0000001').then(x => x.cz), 'Melania Rea');
+        // starší csfd-ratings bez /csfd-id → záloha přes /ratings
+        assert.strictEqual(await S.withCsfdCzName({ ...tm }, 'series', 'tt0000002').then(x => x.cz), 'Melania Rea: Případ, který otřásl Itálií');
         // TMDB český název má → ČSFD se neptá
         assert.strictEqual(S.needsCzName({ ...tm, cz: 'Případ Melania' }), false);
         assert.strictEqual(S.needsCzName({ ...tm, originalLanguage: 'cs' }), false);

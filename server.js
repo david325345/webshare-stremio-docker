@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.10.0';
+const VERSION = '8.10.1';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -510,23 +510,33 @@ async function csfdInfo(type, csfdId) {
     });
 }
 
-// Český název z ČSFD, když ho TMDB nemá (Melania Rea): /ratings/{type}/tt….json vrací odkaz …/film/{csfdId}/,
-// pak /meta/{type}/csfd:ID.json. Funguje jen u titulu, který už má na ČSFD hodnocení. Cache 30 dní, nenalezeno 6 h.
+// Český název z ČSFD, když ho TMDB nemá (Melania Rea): csfd-ratings /csfd-id/{type}/tt….json vrátí ČSFD ID
+// i u titulu bez hodnocení (od csfd-ratings 1.7.0), starší služba (404) → /ratings/{type}/tt….json, kde je odkaz
+// …/film/{csfdId}/ jen u titulu s hodnocením. Pak /meta/{type}/csfd:ID.json. Cache 30 dní, nenalezeno 6 h.
 async function csfdIdForImdb(type, imdbId) {
     const key = `csfdid:${type}:${imdbId}`;
     const hit = tmdbCache.get(key);
     if (hit !== undefined) return hit;
+    const get = (base, p) => needle('get', `${base}${p}`, {
+        open_timeout: 2000, response_timeout: 6000, read_timeout: 8000, parse: true
+    });
     return once(key, async () => {
         const bases = [...new Set([CSFD_URL, CSFD_FALLBACK_URL].filter(Boolean))]
             .filter(b => !(csfdDownUntil.get(b) > Date.now()));
         for (const base of bases) {
             try {
-                const resp = await needle('get', `${base}/ratings/${type}/${imdbId}.json`, {
-                    open_timeout: 2000, response_timeout: 6000, read_timeout: 8000, parse: true
-                });
-                if (resp.statusCode !== 200) throw new Error(`HTTP ${resp.statusCode}`);
-                const r = ((resp.body && resp.body.ratings) || []).find(x => x && /csfd\.cz\/film\/\d+/.test(x.url || ''));
-                const id = r ? parseInt(r.url.match(/\/film\/(\d+)/)[1], 10) : null;
+                let id;
+                const resp = await get(base, `/csfd-id/${type}/${imdbId}.json`);
+                if (resp.statusCode === 200) {
+                    id = resp.body && Number.isFinite(resp.body.csfdId) ? resp.body.csfdId : null;
+                } else if (resp.statusCode === 404) {
+                    const old = await get(base, `/ratings/${type}/${imdbId}.json`);
+                    if (old.statusCode !== 200) throw new Error(`HTTP ${old.statusCode}`);
+                    const r = ((old.body && old.body.ratings) || []).find(x => x && /csfd\.cz\/film\/\d+/.test(x.url || ''));
+                    id = r ? parseInt(r.url.match(/\/film\/(\d+)/)[1], 10) : null;
+                } else {
+                    throw new Error(`HTTP ${resp.statusCode}`);
+                }
                 tmdbCache.set(key, id, id ? 30 * 24 * H : 6 * H);
                 return id;
             } catch (e) {
@@ -1364,7 +1374,11 @@ function durationMismatch(plan, it) {
 //    jiný díl série ("Resident Evil 1 CZ" u Resident Evil 2026);
 // 6) seriál: "zkomolený název (překlep)" jen s délkou ±15 % proti přesně přijatým souborům (jinak proti TMDB);
 // 7) seriál se stejnojmenným seriálem: soubor s rokem ±1 (ne naším) musí sedět ±3 % na soubor s naším rokem,
-//    když jsou aspoň 2 (The Hunt 2025 HHWEB × Lov 2026)
+//    když jsou aspoň 2 (The Hunt 2025 HHWEB × Lov 2026);
+// 8) seriál se stejnojmenným seriálem, aspoň 5 souborů se známou délkou: soubor bez našeho roku s délkou mimo ±15 %
+//    od mediánu dílu je jiný seriál (Drákula 2013 × Dracula 2020 s 90min díly, Na doživotí × BBC Life +16–19 %).
+//    Medián ze souborů s naším rokem (aspoň 2), jinak ze všech – pak jen když je odlehlých nejvýš třetina
+//    (při převaze cizího seriálu by medián patřil jemu). Soubor s rozsahem dílů ("1x01-02") se nevyřadí.
 const NAMESAKE_MIN = 3;
 const PAL = [25 / 23.976, 23.976 / 25];
 const median = a => { const s = [...a].sort((x, y) => x - y); const i = s.length >> 1; return s.length % 2 ? s[i] : (s[i - 1] + s[i]) / 2; };
@@ -1441,6 +1455,19 @@ function durationFilter(plan, items, now = new Date()) {
                     const ys = M.fileYears(it.f.name), len = lenOf(it);
                     if (!len || ys.includes(plan.year) || !ys.some(y => Math.abs(y - plan.year) === 1)) continue;
                     if (!ours.some(l => near(len, l, 0.03))) bad.set(it.f.ident, `rok ±1, jiná délka (jiný seriál stejného jména, ${Math.round(len / 60)} min)`);
+                }
+            }
+            const withLen = live().filter(lenOf);
+            if (withLen.length >= 5) {
+                const isOurs = it => M.fileYears(it.f.name).includes(plan.year);
+                const oursLen = withLen.filter(isOurs).map(lenOf);
+                const anchored = oursLen.length >= 2;
+                const ref = median(anchored ? oursLen : withLen.map(lenOf));
+                const odd = withLen.filter(it => !isOurs(it) && !near(lenOf(it), ref, 0.15) && !M.episodeRange(it.f.name));
+                if (anchored || odd.length <= withLen.length / 3) {
+                    for (const it of odd) {
+                        bad.set(it.f.ident, `délka nesedí na náš seriál (${Math.round(lenOf(it) / 60)} min, díl ${Math.round(ref / 60)} min)`);
+                    }
                 }
             }
         }
@@ -1536,14 +1563,15 @@ function expandHellspy(items) {
 // Stejný soubor nahraný víckrát (shodná velikost na bajt, v rámci jednoho zdroje) → jen jednou;
 // první = nejlépe seřazený. Webshare × Hellspy se neslučuje (originál × převod MP4).
 const sizeKey = f => (f.size ? `${f.hs ? 'h' : 'w'}:${f.size}` : null);
+// dropped: Map vyřazená kopie → ident ponechaného souboru (archiv u kopie zapíše verdikt ponechaného)
 function dedupeBySize(items, onlyHs, dropped) {
-    const seen = new Set();
+    const seen = new Map();
     return items.filter(it => {
         if (onlyHs && !it.f.hs) return true;
         const k = sizeKey(it.f);
         if (!k) return true;
-        if (seen.has(k)) { if (dropped) dropped.add(it.f.ident); return false; }
-        seen.add(k);
+        if (seen.has(k)) { if (dropped) dropped.set(it.f.ident, seen.get(k)); return false; }
+        seen.set(k, it.f.ident);
         return true;
     });
 }
@@ -1568,12 +1596,12 @@ function langProfile(name) {
     return `${l.cz ? 'cz' : ''}${l.sk ? 'sk' : ''}${l.dub ? 'D' : l.sub ? 'T' : ''}`;
 }
 function dedupeHellspyCopies(items, dropped) {
-    const seen = new Set();
+    const seen = new Map();
     return items.filter(it => {
         if (!it.f.hs || !it.f.len) return true;
         const k = `${it.f.len}|${langProfile(it.f.name)}`;
-        if (seen.has(k)) { if (dropped) dropped.add(it.f.ident); return false; }
-        seen.add(k);
+        if (seen.has(k)) { if (dropped) dropped.set(it.f.ident, seen.get(k)); return false; }
+        seen.set(k, it.f.ident);
         return true;
     });
 }
@@ -1647,7 +1675,7 @@ async function findFiles(type, id, cfg) {
             queries += w2.length;
         }
         // Hellspy: délka už z hledání
-        const dupes = new Set();
+        const dupes = new Map();
         let ranked = dedupeHellspyCopies(dedupeBySize(rankFiles(items.map(it => it.f.hs ? { ...it, info: { len: it.f.len } } : it)), true, dupes), dupes);
         // file_info (Webshare) a detail (Hellspy) pro nejlepší soubory – souběžně, s časovým limitem
         const max = plan.type === 'movie' ? 30 : 25;
@@ -1746,7 +1774,12 @@ function archiveSearch(plan, queries, files, ranked, ms, durationBad, src, dupes
             const rec = { n: f.name, s: f.size, ok: j.ok, r: j.reason };
             if (f.hs) rec.src = 'hs';
             if (dupes && dupes.has(f.ident)) rec.dup = 1;   // stejná velikost jako jiný (odeslaný) soubor
-            if (j.ok && durationBad && durationBad.has(f.ident)) { rec.ok = false; rec.r = durationBad.get(f.ident); }
+            if (j.ok && durationBad) {
+                // kopie převezme vyřazení ponechaného souboru (Hodnej × "Good Boy (2025)" – kopie byla v archivu ok)
+                let id = f.ident;
+                for (let i = 0; i < 4 && !durationBad.has(id) && dupes && dupes.has(id); i++) id = dupes.get(id);
+                if (durationBad.has(id)) { rec.ok = false; rec.r = durationBad.get(id); }
+            }
             const fi = fileCache.get(f.ident);
             if (f.hs) {   // Hellspy: délka z hledání, převody a titulky z detailu
                 if (f.len) rec.len = f.len;

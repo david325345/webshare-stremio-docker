@@ -67901,5 +67901,1455 @@
    }
   ],
   "at": "2026-11-10T19:27:38.062Z"
+ },
+ {
+  "plan": {
+   "sameName": [
+    {
+     "y": 2020,
+     "v": 872,
+     "c": "uk"
+    },
+    {
+     "ours": true,
+     "v": 420,
+     "c": "us"
+    }
+   ],
+   "coll": null,
+   "type": "series",
+   "id": "tt2296682:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Drákula",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Dracula",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "drakula",
+    "dracula"
+   ],
+   "year": 2013,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 45
+  },
+  "files": [
+   {
+    "n": "Drákula - S01E01 - The Blood is the Life",
+    "len": 2576,
+    "ok": true
+   },
+   {
+    "n": "Drakula S01E01 (2020) CZ dabing NOVINKA",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Drákula - S1E1 The Blood is the Life CS",
+    "len": 2576,
+    "ok": true
+   },
+   {
+    "n": "Drákula S01E01 - Krev znamená život CZ Dabing",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Drakula S01E01 (2020) CZ dabing NOVINKA.avi",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E01 - Krev znamená život SD CZ Dabing",
+    "len": 2584,
+    "ok": true
+   },
+   {
+    "n": "Drakula.S01E01.Krev.znamena.zivot.DVDRip.x264.720x576",
+    "len": 2584,
+    "ok": true
+   },
+   {
+    "n": "Drakula_S01E01_2013_CZ_",
+    "len": 2584,
+    "ok": true
+   },
+   {
+    "n": "Drákula (1) - Krev znamená život.Drakula S01E01 - Krev znamena zivot.Lovok.DVB-T.x264",
+    "len": 2553,
+    "ok": true
+   },
+   {
+    "n": "Drákula - S1E1 The Blood is the Life EN",
+    "len": 2576,
+    "ok": true
+   },
+   {
+    "n": "Drákula - S1E1 The Blood Is The Life EN",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Drákula - S1E1 The Blood Is The Life CS",
+    "len": 2576,
+    "ok": true
+   },
+   {
+    "n": "Drákula - S1E1 The Blood Is The Life SK",
+    "len": 2576,
+    "ok": true
+   },
+   {
+    "n": "Drákula S01E01 CZ 2013 by Stifler.mp4",
+    "len": 2585,
+    "ok": true
+   },
+   {
+    "n": "Drákula (Dracula) S01E01 Krev znamená život CZ dab..avi",
+    "len": 2553,
+    "ok": true
+   },
+   {
+    "n": "Drákula (Dracula) S01E01 Krev znamená život CZ dab .avi",
+    "ok": true
+   },
+   {
+    "n": "Drákula-(4)---Rozbřesk-věčné-noci.Drakula-S01E04---Rozbresk-vecne-noci.Lovok.DVB-T.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "2.Drakula Neznama legenda - Drakula Zrod legendy - Dracula Untold (2014) cz dab.avi",
+    "ok": false
+   },
+   {
+    "n": "1 Drakula.Grof-Hun.XviD-1970.avi",
+    "ok": false
+   },
+   {
+    "n": "3 Drakula.2000-Hun.XviD-2000.avi",
+    "ok": false
+   },
+   {
+    "n": "5 Drakula.3.Az.orokseg-Hun.XviD-2005.avi",
+    "ok": false
+   },
+   {
+    "n": "6 Drakula-Hun.XviD-2006.avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula CZ muzikál by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula---muzikál.avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula.CZ.avi.1992.avi",
+    "ok": false
+   },
+   {
+    "n": "VÁŽENÝ DRÁKULO (animovaný 2012) -41min. -byRX.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula-1992-CZDAB.avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 01. Krev znamená život (DVDRip-Cz SS23 bt).avi",
+    "len": 2527,
+    "ok": true
+   },
+   {
+    "n": "Drákula - 02. Závan síry (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 03. Kupčení o osudy (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 04. Rozbřesk věčné noci (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 05. Ďáblův valčík (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 06. O netvorech a lidech (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 07. Sluha dvou pánů (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 08. Přijď zemřít (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 09. Čtyři růže (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - 10. Budiž světlo (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula (Dracula) S01E03 Kupčení s osudem CZ dab..mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula (Dracula) S01E02 Závan síry CZ dab..mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula (Dracula) S01E04  Rozbřesk věčné noci CZ dab..avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula (Dracula) S01E06 O netvorech a lidech  CZ dab..avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula (Dracula) S01E07 Sluha dvou pánů CZ dab..avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula - Neznáma legenda - 2014-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula Neznama Legenda_DVDRip_2014_CZ_Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula-Neznama-legenda.2014-cz-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula neznama legenda CZdub.avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula Neznámá legenda CZ - F, D, A, V - 64- 2014 1080p Evans by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula-Neznama-legenda.CZ-DABING J.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula neznama legenda -  2014 cz dabing (fantasy-akční).avi",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E02 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E03 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E04 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E05 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E06 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E07 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula S01E10 CZ 2013 by Stifler.mp4",
+    "ok": false
+   },
+   {
+    "n": "Drákula Neznámá legenda (2014)CZ Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Drakula-neznama-legenda-2014-cz-dabing-SABRI.avi",
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) - CZ DABING",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 - Pravidla bestie 1080p CZ Dabing",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing BeDev2026",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing Top2026",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 2020 CZ DABING lpf",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 - Pravidla bestie CZ Dabing",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.Pravidla bestie.1080p.CZ.73 STEN.ok",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 CZ DABING",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.1080p.NF.WEB-DL.DDP5.1.x264 CZ",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.Pravidla bestie.1080p.CZ.EN.73 STEN.ok",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.1080p.CZ.EN.WEB-K0F0LA",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing TopCZ",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01  T.O.P",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing CZ-SK-(CZ)",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 ROY",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01  T.O.P-M-",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01  T.O.P Movie",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 (BOU)",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 GO",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 (BoBo)",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing BeKubino",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 (Kvalitni)",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 A+B",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.CZdab.S01E01",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing TopKvalita",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing Subnaut",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing-To.p.",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing - (T.o.P)",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01   (Top Movie)",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.CZdab.S01E01.KVALITNÍ",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.CZdab.S01E01.TOP.Kvalita",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 PlnáKvalita}",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing Be.20.8.",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing-V.2.",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula_2020_CZdab_S01E01 TOP_Kvalita",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 ¤OstrýObraz¤",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing Vod",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01 (2020) CZ Dabing-TOP.nov.V2",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula S01E01-03 2020 CZ dab 1080p - Pravidla bestie",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.CZdab.S01E01.TOP.Kvalita XD ",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.CZdab.S01E01.By.mina.",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2020 CZdab S01E01 TOP Kvalita [SuperKvalita] ",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.CZdab.S01E01 JOKI",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula - S01E01 - Pravidla bestie (CZ) - SkTonline",
+    "len": 5374,
+    "ok": false
+   },
+   {
+    "n": "Dracula CZ dabing 2020 S01E01",
+    "len": 5375,
+    "ok": false
+   },
+   {
+    "n": "Dracula.S01E01.WEBRip.x264-ION10.mp4",
+    "ok": true
+   },
+   {
+    "n": "Dracula - S01E01 - Pravidla bestie (CZ) - SkTonline.mp4",
+    "len": 5375,
+    "ok": false
+   },
+   {
+    "n": "Dracula 1x01 - The Blood is the Life.mp4",
+    "len": 2579,
+    "ok": true
+   },
+   {
+    "n": "Young Dracula - S01E01 - When You're a Stranger.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula.2013.S01E01.HDTV.XviD-FUM.avi",
+    "len": 2579,
+    "ok": true
+   },
+   {
+    "n": "Dracula.2013.S01E01.CZ.tit.mp4",
+    "len": 2579,
+    "ok": true
+   },
+   {
+    "n": "Dracula.novinka.2013.S01E01.CZ.tit.mp4",
+    "len": 2579,
+    "ok": true
+   },
+   {
+    "n": "Dracula.2013.S01E01.720p.HDTV.X264-DIMENSION.mkv",
+    "len": 2579,
+    "ok": true
+   },
+   {
+    "n": "dracula.2020.s01e01.hdtv.x264-river.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.iNTERNAL.1080p.WEB.X264-AMRAP.mkv",
+    "len": 5375,
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.1080p.CZ.EN.WEB-K0F0LA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula.2020.S01E01.1080p.NF.WEB-DL.DDP5.1.x264 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula CZ dabing 2020 S01E01.mp4",
+    "len": 5375,
+    "ok": false
+   },
+   {
+    "n": "Dracula   CZ dab 2020 S01E01   Pravidla bestie.mkv",
+    "len": 5375,
+    "ok": false
+   },
+   {
+    "n": "Dracula - CZ dab.2020 S01E01 - Pravidla bestie.mkv",
+    "len": 5375,
+    "ok": false
+   },
+   {
+    "n": "Dracula 2013 S01E01 Blood Is the Life 720p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "len": 2673,
+    "ok": true
+   },
+   {
+    "n": "Dracula 2013 S01E01 Blood Is the Life 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "len": 2673,
+    "ok": true
+   },
+   {
+    "n": "Dracula 2020 01x01   Pravidla bestie (mkv).mkv",
+    "ok": false
+   },
+   {
+    "n": "My Mad Fat Diary S01E01 1080p WEB-DL AAC2 0 AVC-DRACULA.mp4",
+    "ok": false
+   },
+   {
+    "n": "100 Years of Horror - S01E01 - Dracula and His Disciples.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dracula -Dead and Loving It 1995 - Dracula -Wampir Bez Zębów PL .mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula père et fils (Dracula and Son) 1976.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula II- Vzkriseni _ Dracula II- Ascension (2003)(CZ).avi",
+    "ok": false
+   },
+   {
+    "n": "Dracula III- Odkaz _ Dracula III- Legacy (2005)(CZ) -.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bažanti kontra Dracula - Les Charlots contre Dracula - Francie, 1980, 84 min - SkTonline.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dracula.Sucks.AKA.Dracula's.Bride.1978.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.2.0-HDT.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula.aka.Dracula.a.love.tale.2025.horror.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula.aka.Dracula.a.love.tale.2025.mkv",
+    "ok": false
+   },
+   {
+    "n": "Young Dracula - S02E06 - Baby Dracula.mkv",
+    "ok": false
+   },
+   {
+    "n": "Bazanti 10 Bazanti kontra Dracula [Les Charlots contre Dracula 1980 Fr] (cz 720p).mp4",
+    "ok": false
+   },
+   {
+    "n": "Dracula Příběh lásky  Dracula A Love Tale 2025 CZ Dab. 720p.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dracula.1992.ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "2 Dracula-Hun.XviD-1992.avi",
+    "ok": false
+   },
+   {
+    "n": "Cesta upírů Van Helsing vs. Dracula.avi",
+    "ok": false
+   },
+   {
+    "n": "Cesta upírů - Van Helsing vs. Dracula.avi",
+    "ok": false
+   },
+   {
+    "n": "Buffy.5x01.Buffy_vs_Dracula.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dracula-3000-(2004)-horror,-sci-fi-cz.avi",
+    "ok": false
+   }
+  ],
+  "at": "2026-11-10T18:41:33.429Z"
+ },
+ {
+  "plan": {
+   "sameName": [
+    {
+     "y": 2009,
+     "v": 418,
+     "c": "uk"
+    },
+    {
+     "y": 2020,
+     "v": 17,
+     "c": "uk"
+    },
+    {
+     "ours": true,
+     "v": 280,
+     "c": "us"
+    }
+   ],
+   "coll": null,
+   "type": "series",
+   "id": "tt0874936:1:7",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Na doživotí",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Life",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "na",
+    "dozivoti",
+    "life"
+   ],
+   "year": 2007,
+   "season": 1,
+   "episode": 7,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 45
+  },
+  "files": [
+   {
+    "n": "Na doživotí-s01e07-Občanská válka czdab.avi",
+    "len": 2462,
+    "ok": true
+   },
+   {
+    "n": "Na dozivoti-S01E07-cz.mp4",
+    "len": 2459,
+    "ok": true
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x07 Občianska vojna.avi",
+    "len": 2462,
+    "ok": true
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x07.avi",
+    "len": 2462,
+    "ok": true
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x04 Na vlastné oči.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 2x16 Muž na tyči.avi",
+    "ok": false
+   },
+   {
+    "n": "Na doživotí-s01e04-Na vlastní oči czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Na doživotí-s02e16- Muž na tyči czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Na doživotí - 04. Na vlastní oči (WEBRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Na doživotí - 14. Firma na zázraky (WEBRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Na doživotí - 27. Muž na tyči (WEBRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x01.avi",
+    "len": 2499,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x02.avi",
+    "len": 2486,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x03.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x04.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x05.avi",
+    "len": 2493,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x06.avi",
+    "len": 2492,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x08.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x09.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x10.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-01x11.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x01.avi",
+    "len": 2471,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x03.avi",
+    "len": 2478,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x05.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x06.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x07.avi",
+    "len": 2472,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x08.avi",
+    "len": 2445,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x09.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x10.avi",
+    "len": 2411,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x11.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x13.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x14.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x15.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x16.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x17.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x18.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x19.avi",
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-(Life)-02x20.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x01 Pilot.avi",
+    "len": 2499,
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x02 Krvavá svadba.avi",
+    "len": 2486,
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x03 Pre pokoj v duši.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x05 Padlý anjel.avi",
+    "len": 2493,
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x06 Bezmocnosť.avi",
+    "len": 2492,
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x08 Dvojitý život.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x09 Vážne problémy s ovládaním.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x10 Vykopaj jamu.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 1x11 Zasypaj jamu.avi",
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 2x01 Hledej své šťastné místo.avi",
+    "len": 2455,
+    "ok": false
+   },
+   {
+    "n": "NA DOŽIVOTÍ 2x04 Pro nic za nic.avi",
+    "len": 2486,
+    "ok": false
+   },
+   {
+    "n": "Life - 01x07 - DVDrip - CZ.avi",
+    "len": 2462,
+    "ok": true
+   },
+   {
+    "n": "BBC.Life.s01e07.Hunters.And.Hunted.2009.720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Granting.You.a.Dreamlike.Life.S01E07.1080p.VIKI.WEB-DL.AAC2.0.H.264-MrHulk.mkv",
+    "ok": false
+   },
+   {
+    "n": "Again.My.Life.S01E07.220429.720p-NEXT.mp4",
+    "ok": false
+   },
+   {
+    "n": "My.Big.Fat.Greek.Life.S01E07.Greek.Easter.720p.CTV.WEB-DL.AAC2.0.H.264-BTW.mkv",
+    "ok": false
+   },
+   {
+    "n": "Remake.Our.Life.S01E07.REPACK.1080p.BluRay.Dual-Audio.Opus2.0.x265-Headpatter.mkv",
+    "ok": false
+   },
+   {
+    "n": "Low.Life.S01E07.(2025).1080p.WEBRIP.HEVC.OPUS2.0.mkv",
+    "ok": false
+   },
+   {
+    "n": "Brush.Up.Life.S01E07.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.mkv",
+    "ok": false
+   },
+   {
+    "n": "[SavI0r] Shokei Shoujo no Virgin Road (The Executioner and Her Way of Life) - S01E07 - Port City of Libelle [BD][1080p][AV1][OPUS][Dual Audio].mkv",
+    "ok": false
+   },
+   {
+    "n": "My Isekai Life - S01E07 - Assassins in Pursuit WEBRip-1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "[jaaj] Nichijou ~ My Ordinary Life S01E07 (2011) (BD 1080p AV1 OPUS).mkv",
+    "ok": false
+   },
+   {
+    "n": "Good Bye Dragon Life S01E07 Melee REPACK 1080p CR WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Nichijou My Ordinary Life S01E07 Episode 7 1080p FLAC 2 0 AVC REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.Seven.1080p.BILI.WEB-DL.JPN.AAC2.0.H.265.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori san Still Wants to Fight in the Next Life S01E07 SUBFRENCH 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yameii] Hanaori-san Still Wants to Fight in the Next Life - S01E07 [English Dub] [CR WEB-DL 1080p H264 AAC] [3305BBFC].mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yameii] Hanaori-san Still Wants to Fight in the Next Life - S01E07 [English Dub] [CR WEB-DL 720p H264 AAC] [7894BDFA].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.Seven.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori.san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.Seven.1080p.CR.WEB-DL.DUAL.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori san Still Wants to Fight in the Next Life S01E07 SUBFRENCH 720p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "ok": false
+   },
+   {
+    "n": "hanaori-san.still.wants.to.fight.in.the.next.life.s01e07.1080p.web.h264-senpai.mkv",
+    "ok": false
+   },
+   {
+    "n": "hanaori-san.still.wants.to.fight.in.the.next.life.s01e07.1080p.web.h264-senpai[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "hanaori-san.still.wants.to.fight.in.the.next.life.s01e07.720p.web.h264-skyanime.mkv",
+    "ok": false
+   },
+   {
+    "n": "hanaori-san.still.wants.to.fight.in.the.next.life.s01e07.720p.web.h264-skyanime[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori.san.Still.Wants.to.Fight.in.the.Next.Life.S01E07.Seven.1080p.CR.WEB-DL.MULTi.AAC2.0.H.264-VARYG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san Still Wants to Fight in the Next Life S01E07 Seven 1080p CR WEB-DL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Facts of Life - S01E07 (Molly's Holiday).mp4",
+    "ok": false
+   },
+   {
+    "n": "[LbE3L] Hanaori-san Still Wants to Fight in the Next Life S01E07 [1080p CR WEBRip AV1 Opus 2.0 Multi-Audio MSubs].mkv",
+    "ok": false
+   },
+   {
+    "n": "Hanaori-san Still Wants to Fight in the Next Life S01E07 1080p CR WEB-DL AAC2 0 H 264 DUAL-BiOMA.mkv",
+    "ok": false
+   },
+   {
+    "n": "No.Game.No.Life.S01E07.1080p.BluRay.MULTi.x265.FLAC.2.0-GapMoe.mkv",
+    "ok": false
+   },
+   {
+    "n": "Love Life - 01x07 - Claudia Hoffman CZ tit LOLLE.avi",
+    "ok": false
+   },
+   {
+    "n": "Love.Life.01x07.1080i.HDTV.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Love.Life.01x07.HDTV.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Love.Life.01x07.1080i.H265.HDTV.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "LIFE najbohatší policajt S01E07, CZ dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life's.too.short.s01e07.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life.With.Lucy.S01E07.Lucy..Leagle.Beagle.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life.with.an.Ordinary.Guy.who.Reincarnated.into.a.Total.Fantasy.Knockout.S01E07.REPACK.1080p.BluRay.Dual-Audio.Opus2.0.x265-Headpatter.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life After People (2008) - S01E07 - Sin City Meltdown.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life with Lucy - S01E07 (Lucy, Legal Beagle).mp4",
+    "ok": false
+   },
+   {
+    "n": "Life in Pieces S01E07 Nanny Tent Earrings Cheeto 1080p DSNP WEB-DL DD5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life.Larry.and.the.Pursuit.of.Unhappiness.An.Almost.History.of.America.S01E07.1080p.WEB.h264-ETHEL.mkv",
+    "ok": false
+   },
+   {
+    "n": "Life.Larry.and.the.Pursuit.of.Unhappiness.An.Almost.History.of.America.S01E07.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Life.Larry.and.the.Pursuit.of.Unhappiness.An.Almost.History.of.America.S01E07.1080p.WEB.h264-ETHEL[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Life 2009 - S01E07",
+    "len": 2939,
+    "ok": false
+   },
+   {
+    "n": "Life - S1E7 Hunters and Hunted CZ",
+    "len": 2939,
+    "ok": false
+   },
+   {
+    "n": "Life with Louie 1x7",
+    "len": 1218,
+    "ok": false
+   },
+   {
+    "n": "My Life With the Walter Boys_S01E07_Small Town Rumors",
+    "len": 2774,
+    "ok": false
+   },
+   {
+    "n": "Sex_Life - S01.E07 - Cz.En.Audio.1080p.DDP 5.1 WebRip H264 Akim",
+    "len": 3100,
+    "ok": false
+   },
+   {
+    "n": "Life After Death with Tyler Henry S01E07 CZtitulky",
+    "len": 2398,
+    "ok": false
+   },
+   {
+    "n": "Zivot na nasi planete Life on Our Planet S01E07 2160p HDR CZ dabing",
+    "len": 3143,
+    "ok": false
+   },
+   {
+    "n": "Life.Below.Zero.First.Alaskans.S01E07.Stastne.znameni.1080p.DSNP.WEB-DL.DD+5.1.H.264-DeDo",
+    "len": 2643,
+    "ok": false
+   },
+   {
+    "n": "Life on Mars S01E07 CZtit V OBRAZE",
+    "len": 3489,
+    "ok": false
+   },
+   {
+    "n": "Life Unexpected S01E07 CZtit V OBRAZE",
+    "len": 2514,
+    "ok": false
+   },
+   {
+    "n": "Life.S01E07.720p.WEB-DL.DD5.1.h.264-CZ",
+    "len": 2563,
+    "ok": true
+   },
+   {
+    "n": "Life.S01E07 CZ.mkv",
+    "len": 2563,
+    "ok": true
+   },
+   {
+    "n": "Life on Our Planet S01E07",
+    "len": 3143,
+    "ok": false
+   },
+   {
+    "n": "Life - S1E7 Hunters and Hunted EN",
+    "len": 3512,
+    "ok": false
+   },
+   {
+    "n": "Life on Our Planet - S1E7 Chapter 7: Inheriting the Earth CZ",
+    "len": 3142,
+    "ok": false
+   },
+   {
+    "n": "My Life With the Walter Boys_S01E07",
+    "len": 2774,
+    "ok": false
+   },
+   {
+    "n": "Life - S1E7 A Civil War SK",
+    "len": 2420,
+    "ok": true
+   },
+   {
+    "n": "Life - S1E7 A Civil War EN",
+    "len": 2523,
+    "ok": true
+   },
+   {
+    "n": "Life - s01e07",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Life 1x7",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Bet Your Life S01E07 CZ Dabing 1080p",
+    "len": 2366,
+    "ok": false
+   },
+   {
+    "n": "My Life With the Walter Boys S01E07",
+    "len": 2773,
+    "ok": false
+   },
+   {
+    "n": "Vrazda je muj zivot - My Life Is Murder S01E07 CZ 1080p WEB-DL AAC H264-TOP",
+    "len": 2583,
+    "ok": false
+   },
+   {
+    "n": "LIFE najbohatší policajt S01E07, CZ dabing - by LED",
+    "len": 2563,
+    "ok": false
+   },
+   {
+    "n": "LIFE najbohatší policajt S01E07, CZ dabing",
+    "len": 2563,
+    "ok": false
+   },
+   {
+    "n": "LIFE - Na dozivoti  S01E07 (BRrip)(HD)(720p)(CZ-EN) PHDTeam",
+    "len": 2563,
+    "ok": true
+   },
+   {
+    "n": "When Life Gives You Tangerines - S1E7 A Fruitful Fall CZ",
+    "len": 3881,
+    "ok": false
+   },
+   {
+    "n": "Life Unexpected 1x7",
+    "len": 2509,
+    "ok": false
+   },
+   {
+    "n": "Life on Mars 1x7",
+    "len": 2469,
+    "ok": false
+   },
+   {
+    "n": "Life on Mars - S1E7 EN",
+    "len": 3482,
+    "ok": false
+   },
+   {
+    "n": "Můj život s Walterovic kluky - My Life with the Walter Boys S01E07 CZ Dabing 1080p 2023",
+    "len": 2773,
+    "ok": false
+   },
+   {
+    "n": "Sex.Life.S01E07.WEB.CZE.DDP.5.1",
+    "len": 3100,
+    "ok": false
+   },
+   {
+    "n": "Sex Life S01E07 CZdab",
+    "len": 3098,
+    "ok": false
+   },
+   {
+    "n": "The Life of Mammals (2002) - S01E07 - Return to the Water",
+    "len": 2941,
+    "ok": false
+   },
+   {
+    "n": "Sex.Life.S01E07.WEB.CZE.DDP.5.1.x264-HDCzT",
+    "len": 3100,
+    "ok": false
+   },
+   {
+    "n": "Na-dozivoti-Life-01x07",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na dozivoti - Life 01x07 - Občanská válka",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživotí - Life S01E07 CZ DABING",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Thats Life 1x7",
+    "len": 2538,
+    "ok": false
+   },
+   {
+    "n": "Until Life Do Us Part S01E07 CZtitulky",
+    "len": 3442,
+    "ok": false
+   },
+   {
+    "n": "Her Private Life S01E07 CZtitulky",
+    "len": 3730,
+    "ok": false
+   },
+   {
+    "n": "Sugar Dog Life s01e07 CZ titulky BL.mp4",
+    "len": 1393,
+    "ok": false
+   },
+   {
+    "n": "The Daily Life of a Middle-Aged Online Shopper in Another World S01E07 - 7. epizoda CZ Titulky",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "My Unorthodox Life S01E07 CZtitulky",
+    "len": 2505,
+    "ok": false
+   },
+   {
+    "n": "Sex.and.Life.2021.S01E07.cz.sub.Small.Town.Saturday.Night.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.H.265-NOGRP",
+    "len": 3099,
+    "ok": false
+   },
+   {
+    "n": "The Life and Movies of Ersan Kuneri S01E07 CZtitulky",
+    "len": 2564,
+    "ok": false
+   },
+   {
+    "n": "The Daily Life of the Immortal King S01E07 CZ Tit",
+    "len": 1064,
+    "ok": false
+   },
+   {
+    "n": "Sex Life S01E07 CZtitulky",
+    "len": 3099,
+    "ok": false
+   },
+   {
+    "n": "Low Life S01E07 (2025) CZ titulky",
+    "len": 3220,
+    "ok": false
+   },
+   {
+    "n": "Na doživotí - S01E07 - Občanská válka",
+    "len": 2563,
+    "ok": true
+   },
+   {
+    "n": "Na doživotí S01E07 - 7. epizoda 1080p CZ Dabing.mp4",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživoti S01E07 CZdab_x264",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživotí S01E07 - 7. epizoda CZ Dabing",
+    "len": 2563,
+    "ok": true
+   },
+   {
+    "n": "Na doživotí S1E7 Občanská válka",
+    "len": 2563,
+    "ok": true
+   },
+   {
+    "n": "na doživotí.01x07 - Občanská válka",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživotí S01E07",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživoti S01E07 CZdab",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživoti-krimi-S01E07-cz dab 2007-jad",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Na doživotí - S1E7 A Civil War CS",
+    "len": 2461,
+    "ok": true
+   },
+   {
+    "n": "Právník na doživotí S01E07 - 7. epizoda CZ Titulky",
+    "len": 2559,
+    "ok": false
+   },
+   {
+    "n": "Právník na doživotí - S1E7 Do Us Part EN",
+    "len": 2559,
+    "ok": false
+   }
+  ],
+  "at": "2026-11-12T18:57:58.969Z"
  }
 ]

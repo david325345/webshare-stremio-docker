@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.10.1';
+const VERSION = '8.10.2';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -935,7 +935,10 @@ async function buildPlan(type, id, cfg) {
         alEpisode: rs ? (rs.episode || episode) : null,
         alSeason: rs ? (rs.season || season) : null,
         source: info ? info.source : 'indexer',
-        anilistId: rs ? rs.anilist_id : null
+        anilistId: rs ? rs.anilist_id : null,
+        // originální název u titulu v jiném jazyce než CZ/SK/EN (polský, španělský …) – dotaz hned v první vlně
+        origName: info && info.source === 'tmdb' && info.originalLanguage && !['cs', 'sk', 'en'].includes(info.originalLanguage)
+            && names.some(n => n.text === latin(info.original)) ? info.original : null
     };
 }
 
@@ -970,6 +973,8 @@ function buildQueries(plan) {
         const shortName = fr.length && plan.year && M.nameTokens(fr[0]).length === 1 && M.nameTokens(fr[0])[0].length < 6;
         if (shortName) w1.push(`${fr[0]} ${plan.year} ${se}`);
         fr.slice(0, 3).forEach(q => w1.push(`${q} ${se}`));
+        // seriál v jiném jazyce: originál hned v první vlně, i když je v pořadí až za CZ/SK/EN ("Rojst", "La casa de papel")
+        if (plan.origName) w1.push(`${M.queryText(plan.origName)} ${se}`);
         if (plan.isAnime && plan.alEpisode) an.slice(0, 2).forEach(q => w1.push(`${q} ${pad(plan.alEpisode)}`));
         fr.slice(0, 3).forEach(q => w2.push(`${q} ${plan.season}x${pad(plan.episode)}`));
         if (plan.season === 1) fr.slice(0, 2).forEach(q => w2.push(`${q} ${pad(plan.episode)}`));

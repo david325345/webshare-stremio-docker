@@ -5,9 +5,19 @@
 const STOPWORDS = new Set(['the', 'a', 'an', 'of', 'and', 'und', 'le', 'la', 'les', 'der', 'die', 'das']);
 
 // Odstraní diakritiku, malá písmena, & → and, vše mimo písmena/čísla → mezera
+// Odstraní diakritiku. Písmena, která NFD nerozloží (polské ł, severské ø, německé ß …), se přepíší –
+// jinak by se smazala ("świateł" → "swiate" a soubor "swiatel" by neprošel)
+const FOLD = {
+    'ł': 'l', 'Ł': 'L', 'ø': 'o', 'Ø': 'O', 'ß': 'ss', 'ẞ': 'SS', 'đ': 'd', 'Đ': 'D', 'ð': 'd', 'Ð': 'D',
+    'æ': 'ae', 'Æ': 'AE', 'œ': 'oe', 'Œ': 'OE', 'þ': 'th', 'Þ': 'Th', 'ı': 'i', 'ħ': 'h', 'Ħ': 'H'
+};
+function fold(str) {
+    return String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[łŁøØßẞđĐðÐæÆœŒþÞıħĦ]/g, c => FOLD[c]);
+}
+
 function normalize(str) {
-    return String(str || '')
-        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    return fold(str)
         .toLowerCase()
         .replace(/&/g, ' and ')
         .replace(/['’`´]/g, '')
@@ -33,7 +43,7 @@ function fiveO(t) {
 }
 // Tokeny se zachovanou velikostí písmen, zarovnané s tokens() (pro zkratky jako "NCIS LA")
 function rawTokens(str) {
-    const n = String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    const n = fold(str)
         .replace(/&/g, ' and ').replace(/['’`´]/g, '').replace(/[^A-Za-z0-9]+/g, ' ').trim();
     return n ? n.split(' ') : [];
 }
@@ -65,8 +75,7 @@ function nameTokens(name) {
 
 // Text vhodný jako dotaz na Webshare (bez diakritiky a speciálních znaků)
 function queryText(str) {
-    return String(str || '')
-        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    return fold(str)
         .replace(/[:!?*\/\\"„“’‘´`]/g, ' ')   // typografický apostrof ("Sex O’Clock") → mezera
         .replace(/\s+/g, ' ')
         .trim();
@@ -253,7 +262,7 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
         return { season, episode: m ? +m[1] : null, explicit: false };
     }
     // Holé číslo: nejdřív " - 05" v původním názvu, pak samostatné číslo
-    const raw = String(fileName).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    const raw = fold(fileName).toLowerCase();
     const dash = raw.match(/\s[-–]\s(\d{1,4})(?:v\d)?(?=[\s\[\(._]|$)/);
     const excl = new Set((excludeTokens || []).map(String));
     if (dash && !excl.has(String(+dash[1])) && !excl.has(dash[1])) {

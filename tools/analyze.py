@@ -18,8 +18,12 @@ import unicodedata
 SAFE_REASONS = ('jiný díl', 'jiná sezóna', 'nepřehratelný soubor')
 
 
+# písmena, která NFD nerozloží (polské ł, severské ø, německé ß …) – stejně jako fold() v matcher.js
+FOLD = str.maketrans({'ł': 'l', 'ø': 'o', 'ß': 'ss', 'đ': 'd', 'ð': 'd', 'æ': 'ae', 'œ': 'oe', 'þ': 'th', 'ı': 'i', 'ħ': 'h'})
+
+
 def norm(s):
-    s = unicodedata.normalize('NFD', str(s or '').lower())
+    s = unicodedata.normalize('NFD', str(s or '').lower().translate(FOLD))
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 

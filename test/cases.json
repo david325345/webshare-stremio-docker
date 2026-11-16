@@ -43152,7 +43152,7 @@
    {
     "n": "Vykoupení z věznice Shawshank - The Shawshank Redemption více (1994) [2].mp4",
     "len": 8636,
-    "ok": false
+    "ok": true
    },
    {
     "n": "The Shawshank Redemption - 1950's Super Panavision 70",
@@ -69351,5 +69351,796 @@
    }
   ],
   "at": "2026-11-12T18:57:58.969Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": {
+    "i": 1,
+    "n": 3
+   },
+   "type": "movie",
+   "id": "tt6566576",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Ulice strachu – 1. část: 1994",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Fear Street: 1994",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Ulice strachu",
+     "kind": "franchise",
+     "short": true,
+     "full": "Ulice strachu – 1. část: 1994"
+    },
+    {
+     "text": "1. část 1994",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Fear Street",
+     "kind": "franchise",
+     "short": true,
+     "full": "Fear Street: 1994"
+    }
+   ],
+   "allow": [
+    "ulice",
+    "strachu",
+    "1",
+    "cast",
+    "1994",
+    "fear",
+    "street"
+   ],
+   "year": 2021,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 108,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Fear.Street.Part.2.1978.2021.1080p.WEBRip.CZ.dabing.5.1.mkv",
+    "len": 6658,
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.HEVC CZ tit.mkv",
+    "len": 6437,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.x264 CZ tit.mkv",
+    "len": 6867,
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.2.cast.1978-Fear.Street.Part.2.1978.2021.1080p.NF.WEBRip.x264.DDP.5.1.CZ.EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.3.cast.1666-Fear.Street.Part.3.1666.2021.1080p.NF.WEBRip.x264.DDP.5.1.CZ.EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.WEBRip.CZ.dabing.5.1.mkv",
+    "len": 6867,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu - 2. cast 1978  Fear Street Part 2 1978 - CZ dab.2021.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu - 3.cast 1666  Fear Street Part 3 1666 - CZ dab.2021.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu–2.cast 1978 - Fear.Street.Part.2.1978.2021.1080p.WEBRip.CZ.dabing.5.1.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.1.cast.1994-Fear.Street.Part.1.1994.2021.1080p.WEBRip.x265.DD.5.1.CZ-HDCzT.mkv",
+    "ok": true
+   },
+   {
+    "n": "Ulice strachu 3. část-1666  - Fear Street Part 3 1666 2021 CZ.dabing 1080p  Horor  Mysteriózní.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu–2 cast 1978   Fear Street Part 2 1978 2021 1080p WEBRip CZ dabing 5 1.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.WEBRip.x264-RARBG.mp4",
+    "len": 6437,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.WEBRip.x264-RARBG.mp4",
+    "len": 6867,
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.2.1978.2021.1080p.WEBRip.x264-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Zázrak v New Yorku - Miracle on 34th Street (1994) 1080p FullHD x264 CZ Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Prom.Queen.FHD.WEB-DL.CZ.5.1.EN.5.1.2025.1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street Prom Queen 2025.mkv",
+    "ok": false
+   },
+   {
+    "n": "2025 Fear Street Prom Queen 4K cz-tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street Part 2 1978 (2021)  FHD 1080p CZ [1079].mkv",
+    "len": 6658,
+    "ok": false
+   },
+   {
+    "n": "Zazrak.v.New.Yorku-Miracle.on.34th.Street.1994.1080p.h264.DTS-HDMA.AC3.640.EN.192.RU.224.CZ.srt.EN.RU.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zazrak.v.New.Yorku-Miracle.on.34th.Street.1994.1080p.x264.DTS.AC3.640.EN.192.RU.224.CZ.srt.EN.RU.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street Prom Queen (2025) CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Královna plesu - Fear.Street.Prom.Queen.FHD.WEB-DL.CZ.5.1.EN.5.1.2025.1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street 1978 2021 1080p NF WEB-DL DDP5 1 Atmos H 264-SQS.mkv",
+    "len": 6655,
+    "ok": false
+   },
+   {
+    "n": "Fear Street Prom Queen 2025 1080p NF WEB-DL DDP5 1 Atmos DV HDR H 265-SQS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Miracle on 34th Street 1994 1080p DSNP WEB-DL DDP 5 1 H 264-PiRaTeS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street 1666 2021 1080p Netflix WEB-DL AVC DDP 5 1 Atmos-DBTV.mp4",
+    "len": 6865,
+    "ok": false
+   },
+   {
+    "n": "Fear Street Part 1 (1994).mkv",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "House.at.the.End.of.the.Street.ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "A Nightmare on Elm Street (1984) ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Fear.and.Loathing.in.Las.Vegas[1998]ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x04.The.Good.Of.This.City.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x03.The.King.Came.Calling.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x06.Tournament.Of.Shadows.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x08.What.Use.Our.Work.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x08.What.Use.Our.Work.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Fear Of Rain 2021 1080p.BluRay.x264.AAC5.1-eng.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.1.cast.1994.2021.WEBRip.720p.x264.CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Ulice.strachu - 1.cast.1994 (2021) CZ Dabing,horor,thriller - CSDF 57-.mkv",
+    "ok": true
+   },
+   {
+    "n": "Fear Of Rain 2021 1080p BluRay x264 AAC5 1 eng.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu   1 cast 1994 (2021) CZ Dabing horor thriller   CSDF 57 .mkv",
+    "ok": true
+   },
+   {
+    "n": "Fear PHarm 2 2021 YIFY -sk tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear of Rain 2021 m1080p BluRay x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear of Rain 2021 720p BluRay x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 1. část: 1994 (2021) CZ Dabing",
+    "len": 7702,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu - Královna plesu 2025 CZ dab 1080p",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu: Královna plesu (2025) 1080p CZ Dabing",
+    "len": 5401,
+    "ok": false
+   },
+   {
+    "n": "Ulice_strachu_Královna_plesu_2025_CZ_dab_1080p O.G.",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice_strachu_Královna_plesu_2025_CZ_dab_1080p Dop.",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu- Královna plesu-HD-1080p-2025-CZ Dabing.mkv",
+    "len": 5401,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu - Královna plesu 2025 CZ dabing 1080p FHD",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice_strachu_Královna_plesu_2025_CZ_dab_1080p",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu-Královna plesu - Fear Street-Prom Queen (2025) horor mysteriózní czdab.mkv",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu: Královna plesu (2025) CZ Dabing",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 2",
+    "len": 6656,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 3",
+    "len": 6865,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 2. část: 1978 (2021) CZ Titulky",
+    "len": 6865,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 3. část: 1666 (2021)",
+    "len": 6865,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 1",
+    "len": 6436,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu: Královna plesu - 2025 CS",
+    "len": 5401,
+    "ok": false
+   },
+   {
+    "n": "Fear Street Part 1 1994.CZ.Audio.1080p.NF.WebRip.DDP5.1-x264-Akim",
+    "len": 6437,
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.mHD.WEB-DL.AAC2.0.H.264.CZ-TreZzoR",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.mHD.WEB-DL.AAC2.0.H.264.CZ-TreZzoR (by_UgarE)",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.cz.sub.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.HEVC-CMRG",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.HEVC CZ tit",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.WEBRip.x264-RARBG",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.WEBRip.x264.AAC5.1-[YTS.MX]",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.WEBRip.x264-ION10",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.WEBRip.XviD.MP3-XVID",
+    "len": 6436,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.720p.WEBRip.x264.AAC-[YTS.MX]",
+    "len": 6436,
+    "ok": true
+   }
+  ],
+  "at": "2026-11-15T20:29:28.684Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": {
+    "i": 3,
+    "n": 3
+   },
+   "type": "movie",
+   "id": "tt9701942",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Ulice strachu – 3. část: 1666",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Fear Street: 1666",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Ulice strachu",
+     "kind": "franchise",
+     "short": true,
+     "full": "Ulice strachu – 3. část: 1666"
+    },
+    {
+     "text": "3. část 1666",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Fear Street",
+     "kind": "franchise",
+     "short": true,
+     "full": "Fear Street: 1666"
+    }
+   ],
+   "allow": [
+    "ulice",
+    "strachu",
+    "3",
+    "cast",
+    "1666",
+    "fear",
+    "street"
+   ],
+   "year": 2021,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": 115,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Ulice strachu – 3. část: 1666 (2021)",
+    "len": 6865,
+    "ok": true
+   },
+   {
+    "n": "Fear Street 1666 2021 1080p Netflix WEB-DL AVC DDP 5 1 Atmos-DBTV.mp4",
+    "len": 6865,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.2.1978.2021.1080p.WEBRip.CZ.dabing.5.1.mkv",
+    "len": 6658,
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.HEVC CZ tit.mkv",
+    "len": 6437,
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.x264 CZ tit.mkv",
+    "len": 6867,
+    "ok": true
+   },
+   {
+    "n": "Ulice.strachu.2.cast.1978-Fear.Street.Part.2.1978.2021.1080p.NF.WEBRip.x264.DDP.5.1.CZ.EN.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.3.cast.1666-Fear.Street.Part.3.1666.2021.1080p.NF.WEBRip.x264.DDP.5.1.CZ.EN.mkv",
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.WEBRip.CZ.dabing.5.1.mkv",
+    "len": 6867,
+    "ok": true
+   },
+   {
+    "n": "Ulice strachu - 2. cast 1978  Fear Street Part 2 1978 - CZ dab.2021.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu - 3.cast 1666  Fear Street Part 3 1666 - CZ dab.2021.mp4",
+    "ok": true
+   },
+   {
+    "n": "Ulice strachu–2.cast 1978 - Fear.Street.Part.2.1978.2021.1080p.WEBRip.CZ.dabing.5.1.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.1.cast.1994-Fear.Street.Part.1.1994.2021.1080p.WEBRip.x265.DD.5.1.CZ-HDCzT.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu 3. část-1666  - Fear Street Part 3 1666 2021 CZ.dabing 1080p  Horor  Mysteriózní.mkv",
+    "ok": true
+   },
+   {
+    "n": "Ulice strachu–2 cast 1978   Fear Street Part 2 1978 2021 1080p WEBRip CZ dabing 5 1.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.1.1994.2021.1080p.WEBRip.x264-RARBG.mp4",
+    "len": 6437,
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.WEBRip.x264-RARBG.mp4",
+    "len": 6867,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.2.1978.2021.1080p.WEBRip.x264-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Prom.Queen.FHD.WEB-DL.CZ.5.1.EN.5.1.2025.1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street Prom Queen 2025.mkv",
+    "ok": false
+   },
+   {
+    "n": "2025 Fear Street Prom Queen 4K cz-tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street Part 2 1978 (2021)  FHD 1080p CZ [1079].mkv",
+    "len": 6658,
+    "ok": false
+   },
+   {
+    "n": "Fear Street Prom Queen (2025) CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Královna plesu - Fear.Street.Prom.Queen.FHD.WEB-DL.CZ.5.1.EN.5.1.2025.1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street 1978 2021 1080p NF WEB-DL DDP5 1 Atmos H 264-SQS.mkv",
+    "len": 6655,
+    "ok": false
+   },
+   {
+    "n": "Fear Street Prom Queen 2025 1080p NF WEB-DL DDP5 1 Atmos DV HDR H 265-SQS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear Street Part 1 (1994).mkv",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "House.at.the.End.of.the.Street.ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "A Nightmare on Elm Street (1984) ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Fear.and.Loathing.in.Las.Vegas[1998]ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x04.The.Good.Of.This.City.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x03.The.King.Came.Calling.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x06.Tournament.Of.Shadows.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x08.What.Use.Our.Work.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x08.What.Use.Our.Work.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "A Nightmare on Elm Street 2 [Freddy-'s Revenge] (1985)_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "A Nightmare on Elm Street 7 - New Nightmare, Wes Craven-'s _ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "A.Nightmare.on.Elm.Street.2010_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Green-Street-Hooligans-2-CZ-Dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.x264-CZ tit",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.cz.sub.1080p.WEB.H264-TIMECUT",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.Three.1666.2021.cz.sub.720p.WEB.h264-RUMOUR",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.Three.1666.2021.720p.WEB.H264-RUMOUR",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.Three 1666.2021.720p.WEBRip.x264.AAC-[YTS.MX]",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.cz.sub.1080p.NF.WEB-DL.DDP5.1.Atmos.x264-AGLET",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.NF.WEB-DL.DDP5.1.Atmos.x264 CZ tit",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.Three.1666.2021.1080p.WEB.H264-RUMOUR",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.cz.sub.1080p.NF.WEB-DL.x265.10bit.HDR.DDP5.1.Atmos-MRCS",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.WEBRip.x264-RARBG",
+    "len": 6865,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.Three 1666.2021.1080p.WEBRip.x264.AAC5.1-[YTS.MX]",
+    "len": 6865,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.WEBRip.x264-ION10",
+    "len": 6865,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.Three.1666.2021.cz.sub.1080p.WEB.h264-RUMOUR",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.1080p.WEBRip.x265-RARBG",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Fear.Street.Part.3.1666.2021.WEBRip.XviD.MP3-XVID",
+    "len": 6866,
+    "ok": true
+   },
+   {
+    "n": "Ulice strachu - Královna plesu 2025 CZ dab 1080p",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu: Královna plesu (2025) 1080p CZ Dabing",
+    "len": 5401,
+    "ok": false
+   },
+   {
+    "n": "Ulice_strachu_Královna_plesu_2025_CZ_dab_1080p O.G.",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice_strachu_Královna_plesu_2025_CZ_dab_1080p Dop.",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu- Královna plesu-HD-1080p-2025-CZ Dabing.mkv",
+    "len": 5401,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu - Královna plesu 2025 CZ dabing 1080p FHD",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice_strachu_Královna_plesu_2025_CZ_dab_1080p",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu-Královna plesu - Fear Street-Prom Queen (2025) horor mysteriózní czdab.mkv",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu: Královna plesu (2025) CZ Dabing",
+    "len": 5400,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 2",
+    "len": 6656,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 3",
+    "len": 6865,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 1. část: 1994 (2021) CZ Dabing",
+    "len": 7702,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 2. část: 1978 (2021) CZ Titulky",
+    "len": 6865,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu – 1",
+    "len": 6436,
+    "ok": false
+   },
+   {
+    "n": "Ulice strachu: Královna plesu - 2025 CS",
+    "len": 5401,
+    "ok": false
+   },
+   {
+    "n": "Fear Of Rain 2021 1080p.BluRay.x264.AAC5.1-eng.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ulice.strachu.3.cast.1666.2021.WEBRip.720p.x264.CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Fear Of Rain 2021 1080p BluRay x264 AAC5 1 eng.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear PHarm 2 2021 YIFY -sk tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear of Rain 2021 m1080p BluRay x264-GeneMige.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fear of Rain 2021 720p BluRay x264-GeneMige.mkv",
+    "ok": false
+   }
+  ],
+  "at": "2026-11-15T20:29:22.474Z"
  }
 ]

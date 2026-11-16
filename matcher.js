@@ -282,11 +282,12 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
 }
 
 // Vypadá soubor jako díl seriálu? (pro filtrování filmů)
-function looksLikeEpisode(fileName) {
+// noParts: "3. část" / "díl 2" se nepočítá (film z kolekce – "Ulice strachu – 3. část: 1666", pořadí hlídá kontrola série)
+function looksLikeEpisode(fileName, noParts) {
     const n = normalize(fileName);
     return /\bs\s?\d{1,3}\s?e\s?\d{1,4}\b/.test(n) || /s\d{1,3}e\d{1,4}/.test(n) ||
         /\b\d{1,2}x\d{1,3}\b/.test(n) || /\b(?:ep|episode|epizoda)\s?\d{1,4}\b/.test(n) ||
-        /\be\d{2,3}\b/.test(n) || /\b\d{1,3}\s(?:dil|cast)\b/.test(n) || /\b(?:dil|cast)\s\d{1,3}\b/.test(n);
+        /\be\d{2,3}\b/.test(n) || (!noParts && (/\b\d{1,3}\s(?:dil|cast)\b/.test(n) || /\b(?:dil|cast)\s\d{1,3}\b/.test(n)));
 }
 
 // Jazyk a typ zvuku z názvu (po celých slovech)
@@ -451,6 +452,8 @@ function subtitleNoise(fileName, name, allow, mode) {
         if (/^s\d{1,2}(e\d{1,4})?$/.test(t) || /^e\d{1,4}$/.test(t) || /^\d{1,2}x\d{1,4}$/.test(t) || /^ep\d*$/.test(t)) return false;
         if (/^\d+$/.test(t)) { if (series) return false; continue; }                  // film: "Pán prstenů 1 …"
         if (t === 'aka') continue;                                                     // "Crá AKA Boglands S02E01"
+        // "Vykoupení z věznice Shawshank - The Shawshank Redemption více (1994)" – odkaz "více" ze stránky uploadera
+        if (t === 'vice' && (rest6[i + 1] === 'qqstopqq' || /^(19|20)\d{2}$/.test(rest6[i + 1] || ''))) continue;
         if (t.length < 2 || (series && t.length <= 2)) continue;
         if (ROMAN[t] || (allow && allow.has(t))) continue;
         if (!/^[a-z]+$/.test(t)) return false;                                         // 1080p, 05v2 …
@@ -477,7 +480,9 @@ function spinoffAbbrev(fileName, name, allow) {
 
 // Číslo dílu filmové série hned u názvu: "Rambo 2", "RAMBO-3", "Rambo III", "Rambo IV", "4.Rambo.Do.pekla" → číslo;
 // "Rambo 5.1 CZ" (zvuk), rok, rozlišení se neberou
-const PART_ROMAN = { iv: 4, vi: 6, vii: 7, viii: 8, ix: 9 };   // ii/iii převádí tokens() na 2/3; samotné v/x ne (předložka, „Malcolm X“)
+const PART_ROMAN = { iv: 4, vi: 6, vii: 7, viii: 8, ix: 9 };
+const PART_WORDS = new Set(['part', 'cast', 'dil', 'chapter', 'kapitola']);
+const PART_WORD_NUM = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };   // ii/iii převádí tokens() na 2/3; samotné v/x ne (předložka, „Malcolm X“)
 function partNumber(fileName, name) {
     const r = partNumberInfo(fileName, name);
     return r ? r.n : null;
@@ -495,7 +500,9 @@ function partNumberInfo(fileName, name) {
         }
         return PART_ROMAN[t] || null;
     };
-    const after = num(hit.rest[0], hit.rest[1]);
+    let after = num(hit.rest[0], hit.rest[1]);
+    // "Fear Street Part 2 1978", "Ulice strachu část 3", "Part Three" – číslo až za slovem part / část / díl / chapter
+    if (after === null && PART_WORDS.has(hit.rest[0])) after = num(hit.rest[1], hit.rest[2]) || PART_WORD_NUM[hit.rest[1]] || null;
     if (after !== null) return { n: after, before: false };
     if (hit.start > 0) {
         const all = fileTokens(fileName).filter(t => !STOPWORDS.has(t));
@@ -551,7 +558,8 @@ function repairName(fileName, names, season, episode, { anime = false, alEpisode
         if (m && +m[1] === season && +m[2] === episode) { mk = i; mkLen = len; }
     }
     if (mk < 0 && anime) return repairAbsolute(raw, names, [episode, alEpisode]);
-    if (mk < 1 || mk > 8) return null;
+    // anime mívají dlouhé názvy ("Mikata ga Yowasugite Hojo Maho ni Tesshite ita Kyutei Mahoshi 2025 S01E01")
+    if (mk < 1 || mk > (anime ? 14 : 8)) return null;
     const head = ft.slice(0, mk);
     const years = [];
     while (head.length > 1 && /^(19|20)\d{2}$/.test(head[head.length - 1])) years.unshift(head.pop());
@@ -570,9 +578,12 @@ function repairName(fileName, names, season, episode, { anime = false, alEpisode
         const ck = t => t.replace(/c/g, 'k').replace(/w/g, 'v');
         const swap = !same && !near && nc.length >= 5 && compact.length === nc.length &&
             compact !== nc && ck(compact) === ck(nc) && levOne(compact, nc);
-        if (!same && !near && !swap) continue;
+        // anime: jiný přepis japonštiny bez dlouhých samohlásek ("Kyutei Mahoshi" = "Kyuutei Mahoushi"), dlouhé názvy
+        const lv = t => t.replace(/ou/g, 'o').replace(/uu/g, 'u').replace(/oo/g, 'o');
+        const romaji = !same && !near && !swap && anime && nc.length >= 15 && lv(compact) === lv(nc);
+        if (!same && !near && !swap && !romaji) continue;
         const text = [name, ...years, ...ft.slice(mk)].join(' ');
-        return { name, text, how: same ? 'spojený' : 'překlep' };
+        return { name, text, how: same ? 'spojený' : romaji ? 'přepis' : 'překlep' };
     }
     return null;
 }

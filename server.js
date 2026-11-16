@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.10.2';
+const VERSION = '8.10.3';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -734,9 +734,11 @@ async function sameNameShows(info, userTmdbKey) {
 }
 
 // Díly filmové série (TMDB kolekce) seřazené podle data vydání → [{ id, y }]. 30 dní v cache, chyba 1 den.
+// Díly kolekce TMDB v pořadí vydání: [{ id, y, w }], w = slova z názvů dílu (EN, originál, CZ) – pro pojistku
+// u podpisu uploadera ("Halloween Kills" není podpis za "Halloween")
 async function collectionParts(collId, userTmdbKey) {
     if (!collId) return null;
-    const key = `col:${collId}`;
+    const key = `col2:${collId}`;
     const hit = tmdbCache.get(key);
     if (hit !== undefined) return hit;
     return once(key, async () => {
@@ -744,11 +746,15 @@ async function collectionParts(collId, userTmdbKey) {
         for (const k of keys) {
             try {
                 const d = await tmdbGet(`/collection/${collId}?language=en-US`, k);
+                let cs = null;
+                try { cs = await tmdbGet(`/collection/${collId}?language=cs-CZ`, k); } catch (e) { /* jen anglické názvy */ }
+                const csTitle = new Map(((cs && cs.parts) || []).map(p => [p.id, p.title]));
+                const words = p => [...new Set(M.nameTokens([p.title, p.original_title, csTitle.get(p.id)].filter(Boolean).join(' ')))];
                 const parts = ((d && d.parts) || [])
                     .filter(p => p.release_date)
-                    .map(p => ({ id: p.id, d: p.release_date, y: parseInt(p.release_date.slice(0, 4), 10) || null }))
+                    .map(p => ({ id: p.id, d: p.release_date, y: parseInt(p.release_date.slice(0, 4), 10) || null, w: words(p) }))
                     .sort((a, b) => a.d.localeCompare(b.d))
-                    .map(p => ({ id: p.id, y: p.y }));
+                    .map(p => ({ id: p.id, y: p.y, w: p.w }));
                 tmdbCache.set(key, parts, 30 * 24 * H);
                 return parts;
             } catch (e) {
@@ -845,7 +851,10 @@ async function buildPlan(type, id, cfg) {
     const collP = type === 'movie' && info && info.media === 'movie' && info.collection
         ? collectionParts(info.collection, cfg.tmdb_api_key).then(parts => {
             const i = (parts || []).findIndex(p => p.id === info.tmdbId);
-            return i >= 0 && parts.length > 1 ? { i: i + 1, n: parts.length } : null;
+            if (i < 0 || parts.length < 2) return null;
+            // slova z názvů ostatních dílů (pojistka u podpisu uploadera)
+            const w = [...new Set(parts.filter((p, j) => j !== i).flatMap(p => p.w || []))].slice(0, 80);
+            return { i: i + 1, n: parts.length, w };
         }).catch(() => null) : null;
     const sameNameP = type === 'series' && info && info.media === 'tv'
         ? sameNameShows(info, cfg.tmdb_api_key).catch(() => null) : null;
@@ -1110,27 +1119,67 @@ function sameNameOf(plan) {
 const COUNTRY_MARK = new Set(['us', 'usa', 'uk', 'au', 'aus', 'nz', 'ca', 'ie']);
 const markCountry = t => t === 'usa' ? 'us' : t === 'aus' ? 'au' : t;
 
+// Podpis uploadera jako poslední slovo za názvem filmu ("Deadpool 2   SiC", "V hlavě 1 semtam", "… OGGY"):
+// vrátí název bez posledního slova, když je to jedno písmenné slovo. U filmu z kolekce nesmí být v názvu jiného
+// dílu ("Halloween Kills" u Halloweenu 2018); bez názvů dílů kolekce (starší cache, výpadek TMDB) se nepoužije.
+const SIGNED = 'podpis uploadera za názvem';
+const SEP = '[\\s._\\-–—\\[\\]()]';
+const SIGNED_RE = new RegExp(`^(.*[^\\s._\\-–—\\[\\]()])${SEP}+([^\\s._\\-–—\\[\\]()]+)${SEP}*$`);
+function signedName(fileName, plan) {
+    const ext = (String(fileName).match(/\.[a-z0-9]{2,4}$/i) || [''])[0];
+    const base = ext ? fileName.slice(0, -ext.length) : fileName;
+    const m = base.match(SIGNED_RE);
+    if (!m) return null;
+    const word = M.normalize(m[2]);
+    if (!/^[a-z]{2,}$/.test(word)) return null;
+    if (plan.coll || plan.hasColl) {
+        if (!plan.coll || !Array.isArray(plan.coll.w) || plan.coll.w.includes(word)) return null;
+    }
+    return { name: m[1] + ext, word };
+}
+
 // Posoudí jeden soubor: { ok, exact, reason, s, e } – důvod se ukládá do archivu hledání
 function judgeFile(f, plan) {
     if (M.isNonVideo(f.name)) return { ok: false, reason: 'nepřehratelný soubor' };
     const texts = plan.names.map(n => n.text);
     const anyTitle = plan.names.some(n => M.titleMatches(f.name, n.text, texts, plan.year));
     if (plan.type === 'movie') {
-        if (M.looksLikeEpisode(f.name) && !plan.names.some(n => /\b\d{1,2}x\d{1,3}\b/.test(M.normalize(n.text)))) {
+        // film z kolekce: "3. část" / "díl 2" není díl seriálu – pořadí rozhodne kontrola série níž
+        const inColl = !!(plan.coll && plan.coll.i);
+        if (M.looksLikeEpisode(f.name, inColl) && !plan.names.some(n => /\b\d{1,2}x\d{1,3}\b/.test(M.normalize(n.text)))) {
             return { ok: false, reason: 'vypadá jako díl seriálu' };
         }
         const byFull = plan.names.some(n => !n.short && nameOk(f.name, n, plan));
         const byShort = !byFull && plan.names.some(n => n.short && nameOk(f.name, n, plan));
-        if (!byFull && !byShort) return { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
+        if (!byFull && !byShort) {
+            const sig = anyTitle && !f._sig && signedName(f.name, plan);
+            if (sig) {
+                const j = judgeFile({ ...f, name: sig.name, _sig: true }, plan);
+                // přijetí je předběžné – durationFilter ho nechá jen s délkou ±3 % na TMDB nebo s poměrem PAL
+                if (j.ok) return { ...j, exact: false, reason: SIGNED, sig: sig.word };
+            }
+            return { ok: false, reason: anyTitle ? 'jiný podtitul' : 'název nesedí' };
+        }
         // film ze série ("Rambo" 2008 = 4. díl, "Policejní akademie" = 1. díl): číslo dílu u názvu musí být naše pořadí
         // nebo číslo z našich názvů ("Police Academy 1: …", "Star Wars: Epizoda IV" → 1 i 4);
         // číslo PŘED názvem s přesně naším rokem nevadí ("4.Policejní akademie (1984)" – pořadové číslo v seznamu)
-        if (plan.coll && plan.coll.i) {
+        if (inColl) {
             const allowed = new Set([plan.coll.i, ...plan.names.flatMap(n => M.nameNumbers(n.text))]);
             const exactYear = plan.year && M.fileYears(f.name).includes(plan.year);
-            const nums = plan.names.filter(n => nameOk(f.name, n, plan)).map(n => M.partNumberInfo(f.name, n.text))
-                .filter(x => x && !(x.before && exactYear)).map(x => x.n);
+            const infos = plan.names.filter(n => nameOk(f.name, n, plan)).map(n => M.partNumberInfo(f.name, n.text))
+                .filter(x => x && !(x.before && exactYear));
+            const nums = infos.map(x => x.n);
             if (nums.length && !nums.some(n => allowed.has(n))) return { ok: false, reason: `jiný díl série (${nums[0]})` };
+            // jen zkrácený název a za ním cizí letopočet = podtitul jiného dílu ("Fear Street 1978 2021" u "Fear Street: 1994")
+            if (byShort) {
+                const own = new Set(plan.names.flatMap(n => M.nameTokens(n.text)));
+                const four = plan.names.filter(n => n.short && nameOk(f.name, n, plan))
+                    .map(n => { const h = M.afterName(f.name, n.text); return h && h.rest[0]; })
+                    .find(t => /^(1\d{3}|20\d\d)$/.test(t || ''));   // i "1666"
+                if (four && !own.has(four) && !(plan.year && Math.abs(+four - plan.year) <= 1)) {
+                    return { ok: false, reason: `jiný díl série (${four})` };
+                }
+            }
         }
         const years = M.fileYears(f.name);
         const yearOk = plan.year && years.some(y => Math.abs(y - plan.year) <= 1);
@@ -1383,7 +1432,9 @@ function durationMismatch(plan, it) {
 // 8) seriál se stejnojmenným seriálem, aspoň 5 souborů se známou délkou: soubor bez našeho roku s délkou mimo ±15 %
 //    od mediánu dílu je jiný seriál (Drákula 2013 × Dracula 2020 s 90min díly, Na doživotí × BBC Life +16–19 %).
 //    Medián ze souborů s naším rokem (aspoň 2), jinak ze všech – pak jen když je odlehlých nejvýš třetina
-//    (při převaze cizího seriálu by medián patřil jemu). Soubor s rozsahem dílů ("1x01-02") se nevyřadí.
+//    (při převaze cizího seriálu by medián patřil jemu). Soubor s rozsahem dílů ("1x01-02") se nevyřadí;
+// 9) film: soubor přijatý jen díky podpisu uploadera za názvem ("Deadpool 2   SiC") zůstane jen s délkou ±3 % na TMDB
+//    nebo s poměrem PAL; bez délky nebo bez délky filmu z TMDB se neodešle
 const NAMESAKE_MIN = 3;
 const PAL = [25 / 23.976, 23.976 / 25];
 const median = a => { const s = [...a].sort((x, y) => x - y); const i = s.length >> 1; return s.length % 2 ? s[i] : (s[i - 1] + s[i]) / 2; };
@@ -1431,6 +1482,14 @@ function durationFilter(plan, items, now = new Date()) {
                         bad.set(it.f.ident, `rok ±1, jiná délka (starší film stejného jména, ${Math.round(len / 60)} min)`);
                     }
                 }
+            }
+        }
+        const ref = plan.runtime ? plan.runtime * 60 : null;
+        for (const it of live()) {
+            if (why(it) !== SIGNED) continue;
+            const len = lenOf(it);
+            if (!ref || !len || !(near(len, ref, 0.03) || PAL.some(q => near(len / ref, q, 0.01)))) {
+                bad.set(it.f.ident, `podpis uploadera, délka nesedí${len ? ` (${Math.round(len / 60)} min)` : ' (bez délky)'}`);
             }
         }
         const nums = new Map(live().map(it => [it.f.ident, numberAfterName(it.f.name, plan)]).filter(x => x[1] !== null));

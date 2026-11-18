@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.10.3';
+const VERSION = '8.10.4';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -697,7 +697,7 @@ async function seasonRuntimes(tvId, season, userTmdbKey, episode) {
 const countryCode = c => { c = String(c || '').toLowerCase(); return c === 'gb' ? 'uk' : c; };
 async function sameNameShows(info, userTmdbKey) {
     if (!info || info.media !== 'tv' || !info.tmdbId || !info.year) return null;
-    const key = `sn2:${info.tmdbId}`;
+    const key = `sn3:${info.tmdbId}`;
     const hit = tmdbCache.get(key);
     if (hit !== undefined) return hit;
     const ours = new Set([info.en, info.original, info.cz].filter(Boolean).map(t => M.tokens(t).join(' ')).filter(Boolean));
@@ -708,6 +708,11 @@ async function sameNameShows(info, userTmdbKey) {
         for (const k of keys) {
             try {
                 const d = await tmdbGet(`/search/tv?query=${encodeURIComponent(query)}&language=en-US`, k);
+                // české názvy ostatních seriálů – pravidlo stejnojmenného platí jen pro sdílené názvy ("Lov" × "Lov");
+                // bez nich (chyba) se názvy neukládají a pravidlo platí pro všechny jako dřív
+                let dcs = null;
+                try { dcs = await tmdbGet(`/search/tv?query=${encodeURIComponent(query)}&language=cs-CZ`, k); } catch (e) { /* bez CZ */ }
+                const csName = dcs ? new Map(((dcs && dcs.results) || []).map(r => [r.id, r.name])) : null;
                 const out = [];
                 let me = null;
                 for (const r of (d && d.results) || []) {
@@ -717,7 +722,11 @@ async function sameNameShows(info, userTmdbKey) {
                     const y = parseInt(String(r.first_air_date || '').slice(0, 4), 10);
                     if (!y || Math.abs(y - info.year) <= 1) continue;
                     const same = [r.name, r.original_name].filter(Boolean).some(t => ours.has(M.tokens(t).join(' ')));
-                    if (same && !out.some(o => o.y === y)) out.push({ y, v: r.vote_count || 0, c });
+                    if (!same) continue;
+                    const n = csName ? [r.name, r.original_name, csName.get(r.id)].filter(Boolean).map(t => M.tokens(t).join(' ')).filter(Boolean) : null;
+                    const prev = out.find(o => o.y === y);
+                    if (prev) { if (prev.n && n) prev.n = [...new Set([...prev.n, ...n])]; continue; }
+                    out.push(n ? { y, v: r.vote_count || 0, c, n: [...new Set(n)] } : { y, v: r.vote_count || 0, c });
                 }
                 out.sort((a, b) => a.y - b.y);
                 const res = out.length ? [...out, me || { ours: true, v: null, c: '' }] : [];
@@ -869,11 +878,12 @@ async function buildPlan(type, id, cfg) {
     const sub = text => { const s = M.subTitle(text); return s ? { text: s, short: M.nameTokens(s).length < 3, full: text } : null; };
     const fr = [];
     if (info) {
-        // delší anglický název, který začíná naším EN/originálním ("Evil Genius: The True Story of …")
+        // delší anglický název, který začíná nebo končí naším EN/originálním ("Evil Genius: The True Story of …",
+        // "Anne Rice's Mayfair Witches")
         const baseEn = [info.en, latin(info.original)].filter(Boolean).map(t => M.nameTokens(t).join(' '));
         const longEn = [...(info.altEn || []), latin(info.original)].filter(Boolean).find(a => {
             const k = M.nameTokens(a).join(' ');
-            return baseEn.some(b => b && k !== b && k.startsWith(b + ' '));
+            return baseEn.some(b => b && k !== b && (k.startsWith(b + ' ') || k.endsWith(' ' + b)));
         });
         if (info.source === 'csfd') {
             // ČSFD: jen plné názvy – tituly jen na ČSFD bývají spin-offy/speciály ("Frieren: ●● no mahó"),
@@ -1202,8 +1212,23 @@ function judgeFile(f, plan) {
         for (const y of titleYs) { const i = ys.indexOf(y); if (i !== -1) ys.splice(i, 1); }
         if (ys.length && ys.every(y => y < plan.year - 1)) return { ok: false, reason: `rok nesedí (${ys.join(',')})` };
         // stejnojmenný seriál (reboot/revival ↔ původní, jiná země) – ne u anime (remaky bývají bez roku)
-        const sn = plan.isAnime ? { others: [] } : sameNameOf(plan);
-        if (sn.others.length) {
+        const sn = plan.isAnime || f._own ? { others: [] } : sameNameOf(plan);
+        const snv = sn.others.length ? sameNameVerdict(f, plan, sn, ys) : null;
+        if (snv) {
+            // soubor sedí přes náš plný název, který druhý seriál nemá ("Gajokgyehoek - S1E1" × Family Matters 1989):
+            // pravidlo se přeskočí, přijetí je předběžné – durationFilter ho nechá jen s délkou dílu ±15 % na TMDB
+            if (!ownNameMatch(f, plan, sn)) return snv;
+            const j = judgeFile({ ...f, _own: true }, plan);
+            return j.ok ? { ...j, exact: false, reason: OWN_NAME } : j;
+        }
+    }
+    return judgeNames(f, plan, anyTitle);
+}
+
+// Pravidla stejnojmenných seriálů (značka země, starší známější, novější) → vyřazení nebo null
+function sameNameVerdict(f, plan, sn, ys) {
+    {
+        {
             // značka země za názvem ("The Office US S01E01") rozhodne před rokem
             const hit = plan.names.map(n => M.afterName(f.name, n.text)).find(Boolean);
             const mark = hit && hit.rest.slice(0, 3).map(markCountry).find(t => COUNTRY_MARK.has(t));
@@ -1227,6 +1252,20 @@ function judgeFile(f, plan) {
             }
         }
     }
+    return null;
+}
+
+// Soubor sedí přes náš plný název, který žádný stejnojmenný seriál nemá (názvy ostatních z TMDB EN + CZ, pole n);
+// bez uložených názvů (starší cache, chyba CZ hledání) → false a pravidlo platí jako dřív
+const OWN_NAME = 'náš název, jiný seriál ho nemá';
+function ownNameMatch(f, plan, sn) {
+    if (!sn.others.every(o => Array.isArray(o.n) && o.n.length)) return false;
+    const shared = new Set(sn.others.flatMap(o => o.n));
+    return plan.names.some(n => !n.short && !shared.has(M.tokens(n.text).join(' ')) && nameOk(f.name, n, plan));
+}
+
+// Zbytek posouzení seriálu: název, sezóna a díl
+function judgeNames(f, plan, anyTitle) {
     let reason = anyTitle ? 'jiný podtitul' : 'název nesedí', seen = null;
     // rozdělená sezóna (JoJo S06E02 = Steel Ball Run 2nd Stage 01): číslo dílu v části je menší než TMDB díl
     const split = plan.alEpisode && plan.alEpisode < plan.episode;
@@ -1434,7 +1473,9 @@ function durationMismatch(plan, it) {
 //    Medián ze souborů s naším rokem (aspoň 2), jinak ze všech – pak jen když je odlehlých nejvýš třetina
 //    (při převaze cizího seriálu by medián patřil jemu). Soubor s rozsahem dílů ("1x01-02") se nevyřadí;
 // 9) film: soubor přijatý jen díky podpisu uploadera za názvem ("Deadpool 2   SiC") zůstane jen s délkou ±3 % na TMDB
-//    nebo s poměrem PAL; bez délky nebo bez délky filmu z TMDB se neodešle
+//    nebo s poměrem PAL; bez délky nebo bez délky filmu z TMDB se neodešle;
+// 10) seriál: soubor přijatý přes náš název, který stejnojmenný seriál nemá (OWN_NAME), zůstane jen s délkou
+//    ±15 % na díl z TMDB (rozsah dílů = násobek); bez délky se neodešle (pojistka pro CZ název, který TMDB nezná)
 const NAMESAKE_MIN = 3;
 const PAL = [25 / 23.976, 23.976 / 25];
 const median = a => { const s = [...a].sort((x, y) => x - y); const i = s.length >> 1; return s.length % 2 ? s[i] : (s[i - 1] + s[i]) / 2; };
@@ -1504,6 +1545,14 @@ function durationFilter(plan, items, now = new Date()) {
         }
     }
     if (plan.type === 'series') {
+        for (const it of live()) {
+            if (why(it) !== OWN_NAME) continue;
+            const len = lenOf(it), r = M.episodeRange(it.f.name);
+            const ref = plan.epRuntime ? plan.epRuntime * 60 * (r ? r.to - r.from + 1 : 1) : null;
+            if (!ref || !len || !near(len, ref, 0.15)) {
+                bad.set(it.f.ident, `náš název, délka nesedí${len ? ` (${Math.round(len / 60)} min, díl ${plan.epRuntime || '?'} min)` : ' (bez délky)'}`);
+            }
+        }
         const typo = live().filter(it => lenOf(it) && why(it) === 'zkomolený název (překlep)');
         if (typo.length) {
             const exact = live().filter(it => lenOf(it) && !/^zkomolen/.test(why(it))).map(lenOf);

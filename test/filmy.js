@@ -60,5 +60,13 @@ assert.ok(fx && fx.how === 'přepis', JSON.stringify(fx));
 assert.strictEqual(M.repairName('Mikata ga Yowasugite Hojo Maho ni Tesshite ita Kyutei Mahoshi 2025 S01E01.mkv',
     ['Mikata ga Yowasugite Hojo Mahou ni Tesshiteita Kyuutei Mahoushi'], 1, 1, { anime: false }), null);
 
+// slovo před zkráceným názvem: cizí titul ("Celebrity Crime Scene") × slovo / slepená slova z plného názvu
+assert.strictEqual(M.shortNameIsNoise('Celebrity.Crime.Scene.S01E01.1080p.WEB.h264-EDITH.mkv', 'Crime Scene', 'Crime Scene: The Texas Killing Fields'), true);
+assert.strictEqual(M.shortNameIsNoise('Otrava - Příběh lásky 2024 CZ dab 1080p.mkv', 'Příběh lásky', 'Pamela: Příběh lásky'), true);
+assert.strictEqual(M.shortNameIsNoise('Sum1 Alien Invasion (2017)', 'Alien Invasion', 'S.U.M.1: Alien Invasion'), false);
+assert.strictEqual(M.shortNameIsNoise('Terminátor Den zúčtování 1991.mkv', 'Den zúčtování', 'Terminátor 2: Den zúčtování'), false);
+assert.strictEqual(M.shortNameIsNoise('S01E01 Crime Scene.mkv', 'Crime Scene', 'Crime Scene: X'), false);
+assert.strictEqual(M.shortNameIsNoise('Krimi Crime Scene 2022.mkv', 'Crime Scene', 'Crime Scene: X'), false);
+
 console.log('filmy: ✓');
 process.exit(0);

@@ -403,16 +403,39 @@ function sequelSeason(rest) {
 }
 
 // Zkrácený název ("Druhá světová válka" z "Druhá světová válka: Cena říše") je šum,
-// když v souboru nezačíná (do 2. slova) nebo za ním stojí jiný podtitul ("… v barvách", "… Na frontě")
+// když v souboru nezačíná (do 2. slova) nebo za ním stojí jiný podtitul ("… v barvách", "… Na frontě").
+// Jedno slovo před ním projde jen jako číslo / značka dílu, poznámka uploadera nebo slovo z plného názvu
+// (i slepené: "Sum1" z "S.U.M.1"; "Terminátor Den zúčtování") – jinak je to cizí titul, který náš zkrácený
+// název jen končí ("Celebrity Crime Scene", "Apokalypsa 2. světová válka", "Otrava - Příběh lásky")
 function shortNameIsNoise(fileName, shortName, fullName) {
     const hit = afterName(fileName, shortName);
     if (!hit || hit.start > 1) return true;
     const full = new Set(nameTokens(fullName));
+    if (hit.start === 1) {
+        const prev = fileTokens(fileName).filter(t => !STOPWORDS.has(t))[0];
+        if (!prevWordOk(prev, full, tokens(fullName || ''))) return true;
+    }
     const next = hit.rest.find(t => !(t.length < 2 && /^[a-z]$/.test(t)));
     if (!next) return false;
     if (!/^[a-z]+$/.test(next)) return false;          // číslo, S02E05, 1080p, 2nd …
     if (full.has(next) || TECH_WORDS.has(next) || ROMAN[next]) return false;
     return true;
+}
+
+function prevWordOk(w, full, fullAll) {
+    if (!w) return true;
+    if (PREFIX_OK.test(w) || PREFIX_NOISE.has(w) || full.has(w) || ROMAN_ANY.test(w)) return true;
+    if (TECH_WORDS.has(w) || DESC_WORDS.has(w) || /^\d{3,4}p$/.test(w)) return true;   // "1080p", "Krimi", "CZ"…
+    // slepená slova plného názvu ("S.U.M.1" → "sum1")
+    for (let i = 0; i < fullAll.length; i++) {
+        let acc = '';
+        for (let j = i; j < Math.min(fullAll.length, i + 6); j++) {
+            acc += fullAll[j];
+            if (j > i && acc === w) return true;
+            if (acc.length >= w.length) break;
+        }
+    }
+    return false;
 }
 
 // Soubory, které nejdou přehrát: archivy, titulky, obrázky, hudba, dokumenty…

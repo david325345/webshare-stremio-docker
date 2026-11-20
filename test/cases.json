@@ -71050,5 +71050,4464 @@
    }
   ],
   "at": "2026-11-16T20:16:39.786Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": null,
+   "type": "series",
+   "id": "tt23553310:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Na místě činu: Texaská vražedná pole",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Crime Scene: The Texas Killing Fields",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Na místě činu",
+     "kind": "franchise",
+     "short": true,
+     "full": "Na místě činu: Texaská vražedná pole"
+    },
+    {
+     "text": "Texaská vražedná pole",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Crime Scene",
+     "kind": "franchise",
+     "short": true,
+     "full": "Crime Scene: The Texas Killing Fields"
+    },
+    {
+     "text": "The Texas Killing Fields",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "na",
+    "miste",
+    "cinu",
+    "texaska",
+    "vrazedna",
+    "pole",
+    "crime",
+    "scene",
+    "texas",
+    "killing",
+    "fields"
+   ],
+   "year": 2022,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 51
+  },
+  "files": [
+   {
+    "n": "Na místě činu Texaská vražedná pole S01E01 Nikdo nic nevidel.mp4",
+    "len": 3040,
+    "ok": true
+   },
+   {
+    "n": "Na míste činu - Zabiják z Times Square 1 Vražda na 42. ulici  CZ DABING.avi",
+    "ok": false
+   },
+   {
+    "n": "Na míste činu   Zabiják z Times Square 1 Vražda na 42  ulici  CZ DABING.avi",
+    "ok": false
+   },
+   {
+    "n": "Rizzoli-&-Isles-Vrazdy-na-pitevne-05x16-Na-miste-cinu-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "RaI - 5x16. Na místě činu (WEBRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "5x16.Na místě činu (In Plain View).avi",
+    "ok": false
+   },
+   {
+    "n": "Rizzoli & Isles - 5x16. Na místě činu (DVDRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "Na místě činu - Zabiják z Times Square 2 Loviště CZ DABING.avi",
+    "ok": false
+   },
+   {
+    "n": "Na místě činu - Zabiják z Times Square 3 Konec jedné éry  CZ DABING.mp4",
+    "ok": false
+   },
+   {
+    "n": "Na místě činu Zmizení v hotelu Cecil E01 Ztracená v Los Angeles (2021) CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Na místě činu Zmizení v hotelu Cecil E02 Tajemství hotelu Cecil (2021) CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Na místě činu Zmizení v hotelu Cecil E03 Do králičí nory (2021) CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Na místě činu Zmizení v hotelu Cecil E04 Pravda, která bolí (2021) CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "05x16 Na místě činu.avi",
+    "ok": false
+   },
+   {
+    "n": "Rizzoli-&-Isles-05x16-Na-miste-cinu-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jurský svět_ Teorie chaosu_S04E01_Na místě činu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jurassic World Chaos.Theory S04E01 FHD 1080p CZ Na místě činu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Na veky veku S01E01 FHD CZ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ironside-Na straně zákona S01E01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Ironside-Na straně zákona S01E01  (krimi 2013) czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Mob City S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "Emerald.City.S01E01.720p.HDTV.x264-AVS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Emerald.City.S01E01.1080p.WEB-DL.x264-FUM.mkv",
+    "ok": false
+   },
+   {
+    "n": "Emerald.City.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG_CZ_SUB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Emerald.City.S01E01.The.Beast.Forever.720p.WEB-DL.2CH.x265.HEVC-PSA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Na.straně.zákona.S01E01.720p.BDRip.XViD.CZ-S1LV3R.avi",
+    "ok": false
+   },
+   {
+    "n": "Co-mám-na-tobě-ráda-s01e01-cz-dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "1w.Emerald.City.S01E01.The.Beast.Forever.1080p.AMZN.WEB-DL.DD 5.1.x264-ViSUM (1).mkv",
+    "ok": false
+   },
+   {
+    "n": "Flashpoint - 1x11. Návrat na místo činu (WEBRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Troy.Fall.Of.A.City.S01E01.HDTV.x264-MTB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vrazdy na prelomu stoleti.s01e01.HEVC.720.cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "All.or.Nothing.Manchester.City.S01E01.Great.Expectations.720p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Silverův návrat na ostrov pokladů S01E01 Mapa CZ dub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Invisible.City.S01E01.Wish.You.Were.Here.720p.NF.WEB-DL.DDP5.1.x264-iKA.CZ-tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Invisible.City.S01E01.Wish.You.Were.Here.720p.NF.WEB-DL.DDP5.1.x264-iKA-cz.tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vítejte na konci světa s01e01 (CZ tit,FHD,2021)-Welcome To Utmark.mkv",
+    "ok": false
+   },
+   {
+    "n": "Spy.City.S01E01.1080p.WEB-DL.DD 5.1.x264 CZtit.mkv",
+    "ok": false
+   },
+   {
+    "n": "S04E07 - Náhodný cíl.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Professionals CI5 -S01E01 Silenec.mkv",
+    "ok": false
+   },
+   {
+    "n": "Spy.City.S01E01.1080p.WEB-DL.DD+5.1.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jumbo Jet - 50 let na obloze 2018 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Atlas prokletých míst 2020 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Maskovaní nájezdníci - příběh tchoře_Prima ZOOM_2013_09_11_20_50_00.avi",
+    "ok": false
+   },
+   {
+    "n": "Pol Pot - Putování na vražedná pole cz by Hunys.avi",
+    "ok": false
+   },
+   {
+    "n": "Vrazedna.pole.1984.AC3.CZ.-calibrum2.avi",
+    "ok": false
+   },
+   {
+    "n": "Falco-příběh poldy s01e01-(akční 2013) czdab.avi",
+    "ok": false
+   },
+   {
+    "n": "Vraždy na pitevně 6x17 - V minovém poli.avi",
+    "ok": false
+   },
+   {
+    "n": "válečné filmy-Vražedná pole (1984.BR.1080p.x264.AC3.Cz dab).mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole ( The Killing Fields 1984 ) CZ dab + tit 1080p BluRay.mkv",
+    "ok": false
+   },
+   {
+    "n": "Starověká Čína z ptačí perspektivy S01E01 Tajemství Velké čínské zdi(2020)Dokumentární Velká Británie  fullHDTV 1080i cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole (1984) 1080p cz dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Na 18 kolech v USA 2017 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Na 18 kolech v RI 2019 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Odpočítávání - Na prahu 2.světové války 2021 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Tenkrát na Východě s Emirem Kusturicou 2018 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole ( The Killing Fields  1984 )    CZ dab + tit   1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Krok za krokem.s06.e08 - Nájemníci.mkv",
+    "ok": false
+   },
+   {
+    "n": "Malý Sheldon.s01.e22 - Vanilková zmrzlina, nápadníci a jídelní sestava.mkv",
+    "ok": false
+   },
+   {
+    "n": "Donutil, BrÅˆÃ¡ci a Bolek PolÃ­vka.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hudson a RexS04E03 Rex na mieste činu (sk,eng,AD, sk s AD)(tit.sk).mkv",
+    "ok": false
+   },
+   {
+    "n": "Vnp_S06_E17_Rizzoli-&-Isles-Vraždy-na-pitevně-06x17-V-minovém-poli.avi",
+    "ok": false
+   },
+   {
+    "n": "FBI - Agenti řeší případy 2023 S01E17 Útok na Oklahoma City I (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "FBI - Agenti řeší případy 2023 S01E18 Útok na Oklahoma City II (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Hitlerova vražedná mašinérie s01e01.mkv",
+    "ok": false
+   },
+   {
+    "n": "24 - Jak se stal Rumcajs na hodinu císařpánem.mp4",
+    "ok": false
+   },
+   {
+    "n": "Expedice do neznama HD 04x01 - Zili na mistech.mkv",
+    "ok": false
+   },
+   {
+    "n": "Nacistická vražedná pole 2022 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Texas.Killing.Fields.S01E01.Nobody.Sees.Anything.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit",
+    "len": 3039,
+    "ok": true
+   },
+   {
+    "n": "Na místě činu Texaská vražedná pole S01E01 Nikdo nic neviděl",
+    "len": 3038,
+    "ok": true
+   },
+   {
+    "n": "Na místě činu: Texaská vražedná pole S01E01 - Nikdo nic neviděl CZ Dabing",
+    "len": 3038,
+    "ok": true
+   },
+   {
+    "n": "Na místě činu: Texaská vražedná pole - S1E1 Nikdo nic neviděl CS",
+    "len": 3038,
+    "ok": true
+   },
+   {
+    "n": "Na místě činu: Texaská vražedná pole - S1E1 EN",
+    "len": 3038,
+    "ok": true
+   },
+   {
+    "n": "Na místě činu  Zmizení v hotelu Cecil S01E01 Ztracená v Los Angeles byDejv",
+    "len": 3244,
+    "ok": false
+   },
+   {
+    "n": "Na miste cinu Zabijak berlinskeho nocniho zivota S01E01 CZ Dabing 1080p",
+    "len": 2055,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zabíják berlínského nočního života S01E01 - Záhadná smrt CZ Dabing",
+    "len": 2055,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zmizení v hotelu Cecil S01E01 - Ztracená v Los Angeles CZ Dabing",
+    "len": 3244,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu_ Zabíják berlínského nočního života S01E01 CZ dabing HD 1080p.mp4",
+    "len": 2055,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zabiják z Times Square - S1E1 Vražda na 42",
+    "len": 2858,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu - Zabiják z Times Square S01E01 CZtitulky",
+    "len": 2859,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu - Zabíják berlínského nočního života S01E01 CZtitulky",
+    "len": 2055,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zabiják z Times Square S01E01 - Vražda na 42. ulici CZ Titulky",
+    "len": 2859,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zmizení v hotelu Cecil - S1E1 Episode 1 EN",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zmizení v hotelu Cecil - S1E1 Episode 1 CS",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zabíják berlínského nočního života - S1E1 CS",
+    "len": 2055,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zabíják berlínského nočního života - S1E1 Záhadná smrt CS",
+    "len": 2055,
+    "ok": false
+   },
+   {
+    "n": "Na místě činu: Zmizení v hotelu Cecil - S1E1 Ztracená v Los Angeles EN",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Texas.Killing.Fields.S01E01.Nobody.Sees.Anything.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": true
+   },
+   {
+    "n": "Crime.Scene.The.Texas.Killing.Fields.S01E03.The.Reckoning.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Texas.Killing.Fields.S01E02.Culture.of.Suspicion.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.the.Times.Square.Killer.S01E01.1080p.Web.H264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Texas Killing Fields cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Texas Killing Fields (Ami Canaan Mann, 2011)PdB.avi",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Vanishing.at.the.Cecil.Hotel.S01E01.Lost.in.Los.Angeles.1080p.NF.WEB-DL.DDP5.1.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Vanishing.at.the.Cecil.Hotel.S01E02.Secrets.of.the.Cecil.1080p.NF.WEB-DL.DDP5.1.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Vanishing.at.the.Cecil.Hotel.S01E03.Down.the.Rabbit.Hole.1080p.NF.WEB-DL.DDP5.1.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.The.Vanishing.at.the.Cecil.Hotel.S01E04.The.Hard.Truth.1080p.NF.WEB-DL.DDP5.1.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Texasky kat - Texas killing fields (2011, CZ   EN dab).mkv",
+    "ok": false
+   },
+   {
+    "n": "Texasky kat (Texas Killing Fields 2011) CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "CSI Crime Scene Investigation S10E18 Field Mice.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Tomorrow.People.US.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Tomorrow.People.US.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Tomorrow.People.US.S01E01.CZ.tit.mp4",
+    "ok": false
+   },
+   {
+    "n": "Kuryr -Transporter The - ( serial 2012 ) CZ S01E01 - Trojsky kun pod kapotou.mkv",
+    "ok": false
+   },
+   {
+    "n": "Elektrické křeslo - UKM The Ultimate Killing Machine (2006) 480p horor cz dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Stoupenci Zla - Following, The ( serial 2013 ) CZ S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Lizzie.Borden.Chronicles.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Lizzie.Borden.Chronicles.S01E01.720p.HDTV.x264-2HD.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Lizzie.Borden.Chronicles.S01E01.HDTV.x264-2HD[ettv].mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Killing.Field.2014.PDTV.x264-BATV.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Astronaut.Wives.Club.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Those.Who.Kill.US.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Stíny nad jezerem - Top of the Lake 720p HDTV S01E01 CZ-EN dabing 2013 by Pretorian - Pilot.mkv",
+    "ok": false
+   },
+   {
+    "n": "Stagecoach The Texas Jack Story.2016.HDRip.XviD.AC3-EVO.avi",
+    "ok": false
+   },
+   {
+    "n": "Bridget Jones's Diary Deleted Scene - The Perfect Relationship_ (2001) - Renée Zellweger Movie HD - (video.booster.cz) 360p.mp4",
+    "ok": false
+   },
+   {
+    "n": "Z.The.Beginning.of.Everything.S01E01.WEBRip.X264-DEFLATE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Tí,-čo-vraždia---Those-Who-Kill-(-2014).S01E01.720p..mkv",
+    "ok": false
+   },
+   {
+    "n": "Z.The.Beginning.of.Everything.S01E01.1080p.AMZN.WEBRip.HEVC.DD5.1.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Star.vs.The.Forces.of.Evil.S01E01.Star.Comes.To.Earth-Party.With.A.Pony.1080p.WEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Good.Karma.Hospital.S01E01.HDTV.x264-ORGANiC[ettv].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Marvelous.Mrs.Maisel.S01E01.720p.WEB.H264-STRiFE.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Marvelous.Mrs.Maisel.S01E01.1080p.WEB.H264-STRiFE.mkv",
+    "ok": false
+   },
+   {
+    "n": "MAN IN THE HIGH CASTLE - 2015 - S01E01 - en - x265-1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Man in the High Castle (2015) - S01E01 - The New World (1080p AMZN WEB-DL x265 MONOLITH).mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Diaries.The Candidate.2019.S01E02.Cz.sub.WEBRip.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Diaries.The Candidate.2019.S01E04.Cz.sub.WEBRip.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Diaries.The Candidate.2019.S01E05.Cz.sub.WEBRip.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Diaries.The Candidate.2019.S01E02.cz.sub.Who.Did.It.1080p.WEB-DL.DD 5.1.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Diaries.The Candidate.2019.S01E03.cz.sub.The.Prosecutor.1080p.WEB-DL.DD 5.1.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Bernie.Mac.Show.S01E01.iNTERNAL.DVDRip.XviD-OSiRiS.avi",
+    "ok": false
+   },
+   {
+    "n": "Crime.of.the.Century.1996.1080p.HDTV.DL.AC3.x264-NORETAiL.mkv",
+    "ok": false
+   },
+   {
+    "n": "Teoria Velkeho Tresku (The Big Bang Theory) - S01E01 - SK.avi",
+    "ok": false
+   },
+   {
+    "n": "The Big Bang Theory S01E01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Všichni starostovi muži - Spin City 1x01.avi",
+    "ok": false
+   },
+   {
+    "n": "Silverův návrat na ostrov pokladů - 1x01 - Mapa.mkv",
+    "ok": false
+   },
+   {
+    "n": "Moonbeam City 1x01 cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Vražedné pobrežie 3x24-Pohľad na miesto činu FHD SK dab (GreAndr).mp4",
+    "ok": false
+   },
+   {
+    "n": "XTV.cz - „EU jedná hystericky. Představa ruského útoku na Polsko či Česko je fantasmagorie. Trump vystřelí, stáhne se, znovu vystřelí, hlavní cíle zakrývá.“ – Oskar Krejčí.mp4",
+    "ok": false
+   },
+   {
+    "n": "Haite Kudasai Takamine-san - 10 CZ - Prší a Širota zamrznul na místě.mkv",
+    "ok": false
+   },
+   {
+    "n": "O loupežníku Rumcajsovi 24 - Jak se stal Rumcajs na hodinu císařpánem.mp4",
+    "ok": false
+   },
+   {
+    "n": "Veterinární správa_ Ptačí chřipka je na vzestupu, opatrnost v drobnochovech je na místě.mp4",
+    "ok": false
+   },
+   {
+    "n": "SINGLE LADY_ ředitelka ÓČKA se vrací na místo činu!.mp4",
+    "ok": false
+   },
+   {
+    "n": "Na správnej ceste 1x01 (09.01.2026) Forgáč, Wisterová, Smatanová, Ďurica.mp4",
+    "ok": false
+   },
+   {
+    "n": "Spicy.City.1x01.Love.Is.a.Download.480p.WEBRip.x264-MOBiUS.mp4",
+    "ok": false
+   },
+   {
+    "n": "94. -POLICISTA ODHALEN DOKTOREM IHNED NA MÍSTĚ -.mp4",
+    "ok": false
+   },
+   {
+    "n": "S05E08 Pomoc na místě.mkv",
+    "ok": false
+   },
+   {
+    "n": "Velký potenciál_S02E13_Na místě řidiče.mkv",
+    "ok": false
+   },
+   {
+    "n": "Falco - Příběh poldy - 1x01. Probuzení (TVRip-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "02x11 Jidáš na kříži-Judas on a pole.avi",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole  (Sam Waterston,Haing S. Ngor,John Malkovich-1984 Drama-Válečný-Historický-Bdrip.-1080p.) Cz dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole  (Sam Waterston,Haing S. Ngor,John Malkovich-1984 Drama-Válečný-Historický-Bdrip.-1080p.) Cz dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole  (Sam Waterston,Haing S. Ngor,John Malkovich-1984 Drama-Válečný-Historický-Bdrip.-1080p.) Cz dabing.mp4",
+    "ok": false
+   },
+   {
+    "n": "Rizzoli-&-Isles-Vrazdy-na-pitevne-06x17-V-minovem-poli-web-dl-cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sám vojak v poli 01.avi",
+    "ok": false
+   },
+   {
+    "n": "Kono Naka ni Hitori- Imouto ga Iru! - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Ore wo Suki nano wa Omae dake ka yo - 01 [480p].mkv",
+    "ok": false
+   },
+   {
+    "n": "Ore wo Suki nano wa Omae dake ka yo - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Ore wo Suki nano wa Omae dake ka yo - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná sezona 01 - Krvavá zima 2011 DVB-T cz.avi",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Ore wo Suki nano wa Omae dake ka yo - 01 [720p] (CZ).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Erai-raws] Ore wo Suki nano wa Omae dake ka yo - 01 [720p][Multiple Subtitle].mkv",
+    "ok": false
+   },
+   {
+    "n": "Sám vojak v poli 01 - Alone soldier in field 0103 1964, SK.mp4",
+    "ok": false
+   },
+   {
+    "n": "Ore wo Suki nano wa Omae dake ka yo 01.BDRip.1080p.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "The O.C California 1x01.avi",
+    "ok": false
+   },
+   {
+    "n": "The Dukes of Hazzard 1x01 - One Armed Bandits ENG.avi",
+    "ok": false
+   },
+   {
+    "n": "The Killing Fields (1984) 1080p Surround.mp4",
+    "ok": false
+   },
+   {
+    "n": "SAO S01E05 - A Crime Within the Walls (720p ENG) v2.mp4",
+    "ok": false
+   },
+   {
+    "n": "Pozdravy od vraha - The Postcard Killings 2020 CZ dabing 1080p Krimi  Drama  Mysteriózní  Thriller.mkv",
+    "ok": false
+   },
+   {
+    "n": "Pozdravy.od.vraha.The.Postcard.Killings.2020.1080p.BluRay.AC3.CZ.dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Pozdravy od vraha - The.Postcard.Killings.2020.1080p.BluRay.CZ.dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Killing Fields (Roland Joffé, 1984)BDRip (SD).mkv",
+    "ok": false
+   },
+   {
+    "n": "y2mate.com - Black Widow Tricks Loki Scene  The Avengers 2012 Movie CLIP HD_1080p.mp4",
+    "ok": false
+   },
+   {
+    "n": "y2mate.com - Iron Man vs Loki  We have a Hulk  Suit Up Scene  The Avengers 2012 Movie Clip HD_1080pFHR.mp4",
+    "ok": false
+   },
+   {
+    "n": "Breaking Bad - S02E08 Deleted Scene - The Yearbook.mkv",
+    "ok": false
+   },
+   {
+    "n": "Breaking Bad - S03E03 Deleted Scene - The Cousins Strike Again.mkv",
+    "ok": false
+   },
+   {
+    "n": "Breaking Bad - S03E11 Deleted Scene - The Routine.mkv",
+    "ok": false
+   },
+   {
+    "n": "Breaking Bad - S05E10 Deleted Scene - You're Killing Me.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Texas.Chain.Saw.Massacre.1974.REMASTERED.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT (1).mkv",
+    "ok": false
+   },
+   {
+    "n": "The Sawyer Massacre  - A Fan Film Unofficial Prequel to The Texas Chain Saw Massacre.mp4",
+    "ok": false
+   },
+   {
+    "n": "Borgwardt - Crime On The Highway (1986, Musikladen Eurotops, Soundtrack Didi auf vollen Touren).mp4",
+    "ok": false
+   },
+   {
+    "n": "Pozdravy od vraha - The.Postcard.Killings.2020.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "the_alice_killings_short_2022.mp4",
+    "ok": false
+   },
+   {
+    "n": "the.texas.rangers.1951.1080p.webrip.hevc.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "The True History of Crime in the Midwest  7.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Berlin.Nightlife.Killer.S01E01.1080p.NF.WEB-DL.DDP5.1.H264-SPRITE.mp4",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Berlin.Nightlife.Killer.S01E02.1080p.NF.WEB-DL.DDP5.1.H264-SPRITE.mp4",
+    "ok": false
+   },
+   {
+    "n": "killer.at.the.crime.scene.s01e01.1080p.web.h264-skyfire.mkv",
+    "ok": false
+   },
+   {
+    "n": "Celebrity.Crime.Scene.S01E01.1080p.WEB.h264-EDITH.mkv",
+    "len": 2595,
+    "ok": false
+   },
+   {
+    "n": "Celebrity.Crime.Scene.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "len": 2595,
+    "ok": false
+   },
+   {
+    "n": "Celebrity.Crime.Scene.S01E01.1080p.WEB.h264-TRB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Berlin.Nightlife.Killer.S01E01.WEB.x264-TORRENTGALAXY.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime Scene Raw S01E01 Mandy Reynolds 1080p NOW WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime Scene Raw S01E01 Mandy Reynolds 1080p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime Scene Raw S01E01 Mandy Reynolds 720p NOW WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime Scene Raw S01E01 Mandy Reynolds 720p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Kerala.Crime.Files.Shiju.Parayil.Veedu.Neendakara.2023.S01E01.Day.1.Crime.Scene.1080p.HS.WEB-DL.MULTi.DD+5.1.H.264-iNT3RN4L.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI Crime Scene Investigation S01E01 Pilot.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI Crime Scene Investigation S12E08 Crime After Crime 1080p AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI Crime Scene Investigation S12E08 Crime After Crime.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Berlin.Nightlife.Killer.S01E03.1080p.NF.WEB-DL.DDP5.1.H264-SPRITE.mp4",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Berlin.Nightlife.Killer.S01E02.WEB.x264-TORRENTGALAXY.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Berlin.Nightlife.Killer.S01E03.WEB.x264-TORRENTGALAXY.mkv",
+    "ok": false
+   },
+   {
+    "n": "Killer.at.the.Crime.Scene.S04E03.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E07.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E07.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Killer.at.the.Crime.Scene.S04E04.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E08.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E08.1080p.HDTV.H264-DARKFLiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Killer.at.the.Crime.Scene.S04E05.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E09.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Killer.at.the.Crime.Scene.S04E05.1080p.HDTV.H264-DARKFLiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E10.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Crime.Scene.Cleaners.S01E10.1080p.HDTV.H264-DARKFLiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E09.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E10.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E17.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E15.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E18.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E05.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E16.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E03.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E08.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E14.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E20.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E21.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "CSI.Crime.Scene.Investigation.S11E22.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná čísla S01E01 Sériové vraždy CZdab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná čísla S01E01-13 2005 CZ dab - Sériové vraždy.avi",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole.mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole - Sam Waterston, Haing S. Ngor, John Malkovich 1984 Cz Dab.-.mp4",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole 1984 CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jane.McDonald.From.Pole.to.Pole.S01E01.The.Antarctic.Peninsula.1080p.HDTV.H264-DARKFLiX[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Jane.McDonald.From.Pole.to.Pole.S01E01.The.Antarctic.Peninsula.1080p.HDTV.H264-DARKFLiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "jane.mcdonald.from.pole.to.pole.s01e01.1080p.web.h264-cbfm[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "jane.mcdonald.from.pole.to.pole.s01e01.1080p.web.h264-cbfm.mkv",
+    "ok": false
+   },
+   {
+    "n": "Walker, texaský ranger (1993) S01E01-Pilot 1.časť 1080p.SK dab [GreAn].mkv",
+    "ok": false
+   },
+   {
+    "n": "Vražedná pole (1984) 1080p, cz.mp4",
+    "ok": false
+   },
+   {
+    "n": "Grimm.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Hart.of.Dixie.S01E01.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "The.Finder.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Revolution.2012.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dexter-06x03-Polda a bandita.avi",
+    "ok": false
+   },
+   {
+    "n": "Tower.Prep.S01E01.New.Kid.HDTV.XviD-2HD.avi",
+    "ok": false
+   },
+   {
+    "n": "Dva a pol chlapa 09x01.avi",
+    "ok": false
+   },
+   {
+    "n": "Surface.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Motive S01E01.avi",
+    "ok": false
+   },
+   {
+    "n": "VP.E01.S01E01.Tezky.pripad.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "Cult-S01E01-WEBRip-[You're-Next].mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Following.S01E01.HDTV.CZ.titulky.avi",
+    "ok": false
+   },
+   {
+    "n": "Bates.Motel.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Alcatraz.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Touch.S01E01.HDTV.XviD-LOL.avi",
+    "ok": false
+   },
+   {
+    "n": "Awake.S01E01.WebRip.XviD.EngSub-Bruzsy.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E01.HDTV.x264-2HD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Suits.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Wilfred.US.S01E01.iNTERNAL.BDRip.XviD-INQUISITION.avi",
+    "ok": false
+   },
+   {
+    "n": "Continuum.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Dallas.2012.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Perception.S01E01.HDTV.XviD-PTpOWeR.avi",
+    "ok": false
+   },
+   {
+    "n": "Hell.on.Wheels.S01E01.DVDRip.XviD-REWARD.avi",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E01.HDTV.x264-LOL.mp4",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E01.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "[NG] Zettai Karen Children THE UNLIMITED - Hyoubu Kyousuke - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "CBC.The.Passionate.Eye.2014-01-04.Putins.Games.HDTV.x264-CLDD.mp4",
+    "ok": false
+   },
+   {
+    "n": "[AnimeFox] Druaga no Tou the Aegis of Uruk 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "El-Hazard - The Magnificent World 2 - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zettai Karen Children THE UNLIMITED - Hyoubu Kyousuke - 01.mkv",
+    "ok": false
+   },
+   {
+    "n": "DTB - The Black Contractor Gaiden 01 L@mBerT.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Walking.Dead.Webisode.01.Torn.Apart.(1).A.New.Day.1080p.Web-DL.AAC-2.0.x264-T00NG0D.mkv",
+    "ok": false
+   },
+   {
+    "n": "Magi The Labyrinth of magic 01 cz-tit.avi",
+    "ok": false
+   },
+   {
+    "n": "Magi_The_Labyrinth_Of_Magic_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Kettering Incident - S 01 - Ep 01 02 - Anna And The Lights [PAL HDTV][SDx264][KCRT].mp4",
+    "ok": false
+   },
+   {
+    "n": "[~AA~]_Legends_Of_The_Dark_King_Ep_01_[96AB56DF].mkv",
+    "ok": false
+   },
+   {
+    "n": "[BayiSubs] Quan Zhi Gao Shou - The King's Avatar - 01 [1080p][ENsubs CHsubs].mkv",
+    "ok": false
+   },
+   {
+    "n": "HNS_The_Reflection_Wave_One_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "HNS_Overlord_The_Undead_King_[movie_01].mp4",
+    "ok": false
+   },
+   {
+    "n": "[Underwater] Knights of Sidonia S2 - The Ninth Planet Crusade - 01 (720p) [A631962C].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Killing Bites - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "DNS_Killing_Bites_-_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Killing_Bites_-_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Killing Bites 01 (BDRip 1920x1080 x264 hi10p FLAC Rus   Jap   Eng).mp4",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Persona 5 The Animation - Dark Sun - 01 [480p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[O-L]_Druaga_no_Tou_-_the_Sword_of_URUK_-_01_[1280x720_h264][29491241].mkv",
+    "ok": false
+   },
+   {
+    "n": "Wu Xin_ The Monster Killer - Episode 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Eternal Love 2 - 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Golden Eyes - Episode 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Legend of Dugu 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Big.Show.Show.S01E01.720p.WEB.X264-METCON.CZ-tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Big.Show.Show.S01E01.720p.NF.WEB-DL.DDP.5.1.x264-MUSUB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Office.UK.COMPLETE.S01E01.DVD.PAL.x264.AC3-BRiLL.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Business.Of.Drugs.S01E01.720p.NF.WEB-DL.DDP5.1.H.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Business.Of.Drugs.S01E01.WEBRip.x264-ION10.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Business.Of.Drugs.S01E01.720p.NF.WEB-DL.DDP5.1.H.264-CZsub.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Road.to.Calvary.S01E01.1080p.NF.WEB-DL.DD 2.0.H.264-8CLAW.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Road.to.Calvary.S01E01.1080p.WEB-DL.AC3.H264-HTB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zaklínač The Witcher 2019 720p S01E01 CZ dabing by Slanec.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Last.Word.2020.S01E01.2160p.WEBRip.x265-iNSPiRiT.mkv",
+    "ok": false
+   },
+   {
+    "n": "[DragsterPS] Ghost in the Shell - SAC_2045 S01E01 [1080p] [Japanese Audio] [Multi-Subs] [B0B4D609].mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Queen's.Gambit.S01E01.Openings.1080p.NF.WEB-DL.EN.EAC3.x265.HEVC_My.mkv",
+    "ok": false
+   },
+   {
+    "n": "275 Největší nápis TOP 09 na světě! A v řepkovém poli na D1!.avi",
+    "ok": false
+   },
+   {
+    "n": "Vetřelci dávnověku - (Ancient Aliens) - S180E11 - Přímo na místě-neuvěřitelné struktury.avi",
+    "ok": false
+   },
+   {
+    "n": "Vetřelci dávnověku - (Ancient Aliens) - S180E12 - Přímo na místě-neobyčejná setkání.avi",
+    "ok": false
+   },
+   {
+    "n": "Vetřelci dávnověku - (Ancient Aliens) - S180E13 - Přímo na místě-luštění mimozemských glyfů.avi",
+    "ok": false
+   },
+   {
+    "n": "Vetřelci dávnověku - (Ancient Aliens) - S180E14 - Přímo na místě-zkoumání UFO.avi",
+    "ok": false
+   },
+   {
+    "n": "Vetřelci dávnověku - (Ancient Aliens) - S180E16 - Přímo na místě-důkaz mimozemského života.avi",
+    "ok": false
+   },
+   {
+    "n": "Damages.2x09.Zbouchnul.si.svuj.doprovod.na.maturitak.dvdrip.xvid.cz.bedameda.avi",
+    "ok": false
+   },
+   {
+    "n": "plivu.na.vas.hrob.2010.tvrip.divx.cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Dexter-02x11-Na nejbli",
+    "ok": false
+   },
+   {
+    "n": "Dexter-05x10-Na za",
+    "ok": false
+   },
+   {
+    "n": "Metal Hurlant Chronicles-01x06-Mist",
+    "ok": false
+   },
+   {
+    "n": "Julie Lescaut - 02x05 - Mrtvola na kolej",
+    "ok": false
+   },
+   {
+    "n": "Julie Lescaut - 02x06 - Revolver na",
+    "ok": false
+   },
+   {
+    "n": "Julie Lescaut - 03x05 - Past na policajta.avi",
+    "ok": false
+   },
+   {
+    "n": "Julie Lescaut - 03x02 - Na",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-03-04.avi",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-09-10.avi",
+    "ok": false
+   },
+   {
+    "n": "Stesti-na-dosah-DVDRip-CZ--(DD-5,1)-Petr3007.avi",
+    "ok": false
+   },
+   {
+    "n": "Robocop-01x16-Sestry na scest",
+    "ok": false
+   },
+   {
+    "n": "Superman-L&C-02x21-Za dobrotu na",
+    "ok": false
+   },
+   {
+    "n": "VP.E07.S01E07.Nezapomen.na.mne.DVDrip.XviD.CZ-BiO.avi",
+    "ok": false
+   },
+   {
+    "n": "28. Smrt na konci světa.rm",
+    "ok": false
+   },
+   {
+    "n": "The.Mist[2007]ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "09x22 - Vlak na vecnost.avi",
+    "ok": false
+   },
+   {
+    "n": "02x04 - Byt ci nebyt.avi",
+    "ok": false
+   },
+   {
+    "n": "Ripper.Street.1x04.The.Good.Of.This.City.HDTV.x264-FoV.mp4",
+    "ok": false
+   },
+   {
+    "n": "White.Collar.S04E13.Empire.City.720p.WEB-DL.DD5.1.h.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Sin.City.2005_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Sex and the City 2[2010]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Sex.And.The.City-The.Movie[2008]_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-22- Tunel na konci světa.avi",
+    "ok": false
+   },
+   {
+    "n": "Pes a jeho blog S01E02 S packou na volantu (The Fast and the Furriest).avi",
+    "ok": false
+   },
+   {
+    "n": "Hodně štěstí Charlie S01E09 Na stromě (Up a Tree).AVI",
+    "ok": false
+   },
+   {
+    "n": "TVP.Historia.Kontrowersje.-.Westerplatte.-.historia.prawdziwa.(2008).DVBRip.(P2PNet.pl) polish poland polen polnisch polonia polacco pole polonese lady gaga katie perry.mkv",
+    "ok": false
+   }
+  ],
+  "at": "2026-11-18T10:31:50.300Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": null,
+   "type": "series",
+   "id": "tt23749346:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Druhá světová válka: Cena říše",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "World War II: The Price Of Empire",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Druhá světová válka",
+     "kind": "franchise",
+     "short": true,
+     "full": "Druhá světová válka: Cena říše"
+    },
+    {
+     "text": "Cena říše",
+     "kind": "franchise",
+     "short": true,
+     "full": "Druhá světová válka: Cena říše"
+    },
+    {
+     "text": "World War II",
+     "kind": "franchise",
+     "short": true,
+     "full": "World War II: The Price Of Empire"
+    },
+    {
+     "text": "The Price Of Empire",
+     "kind": "franchise",
+     "short": true,
+     "full": "World War II: The Price Of Empire"
+    }
+   ],
+   "allow": [
+    "2",
+    "svetova",
+    "valka",
+    "cena",
+    "rise",
+    "world",
+    "war",
+    "price",
+    "empire"
+   ],
+   "year": 2015,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 50
+  },
+  "files": [
+   {
+    "n": "S01E01 Mračna se stahují - Druhá světová válka, Cena říše (CZ+EN, 720p) JackRIPper.mp4",
+    "len": 2724,
+    "ok": true
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (2) Podivná válka.avi",
+    "len": 2983,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (3) Blesková válka.avi",
+    "len": 2984,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (2) Podivná válka.mkv",
+    "len": 2983,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (3) Blesková válka.mkv",
+    "len": 2984,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (2) Podivná válka.mp4",
+    "len": 2983,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (3) Blesková válka.mp4",
+    "len": 2984,
+    "ok": false
+   },
+   {
+    "n": "S01E02 Podivná válka - Druhá světová válka, Cena říše (zvuk CZ+EN, 720p) JackRIPper.mp4",
+    "len": 2879,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (1) Mračna se stahují.avi",
+    "len": 2981,
+    "ok": true
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (4) Bez pomoci.avi",
+    "len": 2983,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (5) Operace Barbarossa.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (6) Potupné datum.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (7) Bod zlomu.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (8) Konec začátku.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (9) Začátek konce.avi",
+    "len": 2955,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (11) V osidlech pekla.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (12) Bezpodmínečná kapitulace.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (13) Tisíc sluncí.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e03.mkv",
+    "len": 2953,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e05.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e06.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e08.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e09.mkv",
+    "len": 2959,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e10.mkv",
+    "len": 2959,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e11.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka cena říše s01e12.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka - Cena říše 10. Operace Overlord.mkv",
+    "len": 2957,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (1) Mračna se stahují.mkv",
+    "len": 2982,
+    "ok": true
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (4) Bez pomoci.mkv",
+    "len": 2983,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (5) Operace Barbarossa.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (6) Potupné datum.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (7) Bod zlomu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (8) Konec začátku.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (11) V osidlech pekla.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (12) Bezpodmínečná kapitulace.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (13) Tisíc sluncí.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka - Cena říše 10. Operace Overlord.avi",
+    "len": 2957,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka - Cena říše 10. Operace Overlord.mp4",
+    "len": 2957,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka z dronu s01e01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka peklo v hlubinách s01e01.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka Na fronte  S01E01 CZ (1).mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka Na fronte S01E01 World War II From the Frontlines 2023 CZ dabing.mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvách_ Cesta k vítězství_S01E01_Dunkerk.mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka- Peklo v hlubinách 1x01 Vlčí smečka -.avi",
+    "ok": false
+   },
+   {
+    "n": "Geografie bojišť - Druhá světová válka 2026 S01E01 Západní Evropa (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 2 - Blesková válka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 11 - Válka o ostrovy.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě 02 Blesková válka CZdab.mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě 11 Ostrovní válka CZdab.mp4",
+    "ok": false
+   },
+   {
+    "n": "04. Spravedliva valka (1939-1945 Druhá světová válka).avi",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve - World War II in Colour (2009)(CZ)(EN)(BRRip)(1080p) 11 Válka o ostrovy.mkv",
+    "ok": false
+   },
+   {
+    "n": "druha-svetova-valka-v-barve-11-ostrovni-valka.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka-Válka v Atlantiku Válečný.avi",
+    "ok": false
+   },
+   {
+    "n": "Geografie bojišť - Druhá světová válka 2026 S01E04 Válka v tichomoří (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 1 - Přicházející bouře.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 3 - Šach Británii.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 6 - Středomoří a Severní Afrika.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 7 - Bod obratu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 10 - Kruh se uzavírá.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě - díl 13 - Vítězství v Tichomoří.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve 04 Hitlerova invaze na Východ.mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá.světová.válka.Amerika.vrací.úder.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá.světová.válka.Rozhodující.střetnutí.avi",
+    "ok": false
+   },
+   {
+    "n": "Druhá.světová.válka.Vlčí.smečka.avi",
+    "ok": false
+   },
+   {
+    "n": "100 - Druhá světová válka.avi",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E03.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E04.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E05.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E06.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E07.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E08.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E09.mkv",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka: Cena říše - S1E1 CS",
+    "len": 2971,
+    "ok": true
+   },
+   {
+    "n": "World War II: The Price of Empire 1x1",
+    "len": 2971,
+    "ok": true
+   },
+   {
+    "n": "The.Price.of.Confession.S01E01.DUAL.1080p.WEBRip.x265-KONTRAST.mkv",
+    "ok": false
+   },
+   {
+    "n": "[Commie] Berserk - Golden Age Chapter II - The Capture of Doldrey [BD 1080p AAC] [F448C168].mkv",
+    "ok": false
+   },
+   {
+    "n": "Falling.Skies.s02e09-The Price of Greatness.avi",
+    "ok": false
+   },
+   {
+    "n": "Z.The.Beginning.of.Everything.S01E01.WEBRip.X264-DEFLATE.mkv",
+    "ok": false
+   },
+   {
+    "n": "The White Queen.S01E02.The Price of Power.mkv",
+    "ok": false
+   },
+   {
+    "n": "Z.The.Beginning.of.Everything.S01E01.1080p.AMZN.WEBRip.HEVC.DD5.1.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Star.vs.The.Forces.of.Evil.S01E01.Star.Comes.To.Earth-Party.With.A.Pony.1080p.WEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "1x04.Cena zlata (The Price of Gold).avi",
+    "ok": false
+   },
+   {
+    "n": "S01E02 Tajemství války-Secrets of World War II-1998-10.díl-Bitva v Ardénách.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E05 Tajemství války-Secrets of World War II-1998-13.díl-Poslední tajné zbraně Japonců.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E06 Tajemství války-Secrets of World War II-1998-14.díl-Letadla proti raketám.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E07 Tajemství války-Secrets of World War II-1998-15.díl-Nepřítel pod námi.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E08 Tajemství války-Secrets of World War II-1998-16.díl-Lovci min.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E09 Tajemství války-Secrets of World War II-1998-17.díl-Bitva o Guadalcanal.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E15 Tajemství války-Secrets of World War II-1998-22.díl-Merrillovi záškodníci.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E16 Tajemství války-Secrets of World War II-1998-23.díl-Plukovník Doolittle.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E18 Tajemství války-Secrets of World War II-1998-4.díl-Hitlerův vpád do Ameriky.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E19 Tajemství války-Secrets of World War II-1998-5.díl-Přepadení Brunevalu.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E22 Tajemství války-Secrets of World War II-1998-8.díl-Živá torpéda.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E24 Tajemství-války-Secrets-of-World-War-II-1998-24.díl-Zničení Hitlerových zásob ropy.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E25 Tajemství-války-Secrets-of-World-War-II-1998-25.díl-Útěk z Koldycu.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S01E26 Tajemství-války-Secrets-of-World-War-II-1998-26.díl-Plavby tajných korzárů.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-2.díl-Poslední dny Adolfa Hitlera.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-4.díl-Hitlerův vpád do Ameriky.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-5.díl-Přepadení Brunevalu.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-15.díl-Nepřítel pod námi.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-19.díl-Nacistické drancování Evropy.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-20.díl-Zkáza křižníku Scharnhorst.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství války-Secrets of World War II-1998-21.díl-Zvláštní úkol-Chaos a zkáza.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství-války-Secrets-of-World-War-II-1998-24.díl-Zničení Hitlerových zásob ropy.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství-války-Secrets-of-World-War-II-1998-25.díl-Útěk z Koldycu.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Tajemství-války-Secrets-of-World-War-II-1998-26.díl-Plavby tajných korzárů.cz.dub.avi",
+    "ok": false
+   },
+   {
+    "n": "S04E04 Tales of the City - The Price of Oil_cz dub.mkv",
+    "ok": false
+   },
+   {
+    "n": "War for the Planet of the Apes - Válka o planetu opic.avi",
+    "ok": false
+   },
+   {
+    "n": "Cena za stesti The Price of Happiness 2019 DVDRip.XviD cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Cosmos.Possible.Worlds.S01E06.The.Man.of.a.Trillion.Worlds.1080p.WEBRip.x264-CAFFEiNE.mkv",
+    "ok": false
+   },
+   {
+    "n": "4wk_Two.and.a.Half.Men.S02E06.The.Price.of.Healthy.Gums.Is.Eternal.Vigilance.720p.WEB-DL.AAC2.0.H.264-MC.mkv",
+    "ok": false
+   },
+   {
+    "n": "unnamable-ii-the-statement-of-randolph-carter-1992.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Business.Of.Drugs.S01E01.720p.NF.WEB-DL.DDP5.1.H.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Business.Of.Drugs.S01E01.WEBRip.x264-ION10.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Business.Of.Drugs.S01E01.720p.NF.WEB-DL.DDP5.1.H.264-CZsub.mkv",
+    "ok": false
+   },
+   {
+    "n": "She-Ra.and.the.Princesses.of.Power.S03E01.The.Price.of.Power.720p.NF.WEB-DL.DDP5.1.x264-NTG.mkv",
+    "ok": false
+   },
+   {
+    "n": "108 - Rockets_The Price of Exploration.mp4",
+    "ok": false
+   },
+   {
+    "n": "City.Slickers.II.The.Legend.Of.Curlys.Gold.1994.1080p.BluRay.MULTi.x264-MAJO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cocaine.Cowboys.The.Kings.of.Miami.S01E01.1080p.WEB.H264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Unnamable II - The Statement of Randolph Carter (1992)  CZ Titulky.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Pursuit.of.Love.S01E01.1080p.BluRay.x264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "the.pursuit.of.love.s01e01.720p.hdtv.hevc.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Pursuit of Love S01E01 cztit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Amy.Winehouse.The.Price.of.Fame.2020.x264-ION10.mp4",
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka - Na fronte S01E01 CZdab",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka - Na frontě - S01E01 - Nadřazená rasa  .mkv",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka: Na frontě S01E01 - Nadřazená rasa 1080p CZ Dabing",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka - Na frontě S01E01 - Nadřazená rasa (2023) dokumentární historický válečný czdab",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka Na frontě S01E01 1080p CZ",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka: Na frontě S01E01 - Nadřazená rasa CZ Dabing",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka - bitva o Evropu S01E01 - Den D (2019) dokumentární historický válečný czdab",
+    "len": 3119,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě S01E01 - 1. epizoda SD CZ Dabing",
+    "len": 3073,
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E01.mkv",
+    "len": 3073,
+    "ok": false
+   },
+   {
+    "n": "Druha svetova valka v barve  S01E01",
+    "len": 3073,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě S01E01 - 1. epizoda CZ Dabing",
+    "len": 3073,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka Na frontě S01E01 CZ",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka- Peklo v hlubinách 1x01 Vlčí smečka -",
+    "len": 2642,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvách: Cesta k vítězství S01E01 - Dunkerk CZ Titulky",
+    "len": 3136,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvách - Cesta k vítězství S01E01 CZtitulky",
+    "len": 3136,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Na frontě_S01E01_Nadřazená rasa",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě s01e01",
+    "len": 3074,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvě s01e01.mkv",
+    "len": 3074,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka: Na frontě - S1E1 EN",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka v barvách: Cesta k vítězství - S1E1 EN",
+    "len": 3130,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka: Peklo v hlubinách - S1E1 America Fights Back CS",
+    "len": 2534,
+    "ok": false
+   },
+   {
+    "n": "P.F. TV Dok-Druhá světová válka- Peklo v hlubinách 1x01 Vlčí smečka -",
+    "len": 2642,
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (1) Mračna se stahují.mp4",
+    "len": 2981,
+    "ok": true
+   },
+   {
+    "n": "Druhá světová válka_ Cena říše (4) Bez pomoci.mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E01 (H264-CZ).mp4",
+    "len": 2965,
+    "ok": true
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-11-ceka-nas-peklo--15'-DVBT-(romin).mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 11 - Čeká nás peklo.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 01 - Blížíci se bouře.mkv",
+    "len": 2972,
+    "ok": true
+   },
+   {
+    "n": "Cena Říše 02 - Podivná válka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 03 - Blesková válka.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 04 - Osamocení.mkv",
+    "len": 2982,
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 05 - Barbarossa.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 07 - Bod zvratu.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 08 - Konec začátku.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 09 - Začátek konce.mkv",
+    "len": 2977,
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 12 - Bezpodnínečná kapitulace.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 13 - Tisíc sluncí.mkv",
+    "ok": false
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-04-osamoceni--15'-DVBT-(romin).mkv",
+    "len": 2982,
+    "ok": false
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-05-barbarossa--15'-DVBT-(romin).mkv",
+    "ok": false
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-06-den-hanby--15'-DVBT-(romin).mkv",
+    "ok": false
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-07-bod-zvratu--15'-DVBT-(romin).mkv",
+    "ok": false
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-08-konec-zacatku--15'-DVBT-(romin).mkv",
+    "ok": false
+   },
+   {
+    "n": "(2.svetova-valka---cena-rise)-13-tisic-slunci--15'-DVBT-(romin).mkv",
+    "ok": false
+   },
+   {
+    "n": "Cena Říše 06 - Den hanby.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Dukes of Hazzard 1x01 - One Armed Bandits ENG.avi",
+    "ok": false
+   },
+   {
+    "n": "Diana.2021.S01E05.The.Price.of.Freedom.HDTV.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dramatic World War II combat footage - Battle of stalingrad 19421943.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dramatic World War II combat footage from the Eastern Front 19411942 Hell on Earth.mp4",
+    "ok": false
+   },
+   {
+    "n": "World War II  Intense Combat Footage.mp4",
+    "ok": false
+   },
+   {
+    "n": "MASH.S04E16.The.Price.of.Tomato.Juice.1080p.HULU.WEB-DL.AAC2.0.EN.CZ.FIS.H.264-AJP69.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dragon.Age.Absolution.S01E06.The.Price.of.Salvation.1080p. - cz.tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dragon Age Absolution S01E06 The Price of Salvation 1080p    cz tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Jak prosté s07e03 Cena za doznání (The Price of Admission) (CZ) by UgarE.mkv",
+    "ok": false
+   },
+   {
+    "n": "War For The Planet Of The Apes 2017 2160p UHD BluRay x265 CZ ENG.mkv",
+    "ok": false
+   },
+   {
+    "n": "War.For.The.Planet.Of.The.Apes.2017.BRRip.XviD.AC3.CZ-PiRaTE.avi",
+    "ok": false
+   },
+   {
+    "n": "secret.weapons.of.world.war.ii.s01e01.1080p.web.h264-cbfm.mkv",
+    "ok": false
+   },
+   {
+    "n": "Secret.Weapons.Of.World.War.II.S01E01.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.From.the.Frontlines.S01E01.480p.x264-RUBiK.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II From the Frontlines S01E01 The Master Race.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.720p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.WEB.h264-EDITH.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.WEB.h264-TRB.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.XviD-AFG[EZTVx.to].avi",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.720p.x264-FENiX.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E01.1080p.x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E01 The Beginning 720p NOW WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E01 The Beginning 1080p AMZN WEB-DL DDP2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E01 The Beginning 1080p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E01 The Beginning 1080p HULU WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E01 The Beginning 720p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E01 1080p x265-ELiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E01 The Beginning 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.With.Tom.Hanks.S01E01.The.Beginning.1080p.AMZN.WEB-DL.ENG.ITA.H264-TheBlackKing.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E01 The Beginning 720p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "World_War_II_with_Tom_Hanks.S01E01.The.Beginning.720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E01.mp4",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks - S01E01.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II From the Frontlines S01E01 The Master Race REPACK 1080p NF WEB-DL DDP5 1 Atmos H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II From the Frontlines S01E01 The Master Race 2160p NF WEB-DL DDP5 1 Atmos DV HDR H 265-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E05 The War At Sea 1080p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E05 The War At Sea 720p NOW WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E05 The War At Sea 1080p NOW WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E05 The War At Sea 1080p AMZN WEB-DL DDP2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E05 The War At Sea 720p NOW WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II With Tom Hanks S01E05 The War At Sea 720p AMZN WEB-DL DDP2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E05 The War at Sea 1080p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.with.Tom.Hanks.S01E05.The.War.at.Sea.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E05 The War at Sea 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "World.War.II.With.Tom.Hanks.S01E05.The.War.At.Sea.1080p.AMZN.WEB-DL.ENG.ITA.H264-TheBlackKing.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E05 The War at Sea 720p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "World War II From the Frontlines S01E02 World Domination.mkv",
+    "ok": false
+   },
+   {
+    "n": "30760-24 - World War II and Ever-Faster Travel, 1930–1960 - The Story of the Mediterranean World - EDU4U.mp4",
+    "ok": false
+   },
+   {
+    "n": "World War II From the Frontlines S01E02 World Domination REPACK 1080p NF WEB-DL DDP5 1 Atmos H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "APOKALYPSA 2. světová válka s01e01.mkv",
+    "len": 3124,
+    "ok": false
+   },
+   {
+    "n": "Pohled zevnitř 2. světová válka s01e01.mkv",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka z výšky 2022 S01E01 Vstříc dni D (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2 světová válka z výšky 2022 S01E01 Vstříc dni D (H264 CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Bitvy o Evropu 2019 S01E01 Den D (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka v barvě 2019 S01E01 Zlomové události - Blitzkrieg (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cesta k vítězství 2021 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - peklo v hlubinách 2016 S01E01 Vlčí smečky (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - ženy v první linii 2023 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - zapomenutí hrdinové 2024 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Peklo na zemi 2021 S01E01 Jsme ve válce (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa - 2.světová válka 2009 S01E01 Agrese v Polsku (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa   2 světová válka 2009 S01E01 Agrese v Polsku (H264 CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Umění přežít - Přežili 2.světovou válku 2019 S01E01 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "II. sv. válka - Apokalypsa 2 světová válka  2-6  Zdrcující porážka.mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Sovětská bouře - 13. Letecká válka (TVRIP-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Sovětská bouře - 15. Partyzánská válka (TVRIP-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Sovětská bouře - 18. Válka s Japonskem (TVRIP-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka v barvě - 02. Světelná válka (TVRIP-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka v barvě - 11. Ostrovní válka (TVRIP-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - peklo v hlubinách 2018 S02E06 Krize studené války (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Peklo na zemi 2021 S01E06 Krysí válka (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa - 2. světová válka (2-6) Zdrcující porážka.DVB-T.rip.by.Nuke.mkv",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa - 2. světová válka (2-6) Zdrcující porážka.DVB-T.rip..mkv",
+    "ok": false
+   },
+   {
+    "n": "2 Podrobení-Apokalypsa,-2.světová-válka-1940---DVB-T-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Jak jsem rozpoutal 2 světovou válku 2 díl Putování za zbraní Cz Tit.- .avi",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa - 2 světová válka - 2(6).mkv",
+    "ok": false
+   },
+   {
+    "n": "Bitevní pole První světová válka (2 2) - dokument cz dabing.mp4",
+    "ok": false
+   },
+   {
+    "n": "2. světová válka za zavřenými dveřmi - 02. Stalin, nacisté a západ 2. část.avi",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa - 2. světová válka (3-6) Nečekaná rána.DVB-T.rip..mkv",
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa - 2. světová válka (5-6) Vylodění pro vítězství.DVB-T.rip.mkv",
+    "ok": false
+   },
+   {
+    "n": "1---Napadení-Apokalypsa,-2.světová-válka-1933-40---DVB-T-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "3---Úder-Apokalypsa,-2.světová-válka-1941---DVB-T-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "4---Požár-Apokalypsa,-2.světová-válka,-1942-43---DVB-T-CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Sovětská bouře - 01. Plán Barabarosa (TVRIP-Cz SS23 bt).avi",
+    "ok": false
+   },
+   {
+    "n": "[AnimeFox] Druaga no Tou the Aegis of Uruk 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Magi The Labyrinth of magic 01 cz-tit.avi",
+    "ok": false
+   },
+   {
+    "n": "Magi_The_Labyrinth_Of_Magic_01.mp4",
+    "ok": false
+   },
+   {
+    "n": "[O-L]_Druaga_no_Tou_-_the_Sword_of_URUK_-_01_[1280x720_h264][29491241].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Legend of Dugu 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Magi The Kingdom of Magic 01 (CZ).mkv",
+    "ok": false
+   },
+   {
+    "n": "Power.On.The.Story.Of.Xbox.S01E01.1080p.AMZN.WEB-DL.DDP2.0.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.When Youre Lost in the Darkness.1080p.AMZN.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.When Youre Lost in the Darkness.1080p.WEB-DL.DD+5.1.x264 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.When Youre Lost in the Darkness.2160p.HMAX.WEB-DL.DDP5.1.Atmos.DV.HDR10.H.265 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.When Youre Lost in the Darkness.2160p.HMAX.WEB-DL.DDP5.1.Atmos.DoVi.H.265 CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.WEBRip.x264-ION10.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Last of Us S01E01 - Když se ztratíš v temnotě - CZdab.2023.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.1080p.10bit.WEBRip.6CH.x265.HEVC-PSA-CZdab.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.Episode.1.1080p.HMAX.WEB-DL.DDP5.1.Atmos.H.264-SMURF.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last. of.Us. S01E01. (2023) CZ DABING.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.CZdab.H264.1080.mkv",
+    "ok": false
+   },
+   {
+    "n": "Posledni z nas   the last of us s01e01 1080p x264 cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Posledni z nas   the last of us s01e01 1080p x264 CZ SK dab CZ SK forced.mkv",
+    "ok": false
+   },
+   {
+    "n": "Posledni z nas   The Last of Us S01E01 CZ   SK 720p.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Last of Us_S01E01_Keď si stratený v temnote.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.When.Youre.Lost.in.the.Darkness.2160p_HMAX_WEB.DL.CZ_SK_EN.DV.HDR10.H.265.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01-When_Youre_Lost_in_the_Darkness.1080p_CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Last of Us S01E01 Když se ztratíš v temnotě 2023 CZ 1080p Akční  Dobrodružný  Drama  Horor  Sci Fi  Thriller.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Last of Us   S01E01   CZ Dab 2023.mp4",
+    "ok": false
+   },
+   {
+    "n": "The Last of Us S01E01   Když se ztratíš v temnotě   CZdab 2023.mp4",
+    "ok": false
+   },
+   {
+    "n": "The.Last.of.Us.S01E01.2160p.HEVC.HDR.DoVi.HMAX.DD+5.1.Atmos.EN.DD+5.1.CZ.SK.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Last of Us S01E01 CZ Dab.mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E02 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E03 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E04 (H264-CZ).mp4",
+    "len": 2960,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E05 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E07 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E08 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E09 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E10 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E11 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E12 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E06 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cena říše 2015 S01E13 (H264-CZ).mp4",
+    "ok": false
+   },
+   {
+    "n": "Druhá světová válka   Cena Říše  01 Blížící se bouře 2015 Cz",
+    "len": 2971,
+    "ok": true
+   },
+   {
+    "n": "World War II: The Price of Empire 1x4",
+    "len": 2981,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x9",
+    "len": 2976,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x12",
+    "len": 2977,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x2",
+    "len": 2979,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x5",
+    "len": 2959,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x13",
+    "len": 2935,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x3",
+    "len": 2982,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x11",
+    "len": 2979,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x8",
+    "len": 2977,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x6",
+    "len": 2975,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x7",
+    "len": 2976,
+    "ok": false
+   },
+   {
+    "n": "World War II: The Price of Empire 1x10",
+    "len": 2976,
+    "ok": false
+   },
+   {
+    "n": "World War II in Colour S01E01 The Gathering Storm SD CZ Dabing",
+    "len": 3073,
+    "ok": false
+   },
+   {
+    "n": "World.War.II-From.the.Frontlines.S1.E1.The Master Race",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "World.War.II-From.the.Frontlines.S1.E1.The Master Race (by_UgarE)",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "World War II with Tom Hanks S01E01 The Beginning 1080p AMZN WEB-DL DD 5 1 H 264-playWEB",
+    "len": 2569,
+    "ok": false
+   },
+   {
+    "n": "World War II- From the Frontlines S01E01",
+    "len": 2836,
+    "ok": false
+   },
+   {
+    "n": "Secret Weapons Of World War II S01E01",
+    "len": 3000,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - cesta k vítězství S01E01 CZdab",
+    "len": 3093,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka z výšky 2022 S01E01 Vstříc dni D (H264-CZ)",
+    "len": 2640,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka v barvě 2019 S01E01 Zlomové události - Blitzkrieg (H264-CZ)",
+    "len": 3000,
+    "ok": false
+   },
+   {
+    "n": "2. světová válka: Ženy v první linii S01E01 - 1. epizoda 1080p CZ Dabing",
+    "len": 2800,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka Ženy v první linii S01E01 CZ",
+    "len": 2800,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka z výšky 2022 S01E01 Vstříc dni D .mp4",
+    "len": 2640,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka z výšky S01E01 Vstříc dni D",
+    "len": 2640,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka - ženy v první linii S01E01 CZdab",
+    "len": 2800,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka - Bitvy o Evropu 2019 S01E01 Den D (H264-CZ)",
+    "len": 3119,
+    "ok": false
+   },
+   {
+    "n": "2. světová válka: Ženy v první linii S01E01 - 1. epizoda CZ Dabing",
+    "len": 2800,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka - Ženy v první linii S01E01 (2023) dokumentární historický czdab.mp4",
+    "len": 2800,
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa: 2. světová válka S01E01 - Agrese CZ Dabing",
+    "len": 3122,
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa: 2. světová válka S01E01 - Agrese 1080p CZ Dabing",
+    "len": 3122,
+    "ok": false
+   },
+   {
+    "n": "Apokalypsa: 2. světová válka S01E01 - Agrese 1080p CZ Dabing.mp4",
+    "len": 3122,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka v barvě S01E01 Zlomové události",
+    "len": 3000,
+    "ok": false
+   },
+   {
+    "n": "2.světová válka v barvě S01E01 Zlomové události - Blitzkrieg",
+    "len": 3000,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka - Peklo na zemi S01E01 Jsme ve válce",
+    "len": 3000,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka z dronu S01E01 Bitva v Ardenách",
+    "len": 2643,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka Ženy v první linii S01E01 Za nepřátelskou linií",
+    "len": 2800,
+    "ok": false
+   },
+   {
+    "n": "2 světová válka Ženy v první linii S01E01 Za nepřátelskou linií  1080p  .ts",
+    "len": 2800,
+    "ok": false
+   }
+  ],
+  "at": "2026-11-14T22:29:23.681Z"
+ },
+ {
+  "plan": {
+   "sameName": [
+    {
+     "y": 2018,
+     "v": 35,
+     "c": "de"
+    },
+    {
+     "ours": true,
+     "v": 31,
+     "c": "uk"
+    }
+   ],
+   "coll": null,
+   "type": "series",
+   "id": "tt39019156:1:1",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Gone",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "gone"
+   ],
+   "year": 2026,
+   "season": 1,
+   "episode": 1,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": 49
+  },
+  "files": [
+   {
+    "n": "Gone 2026 S01E01 720p WEB-DL HEVC x265 BONE.mkv",
+    "len": 2946,
+    "ok": true
+   },
+   {
+    "n": "Gone 2026 S01E01 1080p WEB-DL HEVC x265 BONE.mkv",
+    "len": 2951,
+    "ok": true
+   },
+   {
+    "n": "Gone (2026) - S01E01 - Episode 1 (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "len": 2942,
+    "ok": true
+   },
+   {
+    "n": "Gone 2026 S01E02 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E03 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E04 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E06 720p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.2026.S01E05.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.2026.S01E02.FASTSUB.VOSTFR.WEBRip.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E05 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E04 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E02 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E06 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E03 1080p WEB-DL HEVC x265 BONE.mkv",
+    "ok": false
+   },
+   {
+    "n": "I Am Gone 2026 1080p WEB-DL AAC H 264-HDSWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.2026.S01E04.FASTSUB.VOSTFR.WEBRip.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.2026.S01E03.FASTSUB.VOSTFR.WEBRip.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.2026.S01E06.FASTSUB.VOSTFR.WEBRip.x264.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) - S01E02 - Episode 2 (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) - S01E03 - Episode 3 (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) - S01E04 - Episode 4 (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) - S01E05 - Episode 5 (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) - S01E06 - Episode 6 (1080p AMZN WEB-DL x265 Ghost).mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) [HDTV 1080p][Cap.102].mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone (2026) [HDTV 1080p][Cap.103].mkv",
+    "ok": false
+   },
+   {
+    "n": "Tommy Robinson Wheres The Money Gone 2026 1080p HDTV HEVC x265 RMTeam.mkv",
+    "ok": false
+   },
+   {
+    "n": "Nico_Santos_-_One_Day_(I'm_Gonna_Break_Your_Heart)_(Official_Video)_2026.avi",
+    "ok": false
+   },
+   {
+    "n": "People we meet on vacation Un'amore in vacanza (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Rip Soldi sporchi (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Il Falsario (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Internship (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Yoh! Bestie (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "F'Valentines Day (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Brotherhood Stato di paura (2026) iTA-ENG.POR.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "In Viaggio Con Joe (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Swedish Connection (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cortafuego (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Les Orphelins (2026) iTA-ENG.FRE.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "28 Anni Dopo Il Tempio Delle Ossa (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "The End 2026 S01E02 Youre Not Gonna Believe This 1080p WEB-DL AAC H 264-NTb[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Jumpers Un Salto Tra Gli Animali (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Creature luminose (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Le Cose Non Dette (2026) iTA-Bluray.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Popularity Game (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Volo notturno per Los Angeles (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Agata Christian Delitto sulle nevi (2026) iTA.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "La desconocida (2026) iTA-SPA.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Office Romance (2026) iTA-ENG.WEBDL.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Il Mago Del Cremlino Le Origini Di.Putin (2026) iTA-ENG.BluRay.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Il Filo Del Ricatto Dead Man s Wire (2026) iTA-ENG.BluRay.1080p.x264-Dr4gon.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E01",
+    "len": 2945,
+    "ok": true
+   },
+   {
+    "n": "Gone.01x01.HDTV.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Fairy gone S01E01 Ash-Covered Girl 1080p CR WEB-DL DUAL DDP2 0 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fairy Gone - S01E01 [x265 1080p].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Gone S01E01 1080p AMZN WEB-DL DDP5 1 H 264-FLUX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Love.is.Never.Gone.S01E01.1080p.WEB.h264-EDITH[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E01.Part.One.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Girls The Long Island s01e01 RBB.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E01 Guillaume 720p NF WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone 2017 S01E01 Pilot 1080p AMZN WEB-DL DDP5 1 H 264-KiNGS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.2017.S01E01.720p.x265-ZMNT.mkv",
+    "ok": false
+   },
+   {
+    "n": "01x01 Staré dobré časy-Days gone bye.mkv",
+    "ok": false
+   },
+   {
+    "n": "01x01 Staré dobré časy-Days gone bye.mkv.mkv",
+    "ok": false
+   },
+   {
+    "n": "Katrina.Come.Hell.and.High.Water.S01E01.WE.GONNA.RIDE.IT.OUT.LIKE.WE.ALWAYS.DO.1080p.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Super Giant Robot Brothers (2022) S01E01 - Gone and Back Again.1080p.H265.EAC3.6CH-MNKYDDL.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Walking Dead S01E01 Days Gone Bye 1080p DSNP WEB-DL DDP 5 1 H 264-HHWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Walking Dead S01E01 - Days Gone Bye 1080p CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "NCIS Sydney S01E01 Gone Fission REPACK 720p AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Lets Marry Harry S01E01 Im Gonna Marry Harry 1080p NF WEB-DL DDP5 1 H 264-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Lets Marry Harry S01E01 Im Gonna Marry Harry 2160p NF WEB-DL DDP5 1 DV HDR H 265-Kitsune.mkv",
+    "ok": false
+   },
+   {
+    "n": "Baddies Gone Wild Cancun S01E01 720p WEB h264-JFF.mkv",
+    "ok": false
+   },
+   {
+    "n": "Now That I Can Control Reality With A Mouse Cursor Im Gonna Click Away On The Girls S01E01 SUBFRENCH 720p ADN WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Now That I Can Control Reality With A Mouse Cursor Im Gonna Click Away On The Girls S01E01 SUBFRENCH 1080p ADN WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "ok": false
+   },
+   {
+    "n": "Now.That.I.Can.Control.Reality.With.A.Mouse.Cursor.Im.Gonna.Click.Away.On.The.Girls.S01E01.1080p.UNCENSORED.ADN.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "The Way Out UK S01E01 Gone Fishing 1080p ALL4 WEB-DL AAC2 0 H 264-RAWR[EZTVx.to].mkv",
+    "ok": false
+   },
+   {
+    "n": "The Way Out UK S01E01 Gone Fishing 1080p ALL4 WEB-DL AAC2 0 H 264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "The.Way.Out.UK.S01E01.Gone.Fishing.1080p.ALL4.WEB-DL.AAC2.0.H.264-RAWR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Now.That.I.Can.Control.Reality.With.A.Mouse.Cursor.Im.Gonna.Click.Away.On.The.Girls.S01E01.REPACK.1080p.UNCENSORED.ADN.WEB-DL.DUAL.AAC2.0.H.264.MSubs-ToonsHub.mkv",
+    "ok": false
+   },
+   {
+    "n": "ST The Original Series TOS S1E01 Kam se dosud člověk nevydal Cz En (Where No Man Has Gone Before -Cz En tit).mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone,-Baby,-Gone-_-Sbohem,-baby-_-Gone-Baby-Gone-2007,-CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Johnny Mathis - Gone, Gone, Gone (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "Everly Brothers - Gone, Gone, Gone (1080).mp4",
+    "ok": false
+   },
+   {
+    "n": "True.Blood.S05E10.Gone.Gone.Gone.1080p.WEB-DL.DD5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "David Guetta, Teddy Swims, Tones and I - Gone Gone Gone [Official Music Video].mp4",
+    "ok": false
+   },
+   {
+    "n": "David Guetta, Teddy Swims, Tones and I - Gone Gone Gone [Official Music Video] (2160p_24fps_AV1-128kbit_AAC).mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone- by pablos32.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Baby.Gone.2007.1080p.BrRip.x264.BOKUTOX.YIFY.mp4",
+    "ok": false
+   },
+   {
+    "n": "Rizzoli.and.Isles.S04E16.Youre.Gonna.Miss.Me.When.Im.Gone.1080p.WEB-DL.DD5.1.h.264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Baby.Gone.2007.720p.BluRay.x264-SiNNERS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone,Baby,Gone 2007 CZdab. - osipka66.avi",
+    "ok": false
+   },
+   {
+    "n": "13 Gone Maggie Gone.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone, Baby, Gone CZ - K, D, M - 84- 2007 Freeman by Stifler.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone baby gone - Cz dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Dragons.S03E06.Gone.Gustav.Gone.1080p.NF.WEBRip.DD5.1.x264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "4x16.Budu ti scházet, až budu pryč (You're Gonna Miss Me When I'm Gone).avi",
+    "ok": false
+   },
+   {
+    "n": "20x13 Gone Maggie Gone.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone (2007 CZdab)..avi",
+    "ok": false
+   },
+   {
+    "n": "20x13 Gone Maggie Gone.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone S01E01 - 1. epizoda 1080p CZ Dabing.mkv",
+    "len": 2583,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E01 CZdab",
+    "len": 2583,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E01 - 1. epizoda CZ Dabing",
+    "len": 2583,
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E01.Part.One.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit",
+    "len": 2980,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E01.cz.sub.Guillaume.1080p.NF.WEB-DL.DUAL.DDP5.1.HDR.HEVC-TEPES",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E01.cz.sub.Guillaume.1080p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E01 CZ titulky",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E01.cz.sub.Guillaume.720p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E01 CZtitulky",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E01 EN.mkv",
+    "len": 2950,
+    "ok": true
+   },
+   {
+    "n": "Gone S1E1 Pilot",
+    "len": 2583,
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E01.1080p.WEB.h264-EDITH",
+    "len": 2980,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E01.FRENCH.WEBRip.x264-ION10",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E01.DUBBED.WEBRip.x264-ION10",
+    "len": 2668,
+    "ok": false
+   },
+   {
+    "n": "Gone Girls The Long Island Serial Killer S01E01",
+    "len": 2981,
+    "ok": false
+   },
+   {
+    "n": "I'll Be Gone in the Dark S01E01 (2020) CZtitulky",
+    "len": 3519,
+    "ok": false
+   },
+   {
+    "n": "I'll Be Gone in the Dark S01E01 CZtitulky",
+    "len": 3465,
+    "ok": false
+   },
+   {
+    "n": "The Gone S01E01 - 1. epizoda CZ Titulky",
+    "len": 3080,
+    "ok": false
+   },
+   {
+    "n": "Love is Never Gone S01E01",
+    "len": 3616,
+    "ok": false
+   },
+   {
+    "n": "The Gone S01E01 CZtitulky",
+    "len": 3037,
+    "ok": false
+   },
+   {
+    "n": "The Gone - S1E1 Episode 1 EN",
+    "len": 3080,
+    "ok": false
+   },
+   {
+    "n": "Fairy gone - S1E1 Ash-Covered Girl JA",
+    "len": 1382,
+    "ok": false
+   },
+   {
+    "n": "Girls Gone Wild: The Untold Story - S1E1 EN",
+    "len": 3122,
+    "ok": false
+   },
+   {
+    "n": "Cops Gone Bad with Will Mellor S01E01",
+    "len": 2639,
+    "ok": false
+   },
+   {
+    "n": "After_You've_Gone_S1_E1",
+    "len": 1720,
+    "ok": false
+   },
+   {
+    "n": "The Gone - S1E1 EN",
+    "len": 3033,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E05",
+    "len": 2669,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E04",
+    "len": 2752,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E04 720p WEB-DL HEVC x265 BONE",
+    "len": 2752,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E05 720p WEB-DL HEVC x265 BONE",
+    "len": 2669,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E03",
+    "len": 2864,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E02",
+    "len": 2790,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E06",
+    "len": 2827,
+    "ok": false
+   },
+   {
+    "n": "Gone 2026 S01E06 720p WEB-DL HEVC x265 BONE",
+    "len": 2827,
+    "ok": false
+   },
+   {
+    "n": "Instadocs AI Gone Wild - Zdivočelá AI (2026) CZ tit.mkv",
+    "len": 1620,
+    "ok": false
+   },
+   {
+    "n": "Fairy Gone - 01 CZ",
+    "len": 1428,
+    "ok": false
+   },
+   {
+    "n": "Gone.Baby.Gone.2007.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone-Baby-Gone---CZ-Dabing-AVI-(Krimi,-Drama,-Mysterózní---USA-2007).avi",
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone 2007 1080p NF WEB-DL DDP5 1 H 264 DUAL-BiOMA.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone, Baby, Gone (2007, CZ dab, 1080p) JackRIPper).mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone (2007) 1080p H265 iTA EAC3 5.1 ENG AC3 5.1 MultiSub (BluRay) -Raccoon-.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone 2007 1080p TVBU WEB-DL AAC2 0 H 264-TURG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.With.The.Wind.1939_ArabMoviez.org.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone_in_Sixty_Seconds.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.Fishin.1997.720p.BluRay.DTS.x264-CtrlHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 480p FIRST HDCAM ENGLISH x264 by jaro.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.720p.WEB-DL.x264.AC3-EVO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.HDRip.XviD.AC3-EVO.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.1080p.WEB-DL.DD5.1.H264-RARBG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 HDRip XviD-EVO by jaro.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 WEBRIP by jaro.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.BDRip.XviD.CZ-4play.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.720p.BDRip.XviD.AC3.CZ-4play.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.720p.BluRay.DTS.x264.CZ-4play.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.BD.CZ-dabing-Horbi.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 BluRay 1080p DTS-HD MA 7.1 x264 dxva-FraMeSToR.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.1080p.BluRay.DTS-ES.x264-VietHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.720p.BluRay.x264.YIFY.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.1080p.XVID.AC3.cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl_Zmizela.2014.HDRip.XviD-EVO.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone-Girl-Zmizela-2014-Cz-Avi-Super-DablinG-Siv-Super-Kvalita-Novinky-a-Novinka.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 720p BluRay.x264.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl (2014) 1080p [Open Matte] BluRay AC3 x264 - MAJO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.BDRip.x264.CZ-TreZzoR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Fishin.1997.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.01x02.1080i.HDTV.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.01x02.HDTV.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.01x03.1080i.HDTV.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.01x03.HDTV.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone in Sixty Seconds (2000) Cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone With The Wind 1939 1080p BluRay x264 AAC - Ozlem.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.My.Daughter.2018.1080p.WEB.x264.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "gone_in_60_seconds.avi",
+    "ok": false
+   },
+   {
+    "n": "gone.before.her.time.when.the.music.stopped.2022.720p.web.hevc.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "gone.before.her.time.when.the.music.stopped.2022.720p.hevc.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.in.the.Night.2022.1080p.WEBRip.x265 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.in.the.Night.2022.1080p.AMZN.WEBRip.DDP5.1.x264-SMURF★.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gonna Make You Sweat (Everybody Dance Now) (Official HD Video).mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone in the Night 2022 1080p AMZN WEBRip DDP5 1 x264 SMURF★.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.in.60.Seconds.2000.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.PROPER.1080p.BluRay.H264.AAC-RARBG.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl-Zmizelá 2014.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.MULTi.1080p.BluRay.x264-DSiTE.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.to.Earth.1950.576p.Bluray.AAC.2.0.x264-SaL.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.before.his.time.Kobe.Bryant.2024.720p.web.hevc.x265.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.in.60.Seconds.2000.MULTI.HDR.2160p.WEB.DL.DTS.HD.DDP-ChrisVPS.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.in.Sixty.Seconds.2000.1080p.BluRay.DL.AC3.x264-MAJO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.1080p.BRRip.x264.AC3.CZ-FiRST.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.OPEN.MATTE.1080p.BluRay.DL.DTS.x264-MAJO.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.720p.BDRip.XviD.AC3.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl Zmizela.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E02.Part.Two.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E03.Part.Three.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Girls The Long Island s01e02 RBB.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone Girls The Long Island s01e03 RBB.mp4",
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.1080p.BluRay.DTS.x264.CZ-TreZzoR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.In.60.Seconds.1974.eng.1080p.bluray.x264.aac-ytsam CZsub.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone in the Night 2022 CZ Dabing 1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.In.60.Seconds.1974.720p.BluRay.x264-[YTS.AM-cz tit.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone in 60 seconds (1974).avi",
+    "ok": false
+   },
+   {
+    "n": "GONE_IN_60_SECONDS.BRRip.CZ.EN.1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone.in.the.Night.2022.1080p.WEB-DL.DD5.1.H.264-CMRG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl (2014) BDRemux 1080p-WinchesterHD.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E05 Fred 720p NF WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E03 Daco 720p NF WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E04 Nora 720p NF WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E02 Ines 720p NF WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone [B0CH1HMSPP].m4b",
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 ENG.CZE sub.eng.cze ToMyX from BluRay.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone In 60 Seconds 2000 ENG sub.eng 26.ch.w.NAMES ToMyX from BluRay 999MB by GalaxyRG.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone In 60 Seconds 2000 ENG.CZE sub.cze.eng 32.ch ToMyX.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone In 60 Seconds 2000 ENG.CZE.SLO sub.cze 0.ch ToMyX from PHDTeam.mkv",
+    "ok": false
+   },
+   {
+    "n": "Gone with the Wind (1939).avi",
+    "ok": false
+   },
+   {
+    "n": "60 sekund (Gone In Sixty Seconds - 2000).Picaso11.avi",
+    "ok": false
+   },
+   {
+    "n": "Go.On.S01E10.Back.Back.Back...Its.Gone!.720p.WEB-DL.DD5.1.H.264-ScT.mkv",
+    "ok": false
+   },
+   {
+    "n": "Beware the gonzo -eng - komedie-.mp4",
+    "ok": false
+   },
+   {
+    "n": "Arch Enemy - Yesterday is Dead and Gone.mp4",
+    "ok": false
+   },
+   {
+    "n": "Zmizela (Gone - 2012).BRRip.XviD.CZ dab.avi",
+    "ok": false
+   },
+   {
+    "n": "01x13 Konec hamburgerum (Johnny Be Gone)-amercom-hgr.mp4",
+    "ok": false
+   },
+   {
+    "n": "Everwood S03 E14 Since You've Been Gone.avi",
+    "ok": false
+   },
+   {
+    "n": "Buffy.6x11.Gone.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "DMX-X-Gonna-Give-It-To-Ya.mp4",
+    "ok": false
+   },
+   {
+    "n": "Eminem_When_I_m_Gone_medium.mp4",
+    "ok": false
+   },
+   {
+    "n": "Good-Girls-Gone-Bad-1-CD1.avi",
+    "ok": false
+   },
+   {
+    "n": "Eminem - When Im Gone.mp4",
+    "ok": false
+   },
+   {
+    "n": "Supernatural.S09E01.I.Think.I'm.Gonna.Like.It.Here.HDTV.XviD-AFG.avi",
+    "ok": false
+   },
+   {
+    "n": "60 sekund - GONE IN SIXTY SECONDS  N.Cage akční krimi thriller 480p cz dub.avi",
+    "ok": false
+   },
+   {
+    "n": "Johnny Cash - God's Gonna Cut You Down {432Hz}.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bryan Adams - When You're Gone ft. Melanie C_(480p).flv",
+    "ok": false
+   },
+   {
+    "n": "David Guetta - Love Is Gone (HD).avi",
+    "ok": false
+   },
+   {
+    "n": "Plastická chirurgie - 4x11. Conor McNamara 2026 (DVDRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Madonna - Girl Gone Wild.mp4",
+    "ok": false
+   },
+   {
+    "n": "Nezvestné (Gone Missing) Cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Offspring_-_Gone_Away_.mpg",
+    "ok": false
+   },
+   {
+    "n": "Twisted Sister - We're Not Gonna Take It.mpg",
+    "ok": false
+   },
+   {
+    "n": "Zmizela-Gone.Girl.2014.1080p.BluRay.DTS.x264.CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Zmizela Gone Girl 2014 HDRip_X264_PLAYNOW.mp4",
+    "ok": false
+   },
+   {
+    "n": "Zmizela-Gone-girl-2014-cz-tit.avi",
+    "ok": false
+   },
+   {
+    "n": "s04e12 - Where No Fan Has Gone Before.avi",
+    "ok": false
+   },
+   {
+    "n": "NA RYBÁCH-Gone Fishin 1997.720p.BRRip x264 DTS-en AC3-cz .mkv",
+    "ok": false
+   },
+   {
+    "n": "Zmizelá Gone Girl (2014) NOVINKA CZdub.avi",
+    "ok": false
+   },
+   {
+    "n": "Aquarius.US.S01E05.A.Change.Is.Gonna.Come.720p.WEB-DL.DD5.1.H264-FGT.mkv",
+    "ok": false
+   },
+   {
+    "n": "1.Andie Case...   We're Gonna Be Ok feat Travis Graham (Original)- by raduna.wmv",
+    "ok": false
+   },
+   {
+    "n": "Zmizelá - Gone Girl (2014) 2.0 CZ dabing.avi",
+    "ok": false
+   },
+   {
+    "n": "Ooops-Noah-is-Gone-2015-BDrip-CZ-a-SK.avi",
+    "ok": false
+   },
+   {
+    "n": "Zmizela - Gone Girl (2014)(720p)(CZ).mkv",
+    "ok": false
+   },
+   {
+    "n": "Zmizela Gone Girl 2014 cz.avi",
+    "ok": false
+   },
+   {
+    "n": "AMV - Bleach - Skillet - Not gonna die.mp4",
+    "ok": false
+   },
+   {
+    "n": "AMV - Bleach - The Offspring - You're Gonna Go Far Kid.mp4",
+    "ok": false
+   },
+   {
+    "n": "AMV - Durarara!! - The Offspring - You're Gonna Go Far Kid.mp4",
+    "ok": false
+   },
+   {
+    "n": "AMV - Noragami - The Offspring - You're Gonna Go Far, Kid.mp4",
+    "ok": false
+   },
+   {
+    "n": "AMV - Spice & Wolf - The Beatles - You're Gonna Lose That Girl; This Boy; She Loves You.mp4",
+    "ok": false
+   },
+   {
+    "n": "Heroes S01E20 Five Years Gone (1080p x265 Joy).mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Fairy Gone - 01 [360p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Fairy Gone - 01 [720p].mkv",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Fairy Gone - 01 [720p].mp4",
+    "ok": false
+   },
+   {
+    "n": "[HorribleSubs] Fairy Gone - 01 [720p] CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Fairy Gone - 01 [720p] CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "Titanic (2012) 01 DVB-TRip CZ - SvE.avi",
+    "ok": false
+   },
+   {
+    "n": "Ice.Age.Continental.Drift.2012.PLDUB.MD.TS.XviD-BiDA-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Street.Dance.2.2012.PLSUBBED.BRRip.XviD-J25-9-01.08.2012.avi",
+    "ok": false
+   },
+   {
+    "n": "Grimm-s1-01.avi",
+    "ok": false
+   },
+   {
+    "n": "Hatfieldovi a McCoyovi-01.d",
+    "ok": false
+   },
+   {
+    "n": "Lidstvo-Pribeh-o-nas-vsech-01-02.avi",
+    "ok": false
+   },
+   {
+    "n": "farcry2 2013-01-23 00-11-24-92.AVI",
+    "ok": false
+   },
+   {
+    "n": "01. Zloduch Mollache.rm",
+    "ok": false
+   },
+   {
+    "n": "01.Prorok ktery zmenil Svet (A Propeth changes the World).avi",
+    "ok": false
+   },
+   {
+    "n": "mala velka britanie 01.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_2-01- Rozšiřující se spirála.avi",
+    "ok": false
+   },
+   {
+    "n": "Andromeda_1-01- Potmě.avi",
+    "ok": false
+   },
+   {
+    "n": "andromeda_3-01.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Hodlate se s tim smirit.avi",
+    "ok": false
+   },
+   {
+    "n": "Zaklinac 01 - Detstvi.avi",
+    "ok": false
+   },
+   {
+    "n": "[gg]_Shingeki_no_Kyojin_-_01_[0B164A9D].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Cinska kapitalisticka revoluce (China's Capitalist Revolution part.1).avi",
+    "ok": false
+   },
+   {
+    "n": "Cestománie 01 - Indonesie-sumatra.neni kam spechat.avi",
+    "ok": false
+   },
+   {
+    "n": "01 Experiment Kolonie I.avi",
+    "ok": false
+   },
+   {
+    "n": "01. Po líbánkách.avi",
+    "ok": false
+   },
+   {
+    "n": "6_01-Valkyry_z_Vallhaly_1.cast.avi",
+    "ok": false
+   },
+   {
+    "n": "01 - V hadim hnizde .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Pod palbou .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Navrat ztraceneho syna .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Avalon, cast I. .avi",
+    "ok": false
+   },
+   {
+    "n": "01 - Z masa a kosti .avi",
+    "ok": false
+   },
+   {
+    "n": "Angel - 3. série - 01. díl - BUŠENÍ SRDCE.avi",
+    "ok": false
+   },
+   {
+    "n": "Autogrotesky 01 Hasičák Burák (Rescue Squad Mater).AVI",
+    "ok": false
+   },
+   {
+    "n": "Zla krev_1986_01_DVDRip_CZ-Lt.avi",
+    "ok": false
+   },
+   {
+    "n": "Trestny-prapor_Shtrafbat_2004_cz_dil_01.avi",
+    "ok": false
+   },
+   {
+    "n": "30 Rock [3.01] Do-Over.avi",
+    "ok": false
+   },
+   {
+    "n": "(B-A)Great_Teacher_Onizuka_-_Lesson_01_(6F68CC7E).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Yellow-Flash]_Gungrave_-_01_[720p][F64F0332].mkv",
+    "ok": false
+   },
+   {
+    "n": "[joseole99][Frostii] K-On! - 01 (1280x720 h264 AC3 AAC) [72C908C7].mkv",
+    "ok": false
+   },
+   {
+    "n": "cowboy_bebop_remastered_01[h264.ac3][niizk].mkv",
+    "ok": false
+   },
+   {
+    "n": "01.Okna do sveta (Windows on the World).avi",
+    "ok": false
+   },
+   {
+    "n": "Synové a dcery Jakuba skláře-01.Vandrovník.avi",
+    "ok": false
+   },
+   {
+    "n": "zena-za-pultem-01-xvid-cz-bbb7.avi",
+    "ok": false
+   },
+   {
+    "n": "Gone S01E05 CZdab",
+    "len": 2492,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E06 CZdab",
+    "len": 2421,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E03 CZdab",
+    "len": 2520,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E05 - 5. epizoda CZ Titulky",
+    "len": 2492,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E04 - 4. epizoda CZ Titulky",
+    "len": 2443,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E03 - 3. epizoda CZ Titulky",
+    "len": 2520,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E04 CZdab",
+    "len": 2443,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E02 CZdab",
+    "len": 2515,
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone - CZ DABING",
+    "len": 6552,
+    "ok": false
+   },
+   {
+    "n": "Gone Baby Gone 1080p CZ Dabing",
+    "len": 6835,
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014.1080p.BRRip.x264.AC3.CZ-FiRST",
+    "len": 8941,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E02 - 2. epizoda CZ Dabing",
+    "len": 2515,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E06 - 6. epizoda CZ Dabing",
+    "len": 2421,
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 1080p CZ Dabing",
+    "len": 8941,
+    "ok": false
+   },
+   {
+    "n": "Gone in Sixty Seconds (2000) CZ-EN Dabing + forced 1080p.mkv",
+    "len": 7077,
+    "ok": false
+   },
+   {
+    "n": "Gone.Girl.2014 cz 1080p",
+    "len": 8941,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E11 CZdab",
+    "len": 2444,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E10 CZdab",
+    "len": 2418,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E09 CZdab",
+    "len": 2470,
+    "ok": false
+   },
+   {
+    "n": "Gone S01E08 CZdab",
+    "len": 2355,
+    "ok": false
+   },
+   {
+    "n": "Gone in the Night (2022) CZ Dabing 1080p",
+    "len": 5206,
+    "ok": false
+   },
+   {
+    "n": "Gone in the Night 2022 CZ Dabing 1080p",
+    "len": 5206,
+    "ok": false
+   },
+   {
+    "n": "Gone baby gone (2007) CZdab",
+    "len": 6543,
+    "ok": false
+   },
+   {
+    "n": "Gone Girl, Zmizelá - 2014 cz dab.drama thrill.koko",
+    "len": 8941,
+    "ok": false
+   },
+   {
+    "n": "Gone, Baby, Gone (2007)",
+    "len": 6835,
+    "ok": false
+   },
+   {
+    "n": "Gone Girl Zmizelá 2014 Cz Avi",
+    "len": 8941,
+    "ok": false
+   },
+   {
+    "n": "Gone baby gone +CZdab",
+    "len": 6543,
+    "ok": false
+   },
+   {
+    "n": "Gone,baby,gone(2007)drama-misterioz avlys,110",
+    "len": 6554,
+    "ok": false
+   },
+   {
+    "n": "60 sekund - Gone in Sixty Seconds (2000)(CZ)1080pHD]",
+    "len": 7077,
+    "ok": false
+   },
+   {
+    "n": "60 sekund Gone in Sixty Seconds 2000 HD EN CZ Dabing byDejv",
+    "len": 7077,
+    "ok": false
+   },
+   {
+    "n": "Rons.Gone.Wrong.2021.2160p.CZ.SK.EN",
+    "len": 6406,
+    "ok": false
+   },
+   {
+    "n": "Gone in the Night (2022) CZ titulky",
+    "len": 5412,
+    "ok": false
+   },
+   {
+    "n": "60 sekund Gone in Sixty Seconds 2000 HD EN CZ Dabing",
+    "len": 7077,
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E02.Part.Two.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit",
+    "len": 3384,
+    "ok": false
+   },
+   {
+    "n": "Gone.Girls.The.Long.Island.Serial.Killer.S01E03.Part.Three.1080p.NF.WEB-DL.DDP5.1.H.264 CZ tit",
+    "len": 3181,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E05.cz.sub.Fred.1080p.NF.WEB-DL.DUAL.DDP5.1.HDR.HEVC-TEPES",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E03.cz.sub.Daco.1080p.NF.WEB-DL.DUAL.DDP5.1.HDR.HEVC-TEPES",
+    "len": 2838,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E02 CZ titulky",
+    "len": 3012,
+    "ok": false
+   },
+   {
+    "n": "Gone Girl 2014 REMUX byDejv",
+    "len": 8941,
+    "ok": false
+   },
+   {
+    "n": "Gone.in.the.Night.2022 cz sub 1080p",
+    "len": 5412,
+    "ok": false
+   },
+   {
+    "n": "Gone 2006 DVDRip cz tit",
+    "len": 5285,
+    "ok": false
+   },
+   {
+    "n": "Gone.2006-cz tit",
+    "len": 5285,
+    "ok": false
+   },
+   {
+    "n": "60 sekund - Gone in Sixty Seconds (2000)(CZ-ENG)[H265][1080pHD]",
+    "len": 7077,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E05.cz.sub.Fred.1080p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E05 CZ titulky",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E04.cz.sub.Nora.1080p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 3216,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E04 CZ titulky",
+    "len": 3216,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E04.cz.sub.Nora.720p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 3216,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E05.cz.sub.Fred.720p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Rozbitý robot Ron - Rons Gone Wrong CZ DABING TIT",
+    "len": 6405,
+    "ok": false
+   },
+   {
+    "n": "Rozbitý robot Ron - Rons Gone Wrong CZ DABING TIT. FORCED",
+    "len": 6405,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E05 CZtitulky",
+    "len": 3232,
+    "ok": false
+   },
+   {
+    "n": "Gone for Good S01E04 CZtitulky",
+    "len": 3216,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E03.cz.sub.Daco.720p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 2838,
+    "ok": false
+   },
+   {
+    "n": "Gone.for.Good.S01E02.cz.sub.Ines.720p.NF.WEB-DL.DDP5.1.x264-AGLET",
+    "len": 3012,
+    "ok": false
+   }
+  ],
+  "at": "2026-11-18T10:33:07.478Z"
  }
 ]

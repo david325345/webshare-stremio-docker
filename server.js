@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.10.4';
+const VERSION = '8.10.5';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -1591,7 +1591,10 @@ function durationFilter(plan, items, now = new Date()) {
 // Seriál se starším (známějším) stejnojmenným seriálem: soubor vyřazený jako "bez roku (starší seriál)" se vrátí,
 // když po vynechání tohoto pravidla projde a jeho délka sedí ±2 % na přijatý soubor s naším rokem, ale na žádný
 // soubor téhož dílu s rokem staršího seriálu (Lov 2026 CZ dabing 2975 s × The Hunt 2015 3464 s). Bez souboru
-// se starším rokem a délkou se nic nemění (Scrubs 2001 i 2026 mají díl 1347 s).
+// se starším rokem a délkou: srovnávací jsou pak čisté kopie téhož dílu bez roku (projdou názvem i bez pravidla),
+// které se od našich liší o víc než 10 % – starší seriál má prokazatelně jinou délku dílu (Gone 2018 "Gone S01E01
+// CZdab" 2583 s × Gone 2026 2950 s); vrátí se pak jen soubor ±1 %. Bez takové kopie se nic nemění (Scrubs 2001
+// i 2026 mají díl 1347 s).
 // rejected = [{ f, info, why }] – vyřazené soubory se známou délkou; vrací vrácené položky
 function rescueOlderSeries(plan, items, rejected) {
     if (plan.type !== 'series' || !plan.year || !plan.season || !plan.episode || plan.isAnime) return [];
@@ -1599,13 +1602,20 @@ function rescueOlderSeries(plan, items, rejected) {
     const older = new Set(sameNameOf(plan).others.filter(o => o.y < plan.year - 1).map(o => o.y));
     if (!older.size) return [];
     const ep = new RegExp(`\\bs0*${plan.season} ?e0*${plan.episode}\\b|\\b0*${plan.season}x0*${plan.episode}\\b`);
-    const refs = [...items, ...rejected].filter(it => lenOf(it) && M.fileYears(it.f.name).some(y => older.has(y)) && ep.test(M.normalize(it.f.name))).map(lenOf);
-    if (!refs.length) return [];
+    const sameEp = it => ep.test(M.normalize(it.f.name));
     const ours = items.filter(it => lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
     if (!ours.length) return [];
     const plain = { ...plan, sameName: null };
-    return rejected.filter(it => /^bez roku \(starší seriál/.test(it.why || '') && lenOf(it) &&
-        ours.some(l => near(lenOf(it), l, 0.02)) && !refs.some(l => near(lenOf(it), l, 0.02)) && judgeFile(it.f, plain).ok)
+    const cand = rejected.filter(it => /^bez roku \(starší seriál/.test(it.why || '') && lenOf(it));
+    const clean = new Map(cand.map(it => [it, judgeFile(it.f, plain).ok]));
+    let refs = [...items, ...rejected].filter(it => lenOf(it) && M.fileYears(it.f.name).some(y => older.has(y)) && sameEp(it)).map(lenOf);
+    let tol = 0.02;
+    if (!refs.length) {
+        refs = cand.filter(it => clean.get(it) && sameEp(it) && ours.every(l => !near(lenOf(it), l, 0.10))).map(lenOf);
+        tol = 0.01;
+    }
+    if (!refs.length) return [];
+    return cand.filter(it => clean.get(it) && ours.some(l => near(lenOf(it), l, tol)) && !refs.some(l => near(lenOf(it), l, 0.02)))
         .map(it => ({ ...it, exact: false, why: RESCUED }));
 }
 const RESCUED = 'bez roku, délka sedí na náš seriál';

@@ -42,5 +42,20 @@ const office = plan(['Kancl', 'The Office'], { year: 2005, epRuntime: 22,
     sameName: [{ y: 2001, v: 2000, c: 'uk', n: ['the office'] }, { ours: true, v: 4000, c: 'us' }] });
 assert.strictEqual(j(office, 'The Office UK S01E01.mkv').ok, false);
 
+// Gone 2026 × Gone 2018: bez souboru s rokem 2018 rozhodne čistá kopie bez roku s jinou délkou (±1 % na naši)
+const gone = plan(['Gone'], { year: 2026, epRuntime: 49, sameName: [{ y: 2018, v: 35, c: 'de' }, { ours: true, v: 31, c: 'uk' }] });
+const gi = (name, len, ident) => ({ f: { name, ident }, info: { len } });
+const ours = [gi('Gone 2026 S01E01 1080p WEB-DL HEVC x265 BONE.mkv', 2951, 'o1'), gi('Gone (2026) - S01E01 - Episode 1.mkv', 2942, 'o2')];
+const rej = names => names.map(([n, l, i]) => ({ ...gi(n, l, i), why: S.judgeFile({ name: n }, gone).reason }));
+const r1 = rej([['Gone S01E01 EN.mkv', 2950, 'x1'], ['Gone S01E01 CZdab', 2583, 'x2'],
+    ['Gone.Girls.The.Long.Island.Serial.Killer.S01E01.1080p.WEB.h264-EDITH', 2980, 'x3']]);
+assert.deepStrictEqual(S.rescueOlderSeries(gone, ours, r1).map(it => it.f.ident), ['x1']);
+// bez čisté kopie se vzdálenou délkou (Scrubs: obě verze stejně dlouhé) se nic nevrací
+const r2 = rej([['Gone S01E01 EN.mkv', 2950, 'x1'], ['Gone S01E01 CZdab', 2940, 'x2']]);
+assert.deepStrictEqual(S.rescueOlderSeries(gone, ours, r2), []);
+// jiný seriál se vzdálenou délkou ("Gone for Good") důkazem není
+const r3 = rej([['Gone S01E01 EN.mkv', 2950, 'x1'], ['Gone for Good S01E01 CZ titulky', 2668, 'x4']]);
+assert.deepStrictEqual(S.rescueOlderSeries(gone, ours, r3), []);
+
 console.log('seriály: ✓');
 process.exit(0);

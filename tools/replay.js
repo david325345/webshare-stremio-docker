@@ -41,7 +41,7 @@ for (const r of byId.values()) {
   const judgeAll = (S, pl) => {
     const js = r.files.map(f => S.judgeFile ? S.judgeFile({ name: f.n }, pl) : { ok: f.ok, reason: f.r });
     const p2 = { ...pl, olderSame: S.olderSameFromReasons ? S.olderSameFromReasons(js.map(j => j.reason), pl) : 0 };
-    const all = r.files.map((f, i) => ({ f: { name: f.n, ident: i, hs: f.src === 'hs' }, info: f.len ? { len: f.len } : null, why: js[i].reason }));
+    const all = r.files.map((f, i) => ({ f: { name: f.n, ident: i, hs: f.src === 'hs', fs: f.src === 'fs' }, info: f.len ? { len: f.len } : null, why: js[i].reason }));
     const items = all.filter((_, i) => js[i].ok);
     // vrácené soubory bez roku (starší stejnojmenný seriál) podle délky
     const rescued = S.rescueOlderSeries ? S.rescueOlderSeries(p2, items, all.filter((it, i) => !js[i].ok && it.info)) : [];

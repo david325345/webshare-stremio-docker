@@ -1,4 +1,4 @@
-// Webshare — Stremio / Nuvio addon pro Webshare.cz
+// Webshare — Stremio / Nuvio addon pro Webshare.cz (+ Hellspy a Fastshare)
 // Každý uživatel má vlastní odkaz s configem (base64url JSON) v cestě URL.
 // Hledání, parser a řazení jsou v lib/engine.js (sdílené s pluginem pro Nuvio na Apple TV).
 
@@ -10,17 +10,17 @@ const path = require('path');
 const zlib = require('zlib');
 const M = require('./matcher');
 const E = require('./lib/engine');
-const { CACHE_DIR, config: { INDEXER_URL, INDEXER_FALLBACK_URL, CSFD_ON, CSFD_URL, CSFD_FALLBACK_URL, TMDB_API_KEY, HELLSPY_PROXY, HELLSPY_ON } } = require('./lib/platform');
+const { CACHE_DIR, config: { INDEXER_URL, INDEXER_FALLBACK_URL, CSFD_ON, CSFD_URL, CSFD_FALLBACK_URL, TMDB_API_KEY, HELLSPY_PROXY, HELLSPY_ON, FASTSHARE_VIA_PROXY } } = require('./lib/platform');
 const {
     log, TTLCache, H, linkCache, tmdbCache, resolveCache, hasWs, hsOn,
     who, userKey, WsError, wsLogin, withToken, wsFileLink, wsUserData, hsSearch,
     hsDetail, convHeight, hsMeta, csfdToInfo, needsCzName, withCsfdCzName, seasonBase, longCut,
     buildPlan, buildQueries, judgeFile, filterFiles, olderSameFromReasons, describe, rankFiles, durationMismatch,
     durationFilter, rescueOlderSeries, expandHellspy, handleStream, handleCatalog, handleCatalogHs, handleMeta, md5crypt,
-    dbg, hsDown
+    dbg, hsDown, hasFs, fsLogin, FsError, fsPlayLink, handleCatalogFs, fsDown
 } = E;
 
-const VERSION = '8.11.1';
+const VERSION = '8.12.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 
@@ -32,16 +32,16 @@ setInterval(E.saveCaches, 2 * 60 * 1000).unref();
 for (const sig of ['SIGTERM', 'SIGINT']) process.on(sig, () => { E.saveCaches(); process.exit(0); });
 
 // ───────────────────────── Config v URL ─────────────────────────
-// Platný config: účet Webshare, nebo jen Hellspy ({ hellspy: true } bez účtu)
+// Platný config: účet Webshare, účet Fastshare, nebo jen Hellspy ({ hellspy: true } bez účtu)
 function decodeConfig(b64) {
     try {
         const cfg = JSON.parse(Buffer.from(decodeURIComponent(b64), 'base64').toString('utf8'));
         if (!cfg || typeof cfg !== 'object') return null;
         const ws = typeof cfg.username === 'string' && typeof cfg.password === 'string' && cfg.username && cfg.password;
-        if (!ws) {
-            if (cfg.hellspy !== true) return null;
-            delete cfg.username; delete cfg.password;
-        }
+        const fs = typeof cfg.fs_username === 'string' && typeof cfg.fs_password === 'string' && cfg.fs_username && cfg.fs_password;
+        if (!ws && !fs && cfg.hellspy !== true) return null;
+        if (!ws) { delete cfg.username; delete cfg.password; }
+        if (!fs) { delete cfg.fs_username; delete cfg.fs_password; }
         return cfg;
     } catch (e) {
         return null;
@@ -106,25 +106,33 @@ setInterval(archiveCleanup, 24 * H).unref();
 // ───────────────────────── Manifest ─────────────────────────
 const SEARCH_CATALOG = { type: 'movie', id: 'webshare_search', name: 'Webshare Hledat', extra: [{ name: 'search', isRequired: true }] };
 const SEARCH_CATALOG_HS = { type: 'movie', id: 'hellspy_search', name: 'Hellspy Hledat', extra: [{ name: 'search', isRequired: true }] };
+const SEARCH_CATALOG_FS = { type: 'movie', id: 'fastshare_search', name: 'Fastshare Hledat', extra: [{ name: 'search', isRequired: true }] };
+
+// "Webshare.cz", "Webshare.cz a Hellspy", "Webshare.cz, Hellspy a Fastshare"
+function sourceList(cfg) {
+    const s = cfg ? [hasWs(cfg) && 'Webshare.cz', hsOn(cfg) && 'Hellspy', hasFs(cfg) && 'Fastshare'].filter(Boolean)
+        : ['Webshare.cz', ...(HELLSPY_ON ? ['Hellspy'] : []), 'Fastshare'];
+    return s.length > 1 ? `${s.slice(0, -1).join(', ')} a ${s[s.length - 1]}` : s[0] || 'Webshare.cz';
+}
 
 function buildManifest(base, cfg) {
     const withCatalog = hasWs(cfg) && cfg.enable_direct_search !== false;
     const withHsCatalog = hsOn(cfg) && cfg.hellspy_search !== false;
-    const catalogs = [...(withCatalog ? [SEARCH_CATALOG] : []), ...(withHsCatalog ? [SEARCH_CATALOG_HS] : [])];
-    const prefixes = ['tt', 'kitsu', ...(CSFD_ON ? ['csfd:'] : []), 'webshare', ...(HELLSPY_ON ? ['hellspy'] : [])];
+    const withFsCatalog = hasFs(cfg) && cfg.fastshare_search !== false;
+    const catalogs = [...(withCatalog ? [SEARCH_CATALOG] : []), ...(withHsCatalog ? [SEARCH_CATALOG_HS] : []),
+        ...(withFsCatalog ? [SEARCH_CATALOG_FS] : [])];
+    const prefixes = ['tt', 'kitsu', ...(CSFD_ON ? ['csfd:'] : []), 'webshare', ...(HELLSPY_ON ? ['hellspy'] : []), 'fastshare'];
     return {
         id: cfg ? personalAddonId(who(cfg)) : 'com.webshare.anime',
         version: VERSION,
         name: 'Webshare',
-        description: cfg && !hasWs(cfg)
-            ? 'Filmy, seriály a anime z Hellspy – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.'
-            : `Filmy, seriály a anime z Webshare.cz${hsOn(cfg) ? ' a Hellspy' : ''} – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.`,
+        description: `Filmy, seriály a anime z ${sourceList(cfg)} – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.`,
         logo: `${base}/logo.png`,
         background: `${base}/webshare-backdrop.jpg`,
         // meta jen pro soubory z katalogu (webshare-…); metadata filmů a seriálů dodává Cinemeta
         resources: [
             { name: 'stream', types: ['movie', 'series'], idPrefixes: prefixes },
-            { name: 'meta', types: ['movie', 'series'], idPrefixes: ['webshare', ...(HELLSPY_ON ? ['hellspy'] : [])] },
+            { name: 'meta', types: ['movie', 'series'], idPrefixes: ['webshare', ...(HELLSPY_ON ? ['hellspy'] : []), 'fastshare'] },
             ...(catalogs.length ? ['catalog'] : [])
         ],
         types: ['movie', 'series'],
@@ -175,15 +183,20 @@ app.get('/configure', sendPage(null));
 
 app.get('/manifest.json', (req, res) => res.json(buildManifest(baseUrl(req), null)));
 
-app.get('/health', (req, res) => res.json({ ok: true, version: VERSION, hellspy: HELLSPY_ON ? (hsDown() ? 'dočasně vypnutý' : 'zapnutý') : 'vypnutý' }));
+app.get('/health', (req, res) => res.json({ ok: true, version: VERSION, hellspy: HELLSPY_ON ? (hsDown() ? 'dočasně vypnutý' : 'zapnutý') : 'vypnutý',
+    fastshare: fsDown() ? 'dočasně vypnutý' : 'zapnutý' }));
 
-// Ověření přihlášení z konfigurační stránky (jednoduchý limit 10 pokusů / min / IP)
+// Ověření přihlášení z konfigurační stránky (jednoduchý limit 10 pokusů / min / IP, Webshare i Fastshare dohromady)
 const verifyHits = new TTLCache(5000);
-app.post('/api/verify', async (req, res) => {
+function verifyLimited(req, res) {
     const ip = req.ip || 'x';
     const n = (verifyHits.get(ip) || 0) + 1;
     verifyHits.set(ip, n, 60 * 1000);
-    if (n > 10) return res.status(429).json({ ok: false, error: 'Příliš mnoho pokusů, zkus to za minutu.' });
+    if (n > 10) { res.status(429).json({ ok: false, error: 'Příliš mnoho pokusů, zkus to za minutu.' }); return true; }
+    return false;
+}
+app.post('/api/verify', async (req, res) => {
+    if (verifyLimited(req, res)) return;
     const { username, password } = req.body || {};
     if (!username || !password) return res.json({ ok: false, error: 'Vyplň jméno i heslo.' });
     try {
@@ -192,6 +205,18 @@ app.post('/api/verify', async (req, res) => {
         res.json({ ok: true, vip: ud ? ud.vip : null, vipDays: ud ? ud.vipDays : null });
     } catch (e) {
         res.json({ ok: false, error: e instanceof WsError ? e.message : 'Webshare teď neodpovídá, zkus to znovu.' });
+    }
+});
+// Fastshare: přihlášení → neomezené stahování / zbývající kredit (session hash se nevrací ani neloguje)
+app.post('/api/verify-fs', async (req, res) => {
+    if (verifyLimited(req, res)) return;
+    const { username, password } = req.body || {};
+    if (!username || !password) return res.json({ ok: false, error: 'Vyplň jméno i heslo k Fastshare.' });
+    try {
+        const r = await fsLogin(String(username).trim(), String(password));
+        res.json({ ok: true, unlimited: r.unlimited, creditMB: r.creditMB });
+    } catch (e) {
+        res.json({ ok: false, error: e instanceof FsError ? e.message : 'Fastshare teď neodpovídá, zkus to znovu.' });
     }
 });
 
@@ -385,7 +410,8 @@ app.get('/:cfg/configure', (req, res) => {
     sendPage(cfg ? {
         username: cfg.username || '', password: cfg.password || '',
         tmdb_api_key: cfg.tmdb_api_key || '', enable_direct_search: cfg.enable_direct_search !== false,
-        hellspy: cfg.hellspy !== false, hellspy_search: cfg.hellspy_search !== false
+        hellspy: cfg.hellspy !== false, hellspy_search: cfg.hellspy_search !== false,
+        fs_username: cfg.fs_username || '', fs_password: cfg.fs_password || '', fastshare_search: cfg.fastshare_search !== false
     } : null)(req, res);
 });
 
@@ -417,9 +443,10 @@ function parseExtra(str) {
 
 app.get(['/:cfg/catalog/:type/:id/:extra.json', '/:cfg/catalog/:type/:id.json'], withCfg(async (req, res, cfg) => {
     let metas = [];
-    if (req.params.id === 'webshare_search' || req.params.id === 'hellspy_search') {
+    const CATALOGS = { webshare_search: handleCatalog, hellspy_search: handleCatalogHs, fastshare_search: handleCatalogFs };
+    if (CATALOGS[req.params.id]) {
         try {
-            const fn = req.params.id === 'hellspy_search' ? handleCatalogHs : handleCatalog;
+            const fn = CATALOGS[req.params.id];
             metas = await fn(req.params.type, parseExtra(req.params.extra), cfg, baseUrl(req));
         } catch (e) {
             log(`❌ katalog ${req.params.id} [${who(cfg)}]: ${e.message}`);
@@ -467,6 +494,22 @@ app.get('/:cfg/hs/play/:id/:hash/:q/:name?', withCfg(async (req, res, cfg) => {
     res.setHeader('Cache-Control', 'no-store');
     res.redirect(302, link);
 }));
+// Fastshare: čerstvá session (55 min) → přesměrování na data.fastshare.cloud (stream=1, Range funguje)
+app.get('/:cfg/fs/play/:id/:name?', withCfg(async (req, res, cfg) => {
+    if (!hasFs(cfg)) return res.status(404).type('text/plain').send('Addon je nastavený bez účtu Fastshare.');
+    const id = req.params.id;
+    if (!/^\d+$/.test(id)) return res.status(404).type('text/plain').send('Neplatný soubor.');
+    let link;
+    try { link = await fsPlayLink(cfg, id, req.params.name); } catch (e) {
+        log(`⛔ fastshare play ${id} [${who(cfg)}] – ${e instanceof FsError ? 'přihlášení se nepovedlo' : e.message}`);
+        return res.status(e instanceof FsError ? 403 : 502).type('text/plain')
+            .send(e instanceof FsError ? 'Přihlášení k Fastshare se nepovedlo – zkontroluj jméno a heslo v nastavení addonu.' : 'Fastshare teď neodpovídá, zkus to znovu.');
+    }
+    log(`▶️ fastshare play ${id} [${who(cfg)}]`);
+    res.setHeader('Cache-Control', 'no-store');
+    res.redirect(302, link);
+}));
+
 app.get('/:cfg/hs/sub/:id/:hash/:idx.vtt', withCfg(async (req, res, cfg) => {
     if (!HELLSPY_ON) return res.status(404).end();
     const { id, hash } = req.params;
@@ -486,6 +529,7 @@ if (require.main === module) {
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
         log(`   ČSFD (csfd: ID): ${CSFD_ON ? `${CSFD_URL} (záloha ${CSFD_FALLBACK_URL})` : 'vypnuté'}`);
         log(`   cache: ${CACHE_DIR} (TMDB ${tmdbCache.map.size}, indexer ${resolveCache.map.size} záznamů)`);
+        log(`   Fastshare: ${E.FS_API.replace(/^https:\/\/([^/]+).*/, '$1')}${FASTSHARE_VIA_PROXY ? ' přes proxy Hellspy' : ' napřímo'}`);
         log(`   Hellspy: ${HELLSPY_ON ? (HELLSPY_PROXY === 'direct' ? 'zapnutý (bez proxy)' : `zapnutý přes proxy ${HELLSPY_PROXY.replace(/\/\/[^@/]*@/, '//***@')}`) : 'vypnutý (chybí HELLSPY_PROXY)'}`);
         log(`   archiv hledání: ${archiveOk ? `${ARCHIVE_DIR} (${ARCHIVE_DAYS} dní)` : 'vypnutý'} | stažení: ${ADMIN_KEY ? '/admin/hledani.jsonl.gz?key=…' : 'vypnuté (chybí ADMIN_KEY)'}`);
         log(`   GitHub archiv: ${GH_ON ? `${GH_REPO}/${GH_PATH} každých ${GH_HOURS} h v ${GH_HOUR}:00` : 'vypnutý (chybí GH_ARCHIVE_REPO / GH_ARCHIVE_TOKEN)'}`);
@@ -494,4 +538,5 @@ if (require.main === module) {
 
 module.exports = {
     csfdToInfo,
-    seasonBase, longCut, durationFilter, needsCzName, withCsfdCzName, olderSameFromReasons, rescueOlderSeries, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt };
+    seasonBase, longCut, durationFilter, needsCzName, withCsfdCzName, olderSameFromReasons, rescueOlderSeries, app, hsSearch, hsDetail, hsMeta, describe, expandHellspy, buildPlan, buildQueries, filterFiles, judgeFile, rankFiles, durationMismatch, decodeConfig, maskConfigInUrl, md5crypt,
+    buildManifest };

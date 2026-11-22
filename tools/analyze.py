@@ -171,8 +171,8 @@ def main():
     for i, n in (dur + yr).most_common(8):
         r = last[i]
         p(f"  - `{i}` {r['names'][0]['text'] if r.get('names') else ''}: {n}")
-    srcs = collections.Counter('hs' if f.get('src') == 'hs' else 'ws' for r in last.values() for f in r['files'] if f.get('sent'))
-    p(f"\n## Zdroje odeslaných streamů\n\n- Webshare {srcs.get('ws', 0)}, Hellspy {srcs.get('hs', 0)}")
+    srcs = collections.Counter(f.get('src') or 'ws' for r in last.values() for f in r['files'] if f.get('sent'))
+    p(f"\n## Zdroje odeslaných streamů\n\n- Webshare {srcs.get('ws', 0)}, Hellspy {srcs.get('hs', 0)}, Fastshare {srcs.get('fs', 0)}")
 
 
 if __name__ == '__main__':

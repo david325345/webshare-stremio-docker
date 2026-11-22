@@ -37,6 +37,8 @@
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
   .card + .card { margin-top: 16px; }
   h2 { font-size: 15px; margin: 0 0 14px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .8px; }
+  h2.sub { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
+  h2 .hint { text-transform: none; letter-spacing: 0; }
   label { display: block; font-size: 14px; margin: 14px 0 6px; color: #c9d3e6; }
   label:first-of-type { margin-top: 0; }
   .hint { font-weight: 400; color: var(--muted); }
@@ -86,20 +88,31 @@
     <img src="/logo.png" alt="">
     <div>
       <h1>Webshare</h1>
-      <p id="tagline">Filmy, seriály a anime z Webshare.cz pro Stremio a Nuvio</p>
+      <p id="tagline">Filmy, seriály a anime z Webshare.cz a Fastshare pro Stremio a Nuvio</p>
     </div>
   </header>
 
   <form class="card" id="form" autocomplete="on">
     <h2>Přihlášení k Webshare</h2>
-    <label for="username">Uživatelské jméno <span class="hint" id="wsHint"></span></label>
+    <label for="username">Uživatelské jméno <span class="hint" id="wsHint">(bez účtu jen Fastshare)</span></label>
     <input type="text" id="username" autocomplete="username">
 
     <label for="password">Heslo</label>
     <div class="pw">
       <input type="password" id="password" autocomplete="current-password">
-      <button type="button" id="togglePw" aria-label="Zobrazit heslo">zobrazit</button>
+      <button type="button" class="togglePw" data-for="password" aria-label="Zobrazit heslo">zobrazit</button>
     </div>
+
+    <h2 class="sub">Fastshare <span class="hint">(nepovinné)</span></h2>
+    <label for="fsUser">Uživatelské jméno</label>
+    <input type="text" id="fsUser" autocomplete="off" spellcheck="false">
+
+    <label for="fsPass">Heslo</label>
+    <div class="pw">
+      <input type="password" id="fsPass" autocomplete="off">
+      <button type="button" class="togglePw" data-for="fsPass" aria-label="Zobrazit heslo">zobrazit</button>
+    </div>
+    <h2 class="sub" style="margin-bottom:0">Další nastavení</h2>
 
     <label for="tmdb">TMDB API klíč <span class="hint" id="tmdbHint">(nepovinné)</span></label>
     <input type="text" id="tmdb" placeholder="vlastní klíč z themoviedb.org" autocomplete="off" spellcheck="false">
@@ -119,6 +132,11 @@
       <span>Katalog „Webshare Hledat“<small>Přímé hledání na Webshare z vyhledávání ve Stremiu / Nuviu (jen s účtem Webshare)</small></span>
     </label>
 
+    <label class="check">
+      <input type="checkbox" id="fsSearch" checked>
+      <span>Katalog „Fastshare Hledat“<small>Přímé hledání na Fastshare z vyhledávání ve Stremiu / Nuviu (jen s účtem Fastshare)</small></span>
+    </label>
+
     <button class="btn btn-primary" type="submit" id="submit">Ověřit a vytvořit odkaz</button>
     <div class="msg" id="msg"></div>
   </form>
@@ -135,7 +153,7 @@
       <li><b>Nuvio / NuvioTV:</b> Addony → Přidat addon → vlož odkaz.</li>
       <li><b>Stremio:</b> Addony → do vyhledávacího pole nahoře vlož odkaz → Nainstalovat.</li>
     </ol>
-    <p class="muted" id="pwNote">Odkaz obsahuje tvé heslo k Webshare – nesdílej ho. Při změně hesla si vytvoř nový.</p>
+    <p class="muted" id="pwNote">Odkaz obsahuje tvé přihlašovací údaje – nesdílej ho. Při změně hesla si vytvoř nový.</p>
   </section>
 
   <p class="foot">verze __VERSION__</p>
@@ -153,8 +171,8 @@
   if (HELLSPY) {
     $('hsRow').style.display = '';
     $('hsSearchRow').style.display = '';
-    $('tagline').textContent = 'Filmy, seriály a anime z Webshare.cz a Hellspy pro Stremio a Nuvio';
-    $('wsHint').textContent = '(bez účtu jen Hellspy)';
+    $('tagline').textContent = 'Filmy, seriály a anime z Webshare.cz, Hellspy a Fastshare pro Stremio a Nuvio';
+    $('wsHint').textContent = '(bez účtu jen Hellspy / Fastshare)';
   }
 
   function load() {
@@ -167,6 +185,9 @@
     if (cfg.enable_direct_search === false) $('search').checked = false;
     if (cfg.hellspy === false) $('hellspy').checked = false;
     if (cfg.hellspy_search === false) $('hsSearch').checked = false;
+    if (cfg.fs_username) $('fsUser').value = cfg.fs_username;
+    if (cfg.fs_password) $('fsPass').value = cfg.fs_password;
+    if (cfg.fastshare_search === false) $('fsSearch').checked = false;
   }
 
   function showResult(cfg, okMsg, cls) {
@@ -175,7 +196,7 @@
     $('url').textContent = url;
     $('web').href = 'https://web.stremio.com/#/addons?addon=' + encodeURIComponent(url);
     show($('vip'), cls || 'ok', okMsg);
-    $('pwNote').style.display = cfg.username ? '' : 'none';
+    $('pwNote').style.display = cfg.username || cfg.fs_username ? '' : 'none';
     $('result').style.display = 'block';
     $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -189,11 +210,21 @@
   function show(el, cls, text) { el.className = 'msg ' + cls; el.textContent = text; }
   function hide(el) { el.className = 'msg'; el.textContent = ''; }
 
-  $('togglePw').addEventListener('click', function () {
-    var p = $('password'), shown = p.type === 'text';
-    p.type = shown ? 'password' : 'text';
-    this.textContent = shown ? 'zobrazit' : 'skrýt';
+  Array.prototype.forEach.call(document.querySelectorAll('.togglePw'), function (b) {
+    b.addEventListener('click', function () {
+      var p = $(this.getAttribute('data-for')), shown = p.type === 'text';
+      p.type = shown ? 'password' : 'text';
+      this.textContent = shown ? 'zobrazit' : 'skrýt';
+    });
   });
+
+  // POST na ověření; chyba z API (špatné heslo…) má přednost před obecnou „server neodpovídá“
+  function verify(url, body) {
+    return fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json(); }, function () { throw new Error('Server neodpovídá, zkus to prosím znovu.'); })
+      .then(function (d) { if (!d.ok) throw new Error(d.error || 'Přihlášení se nepovedlo.'); return d; });
+  }
+  function credit(mb) { return mb >= 1024 ? (mb / 1024).toFixed(1).replace('.', ',') + ' GB' : mb + ' MB'; }
 
   $('form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -205,29 +236,40 @@
     };
     var hs = HELLSPY && $('hellspy').checked;
     if (HELLSPY) { cfg.hellspy = hs; cfg.hellspy_search = $('hsSearch').checked; }
+    var fsUser = $('fsUser').value.trim(), fsPass = $('fsPass').value;
     hide($('msg'));
-    if (!cfg.username && !cfg.password) {
-      // bez účtu Webshare → jen Hellspy (bez ověření)
-      if (!hs) { show($('msg'), 'err', HELLSPY ? 'Vyplň účet Webshare, nebo zapni Hellspy.' : 'Vyplň jméno i heslo.'); return; }
-      showResult({ hellspy: true, hellspy_search: $('hsSearch').checked, tmdb_api_key: cfg.tmdb_api_key }, 'Jen Hellspy (bez účtu Webshare).');
+    var ws = !!(cfg.username || cfg.password), fs = !!(fsUser || fsPass);
+    if (ws && (!cfg.username || !cfg.password)) { show($('msg'), 'err', 'Vyplň jméno i heslo k Webshare.'); return; }
+    if (fs && (!fsUser || !fsPass)) { show($('msg'), 'err', 'Vyplň jméno i heslo k Fastshare.'); return; }
+    if (!ws && !fs && !hs) {
+      show($('msg'), 'err', HELLSPY ? 'Vyplň účet Webshare nebo Fastshare, nebo zapni Hellspy.' : 'Vyplň účet Webshare nebo Fastshare.');
       return;
     }
-    if (!cfg.username || !cfg.password) { show($('msg'), 'err', 'Vyplň jméno i heslo.'); return; }
+    if (!ws) { delete cfg.username; delete cfg.password; delete cfg.enable_direct_search; }
+    if (fs) { cfg.fs_username = fsUser; cfg.fs_password = fsPass; cfg.fastshare_search = $('fsSearch').checked; }
+    // jen Hellspy → bez ověření
+    if (!ws && !fs) { showResult(cfg, 'Jen Hellspy (bez účtu Webshare a Fastshare).'); return; }
+
+    var checks = [];
+    if (ws) checks.push(verify('/api/verify', { username: cfg.username, password: cfg.password }).then(function (d) {
+      if (d.vip === false) return { warn: true, text: 'Webshare: účet nemá aktivní VIP – bez VIP přehrávání přes addon nefunguje.' };
+      return { text: d.vip && d.vipDays ? 'Webshare v pořádku · VIP ještě ' + d.vipDays + ' dní.' : 'Webshare v pořádku.' };
+    }, function (err) { throw new Error('Webshare: ' + err.message); }));
+    if (fs) checks.push(verify('/api/verify-fs', { username: fsUser, password: fsPass }).then(function (d) {
+      if (d.unlimited) return { text: 'Fastshare v pořádku · neomezené stahování.' };
+      if (d.creditMB > 0) return { text: 'Fastshare v pořádku · kredit ' + credit(d.creditMB) + '.' };
+      return { warn: true, text: 'Fastshare: účet nemá neomezené stahování ani kredit – přehrávání nemusí fungovat.' };
+    }, function (err) { throw new Error(/Fastshare/.test(err.message) ? err.message : 'Fastshare: ' + err.message); }));
+
     var btn = $('submit');
     btn.disabled = true; btn.textContent = 'Ověřuji přihlášení…';
-    hide($('msg'));
-
-    fetch('/api/verify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: cfg.username, password: cfg.password })
-    }).then(function (r) { return r.json(); }).then(function (data) {
-      if (!data.ok) { show($('msg'), 'err', data.error || 'Přihlášení se nepovedlo.'); return; }
-      if (data.vip === false) showResult(cfg, 'Účet nemá aktivní VIP – Webshare bez VIP přehrávání přes addon neumožní.' + (hs ? ' Hellspy bude fungovat.' : ''), 'warn');
-      else if (data.vip && data.vipDays) showResult(cfg, 'Přihlášení v pořádku · VIP ještě ' + data.vipDays + ' dní.');
-      else showResult(cfg, 'Přihlášení v pořádku.');
-    }).catch(function () {
-      show($('msg'), 'err', 'Server neodpovídá, zkus to prosím znovu.');
+    Promise.all(checks).then(function (rs) {
+      var warn = rs.some(function (r) { return r.warn; });
+      var text = rs.map(function (r) { return r.text; }).join(' ');
+      if (warn && hs) text += ' Hellspy bude fungovat.';
+      showResult(cfg, text, warn ? 'warn' : 'ok');
+    }).catch(function (err) {
+      show($('msg'), 'err', err.message || 'Server neodpovídá, zkus to prosím znovu.');
     }).then(function () {
       btn.disabled = false; btn.textContent = 'Ověřit a vytvořit odkaz';
     });

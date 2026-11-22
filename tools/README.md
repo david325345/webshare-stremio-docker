@@ -20,7 +20,9 @@ proto znamená i nové sestavení pluginu:**
 1. oprava v `lib/engine.js` / `matcher.js`, `npm test`, replay, verze addonu, push;
 2. v `nuvio-plugins`: `node webshare/build.mjs ../webshare-stremio-docker`, zvýšit verzi pluginu
    (`webshare/src/plugin.js` a `webshare/manifest.json`), `npm test` – `test/webshare-sync.test.js` selže,
-   dokud plugin není sestavený z aktuálního parseru –, push.
+   dokud plugin není sestavený z aktuálního parseru –, push do `main` **i do větve `webshare`**
+   (`git push origin main main:webshare`) – Nuvio má plugin nainstalovaný z odkazu
+   `raw.githubusercontent.com/david325345/nuvio-plugins/webshare/webshare/manifest.json`.
 
 Hledání z pluginu (volba „Pomoct vylepšit hledání“) chodí přes `POST /api/archive` do stejného archivu
 s verzí `8.x.y+nuvio-1.z.w`; `analyze.py` upozorní, když plugin běží na starším jádře než addon.

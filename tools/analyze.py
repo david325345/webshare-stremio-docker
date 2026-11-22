@@ -94,6 +94,20 @@ def main():
     p(f"- Období: {recs[0]['t'][:16]} – {recs[-1]['t'][:16]} (UTC)")
     p(f"- Hledání streamů: {len(streams)} (unikátních ID {len({r['id'] for r in streams})}), katalog: {len(cats)}, bez názvů: {len(noname)}")
     p(f"- Verze addonu: {', '.join(f'{k} ({v})' for k, v in versions.most_common())}")
+    # plugin pro Nuvio (verze "8.11.1+nuvio-1.0.1") má parser z addonu přibalený při sestavení – nesmí zaostávat
+    def vt(v):
+        try:
+            return tuple(int(x) for x in v.split('+')[0].split('.'))
+        except ValueError:
+            return ()
+    plug = {v for v in versions if '+nuvio-' in v}
+    if plug:
+        newest = max((v for v in versions if '+nuvio-' not in v), key=vt, default='')
+        p(f"- Plugin Nuvio: {sum(versions[v] for v in plug)} hledání ({', '.join(sorted(plug))})")
+        old_plug = sorted(v for v in plug if newest and vt(v) < vt(newest))
+        if old_plug:
+            p(f"- ⚠️ Plugin běží na starším jádře než addon {newest}: {', '.join(old_plug)} – sestavit znovu "
+              f"(nuvio-plugins: node webshare/build.mjs ../webshare-stremio-docker), pokud to není jen starší instalace")
     if streams:
         ms = sorted(r.get('ms', 0) for r in streams)
         p(f"- Rychlost: medián {statistics.median(ms):.0f} ms, p90 {ms[int(len(ms) * .9)]} ms, max {ms[-1]} ms")

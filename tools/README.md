@@ -11,5 +11,19 @@ Noční kontrola ho projde těmito nástroji a report uloží do `nimetodex-medi
 | `addcases.js` | `node tools/addcases.js . tt123:1:2,tt456 archiv…` a pak `node test/regrese.js --update` → přidá tituly do regresního testu |
 | `../test/regrese.js` | `node test/regrese.js` → regresní test parseru (musí projít beze změn) |
 
+## Plugin pro Nuvio (Apple TV)
+
+Plugin Webshare (`david325345/nuvio-plugins`, složka `webshare/`) nemá vlastní parser: `webshare/build.mjs`
+do `webshare/webshare.js` přibalí `lib/engine.js` a `matcher.js` z tohoto repozitáře. **Každá oprava parseru
+proto znamená i nové sestavení pluginu:**
+
+1. oprava v `lib/engine.js` / `matcher.js`, `npm test`, replay, verze addonu, push;
+2. v `nuvio-plugins`: `node webshare/build.mjs ../webshare-stremio-docker`, zvýšit verzi pluginu
+   (`webshare/src/plugin.js` a `webshare/manifest.json`), `npm test` – `test/webshare-sync.test.js` selže,
+   dokud plugin není sestavený z aktuálního parseru –, push.
+
+Hledání z pluginu (volba „Pomoct vylepšit hledání“) chodí přes `POST /api/archive` do stejného archivu
+s verzí `8.x.y+nuvio-1.z.w`; `analyze.py` upozorní, když plugin běží na starším jádře než addon.
+
 Pravidla práce (David): komunikace česky; **žádný kód bez předchozího souhlasu** (nejdřív návrh, pak souhlas);
 nasazení dělá David ručně v Coolify. Noční kontrola proto jen analyzuje a navrhuje, kód nemění.

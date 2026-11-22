@@ -107,7 +107,7 @@ def main():
         old_plug = sorted(v for v in plug if newest and vt(v) < vt(newest))
         if old_plug:
             p(f"- ⚠️ Plugin běží na starším jádře než addon {newest}: {', '.join(old_plug)} – sestavit znovu "
-              f"(nuvio-plugins: node webshare/build.mjs ../webshare-stremio-docker), pokud to není jen starší instalace")
+              f"(nuvio-plugins: node czechshare/build.mjs ../webshare-stremio-docker), pokud to není jen starší instalace")
     if streams:
         ms = sorted(r.get('ms', 0) for r in streams)
         p(f"- Rychlost: medián {statistics.median(ms):.0f} ms, p90 {ms[int(len(ms) * .9)]} ms, max {ms[-1]} ms")

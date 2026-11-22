@@ -1,4 +1,4 @@
-// Webshare — Stremio / Nuvio addon pro Webshare.cz (+ Hellspy a Fastshare)
+// CzechShare — Stremio / Nuvio addon pro Webshare.cz, Hellspy a Fastshare (dřív „Webshare“)
 // Každý uživatel má vlastní odkaz s configem (base64url JSON) v cestě URL.
 // Hledání, parser a řazení jsou v lib/engine.js (sdílené s pluginem pro Nuvio na Apple TV).
 
@@ -20,7 +20,7 @@ const {
     dbg, hsDown, hasFs, fsLogin, FsError, fsPlayLink, handleCatalogFs, fsDown
 } = E;
 
-const VERSION = '8.12.0';
+const VERSION = '8.13.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 
@@ -125,10 +125,10 @@ function buildManifest(base, cfg) {
     return {
         id: cfg ? personalAddonId(who(cfg)) : 'com.webshare.anime',
         version: VERSION,
-        name: 'Webshare',
+        name: 'CzechShare',
         description: `Filmy, seriály a anime z ${sourceList(cfg)} – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.`,
         logo: `${base}/logo.png`,
-        background: `${base}/webshare-backdrop.jpg`,
+        background: `${base}/backdrop.jpg`,
         // meta jen pro soubory z katalogu (webshare-…); metadata filmů a seriálů dodává Cinemeta
         resources: [
             { name: 'stream', types: ['movie', 'series'], idPrefixes: prefixes },
@@ -525,7 +525,7 @@ app.use((req, res) => res.status(404).json({ error: 'Nenalezeno' }));
 
 if (require.main === module) {
     app.listen(PORT, () => {
-        log(`🚀 Webshare ${VERSION} běží na portu ${PORT}`);
+        log(`🚀 CzechShare ${VERSION} běží na portu ${PORT}`);
         log(`   indexer: ${INDEXER_URL} (záloha ${INDEXER_FALLBACK_URL}) | serverový TMDB klíč: ${TMDB_API_KEY ? 'ano' : 'ne'}`);
         log(`   ČSFD (csfd: ID): ${CSFD_ON ? `${CSFD_URL} (záloha ${CSFD_FALLBACK_URL})` : 'vypnuté'}`);
         log(`   cache: ${CACHE_DIR} (TMDB ${tmdbCache.map.size}, indexer ${resolveCache.map.size} záznamů)`);

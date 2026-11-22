@@ -13,16 +13,15 @@ Noční kontrola ho projde těmito nástroji a report uloží do `nimetodex-medi
 
 ## Plugin pro Nuvio (Apple TV)
 
-Plugin Webshare (`david325345/nuvio-plugins`, složka `webshare/`) nemá vlastní parser: `webshare/build.mjs`
-do `webshare/webshare.js` přibalí `lib/engine.js` a `matcher.js` z tohoto repozitáře. **Každá oprava parseru
-proto znamená i nové sestavení pluginu:**
+Plugin CzechShare (`david325345/nuvio-plugins`, složka `czechshare/` – Webshare, Hellspy i Fastshare v jednom)
+nemá vlastní parser: `czechshare/build.mjs` do `czechshare/czechshare.js` přibalí `lib/engine.js` a `matcher.js`
+z tohoto repozitáře. **Každá oprava parseru proto znamená i nové sestavení pluginu:**
 
 1. oprava v `lib/engine.js` / `matcher.js`, `npm test`, replay, verze addonu, push;
-2. v `nuvio-plugins`: `node webshare/build.mjs ../webshare-stremio-docker`, zvýšit verzi pluginu
-   (`webshare/src/plugin.js` a `webshare/manifest.json`), `npm test` – `test/webshare-sync.test.js` selže,
-   dokud plugin není sestavený z aktuálního parseru –, push do `main` **i do větve `webshare`**
-   (`git push origin main main:webshare`) – Nuvio má plugin nainstalovaný z odkazu
-   `raw.githubusercontent.com/david325345/nuvio-plugins/webshare/webshare/manifest.json`.
+2. v `nuvio-plugins`: `node czechshare/build.mjs ../webshare-stremio-docker`, zvýšit verzi pluginu
+   (`czechshare/src/plugin.js` a `czechshare/manifest.json`), `npm test` – `test/czechshare-sync.test.js` selže,
+   dokud plugin není sestavený z aktuálního parseru –, push do `main` (odkaz pro Nuvio:
+   `raw.githubusercontent.com/david325345/nuvio-plugins/main/czechshare/manifest.json`).
 
 Hledání z pluginu (volba „Pomoct vylepšit hledání“) chodí přes `POST /api/archive` do stejného archivu
 s verzí `8.x.y+nuvio-1.z.w`; `analyze.py` upozorní, když plugin běží na starším jádře než addon.

@@ -127,7 +127,7 @@ function buildManifest(base, cfg) {
         version: VERSION,
         name: 'CzechShare',
         description: `Filmy, seriály a anime z ${sourceList(cfg)} – české a slovenské názvy, CZ/SK dabing a titulky na prvním místě.`,
-        logo: `${base}/logo.png`,
+        logo: `${base}/logo.png?v=2`,   // ?v=2: nové logo CzechShare (static má cache 7 dní)
         background: `${base}/backdrop.jpg`,
         // meta jen pro soubory z katalogu (webshare-…); metadata filmů a seriálů dodává Cinemeta
         resources: [

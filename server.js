@@ -12,7 +12,7 @@ const https = require('https');
 const tls = require('tls');
 const M = require('./matcher');
 
-const VERSION = '8.10.5';
+const VERSION = '8.10.6';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 // Indexer (resolve-ids) — interně přes Coolify síť, veřejná adresa jako záloha
@@ -1460,7 +1460,8 @@ function durationMismatch(plan, it) {
 //    vyřadilo všechny soubory se známou délkou, aspoň 3 mají shodnou délku (±3 %) a odchylka od TMDB je nejvýš 2×,
 //    pravidlo se pro tento díl vynechá;
 // 3) nový film (letos / loni) a nahraný starší stejnojmenný film (plan.olderSame ≥ 3): soubor bez roku projde jen
-//    s délkou ±2 % proti souborům s naším rokem (nebo proti TMDB), bez délky se neodešle (Resident Evil 2026 × 2002);
+//    s délkou ±2 % proti mediánu souborů s naším rokem (nebo proti TMDB), případně ±1 % na některý z nich,
+//    bez délky se neodešle (Resident Evil 2026 × 2002);
 //    soubor s rokem ±1 projde s ±3 % nebo s poměrem PAL (Mistrovský plán 2026 × The Masterplan 2025);
 // 4) film: aspoň 3 různá čísla hned za názvem ("Death-Note-01", "-02", "-04") = díly seriálu;
 // 5) film bez kolekce TMDB a nahraný starší stejnojmenný film: soubor bez roku s číslem 1–9 hned za názvem je
@@ -1513,8 +1514,11 @@ function durationFilter(plan, items, now = new Date()) {
             for (const it of live()) {
                 const ys = M.fileYears(it.f.name), len = lenOf(it);
                 if (!ys.length) {
-                    // bez roku: jen ±2 %, bez výjimky PAL (Tower Heist × Mistrovský plán má náhodou poměr PAL)
-                    if (!ref || !len || !near(len, ref, 0.02)) {
+                    // bez roku: jen ±2 % na medián, bez výjimky PAL (Tower Heist × Mistrovský plán má náhodou poměr PAL);
+                    // nebo ±1 % na některou z aspoň 2 kopií s naším rokem – medián umí posunout CZ PAL kopie
+                    // (Spodina 2026: 5× 5160 s PAL + 5404 s, soubor bez roku 5403 s)
+                    const sameAsOurs = len && ours.length >= 2 && ours.some(l => near(len, l, 0.01));
+                    if (!sameAsOurs && (!ref || !len || !near(len, ref, 0.02))) {
                         bad.set(it.f.ident, `bez roku (starší film stejného jména${len ? `, ${Math.round(len / 60)} min` : ''})`);
                     }
                 } else if (!ys.includes(plan.year) && ref && len) {
@@ -1603,7 +1607,10 @@ function rescueOlderSeries(plan, items, rejected) {
     if (!older.size) return [];
     const ep = new RegExp(`\\bs0*${plan.season} ?e0*${plan.episode}\\b|\\b0*${plan.season}x0*${plan.episode}\\b`);
     const sameEp = it => ep.test(M.normalize(it.f.name));
-    const ours = items.filter(it => lenOf(it) && M.fileYears(it.f.name).includes(plan.year)).map(lenOf);
+    // naše kopie: s naším rokem, nebo přijaté přes náš název, který druhý seriál nemá ("Gajokgyehoek - S1E1 KO"),
+    // pokud sedí délkou na díl z TMDB (±15 % jako pravidlo 10 v durationFilter – to proběhne až po vracení)
+    const ownOk = it => it.why === OWN_NAME && plan.epRuntime && near(lenOf(it), plan.epRuntime * 60, 0.15);
+    const ours = items.filter(it => lenOf(it) && (M.fileYears(it.f.name).includes(plan.year) || ownOk(it))).map(lenOf);
     if (!ours.length) return [];
     const plain = { ...plan, sameName: null };
     const cand = rejected.filter(it => /^bez roku \(starší seriál/.test(it.why || '') && lenOf(it));

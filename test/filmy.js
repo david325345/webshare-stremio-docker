@@ -24,6 +24,15 @@ assert.strictEqual(ok(fs1, 'Ripper.Street.S01E01.HDTV.XviD-AFG.avi').reason, 'vy
 // bez kolekce zůstává "3. část" značkou dílu
 assert.strictEqual(ok(plan('movie', ['Ulice strachu'], { year: 2021 }), 'Ulice strachu 3. část 2021').reason, 'vypadá jako díl seriálu');
 
+// nový film × starší stejnojmenný: soubor bez roku projde i při ±1 % na jednu z kopií s naším rokem (PAL posune medián)
+const sp = plan('movie', ['Spodina', 'Wasteman'], { year: 2026, runtime: 90, olderSame: 3 });
+const spItems = [5160, 5160, 5160, 5160, 5161].map((l, i) => ({ f: { name: `Spodina 2026 CZ ${i}.mkv`, ident: 'p' + i }, info: { len: l } }))
+    .concat([{ f: { name: 'Wasteman 2026 BluRay 1080p.mkv', ident: 'o' }, info: { len: 5404 } },
+        { f: { name: 'Wasteman 10bit 1080p SVT-AV1-PSYEX.mkv', ident: 'y' }, info: { len: 5403 } },
+        { f: { name: 'Wasteman 1080p.mkv', ident: 'z' }, info: { len: 5700 } }]);
+const spBad = S.durationFilter(sp, spItems, new Date('2026-11-22'));
+assert.deepStrictEqual(['y', 'z'].map(i => spBad.has(i)), [false, true]);
+
 // "více" před rokem
 const shaw = plan('movie', ['Vykoupení z věznice Shawshank', 'The Shawshank Redemption'], { year: 1994 });
 assert.strictEqual(ok(shaw, 'Vykoupení z věznice Shawshank - The Shawshank Redemption více (1994) [2].mp4').ok, true);

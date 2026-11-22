@@ -57,5 +57,14 @@ assert.deepStrictEqual(S.rescueOlderSeries(gone, ours, r2), []);
 const r3 = rej([['Gone S01E01 EN.mkv', 2950, 'x1'], ['Gone for Good S01E01 CZ titulky', 2668, 'x4']]);
 assert.deepStrictEqual(S.rescueOlderSeries(gone, ours, r3), []);
 
+// Gajokgyehoek: kopie přijatá přes náš název (s délkou na díl z TMDB) slouží jako naše při vracení bez roku
+const famItems = [{ f: { name: 'Gajokgyehoek - S1E1 KO', ident: 'g1' }, info: { len: 3070 }, why: 'náš název, jiný seriál ho nemá' }];
+const famRej = [['Family.Matters.S01E01.1080p.AMZN.WEB-DL.DDP2.0.H.264-MrHulk.mkv', 3070, 'm1'], ['Family.Matters.S01E01', 1272, 'm2']]
+    .map(([n, l, i]) => ({ f: { name: n, ident: i }, info: { len: l }, why: S.judgeFile({ name: n }, fam).reason }));
+assert.deepStrictEqual(S.rescueOlderSeries(fam, famItems, famRej).map(it => it.f.ident), ['m1']);
+// kopie přes náš název se špatnou délkou vzorem není
+const famBad = [{ ...famItems[0], info: { len: 1300 } }];
+assert.deepStrictEqual(S.rescueOlderSeries(fam, famBad, famRej.map(r => r.f.ident === 'm1' ? { ...r, info: { len: 1300 } } : r)), []);
+
 console.log('seriály: ✓');
 process.exit(0);

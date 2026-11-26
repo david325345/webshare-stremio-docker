@@ -51,14 +51,27 @@ function rawTokens(str) {
 // Skupiny v hranatých závorkách na začátku ("[SubsPlease] ", "[DB]") – pro porovnání názvu se odstraní,
 // jinak by jednoslovný název nebyl první ("[DB]Working!!_-_01")
 // "[Nekomoe kissaten][Chii Fuyo][01][1080p]" → "Chii Fuyo [01][1080p]" (závorka před číslem dílu je název)
+// Úvodní značka uploadera v kulaté závorce: "(Lena BL) Junjou Romantica …", "(B-A) …" – 1–2 slova bez čísel,
+// za závorkou mezera ("(500) Days of Summer", "(2019)", "(Ne)zadaní" ani "(plechova-kavalerie)" se neodstraní)
+const LEAD_PAREN = /^\s*\(([^()]*)\)(?=[\s_.\-]|$)\s*[-_.]*\s*/;
+function uploaderParen(inner) {
+    if (/\d/.test(inner)) return false;
+    if (/\p{L}{3,}-\p{L}{3,}/u.test(inner)) return false;   // "(plechova-kavalerie)" – adresa pořadu = název, ne značka
+    const words = inner.split(/[^\p{L}]+/u).filter(Boolean);
+    return words.length >= 1 && words.length <= 2;
+}
 function stripLeadingGroups(fileName) {
     let s = String(fileName || '');
     const re = /^\s*\[([^\]]*)\]\s*[-_.]*\s*/;
     let m;
-    while ((m = s.match(re))) {
-        const rest = s.slice(m[0].length);
-        if (/[a-z]{2}/i.test(m[1]) && /^\[\s*\d{1,4}(?:v\d)?(?:\s*end)?\s*\]/i.test(rest)) return `${m[1].trim()} ${rest}`;
-        s = rest;
+    for (;;) {
+        if ((m = s.match(re))) {
+            const rest = s.slice(m[0].length);
+            if (/[a-z]{2}/i.test(m[1]) && /^\[\s*\d{1,4}(?:v\d)?(?:\s*end)?\s*\]/i.test(rest)) return `${m[1].trim()} ${rest}`;
+            s = rest;
+        } else if ((m = s.match(LEAD_PAREN)) && uploaderParen(m[1]) && s.slice(m[0].length).trim()) {
+            s = s.slice(m[0].length);
+        } else break;
     }
     return s;
 }
@@ -182,7 +195,8 @@ function stripTech(n) {
         .replace(/\b(hevc|avc|av1|xvid|divx)\b/g, ' ')
         .replace(/\b\d{1,2}\s*bit\b/g, ' ')
         .replace(/\b[1-9]\s+[01]\b/g, ' ')          // 5 1 / 7 1 / 2 0 (zvukové kanály po normalizaci)
-        .replace(/\b(ddp?|dts|ac3|eac3|aac|flac|mp3|opus|truehd|atmos)\s*\d?\b/g, ' ')
+        // kodek i s kanály: "DDP5.1" / "AAC5.1" → po normalizaci "ddp5 1" (jinak by "1" vypadalo jako díl)
+        .replace(/\b(ddp?|dts|ac3|eac3|aac|flac|mp3|opus|truehd|atmos)\s*\d?(?:\s+[01])?\b/g, ' ')
         .replace(/\b\d{3,4}\s*x\s*\d{3,4}\b/g, ' ')    // 1920x1080
         .replace(/\b[0-9a-f]{8}\b/g, ' ')                // CRC [ABCD1234]
         .replace(/\s+/g, ' ')
@@ -229,6 +243,9 @@ function parseEpisode(fileName, excludeTokens, restTokens) {
     // [1.04] / (1.04) – sezóna.díl v závorce
     m = String(fileName).match(/[\[(]\s*(\d{1,2})\.(\d{2,3})\s*[\])]/);
     if (m) return { season: +m[1], episode: +m[2], explicit: true };
+    // [Cap.101] – španělské značení v hranaté závorce: sezóna a díl (101 = S01E01, 1012 = S10E12)
+    m = String(fileName).match(/\[\s*cap[ ._]*(\d{1,2})(\d{2})\s*\]/i);
+    if (m && +m[1] > 0 && +m[2] > 0) return { season: +m[1], episode: +m[2], explicit: true };
     // 1x05, 5x7 (Hellspy často bez nuly)
     m = n.match(/\b(\d{1,2})x(\d{1,4})\b/);
     if (m) return { season: +m[1], episode: +m[2], explicit: true };
@@ -329,7 +346,7 @@ function detectQuality(fileName) {
 
 // Slova, která za názvem v souboru nevadí (jazyk, kvalita, zdroj, verze …)
 const TECH_WORDS = new Set(('cz cze czech cesky sk svk slovak en eng english jap jpn japanese cc multi dual dab dabing dabbing dub dubbed ' +
-    'tit titulky sub subs forced hd fhd uhd sd bluray bdrip brrip bd remux webrip web dl webdl hdtv dvdrip dvd rip ' +
+    'tit titulky sub subs forced hd fhd uhd fullhd ultrahd sd bluray bdrip brrip bd remux webrip web dl webdl hdtv dvdrip dvd rip ' +
     'xvid divx hevc avc aac ac3 dts ddp truehd atmos hdr dv extended edition directors cut uncut unrated remastered ' +
     'complete kompletni serie series season sezona rada episode ep epizoda dil cast part mp4 mkv avi vostfr ' +
     'tv ova movie film proper repack internal limited anime capitulo episodio folge odcinek bolum aflevering ' +
@@ -460,10 +477,11 @@ function subtitleNoise(fileName, name, allow, mode) {
     const hit = afterName(cleaned, name);
     if (!hit) return false;
     const series = mode === 'series';
-    // "S01E02 Chainsaw Man - Arrival in Tokyo": značka dílu před víceslovným názvem → zbytek je název dílu
+    // "S01E02 Chainsaw Man - Arrival in Tokyo" / "1x01 Sousedské noční můry - Můj soused psychopat":
+    // značka dílu před víceslovným názvem → zbytek je název dílu
     if (series && hit.start === 1 && nameTokens(name).length >= 2) {
         const first = fileTokens(cleaned).filter(t => !STOPWORDS.has(t))[0];
-        if (/^s\d{1,2}e\d{1,4}$/.test(first || '')) return false;
+        if (/^(s\d{1,2}e\d{1,4}|\d{1,2}x\d{1,4})$/.test(first || '')) return false;
     }
     const rest6 = hit.rest.slice(0, 6);
     for (let i = 0; i < rest6.length; i++) {

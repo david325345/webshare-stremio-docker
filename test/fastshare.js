@@ -103,6 +103,10 @@ const login = (hash, extra = {}) => q => q.password === 'spatne'
     assert.deepStrictEqual(rq.dead, { ws: true, hs: true, fs: false });
     assert.strictEqual(rq.fsFailed, false);
     assert.deepStrictEqual(rq.deg, {});
+    // špatné heslo: chyba se zapíše, ale první vlna se neopakuje (opakování nemá smysl)
+    const rqBad = await E.runQueries(bad, [{ q: 'Matrix', limit: 50 }], { budgetMs: 2000 });
+    assert.strictEqual(rqBad.fsFailed, false, 'špatné údaje → bez opakování');
+    assert.strictEqual(rqBad.deg.fs.err, 1);
 
     // řazení a karta streamu: rozlišení z API (1920x800 → 1080p), CZ dabing z názvu, odkaz bez session
     const it = E.rankFiles([{ f: files[0], exact: true, info: { len: files[0].len } }])[0];

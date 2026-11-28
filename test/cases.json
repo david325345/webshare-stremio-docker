@@ -20070,7 +20070,7 @@
    {
     "n": "THE SPONGEBOB MOVIE - SEARCH FOR SQUAREPANTS (2025) - Trailer [4K Ultra HD].mkv",
     "len": 148,
-    "ok": true
+    "ok": false
    },
    {
     "n": "The.SpongeBob.Movie.Search.for.SquarePants.2025.1080p.WEB-DL.H.264.Dual YG.mkv",
@@ -85319,5 +85319,3055 @@
    }
   ],
   "at": "2026-11-22T21:05:40.659Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": null,
+   "type": "series",
+   "id": "tt2082624:1:2",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "Dog Days",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "dog",
+    "days"
+   ],
+   "year": 2011,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": 2,
+   "alSeason": 1,
+   "runtime": null,
+   "epRuntime": 25
+  },
+  "files": [
+   {
+    "n": "Všechny velké a malé bytosti cz - s01e02 - Dog-Days.mkv",
+    "len": 2950,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E2 The First Battle! EN",
+    "len": 1423,
+    "ok": true
+   },
+   {
+    "n": "All Creatures Great & Small - s01e02 - Dog Days.avi",
+    "ok": false
+   },
+   {
+    "n": "Wilfred AU - 01x02 - Dog Day Afterglow - DVDrip - EN.avi",
+    "ok": false
+   },
+   {
+    "n": "A.Good.Day.to.Be.a.Dog.S01E02.231011.540p-NEXT.mp4",
+    "ok": false
+   },
+   {
+    "n": "A Good Day to Be a Dog S01E02 HD SKtitulky.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog City - S03E07 (The Dog Days of Summer Vacation).mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_05.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_07.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_08.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_09.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_10.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_11.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_12.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_13.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog.Day.Afternoon.1975.40th.Anniv.BluRay.Multi.Subbed. Comm.1080p.1ch.x265.HEVC-Qman[UTR].mkv",
+    "ok": false
+   },
+   {
+    "n": "LÉKAŘŠTÍ DETEKTIVOVÉ - Psí odpoledne (Dog Day Afternoon).mp4",
+    "ok": false
+   },
+   {
+    "n": "4x20.Na Hromnice, práce více (Ground Dog Day).avi.mp4",
+    "ok": false
+   },
+   {
+    "n": "[AKT] Dog Days 02 CZ.mp4",
+    "ok": true
+   },
+   {
+    "n": "Dog_Days_03.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_04.mp4",
+    "ok": false
+   },
+   {
+    "n": "01x14 Dog Days.avi",
+    "ok": false
+   },
+   {
+    "n": "LUTINEN 5 ✠  HORKO  1984  (Dog Day  (Canicule)  96 min.  Lee Marvin, Miou-Miou, Tina Louise).avi",
+    "ok": false
+   },
+   {
+    "n": "120.Ground Dog Day - by Beeboop.mp4",
+    "ok": false
+   },
+   {
+    "n": "02x02 Dirty dog days.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days (2001) 1080p.mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Day Afternoon 1975 BDrip 1080p HEVC EN CZ.mkv",
+    "ok": false
+   },
+   {
+    "n": "HORKO  1984  (Dog Day  (Canicule)  96 min.  Lee Marvin, Miou-Miou, Tina Louise).avi",
+    "ok": false
+   },
+   {
+    "n": "Spin.City.S01E11.Dog.Day.Afternoon.iNTERNAL.DVDRip.XviD-SAiNTS.avi",
+    "ok": false
+   },
+   {
+    "n": "Dog.Day.Afternoon.1975.1080p.BluRay.H264.AAC.mp4",
+    "ok": false
+   },
+   {
+    "n": "Dog.Days.2018.1080p.AMZN.WEB-DL.DDP5.1.H.264-GPRS.mkv",
+    "ok": false
+   },
+   {
+    "n": "E02 The Dog Days Are Over.mp4",
+    "ok": false
+   },
+   {
+    "n": "Hundstage.AKA.Dog.Days.2001.AUT.1080i.BluRay.REMUX.AVC.FLAC.2.0-PitiPati.mkv",
+    "ok": false
+   },
+   {
+    "n": "20-Na Hromnice, práce více (Ground Dog Day).mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 01 (BD 720p) [1E7081A2].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 02 (BD 720p) [A8BEA3D8].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 03 (BD 720p) [7C584782].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 05 (BD 720p) [F811E7FF].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 06 (BD 720p) [636D78A6].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 07 (BD 720p) [73EC96C4].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 08 (BD 720p) [F644C406].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 10 (BD 720p) [BFCA98BE].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - End Card 11 (BD 720p) [85DABB75].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 01a (BD 720p) [54A8248E].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 01b (BD 720p) [CC0FDD7C].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 02a (BD 720p) [D8ECCA34].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 02b (BD 720p) [FBC85472].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 03a (BD 720p) [40D69526].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 03b (BD 720p) [A1834A51].mkv",
+    "ok": false
+   },
+   {
+    "n": "Dog Days 2 - Menu 04a (BD 720p) [EF018ED2].mkv",
+    "ok": false
+   },
+   {
+    "n": "Psie dni.Dog Days (2018) SK dabing.mkv",
+    "len": 6782,
+    "ok": false
+   },
+   {
+    "n": "Dog.Days.2018.PL.BDRip.XviD-KiT.avi",
+    "len": 6781,
+    "ok": false
+   },
+   {
+    "n": "Dog.Days.2018.1080p.BluRay.X264-AMIABLE.mkv",
+    "len": 6782,
+    "ok": false
+   },
+   {
+    "n": "Psí odpoledne - Dog Day Afternoon (1975).mkv",
+    "len": 7200,
+    "ok": false
+   },
+   {
+    "n": "Dog.Day.Afternoon.1975.720p.BluRay.x264-x0r.mkv",
+    "len": 7481,
+    "ok": false
+   },
+   {
+    "n": "Denník slabocha 3 (Diary of a Wimpy Kid - Dog Days) (2012) CZ.avi",
+    "len": 5638,
+    "ok": false
+   },
+   {
+    "n": "Dig.2026.S01E10.Last Day.mp4",
+    "len": 2489,
+    "ok": false
+   },
+   {
+    "n": "Dog Day Afternoon (1975) (1080p BluRay x265 10bit Tigole).mkv",
+    "len": 7481,
+    "ok": false
+   },
+   {
+    "n": "Gotham s04e06 - Hog Day Afternoon CZ tit.avi",
+    "len": 2648,
+    "ok": false
+   },
+   {
+    "n": "Psi kusy Dogove dni Dug Days S01E04 HD 5.1 CZ dabing.mkv",
+    "len": 433,
+    "ok": false
+   },
+   {
+    "n": "Psi kusy Dogove dni Dug Days S01E01 HD 5.1 CZ dabing.mkv",
+    "len": 569,
+    "ok": false
+   },
+   {
+    "n": "Ovecka Shaun S04E20 Na hromnice prace vice [Ground Dog Day] (en 1080p).mp4",
+    "len": 421,
+    "ok": false
+   },
+   {
+    "n": "Dennik Slabocha 3 - Dennik Maleho Poseroutky 3 - Diary Of A Wimpy Kid 3 - Dog Days 2012 CZ,EN H264 Ezio.mkv",
+    "len": 5638,
+    "ok": false
+   },
+   {
+    "n": "Brassic.S04E02.Day.At.The.Dogs.1080p.HEVC.x265-MeGusta.mkv",
+    "len": 2807,
+    "ok": false
+   },
+   {
+    "n": "Riverdale.S04E03.Chapter.Sixty.Dog.Day.Afternoon.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv",
+    "len": 2544,
+    "ok": false
+   },
+   {
+    "n": "Spider Man Brand New Day 2026 1080p HDTS DD2 0 H 264 Dop. ⌿.mkv",
+    "len": 8679,
+    "ok": false
+   },
+   {
+    "n": "Der kommer en dag--The Day Will Come.2016.720p.BRRip.x264-SLOVENSKÉ TITULKY.mkv",
+    "len": 7162,
+    "ok": false
+   },
+   {
+    "n": "Ten den přijde _ Der kommer en dag _ The Day Will Come 2016, DK - CZ tit.avi",
+    "len": 7159,
+    "ok": false
+   },
+   {
+    "n": "Disclosure Day 2026 2160p iT WEB DL Hybrid H265 DV DDP 5 1 English Dop. ⌿.mkv",
+    "len": 8733,
+    "ok": false
+   },
+   {
+    "n": "Zelená vajíčka se šunkou - Green.Eggs.and.Ham.S02E04.Three.Days.of.the.Mom-dor.1080p.NF.WEB-DL.DDP5.1.x264-TEPES (CZ Audio).mkv",
+    "len": 1784,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 02",
+    "len": 1412,
+    "ok": true
+   },
+   {
+    "n": "Dog_Days_02",
+    "len": 1423,
+    "ok": true
+   },
+   {
+    "n": "(Hi10)_Dog_Days 02_(720p)_(Hiryuu-FBI)",
+    "len": 1240,
+    "ok": true
+   },
+   {
+    "n": "(Hi10)_Dog_Days 02_(BD_720p)_(FFFpeeps)",
+    "len": 1423,
+    "ok": true
+   },
+   {
+    "n": "Dog Days S3 - 01 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 03 [720p].CZ titulky vloženy",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 08 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 11 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 02 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 12 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 04 [720p].CZ titulky vloženy",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 07 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 09 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 06 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 10 [720p].CZ titulky vloženy",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days S3 - 05 [720p].CZ titulky vloženy",
+    "len": 1479,
+    "ok": false
+   },
+   {
+    "n": "Dog Days (2018) SKdab",
+    "len": 6781,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E10 One-On-One In The Skies And On Land JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E2 Pastillage Joins The Fight! JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E3 Three Heroes! JA",
+    "len": 1419,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E3 Three Heroes! JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E1 The Hero Has Arrived! JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E11 Change My Heart JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E6 Pastillage's Hero King Legend JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E8 Esnart Arts And Music Festival JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E1 The Hero Has Arrived! JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E9 Union Fest JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E7 Battle At The Cave Of Sealing! JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E6 Pastillage's Hero King Legend JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E2 Pastillage Joins The Fight! JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E4 Biscotti Summer Camp! JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E5 Galette Sword Style Record! JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E9 Union Fest JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E12 Final Stage JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E11 Change My Heart JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E8 Esnart Arts And Music Festival JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E1 A Hero Is Born! EN",
+    "len": 1423,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E4 Charge! Princess Recovery Battle EN",
+    "len": 1423,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E3 I Want To Go Back! I Can't Go Back? Hero In Flonyard EN",
+    "len": 1423,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E10 One-On-One In The Skies And On Land JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E5 Galette Sword Style Record! JA",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E13 Summer Memories JA",
+    "len": 1411,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S3E7 Battle At The Cave Of Sealing! JA",
+    "len": 1420,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S2E12 Final Stage JA",
+    "len": 1411,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E12 Four Conditions EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E6 Star Reading Princess EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E7 Declaration Of War EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E8 The War Starts EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E11 Like A Flower Dancing In The Night Sky EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E10 Hero, Princess, And A Ray Of Hope EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E9 Battle Of Grana Fortress EN",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - S1E13 The Promise EN",
+    "len": 1596,
+    "ok": false
+   },
+   {
+    "n": "Dog Days - 2018 SK",
+    "len": 6781,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 10",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 01",
+    "len": 1411,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 06",
+    "len": 1411,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 03",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 04",
+    "len": 1412,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 07",
+    "len": 1411,
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_04",
+    "len": 1423,
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_03",
+    "len": 1423,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 09",
+    "len": 1411,
+    "ok": false
+   },
+   {
+    "n": "Dog_Days_01",
+    "len": 1424,
+    "ok": false
+   },
+   {
+    "n": "Dog Days' 08",
+    "len": 1411,
+    "ok": false
+   }
+  ],
+  "at": "2026-11-26T20:59:06.061Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": null,
+   "type": "series",
+   "id": "tt18332852",
+   "isAnime": false,
+   "names": [
+    {
+     "text": "Cizinka: Krev mé krve",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Outlander: Blood of My Blood",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Cizinka",
+     "kind": "franchise",
+     "short": true,
+     "full": "Cizinka: Krev mé krve"
+    },
+    {
+     "text": "Krev mé krve",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Outlander",
+     "kind": "franchise",
+     "short": true,
+     "full": "Outlander: Blood of My Blood"
+    },
+    {
+     "text": "Blood of My Blood",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "cizinka",
+    "krev",
+    "me",
+    "krve",
+    "outlander",
+    "blood",
+    "my"
+   ],
+   "year": 2025,
+   "season": null,
+   "episode": null,
+   "alEpisode": null,
+   "alSeason": null,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Cizinka_ Krev mé krve_S02E03_Cizinka_ Krev mé krve.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E04_Díl 4.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka.Krev.mé.krve.S02E01.1080p.HMAX.WEB-DL.DDP5.1.CZ.H265-123.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka.Krev.mé.krve.S02E02.1080p.HMAX.WEB-DL.DDP5.1.CZ.H265-123.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E01_Den válečných veteránů.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E02_Závoj času.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E04_Část mé duše.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinky 1979 Cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E05_Odpusť mi, otče.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E06_Malá milosrdenství.mkv",
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E07_Vysočina.mkv",
+    "ok": true
+   },
+   {
+    "n": "Xena-s02e06-Cizinkou-ve-svem-tele-CZ-pep.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm v cizině S04E09- Těhotná ve věžení (Zara Whittakerová) CZ DUB.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S06E06.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S05E03.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S06E02.avi",
+    "ok": false
+   },
+   {
+    "n": "Kriminálka Las Vegas - 03x19. Cizinky ve vlaku (DVDRip-Cz SS23).avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S07E01.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S07E04.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S07E05.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S08E03.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm V Cizině S09E06.avi",
+    "ok": false
+   },
+   {
+    "n": "Xena s02e06-Cizinkou ve svem tele CZ pep.avi",
+    "ok": false
+   },
+   {
+    "n": "Vězněm v cizině - John McCain a Ernie Brace (Valecni zajatci ve Vietnamu) [CZ EN].mkv",
+    "ok": false
+   },
+   {
+    "n": "Šerifská hvězda 1x03 - Útěcha cizinců.avi",
+    "ok": false
+   },
+   {
+    "n": "Kriminálka Las Vegas 03x19 Cizinky ve vlaku.avi",
+    "ok": false
+   },
+   {
+    "n": "3x19 - Cizinky ve vlaku Nerez.avi",
+    "ok": false
+   },
+   {
+    "n": "01x03 Útěcha cizinců.avi",
+    "ok": false
+   },
+   {
+    "n": "CSI Kriminalka Las Vegas - 3x19 - Cizinky ve vlaku.avi",
+    "ok": false
+   },
+   {
+    "n": "CSI Kriminalka Las Vegas - 3x19 - Cizinky ve vlaku by_UgarE.avi",
+    "ok": false
+   },
+   {
+    "n": "TALKTV - ZA HRANICÍ - Na ženu-cizinku si všude dovolují. Tasmánie mi připomíná Česko, zdejší ryby jsou mutanti, popisuje cestovatelka.mp4",
+    "ok": false
+   },
+   {
+    "n": "Na ženu-cizinku si všude dovolují. Tasmánie mi připomíná Česko, zdejší ryby jsou mutanti, popisuje cestovatelka.mp4",
+    "ok": false
+   },
+   {
+    "n": "03x19 Cizinky ve vlaku.avi",
+    "ok": false
+   },
+   {
+    "n": "Původní_S05E08_Laskavost cizinců_mpeg4.avi",
+    "ok": false
+   },
+   {
+    "n": "CSI-Las-Vegas-03x19-Cizinky-ve-vlaku-dvd-rip-cz.avi",
+    "ok": false
+   },
+   {
+    "n": "Merlin S05E10 Laskavost cizinců CZdab.avi",
+    "ok": false
+   },
+   {
+    "n": "02x07 Cizinkou ve svém těle-Intimate stranger.avi",
+    "ok": false
+   },
+   {
+    "n": "Cesta ven S02E02 Laskavost cizinců CZ Dabing.mkv",
+    "ok": false
+   },
+   {
+    "n": "Blade - 05. Krev mé krve (WEBRip-Cz SS23 bt).avi",
+    "ok": true
+   },
+   {
+    "n": "HoT - 6x06. Krev mé krve (WEBRip-Cz SS23 bt).avi",
+    "ok": true
+   },
+   {
+    "n": "06x06 Krev mé krve.mp4",
+    "ok": true
+   },
+   {
+    "n": "Gomorra - 3x07. Krev mé krve (WEBRip-Cz SS23).avi",
+    "ok": true
+   },
+   {
+    "n": "06x06 Krev mé krve.mkv",
+    "ok": true
+   },
+   {
+    "n": "02E02.Krev mé krve.mkv",
+    "ok": true
+   },
+   {
+    "n": "Hra o truny - 06x06 - Krev me krve.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o truny - 06x06 - Krev me krve.mp4",
+    "ok": false
+   },
+   {
+    "n": "02x02 Krev mé krve.mkv",
+    "ok": true
+   },
+   {
+    "n": "Hra o truny - 06x06 - Krev me krve by_UgarE.mp4",
+    "ok": false
+   },
+   {
+    "n": "02 Krev mé krve.mkv",
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny - 06x06 - Krev mé krve.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game-of-Thrones-06x06-Krev-me-krve-dvdrip-xvid-multi-cz-en.avi",
+    "ok": false
+   },
+   {
+    "n": "Game-of-Thrones-Hra-o-truny-06x06-Krev-me-krve-dvdrip-xvid-multi-cz-en.avi",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny S06E06-Krev mé krve WEB-DLXviD.CZ.avi",
+    "ok": false
+   },
+   {
+    "n": "The Walking Dead S02E02 Krev mé krve CZ dab.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny_S06E06_Krev mé krve.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S06e06 Hra o trůny FHD 1080p CZ Krev mé krve.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny (Game of Thrones)  S06E06  Krev mé krve (Blood of My Blood) 30. 5. 2016.avi",
+    "ok": false
+   },
+   {
+    "n": "02x02 Krev mé krve-Bloodletting.mkv",
+    "ok": true
+   },
+   {
+    "n": "06x06 Krev mé krve-Blood of my blood.avi",
+    "ok": true
+   },
+   {
+    "n": "01x05 Krev mé krve-Bloodlines.avi",
+    "ok": true
+   },
+   {
+    "n": "Hra o trůny S06E06 Krev mé krve (Blood of My Blood).mkv",
+    "ok": false
+   },
+   {
+    "n": "Živí mrtví S02E02 Krev mé krve.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game.of.Thrones.S06E06..1080p..CZ..CZ..Krev mé krve.mkv",
+    "ok": false
+   },
+   {
+    "n": "Hra o trůny - S06E06 - Krev mé krve cz.mkv",
+    "ok": false
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E05 Forgive Me Father 2160p HMAX WEB-DL DDP5 1 H 265-NTb.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.720p.HEVC.x265-MeGusta.mkv",
+    "ok": true
+   },
+   {
+    "n": "outlander.blood.of.my.blood.s02e09.1080p.web.h264-lazycunts.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.480p.x264-mSD[EZTVx.to].mkv",
+    "ok": true
+   },
+   {
+    "n": "outlander.blood.of.my.blood.s02e09.1080p.web.h264-lazycunts[EZTVx.to].mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Mans Shadow 720p AMZN WEB-DL DDP5 1 H 264-playWEB[EZTVx.to].mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.Another.Mans.Shadow.XviD-AFG[EZTVx.to].avi",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.Another.Mans.Shadow.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": true
+   },
+   {
+    "n": "outlander.blood.of.my.blood.s02e09.720p.web.h264.mp4",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.720p.HEVC.x265-MeGusta[EZTVx.to].mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.Another.Mans.Shadow.1080p.HEVC.x265-MeGusta.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.Another.Mans.Shadow.720p.HEVC.x265-MeGusta.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Mans Shadow 1080p AMZN WEB-DL DDP5 1 H 264-FLUX.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Man's Shadow 720p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Man's Shadow 1080p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.1080p.AV1.10bit-MeGusta.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Man s Shadow 720p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Mans Shadow 1080p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Mans Shadow 720p AMZN WEB-DL DDP5 1 H 264-playWEB.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.720p.x264-FENiX.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E09.1080p.x265-ELiTE.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 720p x264-FENiX.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E08 1080p TOD WEB-DL [EN-TR] AAC2 0 H 264-TURP.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander.Blood.of.My.Blood.S02E07.1080p.10bit.WEBRip.6CH.x265.HEVC-PSA.mkv",
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S02E09 Another Mans Shadow 720p AMZN WEB-DL DDP5 1 H 264-NTb.mkv",
+    "ok": true
+   },
+   {
+    "n": "S06E06_Blood_of_My_Blood_h265.mkv",
+    "ok": true
+   },
+   {
+    "n": "Game of Thrones S06E06 Blood of My Blood 1080p AMZN WEB-DL DD 5 1 H 264-playWEB.mkv",
+    "ok": false
+   },
+   {
+    "n": "Game of Thrones S06E06 Blood of My Blood 1080p TrueHD Atmos 7 1 AVC REMUX-FraMeSToR.mkv",
+    "ok": false
+   },
+   {
+    "n": "Conan, the Adventurer - S02E28 (Blood of my Blood).mp4",
+    "ok": false
+   },
+   {
+    "n": "Cup of My Blood 2005 1080p AMZN WEB-DL DDP2 0 H 264-vase.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cup.Of.My.Blood.2005.1080p.WEBRip.x264.AAC-[YTS.MX].mp4",
+    "ok": false
+   },
+   {
+    "n": "Cup Of My Blood 2005 1080p AMZN WEB-DL H264-vase.mkv",
+    "ok": false
+   },
+   {
+    "n": "Cup.Of.My.Blood.2005.720p.WEBRip.x264.AAC-WORLD.mp4",
+    "ok": false
+   },
+   {
+    "n": "Highlander - The Animated Series - S2E13 - The Blood of My Enemy.mp4",
+    "ok": false
+   },
+   {
+    "n": "Jake a Blake S01E24 Životní láska (Love of my life).AVI",
+    "ok": false
+   },
+   {
+    "n": "03x05 Aluv zachod (A dump of my own)-amercom-hgr.mp4",
+    "ok": false
+   },
+   {
+    "n": "Buffy.5x04.Out_of_My_Mind.x264.mkv",
+    "ok": false
+   },
+   {
+    "n": "One Direction - Story of My Life.mp4",
+    "ok": false
+   },
+   {
+    "n": "American Authors - Best Day of My Life (Official Video).mp4",
+    "ok": false
+   },
+   {
+    "n": "Kylie Minogue - Can_t Get You Out Of My Head (Blue Monday Mix Edit) [OFFICIAL MUSIC VIDEO].mp4",
+    "ok": false
+   },
+   {
+    "n": "One Direction - Story Of My Life PARODY.mp4",
+    "ok": false
+   },
+   {
+    "n": "Bronies.The.Extremely.Unexpected.Adult.Fans.of.My.Little.Pony.2012.1080p.BluRay.x264.YIFY.mp4",
+    "ok": false
+   },
+   {
+    "n": "Demoni minulosti Blood of Redemption 2013 sk.avi",
+    "ok": false
+   },
+   {
+    "n": "s02e15 - A Clone of My Own.avi",
+    "ok": false
+   },
+   {
+    "n": "Démoni minulosti (Blood of Redemption 2013) 1080p AC3 Sk.mkv",
+    "ok": false
+   },
+   {
+    "n": "13.One_Direction...Story_Of_My_Life_(Andie_Case_Cover) by raduna.mp4",
+    "ok": false
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E07 CZ Dabing.mkv",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E01 Providence 1080p CZ Dabing",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E01 CZ Dabing",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E02 S.W.A.K. (Sealed with a Kiss) 1080p CZ Dabing",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E02 CZ Dabing",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E09 CZ Dabing 1080p",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E07 Luceo Non Uro 1080p CZ Dabing",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E09 Braemar 1080p CZ Dabing",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E8 A Virtuous Woman CZ",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E10 Something Borrowed CZ",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E03 School of the Moon 1080p CZ Dabing",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E03 CZ Dabing",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E05 Needfire 1080p CZ Dabing",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E08 A Virtuous Woman 1080p CZ Dabing",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E10 Something Borrowed 1080p CZ Dabing",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E06 CZ Dabing.mkv",
+    "len": 3472,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E06 Birthright 1080p CZ Dabing",
+    "len": 3472,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood S01E04 A Soldier's Heart 1080p CZ Dabing",
+    "len": 3596,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E6 Birthright CZ",
+    "len": 3472,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E9 Braemar CZ",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E3 School of the Moon CZ",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E2 S.W.A.K",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E7 Luceo Non Uro CZ",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E5 Neefire CZ",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E4 A Soldier's Heart CZ",
+    "len": 3596,
+    "ok": true
+   },
+   {
+    "n": "Outlander: Blood of My Blood - S1E1 Providence CZ",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E01 CZ DABING",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E01 CZ Dabing 1080p",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E02 CZ DABING",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E02 CZ Dabing 1080p",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E10 CZ Dabing.mkv",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E07 CZ Dabing 1080p",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E07 CZ DABING",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E09 CZ DABING",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E03 CZ DABING",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E03 CZ Dabing 1080p",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E05 CZ Dabing 1080p",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E05 CZ DABING",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E08 CZ Dabing.mkv",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E08 CZ DABING",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E08 CZ Dabing 1080p",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E10 CZ Dabing 1080p",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E10 CZ DABING",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E06 CZ Dabing 1080p",
+    "len": 3472,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E06 CZ DABING",
+    "len": 3472,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of my Blood S01E04 CZ DABING",
+    "len": 3596,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E04 CZ Dabing 1080p",
+    "len": 3596,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E04 CZ Dabing",
+    "len": 3596,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E09 CZ Dabing.mkv",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Outlander Blood of My Blood S01E05 CZ Dabing",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E07-10 2026 CZ dabing 1080p FHD - Srdce vysočiny",
+    "len": 3547,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E05-10 2026 CZ dabing 1080p FHD - Odpusť mi, otče",
+    "len": 3201,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E06-10 2026 CZ dabing 1080p FHD - Malá milosrdenství",
+    "len": 3387,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E03-10 2026 CZ dabing 1080p FHD - Králíci neplavou",
+    "len": 3233,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E01-10 2025 CZ dab 1080p - Prozřetelnost",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E02-10 2026 CZ dabing 1080p FHD - Závoj času",
+    "len": 3400,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E04-10 2026 CZ dabing 1080p FHD - Část mé duše",
+    "len": 3728,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S02E01-10 2026 CZ dabing 1080p FHD - Den válečných veteránů",
+    "len": 3772,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E04 CZ Dabing.mkv",
+    "len": 3728,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E03-10 2025 CZ dab 1080p - Škola Měsíce",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E05_Odpusť mi, otče",
+    "len": 3201,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S01E07 CZ Dabing 1080p",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E06 CZ Dabing.mkv",
+    "len": 3388,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E03 CZ Dabing.mkv",
+    "len": 3233,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E02 CZ Dabing EAC3 5.1 H265 HEVC 1080p",
+    "len": 3400,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E05 CZ Dabing.mkv",
+    "len": 3201,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E02_Závoj času",
+    "len": 3400,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E06 CZ Dabing 1080p FULL HD",
+    "len": 3388,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E06_Malá milosrdenství",
+    "len": 3388,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E07 CZ Dabing 1080p FULL HD",
+    "len": 3547,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E07_Srdce vysočiny",
+    "len": 3547,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E05 CZ Dabing 1080p FULL HD",
+    "len": 3201,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S01E05 CZ Dabing 1080p",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E10 - Něco vypůjčeného (2025) historický czdab.mkv",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E09 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E05 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3597,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E07 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3528,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E04 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3596,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E02 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E10 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E08 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E03 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 3593,
+    "ok": true
+   },
+   {
+    "n": "Cizinka  Krev mé krve S01E01 CZ Dabing 5.1 HEVC 4K UHD (2025)",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S01E06 CZ Dabing 1080p",
+    "len": 3472,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E09-10 2025 CZ dab 1080p - Braemar",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E07 CZ Dabing.mkv",
+    "len": 3547,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S01E09 CZ Dabing 1080p",
+    "len": 3445,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S01E08 CZ Dabing 1080p",
+    "len": 3372,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S01E10 CZ Dabing 1080p",
+    "len": 5160,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E03 CZ Dabing 1080p FULL HD",
+    "len": 3233,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E03_Cizinka_ Krev mé krve",
+    "len": 3233,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_Krev_mé_krve_S01E01_10_2025_CZ_dab_1080p_Prozřetelnost O.G.",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_Krev_mé_krve_S01E01_10_2025_CZ_dab_1080p_Prozřetelnost OGGY",
+    "len": 4750,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E02-10 2025 CZ dab 1080p - Zpečetěno polibkem.mkv",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E02-10 2025 CZ dab 1080p - Zpečetěno polibkem",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E02 CZdabing",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - Krev mé krve S01E02 - Zpečetěno polibkem (2025) historický czdab.mkv",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Cizinka Krev mé krve S02E04 CZ Dabing 1080p FULL HD",
+    "len": 3728,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_ Krev mé krve_S02E04_Část mé duše",
+    "len": 3728,
+    "ok": true
+   },
+   {
+    "n": "Cizinka: Krev mé krve S01E02 - Zpečetěno polibkem CZ Dabing",
+    "len": 3537,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - S02E06 - Best Laid Schemes",
+    "len": 3118,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E01 CZdab",
+    "len": 3260,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E06-16 2014 CZ dab 1080p - Velitel posádky",
+    "len": 3429,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E07 1080p CZ Dabing",
+    "len": 3282,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - S02E04 - La Dame Blanche",
+    "len": 3431,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E10 - Neblahá předtucha CZ Titulky",
+    "len": 3540,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E10 1080p CZ Dabing",
+    "len": 3540,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - S02E11 - Vengeance Is Mine",
+    "len": 3312,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E10 1080p CZ Dabing",
+    "len": 3530,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E07 - Mátový likér CZ Titulky",
+    "len": 3023,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E05 1080p CZ Dabing",
+    "len": 3291,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E13-13 2017 CZ dab 1080p - Nový svět",
+    "len": 3267,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E07 CZdab",
+    "len": 3814,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - S02E13 - Dragonfly in Amber",
+    "len": 5282,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E03 - Splacené dluhy CZ Titulky",
+    "len": 3500,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E03 1080p CZ Dabing",
+    "len": 3320,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - S02E03 - Useful Occupations and Deceptions",
+    "len": 3385,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E04-16 2014 CZ dab 1080p - Sněm",
+    "len": 3387,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E04 - Bílá paní (2016) romantický Sci-Fi czdab.mkv",
+    "len": 3431,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E06 1080p CZ Dabing",
+    "len": 4465,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E07_(_Svatba_)_CZ_dabing_1080p_(2025)_Outlander_01x07_by_Tyrian.avi",
+    "len": 3282,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E07_(_Svatba_)_CZ_dabing_1080p_(2025)_Outlander_01x07_by_Tyrian.mkv",
+    "len": 3282,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E13_(_Hlídka_)_CZ_dabing_1080p_(2025)_Outlander_01x13_by_Tyrian.mkv",
+    "len": 3417,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E08_(_Z obou stran_)_CZ_dabing_1080p_(2025)_Outlander_01x08_by_Tyrian.mkv",
+    "len": 3314,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E08_(_Z obou stran_)_CZ_dabing_1080p_(2025)_Outlander_01x08_by_Tyrian.mp4",
+    "len": 3314,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E02 - Teď už nejsme ve Skotsku CZ Titulky",
+    "len": 3511,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E03_(_Cesta zpet_)_CZ_dabing_1080p_(2025)_Outlander_01x03_by_Tyrian.mkv",
+    "len": 3320,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E08 CZdab",
+    "len": 3586,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E10_(_Pichnutím mojich palcov_)_CZ_dabing_1080p_(2025)_Outlander_01x10_by_Tyrian.mkv",
+    "len": 3540,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E08 - Z obou stran (2014) romantický Sci-Fi czdab.mkv",
+    "len": 3314,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E02_(_Na hradě Leoch_)_CZ_dabing_1080p_(2025)_Outlander_01x02_by_Tyrian.mkv",
+    "len": 3556,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E09_(_Zúčtování_)_CZ_dabing_1080p_(2025)_Outlander_01x09_by_Tyrian.mkv",
+    "len": 3565,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E11 1080p CZ Dabing",
+    "len": 3312,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E05 1080p CZ Dabing",
+    "len": 3057,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S02E01 1080p CZ Dabing",
+    "len": 3541,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E05 - Pachtovné CZ Titulky",
+    "len": 3438,
+    "ok": true
+   },
+   {
+    "n": "Cizinka - S02E09 - Je Suis Prest",
+    "len": 3321,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E07 - Svatba CZ Titulky",
+    "len": 3282,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S01E06 1080p CZ Dabing",
+    "len": 3429,
+    "ok": true
+   },
+   {
+    "n": "Cizinka S03E02 - Kapitulace CZ Titulky",
+    "len": 3320,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E06_(_Velitel posádky_)_CZ_dabing_1080p_(2025)_Outlander_01x06_by_Tyrian.mkv",
+    "len": 3429,
+    "ok": true
+   },
+   {
+    "n": "Cizinka_S01E06_(_Velitel posádky_)_CZ_dabing_1080p_(2025)_Outlander_01x06_by_Tyrian.mp4",
+    "len": 3429,
+    "ok": true
+   }
+  ],
+  "at": "2026-11-21T13:40:25.599Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": null,
+   "type": "series",
+   "id": "tt2008252:1:2",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "Mayo Chiki!",
+     "kind": "franchise",
+     "short": false
+    }
+   ],
+   "allow": [
+    "mayo",
+    "chiki"
+   ],
+   "year": 2011,
+   "season": 1,
+   "episode": 2,
+   "alEpisode": 2,
+   "alSeason": 1,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "Mayo.Chiki.S01E02.1080p.BluRay.Dual-Audio.Opus.2.0.x265-Pettan.mkv",
+    "len": 1453,
+    "ok": true
+   },
+   {
+    "n": "Mayo Chiki! CZ 01.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mayo Chiki! CZ 02.mp4",
+    "len": 1470,
+    "ok": true
+   },
+   {
+    "n": "Mayo Chiki! CZ 03.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mayo Chiki! CZ 04.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mayo Chiki! CZ 05.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mayo Chiki! CZ 06.mp4",
+    "ok": false
+   },
+   {
+    "n": "Mayo Chiki! CZ 07.mp4",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 05 (720p 90MB BD) [F8710CF3][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 06 (720p 90MB BD) [1D0B8326][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 07 (720p 90MB BD) [57EE2DE8][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 08 (720p 90MB BD) [608A0C66][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 09 (720p 90MB BD) [DA119744][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 10 (720p 90MB BD) [A39A5393][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 11 (720p 90MB BD) [DC550D0F][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 12 (720p 90MB BD) [C908AEE9][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[AnimeOut] Mayo Chiki! - 13 (720p 90MB BD) [810D7D40][Shubhank008](Doki).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 02 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "len": 1469,
+    "ok": true
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 10 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 03 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 05 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 04 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 07 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 08 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 06 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 09 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 11 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 01 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - NCED (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 12 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - NCOP (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - BD Menu 01 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - BD Menu 02 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "len": 76,
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - 13 END (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - BD Menu 03 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - BD Menu 04 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "[Shiniori-Raws] Mayo Chiki - BD Menu 05 (BD 1920x1080 x265 10bit FLAC).mkv",
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E02",
+    "len": 1452,
+    "ok": true
+   },
+   {
+    "n": "Mayo Chiki! CZ 02",
+    "len": 1469,
+    "ok": true
+   },
+   {
+    "n": "Nex_Mayo_Chiki_02",
+    "len": 1469,
+    "ok": true
+   },
+   {
+    "n": "Mayo Chiki! CZ 03",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E08",
+    "len": 1452,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E01",
+    "len": 1452,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E12",
+    "len": 1451,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E06",
+    "len": 1452,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E13",
+    "len": 1421,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E09",
+    "len": 1451,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E03",
+    "len": 1451,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E10",
+    "len": 1452,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E07",
+    "len": 1451,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E11",
+    "len": 1451,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E05",
+    "len": 1451,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.S01E04",
+    "len": 1452,
+    "ok": false
+   },
+   {
+    "n": "Mayo Chiki! 01 CZ tit",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.NCOP01",
+    "len": 91,
+    "ok": false
+   },
+   {
+    "n": "Mayo.Chiki.NCED01",
+    "len": 91,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_05",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_06",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_04",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_08",
+    "len": 1470,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - NCOPv2 (1920x1080 Hi10P BD FLAC) [04648435]",
+    "len": 90,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_13",
+    "len": 1440,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_07",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_01",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_10",
+    "len": 1470,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_03",
+    "len": 1469,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_12",
+    "len": 1470,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_11",
+    "len": 1470,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - NCEDv2 (1920x1080 Hi10P BD FLAC) [DB77308F]",
+    "len": 90,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 08 (1920x1080 Hi10P BD FLAC) [7038ED55]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 01v3 (1920x1080 Hi10P BD FLAC) [CFA91074]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 02v2 (1920x1080 Hi10P BD FLAC) [1C5928FE]",
+    "len": 1449,
+    "ok": true
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 06v2 (1920x1080 Hi10P BD FLAC) [9CCF2E2A]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 12v2 (1920x1080 Hi10P BD FLAC) [65546E71]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 10 (1920x1080 Hi10P BD FLAC) [7570F1F1]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 03 (1920x1080 Hi10P BD FLAC) [E0B0F52C]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 09 (1920x1080 Hi10P BD FLAC) [AC468D8E]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 13 (1920x1080 Hi10P BD FLAC) [AE1F9586]",
+    "len": 1419,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 07 (1920x1080 Hi10P BD FLAC) [E0777B59]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 05 (1920x1080 Hi10P BD FLAC) [A0B26DF2]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 11 (1920x1080 Hi10P BD FLAC) [4DC2CE04]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "[Doki] Mayo Chiki! - 04v3 (1920x1080 Hi10P BD FLAC) [AB99BD74]",
+    "len": 1449,
+    "ok": false
+   },
+   {
+    "n": "Nex_Mayo_Chiki_09",
+    "len": 1470,
+    "ok": false
+   }
+  ],
+  "at": "2026-10-12T14:52:31.691Z"
+ },
+ {
+  "plan": {
+   "sameName": null,
+   "coll": null,
+   "type": "series",
+   "id": "tt21423786:0:1",
+   "isAnime": true,
+   "names": [
+    {
+     "text": "The Dangers in My Heart",
+     "kind": "franchise",
+     "short": false
+    },
+    {
+     "text": "Boku no Kokoro no Yabai Yatsu",
+     "kind": "anime",
+     "short": false
+    },
+    {
+     "text": "BokuYaba",
+     "kind": "anime",
+     "short": false
+    }
+   ],
+   "allow": [
+    "dangers",
+    "in",
+    "my",
+    "heart",
+    "boku",
+    "no",
+    "kokoro",
+    "yabai",
+    "yatsu",
+    "bokuyaba"
+   ],
+   "year": 2023,
+   "season": null,
+   "episode": 1,
+   "alEpisode": 1,
+   "alSeason": 1,
+   "runtime": null,
+   "epRuntime": null
+  },
+  "files": [
+   {
+    "n": "The Dangers in My Heart - S00E01 - Bonus Dangers (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1270,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E13 - I, We, Fell in Love.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart The Movie 2026 SUBFRENCH 1080p ADN WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 6113,
+    "ok": true
+   },
+   {
+    "n": "The.Dangers.in.My.Heart.The.Movie.2026.1080p.HIDIVE.WEB-DL.DUAL.AAC2.0.H.264.ESub-ToonsHub.mkv",
+    "len": 6115,
+    "ok": true
+   },
+   {
+    "n": "The.Dangers.in.My.Heart.The.Movie.2026.1080p.ADN.WEB-DL.DUAL.DDP5.1.H.264-VARYG.mkv",
+    "len": 6114,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart The Movie 2026 REPACK SUBFRENCH 1080p ADN WEB-DL AAC2.0 x264-Tsundere-Raws.mkv",
+    "len": 6113,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - The Novel [Seven Seas Siren] [Stick].m4b",
+    "ok": false
+   },
+   {
+    "n": "The Dangers in My Heart - S01E02 - I Died.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E03 - I Want to Hug You.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E04 - I Have a Problem.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E05 - We Got Split Up.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E07 - We Swapped Places.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E06 - I Melted It.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E08 - I Had a Dream.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E09 - I Hate Yamada.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E10 - We Walked Slowly.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E11 - We're a Bit Alike.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E12 - I Wanted to Be Seen.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S00E01 - Twi-Yaba.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E01 - We're Searching.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E02 - I'm growing up.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E03 - Yamada and Me.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E04 - Yamada likes....mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E05 - I Want to Know.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E06 - Yamada Likes Me.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E07 - We're Overflowing.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E08 - We Stayed Up Late.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E09 - We Made a Promise.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E10 - I Want to Be Closer to Yamada.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E11 - I Don't Want to Lose.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E12 - I Want to Tell Her.mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S01E01 - I Was Stolen Away.mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E02 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E13 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1377,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E03 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E04 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E05 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E06 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E07 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E08 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E10 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E09 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E12 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1371,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E11 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1371,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S02E01 - (BD 1080p HEVC 10-bit Opus) [Dual Audio] [BlackRose].mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlus+] The Dangers in My Heart The Movie (2026) (ADN WEB-DL 1080p AVC EAC3 5.1) [Dual Audio] [99811549].mkv",
+    "len": 6114,
+    "ok": true
+   },
+   {
+    "n": "S01E03 The Dangers in My Heart Io voglio abbracciarti (2023) WEBRip 1080p x264 EAC3 ITA JPN SUB ITA - Lullozzo.mkv",
+    "ok": true
+   },
+   {
+    "n": "S01E02 The Dangers in My Heart Io sono morto (2023) WEBRip 1080p x264 EAC3 ITA JPN SUB ITA - Lullozzo.mkv",
+    "ok": true
+   },
+   {
+    "n": "S01E01 The Dangers in My Heart Io sono stato rapito (2023) WEBRip 1080p x264 EAC3 ITA JPN SUB ITA - Lullozzo.mkv",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "S01E04 The Dangers in My Heart Io sono un malato mentale (2023) WEBRip 1080p x264 EAC3 ITA JPN SUB ITA - Lullozzo.mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 01 CZ.mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 02 CZ.mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 03 CZ.mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 04 CZ.mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 05 CZ.mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 06 CZ.mkv",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 07 CZ.mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 08 CZ.mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 09 CZ.mkv",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 10 CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 11 CZ.mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 12 CZ.mkv",
+    "len": 1371,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 13 CZ.mkv",
+    "len": 1376,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E03-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E02-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E04-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E01-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E05-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E06-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E07-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E08-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E09-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E11-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E10-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E12-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 NCED-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": false
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 NCOP-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": false
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E01-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E03-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E02-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E04-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E05-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E06-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E07-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E09-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E08-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E10-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E11-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2023 S01E12-[1080p][BDRIP][x265.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 NCOP2-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": false
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S00E01-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E01-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E02-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E03-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E04-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E05-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E06-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E08-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E07-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2024 S02E10-[1080p][BDRIP][AV1.OPUS].mkv",
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E13 Karte 25: I, We, Fell in Love JA",
+    "len": 1375,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E12 Karte 24: I Want to Tell Her JA",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E14 (FILM) The Dangers in My Heart: The Movie JA",
+    "len": 6114,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E12 Karte 12: I Wanted to Be Seen JA",
+    "len": 1369,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E3 Karte 3: I Want to Hug You JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E5 Karte 5: We Got Split Up JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E2 Karte 2: I Died JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E11 Karte 11: We’re a Bit Alike JA",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E7 Karte 7: We Swapped Places JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E4 Karte 4: I Have a Problem JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E6 Karte 6: I Melted It JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E7 Karte 19: We’re Overflowing JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E1 Karte 1: I Was Stolen Away JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E13 (SPECIAL) Bonus Dangers JA",
+    "len": 1269,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E1 Karte 13: We’re Searching JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E8 Karte 8: I Had a Dream JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E4 Karte 16: Yamada Likes… JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E9 Karte 21: We Made a Promise JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E6 Karte 18: Yamada Likes Me JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E10 Karte 22: I Want to Be Closer to Yamada JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E2 Karte 14: I’m Growing Up JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E8 Karte 20: We Stayed Up All Night JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E3 Karte 15: Yamada and Me JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E5 Karte 17: I Want to Know JA",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S2E11 Karte 23: I Don’t Want to Lose JA",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E9 Karte 9: I Hate Yamada JA",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "The Dangers in My Heart - S1E10 Karte 10: We Walked Slowly JA",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 02 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 04 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 03 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 01 CZ",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 05 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 13 CZtitulky",
+    "len": 1375,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu 2nd Season - 10 CZ",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 08 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 07 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 06 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "Boku no Kokoro no Yabai Yatsu - 09 CZ",
+    "len": 1386,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 25 (1080p) [9317DCF2]",
+    "len": 1375,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 24 (1080p) [94376C83]",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 23 (1080p) [9B4D933F]",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 05 (1080p) [658F0B3A]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 16 (1080p) [3C1DA863]",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 22 (1080p) [38F80173]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 17 (1080p) [08E0CCE7]",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 01 (1080p) [D7AC5868]",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 02 (1080p) [AEDFBE21]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 04 (1080p) [039AC96E]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 07 (1080p) [B401C8D0]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 20 (1080p) [B90591B0]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 13 (1080p) [46EBE198]",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 14 (1080p) [44D99176]",
+    "len": 1384,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 21 (1080p) [B0648ECB]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 11 (1080p) [BB488F8A]",
+    "len": 1370,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 12.5 (1080p) [67210C23]",
+    "len": 1269,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 03 (1080p) [C67C991E]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 06 (1080p) [5513151A]",
+    "len": 1385,
+    "ok": true
+   },
+   {
+    "n": "[SubsPlease] Boku no Kokoro no Yabai Yatsu - 09 (1080p) [76E126EB]",
+    "len": 1385,
+    "ok": true
+   }
+  ],
+  "at": "2026-11-25T19:03:19.373Z"
  }
 ]

@@ -1,6 +1,6 @@
 {
   "name": "czechshare-addon",
-  "version": "8.14.0",
+  "version": "8.15.0",
   "description": "CzechShare \u2013 Stremio / Nuvio addon pro Webshare.cz, Hellspy a Fastshare",
   "main": "server.js",
   "scripts": {

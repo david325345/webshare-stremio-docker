@@ -141,11 +141,16 @@ function titleMatches(fileName, name, others, year) {
     // jedno slovo před názvem ("Batman 5 Temný rytíř", "HNS_Rokudenashi…") – kromě dokumentárních;
     // název začínající předložkou je za cizím slovem skoro vždy konec jiného názvu ("Právník na doživotí", "Veganka na útěku")
     if (words.length === 1 && !PREFIX_BAD.has(words[0]) && !PREPOSITIONS.has(nt[0])) return true;
-    // název oddělený pomlčkou ("Filmy od LM --- Temný rytíř povstal")
+    // název oddělený pomlčkou ("Filmy od LM --- Temný rytíř povstal") – ne za značkou dílu, před kterou stojí
+    // jiný název ("All Creatures Great & Small - s01e02 - Dog Days" je díl jiného seriálu);
+    // značka na začátku nevadí ("S01E10 Operace Overlord - Druhá světová válka, Cena říše")
     const raw = stripLeadingGroups(fileName);
+    const mark = raw.match(/(?:^|[\s._\-[(])(s\d{1,2}\s?e\d{1,4}|\d{1,2}x\d{1,4})(?=$|[\s._\-\])])/i);
+    const markAt = mark && /\p{L}/u.test(raw.slice(0, mark.index)) ? mark.index : Infinity;
     const re = /\s+[-–—]+\s+|-{2,}|_-_|\s+\|\s+/g;
     let m;
     while ((m = re.exec(raw))) {
+        if (m.index > markAt) break;
         const h = afterName(raw.slice(m.index + m[0].length), name);
         if (h && h.start === 0) return true;
     }

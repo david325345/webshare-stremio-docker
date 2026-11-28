@@ -20,7 +20,7 @@ const {
     dbg, hsDown, hasFs, fsLogin, FsError, fsPlayLink, handleCatalogFs, fsDown
 } = E;
 
-const VERSION = '8.14.0';
+const VERSION = '8.15.0';
 const PORT = process.env.PORT || 7000;
 const APP_URL = (process.env.APP_URL || '').replace(/\/+$/, '');
 

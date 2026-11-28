@@ -72,4 +72,30 @@ const aile = plan('movie', ["L'Aile ou la Cuisse", 'Křidýlko nebo stehýnko'],
 ok(aile, 'L Aile ou la cuisse 1976 (Kridylko nebo Stehynko) CZE sub.no 0.ch ToMyX.mov');
 ok(aile, "L'Aile ou la cuisse 1976 1080p.mkv");
 
+// ── report 2026-11-28 ──
+// 1) náš název až za značkou dílu, před kterou stojí jiný název = díl jiného seriálu
+const dog = plan('series', ['Dog Days'], { year: 2011, season: 1, episode: 2, isAnime: true });
+no(dog, 'All Creatures Great & Small - s01e02 - Dog Days.avi');
+no(dog, 'Všechny velké a malé bytosti cz - s01e02 - Dog-Days.mkv');
+ok(dog, '[AKT] Dog Days 02 CZ.mp4');
+const cena = plan('series', ['Druhá světová válka, Cena říše'], { year: 2009, season: 1, episode: 10 });
+ok(cena, 'S01E10 Operace Overlord - Druhá světová válka, Cena říše.avi');   // značka na začátku nevadí
+const cizinka = plan('movie', ['Cizinka: Krev mé krve', 'Outlander: Blood of My Blood'], { year: 2025 });
+no(cizinka, 'Hra o trůny - 06x06 - Krev mé krve.mkv');
+
+// 2) bonusy z BD a ukázky – kromě slov z našeho názvu
+no(dog, 'Dog Days 2 - End Card 01 (BD 720p) [1E7081A2].mkv', 'bonus / ukázka');
+no(dog, 'Dog Days 2 - Menu 01a (BD 720p) [54A8248E].mkv', 'bonus / ukázka');
+const dangers = plan('series', ['Boku no Kokoro no Yabai Yatsu'], { year: 2023, season: 0, episode: 1, isAnime: true });
+no(dangers, 'Boku no Kokoro no Yabai Yatsu 2024 NCOP2-[1080p][BDRIP][AV1.OPUS].mkv', 'bonus / ukázka');
+no(plan('movie', ['SpongeBob: Search for SquarePants'], { year: 2025 }), 'THE SPONGEBOB MOVIE - SEARCH FOR SQUAREPANTS (2025) - Trailer [4K Ultra HD].mkv', 'bonus / ukázka');
+ok(plan('movie', ['The Menu', 'Menu'], { year: 2022 }), 'The Menu 2022 1080p CZ dabing.mkv');
+ok(plan('series', ['Trailer Park Boys'], { year: 2001, season: 1, episode: 1 }), 'Trailer Park Boys S01E01 1080p.mkv');
+
+// 3) HTML entity v názvech (indexer, ČSFD)
+assert.strictEqual(E.decodeEntities('Girls &amp; Panzer'), 'Girls & Panzer');
+assert.strictEqual(E.decodeEntities('Law &amp; Order Toronto: Criminal Intent'), 'Law & Order Toronto: Criminal Intent');
+assert.strictEqual(E.decodeEntities('Tom &quot;Kid&quot; &#39;x&#39; &#x2013; y'), 'Tom "Kid" \'x\' – y');
+assert.strictEqual(E.decodeEntities('R&D &unknown; Fast&Furious'), 'R&D &unknown; Fast&Furious');
+
 console.log('opravy: ✓');
